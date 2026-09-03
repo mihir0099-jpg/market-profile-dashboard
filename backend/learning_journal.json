@@ -286900,5 +286900,11 @@
     "modifications": [
       "Tightened BTST close strength threshold from 0.87 to 0.90 due to low win rate of 42.9%"
     ]
+  },
+  {
+    "timestamp": "2026-09-03T03:57:57.145Z",
+    "modifications": [
+      "Tightened BTST close strength threshold from 0.90 to 0.93 due to low win rate of 30.8%"
+    ]
   }
 ]

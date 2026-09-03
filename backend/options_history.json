@@ -101845,5 +101845,39 @@
     "atmCeLtp": 854.55,
     "atmPeLtp": 566.7,
     "pcr": 1.071
+  },
+  {
+    "timestamp": "2026-09-03T03:57:46.971Z",
+    "symbol": "NIFTY",
+    "spot": 23959.7,
+    "callWall": 24000,
+    "callWallCeLtp": 115.35,
+    "putWall": 23800,
+    "putWallPeLtp": 39.35,
+    "gammaFlip": 23950,
+    "maxPain": 24000,
+    "maxPainCeLtp": 115.35,
+    "maxPainPeLtp": 103.3,
+    "atmStrike": 23950,
+    "atmCeLtp": 145.25,
+    "atmPeLtp": 82.2,
+    "pcr": 0.779
+  },
+  {
+    "timestamp": "2026-09-03T03:57:46.971Z",
+    "symbol": "BANKNIFTY",
+    "spot": 57572.15,
+    "callWall": 58000,
+    "callWallCeLtp": 637.35,
+    "putWall": 57500,
+    "putWallPeLtp": 523.85,
+    "gammaFlip": 57500,
+    "maxPain": 57500,
+    "maxPainCeLtp": 915,
+    "maxPainPeLtp": 523.85,
+    "atmStrike": 57600,
+    "atmCeLtp": 858.9,
+    "atmPeLtp": 566.45,
+    "pcr": 1.068
   }
 ]

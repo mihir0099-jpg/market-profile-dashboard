@@ -1,6 +1,6 @@
 {
   "btst": {
-    "closeStrengthThreshold": 0.8999999999999999,
+    "closeStrengthThreshold": 0.9299999999999999,
     "exitRule": "OPEN"
   },
   "trap": {

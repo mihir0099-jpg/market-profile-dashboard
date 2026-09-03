@@ -1252,15 +1252,15 @@ function scanSymbol(tvBridge, symbol) {
 }
 
 
-async function scanInBatches(tvBridge, symbols, batchSize = 1) {
+async function scanInBatches(tvBridge, symbols, batchSize = 10) {
   let matchedResults = [];
   
   for (let i = 0; i < symbols.length; i += batchSize) {
     const batch = symbols.slice(i, i + batchSize);
     
     // Update progress state
-    scanStatus.progress = `${i}/${symbols.length}`;
-    console.log(`[Scanner] Scanning symbol: ${batch.join(', ')} (${i}/${symbols.length})`);
+    scanStatus.progress = `${Math.min(i + batch.length, symbols.length)}/${symbols.length}`;
+    console.log(`[Scanner] Scanning batch (${i + 1}-${Math.min(i + batch.length, symbols.length)}/${symbols.length}): ${batch.join(', ')}`);
     
     const promises = batch.map(sym => scanSymbol(tvBridge, sym));
     const results = await Promise.all(promises);
@@ -1271,8 +1271,8 @@ async function scanInBatches(tvBridge, symbols, batchSize = 1) {
       }
     }
     
-    // Gentle delay between sequential scans to avoid connection drops
-    await new Promise(r => setTimeout(r, 1000));
+    // Ultra-fast 150ms delay between parallel batches
+    await new Promise(r => setTimeout(r, 150));
   }
   
   scanStatus.progress = `${symbols.length}/${symbols.length}`;
@@ -1294,7 +1294,7 @@ export function startScanner(tvBridge) {
           console.error('[Scanner] Failed to update Index PCR drift:', pcrErr.message);
         }
         
-        const results = await scanInBatches(tvBridge, symbols, 1);
+        const results = await scanInBatches(tvBridge, symbols, 10);
         scanResults = results;
         scanStatus.lastScanTime = new Date().toLocaleTimeString();
         console.log(`[Scanner] Full scan completed! Found ${results.length} matches.`);

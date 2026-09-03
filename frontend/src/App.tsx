@@ -538,14 +538,14 @@ function App() {
             </div>
           )}
 
-          {loading ? (
+          {loading && viewMode === 'profile' ? (
             <div className="glass-panel" style={{ flex: '1', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '12px', minHeight: '400px' }}>
               <Loader2 className="animate-spin" size={32} color="var(--accent-blue)" style={{ animation: 'spin 1.5s linear infinite' }} />
               <p style={{ color: 'var(--text-secondary)', fontSize: '14px', margin: 0 }}>Connecting to TradingView WebSocket & streaming data...</p>
             </div>
           ) : (
-            <div className={viewMode === 'options' || viewMode === 'btst' || viewMode === 'nineam' || viewMode === 'reports' || viewMode === 'monthly' ? "" : "chart-section"} style={{ flex: '1' }}>
-              {viewMode !== 'btst' && viewMode !== 'nineam' && viewMode !== 'options' && viewMode !== 'reports' && viewMode !== 'monthly' ? (
+            <div className={viewMode === 'profile' ? "chart-section" : ""} style={{ flex: '1' }}>
+              {viewMode === 'profile' ? (
                 <>
                   <ChartContainer
                     candles={activeCandles}
@@ -582,36 +582,33 @@ function App() {
                     gexMaxPain={gexData?.stats?.max_pain}
                   />
                   
-                  {/* Conditional Visualizer rendering based on viewMode */}
-                  {viewMode === 'profile' ? (
-                    <MarketProfile
-                      activeProfile={activeProfile}
-                      priorProfile={priorProfile}
-                      profileType={profileType}
-                      visiblePriceRange={visiblePriceRange}
-                      sessionPeriod={sessionPeriod}
-                      livePrice={activeDateStr === dayProfiles[0]?.dateStr && candles.length > 0 ? candles[candles.length - 1].close : undefined}
-                    />
-                  ) : viewMode === 'gex' ? (
-                    <GexProfile
-                      symbol={symbol}
-                      expiries={gexExpiries}
-                      selectedExpiry={selectedGexExpiry}
-                      onExpiryChange={setSelectedGexExpiry}
-                      gexData={gexData}
-                      loading={gexLoading}
-                    />
-                  ) : (
-                    <PcrProfile
-                      symbol={symbol}
-                      expiries={gexExpiries}
-                      selectedExpiry={selectedGexExpiry}
-                      onExpiryChange={setSelectedGexExpiry}
-                      pcrData={pcrData}
-                      loading={pcrLoading}
-                    />
-                  )}
+                  <MarketProfile
+                    activeProfile={activeProfile}
+                    priorProfile={priorProfile}
+                    profileType={profileType}
+                    visiblePriceRange={visiblePriceRange}
+                    sessionPeriod={sessionPeriod}
+                    livePrice={activeDateStr === dayProfiles[0]?.dateStr && candles.length > 0 ? candles[candles.length - 1].close : undefined}
+                  />
                 </>
+              ) : viewMode === 'gex' ? (
+                <GexProfile
+                  symbol={symbol}
+                  expiries={gexExpiries}
+                  selectedExpiry={selectedGexExpiry}
+                  onExpiryChange={setSelectedGexExpiry}
+                  gexData={gexData}
+                  loading={gexLoading}
+                />
+              ) : viewMode === 'pcr' ? (
+                <PcrProfile
+                  symbol={symbol}
+                  expiries={gexExpiries}
+                  selectedExpiry={selectedGexExpiry}
+                  onExpiryChange={setSelectedGexExpiry}
+                  pcrData={pcrData}
+                  loading={pcrLoading}
+                />
               ) : viewMode === 'btst' ? (
                 <BtstReport onSelectSymbol={(sym) => { setSymbol(sym); setViewMode('profile'); }} />
               ) : viewMode === 'nineam' ? (

@@ -1,6 +1,9 @@
-// monthly_profile_analyzer.js
+﻿// monthly_profile_analyzer.js
 import { TradingViewBridge } from './tradingview.js';
 const tvBridge = new TradingViewBridge();
+
+const profileCache = new Map();
+const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes cache for ultra-fast response
 
 function calcProfile(days) {
   const prices = [];
@@ -68,6 +71,11 @@ function calcProfile(days) {
 }
 
 export async function getMonthlyProfileData(symbol = 'NSE:NIFTY') {
+  const cached = profileCache.get(symbol);
+  if (cached && (Date.now() - cached.timestamp < CACHE_TTL_MS)) {
+    return cached.data;
+  }
+
   const candles = await new Promise((resolve, reject) => {
     const timeout = setTimeout(() => reject(new Error('Timeout fetching symbol data')), 12000);
     tvBridge.subscribeSymbol(symbol, 'D', (data) => {
@@ -151,7 +159,7 @@ export async function getMonthlyProfileData(symbol = 'NSE:NIFTY') {
     wideIbStats: { hit1618: 33.3, hit2618: 0.0, hit3618: 0.0 }
   };
 
-  return {
+  const payload = {
     symbol,
     currMonthKey,
     prevMonthKey,
@@ -190,4 +198,7 @@ export async function getMonthlyProfileData(symbol = 'NSE:NIFTY') {
     statsSummary,
     lastUpdated: new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })
   };
+
+  profileCache.set(symbol, { timestamp: Date.now(), data: payload });
+  return payload;
 }

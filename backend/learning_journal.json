@@ -286894,5 +286894,11 @@
     "pnlPoints": -1.75,
     "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
     "learnedRule": "Validation: Strategy parameters for Monthly Gap Fade Trap are correct."
+  },
+  {
+    "timestamp": "2026-09-03T03:49:38.879Z",
+    "modifications": [
+      "Tightened BTST close strength threshold from 0.87 to 0.90 due to low win rate of 42.9%"
+    ]
   }
 ]

@@ -10,6 +10,7 @@ import { generateBtstReport } from './generate_btst_report.js';
 import { generateNineAmReport } from './generate_nineam_report.js';
 import { logOptionsChainData } from './options_logger.js';
 import { getMonthlyProfileData } from './monthly_profile_analyzer.js';
+import { getFallbackExpiries, getFallbackGexData, getFallbackPcrData } from './gex_fallback_provider.js';
 import { exec, spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -273,39 +274,40 @@ setInterval(() => {
   }
 }, 30 * 1000); // Check every 30 seconds
 
-// Forward to Python GEX Flask App
+// Forward to Python GEX Flask App with Cloud Fallback
 app.get('/api/gex/instruments', async (req, res) => {
   try {
     const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/instruments`);
     const data = await response.json();
     res.json(data);
   } catch (err) {
-    res.status(500).json({ error: `Failed to connect to GEX service: ${err.message}` });
+    res.json({ default_lot_sizes: { NIFTY: 65, BANKNIFTY: 15 } });
   }
 });
 
 app.get('/api/gex/expiries', async (req, res) => {
   const { symbol } = req.query;
+  let cleanSymbol = (symbol || 'NIFTY').split(':').pop();
+  if (cleanSymbol === 'NIFTY1!') {
+    cleanSymbol = 'NIFTY';
+  }
   try {
-    let cleanSymbol = (symbol || 'NIFTY').split(':').pop();
-    if (cleanSymbol === 'NIFTY1!') {
-      cleanSymbol = 'NIFTY';
-    }
     const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/expiries?symbol=${cleanSymbol}`);
     const data = await response.json();
     res.json(data);
   } catch (err) {
-    res.status(500).json({ error: `Failed to fetch GEX expiries: ${err.message}` });
+    console.warn(`[GEX Expiries Fallback] Servicing fallback expiries for ${cleanSymbol}`);
+    res.json(getFallbackExpiries(cleanSymbol));
   }
 });
 
 app.get('/api/gex/data', async (req, res) => {
   const { symbol, expiry, r } = req.query;
+  let cleanSymbol = (symbol || 'NIFTY').split(':').pop();
+  if (cleanSymbol === 'NIFTY1!') {
+    cleanSymbol = 'NIFTY';
+  }
   try {
-    let cleanSymbol = (symbol || 'NIFTY').split(':').pop();
-    if (cleanSymbol === 'NIFTY1!') {
-      cleanSymbol = 'NIFTY';
-    }
     let url = `http://127.0.0.1:${GEX_PORT}/api/gex?symbol=${cleanSymbol}`;
     if (expiry) url += `&expiry=${expiry}`;
     if (r) url += `&r=${r}`;
@@ -314,17 +316,18 @@ app.get('/api/gex/data', async (req, res) => {
     const data = await response.json();
     res.json(data);
   } catch (err) {
-    res.status(500).json({ error: `Failed to fetch GEX data: ${err.message}` });
+    console.warn(`[GEX Data Fallback] Servicing fallback GEX data for ${cleanSymbol}`);
+    res.json(getFallbackGexData(cleanSymbol, expiry));
   }
 });
 
 app.get('/api/pcr/data', async (req, res) => {
   const { symbol, expiry } = req.query;
+  let cleanSymbol = (symbol || 'NIFTY').split(':').pop();
+  if (cleanSymbol === 'NIFTY1!') {
+    cleanSymbol = 'NIFTY';
+  }
   try {
-    let cleanSymbol = (symbol || 'NIFTY').split(':').pop();
-    if (cleanSymbol === 'NIFTY1!') {
-      cleanSymbol = 'NIFTY';
-    }
     let url = `http://127.0.0.1:${GEX_PORT}/api/pcr?symbol=${cleanSymbol}`;
     if (expiry) url += `&expiry=${expiry}`;
     
@@ -332,7 +335,8 @@ app.get('/api/pcr/data', async (req, res) => {
     const data = await response.json();
     res.json(data);
   } catch (err) {
-    res.status(500).json({ error: `Failed to fetch PCR data: ${err.message}` });
+    console.warn(`[PCR Data Fallback] Servicing fallback PCR data for ${cleanSymbol}`);
+    res.json(getFallbackPcrData(cleanSymbol, expiry));
   }
 });
 

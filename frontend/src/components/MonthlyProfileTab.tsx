@@ -78,6 +78,10 @@ export const MonthlyProfileTab: React.FC<MonthlyProfileTabProps> = ({ currentSym
 
   useEffect(() => {
     fetchMonthlyData(selectedSymbol);
+    const interval = setInterval(() => {
+      fetchMonthlyData(selectedSymbol);
+    }, 30000);
+    return () => clearInterval(interval);
   }, [selectedSymbol]);
 
   const handleSymbolChange = (sym: string) => {

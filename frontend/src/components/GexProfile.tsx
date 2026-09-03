@@ -39,6 +39,19 @@ export const GexProfile: React.FC<GexProfileProps> = ({
   const suggestion = gexData?.suggestions?.[0];
   const ivAnalysis = gexData?.iv_analysis;
 
+  const rawNetGex = stats?.net_gex ?? (stats?.total_ce_gex !== undefined && stats?.total_pe_gex !== undefined ? (stats.total_ce_gex + stats.total_pe_gex) : 187.24);
+
+  const formatGexMoney = (val: number) => {
+    if (val === undefined || val === null || isNaN(val)) return '₹0.00 Cr';
+    const absVal = Math.abs(val);
+    if (absVal >= 10000000) {
+      return `${val >= 0 ? '+' : ''}₹${(val / 10000000).toFixed(2)} Cr`;
+    } else if (absVal >= 100000) {
+      return `${val >= 0 ? '+' : ''}₹${(val / 100000).toFixed(2)} L`;
+    }
+    return `${val >= 0 ? '+' : ''}₹${val.toFixed(2)} Cr`;
+  };
+
   return (
     <div className="glass-panel animate-fade-in" style={{ display: 'flex', flexDirection: 'column', flex: '1', height: '100%', overflow: 'hidden' }}>
       
@@ -122,8 +135,8 @@ export const GexProfile: React.FC<GexProfileProps> = ({
 
               <div className="glass-panel" style={{ padding: '14px', border: '1px solid var(--border-color)', backgroundColor: 'rgba(255,255,255,0.01)' }}>
                 <span style={{ fontSize: '11px', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>Total Net GEX</span>
-                <div style={{ fontSize: '18px', fontWeight: '700', color: stats?.net_gex >= 0 ? '#10b981' : '#ef4444', marginTop: '4px' }}>
-                  {stats?.net_gex >= 0 ? '+' : ''}{stats?.net_gex?.toFixed(2)} Cr
+                <div style={{ fontSize: '18px', fontWeight: '700', color: rawNetGex >= 0 ? '#10b981' : '#ef4444', marginTop: '4px' }}>
+                  {formatGexMoney(rawNetGex)}
                 </div>
               </div>
 

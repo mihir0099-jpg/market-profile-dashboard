@@ -1,4 +1,4 @@
-﻿// gex_fallback_provider.js - Complete Black-Scholes GEX & PCR Calculation Engine
+// gex_fallback_provider.js - Complete Black-Scholes GEX & PCR Calculation Engine
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -185,6 +185,7 @@ export function getFallbackGexData(cleanSymbol, expiry) {
       gamma_flip: gammaFlip,
       max_pain: maxPain,
       pcr: pcr,
+      net_gex: parseFloat(netGex.toFixed(2)),
       pcr_tag: pcr > 1.15 ? 'BULLISH SUPPORT' : (pcr < 0.70 ? 'BEARISH RESISTANCE' : 'NEUTRAL BALANCE'),
       pcr_desc: pcr > 1.15 ? 'Aggressive Put Writing building support below.' : 'Call Writers active at resistance.',
       regime: netGex > 0 ? 'POSITIVE GAMMA (Market Makers Absorbing Spikes)' : 'NEGATIVE GAMMA (Volatility Expansion Zone)',

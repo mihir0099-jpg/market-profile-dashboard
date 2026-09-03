@@ -1,0 +1,181 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-08-16)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 24366.00
+  - Final PCR: 0.884 (Drift: 0.000)
+  - Key Walls: Call Wall at 24500 | Put Wall at 24000
+  - Gamma Flip Zone: 24350
+  - Conjoint State: +GEX (Positive Gamma / Low Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 57491.10
+  - Final PCR: 0.783 (Drift: 0.000)
+  - Key Walls: Call Wall at 58000 | Put Wall at 57000
+  - Gamma Flip Zone: 57500
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+DELTAIN:BTCUSD.P | Liquidity Sweep Reversal     | INTRADAY | SHORT | 63096.50 | 63017.50 | 63129.50 | TARGET_HIT    | 79.00   
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+MANAPPURAM      | Weekly Gap Fade Trap         | SWING  | SHORT | 349.00   | 364.00   | 369.90   | TARGET_HIT    | -15.00  
+MANAPPURAM      | Monthly Gap Fade Trap        | SWING  | SHORT | 349.00   | 333.00   | 373.05   | TARGET_HIT    | 16.00   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+MANAPPURAM      | Weekly Gap Fade Trap         | SWING  | SHORT | 349.00   | 364.00   | 369.90   | TARGET_HIT    | -15.00  
+MANAPPURAM      | Monthly Gap Fade Trap        | SWING  | SHORT | 349.00   | 333.00   | 373.05   | TARGET_HIT    | 16.00   
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1915.00  | 1945.00  | 1988.00  | STOP_LOSS_HIT | -73.00  
+SWIGGY          | Monthly POC Reversion        | SWING  | SHORT | 284.80   | 267.00   | 287.00   | TARGET_HIT    | 17.80   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+MANAPPURAM      | Weekly Gap Fade Trap         | SWING  | SHORT | 349.00   | 364.00   | 369.90   | TARGET_HIT    | -15.00  
+MANAPPURAM      | Monthly Gap Fade Trap        | SWING  | SHORT | 349.00   | 333.00   | 373.05   | TARGET_HIT    | 16.00   
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1915.00  | 1945.00  | 1988.00  | STOP_LOSS_HIT | -73.00  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1915.00  | 1945.00  | 1988.00  | STOP_LOSS_HIT | -73.00  
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+MANAPPURAM      | Weekly Gap Fade Trap         | SWING  | SHORT | 349.00   | 364.00   | 369.90   | TARGET_HIT    | -15.00  
+MANAPPURAM      | Monthly Gap Fade Trap        | SWING  | SHORT | 349.00   | 333.00   | 373.05   | TARGET_HIT    | 16.00   
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+MANAPPURAM      | Weekly Gap Fade Trap         | SWING  | SHORT | 349.00   | 364.00   | 369.90   | TARGET_HIT    | -15.00  
+MANAPPURAM      | Monthly Gap Fade Trap        | SWING  | SHORT | 349.00   | 333.00   | 373.05   | TARGET_HIT    | 16.00   
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+MANAPPURAM      | Weekly Gap Fade Trap         | SWING  | SHORT | 349.00   | 364.00   | 369.90   | TARGET_HIT    | -15.00  
+MANAPPURAM      | Monthly Gap Fade Trap        | SWING  | SHORT | 349.00   | 333.00   | 373.05   | TARGET_HIT    | 16.00   
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1915.00  | 1945.00  | 1988.00  | STOP_LOSS_HIT | -73.00  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1915.00  | 1945.00  | 1988.00  | STOP_LOSS_HIT | -73.00  
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+MANAPPURAM      | Weekly Gap Fade Trap         | SWING  | SHORT | 349.00   | 364.00   | 369.90   | TARGET_HIT    | -15.00  
+MANAPPURAM      | Monthly Gap Fade Trap        | SWING  | SHORT | 349.00   | 333.00   | 373.05   | TARGET_HIT    | 16.00   
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 720.05   | 736.00   | 752.90   | STOP_LOSS_HIT | -32.85  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1915.00  | 1945.00  | 1988.00  | STOP_LOSS_HIT | -73.00  
+TATACONSUM      | Monthly POC Reversion        | SWING  | LONG  | 1086.00  | 1090.00  | 1085.00  | STOP_LOSS_HIT | -1.00   
+TATAELXSI       | Monthly POC Reversion        | SWING  | SHORT | 3700.00  | 3670.00  | 3720.00  | STOP_LOSS_HIT | -20.00  
+MANAPPURAM      | Weekly Gap Fade Trap         | SWING  | SHORT | 349.00   | 364.00   | 369.90   | TARGET_HIT    | -15.00  
+MANAPPURAM      | Monthly Gap Fade Trap        | SWING  | SHORT | 349.00   | 333.00   | 373.05   | TARGET_HIT    | 16.00   
+NATIONALUM      | Weekly Gap Fade Trap         | SWING  | SHORT | 375.60   | 378.00   | 422.20   | TARGET_HIT    | -2.40   
+
+Statistics:
+* Total Signals Triggered/Resolved: 47
+* Target Hits: 29
+* Stop Loss Hits: 18
+* Win Rate: 61.7%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[2] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[3] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1915.00 | Stop Loss: 1988.00 | Exit: 1988.00 | Loss: -73.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[4] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[5] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1915.00 | Stop Loss: 1988.00 | Exit: 1988.00 | Loss: -73.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[6] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1915.00 | Stop Loss: 1988.00 | Exit: 1988.00 | Loss: -73.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[7] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[8] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[9] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1915.00 | Stop Loss: 1988.00 | Exit: 1988.00 | Loss: -73.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[10] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1915.00 | Stop Loss: 1988.00 | Exit: 1988.00 | Loss: -73.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[11] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[12] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[13] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[14] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[15] INDHOTEL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 720.05 | Stop Loss: 752.90 | Exit: 752.90 | Loss: -32.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[16] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1915.00 | Stop Loss: 1988.00 | Exit: 1988.00 | Loss: -73.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[17] TATACONSUM -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 1086.00 | Stop Loss: 1085.00 | Exit: 1085.00 | Loss: -1.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[18] TATAELXSI -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 3700.00 | Stop Loss: 3720.00 | Exit: 3720.00 | Loss: -20.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

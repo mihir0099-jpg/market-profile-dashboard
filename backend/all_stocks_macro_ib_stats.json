@@ -1,0 +1,5327 @@
+{
+  "NSE:NIFTY": {
+    "symbol": "NIFTY",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 293,
+      "breakoutPct": 92.72151898734177,
+      "upsidePct": 63.60759493670886,
+      "downsidePct": 43.67088607594937,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 47.44027303754266,
+      "ext2618Pct": 9.556313993174061,
+      "ext3618Pct": 2.7303754266211606
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 39.726027397260275,
+      "ext1618Pct": 68.05555555555556,
+      "ext2618Pct": 15.277777777777779,
+      "ext3618Pct": 4.166666666666666
+    }
+  },
+  "NSE:BANKNIFTY": {
+    "symbol": "BANKNIFTY",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 291,
+      "breakoutPct": 92.08860759493672,
+      "upsidePct": 60.44303797468354,
+      "downsidePct": 45.88607594936709,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 42.955326460481096,
+      "ext2618Pct": 8.24742268041237,
+      "ext3618Pct": 2.0618556701030926
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 66.19718309859155,
+      "ext2618Pct": 19.718309859154928,
+      "ext3618Pct": 7.042253521126761
+    }
+  },
+  "NSE:NIFTY1!": {
+    "symbol": "NIFTY1!",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 291,
+      "breakoutPct": 92.08860759493672,
+      "upsidePct": 63.29113924050633,
+      "downsidePct": 40.50632911392405,
+      "bothPct": 11.708860759493671,
+      "ext1618Pct": 43.29896907216495,
+      "ext2618Pct": 6.185567010309279,
+      "ext3618Pct": 1.3745704467353952
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 66.66666666666666,
+      "ext2618Pct": 13.88888888888889,
+      "ext3618Pct": 1.3888888888888888
+    }
+  },
+  "NSE:360ONE": {
+    "symbol": "360ONE",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 51.26582278481012,
+      "downsidePct": 47.78481012658228,
+      "bothPct": 12.025316455696203,
+      "ext1618Pct": 41.81818181818181,
+      "ext2618Pct": 12.363636363636363,
+      "ext3618Pct": 2.909090909090909
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 62.31884057971014,
+      "ext2618Pct": 15.942028985507244,
+      "ext3618Pct": 10.144927536231885
+    }
+  },
+  "NSE:ABB": {
+    "symbol": "ABB",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 56.64556962025317,
+      "downsidePct": 48.41772151898734,
+      "bothPct": 16.77215189873418,
+      "ext1618Pct": 41.21863799283154,
+      "ext2618Pct": 11.11111111111111,
+      "ext3618Pct": 1.7921146953405016
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 56.94444444444444,
+      "ext2618Pct": 23.61111111111111,
+      "ext3618Pct": 8.333333333333332
+    }
+  },
+  "NSE:ABCAPITAL": {
+    "symbol": "ABCAPITAL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 38.489208633093526,
+      "ext2618Pct": 7.913669064748201,
+      "ext3618Pct": 1.7985611510791366
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 70.4225352112676,
+      "ext2618Pct": 19.718309859154928,
+      "ext3618Pct": 11.267605633802818
+    }
+  },
+  "NSE:ADANIENSOL": {
+    "symbol": "ADANIENSOL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 270,
+      "breakoutPct": 85.44303797468355,
+      "upsidePct": 50.31645569620253,
+      "downsidePct": 48.41772151898734,
+      "bothPct": 13.291139240506327,
+      "ext1618Pct": 47.77777777777778,
+      "ext2618Pct": 13.333333333333334,
+      "ext3618Pct": 4.074074074074074
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 63.76811594202898,
+      "ext2618Pct": 34.78260869565217,
+      "ext3618Pct": 18.84057971014493
+    }
+  },
+  "NSE:ADANIENT": {
+    "symbol": "ADANIENT",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 56.32911392405063,
+      "downsidePct": 41.77215189873418,
+      "bothPct": 11.708860759493671,
+      "ext1618Pct": 45.42124542124542,
+      "ext2618Pct": 11.72161172161172,
+      "ext3618Pct": 4.029304029304029
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 67,
+      "breakoutPct": 91.78082191780823,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 71.64179104477611,
+      "ext2618Pct": 32.83582089552239,
+      "ext3618Pct": 20.8955223880597
+    }
+  },
+  "NSE:ADANIGREEN": {
+    "symbol": "ADANIGREEN",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 49.36708860759494,
+      "downsidePct": 51.89873417721519,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 46.909090909090914,
+      "ext2618Pct": 10.909090909090908,
+      "ext3618Pct": 3.272727272727273
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 67.6056338028169,
+      "ext2618Pct": 28.169014084507044,
+      "ext3618Pct": 15.492957746478872
+    }
+  },
+  "NSE:ADANIPORTS": {
+    "symbol": "ADANIPORTS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 284,
+      "breakoutPct": 89.87341772151899,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 11.075949367088606,
+      "ext1618Pct": 42.6056338028169,
+      "ext2618Pct": 10.56338028169014,
+      "ext3618Pct": 2.112676056338028
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 45.20547945205479,
+      "bothPct": 21.91780821917808,
+      "ext1618Pct": 70.4225352112676,
+      "ext2618Pct": 35.2112676056338,
+      "ext3618Pct": 12.676056338028168
+    }
+  },
+  "NSE:ADANIPOWER": {
+    "symbol": "ADANIPOWER",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 272,
+      "breakoutPct": 86.07594936708861,
+      "upsidePct": 50.63291139240506,
+      "downsidePct": 47.78481012658228,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 50.73529411764706,
+      "ext2618Pct": 14.338235294117647,
+      "ext3618Pct": 2.5735294117647056
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 68,
+      "breakoutPct": 93.15068493150685,
+      "upsidePct": 63.013698630136986,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 24.65753424657534,
+      "ext1618Pct": 77.94117647058823,
+      "ext2618Pct": 33.82352941176471,
+      "ext3618Pct": 17.647058823529413
+    }
+  },
+  "NSE:ALKEM": {
+    "symbol": "ALKEM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 266,
+      "breakoutPct": 84.17721518987342,
+      "upsidePct": 53.79746835443038,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 14.873417721518987,
+      "ext1618Pct": 36.09022556390977,
+      "ext2618Pct": 7.142857142857142,
+      "ext3618Pct": 0.7518796992481203
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 63.888888888888886,
+      "ext2618Pct": 23.61111111111111,
+      "ext3618Pct": 8.333333333333332
+    }
+  },
+  "NSE:AMBER": {
+    "symbol": "AMBER",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 268,
+      "breakoutPct": 84.81012658227847,
+      "upsidePct": 49.36708860759494,
+      "downsidePct": 48.41772151898734,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 45.52238805970149,
+      "ext2618Pct": 8.582089552238806,
+      "ext3618Pct": 3.3582089552238807
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 72.46376811594203,
+      "ext2618Pct": 31.88405797101449,
+      "ext3618Pct": 11.594202898550725
+    }
+  },
+  "NSE:AMBUJACEM": {
+    "symbol": "AMBUJACEM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 289,
+      "breakoutPct": 91.45569620253164,
+      "upsidePct": 55.69620253164557,
+      "downsidePct": 50,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 42.21453287197232,
+      "ext2618Pct": 7.612456747404845,
+      "ext3618Pct": 1.7301038062283738
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 52.112676056338024,
+      "ext2618Pct": 25.352112676056336,
+      "ext3618Pct": 8.450704225352112
+    }
+  },
+  "NSE:ANGELONE": {
+    "symbol": "ANGELONE",
+    "weekly": {
+      "total": 302,
+      "brokeOut": 255,
+      "breakoutPct": 84.43708609271523,
+      "upsidePct": 48.675496688741724,
+      "downsidePct": 47.019867549668874,
+      "bothPct": 11.258278145695364,
+      "ext1618Pct": 46.666666666666664,
+      "ext2618Pct": 12.941176470588237,
+      "ext3618Pct": 4.313725490196078
+    },
+    "monthly": {
+      "total": 70,
+      "brokeOut": 69,
+      "breakoutPct": 98.57142857142858,
+      "upsidePct": 72.85714285714285,
+      "downsidePct": 61.42857142857143,
+      "bothPct": 35.714285714285715,
+      "ext1618Pct": 78.26086956521739,
+      "ext2618Pct": 37.68115942028986,
+      "ext3618Pct": 20.28985507246377
+    }
+  },
+  "NSE:APLAPOLLO": {
+    "symbol": "APLAPOLLO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 281,
+      "breakoutPct": 88.92405063291139,
+      "upsidePct": 55.06329113924051,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 13.291139240506327,
+      "ext1618Pct": 40.213523131672595,
+      "ext2618Pct": 8.185053380782918,
+      "ext3618Pct": 2.135231316725979
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 64.7887323943662,
+      "ext2618Pct": 25.352112676056336,
+      "ext3618Pct": 7.042253521126761
+    }
+  },
+  "NSE:APOLLOHOSP": {
+    "symbol": "APOLLOHOSP",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 286,
+      "breakoutPct": 90.50632911392405,
+      "upsidePct": 59.49367088607595,
+      "downsidePct": 48.10126582278481,
+      "bothPct": 17.088607594936708,
+      "ext1618Pct": 38.46153846153847,
+      "ext2618Pct": 9.44055944055944,
+      "ext3618Pct": 3.146853146853147
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 43.83561643835616,
+      "bothPct": 24.65753424657534,
+      "ext1618Pct": 66.19718309859155,
+      "ext2618Pct": 23.943661971830984,
+      "ext3618Pct": 8.450704225352112
+    }
+  },
+  "NSE:ASHOKLEY": {
+    "symbol": "ASHOKLEY",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 56.64556962025317,
+      "downsidePct": 45.56962025316456,
+      "bothPct": 15.50632911392405,
+      "ext1618Pct": 38.68613138686132,
+      "ext2618Pct": 9.124087591240876,
+      "ext3618Pct": 1.824817518248175
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 60.56338028169014,
+      "ext2618Pct": 18.30985915492958,
+      "ext3618Pct": 4.225352112676056
+    }
+  },
+  "NSE:ASIANPAINT": {
+    "symbol": "ASIANPAINT",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 293,
+      "breakoutPct": 92.72151898734177,
+      "upsidePct": 56.9620253164557,
+      "downsidePct": 49.36708860759494,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 48.4641638225256,
+      "ext2618Pct": 11.262798634812286,
+      "ext3618Pct": 2.3890784982935154
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 69.01408450704226,
+      "ext2618Pct": 22.535211267605636,
+      "ext3618Pct": 8.450704225352112
+    }
+  },
+  "NSE:ASTRAL": {
+    "symbol": "ASTRAL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 45.88607594936709,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 43.682310469314075,
+      "ext2618Pct": 7.2202166064981945,
+      "ext3618Pct": 1.8050541516245486
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 65.75342465753424,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 64.38356164383562,
+      "ext2618Pct": 24.65753424657534,
+      "ext3618Pct": 9.58904109589041
+    }
+  },
+  "NSE:AUBANK": {
+    "symbol": "AUBANK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 58.22784810126582,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 15.18987341772152,
+      "ext1618Pct": 39.20863309352518,
+      "ext2618Pct": 7.194244604316546,
+      "ext3618Pct": 1.079136690647482
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 24.65753424657534,
+      "ext1618Pct": 65.21739130434783,
+      "ext2618Pct": 21.73913043478261,
+      "ext3618Pct": 8.695652173913043
+    }
+  },
+  "NSE:AUROPHARMA": {
+    "symbol": "AUROPHARMA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 282,
+      "breakoutPct": 89.24050632911393,
+      "upsidePct": 52.21518987341772,
+      "downsidePct": 51.89873417721519,
+      "bothPct": 14.873417721518987,
+      "ext1618Pct": 43.97163120567376,
+      "ext2618Pct": 7.801418439716312,
+      "ext3618Pct": 2.8368794326241136
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 71.83098591549296,
+      "ext2618Pct": 21.12676056338028,
+      "ext3618Pct": 11.267605633802818
+    }
+  },
+  "NSE:AXISBANK": {
+    "symbol": "AXISBANK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 281,
+      "breakoutPct": 88.92405063291139,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 39.50177935943061,
+      "ext2618Pct": 11.032028469750891,
+      "ext3618Pct": 3.202846975088968
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 57.74647887323944,
+      "ext2618Pct": 26.76056338028169,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:BAJAJFINSV": {
+    "symbol": "BAJAJFINSV",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 56.0126582278481,
+      "downsidePct": 48.41772151898734,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 46.31578947368421,
+      "ext2618Pct": 10.175438596491228,
+      "ext3618Pct": 1.7543859649122806
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 59.72222222222222,
+      "ext2618Pct": 15.277777777777779,
+      "ext3618Pct": 6.944444444444445
+    }
+  },
+  "NSE:BAJAJHLDNG": {
+    "symbol": "BAJAJHLDNG",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 261,
+      "breakoutPct": 82.59493670886076,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 42.721518987341774,
+      "bothPct": 14.873417721518987,
+      "ext1618Pct": 40.229885057471265,
+      "ext2618Pct": 9.961685823754788,
+      "ext3618Pct": 4.597701149425287
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 65.75342465753424,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 19.17808219178082,
+      "ext1618Pct": 53.52112676056338,
+      "ext2618Pct": 16.901408450704224,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:BAJAJ_AUTO": {
+    "symbol": "BAJAJ_AUTO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 56.9620253164557,
+      "downsidePct": 45.88607594936709,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 41.57706093189964,
+      "ext2618Pct": 8.60215053763441,
+      "ext3618Pct": 2.5089605734767026
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 66.19718309859155,
+      "ext2618Pct": 22.535211267605636,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:BAJFINANCE": {
+    "symbol": "BAJFINANCE",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 281,
+      "breakoutPct": 88.92405063291139,
+      "upsidePct": 53.79746835443038,
+      "downsidePct": 49.68354430379747,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 48.04270462633452,
+      "ext2618Pct": 13.167259786476867,
+      "ext3618Pct": 3.9145907473309607
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 72.85714285714285,
+      "ext2618Pct": 20,
+      "ext3618Pct": 7.142857142857142
+    }
+  },
+  "NSE:BANDHANBNK": {
+    "symbol": "BANDHANBNK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 50.63291139240506,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 9.81012658227848,
+      "ext1618Pct": 41.935483870967744,
+      "ext2618Pct": 7.526881720430108,
+      "ext3618Pct": 0.7168458781362007
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 72.85714285714285,
+      "ext2618Pct": 27.142857142857142,
+      "ext3618Pct": 5.714285714285714
+    }
+  },
+  "NSE:BANKBARODA": {
+    "symbol": "BANKBARODA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 44.303797468354425,
+      "bothPct": 11.39240506329114,
+      "ext1618Pct": 43.58974358974359,
+      "ext2618Pct": 6.95970695970696,
+      "ext3618Pct": 2.564102564102564
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 66.66666666666666,
+      "ext2618Pct": 20.833333333333336,
+      "ext3618Pct": 5.555555555555555
+    }
+  },
+  "NSE:BANKINDIA": {
+    "symbol": "BANKINDIA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 52.53164556962025,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 11.708860759493671,
+      "ext1618Pct": 46.76258992805755,
+      "ext2618Pct": 8.273381294964029,
+      "ext3618Pct": 3.597122302158273
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 68,
+      "breakoutPct": 93.15068493150685,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 73.52941176470588,
+      "ext2618Pct": 27.941176470588236,
+      "ext3618Pct": 8.823529411764707
+    }
+  },
+  "NSE:BDL": {
+    "symbol": "BDL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 268,
+      "breakoutPct": 84.81012658227847,
+      "upsidePct": 48.734177215189874,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 11.39240506329114,
+      "ext1618Pct": 42.91044776119403,
+      "ext2618Pct": 11.940298507462686,
+      "ext3618Pct": 2.6119402985074625
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 63.013698630136986,
+      "bothPct": 39.726027397260275,
+      "ext1618Pct": 70.4225352112676,
+      "ext2618Pct": 36.61971830985916,
+      "ext3618Pct": 15.492957746478872
+    }
+  },
+  "NSE:BEL": {
+    "symbol": "BEL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 56.0126582278481,
+      "downsidePct": 43.9873417721519,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 40,
+      "ext2618Pct": 6.909090909090909,
+      "ext3618Pct": 1.4545454545454546
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 68.57142857142857,
+      "ext2618Pct": 22.857142857142858,
+      "ext3618Pct": 8.571428571428571
+    }
+  },
+  "NSE:BHARATFORG": {
+    "symbol": "BHARATFORG",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 284,
+      "breakoutPct": 89.87341772151899,
+      "upsidePct": 60.44303797468354,
+      "downsidePct": 43.9873417721519,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 44.36619718309859,
+      "ext2618Pct": 8.80281690140845,
+      "ext3618Pct": 1.7605633802816902
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 79.45205479452055,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 71.83098591549296,
+      "ext2618Pct": 30.985915492957744,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:BHARTIARTL": {
+    "symbol": "BHARTIARTL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 283,
+      "breakoutPct": 89.55696202531645,
+      "upsidePct": 61.07594936708861,
+      "downsidePct": 45.56962025316456,
+      "bothPct": 17.088607594936708,
+      "ext1618Pct": 44.87632508833922,
+      "ext2618Pct": 8.480565371024735,
+      "ext3618Pct": 3.53356890459364
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 62.857142857142854,
+      "ext2618Pct": 15.714285714285714,
+      "ext3618Pct": 2.857142857142857
+    }
+  },
+  "NSE:BHEL": {
+    "symbol": "BHEL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 52.84810126582279,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 11.075949367088606,
+      "ext1618Pct": 45.25547445255474,
+      "ext2618Pct": 11.678832116788321,
+      "ext3618Pct": 2.5547445255474455
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 60,
+      "ext2618Pct": 27.142857142857142,
+      "ext3618Pct": 5.714285714285714
+    }
+  },
+  "NSE:BIOCON": {
+    "symbol": "BIOCON",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 57.91139240506329,
+      "downsidePct": 47.78481012658228,
+      "bothPct": 15.50632911392405,
+      "ext1618Pct": 38.94736842105263,
+      "ext2618Pct": 7.368421052631578,
+      "ext3618Pct": 2.456140350877193
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 68.05555555555556,
+      "ext2618Pct": 30.555555555555557,
+      "ext3618Pct": 6.944444444444445
+    }
+  },
+  "NSE:BLUESTARCO": {
+    "symbol": "BLUESTARCO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 271,
+      "breakoutPct": 85.75949367088607,
+      "upsidePct": 53.79746835443038,
+      "downsidePct": 48.10126582278481,
+      "bothPct": 16.139240506329113,
+      "ext1618Pct": 37.63837638376384,
+      "ext2618Pct": 6.642066420664207,
+      "ext3618Pct": 2.5830258302583027
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 61.111111111111114,
+      "ext2618Pct": 20.833333333333336,
+      "ext3618Pct": 9.722222222222223
+    }
+  },
+  "NSE:BOSCHLTD": {
+    "symbol": "BOSCHLTD",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 270,
+      "breakoutPct": 85.44303797468355,
+      "upsidePct": 55.06329113924051,
+      "downsidePct": 43.35443037974683,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 40,
+      "ext2618Pct": 11.851851851851853,
+      "ext3618Pct": 3.3333333333333335
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 56.94444444444444,
+      "ext2618Pct": 23.61111111111111,
+      "ext3618Pct": 12.5
+    }
+  },
+  "NSE:BPCL": {
+    "symbol": "BPCL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 283,
+      "breakoutPct": 89.55696202531645,
+      "upsidePct": 55.06329113924051,
+      "downsidePct": 46.835443037974684,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 44.16961130742049,
+      "ext2618Pct": 6.007067137809187,
+      "ext3618Pct": 1.76678445229682
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 62.31884057971014,
+      "ext2618Pct": 20.28985507246377,
+      "ext3618Pct": 8.695652173913043
+    }
+  },
+  "NSE:BRITANNIA": {
+    "symbol": "BRITANNIA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 48.734177215189874,
+      "bothPct": 16.139240506329113,
+      "ext1618Pct": 36.84210526315789,
+      "ext2618Pct": 4.912280701754386,
+      "ext3618Pct": 0.3508771929824561
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 64.28571428571429,
+      "ext2618Pct": 20,
+      "ext3618Pct": 10
+    }
+  },
+  "NSE:BSE": {
+    "symbol": "BSE",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 276,
+      "breakoutPct": 87.34177215189874,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 45.88607594936709,
+      "bothPct": 12.025316455696203,
+      "ext1618Pct": 51.449275362318836,
+      "ext2618Pct": 15.579710144927535,
+      "ext3618Pct": 5.072463768115942
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 47.94520547945205,
+      "bothPct": 19.17808219178082,
+      "ext1618Pct": 72.22222222222221,
+      "ext2618Pct": 31.944444444444443,
+      "ext3618Pct": 16.666666666666664
+    }
+  },
+  "NSE:CAMS": {
+    "symbol": "CAMS",
+    "weekly": {
+      "total": 302,
+      "brokeOut": 258,
+      "breakoutPct": 85.43046357615894,
+      "upsidePct": 50.993377483443716,
+      "downsidePct": 46.026490066225165,
+      "bothPct": 11.589403973509933,
+      "ext1618Pct": 42.63565891472868,
+      "ext2618Pct": 12.015503875968992,
+      "ext3618Pct": 3.875968992248062
+    },
+    "monthly": {
+      "total": 70,
+      "brokeOut": 67,
+      "breakoutPct": 95.71428571428572,
+      "upsidePct": 70,
+      "downsidePct": 50,
+      "bothPct": 24.285714285714285,
+      "ext1618Pct": 61.19402985074627,
+      "ext2618Pct": 31.343283582089555,
+      "ext3618Pct": 11.940298507462686
+    }
+  },
+  "NSE:CANBK": {
+    "symbol": "CANBK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 43.037974683544306,
+      "bothPct": 11.708860759493671,
+      "ext1618Pct": 45.62043795620438,
+      "ext2618Pct": 12.043795620437956,
+      "ext3618Pct": 1.824817518248175
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 61.97183098591549,
+      "ext2618Pct": 21.12676056338028,
+      "ext3618Pct": 7.042253521126761
+    }
+  },
+  "NSE:CDSL": {
+    "symbol": "CDSL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 272,
+      "breakoutPct": 86.07594936708861,
+      "upsidePct": 51.89873417721519,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 45.588235294117645,
+      "ext2618Pct": 12.132352941176471,
+      "ext3618Pct": 2.5735294117647056
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 77.14285714285715,
+      "ext2618Pct": 28.57142857142857,
+      "ext3618Pct": 10
+    }
+  },
+  "NSE:CGPOWER": {
+    "symbol": "CGPOWER",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 283,
+      "breakoutPct": 89.55696202531645,
+      "upsidePct": 55.69620253164557,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 47.70318021201413,
+      "ext2618Pct": 9.89399293286219,
+      "ext3618Pct": 2.8268551236749118
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 68.05555555555556,
+      "ext2618Pct": 30.555555555555557,
+      "ext3618Pct": 16.666666666666664
+    }
+  },
+  "NSE:CHOLAFIN": {
+    "symbol": "CHOLAFIN",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 48.734177215189874,
+      "bothPct": 16.139240506329113,
+      "ext1618Pct": 44.24460431654676,
+      "ext2618Pct": 9.712230215827338,
+      "ext3618Pct": 1.4388489208633095
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 59.154929577464785,
+      "ext2618Pct": 21.12676056338028,
+      "ext3618Pct": 2.8169014084507045
+    }
+  },
+  "NSE:CIPLA": {
+    "symbol": "CIPLA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 15.50632911392405,
+      "ext1618Pct": 41.02564102564102,
+      "ext2618Pct": 9.157509157509157,
+      "ext3618Pct": 3.296703296703297
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 68.57142857142857,
+      "ext2618Pct": 20,
+      "ext3618Pct": 2.857142857142857
+    }
+  },
+  "NSE:COALINDIA": {
+    "symbol": "COALINDIA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 286,
+      "breakoutPct": 90.50632911392405,
+      "upsidePct": 53.16455696202531,
+      "downsidePct": 49.68354430379747,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 41.60839160839161,
+      "ext2618Pct": 9.44055944055944,
+      "ext3618Pct": 2.797202797202797
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 64.28571428571429,
+      "ext2618Pct": 22.857142857142858,
+      "ext3618Pct": 12.857142857142856
+    }
+  },
+  "NSE:COCHINSHIP": {
+    "symbol": "COCHINSHIP",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 49.36708860759494,
+      "downsidePct": 48.734177215189874,
+      "bothPct": 11.075949367088606,
+      "ext1618Pct": 45.45454545454545,
+      "ext2618Pct": 12.727272727272727,
+      "ext3618Pct": 5.818181818181818
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 64.38356164383562,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 73.97260273972603,
+      "ext2618Pct": 31.506849315068493,
+      "ext3618Pct": 10.95890410958904
+    }
+  },
+  "NSE:COFORGE": {
+    "symbol": "COFORGE",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 283,
+      "breakoutPct": 89.55696202531645,
+      "upsidePct": 61.39240506329114,
+      "downsidePct": 44.303797468354425,
+      "bothPct": 16.139240506329113,
+      "ext1618Pct": 48.76325088339223,
+      "ext2618Pct": 10.247349823321555,
+      "ext3618Pct": 4.593639575971731
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 76.71232876712328,
+      "ext2618Pct": 38.35616438356164,
+      "ext3618Pct": 9.58904109589041
+    }
+  },
+  "NSE:COLPAL": {
+    "symbol": "COLPAL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 50,
+      "downsidePct": 51.58227848101266,
+      "bothPct": 13.291139240506327,
+      "ext1618Pct": 40.14336917562724,
+      "ext2618Pct": 9.67741935483871,
+      "ext3618Pct": 2.5089605734767026
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 56.52173913043478,
+      "ext2618Pct": 15.942028985507244,
+      "ext3618Pct": 5.797101449275362
+    }
+  },
+  "NSE:CONCOR": {
+    "symbol": "CONCOR",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 52.21518987341772,
+      "downsidePct": 45.56962025316456,
+      "bothPct": 9.81012658227848,
+      "ext1618Pct": 36.330935251798564,
+      "ext2618Pct": 9.352517985611511,
+      "ext3618Pct": 1.4388489208633095
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 64.38356164383562,
+      "downsidePct": 64.38356164383562,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 72.85714285714285,
+      "ext2618Pct": 25.71428571428571,
+      "ext3618Pct": 5.714285714285714
+    }
+  },
+  "NSE:CROMPTON": {
+    "symbol": "CROMPTON",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 271,
+      "breakoutPct": 85.75949367088607,
+      "upsidePct": 49.050632911392405,
+      "downsidePct": 50.63291139240506,
+      "bothPct": 13.924050632911392,
+      "ext1618Pct": 40.59040590405904,
+      "ext2618Pct": 8.487084870848708,
+      "ext3618Pct": 1.8450184501845017
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 56.16438356164384,
+      "downsidePct": 65.75342465753424,
+      "bothPct": 23.28767123287671,
+      "ext1618Pct": 68.05555555555556,
+      "ext2618Pct": 16.666666666666664,
+      "ext3618Pct": 4.166666666666666
+    }
+  },
+  "NSE:CUMMINSIND": {
+    "symbol": "CUMMINSIND",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 284,
+      "breakoutPct": 89.87341772151899,
+      "upsidePct": 63.60759493670886,
+      "downsidePct": 42.721518987341774,
+      "bothPct": 16.455696202531644,
+      "ext1618Pct": 41.901408450704224,
+      "ext2618Pct": 5.633802816901409,
+      "ext3618Pct": 1.4084507042253522
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 61.111111111111114,
+      "ext2618Pct": 27.77777777777778,
+      "ext3618Pct": 8.333333333333332
+    }
+  },
+  "NSE:DABUR": {
+    "symbol": "DABUR",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 54.11392405063291,
+      "downsidePct": 52.21518987341772,
+      "bothPct": 18.037974683544302,
+      "ext1618Pct": 39.06810035842294,
+      "ext2618Pct": 7.885304659498208,
+      "ext3618Pct": 1.7921146953405016
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 61.64383561643836,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 23.28767123287671,
+      "ext1618Pct": 53.62318840579711,
+      "ext2618Pct": 14.492753623188406,
+      "ext3618Pct": 2.898550724637681
+    }
+  },
+  "NSE:DALBHARAT": {
+    "symbol": "DALBHARAT",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 53.79746835443038,
+      "downsidePct": 48.10126582278481,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 37.634408602150536,
+      "ext2618Pct": 6.810035842293908,
+      "ext3618Pct": 2.5089605734767026
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 68.4931506849315,
+      "ext2618Pct": 12.32876712328767,
+      "ext3618Pct": 5.47945205479452
+    }
+  },
+  "NSE:DELHIVERY": {
+    "symbol": "DELHIVERY",
+    "weekly": {
+      "total": 217,
+      "brokeOut": 186,
+      "breakoutPct": 85.71428571428571,
+      "upsidePct": 51.1520737327189,
+      "downsidePct": 47.465437788018434,
+      "bothPct": 12.903225806451612,
+      "ext1618Pct": 46.774193548387096,
+      "ext2618Pct": 6.451612903225806,
+      "ext3618Pct": 3.225806451612903
+    },
+    "monthly": {
+      "total": 50,
+      "brokeOut": 49,
+      "breakoutPct": 98,
+      "upsidePct": 68,
+      "downsidePct": 66,
+      "bothPct": 36,
+      "ext1618Pct": 77.55102040816327,
+      "ext2618Pct": 30.612244897959183,
+      "ext3618Pct": 16.3265306122449
+    }
+  },
+  "NSE:DIVISLAB": {
+    "symbol": "DIVISLAB",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 269,
+      "breakoutPct": 85.12658227848101,
+      "upsidePct": 54.43037974683544,
+      "downsidePct": 46.51898734177215,
+      "bothPct": 15.822784810126583,
+      "ext1618Pct": 42.00743494423792,
+      "ext2618Pct": 8.921933085501859,
+      "ext3618Pct": 2.2304832713754648
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 64.7887323943662,
+      "ext2618Pct": 21.12676056338028,
+      "ext3618Pct": 11.267605633802818
+    }
+  },
+  "NSE:DIXON": {
+    "symbol": "DIXON",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 268,
+      "breakoutPct": 84.81012658227847,
+      "upsidePct": 52.84810126582279,
+      "downsidePct": 45.56962025316456,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 43.28358208955223,
+      "ext2618Pct": 9.701492537313433,
+      "ext3618Pct": 2.9850746268656714
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 79.45205479452055,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 65.27777777777779,
+      "ext2618Pct": 27.77777777777778,
+      "ext3618Pct": 9.722222222222223
+    }
+  },
+  "NSE:DLF": {
+    "symbol": "DLF",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 44.620253164556964,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 44.642857142857146,
+      "ext2618Pct": 7.142857142857142,
+      "ext3618Pct": 1.0714285714285714
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 73.97260273972603,
+      "ext2618Pct": 28.767123287671232,
+      "ext3618Pct": 10.95890410958904
+    }
+  },
+  "NSE:DMART": {
+    "symbol": "DMART",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 51.58227848101266,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 41.75824175824176,
+      "ext2618Pct": 9.157509157509157,
+      "ext3618Pct": 1.8315018315018317
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 63.013698630136986,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 70.4225352112676,
+      "ext2618Pct": 26.76056338028169,
+      "ext3618Pct": 9.859154929577464
+    }
+  },
+  "NSE:DRREDDY": {
+    "symbol": "DRREDDY",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 54.11392405063291,
+      "downsidePct": 45.88607594936709,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 44.72727272727273,
+      "ext2618Pct": 9.090909090909092,
+      "ext3618Pct": 1.4545454545454546
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 62.857142857142854,
+      "ext2618Pct": 22.857142857142858,
+      "ext3618Pct": 14.285714285714285
+    }
+  },
+  "NSE:EICHERMOT": {
+    "symbol": "EICHERMOT",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 54.11392405063291,
+      "downsidePct": 48.734177215189874,
+      "bothPct": 15.822784810126583,
+      "ext1618Pct": 41.45454545454545,
+      "ext2618Pct": 11.272727272727273,
+      "ext3618Pct": 1.4545454545454546
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 65.71428571428571,
+      "ext2618Pct": 20,
+      "ext3618Pct": 4.285714285714286
+    }
+  },
+  "NSE:ETERNAL": {
+    "symbol": "ETERNAL",
+    "weekly": {
+      "total": 260,
+      "brokeOut": 233,
+      "breakoutPct": 89.61538461538461,
+      "upsidePct": 52.69230769230769,
+      "downsidePct": 50,
+      "bothPct": 13.076923076923078,
+      "ext1618Pct": 48.06866952789699,
+      "ext2618Pct": 11.587982832618025,
+      "ext3618Pct": 2.575107296137339
+    },
+    "monthly": {
+      "total": 60,
+      "brokeOut": 60,
+      "breakoutPct": 100,
+      "upsidePct": 73.33333333333333,
+      "downsidePct": 61.66666666666667,
+      "bothPct": 35,
+      "ext1618Pct": 75,
+      "ext2618Pct": 35,
+      "ext3618Pct": 13.333333333333334
+    }
+  },
+  "NSE:EXIDEIND": {
+    "symbol": "EXIDEIND",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 56.0126582278481,
+      "downsidePct": 44.620253164556964,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 34.43223443223443,
+      "ext2618Pct": 7.326007326007327,
+      "ext3618Pct": 2.197802197802198
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 43.83561643835616,
+      "ext1618Pct": 59.72222222222222,
+      "ext2618Pct": 25,
+      "ext3618Pct": 9.722222222222223
+    }
+  },
+  "NSE:FEDERALBNK": {
+    "symbol": "FEDERALBNK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 58.86075949367089,
+      "downsidePct": 44.303797468354425,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 40.70175438596491,
+      "ext2618Pct": 8.771929824561402,
+      "ext3618Pct": 1.7543859649122806
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 80.82191780821918,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 42.465753424657535,
+      "ext1618Pct": 59.154929577464785,
+      "ext2618Pct": 19.718309859154928,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:FORCEMOT": {
+    "symbol": "FORCEMOT",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 268,
+      "breakoutPct": 84.81012658227847,
+      "upsidePct": 47.78481012658228,
+      "downsidePct": 47.78481012658228,
+      "bothPct": 10.759493670886076,
+      "ext1618Pct": 39.55223880597015,
+      "ext2618Pct": 11.567164179104477,
+      "ext3618Pct": 3.731343283582089
+    },
+    "monthly": {
+      "total": 74,
+      "brokeOut": 71,
+      "breakoutPct": 95.94594594594594,
+      "upsidePct": 70.27027027027027,
+      "downsidePct": 55.4054054054054,
+      "bothPct": 29.72972972972973,
+      "ext1618Pct": 69.01408450704226,
+      "ext2618Pct": 32.3943661971831,
+      "ext3618Pct": 15.492957746478872
+    }
+  },
+  "NSE:FORTIS": {
+    "symbol": "FORTIS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 276,
+      "breakoutPct": 87.34177215189874,
+      "upsidePct": 55.69620253164557,
+      "downsidePct": 43.9873417721519,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 40.21739130434783,
+      "ext2618Pct": 6.159420289855073,
+      "ext3618Pct": 2.1739130434782608
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 62.5,
+      "ext2618Pct": 15.277777777777779,
+      "ext3618Pct": 4.166666666666666
+    }
+  },
+  "NSE:GAIL": {
+    "symbol": "GAIL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 270,
+      "breakoutPct": 85.44303797468355,
+      "upsidePct": 51.26582278481012,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 12.025316455696203,
+      "ext1618Pct": 42.96296296296296,
+      "ext2618Pct": 10,
+      "ext3618Pct": 1.4814814814814816
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 68.11594202898551,
+      "ext2618Pct": 13.043478260869565,
+      "ext3618Pct": 4.3478260869565215
+    }
+  },
+  "NSE:GLENMARK": {
+    "symbol": "GLENMARK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 54.11392405063291,
+      "downsidePct": 48.41772151898734,
+      "bothPct": 14.873417721518987,
+      "ext1618Pct": 36.8231046931408,
+      "ext2618Pct": 5.415162454873646,
+      "ext3618Pct": 2.166064981949458
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 65.75342465753424,
+      "ext2618Pct": 20.54794520547945,
+      "ext3618Pct": 4.10958904109589
+    }
+  },
+  "NSE:GMRINFRA": {
+    "symbol": "GMRINFRA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 45.56962025316456,
+      "bothPct": 12.658227848101266,
+      "ext1618Pct": 39.56043956043956,
+      "ext2618Pct": 11.355311355311356,
+      "ext3618Pct": 3.296703296703297
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 59.72222222222222,
+      "ext2618Pct": 23.61111111111111,
+      "ext3618Pct": 9.722222222222223
+    }
+  },
+  "NSE:GODFRYPHLP": {
+    "symbol": "GODFRYPHLP",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 259,
+      "breakoutPct": 81.9620253164557,
+      "upsidePct": 47.78481012658228,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 11.075949367088606,
+      "ext1618Pct": 39.38223938223938,
+      "ext2618Pct": 10.81081081081081,
+      "ext3618Pct": 5.405405405405405
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 65.75342465753424,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 66.66666666666666,
+      "ext2618Pct": 18.84057971014493,
+      "ext3618Pct": 8.695652173913043
+    }
+  },
+  "NSE:GODREJCP": {
+    "symbol": "GODREJCP",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 284,
+      "breakoutPct": 89.87341772151899,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 50,
+      "bothPct": 14.873417721518987,
+      "ext1618Pct": 40.140845070422536,
+      "ext2618Pct": 4.225352112676056,
+      "ext3618Pct": 1.4084507042253522
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 68.57142857142857,
+      "ext2618Pct": 17.142857142857142,
+      "ext3618Pct": 2.857142857142857
+    }
+  },
+  "NSE:GODREJPROP": {
+    "symbol": "GODREJPROP",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 53.16455696202531,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 43.956043956043956,
+      "ext2618Pct": 8.791208791208792,
+      "ext3618Pct": 1.465201465201465
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 64.38356164383562,
+      "downsidePct": 63.013698630136986,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 72.22222222222221,
+      "ext2618Pct": 25,
+      "ext3618Pct": 15.277777777777779
+    }
+  },
+  "NSE:GRASIM": {
+    "symbol": "GRASIM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 56.64556962025317,
+      "downsidePct": 46.51898734177215,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 35.43859649122807,
+      "ext2618Pct": 5.614035087719298,
+      "ext3618Pct": 1.4035087719298245
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 80.82191780821918,
+      "downsidePct": 46.57534246575342,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 60.273972602739725,
+      "ext2618Pct": 16.43835616438356,
+      "ext3618Pct": 0
+    }
+  },
+  "NSE:GVT&D": {
+    "symbol": "GVT&D",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 282,
+      "breakoutPct": 89.24050632911393,
+      "upsidePct": 52.53164556962025,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 10.759493670886076,
+      "ext1618Pct": 43.61702127659575,
+      "ext2618Pct": 10.28368794326241,
+      "ext3618Pct": 2.8368794326241136
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 69.86301369863014,
+      "ext2618Pct": 21.91780821917808,
+      "ext3618Pct": 12.32876712328767
+    }
+  },
+  "NSE:HAL": {
+    "symbol": "HAL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 53.79746835443038,
+      "downsidePct": 46.835443037974684,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 43.682310469314075,
+      "ext2618Pct": 12.996389891696749,
+      "ext3618Pct": 3.6101083032490973
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 80.82191780821918,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 41.0958904109589,
+      "ext1618Pct": 68.4931506849315,
+      "ext2618Pct": 31.506849315068493,
+      "ext3618Pct": 10.95890410958904
+    }
+  },
+  "NSE:HAVELLS": {
+    "symbol": "HAVELLS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 54.43037974683544,
+      "downsidePct": 49.050632911392405,
+      "bothPct": 16.455696202531644,
+      "ext1618Pct": 37.81818181818182,
+      "ext2618Pct": 9.818181818181818,
+      "ext3618Pct": 2.5454545454545454
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 67.6056338028169,
+      "ext2618Pct": 22.535211267605636,
+      "ext3618Pct": 11.267605633802818
+    }
+  },
+  "NSE:HCLTECH": {
+    "symbol": "HCLTECH",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 284,
+      "breakoutPct": 89.87341772151899,
+      "upsidePct": 56.9620253164557,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 39.7887323943662,
+      "ext2618Pct": 9.859154929577464,
+      "ext3618Pct": 1.4084507042253522
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 80.82191780821918,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 79.45205479452055,
+      "ext2618Pct": 36.986301369863014,
+      "ext3618Pct": 9.58904109589041
+    }
+  },
+  "NSE:HDFCAMC": {
+    "symbol": "HDFCAMC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 45.88607594936709,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 44.80286738351255,
+      "ext2618Pct": 9.31899641577061,
+      "ext3618Pct": 1.4336917562724014
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 46.57534246575342,
+      "ext1618Pct": 64.7887323943662,
+      "ext2618Pct": 29.577464788732392,
+      "ext3618Pct": 8.450704225352112
+    }
+  },
+  "NSE:HDFCBANK": {
+    "symbol": "HDFCBANK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 286,
+      "breakoutPct": 90.50632911392405,
+      "upsidePct": 58.22784810126582,
+      "downsidePct": 46.835443037974684,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 40.20979020979021,
+      "ext2618Pct": 7.3426573426573425,
+      "ext3618Pct": 1.3986013986013985
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 64.38356164383562,
+      "ext2618Pct": 20.54794520547945,
+      "ext3618Pct": 6.8493150684931505
+    }
+  },
+  "NSE:HDFCLIFE": {
+    "symbol": "HDFCLIFE",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 50,
+      "downsidePct": 49.68354430379747,
+      "bothPct": 12.658227848101266,
+      "ext1618Pct": 40,
+      "ext2618Pct": 6.909090909090909,
+      "ext3618Pct": 2.5454545454545454
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 58.57142857142858,
+      "ext2618Pct": 14.285714285714285,
+      "ext3618Pct": 4.285714285714286
+    }
+  },
+  "NSE:HEROMOTOCO": {
+    "symbol": "HEROMOTOCO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 271,
+      "breakoutPct": 85.75949367088607,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 40.59040590405904,
+      "ext2618Pct": 11.07011070110701,
+      "ext3618Pct": 2.214022140221402
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 64.38356164383562,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 62.857142857142854,
+      "ext2618Pct": 21.428571428571427,
+      "ext3618Pct": 5.714285714285714
+    }
+  },
+  "NSE:HINDALCO": {
+    "symbol": "HINDALCO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 276,
+      "breakoutPct": 87.34177215189874,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 46.73913043478261,
+      "ext2618Pct": 9.420289855072465,
+      "ext3618Pct": 3.6231884057971016
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 46.57534246575342,
+      "bothPct": 23.28767123287671,
+      "ext1618Pct": 71.42857142857143,
+      "ext2618Pct": 30,
+      "ext3618Pct": 8.571428571428571
+    }
+  },
+  "NSE:HINDPETRO": {
+    "symbol": "HINDPETRO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 287,
+      "breakoutPct": 90.82278481012658,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 49.050632911392405,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 44.25087108013937,
+      "ext2618Pct": 11.846689895470384,
+      "ext3618Pct": 0.6968641114982579
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 57.74647887323944,
+      "ext2618Pct": 22.535211267605636,
+      "ext3618Pct": 2.8169014084507045
+    }
+  },
+  "NSE:HINDUNILVR": {
+    "symbol": "HINDUNILVR",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 291,
+      "breakoutPct": 92.08860759493672,
+      "upsidePct": 53.16455696202531,
+      "downsidePct": 53.16455696202531,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 38.83161512027492,
+      "ext2618Pct": 4.810996563573884,
+      "ext3618Pct": 1.718213058419244
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 60.273972602739725,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 68.57142857142857,
+      "ext2618Pct": 27.142857142857142,
+      "ext3618Pct": 17.142857142857142
+    }
+  },
+  "NSE:HINDZINC": {
+    "symbol": "HINDZINC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 50.9493670886076,
+      "downsidePct": 49.36708860759494,
+      "bothPct": 12.025316455696203,
+      "ext1618Pct": 47.67025089605735,
+      "ext2618Pct": 11.469534050179211,
+      "ext3618Pct": 5.376344086021505
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 72.46376811594203,
+      "ext2618Pct": 37.68115942028986,
+      "ext3618Pct": 13.043478260869565
+    }
+  },
+  "NSE:HYUNDAI": {
+    "symbol": "HYUNDAI",
+    "weekly": {
+      "total": 91,
+      "brokeOut": 71,
+      "breakoutPct": 78.02197802197803,
+      "upsidePct": 40.65934065934066,
+      "downsidePct": 45.05494505494506,
+      "bothPct": 7.6923076923076925,
+      "ext1618Pct": 40.845070422535215,
+      "ext2618Pct": 9.859154929577464,
+      "ext3618Pct": 0
+    },
+    "monthly": {
+      "total": 21,
+      "brokeOut": 21,
+      "breakoutPct": 100,
+      "upsidePct": 61.904761904761905,
+      "downsidePct": 57.14285714285714,
+      "bothPct": 19.047619047619047,
+      "ext1618Pct": 61.904761904761905,
+      "ext2618Pct": 33.33333333333333,
+      "ext3618Pct": 4.761904761904762
+    }
+  },
+  "NSE:ICICIBANK": {
+    "symbol": "ICICIBANK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 59.17721518987342,
+      "downsidePct": 43.35443037974683,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 43.50877192982456,
+      "ext2618Pct": 4.912280701754386,
+      "ext3618Pct": 1.0526315789473684
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 65.27777777777779,
+      "ext2618Pct": 15.277777777777779,
+      "ext3618Pct": 6.944444444444445
+    }
+  },
+  "NSE:ICICIGI": {
+    "symbol": "ICICIGI",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 50,
+      "bothPct": 18.354430379746837,
+      "ext1618Pct": 35.53113553113553,
+      "ext2618Pct": 5.4945054945054945,
+      "ext3618Pct": 0.3663003663003663
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 62.5,
+      "ext2618Pct": 15.277777777777779,
+      "ext3618Pct": 5.555555555555555
+    }
+  },
+  "NSE:ICICIPRULI": {
+    "symbol": "ICICIPRULI",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 289,
+      "breakoutPct": 91.45569620253164,
+      "upsidePct": 56.9620253164557,
+      "downsidePct": 51.89873417721519,
+      "bothPct": 17.405063291139243,
+      "ext1618Pct": 39.10034602076124,
+      "ext2618Pct": 8.650519031141869,
+      "ext3618Pct": 1.0380622837370241
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 77.77777777777779,
+      "ext2618Pct": 15.277777777777779,
+      "ext3618Pct": 5.555555555555555
+    }
+  },
+  "NSE:IDEA": {
+    "symbol": "IDEA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 252,
+      "breakoutPct": 79.74683544303798,
+      "upsidePct": 40.189873417721515,
+      "downsidePct": 49.36708860759494,
+      "bothPct": 9.81012658227848,
+      "ext1618Pct": 46.82539682539682,
+      "ext2618Pct": 9.126984126984127,
+      "ext3618Pct": 3.1746031746031744
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 60.273972602739725,
+      "downsidePct": 63.013698630136986,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 65.71428571428571,
+      "ext2618Pct": 20,
+      "ext3618Pct": 7.142857142857142
+    }
+  },
+  "NSE:IDFCFIRSTB": {
+    "symbol": "IDFCFIRSTB",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 267,
+      "breakoutPct": 84.49367088607595,
+      "upsidePct": 49.68354430379747,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 12.658227848101266,
+      "ext1618Pct": 42.32209737827715,
+      "ext2618Pct": 9.363295880149813,
+      "ext3618Pct": 1.8726591760299627
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 60.56338028169014,
+      "ext2618Pct": 23.943661971830984,
+      "ext3618Pct": 4.225352112676056
+    }
+  },
+  "NSE:IEX": {
+    "symbol": "IEX",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 271,
+      "breakoutPct": 85.75949367088607,
+      "upsidePct": 51.89873417721519,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 11.39240506329114,
+      "ext1618Pct": 41.69741697416974,
+      "ext2618Pct": 10.70110701107011,
+      "ext3618Pct": 2.5830258302583027
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 65.27777777777779,
+      "ext2618Pct": 20.833333333333336,
+      "ext3618Pct": 12.5
+    }
+  },
+  "NSE:INDHOTEL": {
+    "symbol": "INDHOTEL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 58.54430379746836,
+      "downsidePct": 43.037974683544306,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 43.16546762589928,
+      "ext2618Pct": 8.992805755395683,
+      "ext3618Pct": 2.158273381294964
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 67.14285714285714,
+      "ext2618Pct": 28.57142857142857,
+      "ext3618Pct": 15.714285714285714
+    }
+  },
+  "NSE:INDIANB": {
+    "symbol": "INDIANB",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 267,
+      "breakoutPct": 84.49367088607595,
+      "upsidePct": 52.84810126582279,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 13.291139240506327,
+      "ext1618Pct": 43.07116104868914,
+      "ext2618Pct": 9.363295880149813,
+      "ext3618Pct": 3.3707865168539324
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 47.94520547945205,
+      "bothPct": 23.28767123287671,
+      "ext1618Pct": 63.38028169014085,
+      "ext2618Pct": 29.577464788732392,
+      "ext3618Pct": 11.267605633802818
+    }
+  },
+  "NSE:INDIGO": {
+    "symbol": "INDIGO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 282,
+      "breakoutPct": 89.24050632911393,
+      "upsidePct": 58.86075949367089,
+      "downsidePct": 44.303797468354425,
+      "bothPct": 13.924050632911392,
+      "ext1618Pct": 47.87234042553192,
+      "ext2618Pct": 11.347517730496454,
+      "ext3618Pct": 3.546099290780142
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 80.82191780821918,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 42.465753424657535,
+      "ext1618Pct": 74.64788732394366,
+      "ext2618Pct": 22.535211267605636,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:INDUSINDBK": {
+    "symbol": "INDUSINDBK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 283,
+      "breakoutPct": 89.55696202531645,
+      "upsidePct": 56.32911392405063,
+      "downsidePct": 49.68354430379747,
+      "bothPct": 16.455696202531644,
+      "ext1618Pct": 41.342756183745585,
+      "ext2618Pct": 11.307420494699647,
+      "ext3618Pct": 2.1201413427561837
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 63.013698630136986,
+      "bothPct": 38.35616438356164,
+      "ext1618Pct": 66.66666666666666,
+      "ext2618Pct": 26.38888888888889,
+      "ext3618Pct": 6.944444444444445
+    }
+  },
+  "NSE:INDUSTOWER": {
+    "symbol": "INDUSTOWER",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 276,
+      "breakoutPct": 87.34177215189874,
+      "upsidePct": 49.36708860759494,
+      "downsidePct": 50.9493670886076,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 43.11594202898551,
+      "ext2618Pct": 10.869565217391305,
+      "ext3618Pct": 1.4492753623188406
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 64.38356164383562,
+      "downsidePct": 63.013698630136986,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 67.6056338028169,
+      "ext2618Pct": 23.943661971830984,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:INFY": {
+    "symbol": "INFY",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 281,
+      "breakoutPct": 88.92405063291139,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 43.67088607594937,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 43.06049822064057,
+      "ext2618Pct": 8.185053380782918,
+      "ext3618Pct": 1.7793594306049825
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 76.38888888888889,
+      "ext2618Pct": 30.555555555555557,
+      "ext3618Pct": 13.88888888888889
+    }
+  },
+  "NSE:INOXWIND": {
+    "symbol": "INOXWIND",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 276,
+      "breakoutPct": 87.34177215189874,
+      "upsidePct": 50.31645569620253,
+      "downsidePct": 48.734177215189874,
+      "bothPct": 11.708860759493671,
+      "ext1618Pct": 40.94202898550724,
+      "ext2618Pct": 8.333333333333332,
+      "ext3618Pct": 2.1739130434782608
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 74.28571428571429,
+      "ext2618Pct": 34.285714285714285,
+      "ext3618Pct": 12.857142857142856
+    }
+  },
+  "NSE:IOC": {
+    "symbol": "IOC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 44.620253164556964,
+      "bothPct": 10.443037974683545,
+      "ext1618Pct": 44.4043321299639,
+      "ext2618Pct": 10.108303249097473,
+      "ext3618Pct": 2.166064981949458
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 65.27777777777779,
+      "ext2618Pct": 13.88888888888889,
+      "ext3618Pct": 2.7777777777777777
+    }
+  },
+  "NSE:IREDA": {
+    "symbol": "IREDA",
+    "weekly": {
+      "total": 137,
+      "brokeOut": 115,
+      "breakoutPct": 83.94160583941606,
+      "upsidePct": 40.14598540145985,
+      "downsidePct": 52.55474452554745,
+      "bothPct": 8.75912408759124,
+      "ext1618Pct": 45.21739130434783,
+      "ext2618Pct": 13.043478260869565,
+      "ext3618Pct": 0
+    },
+    "monthly": {
+      "total": 32,
+      "brokeOut": 31,
+      "breakoutPct": 96.875,
+      "upsidePct": 53.125,
+      "downsidePct": 71.875,
+      "bothPct": 28.125,
+      "ext1618Pct": 67.74193548387096,
+      "ext2618Pct": 32.25806451612903,
+      "ext3618Pct": 12.903225806451612
+    }
+  },
+  "NSE:IRFC": {
+    "symbol": "IRFC",
+    "weekly": {
+      "total": 285,
+      "brokeOut": 236,
+      "breakoutPct": 82.80701754385966,
+      "upsidePct": 44.91228070175438,
+      "downsidePct": 49.824561403508774,
+      "bothPct": 11.929824561403509,
+      "ext1618Pct": 42.79661016949153,
+      "ext2618Pct": 11.864406779661017,
+      "ext3618Pct": 2.9661016949152543
+    },
+    "monthly": {
+      "total": 66,
+      "brokeOut": 63,
+      "breakoutPct": 95.45454545454545,
+      "upsidePct": 57.57575757575758,
+      "downsidePct": 62.121212121212125,
+      "bothPct": 24.242424242424242,
+      "ext1618Pct": 73.01587301587301,
+      "ext2618Pct": 28.57142857142857,
+      "ext3618Pct": 11.11111111111111
+    }
+  },
+  "NSE:ITC": {
+    "symbol": "ITC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 49.36708860759494,
+      "downsidePct": 49.36708860759494,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 42.49084249084249,
+      "ext2618Pct": 10.256410256410255,
+      "ext3618Pct": 3.6630036630036633
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 58.9041095890411,
+      "ext2618Pct": 21.91780821917808,
+      "ext3618Pct": 9.58904109589041
+    }
+  },
+  "NSE:JINDALSTEL": {
+    "symbol": "JINDALSTEL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 284,
+      "breakoutPct": 89.87341772151899,
+      "upsidePct": 56.64556962025317,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 11.708860759493671,
+      "ext1618Pct": 41.901408450704224,
+      "ext2618Pct": 10.915492957746478,
+      "ext3618Pct": 1.4084507042253522
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 79.45205479452055,
+      "downsidePct": 47.94520547945205,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 63.013698630136986,
+      "ext2618Pct": 26.027397260273972,
+      "ext3618Pct": 5.47945205479452
+    }
+  },
+  "NSE:JIOFIN": {
+    "symbol": "JIOFIN",
+    "weekly": {
+      "total": 152,
+      "brokeOut": 131,
+      "breakoutPct": 86.18421052631578,
+      "upsidePct": 46.71052631578947,
+      "downsidePct": 54.60526315789473,
+      "bothPct": 15.131578947368421,
+      "ext1618Pct": 47.32824427480916,
+      "ext2618Pct": 9.923664122137405,
+      "ext3618Pct": 2.2900763358778624
+    },
+    "monthly": {
+      "total": 36,
+      "brokeOut": 34,
+      "breakoutPct": 94.44444444444444,
+      "upsidePct": 66.66666666666666,
+      "downsidePct": 58.333333333333336,
+      "bothPct": 30.555555555555557,
+      "ext1618Pct": 61.76470588235294,
+      "ext2618Pct": 32.35294117647059,
+      "ext3618Pct": 11.76470588235294
+    }
+  },
+  "NSE:JSWENERGY": {
+    "symbol": "JSWENERGY",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 270,
+      "breakoutPct": 85.44303797468355,
+      "upsidePct": 50,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 9.81012658227848,
+      "ext1618Pct": 42.96296296296296,
+      "ext2618Pct": 11.481481481481481,
+      "ext3618Pct": 4.074074074074074
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 66.19718309859155,
+      "ext2618Pct": 22.535211267605636,
+      "ext3618Pct": 14.084507042253522
+    }
+  },
+  "NSE:JSWSTEEL": {
+    "symbol": "JSWSTEEL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 281,
+      "breakoutPct": 88.92405063291139,
+      "upsidePct": 58.86075949367089,
+      "downsidePct": 42.721518987341774,
+      "bothPct": 12.658227848101266,
+      "ext1618Pct": 38.79003558718861,
+      "ext2618Pct": 9.252669039145907,
+      "ext3618Pct": 1.4234875444839856
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 54.929577464788736,
+      "ext2618Pct": 18.30985915492958,
+      "ext3618Pct": 7.042253521126761
+    }
+  },
+  "NSE:JUBLFOOD": {
+    "symbol": "JUBLFOOD",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 50,
+      "bothPct": 18.9873417721519,
+      "ext1618Pct": 42.857142857142854,
+      "ext2618Pct": 8.571428571428571,
+      "ext3618Pct": 2.857142857142857
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 63.013698630136986,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 70.83333333333334,
+      "ext2618Pct": 22.22222222222222,
+      "ext3618Pct": 5.555555555555555
+    }
+  },
+  "NSE:KALYANKJIL": {
+    "symbol": "KALYANKJIL",
+    "weekly": {
+      "total": 277,
+      "brokeOut": 237,
+      "breakoutPct": 85.5595667870036,
+      "upsidePct": 49.458483754512635,
+      "downsidePct": 49.458483754512635,
+      "bothPct": 13.357400722021662,
+      "ext1618Pct": 43.037974683544306,
+      "ext2618Pct": 17.29957805907173,
+      "ext3618Pct": 6.329113924050633
+    },
+    "monthly": {
+      "total": 64,
+      "brokeOut": 63,
+      "breakoutPct": 98.4375,
+      "upsidePct": 76.5625,
+      "downsidePct": 51.5625,
+      "bothPct": 29.6875,
+      "ext1618Pct": 68.25396825396825,
+      "ext2618Pct": 33.33333333333333,
+      "ext3618Pct": 15.873015873015872
+    }
+  },
+  "NSE:KAYNES": {
+    "symbol": "KAYNES",
+    "weekly": {
+      "total": 191,
+      "brokeOut": 162,
+      "breakoutPct": 84.81675392670157,
+      "upsidePct": 54.973821989528794,
+      "downsidePct": 41.8848167539267,
+      "bothPct": 12.041884816753926,
+      "ext1618Pct": 44.44444444444444,
+      "ext2618Pct": 12.345679012345679,
+      "ext3618Pct": 3.7037037037037033
+    },
+    "monthly": {
+      "total": 44,
+      "brokeOut": 42,
+      "breakoutPct": 95.45454545454545,
+      "upsidePct": 75,
+      "downsidePct": 56.81818181818182,
+      "bothPct": 36.36363636363637,
+      "ext1618Pct": 80.95238095238095,
+      "ext2618Pct": 30.952380952380953,
+      "ext3618Pct": 14.285714285714285
+    }
+  },
+  "NSE:KEI": {
+    "symbol": "KEI",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 57.91139240506329,
+      "downsidePct": 48.10126582278481,
+      "bothPct": 15.822784810126583,
+      "ext1618Pct": 47.01754385964912,
+      "ext2618Pct": 12.982456140350877,
+      "ext3618Pct": 4.56140350877193
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 83.56164383561644,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 39.726027397260275,
+      "ext1618Pct": 73.61111111111111,
+      "ext2618Pct": 29.166666666666668,
+      "ext3618Pct": 11.11111111111111
+    }
+  },
+  "NSE:KFINTECH": {
+    "symbol": "KFINTECH",
+    "weekly": {
+      "total": 185,
+      "brokeOut": 161,
+      "breakoutPct": 87.02702702702703,
+      "upsidePct": 56.21621621621622,
+      "downsidePct": 43.78378378378379,
+      "bothPct": 12.972972972972974,
+      "ext1618Pct": 45.962732919254655,
+      "ext2618Pct": 9.316770186335404,
+      "ext3618Pct": 2.484472049689441
+    },
+    "monthly": {
+      "total": 43,
+      "brokeOut": 42,
+      "breakoutPct": 97.67441860465115,
+      "upsidePct": 67.44186046511628,
+      "downsidePct": 58.139534883720934,
+      "bothPct": 27.906976744186046,
+      "ext1618Pct": 61.904761904761905,
+      "ext2618Pct": 30.952380952380953,
+      "ext3618Pct": 7.142857142857142
+    }
+  },
+  "NSE:KOTAKBANK": {
+    "symbol": "KOTAKBANK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 13.924050632911392,
+      "ext1618Pct": 40.35714285714286,
+      "ext2618Pct": 5,
+      "ext3618Pct": 0.7142857142857143
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 66.19718309859155,
+      "ext2618Pct": 29.577464788732392,
+      "ext3618Pct": 11.267605633802818
+    }
+  },
+  "NSE:KPITTECH": {
+    "symbol": "KPITTECH",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 51.58227848101266,
+      "downsidePct": 49.050632911392405,
+      "bothPct": 13.924050632911392,
+      "ext1618Pct": 46.35036496350365,
+      "ext2618Pct": 12.773722627737227,
+      "ext3618Pct": 4.37956204379562
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 77.46478873239437,
+      "ext2618Pct": 28.169014084507044,
+      "ext3618Pct": 9.859154929577464
+    }
+  },
+  "NSE:LAURUSLABS": {
+    "symbol": "LAURUSLABS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 53.79746835443038,
+      "downsidePct": 43.67088607594937,
+      "bothPct": 11.075949367088606,
+      "ext1618Pct": 44.32234432234432,
+      "ext2618Pct": 8.791208791208792,
+      "ext3618Pct": 2.197802197802198
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 79.45205479452055,
+      "downsidePct": 46.57534246575342,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 69.01408450704226,
+      "ext2618Pct": 33.80281690140845,
+      "ext3618Pct": 12.676056338028168
+    }
+  },
+  "NSE:LICHSGFIN": {
+    "symbol": "LICHSGFIN",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 56.32911392405063,
+      "downsidePct": 44.620253164556964,
+      "bothPct": 13.291139240506327,
+      "ext1618Pct": 38.628158844765345,
+      "ext2618Pct": 8.664259927797833,
+      "ext3618Pct": 2.527075812274368
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 69.01408450704226,
+      "ext2618Pct": 19.718309859154928,
+      "ext3618Pct": 4.225352112676056
+    }
+  },
+  "NSE:LICI": {
+    "symbol": "LICI",
+    "weekly": {
+      "total": 218,
+      "brokeOut": 189,
+      "breakoutPct": 86.69724770642202,
+      "upsidePct": 47.24770642201835,
+      "downsidePct": 52.293577981651374,
+      "bothPct": 12.844036697247708,
+      "ext1618Pct": 41.7989417989418,
+      "ext2618Pct": 7.936507936507936,
+      "ext3618Pct": 2.1164021164021163
+    },
+    "monthly": {
+      "total": 50,
+      "brokeOut": 45,
+      "breakoutPct": 90,
+      "upsidePct": 66,
+      "downsidePct": 54,
+      "bothPct": 30,
+      "ext1618Pct": 77.77777777777779,
+      "ext2618Pct": 33.33333333333333,
+      "ext3618Pct": 15.555555555555555
+    }
+  },
+  "NSE:LODHA": {
+    "symbol": "LODHA",
+    "weekly": {
+      "total": 274,
+      "brokeOut": 239,
+      "breakoutPct": 87.22627737226277,
+      "upsidePct": 53.64963503649635,
+      "downsidePct": 47.08029197080292,
+      "bothPct": 13.503649635036496,
+      "ext1618Pct": 40.58577405857741,
+      "ext2618Pct": 9.205020920502092,
+      "ext3618Pct": 2.092050209205021
+    },
+    "monthly": {
+      "total": 63,
+      "brokeOut": 63,
+      "breakoutPct": 100,
+      "upsidePct": 68.25396825396825,
+      "downsidePct": 60.317460317460316,
+      "bothPct": 28.57142857142857,
+      "ext1618Pct": 66.66666666666666,
+      "ext2618Pct": 19.047619047619047,
+      "ext3618Pct": 6.349206349206349
+    }
+  },
+  "NSE:LT": {
+    "symbol": "LT",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 57.91139240506329,
+      "downsidePct": 43.9873417721519,
+      "bothPct": 13.924050632911392,
+      "ext1618Pct": 38.84892086330935,
+      "ext2618Pct": 11.870503597122301,
+      "ext3618Pct": 2.158273381294964
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 67.6056338028169,
+      "ext2618Pct": 28.169014084507044,
+      "ext3618Pct": 11.267605633802818
+    }
+  },
+  "NSE:LTF": {
+    "symbol": "LTF",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 59.49367088607595,
+      "downsidePct": 43.037974683544306,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 45.878136200716845,
+      "ext2618Pct": 9.67741935483871,
+      "ext3618Pct": 2.1505376344086025
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 64.28571428571429,
+      "ext2618Pct": 22.857142857142858,
+      "ext3618Pct": 10
+    }
+  },
+  "NSE:LTIM": {
+    "symbol": "LTIM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 272,
+      "breakoutPct": 86.07594936708861,
+      "upsidePct": 56.9620253164557,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 17.088607594936708,
+      "ext1618Pct": 45.955882352941174,
+      "ext2618Pct": 11.029411764705882,
+      "ext3618Pct": 2.941176470588235
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 76.38888888888889,
+      "ext2618Pct": 34.72222222222222,
+      "ext3618Pct": 13.88888888888889
+    }
+  },
+  "NSE:LUPIN": {
+    "symbol": "LUPIN",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 276,
+      "breakoutPct": 87.34177215189874,
+      "upsidePct": 57.27848101265823,
+      "downsidePct": 46.835443037974684,
+      "bothPct": 16.77215189873418,
+      "ext1618Pct": 44.565217391304344,
+      "ext2618Pct": 8.695652173913043,
+      "ext3618Pct": 2.536231884057971
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 65.27777777777779,
+      "ext2618Pct": 22.22222222222222,
+      "ext3618Pct": 5.555555555555555
+    }
+  },
+  "NSE:MANAPPURAM": {
+    "symbol": "MANAPPURAM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 271,
+      "breakoutPct": 85.75949367088607,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 44.303797468354425,
+      "bothPct": 13.924050632911392,
+      "ext1618Pct": 42.066420664206646,
+      "ext2618Pct": 9.96309963099631,
+      "ext3618Pct": 2.214022140221402
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 63.38028169014085,
+      "ext2618Pct": 26.76056338028169,
+      "ext3618Pct": 12.676056338028168
+    }
+  },
+  "NSE:MANKIND": {
+    "symbol": "MANKIND",
+    "weekly": {
+      "total": 167,
+      "brokeOut": 151,
+      "breakoutPct": 90.41916167664671,
+      "upsidePct": 51.49700598802395,
+      "downsidePct": 49.101796407185624,
+      "bothPct": 10.179640718562874,
+      "ext1618Pct": 44.370860927152314,
+      "ext2618Pct": 9.933774834437086,
+      "ext3618Pct": 3.3112582781456954
+    },
+    "monthly": {
+      "total": 39,
+      "brokeOut": 39,
+      "breakoutPct": 100,
+      "upsidePct": 71.7948717948718,
+      "downsidePct": 58.97435897435898,
+      "bothPct": 30.76923076923077,
+      "ext1618Pct": 53.84615384615385,
+      "ext2618Pct": 25.64102564102564,
+      "ext3618Pct": 10.256410256410255
+    }
+  },
+  "NSE:MARICO": {
+    "symbol": "MARICO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 54.43037974683544,
+      "downsidePct": 49.36708860759494,
+      "bothPct": 15.50632911392405,
+      "ext1618Pct": 36.55913978494624,
+      "ext2618Pct": 6.093189964157706,
+      "ext3618Pct": 2.5089605734767026
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 52.17391304347826,
+      "ext2618Pct": 13.043478260869565,
+      "ext3618Pct": 4.3478260869565215
+    }
+  },
+  "NSE:MARUTI": {
+    "symbol": "MARUTI",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 55.06329113924051,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 37.90613718411552,
+      "ext2618Pct": 9.386281588447654,
+      "ext3618Pct": 3.2490974729241873
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 57.14285714285714,
+      "ext2618Pct": 18.571428571428573,
+      "ext3618Pct": 8.571428571428571
+    }
+  },
+  "NSE:MAXHEALTH": {
+    "symbol": "MAXHEALTH",
+    "weekly": {
+      "total": 308,
+      "brokeOut": 265,
+      "breakoutPct": 86.03896103896103,
+      "upsidePct": 57.14285714285714,
+      "downsidePct": 44.15584415584416,
+      "bothPct": 15.259740259740258,
+      "ext1618Pct": 40,
+      "ext2618Pct": 10.18867924528302,
+      "ext3618Pct": 1.8867924528301887
+    },
+    "monthly": {
+      "total": 71,
+      "brokeOut": 70,
+      "breakoutPct": 98.59154929577466,
+      "upsidePct": 73.23943661971832,
+      "downsidePct": 52.112676056338024,
+      "bothPct": 26.76056338028169,
+      "ext1618Pct": 58.57142857142858,
+      "ext2618Pct": 22.857142857142858,
+      "ext3618Pct": 7.142857142857142
+    }
+  },
+  "NSE:MAZDOCK": {
+    "symbol": "MAZDOCK",
+    "weekly": {
+      "total": 301,
+      "brokeOut": 265,
+      "breakoutPct": 88.03986710963456,
+      "upsidePct": 52.49169435215947,
+      "downsidePct": 48.837209302325576,
+      "bothPct": 13.2890365448505,
+      "ext1618Pct": 42.64150943396226,
+      "ext2618Pct": 12.452830188679245,
+      "ext3618Pct": 3.7735849056603774
+    },
+    "monthly": {
+      "total": 70,
+      "brokeOut": 68,
+      "breakoutPct": 97.14285714285714,
+      "upsidePct": 68.57142857142857,
+      "downsidePct": 54.285714285714285,
+      "bothPct": 25.71428571428571,
+      "ext1618Pct": 72.05882352941177,
+      "ext2618Pct": 27.941176470588236,
+      "ext3618Pct": 13.23529411764706
+    }
+  },
+  "NSE:MCX": {
+    "symbol": "MCX",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 43.037974683544306,
+      "bothPct": 9.81012658227848,
+      "ext1618Pct": 38.92857142857143,
+      "ext2618Pct": 10.714285714285714,
+      "ext3618Pct": 3.9285714285714284
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 75,
+      "ext2618Pct": 27.77777777777778,
+      "ext3618Pct": 11.11111111111111
+    }
+  },
+  "NSE:MFSL": {
+    "symbol": "MFSL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 284,
+      "breakoutPct": 89.87341772151899,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 49.050632911392405,
+      "bothPct": 16.77215189873418,
+      "ext1618Pct": 37.67605633802817,
+      "ext2618Pct": 7.746478873239436,
+      "ext3618Pct": 2.464788732394366
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 38.35616438356164,
+      "ext1618Pct": 61.97183098591549,
+      "ext2618Pct": 26.76056338028169,
+      "ext3618Pct": 7.042253521126761
+    }
+  },
+  "NSE:MOTHERSON": {
+    "symbol": "MOTHERSON",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 46.835443037974684,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 46.785714285714285,
+      "ext2618Pct": 11.071428571428571,
+      "ext3618Pct": 2.5
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 64.38356164383562,
+      "bothPct": 38.35616438356164,
+      "ext1618Pct": 75,
+      "ext2618Pct": 25,
+      "ext3618Pct": 6.944444444444445
+    }
+  },
+  "NSE:MOTILALOFS": {
+    "symbol": "MOTILALOFS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 272,
+      "breakoutPct": 86.07594936708861,
+      "upsidePct": 53.79746835443038,
+      "downsidePct": 45.56962025316456,
+      "bothPct": 13.291139240506327,
+      "ext1618Pct": 40.80882352941176,
+      "ext2618Pct": 10.661764705882353,
+      "ext3618Pct": 3.6764705882352944
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 75.34246575342466,
+      "ext2618Pct": 24.65753424657534,
+      "ext3618Pct": 12.32876712328767
+    }
+  },
+  "NSE:MPHASIS": {
+    "symbol": "MPHASIS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 271,
+      "breakoutPct": 85.75949367088607,
+      "upsidePct": 55.06329113924051,
+      "downsidePct": 48.734177215189874,
+      "bothPct": 18.037974683544302,
+      "ext1618Pct": 40.22140221402214,
+      "ext2618Pct": 9.22509225092251,
+      "ext3618Pct": 0.7380073800738007
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 66.66666666666666,
+      "ext2618Pct": 25,
+      "ext3618Pct": 9.722222222222223
+    }
+  },
+  "NSE:MUTHOOTFIN": {
+    "symbol": "MUTHOOTFIN",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 42.086330935251794,
+      "ext2618Pct": 5.755395683453238,
+      "ext3618Pct": 1.7985611510791366
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 70.4225352112676,
+      "ext2618Pct": 16.901408450704224,
+      "ext3618Pct": 7.042253521126761
+    }
+  },
+  "NSE:M_M": {
+    "symbol": "M_M",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 56.32911392405063,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 34.54545454545455,
+      "ext2618Pct": 9.818181818181818,
+      "ext3618Pct": 1.090909090909091
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 79.45205479452055,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 66.66666666666666,
+      "ext2618Pct": 16.666666666666664,
+      "ext3618Pct": 2.7777777777777777
+    }
+  },
+  "NSE:NAM_INDIA": {
+    "symbol": "NAM_INDIA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 43.67088607594937,
+      "bothPct": 11.075949367088606,
+      "ext1618Pct": 38.84892086330935,
+      "ext2618Pct": 8.273381294964029,
+      "ext3618Pct": 1.7985611510791366
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 71.83098591549296,
+      "ext2618Pct": 29.577464788732392,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:NATIONALUM": {
+    "symbol": "NATIONALUM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 281,
+      "breakoutPct": 88.92405063291139,
+      "upsidePct": 55.69620253164557,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 12.025316455696203,
+      "ext1618Pct": 40.213523131672595,
+      "ext2618Pct": 8.540925266903916,
+      "ext3618Pct": 1.4234875444839856
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 43.83561643835616,
+      "bothPct": 23.28767123287671,
+      "ext1618Pct": 65.71428571428571,
+      "ext2618Pct": 24.285714285714285,
+      "ext3618Pct": 11.428571428571429
+    }
+  },
+  "NSE:NAUKRI": {
+    "symbol": "NAUKRI",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 266,
+      "breakoutPct": 84.17721518987342,
+      "upsidePct": 53.79746835443038,
+      "downsidePct": 45.88607594936709,
+      "bothPct": 15.50632911392405,
+      "ext1618Pct": 42.4812030075188,
+      "ext2618Pct": 8.270676691729323,
+      "ext3618Pct": 1.8796992481203008
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 70,
+      "ext2618Pct": 18.571428571428573,
+      "ext3618Pct": 8.571428571428571
+    }
+  },
+  "NSE:NBCC": {
+    "symbol": "NBCC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 51.58227848101266,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 12.025316455696203,
+      "ext1618Pct": 48,
+      "ext2618Pct": 12.363636363636363,
+      "ext3618Pct": 1.8181818181818181
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 23.28767123287671,
+      "ext1618Pct": 72.85714285714285,
+      "ext2618Pct": 25.71428571428571,
+      "ext3618Pct": 10
+    }
+  },
+  "NSE:NESTLEIND": {
+    "symbol": "NESTLEIND",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 282,
+      "breakoutPct": 89.24050632911393,
+      "upsidePct": 55.06329113924051,
+      "downsidePct": 51.58227848101266,
+      "bothPct": 17.405063291139243,
+      "ext1618Pct": 40.42553191489361,
+      "ext2618Pct": 7.801418439716312,
+      "ext3618Pct": 2.127659574468085
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 65.27777777777779,
+      "ext2618Pct": 19.444444444444446,
+      "ext3618Pct": 8.333333333333332
+    }
+  },
+  "NSE:NHPC": {
+    "symbol": "NHPC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 266,
+      "breakoutPct": 84.17721518987342,
+      "upsidePct": 48.734177215189874,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 10.759493670886076,
+      "ext1618Pct": 46.2406015037594,
+      "ext2618Pct": 11.278195488721805,
+      "ext3618Pct": 3.007518796992481
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 67,
+      "breakoutPct": 91.78082191780823,
+      "upsidePct": 61.64383561643836,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 70.1492537313433,
+      "ext2618Pct": 23.88059701492537,
+      "ext3618Pct": 7.462686567164178
+    }
+  },
+  "NSE:NMDC": {
+    "symbol": "NMDC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 48.734177215189874,
+      "bothPct": 16.139240506329113,
+      "ext1618Pct": 42.80701754385965,
+      "ext2618Pct": 9.12280701754386,
+      "ext3618Pct": 1.4035087719298245
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 39.726027397260275,
+      "ext1618Pct": 54.794520547945204,
+      "ext2618Pct": 23.28767123287671,
+      "ext3618Pct": 4.10958904109589
+    }
+  },
+  "NSE:NTPC": {
+    "symbol": "NTPC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 57.91139240506329,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 15.50632911392405,
+      "ext1618Pct": 40.714285714285715,
+      "ext2618Pct": 8.571428571428571,
+      "ext3618Pct": 2.142857142857143
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 65.75342465753424,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 24.65753424657534,
+      "ext1618Pct": 54.929577464788736,
+      "ext2618Pct": 18.30985915492958,
+      "ext3618Pct": 2.8169014084507045
+    }
+  },
+  "NSE:NUVAMA": {
+    "symbol": "NUVAMA",
+    "weekly": {
+      "total": 147,
+      "brokeOut": 125,
+      "breakoutPct": 85.03401360544217,
+      "upsidePct": 51.02040816326531,
+      "downsidePct": 47.61904761904761,
+      "bothPct": 13.60544217687075,
+      "ext1618Pct": 43.2,
+      "ext2618Pct": 10.4,
+      "ext3618Pct": 3.2
+    },
+    "monthly": {
+      "total": 34,
+      "brokeOut": 34,
+      "breakoutPct": 100,
+      "upsidePct": 82.35294117647058,
+      "downsidePct": 55.88235294117647,
+      "bothPct": 38.23529411764706,
+      "ext1618Pct": 58.82352941176471,
+      "ext2618Pct": 32.35294117647059,
+      "ext3618Pct": 5.88235294117647
+    }
+  },
+  "NSE:NYKAA": {
+    "symbol": "NYKAA",
+    "weekly": {
+      "total": 244,
+      "brokeOut": 219,
+      "breakoutPct": 89.75409836065575,
+      "upsidePct": 52.459016393442624,
+      "downsidePct": 52.459016393442624,
+      "bothPct": 15.163934426229508,
+      "ext1618Pct": 44.74885844748858,
+      "ext2618Pct": 8.21917808219178,
+      "ext3618Pct": 1.82648401826484
+    },
+    "monthly": {
+      "total": 57,
+      "brokeOut": 55,
+      "breakoutPct": 96.49122807017544,
+      "upsidePct": 70.17543859649122,
+      "downsidePct": 63.1578947368421,
+      "bothPct": 36.84210526315789,
+      "ext1618Pct": 78.18181818181819,
+      "ext2618Pct": 30.909090909090907,
+      "ext3618Pct": 12.727272727272727
+    }
+  },
+  "NSE:OBEROIRLTY": {
+    "symbol": "OBEROIRLTY",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 283,
+      "breakoutPct": 89.55696202531645,
+      "upsidePct": 56.9620253164557,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 35.3356890459364,
+      "ext2618Pct": 8.12720848056537,
+      "ext3618Pct": 3.180212014134275
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 80.82191780821918,
+      "downsidePct": 65.75342465753424,
+      "bothPct": 46.57534246575342,
+      "ext1618Pct": 58.9041095890411,
+      "ext2618Pct": 21.91780821917808,
+      "ext3618Pct": 5.47945205479452
+    }
+  },
+  "NSE:OFSS": {
+    "symbol": "OFSS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 51.58227848101266,
+      "downsidePct": 48.10126582278481,
+      "bothPct": 12.025316455696203,
+      "ext1618Pct": 37.545126353790614,
+      "ext2618Pct": 9.025270758122744,
+      "ext3618Pct": 3.2490974729241873
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 73.61111111111111,
+      "ext2618Pct": 27.77777777777778,
+      "ext3618Pct": 19.444444444444446
+    }
+  },
+  "NSE:OIL": {
+    "symbol": "OIL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 268,
+      "breakoutPct": 84.81012658227847,
+      "upsidePct": 50.9493670886076,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 11.39240506329114,
+      "ext1618Pct": 50.74626865671642,
+      "ext2618Pct": 13.432835820895523,
+      "ext3618Pct": 6.7164179104477615
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 79.45205479452055,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 67.14285714285714,
+      "ext2618Pct": 30,
+      "ext3618Pct": 7.142857142857142
+    }
+  },
+  "NSE:ONGC": {
+    "symbol": "ONGC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 52.21518987341772,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 10.443037974683545,
+      "ext1618Pct": 42.700729927007295,
+      "ext2618Pct": 10.583941605839415,
+      "ext3618Pct": 2.5547445255474455
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 67,
+      "breakoutPct": 91.78082191780823,
+      "upsidePct": 63.013698630136986,
+      "downsidePct": 47.94520547945205,
+      "bothPct": 19.17808219178082,
+      "ext1618Pct": 64.17910447761194,
+      "ext2618Pct": 16.417910447761194,
+      "ext3618Pct": 11.940298507462686
+    }
+  },
+  "NSE:PAGEIND": {
+    "symbol": "PAGEIND",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 53.79746835443038,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 43.36917562724014,
+      "ext2618Pct": 9.31899641577061,
+      "ext3618Pct": 2.1505376344086025
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 71.83098591549296,
+      "ext2618Pct": 21.12676056338028,
+      "ext3618Pct": 8.450704225352112
+    }
+  },
+  "NSE:PATANJALI": {
+    "symbol": "PATANJALI",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 259,
+      "breakoutPct": 81.9620253164557,
+      "upsidePct": 45.56962025316456,
+      "downsidePct": 49.050632911392405,
+      "bothPct": 12.658227848101266,
+      "ext1618Pct": 44.4015444015444,
+      "ext2618Pct": 15.444015444015443,
+      "ext3618Pct": 5.7915057915057915
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 63.013698630136986,
+      "downsidePct": 65.75342465753424,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 64.28571428571429,
+      "ext2618Pct": 31.428571428571427,
+      "ext3618Pct": 12.857142857142856
+    }
+  },
+  "NSE:PAYTM": {
+    "symbol": "PAYTM",
+    "weekly": {
+      "total": 243,
+      "brokeOut": 209,
+      "breakoutPct": 86.0082304526749,
+      "upsidePct": 51.028806584362144,
+      "downsidePct": 45.67901234567901,
+      "bothPct": 10.699588477366255,
+      "ext1618Pct": 44.01913875598086,
+      "ext2618Pct": 11.483253588516746,
+      "ext3618Pct": 4.784688995215311
+    },
+    "monthly": {
+      "total": 56,
+      "brokeOut": 55,
+      "breakoutPct": 98.21428571428571,
+      "upsidePct": 69.64285714285714,
+      "downsidePct": 53.57142857142857,
+      "bothPct": 25,
+      "ext1618Pct": 69.0909090909091,
+      "ext2618Pct": 40,
+      "ext3618Pct": 20
+    }
+  },
+  "NSE:PERSISTENT": {
+    "symbol": "PERSISTENT",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 60.75949367088608,
+      "downsidePct": 43.67088607594937,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 41.05263157894737,
+      "ext2618Pct": 8.771929824561402,
+      "ext3618Pct": 1.0526315789473684
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 79.45205479452055,
+      "downsidePct": 46.57534246575342,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 68.4931506849315,
+      "ext2618Pct": 31.506849315068493,
+      "ext3618Pct": 13.698630136986301
+    }
+  },
+  "NSE:PETRONET": {
+    "symbol": "PETRONET",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 269,
+      "breakoutPct": 85.12658227848101,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 44.237918215613384,
+      "ext2618Pct": 8.921933085501859,
+      "ext3618Pct": 2.2304832713754648
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 65.75342465753424,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 63.013698630136986,
+      "ext2618Pct": 10.95890410958904,
+      "ext3618Pct": 4.10958904109589
+    }
+  },
+  "NSE:PFC": {
+    "symbol": "PFC",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 55.06329113924051,
+      "downsidePct": 42.405063291139236,
+      "bothPct": 9.49367088607595,
+      "ext1618Pct": 44.24460431654676,
+      "ext2618Pct": 9.352517985611511,
+      "ext3618Pct": 1.4388489208633095
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 66.19718309859155,
+      "ext2618Pct": 16.901408450704224,
+      "ext3618Pct": 4.225352112676056
+    }
+  },
+  "NSE:PGEL": {
+    "symbol": "PGEL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 286,
+      "breakoutPct": 90.50632911392405,
+      "upsidePct": 56.32911392405063,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 44.05594405594406,
+      "ext2618Pct": 9.44055944055944,
+      "ext3618Pct": 2.4475524475524475
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 45.20547945205479,
+      "bothPct": 20.54794520547945,
+      "ext1618Pct": 80,
+      "ext2618Pct": 32.857142857142854,
+      "ext3618Pct": 12.857142857142856
+    }
+  },
+  "NSE:PHOENIXLTD": {
+    "symbol": "PHOENIXLTD",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 281,
+      "breakoutPct": 88.92405063291139,
+      "upsidePct": 57.27848101265823,
+      "downsidePct": 45.88607594936709,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 35.94306049822064,
+      "ext2618Pct": 6.405693950177936,
+      "ext3618Pct": 1.7793594306049825
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 67.6056338028169,
+      "ext2618Pct": 23.943661971830984,
+      "ext3618Pct": 11.267605633802818
+    }
+  },
+  "NSE:PIDILITIND": {
+    "symbol": "PIDILITIND",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 56.9620253164557,
+      "downsidePct": 48.734177215189874,
+      "bothPct": 17.72151898734177,
+      "ext1618Pct": 44.60431654676259,
+      "ext2618Pct": 7.913669064748201,
+      "ext3618Pct": 1.4388489208633095
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 69.44444444444444,
+      "ext2618Pct": 9.722222222222223,
+      "ext3618Pct": 0
+    }
+  },
+  "NSE:PIIND": {
+    "symbol": "PIIND",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 54.11392405063291,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 42.700729927007295,
+      "ext2618Pct": 9.48905109489051,
+      "ext3618Pct": 1.824817518248175
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 21.91780821917808,
+      "ext1618Pct": 73.61111111111111,
+      "ext2618Pct": 26.38888888888889,
+      "ext3618Pct": 5.555555555555555
+    }
+  },
+  "NSE:PNB": {
+    "symbol": "PNB",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 269,
+      "breakoutPct": 85.12658227848101,
+      "upsidePct": 50.63291139240506,
+      "downsidePct": 43.9873417721519,
+      "bothPct": 9.49367088607595,
+      "ext1618Pct": 47.58364312267658,
+      "ext2618Pct": 11.895910780669144,
+      "ext3618Pct": 4.089219330855019
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 56.94444444444444,
+      "ext2618Pct": 16.666666666666664,
+      "ext3618Pct": 5.555555555555555
+    }
+  },
+  "NSE:PNBHOUSING": {
+    "symbol": "PNBHOUSING",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 47.151898734177216,
+      "bothPct": 14.240506329113925,
+      "ext1618Pct": 38.26714801444043,
+      "ext2618Pct": 12.996389891696749,
+      "ext3618Pct": 5.415162454873646
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 30.136986301369863,
+      "ext1618Pct": 69.44444444444444,
+      "ext2618Pct": 27.77777777777778,
+      "ext3618Pct": 12.5
+    }
+  },
+  "NSE:POLICYBZR": {
+    "symbol": "POLICYBZR",
+    "weekly": {
+      "total": 244,
+      "brokeOut": 204,
+      "breakoutPct": 83.60655737704919,
+      "upsidePct": 48.77049180327869,
+      "downsidePct": 49.18032786885246,
+      "bothPct": 14.344262295081966,
+      "ext1618Pct": 43.627450980392155,
+      "ext2618Pct": 10.784313725490197,
+      "ext3618Pct": 2.941176470588235
+    },
+    "monthly": {
+      "total": 56,
+      "brokeOut": 54,
+      "breakoutPct": 96.42857142857143,
+      "upsidePct": 75,
+      "downsidePct": 67.85714285714286,
+      "bothPct": 46.42857142857143,
+      "ext1618Pct": 68.51851851851852,
+      "ext2618Pct": 27.77777777777778,
+      "ext3618Pct": 12.962962962962962
+    }
+  },
+  "NSE:POLYCAB": {
+    "symbol": "POLYCAB",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 58.22784810126582,
+      "downsidePct": 40.822784810126585,
+      "bothPct": 12.658227848101266,
+      "ext1618Pct": 45.78754578754579,
+      "ext2618Pct": 11.355311355311356,
+      "ext3618Pct": 4.029304029304029
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 87.67123287671232,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 38.35616438356164,
+      "ext1618Pct": 76.38888888888889,
+      "ext2618Pct": 26.38888888888889,
+      "ext3618Pct": 13.88888888888889
+    }
+  },
+  "NSE:POWERGRID": {
+    "symbol": "POWERGRID",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 56.9620253164557,
+      "downsidePct": 46.51898734177215,
+      "bothPct": 14.873417721518987,
+      "ext1618Pct": 43.57142857142857,
+      "ext2618Pct": 12.142857142857142,
+      "ext3618Pct": 5
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 63.013698630136986,
+      "bothPct": 38.35616438356164,
+      "ext1618Pct": 61.97183098591549,
+      "ext2618Pct": 18.30985915492958,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:POWERINDIA": {
+    "symbol": "POWERINDIA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 282,
+      "breakoutPct": 89.24050632911393,
+      "upsidePct": 57.27848101265823,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 15.50632911392405,
+      "ext1618Pct": 47.5177304964539,
+      "ext2618Pct": 11.347517730496454,
+      "ext3618Pct": 4.964539007092199
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 63.888888888888886,
+      "ext2618Pct": 34.72222222222222,
+      "ext3618Pct": 13.88888888888889
+    }
+  },
+  "NSE:PREMIERENE": {
+    "symbol": "PREMIERENE",
+    "weekly": {
+      "total": 98,
+      "brokeOut": 89,
+      "breakoutPct": 90.81632653061224,
+      "upsidePct": 57.14285714285714,
+      "downsidePct": 52.04081632653062,
+      "bothPct": 18.367346938775512,
+      "ext1618Pct": 33.70786516853933,
+      "ext2618Pct": 5.617977528089887,
+      "ext3618Pct": 1.1235955056179776
+    },
+    "monthly": {
+      "total": 23,
+      "brokeOut": 23,
+      "breakoutPct": 100,
+      "upsidePct": 73.91304347826086,
+      "downsidePct": 60.86956521739131,
+      "bothPct": 34.78260869565217,
+      "ext1618Pct": 56.52173913043478,
+      "ext2618Pct": 26.08695652173913,
+      "ext3618Pct": 17.391304347826086
+    }
+  },
+  "NSE:PRESTIGE": {
+    "symbol": "PRESTIGE",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 271,
+      "breakoutPct": 85.75949367088607,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 12.658227848101266,
+      "ext1618Pct": 42.80442804428044,
+      "ext2618Pct": 9.96309963099631,
+      "ext3618Pct": 1.8450184501845017
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 65.27777777777779,
+      "ext2618Pct": 22.22222222222222,
+      "ext3618Pct": 6.944444444444445
+    }
+  },
+  "NSE:RADICO": {
+    "symbol": "RADICO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 58.54430379746836,
+      "downsidePct": 44.303797468354425,
+      "bothPct": 15.18987341772152,
+      "ext1618Pct": 41.15523465703971,
+      "ext2618Pct": 5.776173285198556,
+      "ext3618Pct": 0.7220216606498195
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 67,
+      "breakoutPct": 91.78082191780823,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 71.64179104477611,
+      "ext2618Pct": 28.35820895522388,
+      "ext3618Pct": 5.970149253731343
+    }
+  },
+  "NSE:RBLBANK": {
+    "symbol": "RBLBANK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 276,
+      "breakoutPct": 87.34177215189874,
+      "upsidePct": 51.58227848101266,
+      "downsidePct": 49.36708860759494,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 45.289855072463766,
+      "ext2618Pct": 9.782608695652174,
+      "ext3618Pct": 2.898550724637681
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 69.86301369863014,
+      "ext2618Pct": 16.43835616438356,
+      "ext3618Pct": 4.10958904109589
+    }
+  },
+  "NSE:RECLTD": {
+    "symbol": "RECLTD",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 284,
+      "breakoutPct": 89.87341772151899,
+      "upsidePct": 57.27848101265823,
+      "downsidePct": 45.56962025316456,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 46.12676056338028,
+      "ext2618Pct": 9.507042253521126,
+      "ext3618Pct": 2.112676056338028
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 24.65753424657534,
+      "ext1618Pct": 61.42857142857143,
+      "ext2618Pct": 22.857142857142858,
+      "ext3618Pct": 7.142857142857142
+    }
+  },
+  "NSE:RELIANCE": {
+    "symbol": "RELIANCE",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 12.025316455696203,
+      "ext1618Pct": 35.25179856115108,
+      "ext2618Pct": 7.913669064748201,
+      "ext3618Pct": 1.4388489208633095
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 65.71428571428571,
+      "ext2618Pct": 22.857142857142858,
+      "ext3618Pct": 5.714285714285714
+    }
+  },
+  "NSE:RVNL": {
+    "symbol": "RVNL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 50.9493670886076,
+      "downsidePct": 48.41772151898734,
+      "bothPct": 12.658227848101266,
+      "ext1618Pct": 40.87591240875913,
+      "ext2618Pct": 11.678832116788321,
+      "ext3618Pct": 2.9197080291970803
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 63.013698630136986,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 17.80821917808219,
+      "ext1618Pct": 71.23287671232876,
+      "ext2618Pct": 31.506849315068493,
+      "ext3618Pct": 16.43835616438356
+    }
+  },
+  "NSE:SAIL": {
+    "symbol": "SAIL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 272,
+      "breakoutPct": 86.07594936708861,
+      "upsidePct": 50.9493670886076,
+      "downsidePct": 46.835443037974684,
+      "bothPct": 11.708860759493671,
+      "ext1618Pct": 45.220588235294116,
+      "ext2618Pct": 9.558823529411764,
+      "ext3618Pct": 2.941176470588235
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 68,
+      "breakoutPct": 93.15068493150685,
+      "upsidePct": 65.75342465753424,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 67.64705882352942,
+      "ext2618Pct": 22.058823529411764,
+      "ext3618Pct": 2.941176470588235
+    }
+  },
+  "NSE:SBICARD": {
+    "symbol": "SBICARD",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 51.58227848101266,
+      "downsidePct": 49.36708860759494,
+      "bothPct": 13.924050632911392,
+      "ext1618Pct": 42.18181818181818,
+      "ext2618Pct": 10.545454545454545,
+      "ext3618Pct": 1.8181818181818181
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 63.013698630136986,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 59.72222222222222,
+      "ext2618Pct": 11.11111111111111,
+      "ext3618Pct": 4.166666666666666
+    }
+  },
+  "NSE:SBILIFE": {
+    "symbol": "SBILIFE",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 271,
+      "breakoutPct": 85.75949367088607,
+      "upsidePct": 57.27848101265823,
+      "downsidePct": 43.9873417721519,
+      "bothPct": 15.50632911392405,
+      "ext1618Pct": 42.066420664206646,
+      "ext2618Pct": 5.535055350553505,
+      "ext3618Pct": 1.107011070110701
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 53.52112676056338,
+      "ext2618Pct": 18.30985915492958,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:SBIN": {
+    "symbol": "SBIN",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 54.11392405063291,
+      "downsidePct": 42.721518987341774,
+      "bothPct": 10.443037974683545,
+      "ext1618Pct": 41.02564102564102,
+      "ext2618Pct": 7.326007326007327,
+      "ext3618Pct": 2.197802197802198
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 20.54794520547945,
+      "ext1618Pct": 78.87323943661971,
+      "ext2618Pct": 26.76056338028169,
+      "ext3618Pct": 5.633802816901409
+    }
+  },
+  "NSE:SHREECEM": {
+    "symbol": "SHREECEM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 286,
+      "breakoutPct": 90.50632911392405,
+      "upsidePct": 55.69620253164557,
+      "downsidePct": 46.51898734177215,
+      "bothPct": 11.708860759493671,
+      "ext1618Pct": 39.86013986013986,
+      "ext2618Pct": 7.3426573426573425,
+      "ext3618Pct": 2.097902097902098
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 56.94444444444444,
+      "ext2618Pct": 11.11111111111111,
+      "ext3618Pct": 4.166666666666666
+    }
+  },
+  "NSE:SHRIRAMFIN": {
+    "symbol": "SHRIRAMFIN",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 13.924050632911392,
+      "ext1618Pct": 41.785714285714285,
+      "ext2618Pct": 10,
+      "ext3618Pct": 2.5
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 55.714285714285715,
+      "ext2618Pct": 21.428571428571427,
+      "ext3618Pct": 10
+    }
+  },
+  "NSE:SIEMENS": {
+    "symbol": "SIEMENS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 289,
+      "breakoutPct": 91.45569620253164,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 45.56962025316456,
+      "bothPct": 11.708860759493671,
+      "ext1618Pct": 42.56055363321799,
+      "ext2618Pct": 10.034602076124568,
+      "ext3618Pct": 1.384083044982699
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 39.726027397260275,
+      "ext1618Pct": 67.12328767123287,
+      "ext2618Pct": 21.91780821917808,
+      "ext3618Pct": 4.10958904109589
+    }
+  },
+  "NSE:SOLARINDS": {
+    "symbol": "SOLARINDS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 267,
+      "breakoutPct": 84.49367088607595,
+      "upsidePct": 51.58227848101266,
+      "downsidePct": 46.51898734177215,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 44.569288389513105,
+      "ext2618Pct": 11.610486891385769,
+      "ext3618Pct": 4.868913857677903
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 21.91780821917808,
+      "ext1618Pct": 59.154929577464785,
+      "ext2618Pct": 23.943661971830984,
+      "ext3618Pct": 9.859154929577464
+    }
+  },
+  "NSE:SONACOMS": {
+    "symbol": "SONACOMS",
+    "weekly": {
+      "total": 264,
+      "brokeOut": 229,
+      "breakoutPct": 86.74242424242425,
+      "upsidePct": 52.65151515151515,
+      "downsidePct": 49.24242424242424,
+      "bothPct": 15.151515151515152,
+      "ext1618Pct": 42.79475982532751,
+      "ext2618Pct": 10.480349344978166,
+      "ext3618Pct": 3.056768558951965
+    },
+    "monthly": {
+      "total": 61,
+      "brokeOut": 58,
+      "breakoutPct": 95.08196721311475,
+      "upsidePct": 72.1311475409836,
+      "downsidePct": 60.65573770491803,
+      "bothPct": 37.704918032786885,
+      "ext1618Pct": 65.51724137931035,
+      "ext2618Pct": 27.586206896551722,
+      "ext3618Pct": 15.517241379310345
+    }
+  },
+  "NSE:SRF": {
+    "symbol": "SRF",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 58.22784810126582,
+      "downsidePct": 46.835443037974684,
+      "bothPct": 16.455696202531644,
+      "ext1618Pct": 42.857142857142854,
+      "ext2618Pct": 8.214285714285714,
+      "ext3618Pct": 2.857142857142857
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 80.82191780821918,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 65.27777777777779,
+      "ext2618Pct": 19.444444444444446,
+      "ext3618Pct": 8.333333333333332
+    }
+  },
+  "NSE:SUNPHARMA": {
+    "symbol": "SUNPHARMA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 57.27848101265823,
+      "downsidePct": 43.9873417721519,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 43.682310469314075,
+      "ext2618Pct": 8.303249097472925,
+      "ext3618Pct": 2.527075812274368
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 52.054794520547944,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 54.285714285714285,
+      "ext2618Pct": 11.428571428571429,
+      "ext3618Pct": 2.857142857142857
+    }
+  },
+  "NSE:SUPREMEIND": {
+    "symbol": "SUPREMEIND",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 46.835443037974684,
+      "bothPct": 13.60759493670886,
+      "ext1618Pct": 37.591240875912405,
+      "ext2618Pct": 8.02919708029197,
+      "ext3618Pct": 1.094890510948905
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 67.12328767123287,
+      "downsidePct": 61.64383561643836,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 66.19718309859155,
+      "ext2618Pct": 22.535211267605636,
+      "ext3618Pct": 4.225352112676056
+    }
+  },
+  "NSE:SUZLON": {
+    "symbol": "SUZLON",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 281,
+      "breakoutPct": 88.92405063291139,
+      "upsidePct": 48.10126582278481,
+      "downsidePct": 50.63291139240506,
+      "bothPct": 9.81012658227848,
+      "ext1618Pct": 47.686832740213525,
+      "ext2618Pct": 11.743772241992882,
+      "ext3618Pct": 5.338078291814947
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 63.013698630136986,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 21.91780821917808,
+      "ext1618Pct": 70.4225352112676,
+      "ext2618Pct": 30.985915492957744,
+      "ext3618Pct": 14.084507042253522
+    }
+  },
+  "NSE:SWIGGY": {
+    "symbol": "SWIGGY",
+    "weekly": {
+      "total": 87,
+      "brokeOut": 78,
+      "breakoutPct": 89.65517241379311,
+      "upsidePct": 49.42528735632184,
+      "downsidePct": 49.42528735632184,
+      "bothPct": 9.195402298850574,
+      "ext1618Pct": 42.30769230769231,
+      "ext2618Pct": 15.384615384615385,
+      "ext3618Pct": 3.8461538461538463
+    },
+    "monthly": {
+      "total": 21,
+      "brokeOut": 21,
+      "breakoutPct": 100,
+      "upsidePct": 66.66666666666666,
+      "downsidePct": 57.14285714285714,
+      "bothPct": 23.809523809523807,
+      "ext1618Pct": 61.904761904761905,
+      "ext2618Pct": 14.285714285714285,
+      "ext3618Pct": 9.523809523809524
+    }
+  },
+  "NSE:TATACONSUM": {
+    "symbol": "TATACONSUM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 285,
+      "breakoutPct": 90.18987341772153,
+      "upsidePct": 57.91139240506329,
+      "downsidePct": 50.9493670886076,
+      "bothPct": 18.670886075949365,
+      "ext1618Pct": 41.75438596491228,
+      "ext2618Pct": 9.12280701754386,
+      "ext3618Pct": 1.7543859649122806
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 64.38356164383562,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 60.86956521739131,
+      "ext2618Pct": 14.492753623188406,
+      "ext3618Pct": 7.246376811594203
+    }
+  },
+  "NSE:TATAELXSI": {
+    "symbol": "TATAELXSI",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 276,
+      "breakoutPct": 87.34177215189874,
+      "upsidePct": 50.9493670886076,
+      "downsidePct": 46.51898734177215,
+      "bothPct": 10.126582278481013,
+      "ext1618Pct": 48.188405797101446,
+      "ext2618Pct": 11.231884057971014,
+      "ext3618Pct": 3.985507246376811
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 69.56521739130434,
+      "ext2618Pct": 33.33333333333333,
+      "ext3618Pct": 17.391304347826086
+    }
+  },
+  "NSE:TATAPOWER": {
+    "symbol": "TATAPOWER",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 272,
+      "breakoutPct": 86.07594936708861,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 42.721518987341774,
+      "bothPct": 10.126582278481013,
+      "ext1618Pct": 48.529411764705884,
+      "ext2618Pct": 13.602941176470587,
+      "ext3618Pct": 3.6764705882352944
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 47.94520547945205,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 67.14285714285714,
+      "ext2618Pct": 25.71428571428571,
+      "ext3618Pct": 11.428571428571429
+    }
+  },
+  "NSE:TATASTEEL": {
+    "symbol": "TATASTEEL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 51.26582278481012,
+      "downsidePct": 44.620253164556964,
+      "bothPct": 9.177215189873419,
+      "ext1618Pct": 45.62043795620438,
+      "ext2618Pct": 10.583941605839415,
+      "ext3618Pct": 3.64963503649635
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 72.22222222222221,
+      "ext2618Pct": 26.38888888888889,
+      "ext3618Pct": 6.944444444444445
+    }
+  },
+  "NSE:TCS": {
+    "symbol": "TCS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 287,
+      "breakoutPct": 90.82278481012658,
+      "upsidePct": 55.69620253164557,
+      "downsidePct": 50.9493670886076,
+      "bothPct": 15.822784810126583,
+      "ext1618Pct": 43.55400696864111,
+      "ext2618Pct": 6.968641114982578,
+      "ext3618Pct": 1.3937282229965158
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 47.94520547945205,
+      "bothPct": 23.28767123287671,
+      "ext1618Pct": 75.34246575342466,
+      "ext2618Pct": 21.91780821917808,
+      "ext3618Pct": 5.47945205479452
+    }
+  },
+  "NSE:TECHM": {
+    "symbol": "TECHM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 278,
+      "breakoutPct": 87.9746835443038,
+      "upsidePct": 58.54430379746836,
+      "downsidePct": 44.303797468354425,
+      "bothPct": 14.873417721518987,
+      "ext1618Pct": 40.647482014388494,
+      "ext2618Pct": 8.633093525179856,
+      "ext3618Pct": 2.158273381294964
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 82.1917808219178,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 39.726027397260275,
+      "ext1618Pct": 81.94444444444444,
+      "ext2618Pct": 29.166666666666668,
+      "ext3618Pct": 6.944444444444445
+    }
+  },
+  "NSE:TIINDIA": {
+    "symbol": "TIINDIA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 52.84810126582279,
+      "downsidePct": 45.88607594936709,
+      "bothPct": 12.341772151898734,
+      "ext1618Pct": 38.82783882783883,
+      "ext2618Pct": 8.791208791208792,
+      "ext3618Pct": 2.197802197802198
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 72.22222222222221,
+      "ext2618Pct": 27.77777777777778,
+      "ext3618Pct": 8.333333333333332
+    }
+  },
+  "NSE:TITAN": {
+    "symbol": "TITAN",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 286,
+      "breakoutPct": 90.50632911392405,
+      "upsidePct": 58.86075949367089,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 45.10489510489511,
+      "ext2618Pct": 9.79020979020979,
+      "ext3618Pct": 1.7482517482517483
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 47.94520547945205,
+      "bothPct": 26.027397260273972,
+      "ext1618Pct": 76.71232876712328,
+      "ext2618Pct": 17.80821917808219,
+      "ext3618Pct": 5.47945205479452
+    }
+  },
+  "NSE:TMPV": {
+    "symbol": "TMPV",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 272,
+      "breakoutPct": 86.07594936708861,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 45.25316455696203,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 49.63235294117647,
+      "ext2618Pct": 11.76470588235294,
+      "ext3618Pct": 2.5735294117647056
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 32.87671232876712,
+      "ext1618Pct": 72.22222222222221,
+      "ext2618Pct": 31.944444444444443,
+      "ext3618Pct": 15.277777777777779
+    }
+  },
+  "NSE:TORNTPHARM": {
+    "symbol": "TORNTPHARM",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 273,
+      "breakoutPct": 86.39240506329115,
+      "upsidePct": 57.59493670886076,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 17.405063291139243,
+      "ext1618Pct": 42.124542124542124,
+      "ext2618Pct": 3.6630036630036633,
+      "ext3618Pct": 0.7326007326007326
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 79.45205479452055,
+      "downsidePct": 47.94520547945205,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 61.42857142857143,
+      "ext2618Pct": 8.571428571428571,
+      "ext3618Pct": 1.4285714285714286
+    }
+  },
+  "NSE:TRENT": {
+    "symbol": "TRENT",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 280,
+      "breakoutPct": 88.60759493670885,
+      "upsidePct": 57.27848101265823,
+      "downsidePct": 46.20253164556962,
+      "bothPct": 14.873417721518987,
+      "ext1618Pct": 38.21428571428571,
+      "ext2618Pct": 10.357142857142858,
+      "ext3618Pct": 3.214285714285714
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 72.6027397260274,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 71.83098591549296,
+      "ext2618Pct": 29.577464788732392,
+      "ext3618Pct": 12.676056338028168
+    }
+  },
+  "NSE:TVSMOTOR": {
+    "symbol": "TVSMOTOR",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 283,
+      "breakoutPct": 89.55696202531645,
+      "upsidePct": 61.07594936708861,
+      "downsidePct": 44.303797468354425,
+      "bothPct": 15.822784810126583,
+      "ext1618Pct": 39.57597173144876,
+      "ext2618Pct": 8.12720848056537,
+      "ext3618Pct": 1.0600706713780919
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 78.08219178082192,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 63.013698630136986,
+      "ext2618Pct": 15.068493150684931,
+      "ext3618Pct": 2.73972602739726
+    }
+  },
+  "NSE:ULTRACEMCO": {
+    "symbol": "ULTRACEMCO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 289,
+      "breakoutPct": 91.45569620253164,
+      "upsidePct": 55.69620253164557,
+      "downsidePct": 49.050632911392405,
+      "bothPct": 13.291139240506327,
+      "ext1618Pct": 39.10034602076124,
+      "ext2618Pct": 10.034602076124568,
+      "ext3618Pct": 1.0380622837370241
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 61.111111111111114,
+      "ext2618Pct": 18.055555555555554,
+      "ext3618Pct": 2.7777777777777777
+    }
+  },
+  "NSE:UNIONBANK": {
+    "symbol": "UNIONBANK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 277,
+      "breakoutPct": 87.65822784810126,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 43.9873417721519,
+      "bothPct": 9.81012658227848,
+      "ext1618Pct": 42.59927797833935,
+      "ext2618Pct": 10.469314079422382,
+      "ext3618Pct": 3.2490974729241873
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 76.71232876712328,
+      "downsidePct": 58.9041095890411,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 68.05555555555556,
+      "ext2618Pct": 20.833333333333336,
+      "ext3618Pct": 9.722222222222223
+    }
+  },
+  "NSE:UNITDSPR": {
+    "symbol": "UNITDSPR",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 271,
+      "breakoutPct": 85.75949367088607,
+      "upsidePct": 52.84810126582279,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 42.435424354243544,
+      "ext2618Pct": 8.118081180811808,
+      "ext3618Pct": 2.5830258302583027
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 35.61643835616438,
+      "ext1618Pct": 63.38028169014085,
+      "ext2618Pct": 19.718309859154928,
+      "ext3618Pct": 4.225352112676056
+    }
+  },
+  "NSE:UNOMINDA": {
+    "symbol": "UNOMINDA",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 274,
+      "breakoutPct": 86.70886075949366,
+      "upsidePct": 53.48101265822785,
+      "downsidePct": 47.78481012658228,
+      "bothPct": 14.556962025316455,
+      "ext1618Pct": 39.416058394160586,
+      "ext2618Pct": 8.75912408759124,
+      "ext3618Pct": 2.5547445255474455
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 73,
+      "breakoutPct": 100,
+      "upsidePct": 75.34246575342466,
+      "downsidePct": 56.16438356164384,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 69.86301369863014,
+      "ext2618Pct": 30.136986301369863,
+      "ext3618Pct": 13.698630136986301
+    }
+  },
+  "NSE:UPL": {
+    "symbol": "UPL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 284,
+      "breakoutPct": 89.87341772151899,
+      "upsidePct": 55.379746835443036,
+      "downsidePct": 47.46835443037975,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 38.38028169014084,
+      "ext2618Pct": 8.098591549295776,
+      "ext3618Pct": 1.4084507042253522
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 69.86301369863014,
+      "downsidePct": 53.42465753424658,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 61.42857142857143,
+      "ext2618Pct": 22.857142857142858,
+      "ext3618Pct": 5.714285714285714
+    }
+  },
+  "NSE:VBL": {
+    "symbol": "VBL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 270,
+      "breakoutPct": 85.44303797468355,
+      "upsidePct": 57.27848101265823,
+      "downsidePct": 44.936708860759495,
+      "bothPct": 16.77215189873418,
+      "ext1618Pct": 44.44444444444444,
+      "ext2618Pct": 13.703703703703704,
+      "ext3618Pct": 4.814814814814815
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 71,
+      "breakoutPct": 97.26027397260275,
+      "upsidePct": 68.4931506849315,
+      "downsidePct": 60.273972602739725,
+      "bothPct": 31.506849315068493,
+      "ext1618Pct": 63.38028169014085,
+      "ext2618Pct": 26.76056338028169,
+      "ext3618Pct": 14.084507042253522
+    }
+  },
+  "NSE:VEDL": {
+    "symbol": "VEDL",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 279,
+      "breakoutPct": 88.29113924050634,
+      "upsidePct": 57.91139240506329,
+      "downsidePct": 43.35443037974683,
+      "bothPct": 12.974683544303797,
+      "ext1618Pct": 43.01075268817204,
+      "ext2618Pct": 15.053763440860216,
+      "ext3618Pct": 4.659498207885305
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 73.97260273972603,
+      "downsidePct": 49.31506849315068,
+      "bothPct": 28.767123287671232,
+      "ext1618Pct": 65.21739130434783,
+      "ext2618Pct": 28.985507246376812,
+      "ext3618Pct": 11.594202898550725
+    }
+  },
+  "NSE:VMM": {
+    "symbol": "VMM",
+    "weekly": {
+      "total": 82,
+      "brokeOut": 71,
+      "breakoutPct": 86.58536585365853,
+      "upsidePct": 50,
+      "downsidePct": 52.4390243902439,
+      "bothPct": 15.853658536585366,
+      "ext1618Pct": 43.66197183098591,
+      "ext2618Pct": 11.267605633802818,
+      "ext3618Pct": 0
+    },
+    "monthly": {
+      "total": 19,
+      "brokeOut": 19,
+      "breakoutPct": 100,
+      "upsidePct": 63.1578947368421,
+      "downsidePct": 63.1578947368421,
+      "bothPct": 26.31578947368421,
+      "ext1618Pct": 42.10526315789473,
+      "ext2618Pct": 21.052631578947366,
+      "ext3618Pct": 5.263157894736842
+    }
+  },
+  "NSE:VOLTAS": {
+    "symbol": "VOLTAS",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 275,
+      "breakoutPct": 87.0253164556962,
+      "upsidePct": 52.84810126582279,
+      "downsidePct": 43.35443037974683,
+      "bothPct": 9.177215189873419,
+      "ext1618Pct": 38.90909090909091,
+      "ext2618Pct": 8,
+      "ext3618Pct": 1.4545454545454546
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 70,
+      "breakoutPct": 95.8904109589041,
+      "upsidePct": 79.45205479452055,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 34.24657534246575,
+      "ext1618Pct": 72.85714285714285,
+      "ext2618Pct": 18.571428571428573,
+      "ext3618Pct": 1.4285714285714286
+    }
+  },
+  "NSE:WAAREEENER": {
+    "symbol": "WAAREEENER",
+    "weekly": {
+      "total": 90,
+      "brokeOut": 80,
+      "breakoutPct": 88.88888888888889,
+      "upsidePct": 53.333333333333336,
+      "downsidePct": 48.888888888888886,
+      "bothPct": 13.333333333333334,
+      "ext1618Pct": 48.75,
+      "ext2618Pct": 13.750000000000002,
+      "ext3618Pct": 7.5
+    },
+    "monthly": {
+      "total": 21,
+      "brokeOut": 20,
+      "breakoutPct": 95.23809523809523,
+      "upsidePct": 57.14285714285714,
+      "downsidePct": 71.42857142857143,
+      "bothPct": 33.33333333333333,
+      "ext1618Pct": 55.00000000000001,
+      "ext2618Pct": 25,
+      "ext3618Pct": 15
+    }
+  },
+  "NSE:WIPRO": {
+    "symbol": "WIPRO",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 282,
+      "breakoutPct": 89.24050632911393,
+      "upsidePct": 54.74683544303798,
+      "downsidePct": 49.68354430379747,
+      "bothPct": 15.18987341772152,
+      "ext1618Pct": 39.361702127659576,
+      "ext2618Pct": 5.319148936170213,
+      "ext3618Pct": 1.773049645390071
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 72,
+      "breakoutPct": 98.63013698630137,
+      "upsidePct": 80.82191780821918,
+      "downsidePct": 54.794520547945204,
+      "bothPct": 36.986301369863014,
+      "ext1618Pct": 75,
+      "ext2618Pct": 36.11111111111111,
+      "ext3618Pct": 18.055555555555554
+    }
+  },
+  "NSE:YESBANK": {
+    "symbol": "YESBANK",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 255,
+      "breakoutPct": 80.69620253164557,
+      "upsidePct": 39.24050632911392,
+      "downsidePct": 50.9493670886076,
+      "bothPct": 9.49367088607595,
+      "ext1618Pct": 45.09803921568628,
+      "ext2618Pct": 9.803921568627452,
+      "ext3618Pct": 4.705882352941177
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 67,
+      "breakoutPct": 91.78082191780823,
+      "upsidePct": 58.9041095890411,
+      "downsidePct": 57.534246575342465,
+      "bothPct": 24.65753424657534,
+      "ext1618Pct": 70.1492537313433,
+      "ext2618Pct": 43.28358208955223,
+      "ext3618Pct": 22.388059701492537
+    }
+  },
+  "NSE:ZYDUSLIFE": {
+    "symbol": "ZYDUSLIFE",
+    "weekly": {
+      "total": 316,
+      "brokeOut": 272,
+      "breakoutPct": 86.07594936708861,
+      "upsidePct": 51.58227848101266,
+      "downsidePct": 47.78481012658228,
+      "bothPct": 13.291139240506327,
+      "ext1618Pct": 42.279411764705884,
+      "ext2618Pct": 8.823529411764707,
+      "ext3618Pct": 2.2058823529411766
+    },
+    "monthly": {
+      "total": 73,
+      "brokeOut": 69,
+      "breakoutPct": 94.52054794520548,
+      "upsidePct": 71.23287671232876,
+      "downsidePct": 50.68493150684932,
+      "bothPct": 27.397260273972602,
+      "ext1618Pct": 82.6086956521739,
+      "ext2618Pct": 27.536231884057973,
+      "ext3618Pct": 10.144927536231885
+    }
+  }
+}

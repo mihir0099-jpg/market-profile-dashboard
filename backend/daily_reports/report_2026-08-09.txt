@@ -1,0 +1,88 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-08-09)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 24570.65
+  - Final PCR: 0.734 (Drift: 0.000)
+  - Key Walls: Call Wall at 24600 | Put Wall at 24500
+  - Gamma Flip Zone: 24550
+  - Conjoint State: +GEX (Positive Gamma / Low Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 57746.45
+  - Final PCR: 0.887 (Drift: 0.000)
+  - Key Walls: Call Wall at 58000 | Put Wall at 57000
+  - Gamma Flip Zone: 57700
+  - Conjoint State: +GEX (Positive Gamma / Low Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+SWIGGY          | Weekly Gap Fade Trap         | SWING  | SHORT | 279.90   | 288.00   | 305.00   | TARGET_HIT    | -8.10   
+SWIGGY          | Weekly Gap Fade Trap         | SWING  | SHORT | 279.90   | 288.00   | 305.00   | TARGET_HIT    | -8.10   
+SWIGGY          | Weekly Gap Fade Trap         | SWING  | SHORT | 279.90   | 288.00   | 305.00   | TARGET_HIT    | -8.10   
+BSE             | Weekly Gap Fade Trap         | SWING  | SHORT | 3456.00  | 3530.00  | 3659.20  | TARGET_HIT    | -74.00  
+BSE             | Weekly Gap Fade Trap         | SWING  | SHORT | 3456.00  | 3530.00  | 3659.20  | TARGET_HIT    | -74.00  
+SWIGGY          | Weekly Gap Fade Trap         | SWING  | SHORT | 279.90   | 288.00   | 305.00   | TARGET_HIT    | -8.10   
+BSE             | Weekly Gap Fade Trap         | SWING  | SHORT | 3456.00  | 3530.00  | 3659.20  | TARGET_HIT    | -74.00  
+BRITANNIA       | Weekly POC Reversion         | SWING  | LONG  | 5432.50  | 5530.00  | 5430.00  | TARGET_HIT    | 97.50   
+BSE             | Weekly Gap Fade Trap         | SWING  | SHORT | 3456.00  | 3530.00  | 3659.20  | TARGET_HIT    | -74.00  
+SWIGGY          | Weekly Gap Fade Trap         | SWING  | SHORT | 279.90   | 288.00   | 305.00   | TARGET_HIT    | -8.10   
+ADANIENSOL      | Weekly POC Reversion         | SWING  | SHORT | 1651.10  | 1650.00  | 1660.00  | TARGET_HIT    | 1.10    
+ADANIENT        | Weekly POC Reversion         | SWING  | SHORT | 3057.00  | 3030.00  | 3060.00  | TARGET_HIT    | 27.00   
+ADANIGREEN      | Weekly POC Reversion         | SWING  | SHORT | 1393.20  | 1360.00  | 1400.00  | TARGET_HIT    | 33.20   
+ADANIPOWER      | Weekly POC Reversion         | SWING  | SHORT | 210.95   | 209.00   | 211.00   | TARGET_HIT    | 1.95    
+AMBER           | Weekly POC Reversion         | SWING  | LONG  | 7429.50  | 7460.00  | 7390.00  | TARGET_HIT    | 30.50   
+AMBUJACEM       | Weekly POC Reversion         | SWING  | SHORT | 439.35   | 432.00   | 440.00   | TARGET_HIT    | 7.35    
+ANGELONE        | Weekly POC Reversion         | SWING  | LONG  | 297.20   | 298.00   | 296.00   | TARGET_HIT    | 0.80    
+AUROPHARMA      | Weekly POC Reversion         | SWING  | SHORT | 1581.30  | 1575.00  | 1595.00  | STOP_LOSS_HIT | -13.70  
+BLUESTARCO      | Weekly POC Reversion         | SWING  | SHORT | 1688.00  | 1680.00  | 1715.00  | TARGET_HIT    | 8.00    
+BSE             | Weekly Gap Fade Trap         | SWING  | SHORT | 3456.00  | 3530.00  | 3659.20  | TARGET_HIT    | -74.00  
+MOTILALOFS      | Weekly POC Reversion         | SWING  | SHORT | 871.20   | 856.00   | 872.00   | TARGET_HIT    | 15.20   
+BSE             | Weekly Gap Fade Trap         | SWING  | SHORT | 3456.00  | 3530.00  | 3659.20  | TARGET_HIT    | -74.00  
+IDEA            | Weekly POC Reversion         | SWING  | SHORT | 12.92    | 12.00    | 13.00    | TARGET_HIT    | 0.92    
+SWIGGY          | Weekly Gap Fade Trap         | SWING  | SHORT | 279.90   | 288.00   | 305.00   | TARGET_HIT    | -8.10   
+MAZDOCK         | Weekly POC Reversion         | SWING  | SHORT | 2395.70  | 2380.00  | 2410.00  | STOP_LOSS_HIT | -14.30  
+BSE             | Weekly Gap Fade Trap         | SWING  | SHORT | 3456.00  | 3530.00  | 3659.20  | TARGET_HIT    | -74.00  
+IREDA           | Weekly POC Reversion         | SWING  | SHORT | 120.99   | 120.00   | 121.00   | TARGET_HIT    | 0.99    
+PIIND           | Weekly POC Reversion         | SWING  | SHORT | 2795.00  | 2740.00  | 2810.00  | TARGET_HIT    | 55.00   
+PNBHOUSING      | Weekly POC Reversion         | SWING  | SHORT | 1075.00  | 1055.00  | 1090.00  | STOP_LOSS_HIT | -15.00  
+
+Statistics:
+* Total Signals Triggered/Resolved: 29
+* Target Hits: 26
+* Stop Loss Hits: 3
+* Win Rate: 89.7%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] AUROPHARMA -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1581.30 | Stop Loss: 1595.00 | Exit: 1595.00 | Loss: -13.70
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[2] MAZDOCK -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 2395.70 | Stop Loss: 2410.00 | Exit: 2410.00 | Loss: -14.30
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[3] PNBHOUSING -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1075.00 | Stop Loss: 1090.00 | Exit: 1090.00 | Loss: -15.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

@@ -1,0 +1,68 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-07-18)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 24334.30
+  - Final PCR: 1.613 (Drift: 0.000)
+  - Key Walls: Call Wall at 24700 | Put Wall at 24000
+  - Gamma Flip Zone: 24350
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 58521.40
+  - Final PCR: 1.013 (Drift: 0.000)
+  - Key Walls: Call Wall at 59000 | Put Wall at 58000
+  - Gamma Flip Zone: 58100
+  - Conjoint State: +GEX (Positive Gamma / Low Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+OANDA:XAUUSD    | Weekly POC Reversion         | SWING  | LONG  | 4058.51  | 4100.00  | 4050.00  | TARGET_HIT    | -41.49  
+COINBASE:BTCUSD | Weekly Gap Fade Trap         | SWING  | SHORT | 63977.64 | 64110.00 | 65559.50 | TARGET_HIT    | -132.36 
+COINBASE:BTCUSD | Monthly POC Reversion        | SWING  | LONG  | 58428.54 | 59900.00 | 58130.00 | STOP_LOSS_HIT | 298.54  
+DELTAIN:BTCUSD.P | Weekly Gap Fade Trap         | SWING  | SHORT | 64000.00 | 64140.00 | 65580.50 | TARGET_HIT    | -140.00 
+DELTAIN:BTCUSD.P | Monthly POC Reversion        | SWING  | LONG  | 58518.50 | 60000.00 | 58230.00 | TARGET_HIT    | -1481.50
+BANKINDIA       | Monthly Gap Fade Trap        | SWING  | LONG  | 142.83   | 145.00   | 134.01   | TARGET_HIT    | 2.17    
+SHRIRAMFIN      | Monthly POC Reversion        | SWING  | SHORT | 1050.00  | 1000.00  | 1050.00  | TARGET_HIT    | 50.00   
+YESBANK         | Monthly Gap Fade Trap        | SWING  | SHORT | 23.54    | 22.00    | 24.79    | TARGET_HIT    | 1.54    
+BAJAJHLDNG      | Monthly POC Reversion        | SWING  | SHORT | 10646.00 | 10200.00 | 10650.00 | TARGET_HIT    | 446.00  
+COINBASE:BTCUSD | Weekly Gap Fade Trap         | SWING  | SHORT | 63933.09 | 64110.00 | 65559.50 | TARGET_HIT    | -176.91 
+DELTAIN:BTCUSD.P | Weekly Gap Fade Trap         | SWING  | SHORT | 63960.50 | 64140.00 | 65580.50 | TARGET_HIT    | -179.50 
+KEI             | 3:15 PM BTST Close           | BTST   | SHORT | 4889.00  | 4771.66  | 4928.11  | TARGET_HIT    | 117.34  
+COINBASE:BTCUSD | Weekly Gap Fade Trap         | SWING  | SHORT | 63969.06 | 64110.00 | 65559.50 | TARGET_HIT    | -140.94 
+DELTAIN:BTCUSD.P | Weekly Gap Fade Trap         | SWING  | SHORT | 63995.50 | 64140.00 | 65580.50 | TARGET_HIT    | -144.50 
+COINBASE:BTCUSD | Weekly Gap Fade Trap         | SWING  | SHORT | 63934.42 | 64110.00 | 65559.50 | TARGET_HIT    | -175.58 
+DELTAIN:BTCUSD.P | Weekly Gap Fade Trap         | SWING  | SHORT | 63963.00 | 64140.00 | 65580.50 | TARGET_HIT    | -177.00 
+COINBASE:BTCUSD | Liquidity Sweep Reversal     | INTRADAY | LONG  | 63919.05 | 64353.56 | 63899.75 | TARGET_HIT    | -434.51 
+COINBASE:BTCUSD | Weekly Gap Fade Trap         | SWING  | SHORT | 63919.05 | 64110.00 | 65559.50 | TARGET_HIT    | -190.95 
+DELTAIN:BTCUSD.P | Weekly Gap Fade Trap         | SWING  | SHORT | 63947.00 | 64140.00 | 65580.50 | TARGET_HIT    | -193.00 
+
+Statistics:
+* Total Signals Triggered/Resolved: 19
+* Target Hits: 18
+* Stop Loss Hits: 1
+* Win Rate: 94.7%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] COINBASE:BTCUSD -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 58428.54 | Stop Loss: 58130.00 | Exit: 58130.00 | Loss: 298.54
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

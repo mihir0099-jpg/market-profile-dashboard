@@ -1,0 +1,342 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-08-23)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 24252.00
+  - Final PCR: 1.078 (Drift: 0.000)
+  - Key Walls: Call Wall at 24300 | Put Wall at 24000
+  - Gamma Flip Zone: 24250
+  - Conjoint State: +GEX (Positive Gamma / Low Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 57761.95
+  - Final PCR: 0.864 (Drift: 0.000)
+  - Key Walls: Call Wall at 58000 | Put Wall at 57000
+  - Gamma Flip Zone: 57600
+  - Conjoint State: +GEX (Positive Gamma / Low Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+COINBASE:BTCUSD | 3:15 PM BTST Close           | BTST   | BUY   | 75787.44 | 77606.34 | 75181.14 | TARGET_HIT    | 1507.85 
+DELTAIN:BTCUSD.P | 3:15 PM BTST Close           | BTST   | BUY   | 75789.00 | 77607.94 | 75182.69 | TARGET_HIT    | 1528.00 
+BANKNIFTY       | 3:15 PM BTST Close           | BTST   | BUY   | 57761.95 | 59148.24 | 57299.85 | STOP_LOSS_HIT | -462.10 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | LONG  | 57702.95 | 58136.29 | 57435.09 | STOP_LOSS_HIT | -267.86 
+AUROPHARMA      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1614.90  | 1624.00  | 1605.20  | STOP_LOSS_HIT | -9.70   
+AXISBANK        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1245.50  | 1256.40  | 1241.80  | STOP_LOSS_HIT | -3.70   
+BAJAJHLDNG      | 3:15 PM BTST Close           | BTST   | SHORT | 11280.00 | 11009.28 | 11370.24 | STOP_LOSS_HIT | -90.24  
+CONCOR          | Liquidity Sweep Reversal     | INTRADAY | LONG  | 515.20   | 524.40   | 512.15   | STOP_LOSS_HIT | -3.05   
+HDFCAMC         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2605.00  | 2553.00  | 2610.50  | STOP_LOSS_HIT | -5.50   
+HDFCLIFE        | 3:15 PM BTST Close           | BTST   | BUY   | 553.00   | 566.27   | 548.58   | STOP_LOSS_HIT | -4.42   
+MARICO          | Liquidity Sweep Reversal     | INTRADAY | LONG  | 849.90   | 861.00   | 845.20   | STOP_LOSS_HIT | -4.70   
+MARICO          | Monthly Gap Fade Trap        | SWING  | SHORT | 849.90   | 846.00   | 881.35   | STOP_LOSS_HIT | -31.45  
+MARUTI          | 3:15 PM BTST Close           | BTST   | SHORT | 13590.00 | 13263.84 | 13698.72 | STOP_LOSS_HIT | -108.72 
+PIIND           | Weekly Gap Fade Trap         | SWING  | SHORT | 2492.40  | 2480.00  | 2523.20  | STOP_LOSS_HIT | -30.80  
+PIIND           | Monthly Gap Fade Trap        | SWING  | SHORT | 2492.40  | 2620.00  | 2845.00  | STOP_LOSS_HIT | -352.60 
+PNBHOUSING      | 3:15 PM BTST Close           | BTST   | SHORT | 1166.10  | 1138.11  | 1175.43  | STOP_LOSS_HIT | -9.33   
+PNBHOUSING      | Monthly POC Reversion        | SWING  | LONG  | 1057.10  | 1090.00  | 1055.00  | TARGET_HIT    | 32.90   
+COINBASE:BTCUSD | Liquidity Sweep Reversal     | INTRADAY | LONG  | 76526.07 | 78828.37 | 76461.20 | STOP_LOSS_HIT | 64.87   
+DELTAIN:BTCUSD.P | Liquidity Sweep Reversal     | INTRADAY | LONG  | 76545.50 | 78840.00 | 76477.50 | STOP_LOSS_HIT | 68.00   
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5395.00  | 5650.00  | 5771.00  | STOP_LOSS_HIT | -376.00 
+BHARATFORG      | Monthly Gap Fade Trap        | SWING  | SHORT | 2062.00  | 2130.00  | 2295.00  | STOP_LOSS_HIT | -233.00 
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | SHORT | 1946.80  | 1930.00  | 2031.00  | STOP_LOSS_HIT | -84.20  
+BIOCON          | Liquidity Sweep Reversal     | INTRADAY | LONG  | 413.45   | 416.00   | 411.00   | STOP_LOSS_HIT | -2.45   
+BLUESTARCO      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1515.00  | 1523.20  | 1504.10  | STOP_LOSS_HIT | -10.90  
+CAMS            | Monthly Gap Fade Trap        | SWING  | SHORT | 751.30   | 770.00   | 830.50   | STOP_LOSS_HIT | -79.20  
+FORTIS          | Weekly Gap Fade Trap         | SWING  | SHORT | 909.00   | 912.00   | 927.00   | STOP_LOSS_HIT | -18.00  
+GAIL            | Monthly Gap Fade Trap        | SWING  | SHORT | 171.89   | 174.00   | 182.38   | STOP_LOSS_HIT | -10.49  
+GODREJCP        | Weekly Gap Fade Trap         | SWING  | SHORT | 929.90   | 930.00   | 948.00   | STOP_LOSS_HIT | -18.10  
+IOC             | Monthly Gap Fade Trap        | SWING  | SHORT | 135.75   | 141.00   | 145.20   | STOP_LOSS_HIT | -9.45   
+IRFC            | Monthly Gap Fade Trap        | SWING  | SHORT | 86.34    | 88.00    | 90.85    | STOP_LOSS_HIT | -4.51   
+KALYANKJIL      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 603.60   | 592.65   | 606.90   | STOP_LOSS_HIT | -3.30   
+NMDC            | Monthly Gap Fade Trap        | SWING  | SHORT | 84.28    | 84.00    | 87.19    | STOP_LOSS_HIT | -2.91   
+OIL             | Weekly Gap Fade Trap         | SWING  | SHORT | 475.45   | 473.00   | 485.80   | STOP_LOSS_HIT | -10.35  
+PAGEIND         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 35600.00 | 35210.00 | 35750.00 | STOP_LOSS_HIT | -150.00 
+PAGEIND         | Monthly POC Reversion        | SWING  | SHORT | 40375.00 | 40310.00 | 41370.00 | TARGET_HIT    | 65.00   
+PAYTM           | 3:15 PM BTST Close           | BTST   | BUY   | 1638.00  | 1677.31  | 1624.90  | STOP_LOSS_HIT | -13.10  
+PFC             | Monthly Gap Fade Trap        | SWING  | SHORT | 362.40   | 405.00   | 429.25   | STOP_LOSS_HIT | -66.85  
+SBICARD         | Monthly Gap Fade Trap        | SWING  | SHORT | 647.00   | 602.00   | 674.20   | STOP_LOSS_HIT | -27.20  
+SBILIFE         | Monthly Gap Fade Trap        | SWING  | SHORT | 1792.80  | 1825.00  | 1914.80  | STOP_LOSS_HIT | -122.00 
+TORNTPHARM      | Monthly Gap Fade Trap        | SWING  | SHORT | 4901.00  | 4880.00  | 5224.00  | STOP_LOSS_HIT | -323.00 
+TVSMOTOR        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 4365.00  | 4408.00  | 4355.80  | STOP_LOSS_HIT | -9.20   
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5395.00  | 5650.00  | 5771.00  | STOP_LOSS_HIT | -376.00 
+APLAPOLLO       | Monthly POC Reversion        | SWING  | SHORT | 1825.00  | 1820.00  | 1835.00  | STOP_LOSS_HIT | -10.00  
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8648.00  | 8890.00  | 9049.00  | STOP_LOSS_HIT | -401.00 
+ASIANPAINT      | 3:15 PM BTST Close           | BTST   | BUY   | 2643.90  | 2707.35  | 2622.75  | STOP_LOSS_HIT | -21.15  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2643.90  | 2680.00  | 2807.30  | STOP_LOSS_HIT | -163.40 
+ASTRAL          | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1535.00  | 1552.90  | 1531.00  | STOP_LOSS_HIT | -4.00   
+CAMS            | Monthly Gap Fade Trap        | SWING  | SHORT | 751.30   | 770.00   | 830.50   | STOP_LOSS_HIT | -79.20  
+FORTIS          | Weekly Gap Fade Trap         | SWING  | SHORT | 909.00   | 912.00   | 927.00   | STOP_LOSS_HIT | -18.00  
+GAIL            | Monthly Gap Fade Trap        | SWING  | SHORT | 171.89   | 174.00   | 182.38   | STOP_LOSS_HIT | -10.49  
+GODREJCP        | Weekly Gap Fade Trap         | SWING  | SHORT | 929.90   | 930.00   | 948.00   | STOP_LOSS_HIT | -18.10  
+IOC             | Monthly Gap Fade Trap        | SWING  | SHORT | 135.75   | 141.00   | 145.20   | STOP_LOSS_HIT | -9.45   
+IRFC            | Monthly Gap Fade Trap        | SWING  | SHORT | 86.34    | 88.00    | 90.85    | STOP_LOSS_HIT | -4.51   
+
+Statistics:
+* Total Signals Triggered/Resolved: 53
+* Target Hits: 4
+* Stop Loss Hits: 49
+* Win Rate: 7.5%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] BANKNIFTY -- 3:15 PM BTST Close (BUY)
+* Trigger Details: Entry: 57761.95 | Stop Loss: 57299.85 | Exit: 57299.85 | Loss: -462.10
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[2] BANKNIFTY -- Weekly IB Breakout (LONG)
+* Trigger Details: Entry: 57702.95 | Stop Loss: 57435.09 | Exit: 57435.09 | Loss: -267.86
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[3] AUROPHARMA -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 1614.90 | Stop Loss: 1605.20 | Exit: 1605.20 | Loss: -9.70
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[4] AXISBANK -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 1245.50 | Stop Loss: 1241.80 | Exit: 1241.80 | Loss: -3.70
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[5] BAJAJHLDNG -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 11280.00 | Stop Loss: 11370.24 | Exit: 11370.24 | Loss: -90.24
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[6] CONCOR -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 515.20 | Stop Loss: 512.15 | Exit: 512.15 | Loss: -3.05
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[7] HDFCAMC -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 2605.00 | Stop Loss: 2610.50 | Exit: 2610.50 | Loss: -5.50
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[8] HDFCLIFE -- 3:15 PM BTST Close (BUY)
+* Trigger Details: Entry: 553.00 | Stop Loss: 548.58 | Exit: 548.58 | Loss: -4.42
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[9] MARICO -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 849.90 | Stop Loss: 845.20 | Exit: 845.20 | Loss: -4.70
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[10] MARICO -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 849.90 | Stop Loss: 881.35 | Exit: 881.35 | Loss: -31.45
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[11] MARUTI -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 13590.00 | Stop Loss: 13698.72 | Exit: 13698.72 | Loss: -108.72
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[12] PIIND -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2492.40 | Stop Loss: 2523.20 | Exit: 2523.20 | Loss: -30.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[13] PIIND -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2492.40 | Stop Loss: 2845.00 | Exit: 2845.00 | Loss: -352.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[14] PNBHOUSING -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 1166.10 | Stop Loss: 1175.43 | Exit: 1175.43 | Loss: -9.33
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[15] COINBASE:BTCUSD -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 76526.07 | Stop Loss: 76461.20 | Exit: 76461.20 | Loss: 64.87
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[16] DELTAIN:BTCUSD.P -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 76545.50 | Stop Loss: 76477.50 | Exit: 76477.50 | Loss: 68.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[17] ALKEM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 5395.00 | Stop Loss: 5771.00 | Exit: 5771.00 | Loss: -376.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[18] BHARATFORG -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2062.00 | Stop Loss: 2295.00 | Exit: 2295.00 | Loss: -233.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[19] BHARTIARTL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1946.80 | Stop Loss: 2031.00 | Exit: 2031.00 | Loss: -84.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[20] BIOCON -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 413.45 | Stop Loss: 411.00 | Exit: 411.00 | Loss: -2.45
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[21] BLUESTARCO -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 1515.00 | Stop Loss: 1504.10 | Exit: 1504.10 | Loss: -10.90
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[22] CAMS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 751.30 | Stop Loss: 830.50 | Exit: 830.50 | Loss: -79.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[23] FORTIS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 909.00 | Stop Loss: 927.00 | Exit: 927.00 | Loss: -18.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[24] GAIL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 171.89 | Stop Loss: 182.38 | Exit: 182.38 | Loss: -10.49
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[25] GODREJCP -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 929.90 | Stop Loss: 948.00 | Exit: 948.00 | Loss: -18.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[26] IOC -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 135.75 | Stop Loss: 145.20 | Exit: 145.20 | Loss: -9.45
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[27] IRFC -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 86.34 | Stop Loss: 90.85 | Exit: 90.85 | Loss: -4.51
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[28] KALYANKJIL -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 603.60 | Stop Loss: 606.90 | Exit: 606.90 | Loss: -3.30
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[29] NMDC -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 84.28 | Stop Loss: 87.19 | Exit: 87.19 | Loss: -2.91
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[30] OIL -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 475.45 | Stop Loss: 485.80 | Exit: 485.80 | Loss: -10.35
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[31] PAGEIND -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 35600.00 | Stop Loss: 35750.00 | Exit: 35750.00 | Loss: -150.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[32] PAYTM -- 3:15 PM BTST Close (BUY)
+* Trigger Details: Entry: 1638.00 | Stop Loss: 1624.90 | Exit: 1624.90 | Loss: -13.10
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[33] PFC -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 362.40 | Stop Loss: 429.25 | Exit: 429.25 | Loss: -66.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[34] SBICARD -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 647.00 | Stop Loss: 674.20 | Exit: 674.20 | Loss: -27.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[35] SBILIFE -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1792.80 | Stop Loss: 1914.80 | Exit: 1914.80 | Loss: -122.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[36] TORNTPHARM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 4901.00 | Stop Loss: 5224.00 | Exit: 5224.00 | Loss: -323.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[37] TVSMOTOR -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 4365.00 | Stop Loss: 4355.80 | Exit: 4355.80 | Loss: -9.20
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[38] ALKEM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 5395.00 | Stop Loss: 5771.00 | Exit: 5771.00 | Loss: -376.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[39] APLAPOLLO -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 1825.00 | Stop Loss: 1835.00 | Exit: 1835.00 | Loss: -10.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[40] APOLLOHOSP -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 8648.00 | Stop Loss: 9049.00 | Exit: 9049.00 | Loss: -401.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[41] ASIANPAINT -- 3:15 PM BTST Close (BUY)
+* Trigger Details: Entry: 2643.90 | Stop Loss: 2622.75 | Exit: 2622.75 | Loss: -21.15
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[42] ASIANPAINT -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2643.90 | Stop Loss: 2807.30 | Exit: 2807.30 | Loss: -163.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[43] ASTRAL -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 1535.00 | Stop Loss: 1531.00 | Exit: 1531.00 | Loss: -4.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[44] CAMS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 751.30 | Stop Loss: 830.50 | Exit: 830.50 | Loss: -79.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[45] FORTIS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 909.00 | Stop Loss: 927.00 | Exit: 927.00 | Loss: -18.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[46] GAIL -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 171.89 | Stop Loss: 182.38 | Exit: 182.38 | Loss: -10.49
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[47] GODREJCP -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 929.90 | Stop Loss: 948.00 | Exit: 948.00 | Loss: -18.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[48] IOC -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 135.75 | Stop Loss: 145.20 | Exit: 145.20 | Loss: -9.45
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[49] IRFC -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 86.34 | Stop Loss: 90.85 | Exit: 90.85 | Loss: -4.51
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

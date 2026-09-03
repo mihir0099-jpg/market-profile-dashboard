@@ -1,0 +1,13 @@
+﻿# Render 1-click build trigger for Market Profile Dashboard
+services:
+  - type: web
+    name: market-profile-dashboard
+    env: node
+    plan: free
+    buildCommand: "npm run build"
+    startCommand: "node backend/server.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NPM_CONFIG_PRODUCTION
+        value: "false"

@@ -1,0 +1,46 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-08-29)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 24175.65
+  - Final PCR: 0.776 (Drift: 0.000)
+  - Key Walls: Call Wall at 24300 | Put Wall at 24000
+  - Gamma Flip Zone: 24200
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 57496.30
+  - Final PCR: 1.111 (Drift: 0.000)
+  - Key Walls: Call Wall at 57500 | Put Wall at 57000
+  - Gamma Flip Zone: 57500
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+OANDA:XAUUSD    | 3:15 PM BTST Close           | BTST   | SHORT | 4572.97  | 4463.21  | 4609.55  | TARGET_HIT    | 116.80  
+
+Statistics:
+* Total Signals Triggered/Resolved: 1
+* Target Hits: 1
+* Stop Loss Hits: 0
+* Win Rate: 100.0%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+No stop loss hits detected today. All setups performed inside standard target/expiration parameters.
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

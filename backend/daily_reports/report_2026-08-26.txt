@@ -1,0 +1,1300 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-08-26)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 24207.75
+  - Final PCR: 0.738 (Drift: -0.421)
+  - Key Walls: Call Wall at 24500 | Put Wall at 24200
+  - Gamma Flip Zone: 24250
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 57783.75
+  - Final PCR: 1.145 (Drift: -0.008)
+  - Key Walls: Call Wall at 58000 | Put Wall at 57500
+  - Gamma Flip Zone: 57800
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+TVC:USOIL       | 3:15 PM BTST Close           | BTST   | SHORT | 84.56    | 82.53    | 85.24    | TARGET_HIT    | 2.25    
+TIINDIA         | Monthly Gap Fade Trap        | SWING  | LONG  | 2875.00  | 2910.00  | 2685.00  | TARGET_HIT    | 35.00   
+CGPOWER         | Monthly Gap Fade Trap        | SWING  | LONG  | 879.20   | 910.00   | 846.45   | TARGET_HIT    | 30.80   
+BANKNIFTY       | Weekly POC Reversion         | SWING  | LONG  | 57639.50 | 57645.00 | 57285.00 | TARGET_HIT    | -5.50   
+OANDA:XAUUSD    | Weekly POC Reversion         | SWING  | SHORT | 4650.01  | 4640.00  | 4680.00  | TARGET_HIT    | 10.01   
+COINBASE:BTCUSD | Liquidity Sweep Reversal     | INTRADAY | LONG  | 78994.74 | 79264.77 | 78875.90 | TARGET_HIT    | -270.03 
+COINBASE:BTCUSD | Weekly POC Reversion         | SWING  | SHORT | 79264.77 | 77290.00 | 81060.00 | ACTIVE        | 0.00    
+DELTAIN:BTCUSD.P | Liquidity Sweep Reversal     | INTRADAY | LONG  | 78982.50 | 79244.00 | 78859.50 | TARGET_HIT    | -261.50 
+DELTAIN:BTCUSD.P | Weekly POC Reversion         | SWING  | SHORT | 79244.00 | 77300.00 | 81170.00 | ACTIVE        | 0.00    
+360ONE          | Weekly POC Reversion         | SWING  | SHORT | 1213.20  | 1205.00  | 1215.00  | STOP_LOSS_HIT | -1.80   
+ABCAPITAL       | Weekly POC Reversion         | SWING  | LONG  | 410.85   | 411.00   | 406.00   | TARGET_HIT    | -0.15   
+ALKEM           | Weekly POC Reversion         | SWING  | LONG  | 5368.00  | 5390.00  | 5310.00  | ACTIVE        | 0.00    
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5379.50  | 5650.00  | 5771.00  | TARGET_HIT    | -270.50 
+APLAPOLLO       | Weekly POC Reversion         | SWING  | LONG  | 2133.10  | 2140.00  | 2120.00  | STOP_LOSS_HIT | 13.10   
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8795.00  | 8890.00  | 9049.00  | TARGET_HIT    | -95.00  
+AUROPHARMA      | Weekly POC Reversion         | SWING  | SHORT | 1618.20  | 1610.00  | 1625.00  | STOP_LOSS_HIT | -6.80   
+AXISBANK        | Weekly POC Reversion         | SWING  | SHORT | 1240.00  | 1230.00  | 1245.00  | STOP_LOSS_HIT | -5.00   
+AXISBANK        | Monthly POC Reversion        | SWING  | SHORT | 1236.90  | 1225.00  | 1320.00  | STOP_LOSS_HIT | -83.10  
+BAJAJFINSV      | Weekly Gap Fade Trap         | SWING  | SHORT | 2018.50  | 2010.00  | 2021.50  | STOP_LOSS_HIT | -3.00   
+BDL             | Weekly POC Reversion         | SWING  | SHORT | 1356.00  | 1355.00  | 1380.00  | TARGET_HIT    | 1.00    
+BHARATFORG      | Weekly POC Reversion         | SWING  | LONG  | 2048.60  | 2050.00  | 2030.00  | STOP_LOSS_HIT | 18.60   
+BHARATFORG      | Monthly Gap Fade Trap        | SWING  | SHORT | 2041.80  | 2130.00  | 2295.00  | TARGET_HIT    | -88.20  
+BHARTIARTL      | Weekly POC Reversion         | SWING  | LONG  | 1937.30  | 1940.00  | 1930.00  | TARGET_HIT    | -2.70   
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | SHORT | 1928.40  | 1930.00  | 2031.00  | TARGET_HIT    | -1.60   
+BLUESTARCO      | Weekly POC Reversion         | SWING  | SHORT | 1512.00  | 1505.00  | 1515.00  | TARGET_HIT    | 7.00    
+BSE             | Weekly POC Reversion         | SWING  | SHORT | 3326.90  | 3300.00  | 3380.00  | STOP_LOSS_HIT | -53.10  
+CAMS            | Weekly POC Reversion         | SWING  | LONG  | 755.35   | 756.00   | 750.00   | TARGET_HIT    | -0.65   
+CAMS            | Monthly Gap Fade Trap        | SWING  | SHORT | 755.15   | 770.00   | 830.50   | TARGET_HIT    | -14.85  
+CDSL            | Weekly POC Reversion         | SWING  | SHORT | 1397.20  | 1385.00  | 1410.00  | STOP_LOSS_HIT | -12.80  
+COLPAL          | Weekly POC Reversion         | SWING  | LONG  | 1879.50  | 1885.00  | 1870.00  | STOP_LOSS_HIT | 9.50    
+DIXON           | Weekly POC Reversion         | SWING  | SHORT | 14796.00 | 14520.00 | 14830.00 | STOP_LOSS_HIT | -34.00  
+DMART           | Monthly POC Reversion        | SWING  | LONG  | 3945.10  | 4060.00  | 3910.00  | STOP_LOSS_HIT | 35.10   
+ETERNAL         | Weekly POC Reversion         | SWING  | SHORT | 329.80   | 327.00   | 330.00   | STOP_LOSS_HIT | -0.20   
+HAVELLS         | Weekly POC Reversion         | SWING  | SHORT | 1273.30  | 1265.00  | 1275.00  | TARGET_HIT    | 8.30    
+HDFCBANK        | Weekly POC Reversion         | SWING  | SHORT | 728.00   | 726.00   | 730.00   | TARGET_HIT    | 2.00    
+IDFCFIRSTB      | Weekly POC Reversion         | SWING  | SHORT | 85.31    | 85.00    | 86.00    | STOP_LOSS_HIT | -0.69   
+INOXWIND        | Auction Magnet               | INTRADAY | BUY   | 74.10    | 74.20    | 73.88    | TARGET_HIT    | 0.10    
+IOC             | Monthly Gap Fade Trap        | SWING  | SHORT | 140.69   | 141.00   | 145.20   | TARGET_HIT    | -0.31   
+IRFC            | Monthly Gap Fade Trap        | SWING  | SHORT | 86.24    | 88.00    | 90.85    | TARGET_HIT    | -1.76   
+JIOFIN          | Weekly POC Reversion         | SWING  | SHORT | 244.60   | 244.00   | 245.00   | TARGET_HIT    | 0.60    
+KAYNES          | Weekly POC Reversion         | SWING  | SHORT | 3946.30  | 3860.00  | 3950.00  | STOP_LOSS_HIT | -3.70   
+MANAPPURAM      | Weekly POC Reversion         | SWING  | SHORT | 366.10   | 365.00   | 369.00   | STOP_LOSS_HIT | -2.90   
+MANKIND         | Weekly POC Reversion         | SWING  | SHORT | 2387.60  | 2380.00  | 2400.00  | STOP_LOSS_HIT | -12.40  
+MARICO          | Weekly POC Reversion         | SWING  | SHORT | 848.00   | 846.00   | 854.00   | TARGET_HIT    | 2.00    
+MARICO          | Monthly Gap Fade Trap        | SWING  | SHORT | 843.80   | 846.00   | 881.35   | TARGET_HIT    | -2.20   
+NTPC            | Monthly POC Reversion        | SWING  | SHORT | 348.00   | 344.00   | 350.00   | TARGET_HIT    | 4.00    
+PATANJALI       | Weekly POC Reversion         | SWING  | SHORT | 350.85   | 349.00   | 351.00   | TARGET_HIT    | 1.85    
+PREMIERENE      | Weekly POC Reversion         | SWING  | SHORT | 1037.50  | 1025.00  | 1045.00  | TARGET_HIT    | 12.50   
+RADICO          | Weekly POC Reversion         | SWING  | SHORT | 4676.30  | 4610.00  | 4690.00  | TARGET_HIT    | 66.30   
+RBLBANK         | Weekly POC Reversion         | SWING  | LONG  | 386.20   | 390.00   | 384.00   | STOP_LOSS_HIT | 2.20    
+RECLTD          | Monthly Gap Fade Trap        | SWING  | SHORT | 327.25   | 352.00   | 376.70   | TARGET_HIT    | -24.75  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1309.70  | 1310.00  | 1314.80  | TARGET_HIT    | -0.30   
+RELIANCE        | Monthly Gap Fade Trap        | SWING  | SHORT | 1309.70  | 1300.00  | 1337.00  | TARGET_HIT    | 9.70    
+SBILIFE         | Weekly POC Reversion         | SWING  | LONG  | 1764.30  | 1775.00  | 1760.00  | TARGET_HIT    | -10.70  
+SBILIFE         | Monthly Gap Fade Trap        | SWING  | SHORT | 1783.80  | 1825.00  | 1914.80  | TARGET_HIT    | -41.20  
+SBIN            | Opening Drive                | INTRADAY | BUY   | 1059.70  | 1085.20  | 1051.20  | STOP_LOSS_HIT | -8.50   
+TORNTPHARM      | Weekly POC Reversion         | SWING  | SHORT | 4911.50  | 4880.00  | 4980.00  | ACTIVE        | 0.00    
+TORNTPHARM      | Monthly Gap Fade Trap        | SWING  | SHORT | 4903.50  | 4880.00  | 5224.00  | ACTIVE        | 0.00    
+TRENT           | Weekly POC Reversion         | SWING  | LONG  | 2949.30  | 2950.00  | 2910.00  | TARGET_HIT    | -0.70   
+ULTRACEMCO      | Opening Drive                | INTRADAY | BUY   | 11645.00 | 11783.00 | 11599.00 | STOP_LOSS_HIT | -46.00  
+UNITDSPR        | Weekly POC Reversion         | SWING  | SHORT | 1549.30  | 1545.00  | 1550.00  | TARGET_HIT    | 4.30    
+UNOMINDA        | Weekly POC Reversion         | SWING  | SHORT | 1253.40  | 1250.00  | 1270.00  | STOP_LOSS_HIT | -16.60  
+VBL             | Balance Breakout Trap        | SWING  | SHORT | 428.25   | 432.73   | 446.30   | TARGET_HIT    | -4.48   
+VBL             | Weekly Gap Fade Trap         | SWING  | SHORT | 428.25   | 434.00   | 446.30   | TARGET_HIT    | -5.75   
+VEDL            | Weekly POC Reversion         | SWING  | SHORT | 275.05   | 274.00   | 279.00   | TARGET_HIT    | 1.05    
+OANDA:XAUUSD    | G-Period Options Breakout    | INTRADAY | LONG  | 4672.67  | 4705.38  | 4639.96  | STOP_LOSS_HIT | 32.71   
+COINBASE:BTCUSD | Monthly Gap Fade Trap        | SWING  | LONG  | 79014.39 | 63880.00 | 62209.81 | TARGET_HIT    | 15134.39
+DELTAIN:BTCUSD.P | Monthly Gap Fade Trap        | SWING  | LONG  | 78995.50 | 63970.00 | 62245.00 | TARGET_HIT    | 15025.50
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2666.70  | 2680.00  | 2807.30  | TARGET_HIT    | -13.30  
+ASTRAL          | Weekly Gap Fade Trap         | SWING  | SHORT | 1529.20  | 1530.00  | 1544.60  | TARGET_HIT    | -0.80   
+CROMPTON        | Weekly POC Reversion         | SWING  | LONG  | 244.20   | 245.00   | 241.00   | STOP_LOSS_HIT | 3.20    
+CROMPTON        | Monthly POC Reversion        | SWING  | SHORT | 261.30   | 261.00   | 273.00   | TARGET_HIT    | 0.30    
+CUMMINSIND      | Monthly POC Reversion        | SWING  | LONG  | 5539.50  | 5580.00  | 5470.00  | STOP_LOSS_HIT | -69.50  
+DALBHARAT       | Monthly POC Reversion        | SWING  | LONG  | 1806.20  | 1810.00  | 1725.00  | TARGET_HIT    | -3.80   
+DELHIVERY       | Weekly POC Reversion         | SWING  | LONG  | 447.65   | 450.00   | 446.00   | TARGET_HIT    | 2.35    
+DELHIVERY       | Monthly POC Reversion        | SWING  | SHORT | 486.45   | 469.00   | 509.00   | TARGET_HIT    | 17.45   
+INDHOTEL        | Weekly POC Reversion         | SWING  | SHORT | 729.05   | 726.00   | 732.00   | STOP_LOSS_HIT | -2.95   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 731.90   | 736.00   | 752.90   | TARGET_HIT    | -4.10   
+IOC             | Monthly Gap Fade Trap        | SWING  | SHORT | 140.16   | 141.00   | 145.20   | TARGET_HIT    | -0.84   
+IRFC            | Monthly Gap Fade Trap        | SWING  | SHORT | 86.65    | 88.00    | 90.85    | TARGET_HIT    | -1.35   
+KEI             | Weekly POC Reversion         | SWING  | LONG  | 5595.30  | 5670.00  | 5520.00  | STOP_LOSS_HIT | 75.30   
+KFINTECH        | Weekly POC Reversion         | SWING  | SHORT | 969.95   | 966.00   | 984.00   | TARGET_HIT    | 3.95    
+KOTAKBANK       | Weekly POC Reversion         | SWING  | SHORT | 402.30   | 399.00   | 403.00   | STOP_LOSS_HIT | -0.70   
+KPITTECH        | Weekly POC Reversion         | SWING  | SHORT | 596.00   | 590.00   | 596.00   | TARGET_HIT    | 6.00    
+LICI            | Weekly POC Reversion         | SWING  | SHORT | 424.35   | 421.00   | 425.00   | TARGET_HIT    | 3.35    
+LICI            | Monthly POC Reversion        | SWING  | SHORT | 427.00   | 424.00   | 437.00   | TARGET_HIT    | 3.00    
+LODHA           | Monthly POC Reversion        | SWING  | SHORT | 1256.00  | 1190.00  | 1265.00  | TARGET_HIT    | 66.00   
+LTF             | Opening Drive                | INTRADAY | BUY   | 323.35   | 327.70   | 321.90   | TARGET_HIT    | 4.35    
+MARICO          | Monthly Gap Fade Trap        | SWING  | SHORT | 840.40   | 846.00   | 881.35   | TARGET_HIT    | -5.60   
+PIIND           | Weekly POC Reversion         | SWING  | LONG  | 2487.70  | 2500.00  | 2470.00  | TARGET_HIT    | 12.30   
+PIIND           | Monthly Gap Fade Trap        | SWING  | SHORT | 2495.00  | 2620.00  | 2845.00  | TARGET_HIT    | -125.00 
+PNB             | Weekly POC Reversion         | SWING  | SHORT | 116.90   | 116.00   | 117.00   | STOP_LOSS_HIT | -0.10   
+TCS             | Weekly Gap Fade Trap         | SWING  | SHORT | 2297.90  | 2290.00  | 2306.30  | STOP_LOSS_HIT | -8.40   
+TECHM           | Weekly Gap Fade Trap         | SWING  | SHORT | 1594.60  | 1585.00  | 1614.90  | STOP_LOSS_HIT | -20.30  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1594.60  | 1555.00  | 1681.50  | ACTIVE        | 0.00    
+TIINDIA         | Weekly POC Reversion         | SWING  | SHORT | 2898.90  | 2870.00  | 2930.00  | TARGET_HIT    | 28.90   
+TIINDIA         | Monthly Gap Fade Trap        | SWING  | LONG  | 2885.70  | 2910.00  | 2685.00  | TARGET_HIT    | -24.30  
+TMPV            | Weekly POC Reversion         | SWING  | LONG  | 316.00   | 322.00   | 315.00   | TARGET_HIT    | 6.00    
+TMPV            | Monthly Gap Fade Trap        | SWING  | SHORT | 316.15   | 333.00   | 353.20   | TARGET_HIT    | -16.85  
+TORNTPHARM      | Monthly Gap Fade Trap        | SWING  | SHORT | 4901.00  | 4880.00  | 5224.00  | ACTIVE        | 0.00    
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5353.00  | 5650.00  | 5771.00  | TARGET_HIT    | -297.00 
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8802.00  | 8890.00  | 9049.00  | TARGET_HIT    | -88.00  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2657.70  | 2680.00  | 2807.30  | TARGET_HIT    | -22.30  
+DABUR           | Weekly Gap Fade Trap         | SWING  | LONG  | 396.40   | 400.00   | 394.15   | STOP_LOSS_HIT | 2.25    
+GODREJPROP      | Opening Drive                | INTRADAY | BUY   | 2067.90  | 2106.60  | 2055.00  | TARGET_HIT    | 38.70   
+GVT&D           | Balance Breakout Trap        | SWING  | SHORT | 4220.60  | 4137.00  | 4260.00  | STOP_LOSS_HIT | -39.40  
+HDFCLIFE        | Weekly POC Reversion         | SWING  | LONG  | 549.50   | 550.00   | 540.00   | TARGET_HIT    | -0.50   
+HINDPETRO       | Monthly POC Reversion        | SWING  | SHORT | 396.25   | 391.00   | 403.00   | TARGET_HIT    | 5.25    
+HINDUNILVR      | Monthly POC Reversion        | SWING  | LONG  | 2112.00  | 2130.00  | 2090.00  | STOP_LOSS_HIT | -22.00  
+MOTILALOFS      | Monthly Gap Fade Trap        | SWING  | LONG  | 1015.00  | 968.00   | 852.70   | TARGET_HIT    | 47.00   
+MUTHOOTFIN      | Monthly Gap Fade Trap        | SWING  | LONG  | 3211.60  | 3010.00  | 2671.00  | TARGET_HIT    | 201.60  
+NAM_INDIA       | Weekly POC Reversion         | SWING  | LONG  | 1232.40  | 1245.00  | 1225.00  | STOP_LOSS_HIT | 7.40    
+NAUKRI          | Weekly POC Reversion         | SWING  | LONG  | 1346.10  | 1355.00  | 1345.00  | TARGET_HIT    | 8.90    
+NBCC            | Monthly POC Reversion        | SWING  | SHORT | 95.23    | 94.00    | 99.00    | TARGET_HIT    | 1.23    
+NUVAMA          | Weekly POC Reversion         | SWING  | SHORT | 1754.60  | 1730.00  | 1755.00  | STOP_LOSS_HIT | -0.40   
+OBEROIRLTY      | Weekly POC Reversion         | SWING  | SHORT | 1889.70  | 1870.00  | 1895.00  | STOP_LOSS_HIT | -5.30   
+OFSS            | Weekly POC Reversion         | SWING  | LONG  | 11730.00 | 11740.00 | 11650.00 | TARGET_HIT    | 10.00   
+RVNL            | Weekly Gap Fade Trap         | SWING  | LONG  | 222.28   | 222.00   | 219.78   | TARGET_HIT    | 0.28    
+ADANIGREEN      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1326.60  | 1295.90  | 1330.50  | STOP_LOSS_HIT | -3.90   
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | SHORT | 1924.20  | 1930.00  | 2031.00  | TARGET_HIT    | -5.80   
+BIOCON          | Balance Breakout Trap        | SWING  | SHORT | 416.75   | 411.95   | 417.80   | STOP_LOSS_HIT | -1.05   
+BIOCON          | Liquidity Sweep Reversal     | INTRADAY | SHORT | 416.75   | 407.00   | 417.25   | STOP_LOSS_HIT | -0.50   
+BOSCHLTD        | Weekly Gap Fade Trap         | SWING  | SHORT | 48465.00 | 48340.00 | 48750.00 | TARGET_HIT    | 125.00  
+BRITANNIA       | Weekly POC Reversion         | SWING  | SHORT | 5363.50  | 5350.00  | 5490.00  | TARGET_HIT    | 13.50   
+CAMS            | Monthly Gap Fade Trap        | SWING  | SHORT | 752.65   | 770.00   | 830.50   | TARGET_HIT    | -17.35  
+GMRINFRA        | Liquidity Sweep Reversal     | INTRADAY | SHORT | 99.14    | 98.15    | 99.39    | STOP_LOSS_HIT | -0.25   
+GMRINFRA        | Weekly POC Reversion         | SWING  | SHORT | 100.30   | 99.00    | 101.00   | TARGET_HIT    | 1.30    
+GODFRYPHLP      | Weekly POC Reversion         | SWING  | SHORT | 2110.30  | 2110.00  | 2130.00  | TARGET_HIT    | 0.30    
+GRASIM          | Liquidity Sweep Reversal     | INTRADAY | SHORT | 3286.60  | 3266.60  | 3299.80  | TARGET_HIT    | 20.00   
+INFY            | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1127.70  | 1140.20  | 1124.90  | TARGET_HIT    | -12.50  
+INOXWIND        | Monthly POC Reversion        | SWING  | SHORT | 78.84    | 77.00    | 83.00    | TARGET_HIT    | 1.84    
+IOC             | Monthly Gap Fade Trap        | SWING  | SHORT | 139.74   | 141.00   | 145.20   | TARGET_HIT    | -1.26   
+IREDA           | Monthly POC Reversion        | SWING  | SHORT | 120.45   | 120.00   | 124.00   | TARGET_HIT    | 0.45    
+IRFC            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 86.27    | 85.05    | 86.49    | STOP_LOSS_HIT | -0.22   
+IRFC            | Monthly Gap Fade Trap        | SWING  | SHORT | 86.27    | 88.00    | 90.85    | TARGET_HIT    | -1.73   
+ITC             | Monthly POC Reversion        | SWING  | SHORT | 284.50   | 281.00   | 287.00   | TARGET_HIT    | 3.50    
+JINDALSTEL      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1157.50  | 1143.10  | 1159.80  | TARGET_HIT    | 14.40   
+NTPC            | Balance Breakout Trap        | SWING  | SHORT | 340.10   | 339.25   | 344.45   | TARGET_HIT    | 0.85    
+NTPC            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 340.10   | 335.65   | 341.00   | STOP_LOSS_HIT | -0.90   
+PFC             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 366.45   | 362.10   | 368.25   | STOP_LOSS_HIT | -1.80   
+PFC             | Monthly Gap Fade Trap        | SWING  | SHORT | 366.45   | 405.00   | 429.25   | TARGET_HIT    | -38.55  
+PIDILITIND      | Weekly Gap Fade Trap         | SWING  | SHORT | 1652.60  | 1645.00  | 1669.60  | STOP_LOSS_HIT | -17.00  
+PIIND           | Monthly Gap Fade Trap        | SWING  | SHORT | 2519.50  | 2620.00  | 2845.00  | TARGET_HIT    | -100.50 
+TATACONSUM      | Weekly POC Reversion         | SWING  | LONG  | 1060.00  | 1065.00  | 1050.00  | STOP_LOSS_HIT | 10.00   
+TATAELXSI       | Weekly POC Reversion         | SWING  | LONG  | 3680.00  | 3710.00  | 3640.00  | STOP_LOSS_HIT | 40.00   
+TATAPOWER       | Monthly Gap Fade Trap        | SWING  | SHORT | 372.90   | 376.00   | 390.40   | TARGET_HIT    | -3.10   
+TATASTEEL       | Monthly Gap Fade Trap        | SWING  | SHORT | 185.36   | 186.00   | 193.65   | TARGET_HIT    | -0.64   
+TCS             | Weekly Gap Fade Trap         | SWING  | SHORT | 2289.80  | 2290.00  | 2306.30  | STOP_LOSS_HIT | -16.50  
+TECHM           | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1590.40  | 1562.00  | 1592.80  | STOP_LOSS_HIT | -2.40   
+TECHM           | Weekly Gap Fade Trap         | SWING  | SHORT | 1590.40  | 1585.00  | 1614.90  | STOP_LOSS_HIT | -24.50  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1590.40  | 1555.00  | 1681.50  | ACTIVE        | 0.00    
+NIFTY           | Liquidity Sweep Reversal     | INTRADAY | SHORT | 24314.85 | 24115.45 | 24348.30 | STOP_LOSS_HIT | -33.45  
+ABB             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 7610.00  | 7435.00  | 7646.50  | STOP_LOSS_HIT | -36.50  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5356.00  | 5650.00  | 5771.00  | TARGET_HIT    | -294.00 
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8796.00  | 8890.00  | 9049.00  | TARGET_HIT    | -94.00  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2647.40  | 2680.00  | 2807.30  | TARGET_HIT    | -32.60  
+EXIDEIND        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 446.60   | 452.90   | 445.10   | TARGET_HIT    | -6.30   
+FEDERALBNK      | Monthly Gap Fade Trap        | SWING  | SHORT | 348.25   | 329.00   | 364.20   | ACTIVE        | 0.00    
+GVT&D           | Balance Breakout Trap        | SWING  | SHORT | 4242.00  | 4137.00  | 4272.40  | STOP_LOSS_HIT | -30.40  
+HDFCBANK        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 725.90   | 728.80   | 724.15   | TARGET_HIT    | -2.90   
+HINDZINC        | Liquidity Sweep Reversal     | INTRADAY | SHORT | 618.75   | 600.15   | 623.75   | TARGET_HIT    | 18.60   
+HINDZINC        | Weekly POC Reversion         | SWING  | SHORT | 603.20   | 590.00   | 614.00   | STOP_LOSS_HIT | -10.80  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1438.00  | 1435.00  | 1460.00  | TARGET_HIT    | 3.00    
+MFSL            | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1586.50  | 1604.90  | 1580.00  | TARGET_HIT    | -18.40  
+M_M             | Weekly Gap Fade Trap         | SWING  | SHORT | 3427.70  | 3420.00  | 3447.90  | STOP_LOSS_HIT | -20.20  
+NAM_INDIA       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1235.60  | 1239.80  | 1228.30  | TARGET_HIT    | -4.20   
+NBCC            | Liquidity Sweep Reversal     | INTRADAY | LONG  | 89.80    | 90.50    | 89.51    | TARGET_HIT    | -0.70   
+NMDC            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 86.28    | 85.29    | 86.69    | STOP_LOSS_HIT | -0.41   
+POWERGRID       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 269.70   | 271.15   | 268.90   | TARGET_HIT    | -1.45   
+RBLBANK         | Liquidity Sweep Reversal     | INTRADAY | LONG  | 385.10   | 386.65   | 383.85   | TARGET_HIT    | -1.55   
+RECLTD          | Monthly Gap Fade Trap        | SWING  | SHORT | 327.65   | 352.00   | 376.70   | TARGET_HIT    | -24.35  
+SBILIFE         | Monthly Gap Fade Trap        | SWING  | SHORT | 1778.30  | 1825.00  | 1914.80  | TARGET_HIT    | -46.70  
+WAAREEENER      | Weekly POC Reversion         | SWING  | LONG  | 2665.60  | 2690.00  | 2660.00  | TARGET_HIT    | 24.40   
+NIFTY           | Morning Reversal Fade        | INTRADAY | LONG  | 24328.25 | 24378.60 | 24294.25 | TARGET_HIT    | -50.35  
+NIFTY1!         | Morning Reversal Fade        | INTRADAY | LONG  | 24516.00 | 24573.50 | 24477.00 | TARGET_HIT    | -57.50  
+BHARATFORG      | Monthly Gap Fade Trap        | SWING  | SHORT | 2027.90  | 2130.00  | 2295.00  | TARGET_HIT    | -102.10 
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | SHORT | 1920.30  | 1930.00  | 2031.00  | TARGET_HIT    | -9.70   
+BHEL            | Monthly POC Reversion        | SWING  | SHORT | 408.55   | 404.00   | 424.00   | ACTIVE        | 0.00    
+BIOCON          | Balance Breakout Trap        | SWING  | SHORT | 416.85   | 411.95   | 418.20   | STOP_LOSS_HIT | -1.35   
+BIOCON          | Morning Reversal Fade        | INTRADAY | SHORT | 417.05   | 414.75   | 418.20   | TARGET_HIT    | 2.30    
+CAMS            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 752.75   | 742.30   | 753.50   | STOP_LOSS_HIT | -0.75   
+CAMS            | Monthly Gap Fade Trap        | SWING  | SHORT | 752.75   | 770.00   | 830.50   | TARGET_HIT    | -17.25  
+CANBK           | Monthly POC Reversion        | SWING  | LONG  | 125.80   | 126.00   | 124.00   | TARGET_HIT    | 0.20    
+CDSL            | Morning Reversal Fade        | INTRADAY | SHORT | 1423.00  | 1397.20  | 1428.80  | TARGET_HIT    | 25.80   
+CDSL            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1417.20  | 1397.20  | 1423.00  | TARGET_HIT    | 20.00   
+CIPLA           | Monthly POC Reversion        | SWING  | SHORT | 1475.00  | 1440.00  | 1475.00  | TARGET_HIT    | 35.00   
+COLPAL          | Morning Reversal Fade        | INTRADAY | LONG  | 1872.50  | 1883.40  | 1865.80  | TARGET_HIT    | -10.90  
+DABUR           | Morning Reversal Fade        | INTRADAY | LONG  | 394.95   | 397.50   | 393.40   | TARGET_HIT    | -2.55   
+DALBHARAT       | Morning Reversal Fade        | INTRADAY | SHORT | 1890.00  | 1808.00  | 1913.00  | TARGET_HIT    | 82.00   
+DLF             | Weekly Gap Fade Trap         | SWING  | SHORT | 681.55   | 682.00   | 690.40   | STOP_LOSS_HIT | -8.85   
+DMART           | Morning Reversal Fade        | INTRADAY | LONG  | 3919.50  | 3931.50  | 3903.40  | TARGET_HIT    | -12.00  
+EXIDEIND        | Morning Reversal Fade        | INTRADAY | LONG  | 447.70   | 452.90   | 445.10   | TARGET_HIT    | -5.20   
+FEDERALBNK      | Morning Reversal Fade        | INTRADAY | SHORT | 347.85   | 343.60   | 349.15   | TARGET_HIT    | 4.25    
+FEDERALBNK      | Monthly Gap Fade Trap        | SWING  | SHORT | 348.70   | 329.00   | 364.20   | ACTIVE        | 0.00    
+FORCEMOT        | Morning Reversal Fade        | INTRADAY | LONG  | 17539.00 | 17662.00 | 17455.00 | TARGET_HIT    | -123.00 
+GLENMARK        | Morning Reversal Fade        | INTRADAY | SHORT | 2449.00  | 2384.50  | 2453.90  | TARGET_HIT    | 64.50   
+GODREJPROP      | Morning Reversal Fade        | INTRADAY | LONG  | 2052.00  | 2088.50  | 2049.50  | TARGET_HIT    | -36.50  
+GODREJPROP      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 2060.30  | 2088.50  | 2050.60  | TARGET_HIT    | -28.20  
+GODREJPROP      | Monthly POC Reversion        | SWING  | SHORT | 2125.00  | 2110.00  | 2150.00  | TARGET_HIT    | 15.00   
+GRASIM          | Morning Reversal Fade        | INTRADAY | SHORT | 3285.60  | 3266.60  | 3299.80  | TARGET_HIT    | 19.00   
+GVT&D           | Monthly POC Reversion        | SWING  | LONG  | 4323.00  | 4470.00  | 4270.00  | STOP_LOSS_HIT | 53.00   
+HDFCAMC         | Morning Reversal Fade        | INTRADAY | SHORT | 2689.20  | 2674.00  | 2694.00  | TARGET_HIT    | 15.20   
+HDFCAMC         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2681.30  | 2606.80  | 2689.20  | STOP_LOSS_HIT | -7.90   
+HDFCBANK        | Morning Reversal Fade        | INTRADAY | LONG  | 726.10   | 728.80   | 724.15   | TARGET_HIT    | -2.70   
+MARICO          | Morning Reversal Fade        | INTRADAY | LONG  | 840.35   | 849.00   | 837.90   | TARGET_HIT    | -8.65   
+MARICO          | Monthly Gap Fade Trap        | SWING  | SHORT | 839.80   | 846.00   | 881.35   | TARGET_HIT    | -6.20   
+MARUTI          | Morning Reversal Fade        | INTRADAY | LONG  | 13671.00 | 13722.00 | 13621.00 | TARGET_HIT    | -51.00  
+MAXHEALTH       | Monthly POC Reversion        | SWING  | SHORT | 1112.30  | 1100.00  | 1120.00  | TARGET_HIT    | 12.30   
+MAZDOCK         | Monthly POC Reversion        | SWING  | SHORT | 2392.70  | 2300.00  | 2420.00  | STOP_LOSS_HIT | -27.30  
+MFSL            | Morning Reversal Fade        | INTRADAY | LONG  | 1584.70  | 1604.90  | 1580.00  | TARGET_HIT    | -20.20  
+MOTHERSON       | Morning Reversal Fade        | INTRADAY | LONG  | 165.58   | 167.00   | 164.91   | TARGET_HIT    | -1.42   
+MOTILALOFS      | Morning Reversal Fade        | INTRADAY | SHORT | 1037.25  | 1010.65  | 1039.55  | TARGET_HIT    | 26.60   
+M_M             | Morning Reversal Fade        | INTRADAY | LONG  | 3435.40  | 3447.90  | 3421.60  | TARGET_HIT    | -12.50  
+SOLARINDS       | Morning Reversal Fade        | INTRADAY | SHORT | 19912.00 | 19770.00 | 19999.00 | TARGET_HIT    | 142.00  
+SONACOMS        | Morning Reversal Fade        | INTRADAY | LONG  | 800.60   | 811.95   | 796.80   | TARGET_HIT    | -11.35  
+SONACOMS        | Weekly POC Reversion         | SWING  | LONG  | 810.90   | 820.00   | 806.00   | TARGET_HIT    | 9.10    
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1915.50  | 1945.00  | 1988.00  | TARGET_HIT    | -29.50  
+SUPREMEIND      | Monthly POC Reversion        | SWING  | SHORT | 3469.80  | 3450.00  | 3530.00  | STOP_LOSS_HIT | -60.20  
+SUZLON          | Balance Breakout Trap        | SWING  | SHORT | 47.12    | 46.80    | 47.40    | STOP_LOSS_HIT | -0.28   
+SUZLON          | Weekly POC Reversion         | SWING  | SHORT | 47.00    | 46.00    | 47.00    | TARGET_HIT    | 1.00    
+TATACONSUM      | Morning Reversal Fade        | INTRADAY | LONG  | 1051.00  | 1060.00  | 1048.30  | TARGET_HIT    | -9.00   
+ABB             | Morning Reversal Fade        | INTRADAY | LONG  | 7597.00  | 7699.00  | 7581.00  | TARGET_HIT    | -102.00 
+ABB             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 7608.50  | 7699.00  | 7591.50  | TARGET_HIT    | -90.50  
+ABCAPITAL       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 413.05   | 405.30   | 414.70   | STOP_LOSS_HIT | -1.65   
+ADANIPORTS      | Morning Reversal Fade        | INTRADAY | LONG  | 1695.10  | 1719.70  | 1692.00  | TARGET_HIT    | -24.60  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5339.50  | 5650.00  | 5771.00  | TARGET_HIT    | -310.50 
+APLAPOLLO       | Morning Reversal Fade        | INTRADAY | SHORT | 2139.00  | 2119.70  | 2145.80  | TARGET_HIT    | 19.30   
+APOLLOHOSP      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 8829.00  | 8640.00  | 8848.00  | STOP_LOSS_HIT | -19.00  
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8829.00  | 8890.00  | 9049.00  | TARGET_HIT    | -61.00  
+ASIANPAINT      | Morning Reversal Fade        | INTRADAY | LONG  | 2651.60  | 2678.70  | 2644.00  | TARGET_HIT    | -27.10  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2649.00  | 2680.00  | 2807.30  | TARGET_HIT    | -31.00  
+AUBANK          | Morning Reversal Fade        | INTRADAY | LONG  | 1125.20  | 1131.40  | 1121.00  | TARGET_HIT    | -6.20   
+BAJAJFINSV      | Morning Reversal Fade        | INTRADAY | LONG  | 2013.90  | 2024.90  | 2006.90  | TARGET_HIT    | -11.00  
+BAJAJFINSV      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2010.00  | 1985.00  | 2014.00  | STOP_LOSS_HIT | -4.00   
+BAJAJHLDNG      | Morning Reversal Fade        | INTRADAY | SHORT | 11418.00 | 11223.00 | 11447.00 | TARGET_HIT    | 195.00  
+BAJAJ_AUTO      | Morning Reversal Fade        | INTRADAY | SHORT | 11890.00 | 11825.00 | 11924.00 | TARGET_HIT    | 65.00   
+BANDHANBNK      | Morning Reversal Fade        | INTRADAY | SHORT | 175.53   | 173.42   | 175.87   | TARGET_HIT    | 2.11    
+BEL             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 409.05   | 412.30   | 407.80   | TARGET_HIT    | -3.25   
+BIOCON          | Liquidity Sweep Reversal     | INTRADAY | SHORT | 415.75   | 407.00   | 417.25   | STOP_LOSS_HIT | -1.50   
+HEROMOTOCO      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 5681.50  | 5590.00  | 5720.00  | STOP_LOSS_HIT | -38.50  
+HINDPETRO       | Morning Reversal Fade        | INTRADAY | LONG  | 376.20   | 381.70   | 375.75   | TARGET_HIT    | -5.50   
+HINDZINC        | Morning Reversal Fade        | INTRADAY | SHORT | 619.80   | 600.15   | 623.75   | TARGET_HIT    | 19.65   
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1439.10  | 1435.00  | 1460.00  | TARGET_HIT    | 4.10    
+IDEA            | Morning Reversal Fade        | INTRADAY | LONG  | 15.10    | 15.37    | 15.02    | TARGET_HIT    | -0.27   
+IDFCFIRSTB      | Morning Reversal Fade        | INTRADAY | SHORT | 86.13    | 85.31    | 86.59    | TARGET_HIT    | 0.82    
+IDFCFIRSTB      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 85.78    | 85.31    | 86.17    | TARGET_HIT    | 0.47    
+IEX             | Morning Reversal Fade        | INTRADAY | LONG  | 123.37   | 124.83   | 123.10   | TARGET_HIT    | -1.46   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 730.30   | 736.00   | 752.90   | TARGET_HIT    | -5.70   
+INDIGO          | Morning Reversal Fade        | INTRADAY | LONG  | 5253.00  | 5280.00  | 5221.50  | TARGET_HIT    | -27.00  
+INDUSINDBK      | Weekly Gap Fade Trap         | SWING  | SHORT | 1000.70  | 1010.00  | 1018.60  | TARGET_HIT    | -9.30   
+INDUSTOWER      | Monthly POC Reversion        | SWING  | SHORT | 394.90   | 393.00   | 402.00   | TARGET_HIT    | 1.90    
+INFY            | Morning Reversal Fade        | INTRADAY | LONG  | 1127.20  | 1140.20  | 1124.90  | TARGET_HIT    | -13.00  
+INOXWIND        | Morning Reversal Fade        | INTRADAY | LONG  | 73.71    | 74.20    | 73.51    | TARGET_HIT    | -0.49   
+INOXWIND        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 73.68    | 74.20    | 73.58    | TARGET_HIT    | -0.52   
+IOC             | Morning Reversal Fade        | INTRADAY | LONG  | 139.77   | 141.15   | 139.66   | TARGET_HIT    | -1.38   
+IOC             | Monthly Gap Fade Trap        | SWING  | SHORT | 139.74   | 141.00   | 145.20   | TARGET_HIT    | -1.26   
+IRFC            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 86.40    | 85.05    | 86.48    | STOP_LOSS_HIT | -0.08   
+IRFC            | Monthly Gap Fade Trap        | SWING  | SHORT | 86.40    | 88.00    | 90.85    | TARGET_HIT    | -1.60   
+JINDALSTEL      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1159.00  | 1143.10  | 1160.50  | TARGET_HIT    | 15.90   
+JIOFIN          | Morning Reversal Fade        | INTRADAY | LONG  | 243.50   | 245.00   | 243.20   | TARGET_HIT    | -1.50   
+JIOFIN          | Liquidity Sweep Reversal     | INTRADAY | LONG  | 243.45   | 245.00   | 243.20   | TARGET_HIT    | -1.55   
+KEI             | Monthly POC Reversion        | SWING  | LONG  | 5028.20  | 5260.00  | 4930.00  | TARGET_HIT    | -231.80 
+LAURUSLABS      | Morning Reversal Fade        | INTRADAY | SHORT | 1885.70  | 1857.40  | 1890.00  | TARGET_HIT    | 28.30   
+LAURUSLABS      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1880.60  | 1857.40  | 1886.40  | TARGET_HIT    | 23.20   
+LICI            | Morning Reversal Fade        | INTRADAY | LONG  | 418.90   | 427.90   | 418.30   | TARGET_HIT    | -9.00   
+LICI            | Liquidity Sweep Reversal     | INTRADAY | LONG  | 420.10   | 427.90   | 418.30   | TARGET_HIT    | -7.80   
+LT              | Weekly Gap Fade Trap         | SWING  | SHORT | 4084.20  | 4080.00  | 4124.90  | STOP_LOSS_HIT | -40.70  
+PREMIERENE      | Morning Reversal Fade        | INTRADAY | LONG  | 1007.30  | 1040.00  | 1002.00  | TARGET_HIT    | 32.70   
+ZYDUSLIFE       | Monthly POC Reversion        | SWING  | SHORT | 1135.70  | 1110.00  | 1150.00  | STOP_LOSS_HIT | -14.30  
+360ONE          | Morning Reversal Fade        | INTRADAY | LONG  | 1207.50  | 1219.80  | 1206.50  | TARGET_HIT    | -12.30  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5334.50  | 5650.00  | 5771.00  | TARGET_HIT    | -315.50 
+APLAPOLLO       | Morning Reversal Fade        | INTRADAY | SHORT | 2137.90  | 2119.70  | 2140.90  | TARGET_HIT    | 18.20   
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8831.50  | 8890.00  | 9049.00  | TARGET_HIT    | -58.50  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2648.00  | 2680.00  | 2807.30  | TARGET_HIT    | -32.00  
+AXISBANK        | Morning Reversal Fade        | INTRADAY | SHORT | 1252.90  | 1238.20  | 1254.10  | TARGET_HIT    | 14.70   
+HDFCAMC         | Monthly POC Reversion        | SWING  | SHORT | 2637.10  | 2540.00  | 2730.00  | ACTIVE        | 0.00    
+HDFCBANK        | Morning Reversal Fade        | INTRADAY | LONG  | 726.65   | 728.80   | 725.00   | TARGET_HIT    | -2.15   
+HYUNDAI         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2262.70  | 2232.30  | 2270.90  | TARGET_HIT    | 30.40   
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1439.00  | 1435.00  | 1460.00  | TARGET_HIT    | 4.00    
+ICICIGI         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1623.30  | 1611.60  | 1629.60  | TARGET_HIT    | 11.70   
+ICICIGI         | Monthly POC Reversion        | SWING  | SHORT | 1639.00  | 1620.00  | 1775.00  | TARGET_HIT    | 19.00   
+IDEA            | Monthly POC Reversion        | SWING  | SHORT | 13.02    | 13.00    | 14.00    | STOP_LOSS_HIT | -0.98   
+NTPC            | Balance Breakout Trap        | SWING  | SHORT | 338.65   | 339.25   | 344.45   | TARGET_HIT    | -0.60   
+NTPC            | Weekly Gap Fade Trap         | SWING  | SHORT | 338.65   | 338.00   | 344.45   | STOP_LOSS_HIT | -5.80   
+TMPV            | Monthly Gap Fade Trap        | SWING  | SHORT | 315.60   | 333.00   | 353.20   | TARGET_HIT    | -17.40  
+TORNTPHARM      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 4906.50  | 4855.50  | 4908.50  | STOP_LOSS_HIT | -2.00   
+TORNTPHARM      | Monthly Gap Fade Trap        | SWING  | SHORT | 4906.50  | 4880.00  | 5224.00  | ACTIVE        | 0.00    
+TRENT           | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2930.90  | 2893.80  | 2939.10  | STOP_LOSS_HIT | -8.20   
+VBL             | Balance Breakout Trap        | SWING  | SHORT | 426.30   | 432.73   | 446.30   | TARGET_HIT    | -6.43   
+VMM             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 111.13   | 114.35   | 110.88   | STOP_LOSS_HIT | 0.25    
+VMM             | Weekly POC Reversion         | SWING  | SHORT | 111.74   | 103.00   | 112.00   | TARGET_HIT    | 8.74    
+YESBANK         | Monthly POC Reversion        | SWING  | LONG  | 22.86    | 23.00    | 22.00    | ACTIVE        | 0.00    
+ABB             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 7617.50  | 7435.00  | 7632.50  | STOP_LOSS_HIT | -15.00  
+AUROPHARMA      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1623.70  | 1598.80  | 1629.30  | STOP_LOSS_HIT | -5.60   
+BANDHANBNK      | Morning Reversal Fade        | INTRADAY | SHORT | 176.32   | 173.42   | 176.43   | TARGET_HIT    | 2.90    
+DLF             | Weekly Gap Fade Trap         | SWING  | SHORT | 683.10   | 682.00   | 690.40   | STOP_LOSS_HIT | -7.30   
+DMART           | Morning Reversal Fade        | INTRADAY | SHORT | 3925.40  | 3916.90  | 3935.50  | TARGET_HIT    | 8.50    
+DRREDDY         | Weekly Gap Fade Trap         | SWING  | SHORT | 1181.40  | 1180.00  | 1195.10  | STOP_LOSS_HIT | -13.70  
+EICHERMOT       | Morning Reversal Fade        | INTRADAY | SHORT | 8090.50  | 8031.50  | 8104.50  | TARGET_HIT    | 59.00   
+ETERNAL         | Morning Reversal Fade        | INTRADAY | LONG  | 328.50   | 332.00   | 327.05   | TARGET_HIT    | -3.50   
+FEDERALBNK      | Monthly Gap Fade Trap        | SWING  | SHORT | 345.95   | 329.00   | 364.20   | ACTIVE        | 0.00    
+GLENMARK        | Morning Reversal Fade        | INTRADAY | SHORT | 2438.90  | 2384.50  | 2441.80  | TARGET_HIT    | 54.40   
+GMRINFRA        | Liquidity Sweep Reversal     | INTRADAY | SHORT | 99.25    | 98.15    | 99.38    | STOP_LOSS_HIT | -0.13   
+GVT&D           | Balance Breakout Trap        | SWING  | SHORT | 4244.00  | 4137.00  | 4272.40  | STOP_LOSS_HIT | -28.40  
+HAL             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 4905.90  | 4875.60  | 4908.60  | TARGET_HIT    | 30.30   
+HAVELLS         | Morning Reversal Fade        | INTRADAY | LONG  | 1261.20  | 1276.70  | 1258.80  | TARGET_HIT    | -15.50  
+HDFCBANK        | Morning Reversal Fade        | INTRADAY | SHORT | 727.95   | 725.20   | 729.05   | TARGET_HIT    | 2.75    
+KPITTECH        | Morning Reversal Fade        | INTRADAY | LONG  | 591.40   | 596.20   | 589.70   | TARGET_HIT    | -4.80   
+LODHA           | Morning Reversal Fade        | INTRADAY | LONG  | 1282.20  | 1306.90  | 1280.10  | TARGET_HIT    | -24.70  
+LT              | Weekly Gap Fade Trap         | SWING  | SHORT | 4072.50  | 4080.00  | 4124.90  | STOP_LOSS_HIT | -52.40  
+MANAPPURAM      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 369.00   | 363.30   | 369.75   | STOP_LOSS_HIT | -0.75   
+MARICO          | Monthly Gap Fade Trap        | SWING  | SHORT | 835.15   | 846.00   | 881.35   | TARGET_HIT    | -10.85  
+MARUTI          | Morning Reversal Fade        | INTRADAY | LONG  | 13632.00 | 13722.00 | 13623.00 | TARGET_HIT    | -90.00  
+MAZDOCK         | Morning Reversal Fade        | INTRADAY | SHORT | 2617.40  | 2579.40  | 2635.00  | TARGET_HIT    | 38.00   
+MPHASIS         | Morning Reversal Fade        | INTRADAY | LONG  | 2405.50  | 2452.00  | 2401.00  | TARGET_HIT    | -46.50  
+M_M             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 3426.40  | 3447.90  | 3423.80  | TARGET_HIT    | -21.50  
+M_M             | Weekly Gap Fade Trap         | SWING  | SHORT | 3426.40  | 3420.00  | 3447.90  | STOP_LOSS_HIT | -21.50  
+NAM_INDIA       | Morning Reversal Fade        | INTRADAY | LONG  | 1233.80  | 1239.80  | 1230.00  | TARGET_HIT    | -6.00   
+NBCC            | Morning Reversal Fade        | INTRADAY | LONG  | 89.79    | 90.50    | 89.57    | TARGET_HIT    | -0.71   
+NTPC            | Balance Breakout Trap        | SWING  | SHORT | 337.95   | 339.25   | 344.45   | TARGET_HIT    | -1.30   
+NTPC            | Weekly Gap Fade Trap         | SWING  | SHORT | 337.95   | 338.00   | 344.45   | STOP_LOSS_HIT | -6.50   
+RECLTD          | Monthly Gap Fade Trap        | SWING  | SHORT | 325.65   | 352.00   | 376.70   | TARGET_HIT    | -26.35  
+RELIANCE        | Monthly Gap Fade Trap        | SWING  | SHORT | 1308.50  | 1300.00  | 1337.00  | TARGET_HIT    | 8.50    
+UNIONBANK       | Morning Reversal Fade        | INTRADAY | LONG  | 187.98   | 192.33   | 187.70   | TARGET_HIT    | -4.35   
+UNIONBANK       | Monthly POC Reversion        | SWING  | SHORT | 172.30   | 170.00   | 176.00   | STOP_LOSS_HIT | -3.70   
+360ONE          | Morning Reversal Fade        | INTRADAY | LONG  | 1209.40  | 1219.80  | 1205.40  | TARGET_HIT    | -10.40  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5315.00  | 5650.00  | 5771.00  | TARGET_HIT    | -335.00 
+ANGELONE        | Liquidity Sweep Reversal     | INTRADAY | SHORT | 301.25   | 284.00   | 302.60   | STOP_LOSS_HIT | -1.35   
+APLAPOLLO       | Morning Reversal Fade        | INTRADAY | SHORT | 2139.70  | 2119.70  | 2140.80  | TARGET_HIT    | 20.00   
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8799.50  | 8890.00  | 9049.00  | TARGET_HIT    | -90.50  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2647.20  | 2680.00  | 2807.30  | TARGET_HIT    | -32.80  
+AUROPHARMA      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1622.00  | 1598.80  | 1624.30  | STOP_LOSS_HIT | -2.30   
+BANDHANBNK      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 174.60   | 172.45   | 176.39   | STOP_LOSS_HIT | -1.79   
+BDL             | Monthly POC Reversion        | SWING  | LONG  | 1254.90  | 1255.00  | 1225.00  | TARGET_HIT    | 0.10    
+BEL             | Morning Reversal Fade        | INTRADAY | LONG  | 408.90   | 412.30   | 408.10   | TARGET_HIT    | -3.40   
+BHARATFORG      | Monthly Gap Fade Trap        | SWING  | SHORT | 2021.10  | 2130.00  | 2295.00  | TARGET_HIT    | -108.90 
+BHARTIARTL      | Morning Reversal Fade        | INTRADAY | LONG  | 1918.40  | 1942.90  | 1914.20  | TARGET_HIT    | -24.50  
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | SHORT | 1917.00  | 1930.00  | 2031.00  | TARGET_HIT    | -13.00  
+BIOCON          | Balance Breakout Trap        | SWING  | SHORT | 415.40   | 411.95   | 418.20   | STOP_LOSS_HIT | -2.80   
+BPCL            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 319.30   | 311.10   | 320.45   | STOP_LOSS_HIT | -1.15   
+CAMS            | Monthly Gap Fade Trap        | SWING  | SHORT | 753.30   | 770.00   | 830.50   | TARGET_HIT    | -16.70  
+HYUNDAI         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2258.00  | 2232.30  | 2271.40  | TARGET_HIT    | 25.70   
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1437.30  | 1435.00  | 1460.00  | TARGET_HIT    | 2.30    
+ICICIGI         | Morning Reversal Fade        | INTRADAY | SHORT | 1621.20  | 1611.60  | 1629.60  | TARGET_HIT    | 9.60    
+ICICIGI         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1617.50  | 1602.00  | 1623.10  | STOP_LOSS_HIT | -5.60   
+PAGEIND         | Liquidity Sweep Reversal     | INTRADAY | LONG  | 35450.00 | 35720.00 | 35400.00 | TARGET_HIT    | 270.00  
+PATANJALI       | Monthly POC Reversion        | SWING  | LONG  | 356.90   | 412.00   | 343.00   | ACTIVE        | 0.00    
+PERSISTENT      | Monthly POC Reversion        | SWING  | SHORT | 5507.00  | 5100.00  | 5650.00  | STOP_LOSS_HIT | -143.00 
+PETRONET        | Weekly Gap Fade Trap         | SWING  | SHORT | 293.80   | 293.00   | 295.95   | TARGET_HIT    | 0.80    
+PFC             | Weekly Gap Fade Trap         | SWING  | SHORT | 365.70   | 363.00   | 369.15   | STOP_LOSS_HIT | -3.45   
+PFC             | Monthly Gap Fade Trap        | SWING  | SHORT | 365.70   | 405.00   | 429.25   | TARGET_HIT    | -39.30  
+PIDILITIND      | Weekly Gap Fade Trap         | SWING  | SHORT | 1646.60  | 1645.00  | 1669.60  | STOP_LOSS_HIT | -23.00  
+PIIND           | Monthly Gap Fade Trap        | SWING  | SHORT | 2522.00  | 2620.00  | 2845.00  | TARGET_HIT    | -98.00  
+PNB             | Morning Reversal Fade        | INTRADAY | LONG  | 116.93   | 118.20   | 116.43   | TARGET_HIT    | -1.27   
+POLICYBZR       | Monthly POC Reversion        | SWING  | SHORT | 1604.60  | 1580.00  | 1610.00  | STOP_LOSS_HIT | -5.40   
+POLYCAB         | Monthly POC Reversion        | SWING  | SHORT | 9120.50  | 9100.00  | 9370.00  | TARGET_HIT    | 20.50   
+POWERGRID       | Monthly POC Reversion        | SWING  | SHORT | 284.80   | 283.00   | 288.00   | TARGET_HIT    | 1.80    
+RECLTD          | Monthly Gap Fade Trap        | SWING  | SHORT | 325.30   | 352.00   | 376.70   | TARGET_HIT    | -26.70  
+RELIANCE        | Monthly Gap Fade Trap        | SWING  | SHORT | 1306.70  | 1300.00  | 1337.00  | TARGET_HIT    | 6.70    
+SBILIFE         | Monthly Gap Fade Trap        | SWING  | SHORT | 1778.50  | 1825.00  | 1914.80  | TARGET_HIT    | -46.50  
+SBIN            | Monthly POC Reversion        | SWING  | SHORT | 1035.00  | 1020.00  | 1040.00  | STOP_LOSS_HIT | -5.00   
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1914.90  | 1945.00  | 1988.00  | TARGET_HIT    | -30.10  
+SUZLON          | Balance Breakout Trap        | SWING  | SHORT | 47.05    | 46.80    | 47.40    | STOP_LOSS_HIT | -0.35   
+SWIGGY          | Monthly POC Reversion        | SWING  | SHORT | 284.80   | 267.00   | 287.00   | TARGET_HIT    | 17.80   
+TATACONSUM      | Monthly POC Reversion        | SWING  | LONG  | 1086.00  | 1090.00  | 1085.00  | STOP_LOSS_HIT | -1.00   
+TATAPOWER       | Monthly Gap Fade Trap        | SWING  | SHORT | 369.55   | 376.00   | 390.40   | TARGET_HIT    | -6.45   
+TATASTEEL       | Monthly Gap Fade Trap        | SWING  | SHORT | 184.59   | 186.00   | 193.65   | TARGET_HIT    | -1.41   
+TCS             | Weekly Gap Fade Trap         | SWING  | SHORT | 2272.90  | 2290.00  | 2306.30  | STOP_LOSS_HIT | -33.40  
+TCS             | Monthly POC Reversion        | SWING  | SHORT | 2383.60  | 2210.00  | 2490.00  | TARGET_HIT    | 173.60  
+TECHM           | Weekly Gap Fade Trap         | SWING  | SHORT | 1570.50  | 1585.00  | 1614.90  | STOP_LOSS_HIT | -44.40  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1570.50  | 1555.00  | 1681.50  | ACTIVE        | 0.00    
+TMPV            | Monthly Gap Fade Trap        | SWING  | SHORT | 315.85   | 333.00   | 353.20   | TARGET_HIT    | -17.15  
+TORNTPHARM      | Monthly Gap Fade Trap        | SWING  | SHORT | 4884.00  | 4880.00  | 5224.00  | ACTIVE        | 0.00    
+ADANIGREEN      | Weekly Gap Fade Trap         | SWING  | SHORT | 1319.00  | 1300.00  | 1346.80  | STOP_LOSS_HIT | -27.80  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5321.00  | 5650.00  | 5771.00  | TARGET_HIT    | -329.00 
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8796.00  | 8890.00  | 9049.00  | TARGET_HIT    | -94.00  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2646.60  | 2680.00  | 2807.30  | TARGET_HIT    | -33.40  
+DLF             | Weekly Gap Fade Trap         | SWING  | SHORT | 679.10   | 682.00   | 690.40   | STOP_LOSS_HIT | -11.30  
+DRREDDY         | Weekly Gap Fade Trap         | SWING  | SHORT | 1183.10  | 1180.00  | 1195.10  | STOP_LOSS_HIT | -12.00  
+FEDERALBNK      | Monthly Gap Fade Trap        | SWING  | SHORT | 345.85   | 329.00   | 364.20   | ACTIVE        | 0.00    
+KPITTECH        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 590.70   | 596.20   | 588.70   | TARGET_HIT    | -5.50   
+PIIND           | Monthly Gap Fade Trap        | SWING  | SHORT | 2518.30  | 2620.00  | 2845.00  | TARGET_HIT    | -101.70 
+PRESTIGE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1624.00  | 1620.00  | 1647.30  | STOP_LOSS_HIT | -23.30  
+ULTRACEMCO      | Monthly POC Reversion        | SWING  | SHORT | 11958.00 | 11710.00 | 12020.00 | TARGET_HIT    | 248.00  
+UPL             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 584.90   | 579.70   | 586.50   | TARGET_HIT    | 5.20    
+360ONE          | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1205.00  | 1186.40  | 1206.40  | STOP_LOSS_HIT | -1.40   
+ADANIGREEN      | Weekly Gap Fade Trap         | SWING  | SHORT | 1319.70  | 1300.00  | 1346.80  | STOP_LOSS_HIT | -27.10  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5337.50  | 5650.00  | 5771.00  | TARGET_HIT    | -312.50 
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8795.00  | 8890.00  | 9049.00  | TARGET_HIT    | -95.00  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2647.80  | 2680.00  | 2807.30  | TARGET_HIT    | -32.20  
+FEDERALBNK      | Monthly Gap Fade Trap        | SWING  | SHORT | 346.20   | 329.00   | 364.20   | ACTIVE        | 0.00    
+MARICO          | Monthly Gap Fade Trap        | SWING  | SHORT | 834.55   | 846.00   | 881.35   | TARGET_HIT    | -11.45  
+MFSL            | Weekly Gap Fade Trap         | SWING  | SHORT | 1584.50  | 1575.00  | 1604.90  | STOP_LOSS_HIT | -20.40  
+SIEMENS         | Weekly Gap Fade Trap         | SWING  | SHORT | 4049.80  | 3910.00  | 4102.80  | STOP_LOSS_HIT | -53.00  
+SONACOMS        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 799.00   | 811.95   | 797.65   | TARGET_HIT    | -12.95  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1917.80  | 1945.00  | 1988.00  | TARGET_HIT    | -27.20  
+SUZLON          | Balance Breakout Trap        | SWING  | SHORT | 46.99    | 46.80    | 47.40    | STOP_LOSS_HIT | -0.41   
+TATAPOWER       | Monthly Gap Fade Trap        | SWING  | SHORT | 368.45   | 376.00   | 390.40   | TARGET_HIT    | -7.55   
+TATASTEEL       | Monthly Gap Fade Trap        | SWING  | SHORT | 185.56   | 186.00   | 193.65   | TARGET_HIT    | -0.44   
+TCS             | Weekly Gap Fade Trap         | SWING  | SHORT | 2268.50  | 2290.00  | 2306.30  | STOP_LOSS_HIT | -37.80  
+TECHM           | Weekly Gap Fade Trap         | SWING  | SHORT | 1568.00  | 1585.00  | 1614.90  | STOP_LOSS_HIT | -46.90  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1568.00  | 1555.00  | 1681.50  | ACTIVE        | 0.00    
+TMPV            | Monthly Gap Fade Trap        | SWING  | SHORT | 315.45   | 333.00   | 353.20   | TARGET_HIT    | -17.55  
+TORNTPHARM      | Monthly Gap Fade Trap        | SWING  | SHORT | 4906.00  | 4880.00  | 5224.00  | ACTIVE        | 0.00    
+VBL             | Balance Breakout Trap        | SWING  | SHORT | 423.90   | 432.73   | 446.30   | TARGET_HIT    | -8.83   
+VBL             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 423.90   | 437.00   | 423.10   | TARGET_HIT    | -13.10  
+VOLTAS          | Weekly Gap Fade Trap         | SWING  | SHORT | 1216.20  | 1225.00  | 1244.80  | STOP_LOSS_HIT | -28.60  
+CAMS            | Liquidity Sweep Reversal     | INTRADAY | LONG  | 750.15   | 757.65   | 749.20   | TARGET_HIT    | -7.50   
+CAMS            | Monthly Gap Fade Trap        | SWING  | SHORT | 750.15   | 770.00   | 830.50   | TARGET_HIT    | -19.85  
+CGPOWER         | Weekly Gap Fade Trap         | SWING  | SHORT | 871.35   | 870.00   | 882.50   | STOP_LOSS_HIT | -11.15  
+LT              | Weekly Gap Fade Trap         | SWING  | SHORT | 4050.30  | 4080.00  | 4124.90  | STOP_LOSS_HIT | -74.60  
+SIEMENS         | Weekly Gap Fade Trap         | SWING  | SHORT | 4046.00  | 3910.00  | 4102.80  | STOP_LOSS_HIT | -56.80  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1919.20  | 1945.00  | 1988.00  | TARGET_HIT    | -25.80  
+SUZLON          | Balance Breakout Trap        | SWING  | SHORT | 46.95    | 46.80    | 47.40    | STOP_LOSS_HIT | -0.45   
+NIFTY           | Weekly Gap Fade Trap         | SWING  | SHORT | 24260.05 | 24236.00 | 24378.60 | STOP_LOSS_HIT | -118.55 
+TVC:USOIL       | 3:15 PM BTST Close           | BTST   | SHORT | 79.92    | 78.00    | 80.56    | ACTIVE        | 0.00    
+ADANIGREEN      | Weekly Gap Fade Trap         | SWING  | SHORT | 1315.60  | 1300.00  | 1346.80  | STOP_LOSS_HIT | -31.20  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5334.50  | 5650.00  | 5771.00  | TARGET_HIT    | -315.50 
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8795.00  | 8890.00  | 9049.00  | TARGET_HIT    | -95.00  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2646.00  | 2680.00  | 2807.30  | TARGET_HIT    | -34.00  
+BHARATFORG      | Monthly Gap Fade Trap        | SWING  | SHORT | 2018.00  | 2130.00  | 2295.00  | TARGET_HIT    | -112.00 
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | SHORT | 1911.80  | 1930.00  | 2031.00  | TARGET_HIT    | -18.20  
+BIOCON          | Balance Breakout Trap        | SWING  | SHORT | 416.05   | 411.95   | 418.20   | STOP_LOSS_HIT | -2.15   
+BPCL            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 319.55   | 311.10   | 319.90   | STOP_LOSS_HIT | -0.35   
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1437.10  | 1435.00  | 1460.00  | TARGET_HIT    | 2.10    
+IEX             | Weekly Gap Fade Trap         | SWING  | SHORT | 122.08   | 123.00   | 124.83   | STOP_LOSS_HIT | -2.75   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 726.10   | 736.00   | 752.90   | TARGET_HIT    | -9.90   
+INDUSINDBK      | Weekly Gap Fade Trap         | SWING  | SHORT | 1003.50  | 1010.00  | 1018.60  | TARGET_HIT    | -6.50   
+IOC             | Monthly Gap Fade Trap        | SWING  | SHORT | 139.07   | 141.00   | 145.20   | TARGET_HIT    | -1.93   
+IRFC            | Monthly Gap Fade Trap        | SWING  | SHORT | 86.08    | 88.00    | 90.85    | TARGET_HIT    | -1.92   
+JUBLFOOD        | Weekly Gap Fade Trap         | SWING  | SHORT | 505.45   | 508.00   | 527.85   | STOP_LOSS_HIT | -22.40  
+NTPC            | Balance Breakout Trap        | SWING  | SHORT | 336.70   | 339.25   | 344.45   | TARGET_HIT    | -2.55   
+NTPC            | Weekly Gap Fade Trap         | SWING  | SHORT | 336.70   | 338.00   | 344.45   | STOP_LOSS_HIT | -7.75   
+PETRONET        | Weekly Gap Fade Trap         | SWING  | SHORT | 290.95   | 293.00   | 295.95   | STOP_LOSS_HIT | -5.00   
+PFC             | Weekly Gap Fade Trap         | SWING  | SHORT | 363.75   | 363.00   | 369.15   | STOP_LOSS_HIT | -5.40   
+PFC             | Monthly Gap Fade Trap        | SWING  | SHORT | 363.75   | 405.00   | 429.25   | TARGET_HIT    | -41.25  
+PIDILITIND      | Weekly Gap Fade Trap         | SWING  | SHORT | 1644.00  | 1645.00  | 1669.60  | STOP_LOSS_HIT | -25.60  
+PIIND           | Monthly Gap Fade Trap        | SWING  | SHORT | 2521.10  | 2620.00  | 2845.00  | TARGET_HIT    | -98.90  
+TMPV            | Monthly Gap Fade Trap        | SWING  | SHORT | 315.20   | 333.00   | 353.20   | TARGET_HIT    | -17.80  
+TORNTPHARM      | Monthly Gap Fade Trap        | SWING  | SHORT | 4922.00  | 4880.00  | 5224.00  | ACTIVE        | 0.00    
+NIFTY           | Weekly Gap Fade Trap         | SWING  | SHORT | 24261.95 | 24236.00 | 24378.60 | STOP_LOSS_HIT | -116.65 
+OANDA:XAUUSD    | 3:15 PM BTST Close           | BTST   | SHORT | 4624.85  | 4513.86  | 4661.85  | ACTIVE        | 0.00    
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1436.90  | 1435.00  | 1460.00  | TARGET_HIT    | 1.90    
+IEX             | Weekly Gap Fade Trap         | SWING  | SHORT | 122.07   | 123.00   | 124.83   | STOP_LOSS_HIT | -2.76   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 725.30   | 736.00   | 752.90   | TARGET_HIT    | -10.70  
+INDUSINDBK      | Weekly Gap Fade Trap         | SWING  | SHORT | 1002.40  | 1010.00  | 1018.60  | TARGET_HIT    | -7.60   
+IOC             | Balance Breakout Trap        | SWING  | SHORT | 138.85   | 137.13   | 141.15   | STOP_LOSS_HIT | -2.30   
+IOC             | Monthly Gap Fade Trap        | SWING  | SHORT | 138.85   | 141.00   | 145.20   | TARGET_HIT    | -2.15   
+IRFC            | Monthly Gap Fade Trap        | SWING  | SHORT | 85.97    | 88.00    | 90.85    | TARGET_HIT    | -2.03   
+JUBLFOOD        | Weekly Gap Fade Trap         | SWING  | SHORT | 506.00   | 508.00   | 527.85   | STOP_LOSS_HIT | -21.85  
+LODHA           | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1280.90  | 1253.10  | 1283.40  | STOP_LOSS_HIT | -2.50   
+LT              | Weekly Gap Fade Trap         | SWING  | SHORT | 4056.00  | 4080.00  | 4124.90  | STOP_LOSS_HIT | -68.90  
+VOLTAS          | Weekly Gap Fade Trap         | SWING  | SHORT | 1217.10  | 1225.00  | 1244.80  | STOP_LOSS_HIT | -27.70  
+TVC:USOIL       | Monthly Gap Fade Trap        | SWING  | SHORT | 79.72    | 79.00    | 87.69    | ACTIVE        | 0.00    
+ADANIGREEN      | Weekly Gap Fade Trap         | SWING  | SHORT | 1308.90  | 1300.00  | 1346.80  | STOP_LOSS_HIT | -37.90  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5346.00  | 5650.00  | 5771.00  | TARGET_HIT    | -304.00 
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8805.00  | 8890.00  | 9049.00  | TARGET_HIT    | -85.00  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2641.50  | 2680.00  | 2807.30  | TARGET_HIT    | -38.50  
+LUPIN           | Balance Breakout Trap        | SWING  | SHORT | 2202.00  | 2187.55  | 2237.90  | TARGET_HIT    | 14.45   
+MARICO          | Monthly Gap Fade Trap        | SWING  | SHORT | 831.95   | 846.00   | 881.35   | TARGET_HIT    | -14.05  
+SBILIFE         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1772.50  | 1751.20  | 1776.20  | STOP_LOSS_HIT | -3.70   
+SBILIFE         | Monthly Gap Fade Trap        | SWING  | SHORT | 1772.50  | 1825.00  | 1914.80  | TARGET_HIT    | -52.50  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1913.20  | 1945.00  | 1988.00  | TARGET_HIT    | -31.80  
+TVC:USOIL       | Monthly Gap Fade Trap        | SWING  | SHORT | 79.84    | 79.00    | 87.69    | ACTIVE        | 0.00    
+ADANIGREEN      | Weekly Gap Fade Trap         | SWING  | SHORT | 1308.50  | 1300.00  | 1346.80  | STOP_LOSS_HIT | -38.30  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5344.00  | 5650.00  | 5771.00  | TARGET_HIT    | -306.00 
+COFORGE         | Weekly Gap Fade Trap         | SWING  | SHORT | 1888.20  | 1875.00  | 1937.10  | STOP_LOSS_HIT | -48.90  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1437.10  | 1435.00  | 1460.00  | TARGET_HIT    | 2.10    
+IEX             | Weekly Gap Fade Trap         | SWING  | SHORT | 122.08   | 123.00   | 124.83   | STOP_LOSS_HIT | -2.75   
+INDHOTEL        | Monthly Gap Fade Trap        | SWING  | SHORT | 725.35   | 736.00   | 752.90   | TARGET_HIT    | -10.65  
+INDUSINDBK      | Weekly Gap Fade Trap         | SWING  | SHORT | 1001.70  | 1010.00  | 1018.60  | TARGET_HIT    | -8.30   
+IOC             | Balance Breakout Trap        | SWING  | SHORT | 138.95   | 137.13   | 141.15   | STOP_LOSS_HIT | -2.20   
+IOC             | Monthly Gap Fade Trap        | SWING  | SHORT | 138.95   | 141.00   | 145.20   | TARGET_HIT    | -2.05   
+IRFC            | Monthly Gap Fade Trap        | SWING  | SHORT | 86.20    | 88.00    | 90.85    | TARGET_HIT    | -1.80   
+JSWENERGY       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 547.00   | 552.90   | 545.00   | TARGET_HIT    | -5.90   
+JUBLFOOD        | Weekly Gap Fade Trap         | SWING  | SHORT | 506.70   | 508.00   | 527.85   | STOP_LOSS_HIT | -21.15  
+KOTAKBANK       | 3:15 PM BTST Close           | BTST   | BUY   | 416.05   | 426.04   | 412.72   | ACTIVE        | 0.00    
+LODHA           | 3:15 PM BTST Close           | BTST   | SHORT | 1267.20  | 1236.79  | 1277.34  | ACTIVE        | 0.00    
+LODHA           | Weekly Gap Fade Trap         | SWING  | SHORT | 1267.20  | 1240.00  | 1306.90  | STOP_LOSS_HIT | -39.70  
+LT              | Weekly Gap Fade Trap         | SWING  | SHORT | 4064.30  | 4080.00  | 4124.90  | STOP_LOSS_HIT | -60.60  
+PRESTIGE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1619.50  | 1620.00  | 1647.30  | STOP_LOSS_HIT | -27.80  
+RECLTD          | Monthly Gap Fade Trap        | SWING  | SHORT | 323.55   | 352.00   | 376.70   | TARGET_HIT    | -28.45  
+RELIANCE        | 3:15 PM BTST Close           | BTST   | SHORT | 1300.50  | 1269.29  | 1310.90  | ACTIVE        | 0.00    
+RELIANCE        | Monthly Gap Fade Trap        | SWING  | SHORT | 1300.50  | 1300.00  | 1337.00  | TARGET_HIT    | 0.50    
+SBICARD         | 3:15 PM BTST Close           | BTST   | BUY   | 665.45   | 681.42   | 660.13   | ACTIVE        | 0.00    
+TVC:USOIL       | Monthly Gap Fade Trap        | SWING  | SHORT | 80.07    | 79.00    | 87.69    | ACTIVE        | 0.00    
+ABB             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 7613.00  | 7435.00  | 7626.00  | STOP_LOSS_HIT | -13.00  
+ADANIGREEN      | 3:15 PM BTST Close           | BTST   | SHORT | 1305.60  | 1274.27  | 1316.04  | ACTIVE        | 0.00    
+ADANIGREEN      | Weekly Gap Fade Trap         | SWING  | SHORT | 1305.60  | 1300.00  | 1346.80  | STOP_LOSS_HIT | -41.20  
+ALKEM           | Monthly Gap Fade Trap        | SWING  | SHORT | 5339.00  | 5650.00  | 5771.00  | TARGET_HIT    | -311.00 
+APOLLOHOSP      | Monthly Gap Fade Trap        | SWING  | SHORT | 8810.00  | 8890.00  | 9049.00  | TARGET_HIT    | -80.00  
+ASIANPAINT      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2633.90  | 2605.20  | 2646.00  | STOP_LOSS_HIT | -12.10  
+ASIANPAINT      | Monthly Gap Fade Trap        | SWING  | SHORT | 2633.90  | 2680.00  | 2807.30  | TARGET_HIT    | -46.10  
+BAJAJFINSV      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 2018.00  | 2024.90  | 2010.40  | TARGET_HIT    | -6.90   
+BDL             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1361.00  | 1323.30  | 1369.40  | TARGET_HIT    | 37.70   
+GODREJCP        | Liquidity Sweep Reversal     | INTRADAY | SHORT | 929.70   | 918.20   | 933.00   | STOP_LOSS_HIT | -3.30   
+GRASIM          | Liquidity Sweep Reversal     | INTRADAY | SHORT | 3292.60  | 3266.60  | 3300.00  | TARGET_HIT    | 26.00   
+MFSL            | Weekly Gap Fade Trap         | SWING  | SHORT | 1582.90  | 1575.00  | 1604.90  | STOP_LOSS_HIT | -22.00  
+SRF             | 3:15 PM BTST Close           | BTST   | BUY   | 2595.00  | 2657.28  | 2574.24  | ACTIVE        | 0.00    
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1910.00  | 1945.00  | 1988.00  | STOP_LOSS_HIT | -78.00  
+SUZLON          | Balance Breakout Trap        | SWING  | SHORT | 47.03    | 46.80    | 47.40    | TARGET_HIT    | 0.23    
+
+Statistics:
+* Total Signals Triggered/Resolved: 501
+* Target Hits: 316
+* Stop Loss Hits: 151
+* Win Rate: 67.7%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] 360ONE -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1213.20 | Stop Loss: 1215.00 | Exit: 1215.00 | Loss: -1.80
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[2] APLAPOLLO -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 2133.10 | Stop Loss: 2120.00 | Exit: 2120.00 | Loss: 13.10
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[3] AUROPHARMA -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1618.20 | Stop Loss: 1625.00 | Exit: 1625.00 | Loss: -6.80
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[4] AXISBANK -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1240.00 | Stop Loss: 1245.00 | Exit: 1245.00 | Loss: -5.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[5] AXISBANK -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 1236.90 | Stop Loss: 1320.00 | Exit: 1320.00 | Loss: -83.10
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[6] BAJAJFINSV -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2018.50 | Stop Loss: 2021.50 | Exit: 2021.50 | Loss: -3.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[7] BHARATFORG -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 2048.60 | Stop Loss: 2030.00 | Exit: 2030.00 | Loss: 18.60
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[8] BSE -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 3326.90 | Stop Loss: 3380.00 | Exit: 3380.00 | Loss: -53.10
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[9] CDSL -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1397.20 | Stop Loss: 1410.00 | Exit: 1410.00 | Loss: -12.80
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[10] COLPAL -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 1879.50 | Stop Loss: 1870.00 | Exit: 1870.00 | Loss: 9.50
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[11] DIXON -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 14796.00 | Stop Loss: 14830.00 | Exit: 14830.00 | Loss: -34.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[12] DMART -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 3945.10 | Stop Loss: 3910.00 | Exit: 3910.00 | Loss: 35.10
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[13] ETERNAL -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 329.80 | Stop Loss: 330.00 | Exit: 330.00 | Loss: -0.20
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[14] IDFCFIRSTB -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 85.31 | Stop Loss: 86.00 | Exit: 86.00 | Loss: -0.69
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[15] KAYNES -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 3946.30 | Stop Loss: 3950.00 | Exit: 3950.00 | Loss: -3.70
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[16] MANAPPURAM -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 366.10 | Stop Loss: 369.00 | Exit: 369.00 | Loss: -2.90
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[17] MANKIND -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 2387.60 | Stop Loss: 2400.00 | Exit: 2400.00 | Loss: -12.40
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[18] RBLBANK -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 386.20 | Stop Loss: 384.00 | Exit: 384.00 | Loss: 2.20
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[19] SBIN -- Opening Drive (BUY)
+* Trigger Details: Entry: 1059.70 | Stop Loss: 1051.20 | Exit: 1051.20 | Loss: -8.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[20] ULTRACEMCO -- Opening Drive (BUY)
+* Trigger Details: Entry: 11645.00 | Stop Loss: 11599.00 | Exit: 11599.00 | Loss: -46.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[21] UNOMINDA -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1253.40 | Stop Loss: 1270.00 | Exit: 1270.00 | Loss: -16.60
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[22] OANDA:XAUUSD -- G-Period Options Breakout (LONG)
+* Trigger Details: Entry: 4672.67 | Stop Loss: 4639.96 | Exit: 4639.96 | Loss: 32.71
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[23] CROMPTON -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 244.20 | Stop Loss: 241.00 | Exit: 241.00 | Loss: 3.20
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[24] CUMMINSIND -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 5539.50 | Stop Loss: 5470.00 | Exit: 5470.00 | Loss: -69.50
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[25] INDHOTEL -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 729.05 | Stop Loss: 732.00 | Exit: 732.00 | Loss: -2.95
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[26] KEI -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 5595.30 | Stop Loss: 5520.00 | Exit: 5520.00 | Loss: 75.30
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[27] KOTAKBANK -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 402.30 | Stop Loss: 403.00 | Exit: 403.00 | Loss: -0.70
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[28] PNB -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 116.90 | Stop Loss: 117.00 | Exit: 117.00 | Loss: -0.10
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[29] TCS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2297.90 | Stop Loss: 2306.30 | Exit: 2306.30 | Loss: -8.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[30] TECHM -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1594.60 | Stop Loss: 1614.90 | Exit: 1614.90 | Loss: -20.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[31] DABUR -- Weekly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 396.40 | Stop Loss: 394.15 | Exit: 394.15 | Loss: 2.25
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[32] GVT&D -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 4220.60 | Stop Loss: 4260.00 | Exit: 4260.00 | Loss: -39.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[33] HINDUNILVR -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 2112.00 | Stop Loss: 2090.00 | Exit: 2090.00 | Loss: -22.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[34] NAM_INDIA -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 1232.40 | Stop Loss: 1225.00 | Exit: 1225.00 | Loss: 7.40
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[35] NUVAMA -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1754.60 | Stop Loss: 1755.00 | Exit: 1755.00 | Loss: -0.40
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[36] OBEROIRLTY -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1889.70 | Stop Loss: 1895.00 | Exit: 1895.00 | Loss: -5.30
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[37] ADANIGREEN -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1326.60 | Stop Loss: 1330.50 | Exit: 1330.50 | Loss: -3.90
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[38] BIOCON -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 416.75 | Stop Loss: 417.80 | Exit: 417.80 | Loss: -1.05
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[39] BIOCON -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 416.75 | Stop Loss: 417.25 | Exit: 417.25 | Loss: -0.50
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[40] GMRINFRA -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 99.14 | Stop Loss: 99.39 | Exit: 99.39 | Loss: -0.25
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[41] IRFC -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 86.27 | Stop Loss: 86.49 | Exit: 86.49 | Loss: -0.22
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[42] NTPC -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 340.10 | Stop Loss: 341.00 | Exit: 341.00 | Loss: -0.90
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[43] PFC -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 366.45 | Stop Loss: 368.25 | Exit: 368.25 | Loss: -1.80
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[44] PIDILITIND -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1652.60 | Stop Loss: 1669.60 | Exit: 1669.60 | Loss: -17.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[45] TATACONSUM -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 1060.00 | Stop Loss: 1050.00 | Exit: 1050.00 | Loss: 10.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[46] TATAELXSI -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 3680.00 | Stop Loss: 3640.00 | Exit: 3640.00 | Loss: 40.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[47] TCS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2289.80 | Stop Loss: 2306.30 | Exit: 2306.30 | Loss: -16.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[48] TECHM -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1590.40 | Stop Loss: 1592.80 | Exit: 1592.80 | Loss: -2.40
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[49] TECHM -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1590.40 | Stop Loss: 1614.90 | Exit: 1614.90 | Loss: -24.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[50] NIFTY -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 24314.85 | Stop Loss: 24348.30 | Exit: 24348.30 | Loss: -33.45
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[51] ABB -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 7610.00 | Stop Loss: 7646.50 | Exit: 7646.50 | Loss: -36.50
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[52] GVT&D -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 4242.00 | Stop Loss: 4272.40 | Exit: 4272.40 | Loss: -30.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[53] HINDZINC -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 603.20 | Stop Loss: 614.00 | Exit: 614.00 | Loss: -10.80
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[54] M_M -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 3427.70 | Stop Loss: 3447.90 | Exit: 3447.90 | Loss: -20.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[55] NMDC -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 86.28 | Stop Loss: 86.69 | Exit: 86.69 | Loss: -0.41
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[56] BIOCON -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 416.85 | Stop Loss: 418.20 | Exit: 418.20 | Loss: -1.35
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[57] CAMS -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 752.75 | Stop Loss: 753.50 | Exit: 753.50 | Loss: -0.75
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[58] DLF -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 681.55 | Stop Loss: 690.40 | Exit: 690.40 | Loss: -8.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[59] GVT&D -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 4323.00 | Stop Loss: 4270.00 | Exit: 4270.00 | Loss: 53.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[60] HDFCAMC -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 2681.30 | Stop Loss: 2689.20 | Exit: 2689.20 | Loss: -7.90
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[61] MAZDOCK -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 2392.70 | Stop Loss: 2420.00 | Exit: 2420.00 | Loss: -27.30
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[62] SUPREMEIND -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 3469.80 | Stop Loss: 3530.00 | Exit: 3530.00 | Loss: -60.20
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[63] SUZLON -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 47.12 | Stop Loss: 47.40 | Exit: 47.40 | Loss: -0.28
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[64] ABCAPITAL -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 413.05 | Stop Loss: 414.70 | Exit: 414.70 | Loss: -1.65
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[65] APOLLOHOSP -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 8829.00 | Stop Loss: 8848.00 | Exit: 8848.00 | Loss: -19.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[66] BAJAJFINSV -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 2010.00 | Stop Loss: 2014.00 | Exit: 2014.00 | Loss: -4.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[67] BIOCON -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 415.75 | Stop Loss: 417.25 | Exit: 417.25 | Loss: -1.50
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[68] HEROMOTOCO -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 5681.50 | Stop Loss: 5720.00 | Exit: 5720.00 | Loss: -38.50
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[69] IRFC -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 86.40 | Stop Loss: 86.48 | Exit: 86.48 | Loss: -0.08
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[70] LT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 4084.20 | Stop Loss: 4124.90 | Exit: 4124.90 | Loss: -40.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[71] ZYDUSLIFE -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 1135.70 | Stop Loss: 1150.00 | Exit: 1150.00 | Loss: -14.30
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[72] IDEA -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 13.02 | Stop Loss: 14.00 | Exit: 14.00 | Loss: -0.98
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[73] NTPC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 338.65 | Stop Loss: 344.45 | Exit: 344.45 | Loss: -5.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[74] TORNTPHARM -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 4906.50 | Stop Loss: 4908.50 | Exit: 4908.50 | Loss: -2.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[75] TRENT -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 2930.90 | Stop Loss: 2939.10 | Exit: 2939.10 | Loss: -8.20
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[76] VMM -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 111.13 | Stop Loss: 110.88 | Exit: 110.88 | Loss: 0.25
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[77] ABB -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 7617.50 | Stop Loss: 7632.50 | Exit: 7632.50 | Loss: -15.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[78] AUROPHARMA -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1623.70 | Stop Loss: 1629.30 | Exit: 1629.30 | Loss: -5.60
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[79] DLF -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 683.10 | Stop Loss: 690.40 | Exit: 690.40 | Loss: -7.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[80] DRREDDY -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1181.40 | Stop Loss: 1195.10 | Exit: 1195.10 | Loss: -13.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[81] GMRINFRA -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 99.25 | Stop Loss: 99.38 | Exit: 99.38 | Loss: -0.13
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[82] GVT&D -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 4244.00 | Stop Loss: 4272.40 | Exit: 4272.40 | Loss: -28.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[83] LT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 4072.50 | Stop Loss: 4124.90 | Exit: 4124.90 | Loss: -52.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[84] MANAPPURAM -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 369.00 | Stop Loss: 369.75 | Exit: 369.75 | Loss: -0.75
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[85] M_M -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 3426.40 | Stop Loss: 3447.90 | Exit: 3447.90 | Loss: -21.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[86] NTPC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 337.95 | Stop Loss: 344.45 | Exit: 344.45 | Loss: -6.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[87] UNIONBANK -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 172.30 | Stop Loss: 176.00 | Exit: 176.00 | Loss: -3.70
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[88] ANGELONE -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 301.25 | Stop Loss: 302.60 | Exit: 302.60 | Loss: -1.35
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[89] AUROPHARMA -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1622.00 | Stop Loss: 1624.30 | Exit: 1624.30 | Loss: -2.30
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[90] BANDHANBNK -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 174.60 | Stop Loss: 176.39 | Exit: 176.39 | Loss: -1.79
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[91] BIOCON -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 415.40 | Stop Loss: 418.20 | Exit: 418.20 | Loss: -2.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[92] BPCL -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 319.30 | Stop Loss: 320.45 | Exit: 320.45 | Loss: -1.15
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[93] ICICIGI -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1617.50 | Stop Loss: 1623.10 | Exit: 1623.10 | Loss: -5.60
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[94] PERSISTENT -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 5507.00 | Stop Loss: 5650.00 | Exit: 5650.00 | Loss: -143.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[95] PFC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 365.70 | Stop Loss: 369.15 | Exit: 369.15 | Loss: -3.45
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[96] PIDILITIND -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1646.60 | Stop Loss: 1669.60 | Exit: 1669.60 | Loss: -23.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[97] POLICYBZR -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 1604.60 | Stop Loss: 1610.00 | Exit: 1610.00 | Loss: -5.40
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[98] SBIN -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 1035.00 | Stop Loss: 1040.00 | Exit: 1040.00 | Loss: -5.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[99] SUZLON -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 47.05 | Stop Loss: 47.40 | Exit: 47.40 | Loss: -0.35
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[100] TATACONSUM -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 1086.00 | Stop Loss: 1085.00 | Exit: 1085.00 | Loss: -1.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[101] TCS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2272.90 | Stop Loss: 2306.30 | Exit: 2306.30 | Loss: -33.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[102] TECHM -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1570.50 | Stop Loss: 1614.90 | Exit: 1614.90 | Loss: -44.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[103] ADANIGREEN -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1319.00 | Stop Loss: 1346.80 | Exit: 1346.80 | Loss: -27.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[104] DLF -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 679.10 | Stop Loss: 690.40 | Exit: 690.40 | Loss: -11.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[105] DRREDDY -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1183.10 | Stop Loss: 1195.10 | Exit: 1195.10 | Loss: -12.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[106] PRESTIGE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1624.00 | Stop Loss: 1647.30 | Exit: 1647.30 | Loss: -23.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[107] 360ONE -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1205.00 | Stop Loss: 1206.40 | Exit: 1206.40 | Loss: -1.40
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[108] ADANIGREEN -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1319.70 | Stop Loss: 1346.80 | Exit: 1346.80 | Loss: -27.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[109] MFSL -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1584.50 | Stop Loss: 1604.90 | Exit: 1604.90 | Loss: -20.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[110] SIEMENS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 4049.80 | Stop Loss: 4102.80 | Exit: 4102.80 | Loss: -53.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[111] SUZLON -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 46.99 | Stop Loss: 47.40 | Exit: 47.40 | Loss: -0.41
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[112] TCS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2268.50 | Stop Loss: 2306.30 | Exit: 2306.30 | Loss: -37.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[113] TECHM -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1568.00 | Stop Loss: 1614.90 | Exit: 1614.90 | Loss: -46.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[114] VOLTAS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1216.20 | Stop Loss: 1244.80 | Exit: 1244.80 | Loss: -28.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[115] CGPOWER -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 871.35 | Stop Loss: 882.50 | Exit: 882.50 | Loss: -11.15
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[116] LT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 4050.30 | Stop Loss: 4124.90 | Exit: 4124.90 | Loss: -74.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[117] SIEMENS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 4046.00 | Stop Loss: 4102.80 | Exit: 4102.80 | Loss: -56.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[118] SUZLON -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 46.95 | Stop Loss: 47.40 | Exit: 47.40 | Loss: -0.45
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[119] NIFTY -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 24260.05 | Stop Loss: 24378.60 | Exit: 24378.60 | Loss: -118.55
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[120] ADANIGREEN -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1315.60 | Stop Loss: 1346.80 | Exit: 1346.80 | Loss: -31.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[121] BIOCON -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 416.05 | Stop Loss: 418.20 | Exit: 418.20 | Loss: -2.15
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[122] BPCL -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 319.55 | Stop Loss: 319.90 | Exit: 319.90 | Loss: -0.35
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[123] IEX -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 122.08 | Stop Loss: 124.83 | Exit: 124.83 | Loss: -2.75
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[124] JUBLFOOD -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 505.45 | Stop Loss: 527.85 | Exit: 527.85 | Loss: -22.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[125] NTPC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 336.70 | Stop Loss: 344.45 | Exit: 344.45 | Loss: -7.75
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[126] PETRONET -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 290.95 | Stop Loss: 295.95 | Exit: 295.95 | Loss: -5.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[127] PFC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 363.75 | Stop Loss: 369.15 | Exit: 369.15 | Loss: -5.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[128] PIDILITIND -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1644.00 | Stop Loss: 1669.60 | Exit: 1669.60 | Loss: -25.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[129] NIFTY -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 24261.95 | Stop Loss: 24378.60 | Exit: 24378.60 | Loss: -116.65
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[130] IEX -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 122.07 | Stop Loss: 124.83 | Exit: 124.83 | Loss: -2.76
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[131] IOC -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 138.85 | Stop Loss: 141.15 | Exit: 141.15 | Loss: -2.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[132] JUBLFOOD -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 506.00 | Stop Loss: 527.85 | Exit: 527.85 | Loss: -21.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[133] LODHA -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1280.90 | Stop Loss: 1283.40 | Exit: 1283.40 | Loss: -2.50
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[134] LT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 4056.00 | Stop Loss: 4124.90 | Exit: 4124.90 | Loss: -68.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[135] VOLTAS -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1217.10 | Stop Loss: 1244.80 | Exit: 1244.80 | Loss: -27.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[136] ADANIGREEN -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1308.90 | Stop Loss: 1346.80 | Exit: 1346.80 | Loss: -37.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[137] SBILIFE -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1772.50 | Stop Loss: 1776.20 | Exit: 1776.20 | Loss: -3.70
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[138] ADANIGREEN -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1308.50 | Stop Loss: 1346.80 | Exit: 1346.80 | Loss: -38.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[139] COFORGE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1888.20 | Stop Loss: 1937.10 | Exit: 1937.10 | Loss: -48.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[140] IEX -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 122.08 | Stop Loss: 124.83 | Exit: 124.83 | Loss: -2.75
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[141] IOC -- Balance Breakout Trap (SHORT)
+* Trigger Details: Entry: 138.95 | Stop Loss: 141.15 | Exit: 141.15 | Loss: -2.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[142] JUBLFOOD -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 506.70 | Stop Loss: 527.85 | Exit: 527.85 | Loss: -21.15
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[143] LODHA -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1267.20 | Stop Loss: 1306.90 | Exit: 1306.90 | Loss: -39.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[144] LT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 4064.30 | Stop Loss: 4124.90 | Exit: 4124.90 | Loss: -60.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[145] PRESTIGE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1619.50 | Stop Loss: 1647.30 | Exit: 1647.30 | Loss: -27.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[146] ABB -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 7613.00 | Stop Loss: 7626.00 | Exit: 7626.00 | Loss: -13.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[147] ADANIGREEN -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1305.60 | Stop Loss: 1346.80 | Exit: 1346.80 | Loss: -41.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[148] ASIANPAINT -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 2633.90 | Stop Loss: 2646.00 | Exit: 2646.00 | Loss: -12.10
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[149] GODREJCP -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 929.70 | Stop Loss: 933.00 | Exit: 933.00 | Loss: -3.30
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[150] MFSL -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1582.90 | Stop Loss: 1604.90 | Exit: 1604.90 | Loss: -22.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[151] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1910.00 | Stop Loss: 1988.00 | Exit: 1988.00 | Loss: -78.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

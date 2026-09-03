@@ -228,31 +228,47 @@ export function getFallbackPcrData(cleanSymbol, expiry) {
   const gex = getFallbackGexData(cleanSymbol, expiry);
   const pcrVal = gex.stats.pcr;
 
-  const trend = [];
+  const history = [];
   const now = new Date();
   for (let i = 10; i >= 0; i--) {
     const t = new Date(now.getTime() - i * 15 * 60 * 1000);
-    const noise = (Math.sin(i) * 0.04);
-    trend.push({
+    const noise = Math.sin(i) * 0.03;
+    history.push({
       time: t.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      pcr: parseFloat((pcrVal + noise).toFixed(3)),
-      spot: Math.round(gex.spot_price + (Math.cos(i) * 30))
+      oi_pcr: parseFloat((pcrVal + noise).toFixed(3)),
+      vol_pcr: parseFloat((pcrVal + noise * 0.8).toFixed(3)),
+      oi_change_pcr: parseFloat((pcrVal + noise * 1.1).toFixed(3))
     });
   }
 
+  const strikes = (gex.option_chain || []).map(row => ({
+    strike: row.strike,
+    ce_oi: row.ce_oi,
+    pe_oi: row.pe_oi,
+    ce_vol: Math.round(row.ce_oi * 0.6),
+    pe_vol: Math.round(row.pe_oi * 0.6),
+    ce_change: Math.round(row.ce_oi * 0.08),
+    pe_change: Math.round(row.pe_oi * 0.08),
+    pcr_oi: row.ce_oi > 0 ? parseFloat((row.pe_oi / row.ce_oi).toFixed(2)) : 1.0,
+    pcr_vol: row.ce_oi > 0 ? parseFloat((row.pe_oi / row.ce_oi * 0.95).toFixed(2)) : 1.0
+  }));
+
   return {
     symbol: cleanSymbol,
-    expiry: expiry || 'Current Expiry',
-    currentPcr: pcrVal,
-    sentiment: pcrVal > 1.2 ? 'Bullish Support (Put Writers Active)' : (pcrVal < 0.7 ? 'Bearish Resistance (Call Writers Active)' : 'Neutral Market Equilibrium'),
-    pcrTrend: trend,
-    global: {
-      pcrCorrelations: {
-        extremeFear: { attempts: 18, bullishCloseProb: 83.3, meanReversionProb: 91.7, gapFillProb: 75.0 },
-        extremeGreed: { attempts: 15, bullishCloseProb: 20.0, meanReversionProb: 80.0, gapFillProb: 70.0 },
-        neutral: { attempts: 32, bullishCloseProb: 56.3, meanReversionProb: 71.9, gapFillProb: 65.6 }
-      }
+    expiry: expiry || '08-Sep-2026',
+    spot: gex.spot_price,
+    oi_pcr: pcrVal,
+    vol_pcr: parseFloat((pcrVal * 0.96).toFixed(3)),
+    oi_change_pcr: parseFloat((pcrVal * 1.03).toFixed(3)),
+    totals: {
+      ce_oi: gex.stats.total_ce_oi,
+      pe_oi: gex.stats.total_pe_oi,
+      ce_vol: Math.round(gex.stats.total_ce_oi * 0.65),
+      pe_vol: Math.round(gex.stats.total_pe_oi * 0.65),
+      ce_change: Math.round(gex.stats.total_ce_oi * 0.08),
+      pe_change: Math.round(gex.stats.total_pe_oi * 0.08)
     },
-    lastUpdated: new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })
+    history,
+    strikes
   };
 }

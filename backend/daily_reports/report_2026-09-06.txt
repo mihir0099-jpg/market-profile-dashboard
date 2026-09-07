@@ -1,0 +1,134 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-09-06)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 23897.70
+  - Final PCR: 0.844 (Drift: 0.000)
+  - Key Walls: Call Wall at 24000 | Put Wall at 23800
+  - Gamma Flip Zone: 23900
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 57369.65
+  - Final PCR: 1.032 (Drift: 0.000)
+  - Key Walls: Call Wall at 57500 | Put Wall at 57000
+  - Gamma Flip Zone: 57400
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+DELTAIN:BTCUSD.P | Liquidity Sweep Reversal     | INTRADAY | LONG  | 80063.00 | 80026.50 | 79872.00 | TARGET_HIT    | 36.50   
+COINBASE:BTCUSD | Liquidity Sweep Reversal     | INTRADAY | LONG  | 79898.43 | 80050.00 | 79867.76 | TARGET_HIT    | -151.57 
+COINBASE:BTCUSD | Liquidity Sweep Reversal     | INTRADAY | LONG  | 79984.84 | 80050.00 | 79857.69 | TARGET_HIT    | -65.16  
+DELTAIN:BTCUSD.P | Liquidity Sweep Reversal     | INTRADAY | LONG  | 79954.00 | 80026.50 | 79825.50 | TARGET_HIT    | -72.50  
+MFSL            | Auction Magnet               | INTRADAY | BUY   | 1535.20  | 1540.00  | 1530.59  | TARGET_HIT    | 4.80    
+SOLARINDS       | Auction Magnet               | INTRADAY | BUY   | 21550.00 | 21645.00 | 21485.35 | TARGET_HIT    | 95.00   
+YESBANK         | Auction Magnet               | INTRADAY | BUY   | 22.49    | 22.53    | 22.42    | TARGET_HIT    | 0.04    
+VMM             | Auction Magnet               | INTRADAY | SHORT | 107.01   | 106.50   | 107.33   | TARGET_HIT    | 0.51    
+ALKEM           | Monthly POC Reversion        | SWING  | LONG  | 5329.50  | 5340.00  | 5290.00  | STOP_LOSS_HIT | -39.50  
+ASTRAL          | Monthly POC Reversion        | SWING  | SHORT | 1538.00  | 1530.00  | 1600.00  | TARGET_HIT    | 8.00    
+ASIANPAINT      | Monthly POC Reversion        | SWING  | LONG  | 2600.50  | 2620.00  | 2560.00  | STOP_LOSS_HIT | -40.50  
+BAJAJFINSV      | Monthly POC Reversion        | SWING  | LONG  | 2000.00  | 2020.00  | 1985.00  | STOP_LOSS_HIT | -15.00  
+ASHOKLEY        | Monthly POC Reversion        | SWING  | SHORT | 176.02   | 176.00   | 177.00   | TARGET_HIT    | 0.02    
+CGPOWER         | Weekly POC Reversion         | SWING  | LONG  | 880.00   | 888.00   | 880.00   | TARGET_HIT    | 8.00    
+GRASIM          | Weekly POC Reversion         | SWING  | SHORT | 3283.70  | 3280.00  | 3310.00  | STOP_LOSS_HIT | -26.30  
+HAVELLS         | Weekly POC Reversion         | SWING  | LONG  | 1219.80  | 1220.00  | 1195.00  | STOP_LOSS_HIT | -24.80  
+HDFCAMC         | Monthly POC Reversion        | SWING  | SHORT | 2576.20  | 2540.00  | 2590.00  | TARGET_HIT    | 36.20   
+INDHOTEL        | Weekly POC Reversion         | SWING  | LONG  | 710.00   | 714.00   | 704.00   | TARGET_HIT    | 4.00    
+INDIANB         | Weekly POC Reversion         | SWING  | LONG  | 874.05   | 888.00   | 874.00   | TARGET_HIT    | 13.95   
+ANGELONE        | Weekly POC Reversion         | SWING  | LONG  | 280.05   | 284.00   | 280.00   | TARGET_HIT    | 3.95    
+AUROPHARMA      | Weekly POC Reversion         | SWING  | SHORT | 1674.00  | 1625.00  | 1675.00  | TARGET_HIT    | 49.00   
+BHARATFORG      | Weekly POC Reversion         | SWING  | SHORT | 2036.30  | 2020.00  | 2040.00  | TARGET_HIT    | 16.30   
+BHARATFORG      | Monthly POC Reversion        | SWING  | SHORT | 2076.10  | 2060.00  | 2180.00  | TARGET_HIT    | 16.10   
+CAMS            | Monthly POC Reversion        | SWING  | SHORT | 783.00   | 756.00   | 790.00   | TARGET_HIT    | 27.00   
+GAIL            | Monthly POC Reversion        | SWING  | SHORT | 172.80   | 172.00   | 174.00   | STOP_LOSS_HIT | -1.20   
+IREDA           | Monthly POC Reversion        | SWING  | SHORT | 115.85   | 115.00   | 120.00   | TARGET_HIT    | 0.85    
+JUBLFOOD        | Weekly POC Reversion         | SWING  | LONG  | 481.00   | 488.00   | 481.00   | TARGET_HIT    | 7.00    
+KEI             | Monthly POC Reversion        | SWING  | SHORT | 5560.00  | 5520.00  | 5740.00  | TARGET_HIT    | 40.00   
+DELTAIN:BTCUSD.P | Liquidity Sweep Reversal     | INTRADAY | LONG  | 79910.50 | 80026.50 | 79774.00 | TARGET_HIT    | -116.00 
+COINBASE:BTCUSD | Liquidity Sweep Reversal     | INTRADAY | LONG  | 79945.57 | 80050.00 | 79805.26 | TARGET_HIT    | -104.43 
+MOTHERSON       | Monthly POC Reversion        | SWING  | SHORT | 169.99   | 169.00   | 170.00   | TARGET_HIT    | 0.99    
+MAZDOCK         | Weekly POC Reversion         | SWING  | LONG  | 2465.10  | 2490.00  | 2450.00  | TARGET_HIT    | 24.90   
+MUTHOOTFIN      | Monthly POC Reversion        | SWING  | SHORT | 3009.20  | 2880.00  | 3040.00  | TARGET_HIT    | 129.20  
+NATIONALUM      | Monthly POC Reversion        | SWING  | SHORT | 383.05   | 379.00   | 397.00   | TARGET_HIT    | 4.05    
+NESTLEIND       | Monthly POC Reversion        | SWING  | SHORT | 1483.50  | 1460.00  | 1510.00  | TARGET_HIT    | 23.50   
+POLYCAB         | Monthly POC Reversion        | SWING  | LONG  | 9209.00  | 9250.00  | 9050.00  | STOP_LOSS_HIT | -159.00 
+PNBHOUSING      | Monthly POC Reversion        | SWING  | LONG  | 1139.20  | 1150.00  | 1135.00  | TARGET_HIT    | 10.80   
+PIIND           | Monthly POC Reversion        | SWING  | LONG  | 2401.60  | 2480.00  | 2380.00  | TARGET_HIT    | 78.40   
+POLICYBZR       | Weekly POC Reversion         | SWING  | LONG  | 1826.90  | 1835.00  | 1815.00  | TARGET_HIT    | 8.10    
+SAIL            | Weekly POC Reversion         | SWING  | LONG  | 192.15   | 197.00   | 191.00   | TARGET_HIT    | 4.85    
+RELIANCE        | Weekly POC Reversion         | SWING  | SHORT | 1299.00  | 1285.00  | 1300.00  | STOP_LOSS_HIT | -1.00   
+SONACOMS        | Monthly POC Reversion        | SWING  | SHORT | 812.00   | 806.00   | 820.00   | TARGET_HIT    | 6.00    
+TATASTEEL       | Monthly POC Reversion        | SWING  | LONG  | 183.00   | 184.00   | 182.00   | TARGET_HIT    | 1.00    
+SUZLON          | Monthly POC Reversion        | SWING  | SHORT | 47.37    | 47.00    | 48.00    | TARGET_HIT    | 0.37    
+UPL             | Weekly POC Reversion         | SWING  | LONG  | 562.50   | 564.00   | 562.00   | TARGET_HIT    | 1.50    
+KEI             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 4853.50  | 5028.00  | 4820.00  | TARGET_HIT    | 174.50  
+UNIONBANK       | Weekly POC Reversion         | SWING  | LONG  | 183.25   | 185.00   | 183.00   | TARGET_HIT    | 1.75    
+ZYDUSLIFE       | Weekly POC Reversion         | SWING  | SHORT | 1173.90  | 1160.00  | 1180.00  | TARGET_HIT    | 13.90   
+ZYDUSLIFE       | Monthly POC Reversion        | SWING  | SHORT | 1158.00  | 1115.00  | 1160.00  | TARGET_HIT    | 43.00   
+VMM             | Weekly POC Reversion         | SWING  | LONG  | 106.23   | 107.00   | 106.00   | TARGET_HIT    | 0.77    
+
+Statistics:
+* Total Signals Triggered/Resolved: 50
+* Target Hits: 42
+* Stop Loss Hits: 8
+* Win Rate: 84.0%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] ALKEM -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 5329.50 | Stop Loss: 5290.00 | Exit: 5290.00 | Loss: -39.50
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[2] ASIANPAINT -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 2600.50 | Stop Loss: 2560.00 | Exit: 2560.00 | Loss: -40.50
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[3] BAJAJFINSV -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 2000.00 | Stop Loss: 1985.00 | Exit: 1985.00 | Loss: -15.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[4] GRASIM -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 3283.70 | Stop Loss: 3310.00 | Exit: 3310.00 | Loss: -26.30
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[5] HAVELLS -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 1219.80 | Stop Loss: 1195.00 | Exit: 1195.00 | Loss: -24.80
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[6] GAIL -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 172.80 | Stop Loss: 174.00 | Exit: 174.00 | Loss: -1.20
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[7] POLYCAB -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 9209.00 | Stop Loss: 9050.00 | Exit: 9050.00 | Loss: -159.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[8] RELIANCE -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1299.00 | Stop Loss: 1300.00 | Exit: 1300.00 | Loss: -1.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

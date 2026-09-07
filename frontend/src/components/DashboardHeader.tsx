@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Activity, Layers, RefreshCw, BarChart2, Sparkles, Zap, Eye, Calendar } from 'lucide-react';
+import { Search, Activity, Layers, RefreshCw, BarChart2, Sparkles, Zap, Eye, Calendar, Cpu } from 'lucide-react';
 
 interface DashboardHeaderProps {
   currentSymbol: string;
@@ -12,8 +12,8 @@ interface DashboardHeaderProps {
   binCount: number;
   onBinCountChange: (count: number) => void;
   onRefresh: () => void;
-  viewMode?: 'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly';
-  onViewModeChange?: (mode: 'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly') => void;
+  viewMode?: 'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly' | 'ai';
+  onViewModeChange?: (mode: 'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly' | 'ai') => void;
   sessionPeriod: 'daily' | 'weekly' | 'monthly';
   onSessionPeriodChange: (period: 'daily' | 'weekly' | 'monthly') => void;
   viewerCount?: number;
@@ -455,6 +455,27 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
             >
               <Calendar size={13} color="#60a5fa" />
               Monthly Profile
+            </button>
+
+            <button
+              onClick={() => onViewModeChange('ai')}
+              style={{
+                background: viewMode === 'ai' ? 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))' : 'transparent',
+                border: 'none',
+                borderRadius: '6px',
+                color: 'white',
+                padding: '6px 12px',
+                fontSize: '12px',
+                fontWeight: '600',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                transition: 'all 0.2s'
+              }}
+            >
+              <Cpu size={13} color="#a78bfa" />
+              AI Engine
             </button>
 
             {(window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && (

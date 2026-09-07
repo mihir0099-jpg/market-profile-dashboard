@@ -15,6 +15,7 @@ import { NineAmReport } from './components/NineAmReport';
 import { OptionsTab } from './components/OptionsTab';
 import { DailyReports } from './components/DailyReports';
 import { MonthlyProfileTab } from './components/MonthlyProfileTab';
+import { AiAnalyticsTab } from './components/AiAnalyticsTab';
 
 
 // Dynamically resolve backend API base based on origin
@@ -37,7 +38,7 @@ function App() {
   const [sessionPeriod, setSessionPeriod] = useState<'daily' | 'weekly' | 'monthly'>('daily');
 
   // GEX & PCR State variables
-  const [viewMode, setViewMode] = useState<'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly'>('profile');
+  const [viewMode, setViewMode] = useState<'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly' | 'ai'>('profile');
 
   const [gexExpiries, setGexExpiries] = useState<string[]>([]);
   const [selectedGexExpiry, setSelectedGexExpiry] = useState<string>('');
@@ -617,6 +618,8 @@ function App() {
                 <DailyReports />
               ) : viewMode === 'monthly' ? (
                 <MonthlyProfileTab currentSymbol={symbol} onSelectSymbol={(sym) => setSymbol(sym)} />
+              ) : viewMode === 'ai' ? (
+                <AiAnalyticsTab currentSymbol={symbol} onSelectSymbol={(sym) => setSymbol(sym)} />
               ) : (
                 <OptionsTab symbol={symbol} onSelectSymbol={(sym) => { setSymbol(sym); setViewMode('profile'); }} />
               )}

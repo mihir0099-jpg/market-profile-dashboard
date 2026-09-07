@@ -11,6 +11,7 @@ import { generateNineAmReport } from './generate_nineam_report.js';
 import { logOptionsChainData } from './options_logger.js';
 import { getMonthlyProfileData } from './monthly_profile_analyzer.js';
 import { getFallbackExpiries, getFallbackGexData, getFallbackPcrData } from './gex_fallback_provider.js';
+import { getAiAnalytics } from './ai_engine.js';
 import { exec, spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -377,6 +378,18 @@ app.get('/api/monthly-profile', async (req, res) => {
   } catch (err) {
     console.error('[API Monthly Profile Error]', err);
     res.status(500).json({ error: err.message || 'Failed to fetch monthly profile data' });
+  }
+});
+
+// Get AI Analytics (TS2Vec Vector Analogue Matcher, TimesFM Probabilistic Forecast, TFT Weights)
+app.get('/api/ai/analytics', async (req, res) => {
+  try {
+    const symbol = req.query.symbol || 'NSE:NIFTY';
+    const data = await getAiAnalytics(symbol);
+    res.json(data);
+  } catch (err) {
+    console.error('[API AI Analytics Error]', err);
+    res.status(500).json({ error: err.message || 'Failed to generate AI analytics' });
   }
 });
 

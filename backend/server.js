@@ -839,7 +839,7 @@ function cleanDuplicateSignals() {
 cleanDuplicateSignals();
 
 const PORT = process.env.PORT || 3001;
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`Backend WebSocket server listening on port ${PORT}`);
   
   // Run pattern learner to calculate live probabilities on startup (delayed by 60s to prevent concurrent socket handshake collision)

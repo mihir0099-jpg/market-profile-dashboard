@@ -302310,5 +302310,25 @@
     "modifications": [
       "Decreased Liquidity Sweep rejection multiplier from 1.3x to 1.2x to increase signal volume."
     ]
+  },
+  {
+    "timestamp": "2026-09-07T09:27:59.691Z",
+    "modifications": [
+      "Reduced Auction Magnet trigger zone buffer from 0.600% to 0.550% for stricter entry proximity."
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T09:31:16.032Z",
+    "modifications": [
+      "Increased Weekly Reversion min leader win rate from 60% to 65% due to low win rate of 44.2%",
+      "Tightened Weekly Reversion PCR drift requirement from 0.010 to 0.020"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T09:31:36.774Z",
+    "modifications": [
+      "Increased Weekly Reversion min leader win rate from 65% to 70% due to low win rate of 45.5%",
+      "Tightened Weekly Reversion PCR drift requirement from 0.020 to 0.030"
+    ]
   }
 ]

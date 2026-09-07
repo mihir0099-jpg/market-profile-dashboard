@@ -8,7 +8,7 @@
     "balancePeriodDays": 3
   },
   "magnet": {
-    "magnetBufferPercent": 0.006,
+    "magnetBufferPercent": 0.0055,
     "stopLossBufferPercent": 0.003
   },
   "drive": {
@@ -22,8 +22,8 @@
     "rejectionMultiplier": 1.2
   },
   "wreversion": {
-    "minWinRateThreshold": 0.6,
-    "pcrDriftFilter": 0.01
+    "minWinRateThreshold": 0.7000000000000001,
+    "pcrDriftFilter": 0.03
   },
   "wgap": {
     "minWinRateThreshold": 0.7,

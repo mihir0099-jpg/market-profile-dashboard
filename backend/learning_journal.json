@@ -302330,5 +302330,1371 @@
       "Increased Weekly Reversion min leader win rate from 65% to 70% due to low win rate of 45.5%",
       "Tightened Weekly Reversion PCR drift requirement from 0.020 to 0.030"
     ]
+  },
+  {
+    "timestamp": "2026-09-07T09:42:35.609Z",
+    "modifications": [
+      "Increased Weekly Reversion min leader win rate from 70% to 75% due to low win rate of 53.8%",
+      "Tightened Weekly Reversion PCR drift requirement from 0.030 to 0.040"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T09:56:08.921Z",
+    "modifications": [
+      "Increased Weekly Reversion min leader win rate from 75% to 80% due to low win rate of 50.5%",
+      "Tightened Weekly Reversion PCR drift requirement from 0.040 to 0.050"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T09:56:31.509Z",
+    "modifications": [
+      "Increased Weekly Reversion min leader win rate from 80% to 85% due to low win rate of 50.0%"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T09:58:08.085Z",
+    "modifications": [
+      "Relaxed BTST close strength threshold from 0.95 to 0.93 to capture more high-edge setups.",
+      "Increased Liquidity Sweep rejection multiplier from 1.2x to 1.3x due to low win rate of 52.4%"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T09:58:38.134Z",
+    "modifications": [
+      "Relaxed BTST close strength threshold from 0.93 to 0.91 to capture more high-edge setups.",
+      "Increased Auction Magnet trigger zone buffer from 0.550% to 0.600% to increase signal volume."
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T10:09:00.436Z",
+    "modifications": [
+      "Relaxed BTST close strength threshold from 0.91 to 0.89 to capture more high-edge setups."
+    ]
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HINDPETRO",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -2.458750000000009,
+    "diagnosis": "Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.",
+    "learnedRule": "G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HINDPETRO",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 1.8999999999999773,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KPITTECH",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -3.9452,
+    "diagnosis": "Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.",
+    "learnedRule": "G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KPITTECH",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 5.5,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KPITTECH",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 2.8999999999999773,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HINDALCO",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -7.024499999999989,
+    "diagnosis": "Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.",
+    "learnedRule": "G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HINDALCO",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 3.3999999999999773,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HINDALCO",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 0.6000000000000227,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HCLTECH",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 3.099999999999909,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:LODHA",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -8.493099999999913,
+    "diagnosis": "Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.",
+    "learnedRule": "G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:LODHA",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 6.100000000000136,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:LODHA",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 15.900000000000091,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HAVELLS",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -8.01780000000008,
+    "diagnosis": "Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.",
+    "learnedRule": "G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HAVELLS",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -24.799999999999955,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:ICICIBANK",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 2.2999999999999545,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MPHASIS",
+    "strategy": "Opening Drive",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -31.800000000000182,
+    "diagnosis": "Market noise / volatility sweep.",
+    "learnedRule": ""
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:IDFCFIRSTB",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 0.4200000000000017,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:INDHOTEL",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -4.973150000000032,
+    "diagnosis": "Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.",
+    "learnedRule": "G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:INDHOTEL",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -4.2999999999999545,
+    "diagnosis": "Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.",
+    "learnedRule": "Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MARICO",
+    "strategy": "3:15 PM BTST Close",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -6.419999999999959,
+    "diagnosis": "Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.",
+    "learnedRule": "BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MARICO",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -5.646200000000022,
+    "diagnosis": "Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.",
+    "learnedRule": "G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MARICO",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 3.5,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MANKIND",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 10.899999999999636,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MANKIND",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 0,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:IDEA",
+    "strategy": "Weekly POC Reversion",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -0.9100000000000001,
+    "diagnosis": "Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).",
+    "learnedRule": "POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:INFY",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -6,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:INDIGO",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 2.5,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:INDIANB",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 0.049999999999954525,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:OFSS",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 233,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:OBEROIRLTY",
+    "strategy": "Weekly POC Reversion",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -7.2999999999999545,
+    "diagnosis": "Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).",
+    "learnedRule": "POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KOTAKBANK",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -1.5499999999999545,
+    "diagnosis": "Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.",
+    "learnedRule": "Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KOTAKBANK",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 0.5500000000000114,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:ONGC",
+    "strategy": "Auction Magnet",
+    "direction": "BUY",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -0.7059900000000141,
+    "diagnosis": "Market noise / volatility sweep.",
+    "learnedRule": ""
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:JIOFIN",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 4.009999999999991,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PAGEIND",
+    "strategy": "Balance Breakout Trap",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -695,
+    "diagnosis": "Market noise / volatility sweep.",
+    "learnedRule": ""
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PAGEIND",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -250.45999999999913,
+    "diagnosis": "Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.",
+    "learnedRule": "G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:JSWSTEEL",
+    "strategy": "Monthly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -32.59999999999991,
+    "diagnosis": "Market noise / volatility sweep.",
+    "learnedRule": ""
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PATANJALI",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 0,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:JUBLFOOD",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 0,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:JUBLFOOD",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 10.600000000000023,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KALYANKJIL",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 15.700000000000045,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:POLYCAB",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -159,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PNB",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -2.930000000000007,
+    "diagnosis": "Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).",
+    "learnedRule": "POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:RELIANCE",
+    "strategy": "Weekly POC Reversion",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -1,
+    "diagnosis": "Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).",
+    "learnedRule": "POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SAIL",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 1.1500000000000057,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:POWERINDIA",
+    "strategy": "Auction Magnet",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -95.03999999999724,
+    "diagnosis": "Market noise / volatility sweep.",
+    "learnedRule": ""
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:POWERGRID",
+    "strategy": "Auction Magnet",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -0.7978499999999826,
+    "diagnosis": "Market noise / volatility sweep.",
+    "learnedRule": ""
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:RADICO",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 23,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:RADICO",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 5.600000000000364,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SONACOMS",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 0.4500000000000455,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:NHPC",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -0.5306700000000006,
+    "diagnosis": "Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.",
+    "learnedRule": "G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TECHM",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 39.09999999999991,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SUPREMEIND",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 99.5,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TCS",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 48.80000000000018,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:UNOMINDA",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 9.599999999999909,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TVSMOTOR",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": 17.399999999999636,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TRENT",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "STOP_LOSS_HIT",
+    "pnlPoints": -1.800000000000182,
+    "diagnosis": "Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.",
+    "learnedRule": "Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03)."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KPITTECH",
+    "strategy": "3:15 PM BTST Close",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 13.450799999999958,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for 3:15 PM BTST Close are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HDFCLIFE",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 2.75,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HCLTECH",
+    "strategy": "Weekly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": -33.5,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:LICI",
+    "strategy": "Auction Magnet",
+    "direction": "BUY",
+    "status": "TARGET_HIT",
+    "pnlPoints": 1.25,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Auction Magnet are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:LICI",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 3.8000000000000114,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HDFCAMC",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -27.59999999999991,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HDFCAMC",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 36.19999999999982,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:GVT&D",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -20,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:GVT&D",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 12.899999999999636,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MAZDOCK",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -24.90000000000009,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MPHASIS",
+    "strategy": "Weekly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": -28,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:HYUNDAI",
+    "strategy": "Monthly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 0,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MAXHEALTH",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 10.299999999999955,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:INDHOTEL",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -4,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:INDHOTEL",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 12.200000000000045,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MOTHERSON",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 2.3400000000000034,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MOTHERSON",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 0.9900000000000091,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:ICICIGI",
+    "strategy": "Weekly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 0.7000000000000455,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:NAUKRI",
+    "strategy": "Weekly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 6.599999999999909,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:INFY",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 7.633499999999913,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for G-Period Options Breakout are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:INDUSTOWER",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 5.199999999999989,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:NESTLEIND",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 23.5,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:IREDA",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 0.7894600000000054,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for G-Period Options Breakout are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:IREDA",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -1.039999999999992,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:IREDA",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 0.8499999999999943,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:MUTHOOTFIN",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 129.19999999999982,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:NMDC",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -0.8700000000000045,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:NMDC",
+    "strategy": "Monthly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": -0.6899999999999977,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:NBCC",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -0.7900000000000063,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:NATIONALUM",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 4.050000000000011,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:OFSS",
+    "strategy": "Monthly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 0,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KEI",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 40,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KAYNES",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 146,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:NYKAA",
+    "strategy": "Monthly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 4.5,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PATANJALI",
+    "strategy": "Auction Magnet",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 1.8000000000000114,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Auction Magnet are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KALYANKJIL",
+    "strategy": "3:15 PM BTST Close",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 14.172000000000025,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for 3:15 PM BTST Close are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:KALYANKJIL",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 4.154149999999959,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for G-Period Options Breakout are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:POLICYBZR",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -8.099999999999909,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:POLICYBZR",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 56.59999999999991,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PETRONET",
+    "strategy": "Weekly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": -2,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PNBHOUSING",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": 10.799999999999955,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PIIND",
+    "strategy": "3:15 PM BTST Close",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 58.320000000000164,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for 3:15 PM BTST Close are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PGEL",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 3,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PIDILITIND",
+    "strategy": "Monthly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": -52,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:POWERGRID",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -2,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PRESTIGE",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 5,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PREMIERENE",
+    "strategy": "Auction Magnet",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 3.7000000000000455,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Auction Magnet are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PREMIERENE",
+    "strategy": "G-Period Options Breakout",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 6.94259999999997,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for G-Period Options Breakout are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:PREMIERENE",
+    "strategy": "Weekly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 2.2999999999999545,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SBICARD",
+    "strategy": "3:15 PM BTST Close",
+    "direction": "BUY",
+    "status": "TARGET_HIT",
+    "pnlPoints": 16.128000000000043,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for 3:15 PM BTST Close are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SBICARD",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 1.8500000000000227,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SBIN",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 6.2999999999999545,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SHREECEM",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -270,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SONACOMS",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": 19.399999999999977,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SONACOMS",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 6,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SUNPHARMA",
+    "strategy": "Monthly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": -20,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SRF",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 3.699999999999818,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SIEMENS",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 60.09999999999991,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:NHPC",
+    "strategy": "Auction Magnet",
+    "direction": "BUY",
+    "status": "TARGET_HIT",
+    "pnlPoints": 0.4000000000000057,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Auction Magnet are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TIINDIA",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -26,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TIINDIA",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 34.80000000000018,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TCS",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -25.800000000000182,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TATASTEEL",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": 1,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TATAPOWER",
+    "strategy": "Auction Magnet",
+    "direction": "BUY",
+    "status": "TARGET_HIT",
+    "pnlPoints": 1.6000000000000227,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Auction Magnet are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SUZLON",
+    "strategy": "Weekly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": -0.7000000000000028,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly Gap Fade Trap are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:SUZLON",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 0.36999999999999744,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:UNIONBANK",
+    "strategy": "Liquidity Sweep Reversal",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": 3.569999999999993,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Liquidity Sweep Reversal are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:UNIONBANK",
+    "strategy": "Weekly POC Reversion",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": 1.75,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Weekly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:UNIONBANK",
+    "strategy": "Monthly POC Reversion",
+    "direction": "LONG",
+    "status": "TARGET_HIT",
+    "pnlPoints": -1.0999999999999943,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TITAN",
+    "strategy": "Auction Magnet",
+    "direction": "BUY",
+    "status": "TARGET_HIT",
+    "pnlPoints": 10.5,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Auction Magnet are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:TITAN",
+    "strategy": "Monthly POC Reversion",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": 48.5,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly POC Reversion are correct."
+  },
+  {
+    "date": "2026-09-07",
+    "symbol": "NSE:UNOMINDA",
+    "strategy": "Monthly Gap Fade Trap",
+    "direction": "SHORT",
+    "status": "TARGET_HIT",
+    "pnlPoints": -32,
+    "diagnosis": "Target reached successfully. Strategy parameters confirmed valid.",
+    "learnedRule": "Validation: Strategy parameters for Monthly Gap Fade Trap are correct."
+  },
+  {
+    "timestamp": "2026-09-07T10:09:41.672Z",
+    "modifications": [
+      "Relaxed BTST close strength threshold from 0.91 to 0.89 to capture more high-edge setups."
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T10:14:55.877Z",
+    "modifications": [
+      "Relaxed BTST close strength threshold from 0.89 to 0.87 to capture more high-edge setups."
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T10:15:39.182Z",
+    "modifications": [
+      "Relaxed BTST close strength threshold from 0.87 to 0.85 to capture more high-edge setups."
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T10:25:52.694Z",
+    "modifications": [
+      "Relaxed BTST close strength threshold from 0.85 to 0.83 to capture more high-edge setups."
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T10:28:47.806Z",
+    "modifications": [
+      "Relaxed BTST close strength threshold from 0.83 to 0.81 to capture more high-edge setups."
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T10:30:31.038Z",
+    "modifications": [
+      "Relaxed BTST close strength threshold from 0.81 to 0.80 to capture more high-edge setups."
+    ]
   }
 ]

@@ -4,26 +4,6 @@
 
 # Instrument: NIFTY
 
-## Session Date: **2026-08-28**
-
-### 🌅 Morning Setup & Prediction (10:15 AM)
-- **Opening Relationship**: `Inside Value` (Opened inside yesterday's Value Area, indicating balance and value acceptance.)
-- **Opening Type**: `Open Test Drive (OTD) Bullish` (Tested lower levels in Period A, rejected them, and drove higher in Period B.)
-- **OTF Drive Active?**: `UP`
-- **Conviction Level**: **MODERATE-HIGH**
-- **Prediction Summary**: *Test and drive behavior. The market rejected Period A extremes. Expect a Bullish Normal Variation day. Fib target 24268.74 is likely to be tested.*
-
-### 🌆 Afternoon Outcome (3:30 PM)
-The market closed at **24142.95** (Range: 24076.85 - 24188.30).
-- **Level Tests**: Prior POC was ✅ TESTED | Prior VAH was ❌ UNTESTED | Prior VAL was ✅ TESTED.
-- **Fibonacci 2.618x Target (24268.74)**: ❌ MISSED.
-- **Intraday Failures**: 🔴 c-Failure Warning triggered (Period D failed to break Period C extreme).  
-
-### 🧠 Key Learnings & Takeaways
-> An OTF drive was active in the morning, but did not sustain enough institutional volume to reach the 2.618x Fibonacci target. The day remained inside a wider Normal Variation range, suggesting standard breakout fades once momentum stalled.
-
----
-
 ## Session Date: **2026-08-31**
 
 ### 🌅 Morning Setup & Prediction (10:15 AM)
@@ -128,32 +108,32 @@ The market closed at **23938.40** (Range: 23895.85 - 24005.75).
 
 ---
 
+## Session Date: **2026-09-07**
+
+### 🌅 Morning Setup & Prediction (10:15 AM)
+- **Opening Relationship**: `Gap Down` (Opened completely below prior day range, showing high selling imbalance.)
+- **Opening Type**: `Open Drive (OD) Bearish` (Price drove straight down from the open. High seller conviction.)
+- **OTF Drive Active?**: `DOWN`
+- **Conviction Level**: **HIGH**
+- **Prediction Summary**: *Institutional drive detected immediately at open. Expect a strong Bearish Trend Day. Fibonacci target 23670.35 is the primary objective. Low/High of day should be set in Period A.
+
+**🚨 ALERT: Open is Outside Prior Day's Range (Gap Down)! Market opened at 23884.60, which is below yesterday's low (23895.85). Watch closely: we will either accept this gap and continue in the direction of the open (initiative drive), OR fail to sustain it, enter yesterday's range, and reverse aggressively in the opposite direction towards the Prior POC (23938.20).***
+
+### 🌆 Afternoon Outcome (3:30 PM)
+The market closed at **23759.40** (Range: 23737.90 - 23890.00).
+- **Level Tests**: Prior POC was ❌ UNTESTED | Prior VAH was ❌ UNTESTED | Prior VAL was ❌ UNTESTED.
+- **Fibonacci 2.618x Target (23670.35)**: ❌ MISSED.
+- **Intraday Failures**:   🔴 e-Failure detected (failed follow-through of Period E's break of low extreme).
+
+### 🧠 Key Learnings & Takeaways
+> An OTF drive was active in the morning, but an auction failure occurred (d-Failure or e-Failure) during the session. The failure of Period F to extend above/below the Period E extreme signalized exhaustion, warning us to exit early before mean reversion.
+
+---
+
 
 ---
 
 # Instrument: BANKNIFTY
-
-## Session Date: **2026-08-28**
-
-### 🌅 Morning Setup & Prediction (10:15 AM)
-- **Opening Relationship**: `Gap Down` (Opened completely below prior day range, showing high selling imbalance.)
-- **Opening Type**: `Open Auction (OA)` (Rotated back and forth inside the opening range. Low institutional conviction.)
-- **OTF Drive Active?**: `UP`
-- **Conviction Level**: **LOW**
-- **Prediction Summary**: *Opened outside value but within range with low initial drive. Rotational behavior expected. Watch for entry into value to trigger the 80% rule.
-
-**🚨 ALERT: Open is Outside Prior Day's Range (Gap Down)! Market opened at 57483.60, which is below yesterday's low (57509.95). Watch closely: we will either accept this gap and continue in the direction of the open (initiative drive), OR fail to sustain it, enter yesterday's range, and reverse aggressively in the opposite direction towards the Prior POC (57758.40).***
-
-### 🌆 Afternoon Outcome (3:30 PM)
-The market closed at **57496.30** (Range: 57264.00 - 57596.40).
-- **Level Tests**: Prior POC was ❌ UNTESTED | Prior VAH was ❌ UNTESTED | Prior VAL was ✅ TESTED.
-- **Fibonacci 2.618x Target (57880.15)**: ❌ MISSED.
-- **Intraday Failures**:  🔴 d-Failure Warning triggered (Period E failed to take Period D extreme). 
-
-### 🧠 Key Learnings & Takeaways
-> Choppy outside-value open. The market rotated back and forth, showing that when OTF players are absent (OTF: NONE), trying to trade breakouts leads to papercuts. Mean reversion inside the day's boundaries was the optimal approach.
-
----
 
 ## Session Date: **2026-08-31**
 
@@ -260,32 +240,30 @@ The market closed at **57369.65** (Range: 57324.55 - 57677.15).
 
 ---
 
+## Session Date: **2026-09-07**
+
+### 🌅 Morning Setup & Prediction (10:15 AM)
+- **Opening Relationship**: `Outside Value, Inside Range` (Opened outside value but within range, showing moderate directional bias.)
+- **Opening Type**: `Open Test Drive (OTD) Bearish` (Tested higher levels in Period A, rejected them, and drove lower in Period B.)
+- **OTF Drive Active?**: `DOWN`
+- **Conviction Level**: **MODERATE-HIGH**
+- **Prediction Summary**: *Test and drive behavior. The market rejected Period A extremes. Expect a Bearish Normal Variation day. Fib target 56565.79 is likely to be tested.*
+
+### 🌆 Afternoon Outcome (3:30 PM)
+The market closed at **57088.30** (Range: 57002.95 - 57426.85).
+- **Level Tests**: Prior POC was ❌ UNTESTED | Prior VAH was ❌ UNTESTED | Prior VAL was ✅ TESTED.
+- **Fibonacci 2.618x Target (56565.79)**: ❌ MISSED.
+- **Intraday Failures**:  🔴 d-Failure Warning triggered (Period E failed to take Period D extreme). 
+
+### 🧠 Key Learnings & Takeaways
+> An OTF drive was active in the morning, but an auction failure occurred (d-Failure or e-Failure) during the session. The failure of Period F to extend above/below the Period E extreme signalized exhaustion, warning us to exit early before mean reversion.
+
+---
+
 
 ---
 
 # Instrument: RELIANCE
-
-## Session Date: **2026-08-28**
-
-### 🌅 Morning Setup & Prediction (10:15 AM)
-- **Opening Relationship**: `Gap Down` (Opened completely below prior day range, showing high selling imbalance.)
-- **Opening Type**: `Open Auction (OA)` (Rotated back and forth inside the opening range. Low institutional conviction.)
-- **OTF Drive Active?**: `UP`
-- **Conviction Level**: **LOW**
-- **Prediction Summary**: *Opened outside value but within range with low initial drive. Rotational behavior expected. Watch for entry into value to trigger the 80% rule.
-
-**🚨 ALERT: Open is Outside Prior Day's Range (Gap Down)! Market opened at 1285.40, which is below yesterday's low (1287.00). Watch closely: we will either accept this gap and continue in the direction of the open (initiative drive), OR fail to sustain it, enter yesterday's range, and reverse aggressively in the opposite direction towards the Prior POC (1290.06).***
-
-### 🌆 Afternoon Outcome (3:30 PM)
-The market closed at **1283.90** (Range: 1280.00 - 1291.80).
-- **Level Tests**: Prior POC was ✅ TESTED | Prior VAH was ❌ UNTESTED | Prior VAL was ✅ TESTED.
-- **Fibonacci 2.618x Target (1303.61)**: ❌ MISSED.
-- **Intraday Failures**: 🔴 c-Failure Warning triggered (Period D failed to break Period C extreme).  
-
-### 🧠 Key Learnings & Takeaways
-> Choppy outside-value open. The market rotated back and forth, showing that when OTF players are absent (OTF: NONE), trying to trade breakouts leads to papercuts. Mean reversion inside the day's boundaries was the optimal approach.
-
----
 
 ## Session Date: **2026-08-31**
 
@@ -392,32 +370,29 @@ The market closed at **1327.40** (Range: 1304.10 - 1333.00).
 
 ---
 
+## Session Date: **2026-09-07**
+
+### 🌅 Morning Setup & Prediction (10:15 AM)
+- **Opening Relationship**: `Inside Value` (Opened inside yesterday's Value Area, indicating balance and value acceptance.)
+- **Opening Type**: `Open Auction (OA)` (Rotated back and forth inside the opening range. Low institutional conviction.)
+- **OTF Drive Active?**: `NONE`
+- **Conviction Level**: **LOW**
+- **Prediction Summary**: *Opened inside value with low conviction. Rotational behavior is highly likely. Prior POC (1326.96) and VAH/VAL are the main magnets. Expect mean-reverting swing trades.*
+
+### 🌆 Afternoon Outcome (3:30 PM)
+The market closed at **1308.00** (Range: 1301.90 - 1324.20).
+- **Level Tests**: Prior POC was ❌ UNTESTED | Prior VAH was ❌ UNTESTED | Prior VAL was ✅ TESTED.
+- **Auction Quality**: Clean, secure session extremes with no failures.
+
+### 🧠 Key Learnings & Takeaways
+> Balanced open inside value resulted in a classic rotational session. Standard mean reversion was the correct play. Levels (Prior POC/VAH/VAL) held beautifully and provided great trading zones. The 2.618x extension target was missed because the market lacked the initiative OTF players to drive it out of balance.
+
+---
+
 
 ---
 
 # Instrument: HDFCBANK
-
-## Session Date: **2026-08-28**
-
-### 🌅 Morning Setup & Prediction (10:15 AM)
-- **Opening Relationship**: `Gap Down` (Opened completely below prior day range, showing high selling imbalance.)
-- **Opening Type**: `Open Auction (OA)` (Rotated back and forth inside the opening range. Low institutional conviction.)
-- **OTF Drive Active?**: `UP`
-- **Conviction Level**: **LOW**
-- **Prediction Summary**: *Opened outside value but within range with low initial drive. Rotational behavior expected. Watch for entry into value to trigger the 80% rule.
-
-**🚨 ALERT: Open is Outside Prior Day's Range (Gap Down)! Market opened at 709.10, which is below yesterday's low (710.00). Watch closely: we will either accept this gap and continue in the direction of the open (initiative drive), OR fail to sustain it, enter yesterday's range, and reverse aggressively in the opposite direction towards the Prior POC (714.42).***
-
-### 🌆 Afternoon Outcome (3:30 PM)
-The market closed at **719.45** (Range: 707.00 - 719.95).
-- **Level Tests**: Prior POC was ✅ TESTED | Prior VAH was ✅ TESTED | Prior VAL was ✅ TESTED.
-- **Fibonacci 2.618x Target (728.73)**: ❌ MISSED.
-- **Auction Quality**: Clean, secure session extremes with no failures.
-
-### 🧠 Key Learnings & Takeaways
-> Choppy outside-value open. The market rotated back and forth, showing that when OTF players are absent (OTF: NONE), trying to trade breakouts leads to papercuts. Mean reversion inside the day's boundaries was the optimal approach.
-
----
 
 ## Session Date: **2026-08-31**
 
@@ -517,6 +492,26 @@ The market closed at **715.00** (Range: 708.65 - 716.50).
 - **Level Tests**: Prior POC was ❌ UNTESTED | Prior VAH was ✅ TESTED | Prior VAL was ❌ UNTESTED.
 - **Fibonacci 2.618x Target (717.03)**: ❌ MISSED.
 - **Intraday Failures**:   🔴 e-Failure detected (failed follow-through of Period E's break of high extreme).
+
+### 🧠 Key Learnings & Takeaways
+> Balanced open inside value resulted in a classic rotational session. Standard mean reversion was the correct play. Levels (Prior POC/VAH/VAL) held beautifully and provided great trading zones. The 2.618x extension target was missed because the market lacked the initiative OTF players to drive it out of balance.
+
+---
+
+## Session Date: **2026-09-07**
+
+### 🌅 Morning Setup & Prediction (10:15 AM)
+- **Opening Relationship**: `Inside Value` (Opened inside yesterday's Value Area, indicating balance and value acceptance.)
+- **Opening Type**: `Open Auction (OA)` (Rotated back and forth inside the opening range. Low institutional conviction.)
+- **OTF Drive Active?**: `DOWN`
+- **Conviction Level**: **LOW**
+- **Prediction Summary**: *Opened inside value with low conviction. Rotational behavior is highly likely. Prior POC (714.80) and VAH/VAL are the main magnets. Expect mean-reverting swing trades.*
+
+### 🌆 Afternoon Outcome (3:30 PM)
+The market closed at **710.35** (Range: 707.05 - 713.00).
+- **Level Tests**: Prior POC was ❌ UNTESTED | Prior VAH was ❌ UNTESTED | Prior VAL was ✅ TESTED.
+- **Fibonacci 2.618x Target (701.87)**: ❌ MISSED.
+- **Intraday Failures**:  🔴 d-Failure Warning triggered (Period E failed to take Period D extreme). 
 
 ### 🧠 Key Learnings & Takeaways
 > Balanced open inside value resulted in a classic rotational session. Standard mean reversion was the correct play. Levels (Prior POC/VAH/VAL) held beautifully and provided great trading zones. The 2.618x extension target was missed because the market lacked the initiative OTF players to drive it out of balance.

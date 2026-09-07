@@ -1,1881 +1,2091 @@
 {
-  "generatedAt": "6/9/2026, 3:16:27 pm",
+  "generatedAt": "7/9/2026, 3:17:10 pm",
   "gapUpCandidates": [
     {
-      "symbol": "COINBASE:BTCUSD",
-      "closePrice": 79864.02,
-      "vahPrice": 79780,
-      "distance": "0.11"
-    },
-    {
-      "symbol": "NSE:ABBOTINDIA",
-      "closePrice": 26090,
-      "vahPrice": 25985,
-      "distance": "0.40"
-    },
-    {
-      "symbol": "NSE:ABCAPITAL",
-      "closePrice": 406.95,
-      "vahPrice": 400.5,
-      "distance": "1.61"
-    },
-    {
       "symbol": "NSE:ABFRL",
-      "closePrice": 53,
-      "vahPrice": 51.3,
-      "distance": "3.31"
+      "closePrice": 53.14,
+      "vahPrice": 52.8,
+      "distance": "0.64"
     },
     {
-      "symbol": "NSE:ACC",
-      "closePrice": 1287,
-      "vahPrice": 1277,
-      "distance": "0.78"
-    },
-    {
-      "symbol": "NSE:ADANIENSOL",
-      "closePrice": 1408.9,
-      "vahPrice": 1394,
-      "distance": "1.07"
-    },
-    {
-      "symbol": "NSE:ADANIENT",
-      "closePrice": 2936.8,
-      "vahPrice": 2908,
-      "distance": "0.99"
-    },
-    {
-      "symbol": "NSE:ADANIGREEN",
-      "closePrice": 1299.1,
-      "vahPrice": 1297,
-      "distance": "0.16"
-    },
-    {
-      "symbol": "NSE:AMBUJACEM",
-      "closePrice": 405,
-      "vahPrice": 403.5,
-      "distance": "0.37"
-    },
-    {
-      "symbol": "NSE:ASHOKLEY",
-      "closePrice": 169.1,
-      "vahPrice": 167.9,
-      "distance": "0.71"
-    },
-    {
-      "symbol": "NSE:ASTRAL",
-      "closePrice": 1494.5,
-      "vahPrice": 1489,
-      "distance": "0.37"
+      "symbol": "NSE:APOLLOHOSP",
+      "closePrice": 8782,
+      "vahPrice": 8700,
+      "distance": "0.94"
     },
     {
       "symbol": "NSE:BAJFINANCE",
-      "closePrice": 1063.6,
-      "vahPrice": 1054,
-      "distance": "0.91"
+      "closePrice": 1060,
+      "vahPrice": 1059,
+      "distance": "0.09"
     },
     {
-      "symbol": "NSE:BHEL",
-      "closePrice": 433.25,
-      "vahPrice": 432,
-      "distance": "0.29"
+      "symbol": "NSE:BALRAMCHIN",
+      "closePrice": 708.3,
+      "vahPrice": 695.5,
+      "distance": "1.84"
     },
     {
-      "symbol": "NSE:BSE",
-      "closePrice": 3410,
-      "vahPrice": 3315,
-      "distance": "2.87"
+      "symbol": "NSE:BEML",
+      "closePrice": 2098.2,
+      "vahPrice": 2095,
+      "distance": "0.15"
     },
     {
-      "symbol": "NSE:CANFINHOME",
-      "closePrice": 807.05,
-      "vahPrice": 804,
-      "distance": "0.38"
+      "symbol": "NSE:BOSCHLTD",
+      "closePrice": 48450,
+      "vahPrice": 46940,
+      "distance": "3.22"
     },
     {
       "symbol": "NSE:CDSL",
-      "closePrice": 1394.5,
+      "closePrice": 1414.9,
+      "vahPrice": 1406,
+      "distance": "0.63"
+    },
+    {
+      "symbol": "NSE:CIPLA",
+      "closePrice": 1395.2,
       "vahPrice": 1389,
-      "distance": "0.40"
-    },
-    {
-      "symbol": "NSE:CENTRALBK",
-      "closePrice": 31.1,
-      "vahPrice": 31,
-      "distance": "0.32"
-    },
-    {
-      "symbol": "NSE:COCHINSHIP",
-      "closePrice": 1503,
-      "vahPrice": 1497,
-      "distance": "0.40"
-    },
-    {
-      "symbol": "NSE:COROMANDEL",
-      "closePrice": 1940.1,
-      "vahPrice": 1936,
-      "distance": "0.21"
-    },
-    {
-      "symbol": "NSE:CROMPTON",
-      "closePrice": 233.3,
-      "vahPrice": 228,
-      "distance": "2.32"
-    },
-    {
-      "symbol": "NSE:DABUR",
-      "closePrice": 380.9,
-      "vahPrice": 379.5,
-      "distance": "0.37"
-    },
-    {
-      "symbol": "NSE:GMRINFRA",
-      "closePrice": 97.58,
-      "vahPrice": 95.9,
-      "distance": "1.75"
-    },
-    {
-      "symbol": "NSE:GNFC",
-      "closePrice": 598,
-      "vahPrice": 590.5,
-      "distance": "1.27"
-    },
-    {
-      "symbol": "NSE:GODREJCP",
-      "closePrice": 878.75,
-      "vahPrice": 877,
-      "distance": "0.20"
-    },
-    {
-      "symbol": "NSE:GRASIM",
-      "closePrice": 3320.3,
-      "vahPrice": 3306,
-      "distance": "0.43"
-    },
-    {
-      "symbol": "NSE:GRSE",
-      "closePrice": 2538,
-      "vahPrice": 2532,
-      "distance": "0.24"
-    },
-    {
-      "symbol": "NSE:HAL",
-      "closePrice": 4884,
-      "vahPrice": 4790,
-      "distance": "1.96"
-    },
-    {
-      "symbol": "NSE:HDFCBANK",
-      "closePrice": 715,
-      "vahPrice": 710,
-      "distance": "0.70"
-    },
-    {
-      "symbol": "NSE:HDFCLIFE",
-      "closePrice": 544.05,
-      "vahPrice": 536.5,
-      "distance": "1.41"
-    },
-    {
-      "symbol": "NSE:HEROMOTOCO",
-      "closePrice": 5311.5,
-      "vahPrice": 5305,
-      "distance": "0.12"
-    },
-    {
-      "symbol": "NSE:HFCL",
-      "closePrice": 231.44,
-      "vahPrice": 224,
-      "distance": "3.32"
-    },
-    {
-      "symbol": "NSE:HINDALCO",
-      "closePrice": 1014.7,
-      "vahPrice": 1013,
-      "distance": "0.17"
-    },
-    {
-      "symbol": "NSE:HINDUNILVR",
-      "closePrice": 1973,
-      "vahPrice": 1969,
-      "distance": "0.20"
-    },
-    {
-      "symbol": "NSE:IDEA",
-      "closePrice": 15.06,
-      "vahPrice": 14.6,
-      "distance": "3.15"
-    },
-    {
-      "symbol": "NSE:IFCI",
-      "closePrice": 102.35,
-      "vahPrice": 99,
-      "distance": "3.38"
-    },
-    {
-      "symbol": "NSE:IGL",
-      "closePrice": 158.31,
-      "vahPrice": 149.7,
-      "distance": "5.75"
-    },
-    {
-      "symbol": "NSE:INDIACEM",
-      "closePrice": 362.75,
-      "vahPrice": 359.5,
-      "distance": "0.90"
-    },
-    {
-      "symbol": "NSE:INDUSINDBK",
-      "closePrice": 1005.4,
-      "vahPrice": 1000,
-      "distance": "0.54"
-    },
-    {
-      "symbol": "NSE:IOB",
-      "closePrice": 33.5,
-      "vahPrice": 33.35,
       "distance": "0.45"
     },
     {
-      "symbol": "NSE:IOC",
-      "closePrice": 137.37,
-      "vahPrice": 136.9,
-      "distance": "0.34"
+      "symbol": "NSE:COALINDIA",
+      "closePrice": 416.85,
+      "vahPrice": 415,
+      "distance": "0.45"
     },
     {
-      "symbol": "NSE:IPCALAB",
-      "closePrice": 1965,
-      "vahPrice": 1960,
-      "distance": "0.26"
-    },
-    {
-      "symbol": "NSE:IRCTC",
-      "closePrice": 477,
-      "vahPrice": 476.5,
-      "distance": "0.10"
-    },
-    {
-      "symbol": "NSE:IRFC",
-      "closePrice": 83.4,
-      "vahPrice": 83.2,
-      "distance": "0.24"
-    },
-    {
-      "symbol": "NSE:JINDALSTEL",
-      "closePrice": 1163.8,
-      "vahPrice": 1154,
-      "distance": "0.85"
-    },
-    {
-      "symbol": "NSE:JIOFIN",
-      "closePrice": 239.83,
-      "vahPrice": 238.5,
-      "distance": "0.56"
-    },
-    {
-      "symbol": "NSE:JKCEMENT",
-      "closePrice": 5120,
-      "vahPrice": 5035,
-      "distance": "1.69"
-    },
-    {
-      "symbol": "NSE:JSWSTEEL",
-      "closePrice": 1325,
-      "vahPrice": 1310,
-      "distance": "1.15"
-    },
-    {
-      "symbol": "NSE:JUBLFOOD",
-      "closePrice": 483.8,
-      "vahPrice": 483.5,
-      "distance": "0.06"
-    },
-    {
-      "symbol": "NSE:LICHSGFIN",
-      "closePrice": 566.25,
-      "vahPrice": 551.5,
-      "distance": "2.67"
-    },
-    {
-      "symbol": "NSE:LTIM",
-      "closePrice": 4570,
-      "vahPrice": 4548,
-      "distance": "0.48"
-    },
-    {
-      "symbol": "NSE:MCX",
-      "closePrice": 3285,
-      "vahPrice": 3230,
-      "distance": "1.70"
-    },
-    {
-      "symbol": "NSE:NATIONALUM",
-      "closePrice": 374.25,
-      "vahPrice": 373.5,
-      "distance": "0.20"
-    },
-    {
-      "symbol": "NSE:NBCC",
-      "closePrice": 86.53,
-      "vahPrice": 86.5,
-      "distance": "0.03"
-    },
-    {
-      "symbol": "NSE:NCC",
-      "closePrice": 150,
-      "vahPrice": 146.6,
-      "distance": "2.32"
-    },
-    {
-      "symbol": "NSE:NTPC",
-      "closePrice": 333.35,
-      "vahPrice": 331.5,
-      "distance": "0.56"
-    },
-    {
-      "symbol": "NSE:PAGEIND",
-      "closePrice": 36325,
-      "vahPrice": 36140,
-      "distance": "0.51"
-    },
-    {
-      "symbol": "NSE:PFC",
-      "closePrice": 355.9,
-      "vahPrice": 348.5,
-      "distance": "2.12"
-    },
-    {
-      "symbol": "NSE:PIDILITIND",
-      "closePrice": 1636,
-      "vahPrice": 1631,
-      "distance": "0.31"
-    },
-    {
-      "symbol": "NSE:PIIND",
-      "closePrice": 2475,
-      "vahPrice": 2412,
-      "distance": "2.61"
-    },
-    {
-      "symbol": "NSE:RAMCOCEM",
-      "closePrice": 886,
-      "vahPrice": 874,
-      "distance": "1.37"
-    },
-    {
-      "symbol": "NSE:RBLBANK",
-      "closePrice": 414.3,
-      "vahPrice": 410,
-      "distance": "1.05"
-    },
-    {
-      "symbol": "NSE:RELIANCE",
-      "closePrice": 1327.4,
-      "vahPrice": 1311,
-      "distance": "1.25"
-    },
-    {
-      "symbol": "NSE:RVNL",
-      "closePrice": 212.2,
-      "vahPrice": 210.5,
-      "distance": "0.81"
-    },
-    {
-      "symbol": "NSE:SBILIFE",
-      "closePrice": 1770.1,
-      "vahPrice": 1733,
-      "distance": "2.14"
-    },
-    {
-      "symbol": "NSE:SHREECEM",
-      "closePrice": 23995,
-      "vahPrice": 23940,
-      "distance": "0.23"
-    },
-    {
-      "symbol": "NSE:SUNTV",
-      "closePrice": 471.65,
-      "vahPrice": 464.5,
+      "symbol": "NSE:COROMANDEL",
+      "closePrice": 1973,
+      "vahPrice": 1943,
       "distance": "1.54"
     },
     {
-      "symbol": "NSE:TATACOMM",
-      "closePrice": 1751.6,
-      "vahPrice": 1704,
-      "distance": "2.79"
+      "symbol": "NSE:DIVISLAB",
+      "closePrice": 9299,
+      "vahPrice": 9200,
+      "distance": "1.08"
     },
     {
-      "symbol": "NSE:TATASTEEL",
-      "closePrice": 189.3,
-      "vahPrice": 184.8,
-      "distance": "2.44"
+      "symbol": "NSE:EICHERMOT",
+      "closePrice": 7705.5,
+      "vahPrice": 7645,
+      "distance": "0.79"
     },
     {
-      "symbol": "NSE:UPL",
-      "closePrice": 586,
-      "vahPrice": 584,
-      "distance": "0.34"
+      "symbol": "NSE:GAIL",
+      "closePrice": 175.5,
+      "vahPrice": 173.7,
+      "distance": "1.04"
     },
     {
-      "symbol": "NSE:VEDL",
-      "closePrice": 272.25,
-      "vahPrice": 271.5,
-      "distance": "0.28"
+      "symbol": "NSE:GLENMARK",
+      "closePrice": 2465,
+      "vahPrice": 2446,
+      "distance": "0.78"
     },
     {
-      "symbol": "NSE:DEVYANI",
-      "closePrice": 139.32,
-      "vahPrice": 138.3,
+      "symbol": "NSE:GNFC",
+      "closePrice": 597.75,
+      "vahPrice": 595.5,
+      "distance": "0.38"
+    },
+    {
+      "symbol": "NSE:GRANULES",
+      "closePrice": 867.05,
+      "vahPrice": 856,
+      "distance": "1.29"
+    },
+    {
+      "symbol": "NSE:HFCL",
+      "closePrice": 243.01,
+      "vahPrice": 231.5,
+      "distance": "4.97"
+    },
+    {
+      "symbol": "NSE:IDEA",
+      "closePrice": 15.62,
+      "vahPrice": 15.15,
+      "distance": "3.10"
+    },
+    {
+      "symbol": "NSE:LALPATHLAB",
+      "closePrice": 1902,
+      "vahPrice": 1888,
       "distance": "0.74"
     },
     {
-      "symbol": "NSE:PAYTM",
-      "closePrice": 1665,
-      "vahPrice": 1632,
-      "distance": "2.02"
+      "symbol": "NSE:MCX",
+      "closePrice": 3329,
+      "vahPrice": 3250,
+      "distance": "2.43"
     },
     {
-      "symbol": "NSE:SOBHA",
-      "closePrice": 1273,
-      "vahPrice": 1264,
-      "distance": "0.71"
+      "symbol": "NSE:NCC",
+      "closePrice": 150.97,
+      "vahPrice": 147.8,
+      "distance": "2.14"
     },
     {
-      "symbol": "NSE:YESBANK",
-      "closePrice": 22.48,
-      "vahPrice": 22.45,
-      "distance": "0.13"
+      "symbol": "NSE:NYKAA",
+      "closePrice": 335.5,
+      "vahPrice": 335,
+      "distance": "0.15"
+    },
+    {
+      "symbol": "NSE:POWERGRID",
+      "closePrice": 267,
+      "vahPrice": 266.5,
+      "distance": "0.19"
+    },
+    {
+      "symbol": "NSE:SBICARD",
+      "closePrice": 672,
+      "vahPrice": 666.5,
+      "distance": "0.83"
+    },
+    {
+      "symbol": "NSE:ZYDUSLIFE",
+      "closePrice": 1154.5,
+      "vahPrice": 1137,
+      "distance": "1.54"
+    },
+    {
+      "symbol": "NSE:BLUESTARCO",
+      "closePrice": 1499,
+      "vahPrice": 1496,
+      "distance": "0.20"
+    },
+    {
+      "symbol": "NSE:CEATLTD",
+      "closePrice": 3334.1,
+      "vahPrice": 3334,
+      "distance": "0.00"
+    },
+    {
+      "symbol": "NSE:SUPREMEIND",
+      "closePrice": 3594,
+      "vahPrice": 3512,
+      "distance": "2.33"
     }
   ],
   "gapDownCandidates": [
     {
+      "symbol": "NSE:NIFTY",
+      "closePrice": 23759.4,
+      "valPrice": 23930,
+      "distance": "0.71"
+    },
+    {
       "symbol": "NSE:BANKNIFTY",
-      "closePrice": 57369.65,
-      "valPrice": 57490,
-      "distance": "0.21"
-    },
-    {
-      "symbol": "NSE:AARTIIND",
-      "closePrice": 493.25,
-      "valPrice": 501.5,
-      "distance": "1.65"
-    },
-    {
-      "symbol": "NSE:ABB",
-      "closePrice": 7414,
-      "valPrice": 7415,
-      "distance": "0.01"
-    },
-    {
-      "symbol": "NSE:ADANIPOWER",
-      "closePrice": 206.89,
-      "valPrice": 208,
-      "distance": "0.53"
-    },
-    {
-      "symbol": "NSE:APOLLOHOSP",
-      "closePrice": 8649,
-      "valPrice": 8690,
-      "distance": "0.47"
-    },
-    {
-      "symbol": "NSE:APOLLOTYRE",
-      "closePrice": 428.25,
-      "valPrice": 434.5,
-      "distance": "1.44"
-    },
-    {
-      "symbol": "NSE:ATUL",
-      "closePrice": 6376,
-      "valPrice": 6450,
-      "distance": "1.15"
-    },
-    {
-      "symbol": "NSE:AWL",
-      "closePrice": 187.9,
-      "valPrice": 191,
-      "distance": "1.62"
-    },
-    {
-      "symbol": "NSE:BAJAJ_AUTO",
-      "closePrice": 11911,
-      "valPrice": 11970,
-      "distance": "0.49"
-    },
-    {
-      "symbol": "NSE:BANDHANBNK",
-      "closePrice": 164.79,
-      "valPrice": 164.8,
-      "distance": "0.01"
-    },
-    {
-      "symbol": "NSE:BANKBARODA",
-      "closePrice": 239.5,
-      "valPrice": 241,
-      "distance": "0.62"
-    },
-    {
-      "symbol": "NSE:BATAINDIA",
-      "closePrice": 673,
-      "valPrice": 674,
-      "distance": "0.15"
-    },
-    {
-      "symbol": "NSE:BEL",
-      "closePrice": 407.05,
-      "valPrice": 407.5,
-      "distance": "0.11"
-    },
-    {
-      "symbol": "NSE:BERGEPAINT",
-      "closePrice": 484.95,
-      "valPrice": 487.5,
-      "distance": "0.52"
-    },
-    {
-      "symbol": "NSE:BHARTIARTL",
-      "closePrice": 1849.5,
-      "valPrice": 1864,
-      "distance": "0.78"
-    },
-    {
-      "symbol": "NSE:BIOCON",
-      "closePrice": 396.95,
-      "valPrice": 401.5,
-      "distance": "1.13"
-    },
-    {
-      "symbol": "NSE:BPCL",
-      "closePrice": 317.05,
-      "valPrice": 318.5,
-      "distance": "0.46"
-    },
-    {
-      "symbol": "NSE:BRITANNIA",
-      "closePrice": 5098,
-      "valPrice": 5115,
-      "distance": "0.33"
-    },
-    {
-      "symbol": "NSE:BSOFT",
-      "closePrice": 288.5,
-      "valPrice": 292,
-      "distance": "1.20"
-    },
-    {
-      "symbol": "NSE:CANBK",
-      "closePrice": 126.13,
-      "valPrice": 127,
-      "distance": "0.69"
-    },
-    {
-      "symbol": "NSE:CHOLAFIN",
-      "closePrice": 1830,
-      "valPrice": 1832,
-      "distance": "0.11"
-    },
-    {
-      "symbol": "NSE:CIPLA",
-      "closePrice": 1384,
-      "valPrice": 1393,
+      "closePrice": 57059.3,
+      "valPrice": 57430,
       "distance": "0.65"
     },
     {
-      "symbol": "NSE:COALINDIA",
-      "closePrice": 413.9,
-      "valPrice": 418,
-      "distance": "0.98"
+      "symbol": "NSE:NIFTY1!",
+      "closePrice": 23880,
+      "valPrice": 24050,
+      "distance": "0.71"
     },
     {
-      "symbol": "NSE:COLPAL",
-      "closePrice": 1835.4,
-      "valPrice": 1849,
-      "distance": "0.74"
-    },
-    {
-      "symbol": "NSE:CONCOR",
-      "closePrice": 506.7,
-      "valPrice": 508,
+      "symbol": "OANDA:XAUUSD",
+      "closePrice": 4409.665,
+      "valPrice": 4421,
       "distance": "0.26"
     },
     {
-      "symbol": "NSE:CUMMINSIND",
-      "closePrice": 5045,
-      "valPrice": 5080,
-      "distance": "0.69"
+      "symbol": "COINBASE:BTCUSD",
+      "closePrice": 79377.23,
+      "valPrice": 79680,
+      "distance": "0.38"
     },
     {
-      "symbol": "NSE:DALBHARAT",
-      "closePrice": 1752,
-      "valPrice": 1768,
-      "distance": "0.90"
+      "symbol": "NSE:AARTIIND",
+      "closePrice": 491.25,
+      "valPrice": 493,
+      "distance": "0.35"
     },
     {
-      "symbol": "NSE:DEEPAKNTR",
-      "closePrice": 1716,
-      "valPrice": 1726,
-      "distance": "0.58"
-    },
-    {
-      "symbol": "NSE:DIVISLAB",
-      "closePrice": 9121,
-      "valPrice": 9210,
-      "distance": "0.97"
-    },
-    {
-      "symbol": "NSE:DIXON",
-      "closePrice": 14160,
-      "valPrice": 14520,
-      "distance": "2.48"
-    },
-    {
-      "symbol": "NSE:DRREDDY",
-      "closePrice": 1155.7,
-      "valPrice": 1158,
-      "distance": "0.20"
-    },
-    {
-      "symbol": "NSE:FEDERALBNK",
-      "closePrice": 342.2,
-      "valPrice": 344.5,
-      "distance": "0.67"
-    },
-    {
-      "symbol": "NSE:GAIL",
-      "closePrice": 173,
-      "valPrice": 173.1,
-      "distance": "0.06"
-    },
-    {
-      "symbol": "NSE:GODREJPROP",
-      "closePrice": 1981.7,
-      "valPrice": 1990,
-      "distance": "0.42"
-    },
-    {
-      "symbol": "NSE:HAVELLS",
-      "closePrice": 1156.4,
-      "valPrice": 1193,
-      "distance": "3.07"
-    },
-    {
-      "symbol": "NSE:HCLTECH",
-      "closePrice": 1293.6,
-      "valPrice": 1312,
-      "distance": "1.40"
-    },
-    {
-      "symbol": "NSE:HUDCO",
-      "closePrice": 180.2,
-      "valPrice": 180.6,
-      "distance": "0.22"
-    },
-    {
-      "symbol": "NSE:ICICIBANK",
-      "closePrice": 1423.6,
-      "valPrice": 1435,
-      "distance": "0.79"
-    },
-    {
-      "symbol": "NSE:ICICIGI",
-      "closePrice": 1510,
-      "valPrice": 1514,
-      "distance": "0.26"
-    },
-    {
-      "symbol": "NSE:ICICIPRULI",
-      "closePrice": 494.3,
-      "valPrice": 494.5,
-      "distance": "0.04"
-    },
-    {
-      "symbol": "NSE:IEX",
-      "closePrice": 118.91,
-      "valPrice": 119.1,
-      "distance": "0.16"
-    },
-    {
-      "symbol": "NSE:INDHOTEL",
-      "closePrice": 719.9,
-      "valPrice": 722,
-      "distance": "0.29"
-    },
-    {
-      "symbol": "NSE:INDIAMART",
-      "closePrice": 1727.3,
-      "valPrice": 1730,
-      "distance": "0.16"
-    },
-    {
-      "symbol": "NSE:KARURVYSYA",
-      "closePrice": 349.1,
-      "valPrice": 351,
-      "distance": "0.54"
-    },
-    {
-      "symbol": "NSE:KEI",
-      "closePrice": 4853.5,
-      "valPrice": 5260,
-      "distance": "7.73"
-    },
-    {
-      "symbol": "NSE:KPITTECH",
-      "closePrice": 575.6,
-      "valPrice": 581.5,
-      "distance": "1.01"
-    },
-    {
-      "symbol": "NSE:LALPATHLAB",
-      "closePrice": 1895,
-      "valPrice": 1916,
-      "distance": "1.10"
-    },
-    {
-      "symbol": "NSE:LT",
-      "closePrice": 3988,
-      "valPrice": 3990,
-      "distance": "0.05"
-    },
-    {
-      "symbol": "NSE:LUPIN",
-      "closePrice": 2108.7,
-      "valPrice": 2140,
-      "distance": "1.46"
-    },
-    {
-      "symbol": "NSE:MAHABANK",
-      "closePrice": 85.75,
-      "valPrice": 85.8,
-      "distance": "0.06"
-    },
-    {
-      "symbol": "NSE:MARICO",
-      "closePrice": 816,
-      "valPrice": 820,
-      "distance": "0.49"
-    },
-    {
-      "symbol": "NSE:MARUTI",
-      "closePrice": 12680,
-      "valPrice": 12840,
-      "distance": "1.25"
-    },
-    {
-      "symbol": "NSE:MPHASIS",
-      "closePrice": 2423.5,
-      "valPrice": 2440,
+      "symbol": "NSE:ABB",
+      "closePrice": 7350,
+      "valPrice": 7400,
       "distance": "0.68"
     },
     {
-      "symbol": "NSE:MRF",
-      "closePrice": 130000,
-      "valPrice": 130250,
-      "distance": "0.19"
+      "symbol": "NSE:ABCAPITAL",
+      "closePrice": 400.35,
+      "valPrice": 403.5,
+      "distance": "0.78"
     },
     {
-      "symbol": "NSE:MUTHOOTFIN",
-      "closePrice": 2926,
-      "valPrice": 2944,
-      "distance": "0.61"
+      "symbol": "NSE:ACC",
+      "closePrice": 1268.7,
+      "valPrice": 1279,
+      "distance": "0.81"
     },
     {
-      "symbol": "NSE:NESTLEIND",
-      "closePrice": 1406.5,
-      "valPrice": 1411,
-      "distance": "0.32"
-    },
-    {
-      "symbol": "NSE:NHPC",
-      "closePrice": 76.28,
-      "valPrice": 76.4,
-      "distance": "0.16"
-    },
-    {
-      "symbol": "NSE:NLCINDIA",
-      "closePrice": 273.3,
-      "valPrice": 274.5,
-      "distance": "0.44"
-    },
-    {
-      "symbol": "NSE:NYKAA",
-      "closePrice": 333,
-      "valPrice": 333.5,
-      "distance": "0.15"
-    },
-    {
-      "symbol": "NSE:OBEROIRLTY",
-      "closePrice": 1875,
-      "valPrice": 1890,
+      "symbol": "NSE:ADANIENSOL",
+      "closePrice": 1390,
+      "valPrice": 1401,
       "distance": "0.79"
     },
     {
-      "symbol": "NSE:OFSS",
-      "closePrice": 12058,
-      "valPrice": 12090,
-      "distance": "0.26"
+      "symbol": "NSE:ADANIGREEN",
+      "closePrice": 1286,
+      "valPrice": 1291,
+      "distance": "0.39"
     },
     {
-      "symbol": "NSE:ONGC",
-      "closePrice": 234.65,
-      "valPrice": 235,
-      "distance": "0.15"
+      "symbol": "NSE:ADANIPORTS",
+      "closePrice": 1690,
+      "valPrice": 1704,
+      "distance": "0.82"
     },
     {
-      "symbol": "NSE:PETRONET",
-      "closePrice": 288.7,
-      "valPrice": 290.5,
-      "distance": "0.62"
+      "symbol": "NSE:ADANIPOWER",
+      "closePrice": 204.6,
+      "valPrice": 207,
+      "distance": "1.16"
     },
     {
-      "symbol": "NSE:POLYCAB",
-      "closePrice": 8317.5,
-      "valPrice": 8825,
-      "distance": "5.75"
-    },
-    {
-      "symbol": "NSE:POWERGRID",
-      "closePrice": 266.25,
-      "valPrice": 267,
-      "distance": "0.28"
-    },
-    {
-      "symbol": "NSE:SBIN",
-      "closePrice": 1018.6,
-      "valPrice": 1026,
-      "distance": "0.72"
-    },
-    {
-      "symbol": "NSE:SIEMENS",
-      "closePrice": 4000,
-      "valPrice": 4015,
+      "symbol": "NSE:ALKEM",
+      "closePrice": 5141,
+      "valPrice": 5160,
       "distance": "0.37"
     },
     {
-      "symbol": "NSE:SRF",
-      "closePrice": 2549.9,
-      "valPrice": 2610,
-      "distance": "2.30"
-    },
-    {
-      "symbol": "NSE:SUNPHARMA",
-      "closePrice": 1899.1,
-      "valPrice": 1916,
-      "distance": "0.88"
-    },
-    {
-      "symbol": "NSE:SYNGENE",
-      "closePrice": 395.15,
-      "valPrice": 398,
-      "distance": "0.72"
-    },
-    {
-      "symbol": "NSE:TATACHEM",
-      "closePrice": 624.7,
-      "valPrice": 633.5,
-      "distance": "1.39"
-    },
-    {
-      "symbol": "NSE:TATACONSUM",
-      "closePrice": 1011.8,
-      "valPrice": 1016,
-      "distance": "0.41"
-    },
-    {
-      "symbol": "NSE:TCS",
-      "closePrice": 2309.2,
-      "valPrice": 2326,
-      "distance": "0.72"
-    },
-    {
-      "symbol": "NSE:TECHM",
-      "closePrice": 1587.7,
-      "valPrice": 1596,
-      "distance": "0.52"
-    },
-    {
-      "symbol": "NSE:TORNTPHARM",
-      "closePrice": 4845,
-      "valPrice": 4905,
-      "distance": "1.22"
-    },
-    {
-      "symbol": "NSE:TVSMOTOR",
-      "closePrice": 4142.4,
-      "valPrice": 4168,
-      "distance": "0.61"
-    },
-    {
-      "symbol": "NSE:UBL",
-      "closePrice": 1280,
-      "valPrice": 1282,
-      "distance": "0.16"
-    },
-    {
-      "symbol": "NSE:ZYDUSLIFE",
-      "closePrice": 1124.2,
-      "valPrice": 1135,
-      "distance": "0.95"
-    },
-    {
-      "symbol": "NSE:BALKRISIND",
-      "closePrice": 2285,
-      "valPrice": 2328,
-      "distance": "1.85"
-    },
-    {
-      "symbol": "NSE:CEATLTD",
-      "closePrice": 3333,
-      "valPrice": 3344,
-      "distance": "0.33"
-    },
-    {
-      "symbol": "NSE:FORTIS",
-      "closePrice": 905.8,
-      "valPrice": 911.5,
-      "distance": "0.63"
-    },
-    {
-      "symbol": "NSE:HINDPETRO",
-      "closePrice": 357.85,
-      "valPrice": 358,
-      "distance": "0.04"
-    },
-    {
-      "symbol": "NSE:LODHA",
-      "closePrice": 1219,
-      "valPrice": 1220,
-      "distance": "0.08"
-    },
-    {
-      "symbol": "NSE:MAXHEALTH",
-      "closePrice": 983.9,
-      "valPrice": 987.5,
-      "distance": "0.36"
-    },
-    {
-      "symbol": "NSE:PRESTIGE",
-      "closePrice": 1587.8,
-      "valPrice": 1610,
+      "symbol": "NSE:AMBUJACEM",
+      "closePrice": 399.4,
+      "valPrice": 405,
       "distance": "1.38"
     },
     {
-      "symbol": "NSE:SOUTHBANK",
-      "closePrice": 47.35,
-      "valPrice": 47.4,
-      "distance": "0.11"
+      "symbol": "NSE:APOLLOTYRE",
+      "closePrice": 420.4,
+      "valPrice": 429,
+      "distance": "2.00"
     },
     {
-      "symbol": "NSE:SUZLON",
-      "closePrice": 45.36,
-      "valPrice": 46,
+      "symbol": "NSE:ASIANPAINT",
+      "closePrice": 2500,
+      "valPrice": 2529,
+      "distance": "1.15"
+    },
+    {
+      "symbol": "NSE:ATGL",
+      "closePrice": 603.05,
+      "valPrice": 613,
+      "distance": "1.62"
+    },
+    {
+      "symbol": "NSE:ATUL",
+      "closePrice": 6313.5,
+      "valPrice": 6380,
+      "distance": "1.04"
+    },
+    {
+      "symbol": "NSE:AUBANK",
+      "closePrice": 1057.6,
+      "valPrice": 1066,
+      "distance": "0.79"
+    },
+    {
+      "symbol": "NSE:AXISBANK",
+      "closePrice": 1266,
+      "valPrice": 1267,
+      "distance": "0.08"
+    },
+    {
+      "symbol": "NSE:BAJAJ_AUTO",
+      "closePrice": 11800,
+      "valPrice": 11890,
+      "distance": "0.76"
+    },
+    {
+      "symbol": "NSE:BAJAJFINSV",
+      "closePrice": 1942.2,
+      "valPrice": 1971,
+      "distance": "1.46"
+    },
+    {
+      "symbol": "NSE:BANDHANBNK",
+      "closePrice": 164.05,
+      "valPrice": 164.7,
+      "distance": "0.39"
+    },
+    {
+      "symbol": "NSE:BANKBARODA",
+      "closePrice": 236.5,
+      "valPrice": 239.5,
+      "distance": "1.25"
+    },
+    {
+      "symbol": "NSE:BATAINDIA",
+      "closePrice": 669,
+      "valPrice": 675.5,
+      "distance": "0.96"
+    },
+    {
+      "symbol": "NSE:BDL",
+      "closePrice": 1240,
+      "valPrice": 1262,
+      "distance": "1.74"
+    },
+    {
+      "symbol": "NSE:BEL",
+      "closePrice": 405.8,
+      "valPrice": 407.5,
+      "distance": "0.42"
+    },
+    {
+      "symbol": "NSE:BERGEPAINT",
+      "closePrice": 483.6,
+      "valPrice": 485.5,
+      "distance": "0.39"
+    },
+    {
+      "symbol": "NSE:BHARTIARTL",
+      "closePrice": 1847.2,
+      "valPrice": 1855,
+      "distance": "0.42"
+    },
+    {
+      "symbol": "NSE:BHEL",
+      "closePrice": 421.45,
+      "valPrice": 432,
+      "distance": "2.44"
+    },
+    {
+      "symbol": "NSE:BIOCON",
+      "closePrice": 391.2,
+      "valPrice": 400,
+      "distance": "2.20"
+    },
+    {
+      "symbol": "NSE:BPCL",
+      "closePrice": 311.5,
+      "valPrice": 317.5,
+      "distance": "1.89"
+    },
+    {
+      "symbol": "NSE:BRITANNIA",
+      "closePrice": 5010.5,
+      "valPrice": 5115,
+      "distance": "2.04"
+    },
+    {
+      "symbol": "NSE:BSOFT",
+      "closePrice": 282.2,
+      "valPrice": 288.5,
+      "distance": "2.18"
+    },
+    {
+      "symbol": "NSE:CANBK",
+      "closePrice": 124.28,
+      "valPrice": 126.4,
+      "distance": "1.68"
+    },
+    {
+      "symbol": "NSE:CANFINHOME",
+      "closePrice": 805,
+      "valPrice": 806.5,
+      "distance": "0.19"
+    },
+    {
+      "symbol": "NSE:CHAMBLFERT",
+      "closePrice": 418.05,
+      "valPrice": 419.5,
+      "distance": "0.35"
+    },
+    {
+      "symbol": "NSE:CHOLAFIN",
+      "closePrice": 1824.8,
+      "valPrice": 1831,
+      "distance": "0.34"
+    },
+    {
+      "symbol": "NSE:COFORGE",
+      "closePrice": 1934,
+      "valPrice": 1968,
+      "distance": "1.73"
+    },
+    {
+      "symbol": "NSE:COLPAL",
+      "closePrice": 1808.1,
+      "valPrice": 1834,
+      "distance": "1.41"
+    },
+    {
+      "symbol": "NSE:CONCOR",
+      "closePrice": 503,
+      "valPrice": 503.5,
+      "distance": "0.10"
+    },
+    {
+      "symbol": "NSE:CROMPTON",
+      "closePrice": 230.15,
+      "valPrice": 232,
+      "distance": "0.80"
+    },
+    {
+      "symbol": "NSE:CUMMINSIND",
+      "closePrice": 5019,
+      "valPrice": 5025,
+      "distance": "0.12"
+    },
+    {
+      "symbol": "NSE:DABUR",
+      "closePrice": 375.2,
+      "valPrice": 379.5,
+      "distance": "1.13"
+    },
+    {
+      "symbol": "NSE:DALBHARAT",
+      "closePrice": 1719.8,
+      "valPrice": 1757,
+      "distance": "2.12"
+    },
+    {
+      "symbol": "NSE:DEEPAKNTR",
+      "closePrice": 1641.6,
+      "valPrice": 1712,
+      "distance": "4.11"
+    },
+    {
+      "symbol": "NSE:DELHIVERY",
+      "closePrice": 452.5,
+      "valPrice": 459,
+      "distance": "1.42"
+    },
+    {
+      "symbol": "NSE:DLF",
+      "closePrice": 676,
+      "valPrice": 683.5,
+      "distance": "1.10"
+    },
+    {
+      "symbol": "NSE:DRREDDY",
+      "closePrice": 1150,
+      "valPrice": 1159,
+      "distance": "0.78"
+    },
+    {
+      "symbol": "NSE:ESCORTS",
+      "closePrice": 2957.9,
+      "valPrice": 2962,
+      "distance": "0.14"
+    },
+    {
+      "symbol": "NSE:FEDERALBNK",
+      "closePrice": 341.2,
+      "valPrice": 342.5,
+      "distance": "0.38"
+    },
+    {
+      "symbol": "NSE:GMRINFRA",
+      "closePrice": 95.76,
+      "valPrice": 97.1,
+      "distance": "1.38"
+    },
+    {
+      "symbol": "NSE:GODREJCP",
+      "closePrice": 859.4,
+      "valPrice": 872,
+      "distance": "1.44"
+    },
+    {
+      "symbol": "NSE:GODREJPROP",
+      "closePrice": 1910.1,
+      "valPrice": 1984,
+      "distance": "3.72"
+    },
+    {
+      "symbol": "NSE:GRASIM",
+      "closePrice": 3305,
+      "valPrice": 3310,
+      "distance": "0.15"
+    },
+    {
+      "symbol": "NSE:GRSE",
+      "closePrice": 2506,
+      "valPrice": 2534,
+      "distance": "1.10"
+    },
+    {
+      "symbol": "NSE:HAL",
+      "closePrice": 4840,
+      "valPrice": 4890,
+      "distance": "1.02"
+    },
+    {
+      "symbol": "NSE:HCLTECH",
+      "closePrice": 1281.5,
+      "valPrice": 1300,
+      "distance": "1.42"
+    },
+    {
+      "symbol": "NSE:HDFCBANK",
+      "closePrice": 710.35,
+      "valPrice": 711.5,
+      "distance": "0.16"
+    },
+    {
+      "symbol": "NSE:HDFCLIFE",
+      "closePrice": 536.65,
+      "valPrice": 543,
+      "distance": "1.17"
+    },
+    {
+      "symbol": "NSE:HINDALCO",
+      "closePrice": 1006,
+      "valPrice": 1007,
+      "distance": "0.10"
+    },
+    {
+      "symbol": "NSE:HINDCOPPER",
+      "closePrice": 509.25,
+      "valPrice": 519,
+      "distance": "1.88"
+    },
+    {
+      "symbol": "NSE:HUDCO",
+      "closePrice": 179.29,
+      "valPrice": 180.2,
+      "distance": "0.50"
+    },
+    {
+      "symbol": "NSE:ICICIBANK",
+      "closePrice": 1423.5,
+      "valPrice": 1427,
+      "distance": "0.25"
+    },
+    {
+      "symbol": "NSE:ICICIGI",
+      "closePrice": 1503.6,
+      "valPrice": 1510,
+      "distance": "0.42"
+    },
+    {
+      "symbol": "NSE:ICICIPRULI",
+      "closePrice": 475,
+      "valPrice": 495,
+      "distance": "4.04"
+    },
+    {
+      "symbol": "NSE:IDFCFIRSTB",
+      "closePrice": 86.55,
+      "valPrice": 86.7,
+      "distance": "0.17"
+    },
+    {
+      "symbol": "NSE:IEX",
+      "closePrice": 117.45,
+      "valPrice": 119.3,
+      "distance": "1.55"
+    },
+    {
+      "symbol": "NSE:INDHOTEL",
+      "closePrice": 714.1,
+      "valPrice": 718.5,
+      "distance": "0.61"
+    },
+    {
+      "symbol": "NSE:INDIACEM",
+      "closePrice": 356.1,
+      "valPrice": 359,
+      "distance": "0.81"
+    },
+    {
+      "symbol": "NSE:INDIAMART",
+      "closePrice": 1706,
+      "valPrice": 1730,
       "distance": "1.39"
     },
     {
+      "symbol": "NSE:INDIGO",
+      "closePrice": 4982,
+      "valPrice": 4990,
+      "distance": "0.16"
+    },
+    {
+      "symbol": "NSE:INDUSINDBK",
+      "closePrice": 995,
+      "valPrice": 1000,
+      "distance": "0.50"
+    },
+    {
+      "symbol": "NSE:INFY",
+      "closePrice": 1087.4,
+      "valPrice": 1128,
+      "distance": "3.60"
+    },
+    {
+      "symbol": "NSE:IOB",
+      "closePrice": 33.11,
+      "valPrice": 33.25,
+      "distance": "0.42"
+    },
+    {
+      "symbol": "NSE:IOC",
+      "closePrice": 135.97,
+      "valPrice": 137.3,
+      "distance": "0.97"
+    },
+    {
+      "symbol": "NSE:IRCTC",
+      "closePrice": 474.15,
+      "valPrice": 475.5,
+      "distance": "0.28"
+    },
+    {
+      "symbol": "NSE:IREDA",
+      "closePrice": 112.95,
+      "valPrice": 113.7,
+      "distance": "0.66"
+    },
+    {
+      "symbol": "NSE:IRFC",
+      "closePrice": 83.04,
+      "valPrice": 83.1,
+      "distance": "0.07"
+    },
+    {
+      "symbol": "NSE:ITC",
+      "closePrice": 263.85,
+      "valPrice": 264,
+      "distance": "0.06"
+    },
+    {
+      "symbol": "NSE:JIOFIN",
+      "closePrice": 234.8,
+      "valPrice": 238.5,
+      "distance": "1.55"
+    },
+    {
+      "symbol": "NSE:JSWENERGY",
+      "closePrice": 530.8,
+      "valPrice": 536,
+      "distance": "0.97"
+    },
+    {
+      "symbol": "NSE:JUBLFOOD",
+      "closePrice": 475.95,
+      "valPrice": 482,
+      "distance": "1.26"
+    },
+    {
+      "symbol": "NSE:KARURVYSYA",
+      "closePrice": 342.05,
+      "valPrice": 349.5,
+      "distance": "2.13"
+    },
+    {
+      "symbol": "NSE:KEI",
+      "closePrice": 4699,
+      "valPrice": 4860,
+      "distance": "3.31"
+    },
+    {
+      "symbol": "NSE:KOTAKBANK",
+      "closePrice": 422.1,
+      "valPrice": 423.5,
+      "distance": "0.33"
+    },
+    {
+      "symbol": "NSE:KPITTECH",
+      "closePrice": 560.45,
+      "valPrice": 579.5,
+      "distance": "3.29"
+    },
+    {
+      "symbol": "NSE:LTF",
+      "closePrice": 312.8,
+      "valPrice": 315.5,
+      "distance": "0.86"
+    },
+    {
+      "symbol": "NSE:LICHSGFIN",
+      "closePrice": 552,
+      "valPrice": 566,
+      "distance": "2.47"
+    },
+    {
+      "symbol": "NSE:LTIM",
+      "closePrice": 4452.1,
+      "valPrice": 4560,
+      "distance": "2.37"
+    },
+    {
+      "symbol": "NSE:LT",
+      "closePrice": 3970.2,
+      "valPrice": 3979,
+      "distance": "0.22"
+    },
+    {
+      "symbol": "NSE:LUPIN",
+      "closePrice": 2103.8,
+      "valPrice": 2116,
+      "distance": "0.58"
+    },
+    {
+      "symbol": "NSE:M_M",
+      "closePrice": 3157,
+      "valPrice": 3160,
+      "distance": "0.09"
+    },
+    {
+      "symbol": "NSE:M_MFIN",
+      "closePrice": 372.35,
+      "valPrice": 373.5,
+      "distance": "0.31"
+    },
+    {
+      "symbol": "NSE:MAHABANK",
+      "closePrice": 84.8,
+      "valPrice": 86.2,
+      "distance": "1.62"
+    },
+    {
+      "symbol": "NSE:MANAPPURAM",
+      "closePrice": 325,
+      "valPrice": 339,
+      "distance": "4.13"
+    },
+    {
+      "symbol": "NSE:MARICO",
+      "closePrice": 802.5,
+      "valPrice": 818,
+      "distance": "1.89"
+    },
+    {
+      "symbol": "NSE:MAZDOCK",
+      "closePrice": 2443,
+      "valPrice": 2488,
+      "distance": "1.81"
+    },
+    {
+      "symbol": "NSE:METROPOLIS",
+      "closePrice": 579.05,
+      "valPrice": 587.5,
+      "distance": "1.44"
+    },
+    {
+      "symbol": "NSE:MPHASIS",
+      "closePrice": 2362,
+      "valPrice": 2430,
+      "distance": "2.80"
+    },
+    {
+      "symbol": "NSE:MRF",
+      "closePrice": 128845,
+      "valPrice": 130250,
+      "distance": "1.08"
+    },
+    {
+      "symbol": "NSE:MUTHOOTFIN",
+      "closePrice": 2891.9,
+      "valPrice": 2916,
+      "distance": "0.83"
+    },
+    {
+      "symbol": "NSE:NATIONALUM",
+      "closePrice": 368.6,
+      "valPrice": 374,
+      "distance": "1.44"
+    },
+    {
+      "symbol": "NSE:NBCC",
+      "closePrice": 85.8,
+      "valPrice": 86.4,
+      "distance": "0.69"
+    },
+    {
+      "symbol": "NSE:NESTLEIND",
+      "closePrice": 1399.4,
+      "valPrice": 1406,
+      "distance": "0.47"
+    },
+    {
+      "symbol": "NSE:NHPC",
+      "closePrice": 75.68,
+      "valPrice": 76.3,
+      "distance": "0.81"
+    },
+    {
+      "symbol": "NSE:NLCINDIA",
+      "closePrice": 269.25,
+      "valPrice": 272.5,
+      "distance": "1.19"
+    },
+    {
+      "symbol": "NSE:NMDC",
+      "closePrice": 84.31,
+      "valPrice": 84.5,
+      "distance": "0.22"
+    },
+    {
+      "symbol": "NSE:NTPC",
+      "closePrice": 330.75,
+      "valPrice": 331,
+      "distance": "0.08"
+    },
+    {
+      "symbol": "NSE:OBEROIRLTY",
+      "closePrice": 1859.9,
+      "valPrice": 1896,
+      "distance": "1.90"
+    },
+    {
+      "symbol": "NSE:OFSS",
+      "closePrice": 11740,
+      "valPrice": 12040,
+      "distance": "2.49"
+    },
+    {
+      "symbol": "NSE:ONGC",
+      "closePrice": 233.35,
+      "valPrice": 234.5,
+      "distance": "0.49"
+    },
+    {
+      "symbol": "NSE:PAGEIND",
+      "closePrice": 35800,
+      "valPrice": 35940,
+      "distance": "0.39"
+    },
+    {
+      "symbol": "NSE:PERSISTENT",
+      "closePrice": 5568,
+      "valPrice": 5655,
+      "distance": "1.54"
+    },
+    {
+      "symbol": "NSE:PIDILITIND",
+      "closePrice": 1593,
+      "valPrice": 1628,
+      "distance": "2.15"
+    },
+    {
+      "symbol": "NSE:PIIND",
+      "closePrice": 2430,
+      "valPrice": 2460,
+      "distance": "1.22"
+    },
+    {
+      "symbol": "NSE:PNB",
+      "closePrice": 116,
+      "valPrice": 117,
+      "distance": "0.85"
+    },
+    {
+      "symbol": "NSE:POLYCAB",
+      "closePrice": 8245.5,
+      "valPrice": 8280,
+      "distance": "0.42"
+    },
+    {
+      "symbol": "NSE:PVRINOX",
+      "closePrice": 1154.4,
+      "valPrice": 1220,
+      "distance": "5.38"
+    },
+    {
+      "symbol": "NSE:RAMCOCEM",
+      "closePrice": 872.4,
+      "valPrice": 882,
+      "distance": "1.09"
+    },
+    {
+      "symbol": "NSE:RELIANCE",
+      "closePrice": 1308,
+      "valPrice": 1322,
+      "distance": "1.06"
+    },
+    {
+      "symbol": "NSE:RVNL",
+      "closePrice": 210.2,
+      "valPrice": 211.5,
+      "distance": "0.61"
+    },
+    {
+      "symbol": "NSE:SAIL",
+      "closePrice": 187.8,
+      "valPrice": 196,
+      "distance": "4.18"
+    },
+    {
+      "symbol": "NSE:SBILIFE",
+      "closePrice": 1732.1,
+      "valPrice": 1742,
+      "distance": "0.57"
+    },
+    {
+      "symbol": "NSE:SBIN",
+      "closePrice": 1005,
+      "valPrice": 1021,
+      "distance": "1.57"
+    },
+    {
+      "symbol": "NSE:SHREECEM",
+      "closePrice": 23650,
+      "valPrice": 23930,
+      "distance": "1.17"
+    },
+    {
+      "symbol": "NSE:SHRIRAMFIN",
+      "closePrice": 1035,
+      "valPrice": 1041,
+      "distance": "0.58"
+    },
+    {
+      "symbol": "NSE:SIEMENS",
+      "closePrice": 3929.8,
+      "valPrice": 3990,
+      "distance": "1.51"
+    },
+    {
+      "symbol": "NSE:SRF",
+      "closePrice": 2538,
+      "valPrice": 2550,
+      "distance": "0.47"
+    },
+    {
+      "symbol": "NSE:SUNPHARMA",
+      "closePrice": 1890,
+      "valPrice": 1900,
+      "distance": "0.53"
+    },
+    {
+      "symbol": "NSE:SUNTV",
+      "closePrice": 452.55,
+      "valPrice": 470,
+      "distance": "3.71"
+    },
+    {
+      "symbol": "NSE:SYNGENE",
+      "closePrice": 389,
+      "valPrice": 395.5,
+      "distance": "1.64"
+    },
+    {
+      "symbol": "NSE:TATACHEM",
+      "closePrice": 613.1,
+      "valPrice": 625,
+      "distance": "1.90"
+    },
+    {
+      "symbol": "NSE:TATAMOTORS",
+      "closePrice": 307.4,
+      "valPrice": 312,
+      "distance": "1.47"
+    },
+    {
+      "symbol": "NSE:TATAPOWER",
+      "closePrice": 365,
+      "valPrice": 365.5,
+      "distance": "0.14"
+    },
+    {
+      "symbol": "NSE:TCS",
+      "closePrice": 2274.1,
+      "valPrice": 2308,
+      "distance": "1.47"
+    },
+    {
+      "symbol": "NSE:TECHM",
+      "closePrice": 1557,
+      "valPrice": 1593,
+      "distance": "2.26"
+    },
+    {
+      "symbol": "NSE:TITAN",
+      "closePrice": 4983,
+      "valPrice": 4990,
+      "distance": "0.14"
+    },
+    {
+      "symbol": "NSE:TORNTPOWER",
+      "closePrice": 1275,
+      "valPrice": 1282,
+      "distance": "0.55"
+    },
+    {
+      "symbol": "NSE:TRENT",
+      "closePrice": 2811.3,
+      "valPrice": 2852,
+      "distance": "1.43"
+    },
+    {
+      "symbol": "NSE:TVSMOTOR",
+      "closePrice": 4142,
+      "valPrice": 4150,
+      "distance": "0.19"
+    },
+    {
+      "symbol": "NSE:ULTRACEMCO",
+      "closePrice": 11190,
+      "valPrice": 11305,
+      "distance": "1.02"
+    },
+    {
+      "symbol": "NSE:UPL",
+      "closePrice": 577,
+      "valPrice": 582,
+      "distance": "0.86"
+    },
+    {
+      "symbol": "NSE:VEDL",
+      "closePrice": 267.95,
+      "valPrice": 270,
+      "distance": "0.76"
+    },
+    {
+      "symbol": "NSE:WIPRO",
+      "closePrice": 173.06,
+      "valPrice": 177.3,
+      "distance": "2.39"
+    },
+    {
+      "symbol": "NSE:ZEEL",
+      "closePrice": 85.94,
+      "valPrice": 90.8,
+      "distance": "5.35"
+    },
+    {
+      "symbol": "NSE:DEVYANI",
+      "closePrice": 138.93,
+      "valPrice": 139.6,
+      "distance": "0.48"
+    },
+    {
+      "symbol": "NSE:FORTIS",
+      "closePrice": 907,
+      "valPrice": 908,
+      "distance": "0.11"
+    },
+    {
+      "symbol": "NSE:HINDPETRO",
+      "closePrice": 354.95,
+      "valPrice": 357,
+      "distance": "0.57"
+    },
+    {
+      "symbol": "NSE:J_KBANK",
+      "closePrice": 148.3,
+      "valPrice": 149.2,
+      "distance": "0.60"
+    },
+    {
+      "symbol": "NSE:OIL",
+      "closePrice": 483.6,
+      "valPrice": 488,
+      "distance": "0.90"
+    },
+    {
+      "symbol": "NSE:PAYTM",
+      "closePrice": 1650,
+      "valPrice": 1660,
+      "distance": "0.60"
+    },
+    {
+      "symbol": "NSE:PRESTIGE",
+      "closePrice": 1559,
+      "valPrice": 1595,
+      "distance": "2.26"
+    },
+    {
+      "symbol": "NSE:SOBHA",
+      "closePrice": 1249.7,
+      "valPrice": 1252,
+      "distance": "0.18"
+    },
+    {
+      "symbol": "NSE:SOUTHBANK",
+      "closePrice": 46.55,
+      "valPrice": 47.4,
+      "distance": "1.79"
+    },
+    {
       "symbol": "NSE:TATAELXSI",
-      "closePrice": 3556.2,
-      "valPrice": 3594,
-      "distance": "1.05"
+      "closePrice": 3497.8,
+      "valPrice": 3540,
+      "distance": "1.19"
     },
     {
       "symbol": "NSE:TATATECH",
-      "closePrice": 800.05,
-      "valPrice": 806,
-      "distance": "0.74"
+      "closePrice": 784.9,
+      "valPrice": 798,
+      "distance": "1.64"
+    },
+    {
+      "symbol": "NSE:UCOBANK",
+      "closePrice": 24.43,
+      "valPrice": 24.75,
+      "distance": "1.29"
     },
     {
       "symbol": "NSE:UNIONBANK",
-      "closePrice": 187.82,
-      "valPrice": 188.6,
-      "distance": "0.41"
+      "closePrice": 184.88,
+      "valPrice": 187.7,
+      "distance": "1.50"
     },
     {
       "symbol": "NSE:WESTLIFE",
-      "closePrice": 528.4,
-      "valPrice": 537,
-      "distance": "1.60"
+      "closePrice": 530.8,
+      "valPrice": 534,
+      "distance": "0.60"
+    },
+    {
+      "symbol": "NSE:YESBANK",
+      "closePrice": 22.41,
+      "valPrice": 22.5,
+      "distance": "0.40"
     }
   ],
   "buyingTailCandidates": [
     {
       "symbol": "NSE:NIFTY1!",
-      "closePrice": 24044.9
-    },
-    {
-      "symbol": "OANDA:XAUUSD",
-      "closePrice": 4429.825
-    },
-    {
-      "symbol": "COINBASE:BTCUSD",
-      "closePrice": 79864.02
+      "closePrice": 23880
     },
     {
       "symbol": "NSE:ABB",
-      "closePrice": 7414
+      "closePrice": 7350
     },
     {
-      "symbol": "NSE:ACC",
-      "closePrice": 1287
+      "symbol": "NSE:ADANIENT",
+      "closePrice": 2940
     },
     {
       "symbol": "NSE:ADANIGREEN",
-      "closePrice": 1299.1
-    },
-    {
-      "symbol": "NSE:ADANIPORTS",
-      "closePrice": 1706.7
+      "closePrice": 1286
     },
     {
       "symbol": "NSE:APOLLOHOSP",
-      "closePrice": 8649
+      "closePrice": 8782
     },
     {
-      "symbol": "NSE:AUBANK",
-      "closePrice": 1070
+      "symbol": "NSE:APOLLOTYRE",
+      "closePrice": 420.4
+    },
+    {
+      "symbol": "NSE:ASHOKLEY",
+      "closePrice": 169.9
+    },
+    {
+      "symbol": "NSE:ASTRAL",
+      "closePrice": 1490.6
+    },
+    {
+      "symbol": "NSE:BAJAJ_AUTO",
+      "closePrice": 11800
+    },
+    {
+      "symbol": "NSE:BAJAJFINSV",
+      "closePrice": 1942.2
     },
     {
       "symbol": "NSE:BALRAMCHIN",
-      "closePrice": 691.55
+      "closePrice": 708.3
     },
     {
-      "symbol": "NSE:BEL",
-      "closePrice": 407.05
+      "symbol": "NSE:BANDHANBNK",
+      "closePrice": 164.05
     },
     {
-      "symbol": "NSE:BHARTIARTL",
-      "closePrice": 1849.5
+      "symbol": "NSE:BEML",
+      "closePrice": 2098.2
+    },
+    {
+      "symbol": "NSE:BERGEPAINT",
+      "closePrice": 483.6
     },
     {
       "symbol": "NSE:BHEL",
-      "closePrice": 433.25
+      "closePrice": 421.45
     },
     {
-      "symbol": "NSE:BIOCON",
-      "closePrice": 396.95
+      "symbol": "NSE:BRITANNIA",
+      "closePrice": 5010.5
     },
     {
-      "symbol": "NSE:CHOLAFIN",
-      "closePrice": 1830
+      "symbol": "NSE:CANFINHOME",
+      "closePrice": 805
     },
     {
       "symbol": "NSE:COCHINSHIP",
-      "closePrice": 1503
-    },
-    {
-      "symbol": "NSE:COFORGE",
-      "closePrice": 1965
-    },
-    {
-      "symbol": "NSE:COLPAL",
-      "closePrice": 1835.4
-    },
-    {
-      "symbol": "NSE:CONCOR",
-      "closePrice": 506.7
-    },
-    {
-      "symbol": "NSE:COROMANDEL",
-      "closePrice": 1940.1
-    },
-    {
-      "symbol": "NSE:CUB",
-      "closePrice": 235.24
-    },
-    {
-      "symbol": "NSE:DALBHARAT",
-      "closePrice": 1752
-    },
-    {
-      "symbol": "NSE:DIVISLAB",
-      "closePrice": 9121
-    },
-    {
-      "symbol": "NSE:DIXON",
-      "closePrice": 14160
-    },
-    {
-      "symbol": "NSE:DRREDDY",
-      "closePrice": 1155.7
-    },
-    {
-      "symbol": "NSE:GNFC",
-      "closePrice": 598
-    },
-    {
-      "symbol": "NSE:GODREJCP",
-      "closePrice": 878.75
-    },
-    {
-      "symbol": "NSE:GODREJPROP",
-      "closePrice": 1981.7
-    },
-    {
-      "symbol": "NSE:GRASIM",
-      "closePrice": 3320.3
-    },
-    {
-      "symbol": "NSE:HAL",
-      "closePrice": 4884
-    },
-    {
-      "symbol": "NSE:HDFCBANK",
-      "closePrice": 715
-    },
-    {
-      "symbol": "NSE:HEROMOTOCO",
-      "closePrice": 5311.5
-    },
-    {
-      "symbol": "NSE:HFCL",
-      "closePrice": 231.44
-    },
-    {
-      "symbol": "NSE:HINDUNILVR",
-      "closePrice": 1973
-    },
-    {
-      "symbol": "NSE:HUDCO",
-      "closePrice": 180.2
-    },
-    {
-      "symbol": "NSE:ICICIBANK",
-      "closePrice": 1423.6
-    },
-    {
-      "symbol": "NSE:ICICIGI",
       "closePrice": 1510
     },
     {
-      "symbol": "NSE:ICICIPRULI",
-      "closePrice": 494.3
+      "symbol": "NSE:COFORGE",
+      "closePrice": 1934
+    },
+    {
+      "symbol": "NSE:CUB",
+      "closePrice": 237.78
+    },
+    {
+      "symbol": "NSE:CUMMINSIND",
+      "closePrice": 5019
+    },
+    {
+      "symbol": "NSE:EICHERMOT",
+      "closePrice": 7705.5
+    },
+    {
+      "symbol": "NSE:EXIDEIND",
+      "closePrice": 425.55
+    },
+    {
+      "symbol": "NSE:GAIL",
+      "closePrice": 175.5
+    },
+    {
+      "symbol": "NSE:GLENMARK",
+      "closePrice": 2465
+    },
+    {
+      "symbol": "NSE:GNFC",
+      "closePrice": 597.75
+    },
+    {
+      "symbol": "NSE:GRANULES",
+      "closePrice": 867.05
+    },
+    {
+      "symbol": "NSE:GRASIM",
+      "closePrice": 3305
+    },
+    {
+      "symbol": "NSE:HAVELLS",
+      "closePrice": 1151
+    },
+    {
+      "symbol": "NSE:HDFCBANK",
+      "closePrice": 710.35
+    },
+    {
+      "symbol": "NSE:HFCL",
+      "closePrice": 243.01
+    },
+    {
+      "symbol": "NSE:HINDUNILVR",
+      "closePrice": 1966.4
+    },
+    {
+      "symbol": "NSE:HUDCO",
+      "closePrice": 179.29
+    },
+    {
+      "symbol": "NSE:ICICIGI",
+      "closePrice": 1503.6
     },
     {
       "symbol": "NSE:IDEA",
-      "closePrice": 15.06
+      "closePrice": 15.62
     },
     {
       "symbol": "NSE:IEX",
-      "closePrice": 118.91
+      "closePrice": 117.45
     },
     {
-      "symbol": "NSE:INDHOTEL",
-      "closePrice": 719.9
+      "symbol": "NSE:IFCI",
+      "closePrice": 102.43
     },
     {
-      "symbol": "NSE:INDIAMART",
-      "closePrice": 1727.3
+      "symbol": "NSE:INDIGO",
+      "closePrice": 4982
     },
     {
-      "symbol": "NSE:INDUSTOWER",
-      "closePrice": 375.15
+      "symbol": "NSE:INDUSINDBK",
+      "closePrice": 995
     },
     {
       "symbol": "NSE:INFY",
-      "closePrice": 1128.5
+      "closePrice": 1087.4
     },
     {
-      "symbol": "NSE:IPCALAB",
-      "closePrice": 1965
+      "symbol": "NSE:IOC",
+      "closePrice": 135.97
     },
     {
       "symbol": "NSE:IRFC",
-      "closePrice": 83.4
+      "closePrice": 83.04
     },
     {
-      "symbol": "NSE:ITC",
-      "closePrice": 264.75
+      "symbol": "NSE:JSWSTEEL",
+      "closePrice": 1302.4
     },
     {
-      "symbol": "NSE:JSWENERGY",
-      "closePrice": 540
-    },
-    {
-      "symbol": "NSE:KEI",
-      "closePrice": 4853.5
-    },
-    {
-      "symbol": "NSE:KOTAKBANK",
-      "closePrice": 424.7
+      "symbol": "NSE:JUBLFOOD",
+      "closePrice": 475.95
     },
     {
       "symbol": "NSE:KPITTECH",
-      "closePrice": 575.6
+      "closePrice": 560.45
     },
     {
       "symbol": "NSE:LICHSGFIN",
-      "closePrice": 566.25
+      "closePrice": 552
     },
     {
-      "symbol": "NSE:LUPIN",
-      "closePrice": 2108.7
+      "symbol": "NSE:LT",
+      "closePrice": 3970.2
     },
     {
       "symbol": "NSE:M_M",
-      "closePrice": 3175
+      "closePrice": 3157
     },
     {
-      "symbol": "NSE:MARICO",
-      "closePrice": 816
+      "symbol": "NSE:MAHABANK",
+      "closePrice": 84.8
     },
     {
-      "symbol": "NSE:MARUTI",
-      "closePrice": 12680
+      "symbol": "NSE:MAZDOCK",
+      "closePrice": 2443
     },
     {
       "symbol": "NSE:MCX",
-      "closePrice": 3285
-    },
-    {
-      "symbol": "NSE:MPHASIS",
-      "closePrice": 2423.5
-    },
-    {
-      "symbol": "NSE:MRF",
-      "closePrice": 130000
-    },
-    {
-      "symbol": "NSE:MUTHOOTFIN",
-      "closePrice": 2926
+      "closePrice": 3329
     },
     {
       "symbol": "NSE:NAVINFLUOR",
-      "closePrice": 8553
+      "closePrice": 8606
     },
     {
-      "symbol": "NSE:NHPC",
-      "closePrice": 76.28
-    },
-    {
-      "symbol": "NSE:OBEROIRLTY",
-      "closePrice": 1875
-    },
-    {
-      "symbol": "NSE:PAGEIND",
-      "closePrice": 36325
+      "symbol": "NSE:NYKAA",
+      "closePrice": 335.5
     },
     {
       "symbol": "NSE:PERSISTENT",
-      "closePrice": 5635
+      "closePrice": 5568
     },
     {
-      "symbol": "NSE:PFC",
-      "closePrice": 355.9
+      "symbol": "NSE:PETRONET",
+      "closePrice": 290
     },
     {
-      "symbol": "NSE:PIIND",
-      "closePrice": 2475
+      "symbol": "NSE:PIDILITIND",
+      "closePrice": 1593
     },
     {
-      "symbol": "NSE:PNB",
-      "closePrice": 117.24
-    },
-    {
-      "symbol": "NSE:PVRINOX",
-      "closePrice": 1230
-    },
-    {
-      "symbol": "NSE:RBLBANK",
-      "closePrice": 414.3
+      "symbol": "NSE:POWERGRID",
+      "closePrice": 267
     },
     {
       "symbol": "NSE:RECLTD",
-      "closePrice": 318.2
-    },
-    {
-      "symbol": "NSE:RELIANCE",
-      "closePrice": 1327.4
-    },
-    {
-      "symbol": "NSE:SBIN",
-      "closePrice": 1018.6
-    },
-    {
-      "symbol": "NSE:SHREECEM",
-      "closePrice": 23995
-    },
-    {
-      "symbol": "NSE:SIEMENS",
-      "closePrice": 4000
+      "closePrice": 318
     },
     {
       "symbol": "NSE:SRF",
-      "closePrice": 2549.9
+      "closePrice": 2538
     },
     {
-      "symbol": "NSE:SUNPHARMA",
-      "closePrice": 1899.1
-    },
-    {
-      "symbol": "NSE:TATACOMM",
-      "closePrice": 1751.6
-    },
-    {
-      "symbol": "NSE:TATAMOTORS",
-      "closePrice": 312
-    },
-    {
-      "symbol": "NSE:TATAPOWER",
-      "closePrice": 366.15
+      "symbol": "NSE:SYNGENE",
+      "closePrice": 389
     },
     {
       "symbol": "NSE:TCS",
-      "closePrice": 2309.2
+      "closePrice": 2274.1
+    },
+    {
+      "symbol": "NSE:TITAN",
+      "closePrice": 4983
+    },
+    {
+      "symbol": "NSE:TVSMOTOR",
+      "closePrice": 4142
+    },
+    {
+      "symbol": "NSE:UBL",
+      "closePrice": 1290.6
+    },
+    {
+      "symbol": "NSE:ULTRACEMCO",
+      "closePrice": 11190
+    },
+    {
+      "symbol": "NSE:UPL",
+      "closePrice": 577
+    },
+    {
+      "symbol": "NSE:VEDL",
+      "closePrice": 267.95
+    },
+    {
+      "symbol": "NSE:WIPRO",
+      "closePrice": 173.06
     },
     {
       "symbol": "NSE:ZYDUSLIFE",
-      "closePrice": 1124.2
+      "closePrice": 1154.5
+    },
+    {
+      "symbol": "NSE:BALKRISIND",
+      "closePrice": 2286.3
     },
     {
       "symbol": "NSE:BLUESTARCO",
-      "closePrice": 1475
+      "closePrice": 1499
+    },
+    {
+      "symbol": "NSE:CEATLTD",
+      "closePrice": 3334.1
+    },
+    {
+      "symbol": "NSE:DEVYANI",
+      "closePrice": 138.93
     },
     {
       "symbol": "NSE:HINDPETRO",
-      "closePrice": 357.85
+      "closePrice": 354.95
+    },
+    {
+      "symbol": "NSE:LODHA",
+      "closePrice": 1212.7
     },
     {
       "symbol": "NSE:MAXHEALTH",
-      "closePrice": 983.9
+      "closePrice": 990.5
     },
     {
-      "symbol": "NSE:OIL",
-      "closePrice": 489
+      "symbol": "NSE:SUPREMEIND",
+      "closePrice": 3594
     },
     {
-      "symbol": "NSE:PAYTM",
-      "closePrice": 1665
+      "symbol": "NSE:SUZLON",
+      "closePrice": 45.3
     },
     {
-      "symbol": "NSE:PRESTIGE",
-      "closePrice": 1587.8
+      "symbol": "NSE:TATATECH",
+      "closePrice": 784.9
     },
     {
-      "symbol": "NSE:TATAELXSI",
-      "closePrice": 3556.2
+      "symbol": "NSE:UCOBANK",
+      "closePrice": 24.43
     },
     {
       "symbol": "NSE:WESTLIFE",
-      "closePrice": 528.4
+      "closePrice": 530.8
     }
   ],
   "sellingTailCandidates": [
     {
       "symbol": "NSE:NIFTY",
-      "closePrice": 23938.4
+      "closePrice": 23759.4
     },
     {
       "symbol": "OANDA:XAUUSD",
-      "closePrice": 4429.825
-    },
-    {
-      "symbol": "NSE:AARTIIND",
-      "closePrice": 493.25
+      "closePrice": 4409.665
     },
     {
       "symbol": "NSE:ABB",
-      "closePrice": 7414
+      "closePrice": 7350
     },
     {
-      "symbol": "NSE:ADANIENT",
-      "closePrice": 2936.8
+      "symbol": "NSE:ABBOTINDIA",
+      "closePrice": 25910
     },
     {
-      "symbol": "NSE:ADANIGREEN",
-      "closePrice": 1299.1
+      "symbol": "NSE:ACC",
+      "closePrice": 1268.7
     },
     {
-      "symbol": "NSE:ADANIPORTS",
-      "closePrice": 1706.7
+      "symbol": "NSE:ADANIENSOL",
+      "closePrice": 1390
+    },
+    {
+      "symbol": "NSE:AMBUJACEM",
+      "closePrice": 399.4
     },
     {
       "symbol": "NSE:APARINDS",
-      "closePrice": 17437
+      "closePrice": 17740
     },
     {
-      "symbol": "NSE:APOLLOHOSP",
-      "closePrice": 8649
+      "symbol": "NSE:APOLLOTYRE",
+      "closePrice": 420.4
     },
     {
       "symbol": "NSE:ASIANPAINT",
-      "closePrice": 2527.5
+      "closePrice": 2500
     },
     {
-      "symbol": "NSE:ASTRAL",
-      "closePrice": 1494.5
+      "symbol": "NSE:ATGL",
+      "closePrice": 603.05
+    },
+    {
+      "symbol": "NSE:ATUL",
+      "closePrice": 6313.5
+    },
+    {
+      "symbol": "NSE:AUBANK",
+      "closePrice": 1057.6
     },
     {
       "symbol": "NSE:AWL",
-      "closePrice": 187.9
+      "closePrice": 188.01
+    },
+    {
+      "symbol": "NSE:AXISBANK",
+      "closePrice": 1266
     },
     {
       "symbol": "NSE:BAJAJ_AUTO",
-      "closePrice": 11911
+      "closePrice": 11800
     },
     {
       "symbol": "NSE:BAJFINANCE",
-      "closePrice": 1063.6
+      "closePrice": 1060
     },
     {
-      "symbol": "NSE:BALRAMCHIN",
-      "closePrice": 691.55
+      "symbol": "NSE:BAJAJFINSV",
+      "closePrice": 1942.2
     },
     {
       "symbol": "NSE:BANKBARODA",
-      "closePrice": 239.5
+      "closePrice": 236.5
     },
     {
-      "symbol": "NSE:BATAINDIA",
-      "closePrice": 673
+      "symbol": "NSE:BEL",
+      "closePrice": 405.8
     },
     {
-      "symbol": "NSE:BDL",
-      "closePrice": 1256.1
+      "symbol": "NSE:BEML",
+      "closePrice": 2098.2
     },
     {
-      "symbol": "NSE:BOSCHLTD",
-      "closePrice": 46940
+      "symbol": "NSE:BERGEPAINT",
+      "closePrice": 483.6
     },
     {
-      "symbol": "NSE:BSE",
-      "closePrice": 3410
+      "symbol": "NSE:BHARTIARTL",
+      "closePrice": 1847.2
+    },
+    {
+      "symbol": "NSE:BHEL",
+      "closePrice": 421.45
+    },
+    {
+      "symbol": "NSE:BIOCON",
+      "closePrice": 391.2
+    },
+    {
+      "symbol": "NSE:BSOFT",
+      "closePrice": 282.2
     },
     {
       "symbol": "NSE:CANFINHOME",
-      "closePrice": 807.05
+      "closePrice": 805
     },
     {
       "symbol": "NSE:CDSL",
-      "closePrice": 1394.5
+      "closePrice": 1414.9
     },
     {
       "symbol": "NSE:CHAMBLFERT",
-      "closePrice": 419.5
+      "closePrice": 418.05
     },
     {
-      "symbol": "NSE:CHOLAFIN",
-      "closePrice": 1830
-    },
-    {
-      "symbol": "NSE:COCHINSHIP",
-      "closePrice": 1503
+      "symbol": "NSE:CIPLA",
+      "closePrice": 1395.2
     },
     {
       "symbol": "NSE:COFORGE",
-      "closePrice": 1965
+      "closePrice": 1934
     },
     {
       "symbol": "NSE:COLPAL",
-      "closePrice": 1835.4
+      "closePrice": 1808.1
     },
     {
-      "symbol": "NSE:CUMMINSIND",
-      "closePrice": 5045
+      "symbol": "NSE:CUB",
+      "closePrice": 237.78
     },
     {
-      "symbol": "NSE:DALBHARAT",
-      "closePrice": 1752
+      "symbol": "NSE:DABUR",
+      "closePrice": 375.2
     },
     {
       "symbol": "NSE:DEEPAKNTR",
-      "closePrice": 1716
+      "closePrice": 1641.6
+    },
+    {
+      "symbol": "NSE:DELHIVERY",
+      "closePrice": 452.5
     },
     {
       "symbol": "NSE:DIVISLAB",
-      "closePrice": 9121
+      "closePrice": 9299
     },
     {
-      "symbol": "NSE:DLF",
-      "closePrice": 681.15
+      "symbol": "NSE:ESCORTS",
+      "closePrice": 2957.9
     },
     {
-      "symbol": "NSE:GLENMARK",
-      "closePrice": 2428.2
+      "symbol": "NSE:EXIDEIND",
+      "closePrice": 425.55
+    },
+    {
+      "symbol": "NSE:GAIL",
+      "closePrice": 175.5
     },
     {
       "symbol": "NSE:GMRINFRA",
-      "closePrice": 97.58
+      "closePrice": 95.76
     },
     {
-      "symbol": "NSE:GODREJCP",
-      "closePrice": 878.75
+      "symbol": "NSE:GODREJPROP",
+      "closePrice": 1910.1
+    },
+    {
+      "symbol": "NSE:GRASIM",
+      "closePrice": 3305
+    },
+    {
+      "symbol": "NSE:HAL",
+      "closePrice": 4840
     },
     {
       "symbol": "NSE:HAVELLS",
-      "closePrice": 1156.4
+      "closePrice": 1151
     },
     {
       "symbol": "NSE:HCLTECH",
-      "closePrice": 1293.6
+      "closePrice": 1281.5
+    },
+    {
+      "symbol": "NSE:HDFCBANK",
+      "closePrice": 710.35
+    },
+    {
+      "symbol": "NSE:HDFCLIFE",
+      "closePrice": 536.65
+    },
+    {
+      "symbol": "NSE:HEROMOTOCO",
+      "closePrice": 5296.5
+    },
+    {
+      "symbol": "NSE:HINDALCO",
+      "closePrice": 1006
     },
     {
       "symbol": "NSE:HUDCO",
-      "closePrice": 180.2
+      "closePrice": 179.29
     },
     {
-      "symbol": "NSE:ICICIGI",
-      "closePrice": 1510
+      "symbol": "NSE:ICICIPRULI",
+      "closePrice": 475
     },
     {
-      "symbol": "NSE:IDFCFIRSTB",
-      "closePrice": 86.71
+      "symbol": "NSE:IEX",
+      "closePrice": 117.45
     },
     {
-      "symbol": "NSE:INDHOTEL",
-      "closePrice": 719.9
+      "symbol": "NSE:IFCI",
+      "closePrice": 102.43
     },
     {
       "symbol": "NSE:INDIAMART",
-      "closePrice": 1727.3
+      "closePrice": 1706
     },
     {
       "symbol": "NSE:INDIGO",
-      "closePrice": 5003
+      "closePrice": 4982
+    },
+    {
+      "symbol": "NSE:INDUSINDBK",
+      "closePrice": 995
     },
     {
       "symbol": "NSE:INFY",
-      "closePrice": 1128.5
+      "closePrice": 1087.4
     },
     {
-      "symbol": "NSE:IRCTC",
-      "closePrice": 477
+      "symbol": "NSE:IOB",
+      "closePrice": 33.11
+    },
+    {
+      "symbol": "NSE:IOC",
+      "closePrice": 135.97
+    },
+    {
+      "symbol": "NSE:IREDA",
+      "closePrice": 112.95
     },
     {
       "symbol": "NSE:IRFC",
-      "closePrice": 83.4
-    },
-    {
-      "symbol": "NSE:ITC",
-      "closePrice": 264.75
+      "closePrice": 83.04
     },
     {
       "symbol": "NSE:JINDALSTEL",
-      "closePrice": 1163.8
+      "closePrice": 1140
+    },
+    {
+      "symbol": "NSE:JIOFIN",
+      "closePrice": 234.8
+    },
+    {
+      "symbol": "NSE:JSWENERGY",
+      "closePrice": 530.8
     },
     {
       "symbol": "NSE:JSWSTEEL",
-      "closePrice": 1325
+      "closePrice": 1302.4
     },
     {
-      "symbol": "NSE:JUBLFOOD",
-      "closePrice": 483.8
-    },
-    {
-      "symbol": "NSE:KEI",
-      "closePrice": 4853.5
-    },
-    {
-      "symbol": "NSE:LTF",
-      "closePrice": 314.7
+      "symbol": "NSE:KPITTECH",
+      "closePrice": 560.45
     },
     {
       "symbol": "NSE:LALPATHLAB",
-      "closePrice": 1895
+      "closePrice": 1902
+    },
+    {
+      "symbol": "NSE:LTIM",
+      "closePrice": 4452.1
     },
     {
       "symbol": "NSE:LUPIN",
-      "closePrice": 2108.7
+      "closePrice": 2103.8
     },
     {
-      "symbol": "NSE:M_M",
-      "closePrice": 3175
+      "symbol": "NSE:M_MFIN",
+      "closePrice": 372.35
     },
     {
-      "symbol": "NSE:METROPOLIS",
-      "closePrice": 590.5
+      "symbol": "NSE:MAHABANK",
+      "closePrice": 84.8
     },
     {
-      "symbol": "NSE:MPHASIS",
-      "closePrice": 2423.5
+      "symbol": "NSE:MAZDOCK",
+      "closePrice": 2443
     },
     {
-      "symbol": "NSE:MUTHOOTFIN",
-      "closePrice": 2926
+      "symbol": "NSE:MCX",
+      "closePrice": 3329
+    },
+    {
+      "symbol": "NSE:MRF",
+      "closePrice": 128845
+    },
+    {
+      "symbol": "NSE:NATIONALUM",
+      "closePrice": 368.6
+    },
+    {
+      "symbol": "NSE:NAVINFLUOR",
+      "closePrice": 8606
+    },
+    {
+      "symbol": "NSE:NCC",
+      "closePrice": 150.97
+    },
+    {
+      "symbol": "NSE:NLCINDIA",
+      "closePrice": 269.25
+    },
+    {
+      "symbol": "NSE:NTPC",
+      "closePrice": 330.75
+    },
+    {
+      "symbol": "NSE:OBEROIRLTY",
+      "closePrice": 1859.9
     },
     {
       "symbol": "NSE:OFSS",
-      "closePrice": 12058
+      "closePrice": 11740
+    },
+    {
+      "symbol": "NSE:ONGC",
+      "closePrice": 233.35
     },
     {
       "symbol": "NSE:PAGEIND",
-      "closePrice": 36325
+      "closePrice": 35800
     },
     {
-      "symbol": "NSE:PERSISTENT",
-      "closePrice": 5635
+      "symbol": "NSE:PETRONET",
+      "closePrice": 290
     },
     {
-      "symbol": "NSE:PIIND",
-      "closePrice": 2475
-    },
-    {
-      "symbol": "NSE:POLYCAB",
-      "closePrice": 8317.5
-    },
-    {
-      "symbol": "NSE:PVRINOX",
-      "closePrice": 1230
+      "symbol": "NSE:PNB",
+      "closePrice": 116
     },
     {
       "symbol": "NSE:RAMCOCEM",
-      "closePrice": 886
+      "closePrice": 872.4
     },
     {
-      "symbol": "NSE:SAIL",
-      "closePrice": 198
+      "symbol": "NSE:RBLBANK",
+      "closePrice": 415.9
+    },
+    {
+      "symbol": "NSE:RECLTD",
+      "closePrice": 318
+    },
+    {
+      "symbol": "NSE:RVNL",
+      "closePrice": 210.2
+    },
+    {
+      "symbol": "NSE:SBICARD",
+      "closePrice": 672
+    },
+    {
+      "symbol": "NSE:SBILIFE",
+      "closePrice": 1732.1
+    },
+    {
+      "symbol": "NSE:SBIN",
+      "closePrice": 1005
     },
     {
       "symbol": "NSE:SHREECEM",
-      "closePrice": 23995
-    },
-    {
-      "symbol": "NSE:SHRIRAMFIN",
-      "closePrice": 1041
+      "closePrice": 23650
     },
     {
       "symbol": "NSE:SIEMENS",
-      "closePrice": 4000
+      "closePrice": 3929.8
     },
     {
-      "symbol": "NSE:TATACHEM",
-      "closePrice": 624.7
+      "symbol": "NSE:SRF",
+      "closePrice": 2538
     },
     {
-      "symbol": "NSE:TATACOMM",
-      "closePrice": 1751.6
+      "symbol": "NSE:SUNPHARMA",
+      "closePrice": 1890
     },
     {
-      "symbol": "NSE:TATACONSUM",
-      "closePrice": 1011.8
+      "symbol": "NSE:SUNTV",
+      "closePrice": 452.55
     },
     {
-      "symbol": "NSE:TATASTEEL",
-      "closePrice": 189.3
+      "symbol": "NSE:SYNGENE",
+      "closePrice": 389
+    },
+    {
+      "symbol": "NSE:TATAMOTORS",
+      "closePrice": 307.4
+    },
+    {
+      "symbol": "NSE:TATAPOWER",
+      "closePrice": 365
     },
     {
       "symbol": "NSE:TCS",
-      "closePrice": 2309.2
+      "closePrice": 2274.1
     },
     {
-      "symbol": "NSE:UBL",
-      "closePrice": 1280
+      "symbol": "NSE:TECHM",
+      "closePrice": 1557
+    },
+    {
+      "symbol": "NSE:TITAN",
+      "closePrice": 4983
+    },
+    {
+      "symbol": "NSE:TORNTPOWER",
+      "closePrice": 1275
+    },
+    {
+      "symbol": "NSE:TRENT",
+      "closePrice": 2811.3
+    },
+    {
+      "symbol": "NSE:TVSMOTOR",
+      "closePrice": 4142
     },
     {
       "symbol": "NSE:ULTRACEMCO",
-      "closePrice": 11330
+      "closePrice": 11190
     },
     {
       "symbol": "NSE:UPL",
-      "closePrice": 586
+      "closePrice": 577
+    },
+    {
+      "symbol": "NSE:VEDL",
+      "closePrice": 267.95
     },
     {
       "symbol": "NSE:WIPRO",
-      "closePrice": 177.1
+      "closePrice": 173.06
     },
     {
       "symbol": "NSE:ZEEL",
-      "closePrice": 91.52
+      "closePrice": 85.94
     },
     {
-      "symbol": "NSE:ZYDUSLIFE",
-      "closePrice": 1124.2
-    },
-    {
-      "symbol": "NSE:BLUESTARCO",
-      "closePrice": 1475
+      "symbol": "NSE:BALKRISIND",
+      "closePrice": 2286.3
     },
     {
       "symbol": "NSE:CEATLTD",
-      "closePrice": 3333
+      "closePrice": 3334.1
+    },
+    {
+      "symbol": "NSE:DEVYANI",
+      "closePrice": 138.93
     },
     {
       "symbol": "NSE:FORTIS",
-      "closePrice": 905.8
+      "closePrice": 907
+    },
+    {
+      "symbol": "NSE:HINDPETRO",
+      "closePrice": 354.95
     },
     {
       "symbol": "NSE:J_KBANK",
-      "closePrice": 150.3
+      "closePrice": 148.3
+    },
+    {
+      "symbol": "NSE:MAXHEALTH",
+      "closePrice": 990.5
+    },
+    {
+      "symbol": "NSE:OIL",
+      "closePrice": 483.6
     },
     {
       "symbol": "NSE:SOBHA",
-      "closePrice": 1273
-    },
-    {
-      "symbol": "NSE:SOUTHBANK",
-      "closePrice": 47.35
+      "closePrice": 1249.7
     },
     {
       "symbol": "NSE:TATAELXSI",
-      "closePrice": 3556.2
+      "closePrice": 3497.8
     },
     {
       "symbol": "NSE:TATATECH",
-      "closePrice": 800.05
+      "closePrice": 784.9
     },
     {
-      "symbol": "NSE:UNIONBANK",
-      "closePrice": 187.82
+      "symbol": "NSE:UCOBANK",
+      "closePrice": 24.43
+    },
+    {
+      "symbol": "NSE:WESTLIFE",
+      "closePrice": 530.8
+    },
+    {
+      "symbol": "NSE:YESBANK",
+      "closePrice": 22.41
     }
   ],
   "poorHighCandidates": [
     {
-      "symbol": "NSE:NIFTY1!",
-      "closePrice": 24044.9
+      "symbol": "NSE:ADANIGREEN",
+      "closePrice": 1286
     },
     {
-      "symbol": "NSE:ADANIENSOL",
-      "closePrice": 1408.9
+      "symbol": "NSE:BALRAMCHIN",
+      "closePrice": 708.3
     },
     {
-      "symbol": "NSE:AXISBANK",
-      "closePrice": 1273
+      "symbol": "NSE:BATAINDIA",
+      "closePrice": 669
     },
     {
-      "symbol": "NSE:CROMPTON",
-      "closePrice": 233.3
+      "symbol": "NSE:BOSCHLTD",
+      "closePrice": 48450
     },
     {
-      "symbol": "NSE:GNFC",
-      "closePrice": 598
+      "symbol": "NSE:DLF",
+      "closePrice": 676
     },
     {
-      "symbol": "NSE:HDFCLIFE",
-      "closePrice": 544.05
+      "symbol": "NSE:ITC",
+      "closePrice": 263.85
     },
     {
-      "symbol": "NSE:HFCL",
-      "closePrice": 231.44
-    },
-    {
-      "symbol": "NSE:IREDA",
-      "closePrice": 113.63
-    },
-    {
-      "symbol": "NSE:KARURVYSYA",
-      "closePrice": 349.1
-    },
-    {
-      "symbol": "NSE:KOTAKBANK",
-      "closePrice": 424.7
-    },
-    {
-      "symbol": "NSE:MAHABANK",
-      "closePrice": 85.75
-    },
-    {
-      "symbol": "NSE:NHPC",
-      "closePrice": 76.28
-    },
-    {
-      "symbol": "NSE:ONGC",
-      "closePrice": 234.65
-    },
-    {
-      "symbol": "NSE:TATAPOWER",
-      "closePrice": 366.15
-    },
-    {
-      "symbol": "NSE:TORNTPOWER",
-      "closePrice": 1302
-    },
-    {
-      "symbol": "NSE:WESTLIFE",
-      "closePrice": 528.4
+      "symbol": "NSE:TORNTPHARM",
+      "closePrice": 4900
     }
   ],
   "poorLowCandidates": [
     {
-      "symbol": "NSE:ABCAPITAL",
-      "closePrice": 406.95
+      "symbol": "NSE:ABBOTINDIA",
+      "closePrice": 25910
     },
     {
-      "symbol": "NSE:APARINDS",
-      "closePrice": 17437
+      "symbol": "NSE:AMBUJACEM",
+      "closePrice": 399.4
     },
     {
-      "symbol": "NSE:ASTRAL",
-      "closePrice": 1494.5
+      "symbol": "NSE:CENTRALBK",
+      "closePrice": 30.96
     },
     {
-      "symbol": "NSE:ATUL",
-      "closePrice": 6376
+      "symbol": "NSE:FEDERALBNK",
+      "closePrice": 341.2
     },
     {
-      "symbol": "NSE:BANKBARODA",
-      "closePrice": 239.5
+      "symbol": "NSE:IGL",
+      "closePrice": 154.73
     },
     {
-      "symbol": "NSE:BATAINDIA",
-      "closePrice": 673
+      "symbol": "NSE:INDUSTOWER",
+      "closePrice": 376.2
     },
     {
-      "symbol": "NSE:BEML",
-      "closePrice": 2058
+      "symbol": "NSE:IRCTC",
+      "closePrice": 474.15
     },
     {
-      "symbol": "NSE:BERGEPAINT",
-      "closePrice": 484.95
+      "symbol": "NSE:JINDALSTEL",
+      "closePrice": 1140
     },
     {
-      "symbol": "NSE:HINDALCO",
-      "closePrice": 1014.7
+      "symbol": "NSE:JKCEMENT",
+      "closePrice": 5050
     },
     {
-      "symbol": "NSE:HINDCOPPER",
-      "closePrice": 521.55
+      "symbol": "NSE:KARURVYSYA",
+      "closePrice": 342.05
     },
     {
-      "symbol": "NSE:IDFCFIRSTB",
-      "closePrice": 86.71
+      "symbol": "NSE:KOTAKBANK",
+      "closePrice": 422.1
     },
     {
-      "symbol": "NSE:INDIGO",
-      "closePrice": 5003
+      "symbol": "NSE:M_MFIN",
+      "closePrice": 372.35
     },
     {
-      "symbol": "NSE:INDUSINDBK",
-      "closePrice": 1005.4
+      "symbol": "NSE:MRF",
+      "closePrice": 128845
     },
     {
-      "symbol": "NSE:JSWSTEEL",
-      "closePrice": 1325
+      "symbol": "NSE:PAGEIND",
+      "closePrice": 35800
     },
     {
-      "symbol": "NSE:LTIM",
-      "closePrice": 4570
+      "symbol": "NSE:PFC",
+      "closePrice": 353.5
     },
     {
-      "symbol": "NSE:NBCC",
-      "closePrice": 86.53
+      "symbol": "NSE:POLYCAB",
+      "closePrice": 8245.5
     },
     {
-      "symbol": "NSE:NYKAA",
-      "closePrice": 333
+      "symbol": "NSE:RAMCOCEM",
+      "closePrice": 872.4
     },
     {
-      "symbol": "NSE:PIDILITIND",
-      "closePrice": 1636
+      "symbol": "NSE:SHREECEM",
+      "closePrice": 23650
     },
     {
-      "symbol": "NSE:POWERGRID",
-      "closePrice": 266.25
+      "symbol": "NSE:TATACOMM",
+      "closePrice": 1738.7
     },
     {
-      "symbol": "NSE:SHRIRAMFIN",
-      "closePrice": 1041
-    },
-    {
-      "symbol": "NSE:TATACHEM",
-      "closePrice": 624.7
-    },
-    {
-      "symbol": "NSE:TATASTEEL",
-      "closePrice": 189.3
-    },
-    {
-      "symbol": "NSE:WIPRO",
-      "closePrice": 177.1
-    },
-    {
-      "symbol": "NSE:SUPREMEIND",
-      "closePrice": 3483
+      "symbol": "NSE:J_KBANK",
+      "closePrice": 148.3
     }
   ]
 }

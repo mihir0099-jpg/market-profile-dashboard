@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "7/9/2026, 3:05:55 pm",
+  "lastUpdated": "7/9/2026, 5:57:52 pm",
   "global": {
     "poorHigh": {
       "triggered": 0,
@@ -17,13 +17,13 @@
       "pct": 0
     },
     "dFailure": {
-      "triggered": 4289,
-      "completed": 4289,
+      "triggered": 4318,
+      "completed": 4318,
       "pct": 100
     },
     "eFailure": {
-      "triggered": 4533,
-      "completed": 4533,
+      "triggered": 4564,
+      "completed": 4564,
       "pct": 100
     },
     "narrowIb": {
@@ -47,60 +47,214 @@
       "pct": 0
     },
     "pShapeSupport": {
-      "triggered": 5189,
-      "completed": 1362,
+      "triggered": 5249,
+      "completed": 1371,
       "pct": 26
     },
     "bShapeResistance": {
-      "triggered": 8075,
-      "completed": 2551,
-      "pct": 32
+      "triggered": 8138,
+      "completed": 2563,
+      "pct": 31
     },
     "doubleDistributionFill": {
-      "triggered": 20398,
-      "completed": 8343,
+      "triggered": 20619,
+      "completed": 8416,
       "pct": 41
     },
     "cFailureReversal": {
-      "triggered": 10682,
-      "completed": 4035,
+      "triggered": 10764,
+      "completed": 4073,
       "pct": 38
     },
     "pcrCorrelations": {
       "extremeFear": {
         "name": "Extreme Fear (PCR >= 1.25)",
-        "attempts": 1933,
+        "attempts": 1935,
         "bullishCloseProb": 97.4,
-        "meanReversionProb": 63.8,
-        "gapFillProb": 33.5
+        "meanReversionProb": 63.9,
+        "gapFillProb": 33.4
       },
       "extremeGreed": {
         "name": "Extreme Greed (PCR <= 0.65)",
-        "attempts": 1617,
+        "attempts": 1619,
         "bullishCloseProb": 3.3,
-        "meanReversionProb": 64.7,
-        "gapFillProb": 34.3
+        "meanReversionProb": 64.6,
+        "gapFillProb": 34.2
       },
       "neutral": {
         "name": "Neutral Sentiment (0.65 < PCR < 1.25)",
-        "attempts": 22941,
+        "attempts": 23171,
         "bullishCloseProb": 44.7,
-        "meanReversionProb": 62.5,
+        "meanReversionProb": 62.3,
         "gapFillProb": 33.2
       }
     },
     "expiryDynamics": {
-      "expiryAttempts": 1597,
-      "nonExpiryAttempts": 24894,
-      "expiryPinningRate": 69.3,
-      "nonExpiryPinningRate": 69.7,
-      "expiryBreakoutRate": 5.1,
+      "expiryAttempts": 1628,
+      "nonExpiryAttempts": 25097,
+      "expiryPinningRate": 69.4,
+      "nonExpiryPinningRate": 69.8,
+      "expiryBreakoutRate": 5.3,
       "nonExpiryBreakoutRate": 6.3,
-      "avgExpiryRangePct": 2.59,
-      "avgNonExpiryRangePct": 2.67
+      "avgExpiryRangePct": 2.56,
+      "avgNonExpiryRangePct": 2.66
     }
   },
   "symbols": {
+    "NSE:NIFTY": {
+      "poorHigh": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "poorLow": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "cFailure": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "dFailure": {
+        "triggered": 15,
+        "completed": 15,
+        "pct": 100
+      },
+      "eFailure": {
+        "triggered": 15,
+        "completed": 15,
+        "pct": 100
+      },
+      "narrowIb": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "doubleDistribution": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "eightyPercentRule": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "kangarooJump": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "pShapeSupport": {
+        "triggered": 32,
+        "completed": 6,
+        "pct": 19
+      },
+      "bShapeResistance": {
+        "triggered": 27,
+        "completed": 6,
+        "pct": 22
+      },
+      "doubleDistributionFill": {
+        "triggered": 115,
+        "completed": 36,
+        "pct": 31
+      },
+      "cFailureReversal": {
+        "triggered": 39,
+        "completed": 16,
+        "pct": 41
+      },
+      "expiryDynamics": {
+        "expiryAttempts": 24,
+        "nonExpiryAttempts": 93,
+        "expiryPinningRate": 75,
+        "nonExpiryPinningRate": 91.4,
+        "expiryBreakoutRate": 16.7,
+        "nonExpiryBreakoutRate": 4.3,
+        "avgExpiryRangePct": 0.98,
+        "avgNonExpiryRangePct": 0.93
+      }
+    },
+    "NSE:BANKNIFTY": {
+      "poorHigh": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "poorLow": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "cFailure": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "dFailure": {
+        "triggered": 14,
+        "completed": 14,
+        "pct": 100
+      },
+      "eFailure": {
+        "triggered": 16,
+        "completed": 16,
+        "pct": 100
+      },
+      "narrowIb": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "doubleDistribution": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "eightyPercentRule": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "kangarooJump": {
+        "triggered": 0,
+        "completed": 0,
+        "pct": 0
+      },
+      "pShapeSupport": {
+        "triggered": 22,
+        "completed": 4,
+        "pct": 18
+      },
+      "bShapeResistance": {
+        "triggered": 35,
+        "completed": 7,
+        "pct": 20
+      },
+      "doubleDistributionFill": {
+        "triggered": 113,
+        "completed": 42,
+        "pct": 37
+      },
+      "cFailureReversal": {
+        "triggered": 43,
+        "completed": 20,
+        "pct": 47
+      },
+      "expiryDynamics": {
+        "expiryAttempts": 7,
+        "nonExpiryAttempts": 108,
+        "expiryPinningRate": 85.7,
+        "nonExpiryPinningRate": 80.6,
+        "expiryBreakoutRate": 0,
+        "nonExpiryBreakoutRate": 8.3,
+        "avgExpiryRangePct": 1.08,
+        "avgNonExpiryRangePct": 1.29
+      }
+    },
     "NSE:NIFTY1!": {
       "poorHigh": {
         "triggered": 0,
@@ -379,9 +533,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 22,
+        "triggered": 23,
         "completed": 10,
-        "pct": 45
+        "pct": 43
       },
       "bShapeResistance": {
         "triggered": 37,
@@ -389,8 +543,8 @@
         "pct": 35
       },
       "doubleDistributionFill": {
-        "triggered": 99,
-        "completed": 44,
+        "triggered": 98,
+        "completed": 43,
         "pct": 44
       },
       "cFailureReversal": {
@@ -481,9 +635,9 @@
         "expiryPinningRate": 57.1,
         "nonExpiryPinningRate": 64.5,
         "expiryBreakoutRate": 0,
-        "nonExpiryBreakoutRate": 10.9,
+        "nonExpiryBreakoutRate": 11.8,
         "avgExpiryRangePct": 2.6,
-        "avgNonExpiryRangePct": 2.79
+        "avgNonExpiryRangePct": 2.8
       }
     },
     "NSE:ABBOTINDIA": {
@@ -633,7 +787,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 85.7,
-        "nonExpiryPinningRate": 66.4,
+        "nonExpiryPinningRate": 67.3,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 2.7,
         "avgExpiryRangePct": 2.13,
@@ -687,9 +841,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 18,
+        "triggered": 19,
         "completed": 6,
-        "pct": 33
+        "pct": 32
       },
       "bShapeResistance": {
         "triggered": 33,
@@ -710,7 +864,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 59.3,
+        "nonExpiryPinningRate": 60.2,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 11.1,
         "avgExpiryRangePct": 3.66,
@@ -764,9 +918,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 27,
+        "triggered": 28,
         "completed": 6,
-        "pct": 22
+        "pct": 21
       },
       "bShapeResistance": {
         "triggered": 38,
@@ -774,8 +928,8 @@
         "pct": 29
       },
       "doubleDistributionFill": {
-        "triggered": 94,
-        "completed": 38,
+        "triggered": 93,
+        "completed": 37,
         "pct": 40
       },
       "cFailureReversal": {
@@ -1018,7 +1172,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 55.5,
+        "nonExpiryPinningRate": 54.5,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 7.3,
         "avgExpiryRangePct": 2.46,
@@ -1095,7 +1249,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 77.3,
+        "nonExpiryPinningRate": 76.4,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 3.6,
         "avgExpiryRangePct": 2.74,
@@ -1249,7 +1403,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 57.1,
-        "nonExpiryPinningRate": 72.7,
+        "nonExpiryPinningRate": 71.8,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 6.4,
         "avgExpiryRangePct": 2.4,
@@ -1480,11 +1634,11 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 85.7,
-        "nonExpiryPinningRate": 81.8,
+        "nonExpiryPinningRate": 82.7,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 2.7,
         "avgExpiryRangePct": 1.67,
-        "avgNonExpiryRangePct": 1.82
+        "avgNonExpiryRangePct": 1.83
       }
     },
     "NSE:APOLLOTYRE": {
@@ -1842,9 +1996,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 19,
+        "triggered": 18,
         "completed": 6,
-        "pct": 32
+        "pct": 33
       },
       "bShapeResistance": {
         "triggered": 46,
@@ -1869,7 +2023,7 @@
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 10.2,
         "avgExpiryRangePct": 4.36,
-        "avgNonExpiryRangePct": 3.73
+        "avgNonExpiryRangePct": 3.74
       }
     },
     "NSE:ATUL": {
@@ -2173,7 +2327,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 66.7,
+        "nonExpiryPinningRate": 67.6,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 7.4,
         "avgExpiryRangePct": 2.66,
@@ -2481,9 +2635,9 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 85.7,
-        "nonExpiryPinningRate": 68.2,
+        "nonExpiryPinningRate": 67.3,
         "expiryBreakoutRate": 0,
-        "nonExpiryBreakoutRate": 5.5,
+        "nonExpiryBreakoutRate": 6.4,
         "avgExpiryRangePct": 2.11,
         "avgNonExpiryRangePct": 2.09
       }
@@ -2766,9 +2920,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 16,
+        "triggered": 17,
         "completed": 4,
-        "pct": 25
+        "pct": 24
       },
       "bShapeResistance": {
         "triggered": 42,
@@ -3251,7 +3405,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 58.2,
+        "nonExpiryPinningRate": 57.3,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 9.1,
         "avgExpiryRangePct": 2.64,
@@ -3559,7 +3713,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 100,
-        "nonExpiryPinningRate": 79.1,
+        "nonExpiryPinningRate": 78.2,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 3.6,
         "avgExpiryRangePct": 1.78,
@@ -3700,9 +3854,9 @@
         "pct": 36
       },
       "doubleDistributionFill": {
-        "triggered": 98,
-        "completed": 41,
-        "pct": 42
+        "triggered": 97,
+        "completed": 40,
+        "pct": 41
       },
       "cFailureReversal": {
         "triggered": 55,
@@ -3860,8 +4014,8 @@
       },
       "cFailureReversal": {
         "triggered": 57,
-        "completed": 25,
-        "pct": 44
+        "completed": 26,
+        "pct": 46
       },
       "expiryDynamics": {
         "expiryAttempts": 7,
@@ -4175,7 +4329,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 70,
+        "nonExpiryPinningRate": 69.1,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 5.5,
         "avgExpiryRangePct": 3.08,
@@ -4483,7 +4637,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 69.1,
+        "nonExpiryPinningRate": 68.2,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 2.7,
         "avgExpiryRangePct": 2.98,
@@ -4560,7 +4714,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 100,
-        "nonExpiryPinningRate": 77.3,
+        "nonExpiryPinningRate": 78.2,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 7.3,
         "avgExpiryRangePct": 2.26,
@@ -4702,8 +4856,8 @@
       },
       "doubleDistributionFill": {
         "triggered": 100,
-        "completed": 47,
-        "pct": 47
+        "completed": 48,
+        "pct": 48
       },
       "cFailureReversal": {
         "triggered": 44,
@@ -4868,7 +5022,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 57.4,
+        "nonExpiryPinningRate": 58.3,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 10.2,
         "avgExpiryRangePct": 4.41,
@@ -4945,7 +5099,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 70.9,
+        "nonExpiryPinningRate": 71.8,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 6.4,
         "avgExpiryRangePct": 3.99,
@@ -5076,9 +5230,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 27,
+        "triggered": 28,
         "completed": 7,
-        "pct": 26
+        "pct": 25
       },
       "bShapeResistance": {
         "triggered": 26,
@@ -5692,9 +5846,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 22,
+        "triggered": 23,
         "completed": 6,
-        "pct": 27
+        "pct": 26
       },
       "bShapeResistance": {
         "triggered": 43,
@@ -5769,9 +5923,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 24,
-        "completed": 10,
-        "pct": 42
+        "triggered": 23,
+        "completed": 9,
+        "pct": 39
       },
       "bShapeResistance": {
         "triggered": 35,
@@ -6100,11 +6254,11 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 57.1,
-        "nonExpiryPinningRate": 71.8,
+        "nonExpiryPinningRate": 70.9,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 2.7,
         "avgExpiryRangePct": 2.43,
-        "avgNonExpiryRangePct": 2.63
+        "avgNonExpiryRangePct": 2.64
       }
     },
     "NSE:GNFC": {
@@ -6164,8 +6318,8 @@
         "pct": 33
       },
       "doubleDistributionFill": {
-        "triggered": 99,
-        "completed": 38,
+        "triggered": 98,
+        "completed": 37,
         "pct": 38
       },
       "cFailureReversal": {
@@ -6331,7 +6485,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 60.9,
+        "nonExpiryPinningRate": 60,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 7.3,
         "avgExpiryRangePct": 3.15,
@@ -6639,7 +6793,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 75.5,
+        "nonExpiryPinningRate": 74.5,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 10,
         "avgExpiryRangePct": 1.52,
@@ -6716,7 +6870,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 57.1,
-        "nonExpiryPinningRate": 75.5,
+        "nonExpiryPinningRate": 76.4,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 9.1,
         "avgExpiryRangePct": 2.14,
@@ -6793,7 +6947,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 73.6,
+        "nonExpiryPinningRate": 72.7,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 1.8,
         "avgExpiryRangePct": 2.51,
@@ -7232,9 +7386,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 15,
+        "triggered": 16,
         "completed": 5,
-        "pct": 33
+        "pct": 31
       },
       "bShapeResistance": {
         "triggered": 39,
@@ -7255,11 +7409,11 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 57.1,
-        "nonExpiryPinningRate": 65.7,
+        "nonExpiryPinningRate": 64.8,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 4.6,
         "avgExpiryRangePct": 2.84,
-        "avgNonExpiryRangePct": 3.31
+        "avgNonExpiryRangePct": 3.32
       }
     },
     "NSE:HINDUNILVR": {
@@ -7794,7 +7948,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 85.7,
-        "nonExpiryPinningRate": 77.3,
+        "nonExpiryPinningRate": 78.2,
         "expiryBreakoutRate": 28.6,
         "nonExpiryBreakoutRate": 6.4,
         "avgExpiryRangePct": 2.06,
@@ -8179,7 +8333,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 85.7,
-        "nonExpiryPinningRate": 62,
+        "nonExpiryPinningRate": 61.1,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 6.5,
         "avgExpiryRangePct": 2.47,
@@ -9488,7 +9642,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 79.1,
+        "nonExpiryPinningRate": 78.2,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 8.2,
         "avgExpiryRangePct": 2.17,
@@ -9565,9 +9719,9 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 68.2,
+        "nonExpiryPinningRate": 69.1,
         "expiryBreakoutRate": 0,
-        "nonExpiryBreakoutRate": 7.3,
+        "nonExpiryBreakoutRate": 8.2,
         "avgExpiryRangePct": 2.62,
         "avgNonExpiryRangePct": 3.09
       }
@@ -9873,7 +10027,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 85.7,
-        "nonExpiryPinningRate": 69.1,
+        "nonExpiryPinningRate": 68.2,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 6.4,
         "avgExpiryRangePct": 3.59,
@@ -10106,7 +10260,7 @@
         "expiryPinningRate": 42.9,
         "nonExpiryPinningRate": 71.8,
         "expiryBreakoutRate": 14.3,
-        "nonExpiryBreakoutRate": 9.1,
+        "nonExpiryBreakoutRate": 10,
         "avgExpiryRangePct": 2.9,
         "avgNonExpiryRangePct": 2.4
       }
@@ -10251,8 +10405,8 @@
       },
       "cFailureReversal": {
         "triggered": 49,
-        "completed": 17,
-        "pct": 35
+        "completed": 18,
+        "pct": 37
       },
       "expiryDynamics": {
         "expiryAttempts": 7,
@@ -10489,7 +10643,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 58.3,
+        "nonExpiryPinningRate": 59.3,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 9.3,
         "avgExpiryRangePct": 3.48,
@@ -10570,7 +10724,7 @@
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 4.5,
         "avgExpiryRangePct": 2.73,
-        "avgNonExpiryRangePct": 2.99
+        "avgNonExpiryRangePct": 3
       }
     },
     "NSE:MANAPPURAM": {
@@ -11005,9 +11159,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 28,
+        "triggered": 27,
         "completed": 7,
-        "pct": 25
+        "pct": 26
       },
       "bShapeResistance": {
         "triggered": 33,
@@ -11105,7 +11259,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 57.1,
-        "nonExpiryPinningRate": 71.8,
+        "nonExpiryPinningRate": 70.9,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 6.4,
         "avgExpiryRangePct": 2.78,
@@ -11567,7 +11721,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 59.3,
+        "nonExpiryPinningRate": 58.3,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 2.8,
         "avgExpiryRangePct": 2.86,
@@ -11802,7 +11956,7 @@
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 4.6,
         "avgExpiryRangePct": 2.89,
-        "avgNonExpiryRangePct": 3.44
+        "avgNonExpiryRangePct": 3.45
       }
     },
     "NSE:NMDC": {
@@ -11956,7 +12110,7 @@
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 4.5,
         "avgExpiryRangePct": 1.93,
-        "avgNonExpiryRangePct": 1.99
+        "avgNonExpiryRangePct": 2
       }
     },
     "NSE:NYKAA": {
@@ -12029,7 +12183,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 70,
+        "nonExpiryPinningRate": 69.1,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 7.3,
         "avgExpiryRangePct": 2.23,
@@ -13107,7 +13261,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 28.6,
-        "nonExpiryPinningRate": 62,
+        "nonExpiryPinningRate": 61.1,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 6.5,
         "avgExpiryRangePct": 3.12,
@@ -13342,7 +13496,7 @@
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 10,
         "avgExpiryRangePct": 1.55,
-        "avgNonExpiryRangePct": 1.82
+        "avgNonExpiryRangePct": 1.83
       }
     },
     "NSE:RVNL": {
@@ -13415,7 +13569,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 70,
+        "nonExpiryPinningRate": 69.1,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 7.3,
         "avgExpiryRangePct": 2.66,
@@ -13569,7 +13723,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 71.4,
-        "nonExpiryPinningRate": 70.9,
+        "nonExpiryPinningRate": 70,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 7.3,
         "avgExpiryRangePct": 3.12,
@@ -14031,7 +14185,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 85.7,
-        "nonExpiryPinningRate": 73.6,
+        "nonExpiryPinningRate": 74.5,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 10.9,
         "avgExpiryRangePct": 2.08,
@@ -14162,9 +14316,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 9,
+        "triggered": 10,
         "completed": 1,
-        "pct": 11
+        "pct": 10
       },
       "bShapeResistance": {
         "triggered": 54,
@@ -14393,18 +14547,18 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 20,
-        "completed": 5,
-        "pct": 25
+        "triggered": 19,
+        "completed": 4,
+        "pct": 21
       },
       "bShapeResistance": {
-        "triggered": 37,
-        "completed": 11,
-        "pct": 30
+        "triggered": 38,
+        "completed": 12,
+        "pct": 32
       },
       "doubleDistributionFill": {
-        "triggered": 104,
-        "completed": 47,
+        "triggered": 103,
+        "completed": 46,
         "pct": 45
       },
       "cFailureReversal": {
@@ -15323,8 +15477,8 @@
       },
       "bShapeResistance": {
         "triggered": 44,
-        "completed": 20,
-        "pct": 45
+        "completed": 19,
+        "pct": 43
       },
       "doubleDistributionFill": {
         "triggered": 103,
@@ -15575,7 +15729,7 @@
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 5.5,
         "avgExpiryRangePct": 3.63,
-        "avgNonExpiryRangePct": 3.1
+        "avgNonExpiryRangePct": 3.11
       }
     },
     "NSE:VOLTAS": {
@@ -15802,7 +15956,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 51.9,
+        "nonExpiryPinningRate": 52.8,
         "expiryBreakoutRate": 28.6,
         "nonExpiryBreakoutRate": 11.1,
         "avgExpiryRangePct": 5.9,
@@ -15879,7 +16033,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 85.7,
-        "nonExpiryPinningRate": 76.4,
+        "nonExpiryPinningRate": 77.3,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 9.1,
         "avgExpiryRangePct": 2.5,
@@ -15934,8 +16088,8 @@
       },
       "pShapeSupport": {
         "triggered": 33,
-        "completed": 10,
-        "pct": 30
+        "completed": 11,
+        "pct": 33
       },
       "bShapeResistance": {
         "triggered": 34,
@@ -15956,7 +16110,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 14.3,
-        "nonExpiryPinningRate": 63.9,
+        "nonExpiryPinningRate": 63,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 6.5,
         "avgExpiryRangePct": 3.9,
@@ -16016,8 +16170,8 @@
       },
       "bShapeResistance": {
         "triggered": 38,
-        "completed": 8,
-        "pct": 21
+        "completed": 7,
+        "pct": 18
       },
       "doubleDistributionFill": {
         "triggered": 100,
@@ -16087,9 +16241,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 26,
-        "completed": 5,
-        "pct": 19
+        "triggered": 27,
+        "completed": 6,
+        "pct": 22
       },
       "bShapeResistance": {
         "triggered": 38,
@@ -16187,11 +16341,11 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 51.9,
+        "nonExpiryPinningRate": 50.9,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 6.5,
         "avgExpiryRangePct": 4.55,
-        "avgNonExpiryRangePct": 3.73
+        "avgNonExpiryRangePct": 3.74
       }
     },
     "NSE:FORTIS": {
@@ -16495,7 +16649,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 42.9,
-        "nonExpiryPinningRate": 60,
+        "nonExpiryPinningRate": 59.1,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 8.2,
         "avgExpiryRangePct": 3.22,
@@ -16649,7 +16803,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 85.7,
-        "nonExpiryPinningRate": 74.5,
+        "nonExpiryPinningRate": 75.5,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 3.6,
         "avgExpiryRangePct": 2.46,
@@ -16880,7 +17034,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 108,
         "expiryPinningRate": 57.1,
-        "nonExpiryPinningRate": 53.7,
+        "nonExpiryPinningRate": 52.8,
         "expiryBreakoutRate": 14.3,
         "nonExpiryBreakoutRate": 7.4,
         "avgExpiryRangePct": 3.13,
@@ -17242,9 +17396,9 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 32,
+        "triggered": 33,
         "completed": 10,
-        "pct": 31
+        "pct": 30
       },
       "bShapeResistance": {
         "triggered": 32,
@@ -17252,9 +17406,9 @@
         "pct": 34
       },
       "doubleDistributionFill": {
-        "triggered": 99,
+        "triggered": 98,
         "completed": 48,
-        "pct": 48
+        "pct": 49
       },
       "cFailureReversal": {
         "triggered": 45,
@@ -17329,9 +17483,9 @@
         "pct": 23
       },
       "doubleDistributionFill": {
-        "triggered": 56,
-        "completed": 22,
-        "pct": 39
+        "triggered": 55,
+        "completed": 21,
+        "pct": 38
       },
       "cFailureReversal": {
         "triggered": 50,
@@ -17346,7 +17500,7 @@
         "expiryBreakoutRate": 28.6,
         "nonExpiryBreakoutRate": 6.5,
         "avgExpiryRangePct": 2.28,
-        "avgNonExpiryRangePct": 2.26
+        "avgNonExpiryRangePct": 2.27
       }
     },
     "NSE:UNIONBANK": {
@@ -17419,7 +17573,7 @@
         "expiryAttempts": 7,
         "nonExpiryAttempts": 110,
         "expiryPinningRate": 100,
-        "nonExpiryPinningRate": 62.7,
+        "nonExpiryPinningRate": 63.6,
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 7.3,
         "avgExpiryRangePct": 2.35,
@@ -17474,8 +17628,8 @@
       },
       "pShapeSupport": {
         "triggered": 21,
-        "completed": 9,
-        "pct": 43
+        "completed": 8,
+        "pct": 38
       },
       "bShapeResistance": {
         "triggered": 47,

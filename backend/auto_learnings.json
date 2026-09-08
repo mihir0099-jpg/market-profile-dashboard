@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "8/9/2026, 7:35:34 am",
+  "lastUpdated": "8/9/2026, 9:07:39 am",
   "global": {
     "stats": {
       "gapRejectionToPoc": {
@@ -190,8 +190,8 @@
       "afterAboveVah": {
         "gapUp": 32.8,
         "gapDown": 2.5,
-        "flat": 64.6,
-        "total": 4384
+        "flat": 64.7,
+        "total": 4383
       },
       "afterBelowVal": {
         "gapUp": 3.5,
@@ -203,7 +203,7 @@
         "gapUp": 13,
         "gapDown": 9.5,
         "flat": 77.5,
-        "total": 16335
+        "total": 16336
       }
     }
   },
@@ -848,9 +848,9 @@
         "sellingTailSecure": {
           "name": "Selling Tail Secure Highs",
           "description": "If yesterday had a selling tail (aggressive high rejection), does today keep yesterday's high secure?",
-          "attempts": 14,
-          "successes": 7,
-          "probability": 50
+          "attempts": 13,
+          "successes": 6,
+          "probability": 46.2
         },
         "otdTarget1618": {
           "name": "OTD/OD to 1.618x IB Extension",
@@ -1155,7 +1155,7 @@
         "neutral": {
           "name": "Neutral Sentiment (0.65 < PCR < 1.25)",
           "attempts": 24,
-          "bullishCloseProb": 58.3,
+          "bullishCloseProb": 54.2,
           "meanReversionProb": 70.8,
           "gapFillProb": 37.5
         }
@@ -1206,9 +1206,9 @@
           "M": 41.9
         },
         "closingDistribution": {
-          "aboveVah": 38.7,
+          "aboveVah": 35.5,
           "belowVal": 19.4,
-          "insideValue": 41.9,
+          "insideValue": 45.2,
           "totalSessions": 31
         }
       },
@@ -1216,7 +1216,7 @@
         "expiryAttempts": 2,
         "nonExpiryAttempts": 29,
         "expiryPinningRate": 0,
-        "nonExpiryPinningRate": 72.4,
+        "nonExpiryPinningRate": 69,
         "expiryBreakoutRate": 100,
         "nonExpiryBreakoutRate": 6.9,
         "avgExpiryRangePct": 4.56,

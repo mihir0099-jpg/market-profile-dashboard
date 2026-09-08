@@ -1,816 +1,605 @@
 {
-  "generatedAt": "7/9/2026, 9:02:01 am",
+  "generatedAt": "8/9/2026, 9:01:46 am",
   "compressionCandidates": [
     {
-      "symbol": "NSE:NIFTY",
-      "avgPoc": "23906.67",
-      "bracketHigh": "24025.40",
-      "bracketLow": "23786.80",
+      "symbol": "OANDA:XAUUSD",
+      "avgPoc": "4411.67",
+      "bracketHigh": "4440.81",
+      "bracketLow": "4381.24",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:NIFTY1!",
-      "avgPoc": "24030.00",
-      "bracketHigh": "24148.00",
-      "bracketLow": "23940.00",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "COINBASE:BTCUSD",
-      "avgPoc": "79710.00",
-      "bracketHigh": "80564.24",
-      "bracketLow": "79250.00",
+      "symbol": "NSE:ABB",
+      "avgPoc": "7403.33",
+      "bracketHigh": "7475.00",
+      "bracketLow": "7327.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:ABBOTINDIA",
-      "avgPoc": "25930.00",
+      "avgPoc": "25923.33",
       "bracketHigh": "26365.00",
       "bracketLow": "25810.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
+      "symbol": "NSE:ADANIPORTS",
+      "avgPoc": "1703.33",
+      "bracketHigh": "1716.90",
+      "bracketLow": "1681.80",
+      "description": "Extremely tight 3-day consolidation. Ready for breakout."
+    },
+    {
+      "symbol": "NSE:ALKEM",
+      "avgPoc": "5163.33",
+      "bracketHigh": "5233.50",
+      "bracketLow": "5104.50",
+      "description": "Extremely tight 3-day consolidation. Ready for breakout."
+    },
+    {
       "symbol": "NSE:APOLLOHOSP",
-      "avgPoc": "8690.00",
-      "bracketHigh": "8785.50",
-      "bracketLow": "8640.00",
+      "avgPoc": "8700.00",
+      "bracketHigh": "8840.50",
+      "bracketLow": "8641.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:ASIANPAINT",
-      "avgPoc": "2525.00",
-      "bracketHigh": "2553.90",
-      "bracketLow": "2510.70",
+      "symbol": "NSE:AUROPHARMA",
+      "avgPoc": "1656.67",
+      "bracketHigh": "1668.00",
+      "bracketLow": "1622.60",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:ATGL",
-      "avgPoc": "616.00",
-      "bracketHigh": "624.95",
-      "bracketLow": "604.30",
+      "symbol": "NSE:AXISBANK",
+      "avgPoc": "1268.33",
+      "bracketHigh": "1280.70",
+      "bracketLow": "1260.20",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:AUBANK",
-      "avgPoc": "1070.00",
-      "bracketHigh": "1083.30",
-      "bracketLow": "1060.40",
+      "symbol": "NSE:CHAMBLFERT",
+      "avgPoc": "419.33",
+      "bracketHigh": "423.60",
+      "bracketLow": "413.50",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:BAJAJ_AUTO",
-      "avgPoc": "11956.67",
-      "bracketHigh": "12275.00",
-      "bracketLow": "11873.00",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:BHARTIARTL",
-      "avgPoc": "1861.67",
-      "bracketHigh": "1873.00",
-      "bracketLow": "1845.00",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:BIOCON",
-      "avgPoc": "401.67",
-      "bracketHigh": "405.70",
-      "bracketLow": "396.20",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:BOSCHLTD",
-      "avgPoc": "46783.33",
-      "bracketHigh": "48090.00",
-      "bracketLow": "46410.00",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:BRITANNIA",
-      "avgPoc": "5123.33",
-      "bracketHigh": "5172.00",
-      "bracketLow": "5046.00",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:DABUR",
-      "avgPoc": "380.00",
-      "bracketHigh": "383.25",
-      "bracketLow": "377.35",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:DALBHARAT",
-      "avgPoc": "1768.33",
-      "bracketHigh": "1802.00",
-      "bracketLow": "1740.00",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:DEEPAKNTR",
-      "avgPoc": "1726.67",
-      "bracketHigh": "1789.50",
-      "bracketLow": "1705.70",
+      "symbol": "NSE:CHOLAFIN",
+      "avgPoc": "1835.00",
+      "bracketHigh": "1859.90",
+      "bracketLow": "1798.30",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:DRREDDY",
-      "avgPoc": "1161.67",
-      "bracketHigh": "1170.90",
-      "bracketLow": "1154.00",
+      "avgPoc": "1158.33",
+      "bracketHigh": "1166.80",
+      "bracketLow": "1141.80",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:EICHERMOT",
-      "avgPoc": "7630.00",
-      "bracketHigh": "7893.00",
-      "bracketLow": "7507.50",
+      "avgPoc": "7646.67",
+      "bracketHigh": "7738.50",
+      "bracketLow": "7590.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:GAIL",
-      "avgPoc": "172.80",
-      "bracketHigh": "174.16",
-      "bracketLow": "171.02",
+      "symbol": "NSE:EXIDEIND",
+      "avgPoc": "422.33",
+      "bracketHigh": "430.00",
+      "bracketLow": "416.40",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:GLENMARK",
-      "avgPoc": "2436.67",
-      "bracketHigh": "2476.90",
-      "bracketLow": "2420.00",
+      "symbol": "NSE:HEROMOTOCO",
+      "avgPoc": "5296.67",
+      "bracketHigh": "5347.50",
+      "bracketLow": "5260.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:HINDALCO",
       "avgPoc": "1006.67",
       "bracketHigh": "1022.50",
-      "bracketLow": "998.20",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:HINDCOPPER",
-      "avgPoc": "520.00",
-      "bracketHigh": "528.80",
-      "bracketLow": "516.25",
+      "bracketLow": "999.80",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:HINDUNILVR",
-      "avgPoc": "1968.33",
+      "avgPoc": "1966.67",
       "bracketHigh": "1984.20",
       "bracketLow": "1950.40",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:ICICIPRULI",
-      "avgPoc": "495.33",
-      "bracketHigh": "503.15",
-      "bracketLow": "487.50",
+      "symbol": "NSE:INDIACEM",
+      "avgPoc": "358.67",
+      "bracketHigh": "363.90",
+      "bracketLow": "355.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:IEX",
-      "avgPoc": "119.13",
-      "bracketHigh": "121.63",
-      "bracketLow": "117.70",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:INDIAMART",
-      "avgPoc": "1736.67",
-      "bracketHigh": "1758.60",
-      "bracketLow": "1722.50",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:INFY",
-      "avgPoc": "1131.67",
-      "bracketHigh": "1147.80",
-      "bracketLow": "1118.60",
+      "symbol": "NSE:INDIGO",
+      "avgPoc": "4983.33",
+      "bracketHigh": "5047.00",
+      "bracketLow": "4925.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:IRCTC",
-      "avgPoc": "475.00",
-      "bracketHigh": "481.35",
-      "bracketLow": "470.70",
+      "avgPoc": "475.67",
+      "bracketHigh": "479.00",
+      "bracketLow": "473.60",
+      "description": "Extremely tight 3-day consolidation. Ready for breakout."
+    },
+    {
+      "symbol": "NSE:IRFC",
+      "avgPoc": "83.20",
+      "bracketHigh": "83.95",
+      "bracketLow": "82.05",
+      "description": "Extremely tight 3-day consolidation. Ready for breakout."
+    },
+    {
+      "symbol": "NSE:ITC",
+      "avgPoc": "264.33",
+      "bracketHigh": "267.60",
+      "bracketLow": "262.35",
+      "description": "Extremely tight 3-day consolidation. Ready for breakout."
+    },
+    {
+      "symbol": "NSE:JINDALSTEL",
+      "avgPoc": "1140.00",
+      "bracketHigh": "1170.90",
+      "bracketLow": "1130.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:JSWENERGY",
-      "avgPoc": "537.67",
+      "avgPoc": "538.33",
       "bracketHigh": "545.80",
-      "bracketLow": "511.40",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:JSWSTEEL",
-      "avgPoc": "1303.33",
-      "bracketHigh": "1331.70",
-      "bracketLow": "1295.00",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:JUBLFOOD",
-      "avgPoc": "481.67",
-      "bracketHigh": "488.45",
-      "bracketLow": "476.95",
+      "bracketLow": "528.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:KOTAKBANK",
-      "avgPoc": "423.33",
+      "avgPoc": "423.67",
       "bracketHigh": "426.90",
-      "bracketLow": "418.95",
+      "bracketLow": "421.00",
+      "description": "Extremely tight 3-day consolidation. Ready for breakout."
+    },
+    {
+      "symbol": "NSE:LTF",
+      "avgPoc": "313.67",
+      "bracketHigh": "320.50",
+      "bracketLow": "310.90",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:LT",
       "avgPoc": "3983.33",
       "bracketHigh": "4027.70",
-      "bracketLow": "3956.70",
+      "bracketLow": "3960.90",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:M_M",
-      "avgPoc": "3173.33",
-      "bracketHigh": "3229.60",
-      "bracketLow": "3142.50",
+      "avgPoc": "3170.00",
+      "bracketHigh": "3210.00",
+      "bracketLow": "3144.20",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:MRF",
-      "avgPoc": "130826.67",
-      "bracketHigh": "132865.00",
-      "bracketLow": "129705.00",
+      "symbol": "NSE:NBCC",
+      "avgPoc": "86.27",
+      "bracketHigh": "87.35",
+      "bracketLow": "85.29",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:NMDC",
-      "avgPoc": "84.67",
+      "avgPoc": "84.47",
       "bracketHigh": "86.87",
-      "bracketLow": "84.23",
+      "bracketLow": "83.54",
+      "description": "Extremely tight 3-day consolidation. Ready for breakout."
+    },
+    {
+      "symbol": "NSE:NTPC",
+      "avgPoc": "331.00",
+      "bracketHigh": "334.05",
+      "bracketLow": "329.10",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:NYKAA",
-      "avgPoc": "333.33",
-      "bracketHigh": "339.05",
-      "bracketLow": "329.75",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:OFSS",
-      "avgPoc": "12103.33",
-      "bracketHigh": "12348.00",
-      "bracketLow": "11951.00",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:PAGEIND",
-      "avgPoc": "36050.00",
-      "bracketHigh": "36370.00",
-      "bracketLow": "35220.00",
+      "avgPoc": "334.33",
+      "bracketHigh": "339.75",
+      "bracketLow": "330.10",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:PETRONET",
-      "avgPoc": "290.33",
-      "bracketHigh": "294.00",
+      "avgPoc": "290.67",
+      "bracketHigh": "293.80",
       "bracketLow": "287.80",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:PIDILITIND",
-      "avgPoc": "1630.00",
-      "bracketHigh": "1639.50",
-      "bracketLow": "1621.20",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:PNB",
-      "avgPoc": "117.00",
-      "bracketHigh": "118.25",
-      "bracketLow": "113.92",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:PVRINOX",
-      "avgPoc": "1223.33",
-      "bracketHigh": "1254.00",
-      "bracketLow": "1207.00",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:RECLTD",
-      "avgPoc": "316.00",
-      "bracketHigh": "320.70",
-      "bracketLow": "310.40",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:SIEMENS",
-      "avgPoc": "4005.00",
-      "bracketHigh": "4111.90",
-      "bracketLow": "3966.20",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:TATACONSUM",
       "avgPoc": "1016.67",
-      "bracketHigh": "1027.40",
-      "bracketLow": "1008.00",
+      "bracketHigh": "1023.00",
+      "bracketLow": "1004.00",
+      "description": "Extremely tight 3-day consolidation. Ready for breakout."
+    },
+    {
+      "symbol": "NSE:TATAPOWER",
+      "avgPoc": "366.33",
+      "bracketHigh": "370.75",
+      "bracketLow": "362.75",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:TITAN",
-      "avgPoc": "4996.67",
-      "bracketHigh": "5092.00",
+      "avgPoc": "4995.00",
+      "bracketHigh": "5072.50",
       "bracketLow": "4952.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:WIPRO",
-      "avgPoc": "177.27",
-      "bracketHigh": "180.39",
-      "bracketLow": "176.21",
+      "symbol": "NSE:VOLTAS",
+      "avgPoc": "1173.33",
+      "bracketHigh": "1189.70",
+      "bracketLow": "1151.70",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
-      "symbol": "NSE:FORTIS",
-      "avgPoc": "911.67",
-      "bracketHigh": "920.00",
-      "bracketLow": "901.35",
-      "description": "Extremely tight 3-day consolidation. Ready for breakout."
-    },
-    {
-      "symbol": "NSE:HINDPETRO",
-      "avgPoc": "358.00",
-      "bracketHigh": "362.90",
-      "bracketLow": "355.40",
+      "symbol": "NSE:BLUESTARCO",
+      "avgPoc": "1490.00",
+      "bracketHigh": "1514.70",
+      "bracketLow": "1455.30",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     },
     {
       "symbol": "NSE:MAXHEALTH",
-      "avgPoc": "993.00",
-      "bracketHigh": "1005.00",
-      "bracketLow": "981.10",
+      "avgPoc": "992.00",
+      "bracketHigh": "1001.30",
+      "bracketLow": "974.00",
       "description": "Extremely tight 3-day consolidation. Ready for breakout."
     }
   ],
   "poorHighCandidates": [
     {
-      "symbol": "NSE:NIFTY1!",
-      "closePrice": 24044.9,
-      "poorHighPrice": 24120,
-      "description": "Unfinished auction at top. Target magnet: 24120.00"
+      "symbol": "NSE:AARTIIND",
+      "closePrice": 490.5,
+      "poorHighPrice": 495.75,
+      "description": "Unfinished auction at top. Target magnet: 495.75"
     },
     {
-      "symbol": "NSE:ADANIENSOL",
-      "closePrice": 1408.9,
-      "poorHighPrice": 1412.7,
-      "description": "Unfinished auction at top. Target magnet: 1412.70"
+      "symbol": "NSE:ABCAPITAL",
+      "closePrice": 400.35,
+      "poorHighPrice": 404.75,
+      "description": "Unfinished auction at top. Target magnet: 404.75"
     },
     {
-      "symbol": "NSE:ATGL",
-      "closePrice": 614.65,
-      "poorHighPrice": 619.8,
-      "description": "Unfinished auction at top. Target magnet: 619.80"
+      "symbol": "NSE:ADANIGREEN",
+      "closePrice": 1286,
+      "poorHighPrice": 1309.8,
+      "description": "Unfinished auction at top. Target magnet: 1309.80"
     },
     {
-      "symbol": "NSE:AUBANK",
-      "closePrice": 1070,
-      "poorHighPrice": 1074.1,
-      "description": "Unfinished auction at top. Target magnet: 1074.10"
+      "symbol": "NSE:BALRAMCHIN",
+      "closePrice": 707,
+      "poorHighPrice": 722,
+      "description": "Unfinished auction at top. Target magnet: 722.00"
     },
     {
-      "symbol": "NSE:BAJAJFINSV",
-      "closePrice": 1975,
-      "poorHighPrice": 1994.2,
-      "description": "Unfinished auction at top. Target magnet: 1994.20"
+      "symbol": "NSE:BATAINDIA",
+      "closePrice": 668.75,
+      "poorHighPrice": 675,
+      "description": "Unfinished auction at top. Target magnet: 675.00"
     },
     {
-      "symbol": "NSE:BIOCON",
-      "closePrice": 396.95,
-      "poorHighPrice": 404.9,
-      "description": "Unfinished auction at top. Target magnet: 404.90"
+      "symbol": "NSE:ICICIGI",
+      "closePrice": 1503.6,
+      "poorHighPrice": 1513.1,
+      "description": "Unfinished auction at top. Target magnet: 1513.10"
     },
     {
-      "symbol": "NSE:CUB",
-      "closePrice": 235.24,
-      "poorHighPrice": 242.9,
-      "description": "Unfinished auction at top. Target magnet: 242.90"
+      "symbol": "NSE:IDFCFIRSTB",
+      "closePrice": 86.55,
+      "poorHighPrice": 86.79,
+      "description": "Unfinished auction at top. Target magnet: 86.79"
     },
     {
-      "symbol": "NSE:DELHIVERY",
-      "closePrice": 460,
-      "poorHighPrice": 465.9,
-      "description": "Unfinished auction at top. Target magnet: 465.90"
+      "symbol": "NSE:INDUSTOWER",
+      "closePrice": 376.2,
+      "poorHighPrice": 383.75,
+      "description": "Unfinished auction at top. Target magnet: 383.75"
     },
     {
-      "symbol": "NSE:FEDERALBNK",
-      "closePrice": 342.2,
-      "poorHighPrice": 344.75,
-      "description": "Unfinished auction at top. Target magnet: 344.75"
+      "symbol": "NSE:ITC",
+      "closePrice": 263.85,
+      "poorHighPrice": 264.95,
+      "description": "Unfinished auction at top. Target magnet: 264.95"
     },
     {
-      "symbol": "NSE:GNFC",
-      "closePrice": 598,
-      "poorHighPrice": 599,
-      "description": "Unfinished auction at top. Target magnet: 599.00"
+      "symbol": "NSE:MUTHOOTFIN",
+      "closePrice": 2891.9,
+      "poorHighPrice": 2920,
+      "description": "Unfinished auction at top. Target magnet: 2920.00"
     },
     {
-      "symbol": "NSE:HDFCLIFE",
-      "closePrice": 544.05,
-      "poorHighPrice": 548,
-      "description": "Unfinished auction at top. Target magnet: 548.00"
+      "symbol": "NSE:NYKAA",
+      "closePrice": 335.5,
+      "poorHighPrice": 339.75,
+      "description": "Unfinished auction at top. Target magnet: 339.75"
     },
     {
-      "symbol": "NSE:INDIACEM",
-      "closePrice": 362.75,
-      "poorHighPrice": 363.9,
-      "description": "Unfinished auction at top. Target magnet: 363.90"
+      "symbol": "NSE:TATACOMM",
+      "closePrice": 1740,
+      "poorHighPrice": 1753.9,
+      "description": "Unfinished auction at top. Target magnet: 1753.90"
     },
     {
-      "symbol": "NSE:INDUSINDBK",
-      "closePrice": 1005.4,
-      "poorHighPrice": 1008.6,
-      "description": "Unfinished auction at top. Target magnet: 1008.60"
+      "symbol": "NSE:TATACONSUM",
+      "closePrice": 1012.7,
+      "poorHighPrice": 1019.9,
+      "description": "Unfinished auction at top. Target magnet: 1019.90"
     },
     {
-      "symbol": "NSE:IPCALAB",
-      "closePrice": 1965,
-      "poorHighPrice": 1969,
-      "description": "Unfinished auction at top. Target magnet: 1969.00"
+      "symbol": "NSE:TORNTPHARM",
+      "closePrice": 4900,
+      "poorHighPrice": 4915,
+      "description": "Unfinished auction at top. Target magnet: 4915.00"
     },
     {
-      "symbol": "NSE:IREDA",
-      "closePrice": 113.63,
-      "poorHighPrice": 114.6,
-      "description": "Unfinished auction at top. Target magnet: 114.60"
+      "symbol": "NSE:BALKRISIND",
+      "closePrice": 2292.8,
+      "poorHighPrice": 2295,
+      "description": "Unfinished auction at top. Target magnet: 2295.00"
     },
     {
-      "symbol": "NSE:KARURVYSYA",
-      "closePrice": 349.1,
-      "poorHighPrice": 353.8,
-      "description": "Unfinished auction at top. Target magnet: 353.80"
-    },
-    {
-      "symbol": "NSE:KOTAKBANK",
-      "closePrice": 424.7,
-      "poorHighPrice": 425.95,
-      "description": "Unfinished auction at top. Target magnet: 425.95"
-    },
-    {
-      "symbol": "NSE:LT",
-      "closePrice": 3988,
-      "poorHighPrice": 3994.9,
-      "description": "Unfinished auction at top. Target magnet: 3994.90"
-    },
-    {
-      "symbol": "NSE:M_MFIN",
-      "closePrice": 375,
-      "poorHighPrice": 380.95,
-      "description": "Unfinished auction at top. Target magnet: 380.95"
-    },
-    {
-      "symbol": "NSE:MAHABANK",
-      "closePrice": 85.75,
-      "poorHighPrice": 86.95,
-      "description": "Unfinished auction at top. Target magnet: 86.95"
-    },
-    {
-      "symbol": "NSE:NBCC",
-      "closePrice": 86.53,
-      "poorHighPrice": 87.35,
-      "description": "Unfinished auction at top. Target magnet: 87.35"
-    },
-    {
-      "symbol": "NSE:NESTLEIND",
-      "closePrice": 1406.5,
-      "poorHighPrice": 1420,
-      "description": "Unfinished auction at top. Target magnet: 1420.00"
-    },
-    {
-      "symbol": "NSE:NHPC",
-      "closePrice": 76.28,
-      "poorHighPrice": 76.75,
-      "description": "Unfinished auction at top. Target magnet: 76.75"
-    },
-    {
-      "symbol": "NSE:SBIN",
-      "closePrice": 1018.6,
-      "poorHighPrice": 1029.2,
-      "description": "Unfinished auction at top. Target magnet: 1029.20"
-    },
-    {
-      "symbol": "NSE:VOLTAS",
-      "closePrice": 1174.2,
-      "poorHighPrice": 1189.7,
-      "description": "Unfinished auction at top. Target magnet: 1189.70"
-    },
-    {
-      "symbol": "NSE:WESTLIFE",
-      "closePrice": 528.4,
-      "poorHighPrice": 542,
-      "description": "Unfinished auction at top. Target magnet: 542.00"
+      "symbol": "NSE:PAYTM",
+      "closePrice": 1650,
+      "poorHighPrice": 1669.3,
+      "description": "Unfinished auction at top. Target magnet: 1669.30"
     }
   ],
   "poorLowCandidates": [
     {
-      "symbol": "NSE:ALKEM",
-      "closePrice": 5190,
-      "poorLowPrice": 5130,
-      "description": "Unfinished auction at bottom. Target magnet: 5130.00"
+      "symbol": "NSE:ABBOTINDIA",
+      "closePrice": 25905,
+      "poorLowPrice": 25810,
+      "description": "Unfinished auction at bottom. Target magnet: 25810.00"
+    },
+    {
+      "symbol": "NSE:ACC",
+      "closePrice": 1271,
+      "poorLowPrice": 1265.5,
+      "description": "Unfinished auction at bottom. Target magnet: 1265.50"
     },
     {
       "symbol": "NSE:AMBUJACEM",
-      "closePrice": 405,
-      "poorLowPrice": 404.25,
-      "description": "Unfinished auction at bottom. Target magnet: 404.25"
-    },
-    {
-      "symbol": "NSE:APOLLOTYRE",
-      "closePrice": 428.25,
-      "poorLowPrice": 428.25,
-      "description": "Unfinished auction at bottom. Target magnet: 428.25"
+      "closePrice": 399.4,
+      "poorLowPrice": 399,
+      "description": "Unfinished auction at bottom. Target magnet: 399.00"
     },
     {
       "symbol": "NSE:ATUL",
-      "closePrice": 6376,
-      "poorLowPrice": 6370.5,
-      "description": "Unfinished auction at bottom. Target magnet: 6370.50"
+      "closePrice": 6302.5,
+      "poorLowPrice": 6302.5,
+      "description": "Unfinished auction at bottom. Target magnet: 6302.50"
     },
     {
-      "symbol": "NSE:AUBANK",
-      "closePrice": 1070,
-      "poorLowPrice": 1060.4,
-      "description": "Unfinished auction at bottom. Target magnet: 1060.40"
-    },
-    {
-      "symbol": "NSE:BAJAJFINSV",
-      "closePrice": 1975,
-      "poorLowPrice": 1970.5,
-      "description": "Unfinished auction at bottom. Target magnet: 1970.50"
-    },
-    {
-      "symbol": "NSE:BANKBARODA",
-      "closePrice": 239.5,
-      "poorLowPrice": 239.1,
-      "description": "Unfinished auction at bottom. Target magnet: 239.10"
-    },
-    {
-      "symbol": "NSE:BATAINDIA",
-      "closePrice": 673,
-      "poorLowPrice": 671,
-      "description": "Unfinished auction at bottom. Target magnet: 671.00"
+      "symbol": "NSE:AXISBANK",
+      "closePrice": 1266,
+      "poorLowPrice": 1261.6,
+      "description": "Unfinished auction at bottom. Target magnet: 1261.60"
     },
     {
       "symbol": "NSE:BDL",
-      "closePrice": 1256.1,
-      "poorLowPrice": 1255.8,
-      "description": "Unfinished auction at bottom. Target magnet: 1255.80"
+      "closePrice": 1240,
+      "poorLowPrice": 1240,
+      "description": "Unfinished auction at bottom. Target magnet: 1240.00"
     },
     {
-      "symbol": "NSE:BEML",
-      "closePrice": 2058,
-      "poorLowPrice": 2045,
-      "description": "Unfinished auction at bottom. Target magnet: 2045.00"
+      "symbol": "NSE:BHARTIARTL",
+      "closePrice": 1847.2,
+      "poorLowPrice": 1830.4,
+      "description": "Unfinished auction at bottom. Target magnet: 1830.40"
     },
     {
-      "symbol": "NSE:BERGEPAINT",
-      "closePrice": 484.95,
-      "poorLowPrice": 484,
-      "description": "Unfinished auction at bottom. Target magnet: 484.00"
+      "symbol": "NSE:BPCL",
+      "closePrice": 311.5,
+      "poorLowPrice": 311.2,
+      "description": "Unfinished auction at bottom. Target magnet: 311.20"
+    },
+    {
+      "symbol": "NSE:BSE",
+      "closePrice": 3449,
+      "poorLowPrice": 3420,
+      "description": "Unfinished auction at bottom. Target magnet: 3420.00"
+    },
+    {
+      "symbol": "NSE:BSOFT",
+      "closePrice": 282.2,
+      "poorLowPrice": 281.15,
+      "description": "Unfinished auction at bottom. Target magnet: 281.15"
     },
     {
       "symbol": "NSE:CANBK",
-      "closePrice": 126.13,
-      "poorLowPrice": 126.05,
-      "description": "Unfinished auction at bottom. Target magnet: 126.05"
+      "closePrice": 124.28,
+      "poorLowPrice": 124.09,
+      "description": "Unfinished auction at bottom. Target magnet: 124.09"
     },
     {
-      "symbol": "NSE:CDSL",
-      "closePrice": 1394.5,
-      "poorLowPrice": 1391.6,
-      "description": "Unfinished auction at bottom. Target magnet: 1391.60"
-    },
-    {
-      "symbol": "NSE:CHAMBLFERT",
-      "closePrice": 419.5,
-      "poorLowPrice": 418.05,
-      "description": "Unfinished auction at bottom. Target magnet: 418.05"
+      "symbol": "NSE:CENTRALBK",
+      "closePrice": 30.96,
+      "poorLowPrice": 30.8,
+      "description": "Unfinished auction at bottom. Target magnet: 30.80"
     },
     {
       "symbol": "NSE:CIPLA",
-      "closePrice": 1384,
-      "poorLowPrice": 1375.5,
-      "description": "Unfinished auction at bottom. Target magnet: 1375.50"
+      "closePrice": 1395.2,
+      "poorLowPrice": 1376.8,
+      "description": "Unfinished auction at bottom. Target magnet: 1376.80"
     },
     {
-      "symbol": "NSE:COROMANDEL",
-      "closePrice": 1940.1,
-      "poorLowPrice": 1930,
-      "description": "Unfinished auction at bottom. Target magnet: 1930.00"
+      "symbol": "NSE:DEEPAKNTR",
+      "closePrice": 1641.7,
+      "poorLowPrice": 1636.5,
+      "description": "Unfinished auction at bottom. Target magnet: 1636.50"
     },
     {
-      "symbol": "NSE:CUMMINSIND",
-      "closePrice": 5045,
-      "poorLowPrice": 5013,
-      "description": "Unfinished auction at bottom. Target magnet: 5013.00"
+      "symbol": "NSE:HAVELLS",
+      "closePrice": 1151,
+      "poorLowPrice": 1140,
+      "description": "Unfinished auction at bottom. Target magnet: 1140.00"
     },
     {
-      "symbol": "NSE:DELHIVERY",
-      "closePrice": 460,
-      "poorLowPrice": 458.2,
-      "description": "Unfinished auction at bottom. Target magnet: 458.20"
-    },
-    {
-      "symbol": "NSE:EICHERMOT",
-      "closePrice": 7649,
-      "poorLowPrice": 7590,
-      "description": "Unfinished auction at bottom. Target magnet: 7590.00"
-    },
-    {
-      "symbol": "NSE:ESCORTS",
-      "closePrice": 2968.3,
-      "poorLowPrice": 2960.3,
-      "description": "Unfinished auction at bottom. Target magnet: 2960.30"
-    },
-    {
-      "symbol": "NSE:HINDALCO",
-      "closePrice": 1014.7,
-      "poorLowPrice": 1005,
-      "description": "Unfinished auction at bottom. Target magnet: 1005.00"
-    },
-    {
-      "symbol": "NSE:HINDCOPPER",
-      "closePrice": 521.55,
-      "poorLowPrice": 518,
-      "description": "Unfinished auction at bottom. Target magnet: 518.00"
-    },
-    {
-      "symbol": "NSE:HINDUNILVR",
-      "closePrice": 1973,
-      "poorLowPrice": 1950.4,
-      "description": "Unfinished auction at bottom. Target magnet: 1950.40"
-    },
-    {
-      "symbol": "NSE:IDFCFIRSTB",
-      "closePrice": 86.71,
-      "poorLowPrice": 86.5,
-      "description": "Unfinished auction at bottom. Target magnet: 86.50"
+      "symbol": "NSE:INDHOTEL",
+      "closePrice": 714.1,
+      "poorLowPrice": 709.2,
+      "description": "Unfinished auction at bottom. Target magnet: 709.20"
     },
     {
       "symbol": "NSE:INDIACEM",
-      "closePrice": 362.75,
-      "poorLowPrice": 358.15,
-      "description": "Unfinished auction at bottom. Target magnet: 358.15"
+      "closePrice": 355.9,
+      "poorLowPrice": 355,
+      "description": "Unfinished auction at bottom. Target magnet: 355.00"
     },
     {
-      "symbol": "NSE:INDIGO",
-      "closePrice": 5003,
-      "poorLowPrice": 4981,
-      "description": "Unfinished auction at bottom. Target magnet: 4981.00"
+      "symbol": "NSE:INDUSINDBK",
+      "closePrice": 995,
+      "poorLowPrice": 995,
+      "description": "Unfinished auction at bottom. Target magnet: 995.00"
     },
     {
-      "symbol": "NSE:IRCTC",
-      "closePrice": 477,
-      "poorLowPrice": 474.05,
-      "description": "Unfinished auction at bottom. Target magnet: 474.05"
+      "symbol": "NSE:INDUSTOWER",
+      "closePrice": 376.2,
+      "poorLowPrice": 376,
+      "description": "Unfinished auction at bottom. Target magnet: 376.00"
     },
     {
-      "symbol": "NSE:IREDA",
-      "closePrice": 113.63,
-      "poorLowPrice": 113.25,
-      "description": "Unfinished auction at bottom. Target magnet: 113.25"
+      "symbol": "NSE:INFY",
+      "closePrice": 1087.4,
+      "poorLowPrice": 1085,
+      "description": "Unfinished auction at bottom. Target magnet: 1085.00"
     },
     {
-      "symbol": "NSE:JSWSTEEL",
-      "closePrice": 1325,
-      "poorLowPrice": 1300.1,
-      "description": "Unfinished auction at bottom. Target magnet: 1300.10"
+      "symbol": "NSE:IOB",
+      "closePrice": 33.06,
+      "poorLowPrice": 33.02,
+      "description": "Unfinished auction at bottom. Target magnet: 33.02"
     },
     {
-      "symbol": "NSE:JUBLFOOD",
-      "closePrice": 483.8,
-      "poorLowPrice": 481.35,
-      "description": "Unfinished auction at bottom. Target magnet: 481.35"
+      "symbol": "NSE:JINDALSTEL",
+      "closePrice": 1140,
+      "poorLowPrice": 1130,
+      "description": "Unfinished auction at bottom. Target magnet: 1130.00"
     },
     {
-      "symbol": "NSE:LTIM",
-      "closePrice": 4570,
-      "poorLowPrice": 4545.3,
-      "description": "Unfinished auction at bottom. Target magnet: 4545.30"
+      "symbol": "NSE:JKCEMENT",
+      "closePrice": 5045,
+      "poorLowPrice": 5021,
+      "description": "Unfinished auction at bottom. Target magnet: 5021.00"
     },
     {
-      "symbol": "NSE:NLCINDIA",
-      "closePrice": 273.3,
-      "poorLowPrice": 272.05,
-      "description": "Unfinished auction at bottom. Target magnet: 272.05"
+      "symbol": "NSE:KARURVYSYA",
+      "closePrice": 341.8,
+      "poorLowPrice": 341,
+      "description": "Unfinished auction at bottom. Target magnet: 341.00"
     },
     {
-      "symbol": "NSE:NMDC",
-      "closePrice": 84.7,
-      "poorLowPrice": 84.26,
-      "description": "Unfinished auction at bottom. Target magnet: 84.26"
+      "symbol": "NSE:KOTAKBANK",
+      "closePrice": 422.1,
+      "poorLowPrice": 421,
+      "description": "Unfinished auction at bottom. Target magnet: 421.00"
     },
     {
-      "symbol": "NSE:NYKAA",
-      "closePrice": 333,
-      "poorLowPrice": 332,
-      "description": "Unfinished auction at bottom. Target magnet: 332.00"
+      "symbol": "NSE:LALPATHLAB",
+      "closePrice": 1900,
+      "poorLowPrice": 1870.1,
+      "description": "Unfinished auction at bottom. Target magnet: 1870.10"
     },
     {
-      "symbol": "NSE:PIDILITIND",
-      "closePrice": 1636,
-      "poorLowPrice": 1625,
-      "description": "Unfinished auction at bottom. Target magnet: 1625.00"
+      "symbol": "NSE:M_MFIN",
+      "closePrice": 372.25,
+      "poorLowPrice": 366,
+      "description": "Unfinished auction at bottom. Target magnet: 366.00"
     },
     {
-      "symbol": "NSE:POWERGRID",
-      "closePrice": 266.25,
-      "poorLowPrice": 265.05,
-      "description": "Unfinished auction at bottom. Target magnet: 265.05"
+      "symbol": "NSE:MPHASIS",
+      "closePrice": 2362,
+      "poorLowPrice": 2340.3,
+      "description": "Unfinished auction at bottom. Target magnet: 2340.30"
     },
     {
-      "symbol": "NSE:SBICARD",
-      "closePrice": 659.4,
-      "poorLowPrice": 656.3,
-      "description": "Unfinished auction at bottom. Target magnet: 656.30"
+      "symbol": "NSE:PFC",
+      "closePrice": 353.5,
+      "poorLowPrice": 353,
+      "description": "Unfinished auction at bottom. Target magnet: 353.00"
     },
     {
-      "symbol": "NSE:SHRIRAMFIN",
-      "closePrice": 1041,
-      "poorLowPrice": 1037,
-      "description": "Unfinished auction at bottom. Target magnet: 1037.00"
+      "symbol": "NSE:PVRINOX",
+      "closePrice": 1152,
+      "poorLowPrice": 1125.7,
+      "description": "Unfinished auction at bottom. Target magnet: 1125.70"
     },
     {
-      "symbol": "NSE:SUNPHARMA",
-      "closePrice": 1899.1,
-      "poorLowPrice": 1895,
-      "description": "Unfinished auction at bottom. Target magnet: 1895.00"
+      "symbol": "NSE:SBIN",
+      "closePrice": 1005,
+      "poorLowPrice": 1000.6,
+      "description": "Unfinished auction at bottom. Target magnet: 1000.60"
     },
     {
-      "symbol": "NSE:TATACHEM",
-      "closePrice": 624.7,
-      "poorLowPrice": 624,
-      "description": "Unfinished auction at bottom. Target magnet: 624.00"
+      "symbol": "NSE:SHREECEM",
+      "closePrice": 23650,
+      "poorLowPrice": 23380,
+      "description": "Unfinished auction at bottom. Target magnet: 23380.00"
     },
     {
-      "symbol": "NSE:TATASTEEL",
-      "closePrice": 189.3,
-      "poorLowPrice": 182.84,
-      "description": "Unfinished auction at bottom. Target magnet: 182.84"
+      "symbol": "NSE:TATACOMM",
+      "closePrice": 1740,
+      "poorLowPrice": 1725,
+      "description": "Unfinished auction at bottom. Target magnet: 1725.00"
+    },
+    {
+      "symbol": "NSE:TATAPOWER",
+      "closePrice": 365,
+      "poorLowPrice": 363,
+      "description": "Unfinished auction at bottom. Target magnet: 363.00"
+    },
+    {
+      "symbol": "NSE:TCS",
+      "closePrice": 2274.1,
+      "poorLowPrice": 2260.1,
+      "description": "Unfinished auction at bottom. Target magnet: 2260.10"
     },
     {
       "symbol": "NSE:TECHM",
-      "closePrice": 1587.7,
-      "poorLowPrice": 1586.9,
-      "description": "Unfinished auction at bottom. Target magnet: 1586.90"
-    },
-    {
-      "symbol": "NSE:TITAN",
-      "closePrice": 5018,
-      "poorLowPrice": 4980,
-      "description": "Unfinished auction at bottom. Target magnet: 4980.00"
+      "closePrice": 1557,
+      "poorLowPrice": 1545.3,
+      "description": "Unfinished auction at bottom. Target magnet: 1545.30"
     },
     {
       "symbol": "NSE:TORNTPOWER",
-      "closePrice": 1302,
-      "poorLowPrice": 1260.2,
-      "description": "Unfinished auction at bottom. Target magnet: 1260.20"
+      "closePrice": 1282,
+      "poorLowPrice": 1271.2,
+      "description": "Unfinished auction at bottom. Target magnet: 1271.20"
     },
     {
-      "symbol": "NSE:UBL",
-      "closePrice": 1280,
-      "poorLowPrice": 1277,
-      "description": "Unfinished auction at bottom. Target magnet: 1277.00"
+      "symbol": "NSE:SOUTHBANK",
+      "closePrice": 46.53,
+      "poorLowPrice": 46.5,
+      "description": "Unfinished auction at bottom. Target magnet: 46.50"
     },
     {
-      "symbol": "NSE:ULTRACEMCO",
-      "closePrice": 11330,
-      "poorLowPrice": 11292,
-      "description": "Unfinished auction at bottom. Target magnet: 11292.00"
-    },
-    {
-      "symbol": "NSE:WIPRO",
-      "closePrice": 177.1,
-      "poorLowPrice": 176.8,
-      "description": "Unfinished auction at bottom. Target magnet: 176.80"
-    },
-    {
-      "symbol": "NSE:J_KBANK",
-      "closePrice": 150.3,
-      "poorLowPrice": 149.05,
-      "description": "Unfinished auction at bottom. Target magnet: 149.05"
-    },
-    {
-      "symbol": "NSE:UNIONBANK",
-      "closePrice": 187.82,
-      "poorLowPrice": 187.05,
-      "description": "Unfinished auction at bottom. Target magnet: 187.05"
+      "symbol": "NSE:TATAELXSI",
+      "closePrice": 3497.8,
+      "poorLowPrice": 3475,
+      "description": "Unfinished auction at bottom. Target magnet: 3475.00"
     }
   ],
   "pcrExtremeCandidates": [
@@ -829,35 +618,42 @@
       "description": "PCR at 0.62 indicates extreme greed. High probability of negative close."
     },
     {
-      "symbol": "COINBASE:BTCUSD",
-      "pcr": "1.37",
+      "symbol": "OANDA:XAUUSD",
+      "pcr": "1.49",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.37 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.49 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "COINBASE:BTCUSD",
+      "pcr": "0.58",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.58 indicates extreme greed. High probability of negative close."
     },
     {
       "symbol": "NSE:ABB",
-      "pcr": "1.29",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.29 indicates extreme fear. High probability of positive close."
+      "pcr": "0.65",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.65 indicates extreme greed. High probability of negative close."
     },
     {
       "symbol": "NSE:ADANIENT",
-      "pcr": "0.52",
+      "pcr": "0.55",
       "type": "Extreme Greed 🤑",
       "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.52 indicates extreme greed. High probability of negative close."
+      "description": "PCR at 0.55 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:ALKEM",
+      "pcr": "0.56",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.56 indicates extreme greed. High probability of negative close."
     },
     {
       "symbol": "NSE:APARINDS",
-      "pcr": "0.52",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.52 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:APOLLOHOSP",
       "pcr": "0.64",
       "type": "Extreme Greed 🤑",
       "expectedDirection": "BEARISH REVERSAL (Red Close)",
@@ -865,73 +661,87 @@
     },
     {
       "symbol": "NSE:APOLLOTYRE",
-      "pcr": "1.43",
+      "pcr": "1.36",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.43 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.36 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:ASIANPAINT",
-      "pcr": "1.43",
+      "symbol": "NSE:BAJAJFINSV",
+      "pcr": "0.58",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.58 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:BANKBARODA",
+      "pcr": "0.53",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.53 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:BDL",
+      "pcr": "0.56",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.56 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:BHARTIARTL",
+      "pcr": "0.63",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.63 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:BHEL",
+      "pcr": "1.37",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.43 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.37 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:ATGL",
-      "pcr": "1.30",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.30 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:BAJAJ_AUTO",
+      "symbol": "NSE:BPCL",
       "pcr": "1.27",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
       "description": "PCR at 1.27 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:BANKBARODA",
-      "pcr": "0.56",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.56 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:BHEL",
-      "pcr": "1.49",
+      "symbol": "NSE:BRITANNIA",
+      "pcr": "1.27",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.49 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:BOSCHLTD",
-      "pcr": "0.56",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.56 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:BPCL",
-      "pcr": "1.33",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.33 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.27 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:BSE",
-      "pcr": "1.26",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.26 indicates extreme fear. High probability of positive close."
+      "pcr": "0.65",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.65 indicates extreme greed. High probability of negative close."
     },
     {
       "symbol": "NSE:CANBK",
-      "pcr": "1.43",
+      "pcr": "1.41",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.43 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.41 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:CANFINHOME",
+      "pcr": "1.25",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.25 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:CDSL",
+      "pcr": "1.32",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.32 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:CENTRALBK",
@@ -942,171 +752,178 @@
     },
     {
       "symbol": "NSE:CHAMBLFERT",
-      "pcr": "1.36",
+      "pcr": "1.35",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.36 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.35 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:CHOLAFIN",
-      "pcr": "1.47",
+      "pcr": "1.42",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.47 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.42 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:COALINDIA",
-      "pcr": "1.31",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.31 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:COLPAL",
-      "pcr": "0.52",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.52 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:COROMANDEL",
-      "pcr": "0.57",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.57 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:CROMPTON",
-      "pcr": "0.50",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.50 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:CUB",
-      "pcr": "0.52",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.52 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:CUMMINSIND",
-      "pcr": "0.62",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.62 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:DEEPAKNTR",
       "pcr": "1.34",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
       "description": "PCR at 1.34 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:DIVISLAB",
-      "pcr": "1.39",
+      "symbol": "NSE:COCHINSHIP",
+      "pcr": "1.27",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.39 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.27 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:EXIDEIND",
-      "pcr": "1.44",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.44 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:FEDERALBNK",
-      "pcr": "0.62",
+      "symbol": "NSE:COFORGE",
+      "pcr": "0.51",
       "type": "Extreme Greed 🤑",
       "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.62 indicates extreme greed. High probability of negative close."
+      "description": "PCR at 0.51 indicates extreme greed. High probability of negative close."
     },
     {
-      "symbol": "NSE:GLENMARK",
-      "pcr": "1.49",
+      "symbol": "NSE:COLPAL",
+      "pcr": "1.25",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.49 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.25 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:GRASIM",
-      "pcr": "1.41",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.41 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:GRSE",
-      "pcr": "0.59",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.59 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:HDFCBANK",
-      "pcr": "1.37",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.37 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:HEROMOTOCO",
-      "pcr": "1.33",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.33 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:HFCL",
-      "pcr": "0.53",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.53 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:HINDALCO",
-      "pcr": "1.37",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.37 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:HINDCOPPER",
-      "pcr": "1.44",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.44 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:ICICIBANK",
+      "symbol": "NSE:CROMPTON",
       "pcr": "1.47",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
       "description": "PCR at 1.47 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:ICICIGI",
+      "symbol": "NSE:CUB",
+      "pcr": "0.55",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.55 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:CUMMINSIND",
+      "pcr": "1.36",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.36 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:DALBHARAT",
       "pcr": "1.33",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
       "description": "PCR at 1.33 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:IDEA",
-      "pcr": "1.38",
+      "symbol": "NSE:DEEPAKNTR",
+      "pcr": "0.60",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.60 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:EXIDEIND",
+      "pcr": "1.45",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.38 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.45 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:FEDERALBNK",
+      "pcr": "0.61",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.61 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:GODREJPROP",
+      "pcr": "1.31",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.31 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:GRASIM",
+      "pcr": "1.26",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.26 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:GRSE",
+      "pcr": "1.33",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.33 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:HAL",
+      "pcr": "0.62",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.62 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:HDFCBANK",
+      "pcr": "1.32",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.32 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:HDFCLIFE",
+      "pcr": "0.59",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.59 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:HINDALCO",
+      "pcr": "1.28",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.28 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:HINDCOPPER",
+      "pcr": "1.32",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.32 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:ICICIBANK",
+      "pcr": "1.46",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.46 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:ICICIGI",
+      "pcr": "1.27",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.27 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:IDEA",
+      "pcr": "1.39",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.39 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:IEX",
-      "pcr": "1.42",
+      "pcr": "1.40",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.42 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.40 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:IFCI",
@@ -1117,38 +934,17 @@
     },
     {
       "symbol": "NSE:INDHOTEL",
-      "pcr": "1.43",
+      "pcr": "1.37",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.43 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.37 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:INDIAMART",
-      "pcr": "0.50",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.50 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:INDIGO",
-      "pcr": "1.26",
+      "pcr": "1.31",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.26 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:INDUSINDBK",
-      "pcr": "1.28",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.28 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:INFY",
-      "pcr": "0.52",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.52 indicates extreme greed. High probability of negative close."
+      "description": "PCR at 1.31 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:IOB",
@@ -1159,164 +955,150 @@
     },
     {
       "symbol": "NSE:IOC",
-      "pcr": "0.60",
+      "pcr": "0.59",
       "type": "Extreme Greed 🤑",
       "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.60 indicates extreme greed. High probability of negative close."
+      "description": "PCR at 0.59 indicates extreme greed. High probability of negative close."
     },
     {
       "symbol": "NSE:IREDA",
-      "pcr": "1.37",
+      "pcr": "1.36",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.37 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.36 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:JINDALSTEL",
+      "pcr": "0.64",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.64 indicates extreme greed. High probability of negative close."
     },
     {
       "symbol": "NSE:JIOFIN",
-      "pcr": "0.64",
+      "pcr": "0.59",
       "type": "Extreme Greed 🤑",
       "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.64 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:JKCEMENT",
-      "pcr": "1.44",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.44 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 0.59 indicates extreme greed. High probability of negative close."
     },
     {
       "symbol": "NSE:JSWENERGY",
-      "pcr": "0.64",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.64 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:JSWSTEEL",
-      "pcr": "1.49",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.49 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:KOTAKBANK",
-      "pcr": "1.50",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.50 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:LTF",
-      "pcr": "1.41",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.41 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:LUPIN",
-      "pcr": "1.35",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.35 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:MARICO",
-      "pcr": "1.43",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.43 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:MPHASIS",
-      "pcr": "0.51",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.51 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:MRF",
-      "pcr": "1.27",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.27 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:MUTHOOTFIN",
-      "pcr": "0.53",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.53 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:NESTLEIND",
-      "pcr": "1.34",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.34 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:NTPC",
-      "pcr": "0.61",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.61 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:NYKAA",
-      "pcr": "0.61",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.61 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:ONGC",
-      "pcr": "0.64",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.64 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:PAGEIND",
       "pcr": "0.55",
       "type": "Extreme Greed 🤑",
       "expectedDirection": "BEARISH REVERSAL (Red Close)",
       "description": "PCR at 0.55 indicates extreme greed. High probability of negative close."
     },
     {
-      "symbol": "NSE:PERSISTENT",
-      "pcr": "0.65",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.65 indicates extreme greed. High probability of negative close."
+      "symbol": "NSE:JSWSTEEL",
+      "pcr": "1.26",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.26 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:PNB",
+      "symbol": "NSE:KOTAKBANK",
       "pcr": "1.47",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
       "description": "PCR at 1.47 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:POLYCAB",
-      "pcr": "1.48",
+      "symbol": "NSE:LTF",
+      "pcr": "1.39",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.48 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.39 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:PVRINOX",
+      "symbol": "NSE:LALPATHLAB",
+      "pcr": "1.26",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.26 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:LUPIN",
+      "pcr": "1.30",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.30 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:MANAPPURAM",
+      "pcr": "0.52",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.52 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:MARICO",
+      "pcr": "1.29",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.29 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:MCX",
+      "pcr": "0.56",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.56 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:NESTLEIND",
+      "pcr": "1.27",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.27 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:NTPC",
+      "pcr": "0.59",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.59 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:NYKAA",
+      "pcr": "0.64",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.64 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:ONGC",
+      "pcr": "0.62",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.62 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:PAGEIND",
+      "pcr": "1.30",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.30 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:PIIND",
       "pcr": "0.60",
       "type": "Extreme Greed 🤑",
       "expectedDirection": "BEARISH REVERSAL (Red Close)",
       "description": "PCR at 0.60 indicates extreme greed. High probability of negative close."
     },
     {
-      "symbol": "NSE:RBLBANK",
+      "symbol": "NSE:PNB",
       "pcr": "1.46",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
       "description": "PCR at 1.46 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:RBLBANK",
+      "pcr": "1.48",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.48 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:RECLTD",
@@ -1327,164 +1109,129 @@
     },
     {
       "symbol": "NSE:RELIANCE",
-      "pcr": "0.59",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.59 indicates extreme greed. High probability of negative close."
+      "pcr": "1.40",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.40 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:RVNL",
-      "pcr": "1.44",
+      "pcr": "1.42",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.44 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:SAIL",
-      "pcr": "1.31",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.31 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.42 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:SBIN",
-      "pcr": "0.52",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.52 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:SHREECEM",
-      "pcr": "1.28",
+      "pcr": "1.38",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.28 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.38 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:SIEMENS",
-      "pcr": "1.33",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.33 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:SUNPHARMA",
-      "pcr": "1.32",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.32 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:SYNGENE",
-      "pcr": "1.28",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.28 indicates extreme fear. High probability of positive close."
+      "pcr": "0.63",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.63 indicates extreme greed. High probability of negative close."
     },
     {
       "symbol": "NSE:TATACHEM",
-      "pcr": "0.59",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.59 indicates extreme greed. High probability of negative close."
+      "pcr": "1.46",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.46 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:TATACONSUM",
-      "pcr": "1.46",
+      "pcr": "1.47",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.46 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.47 indicates extreme fear. High probability of positive close."
     },
     {
       "symbol": "NSE:TATAMOTORS",
-      "pcr": "1.46",
+      "pcr": "1.41",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.46 indicates extreme fear. High probability of positive close."
+      "description": "PCR at 1.41 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:TCS",
-      "pcr": "1.43",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.43 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:TITAN",
-      "pcr": "0.52",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.52 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:TORNTPOWER",
-      "pcr": "1.36",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.36 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:ULTRACEMCO",
-      "pcr": "0.65",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.65 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:ZEEL",
-      "pcr": "1.32",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.32 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:ZYDUSLIFE",
-      "pcr": "0.64",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.64 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:CEATLTD",
-      "pcr": "0.50",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.50 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:DEVYANI",
-      "pcr": "0.57",
-      "type": "Extreme Greed 🤑",
-      "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.57 indicates extreme greed. High probability of negative close."
-    },
-    {
-      "symbol": "NSE:FORTIS",
-      "pcr": "1.26",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.26 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:LODHA",
-      "pcr": "1.45",
-      "type": "Extreme Fear 😨",
-      "expectedDirection": "BULLISH REVERSAL (Green Close)",
-      "description": "PCR at 1.45 indicates extreme fear. High probability of positive close."
-    },
-    {
-      "symbol": "NSE:TATATECH",
+      "symbol": "NSE:TORNTPHARM",
       "pcr": "1.34",
       "type": "Extreme Fear 😨",
       "expectedDirection": "BULLISH REVERSAL (Green Close)",
       "description": "PCR at 1.34 indicates extreme fear. High probability of positive close."
     },
     {
-      "symbol": "NSE:UCOBANK",
-      "pcr": "0.60",
+      "symbol": "NSE:TRENT",
+      "pcr": "1.45",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.45 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:ULTRACEMCO",
+      "pcr": "1.25",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.25 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:ZEEL",
+      "pcr": "1.26",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.26 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:CEATLTD",
+      "pcr": "0.57",
       "type": "Extreme Greed 🤑",
       "expectedDirection": "BEARISH REVERSAL (Red Close)",
-      "description": "PCR at 0.60 indicates extreme greed. High probability of negative close."
+      "description": "PCR at 0.57 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:DEVYANI",
+      "pcr": "0.58",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.58 indicates extreme greed. High probability of negative close."
+    },
+    {
+      "symbol": "NSE:FORTIS",
+      "pcr": "1.27",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.27 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:LODHA",
+      "pcr": "1.39",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.39 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:SUPREMEIND",
+      "pcr": "1.27",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.27 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:TATAELXSI",
+      "pcr": "1.32",
+      "type": "Extreme Fear 😨",
+      "expectedDirection": "BULLISH REVERSAL (Green Close)",
+      "description": "PCR at 1.32 indicates extreme fear. High probability of positive close."
+    },
+    {
+      "symbol": "NSE:UCOBANK",
+      "pcr": "0.59",
+      "type": "Extreme Greed 🤑",
+      "expectedDirection": "BEARISH REVERSAL (Red Close)",
+      "description": "PCR at 0.59 indicates extreme greed. High probability of negative close."
     },
     {
       "symbol": "NSE:YESBANK",

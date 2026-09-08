@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "8/9/2026, 7:35:34 am",
+  "lastUpdated": "8/9/2026, 9:07:39 am",
   "global": {
     "poorHigh": {
       "triggered": 0,
@@ -58,7 +58,7 @@
     },
     "doubleDistributionFill": {
       "triggered": 20620,
-      "completed": 8417,
+      "completed": 8418,
       "pct": 41
     },
     "cFailureReversal": {
@@ -467,8 +467,8 @@
       },
       "doubleDistributionFill": {
         "triggered": 24,
-        "completed": 11,
-        "pct": 46
+        "completed": 12,
+        "pct": 50
       },
       "cFailureReversal": {
         "triggered": 15,
@@ -479,7 +479,7 @@
         "expiryAttempts": 2,
         "nonExpiryAttempts": 29,
         "expiryPinningRate": 0,
-        "nonExpiryPinningRate": 72.4,
+        "nonExpiryPinningRate": 69,
         "expiryBreakoutRate": 100,
         "nonExpiryBreakoutRate": 6.9,
         "avgExpiryRangePct": 4.56,

@@ -4,8 +4,8 @@ services:
     name: market-profile-dashboard
     env: node
     plan: free
-    buildCommand: "npm run build"
-    startCommand: "npm start --prefix backend"
+    buildCommand: "npm install --prefix backend && npm install --prefix frontend --legacy-peer-deps && npm run build --prefix frontend"
+    startCommand: "node backend/server.js"
     envVars:
       - key: NODE_ENV
         value: production

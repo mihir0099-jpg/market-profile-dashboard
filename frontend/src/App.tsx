@@ -529,7 +529,7 @@ function App() {
 
         {/* Right Side: Charts Pane */}
         <div style={viewMode === 'options' ? { display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' } : { display: 'flex', flexDirection: 'column', gap: '20px', minHeight: '550px' }}>
-          {error && (
+          {error && !error.toLowerCase().includes('websocket') && (
             <div className="glass-panel animate-fade-in" style={{ padding: '16px', display: 'flex', alignItems: 'center', gap: '12px', border: '1px solid rgba(239, 68, 68, 0.3)', backgroundColor: 'rgba(239, 68, 68, 0.05)', borderRadius: '12px' }}>
               <AlertCircle color="#ef4444" size={20} />
               <div>

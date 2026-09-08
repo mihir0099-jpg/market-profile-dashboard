@@ -67,7 +67,7 @@ export class TradingViewBridge {
     }
   }
 
-  async subscribeSymbol(symbol, timeframe, onData, onError, limit = 1500) {
+  async subscribeSymbol(symbol, timeframe, onData, onError, limit = 300) {
     this.activeSubscriptionCount++;
     let decremented = false;
     const decrementCounter = () => {

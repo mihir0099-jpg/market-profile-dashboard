@@ -120,9 +120,9 @@ class TVWebSocketStreamer {
 
     this.reconnectTimeout = window.setTimeout(() => {
       this.reconnectTimeout = null;
-      console.log('Attempting to reconnect...');
+      console.log('Attempting fast reconnect...');
       this.connect();
-    }, 3000);
+    }, 800);
   }
 
   private sendSubscription(symbol: string, timeframe: string) {

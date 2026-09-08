@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "7/9/2026, 5:57:52 pm",
+  "lastUpdated": "8/9/2026, 7:35:34 am",
   "global": {
     "poorHigh": {
       "triggered": 0,
@@ -47,18 +47,18 @@
       "pct": 0
     },
     "pShapeSupport": {
-      "triggered": 5249,
-      "completed": 1371,
+      "triggered": 5248,
+      "completed": 1370,
       "pct": 26
     },
     "bShapeResistance": {
-      "triggered": 8138,
+      "triggered": 8139,
       "completed": 2563,
       "pct": 31
     },
     "doubleDistributionFill": {
-      "triggered": 20619,
-      "completed": 8416,
+      "triggered": 20620,
+      "completed": 8417,
       "pct": 41
     },
     "cFailureReversal": {
@@ -76,14 +76,14 @@
       },
       "extremeGreed": {
         "name": "Extreme Greed (PCR <= 0.65)",
-        "attempts": 1619,
+        "attempts": 1618,
         "bullishCloseProb": 3.3,
         "meanReversionProb": 64.6,
         "gapFillProb": 34.2
       },
       "neutral": {
         "name": "Neutral Sentiment (0.65 < PCR < 1.25)",
-        "attempts": 23171,
+        "attempts": 23173,
         "bullishCloseProb": 44.7,
         "meanReversionProb": 62.3,
         "gapFillProb": 33.2
@@ -91,7 +91,7 @@
     },
     "expiryDynamics": {
       "expiryAttempts": 1628,
-      "nonExpiryAttempts": 25097,
+      "nonExpiryAttempts": 25098,
       "expiryPinningRate": 69.4,
       "nonExpiryPinningRate": 69.8,
       "expiryBreakoutRate": 5.3,
@@ -400,13 +400,13 @@
       },
       "expiryDynamics": {
         "expiryAttempts": 3,
-        "nonExpiryAttempts": 36,
+        "nonExpiryAttempts": 37,
         "expiryPinningRate": 66.7,
-        "nonExpiryPinningRate": 86.1,
+        "nonExpiryPinningRate": 86.5,
         "expiryBreakoutRate": 0,
-        "nonExpiryBreakoutRate": 22.2,
+        "nonExpiryBreakoutRate": 21.6,
         "avgExpiryRangePct": 2.39,
-        "avgNonExpiryRangePct": 1.87
+        "avgNonExpiryRangePct": 1.85
       }
     },
     "COINBASE:BTCUSD": {
@@ -456,19 +456,19 @@
         "pct": 0
       },
       "pShapeSupport": {
-        "triggered": 6,
-        "completed": 2,
-        "pct": 33
+        "triggered": 5,
+        "completed": 1,
+        "pct": 20
       },
       "bShapeResistance": {
-        "triggered": 3,
+        "triggered": 4,
         "completed": 1,
-        "pct": 33
+        "pct": 25
       },
       "doubleDistributionFill": {
-        "triggered": 23,
-        "completed": 10,
-        "pct": 43
+        "triggered": 24,
+        "completed": 11,
+        "pct": 46
       },
       "cFailureReversal": {
         "triggered": 15,
@@ -483,7 +483,7 @@
         "expiryBreakoutRate": 100,
         "nonExpiryBreakoutRate": 6.9,
         "avgExpiryRangePct": 4.56,
-        "avgNonExpiryRangePct": 2.93
+        "avgNonExpiryRangePct": 2.95
       }
     },
     "NSE:AARTIIND": {

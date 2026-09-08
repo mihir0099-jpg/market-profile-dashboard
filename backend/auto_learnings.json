@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "7/9/2026, 5:57:52 pm",
+  "lastUpdated": "8/9/2026, 7:35:34 am",
   "global": {
     "stats": {
       "gapRejectionToPoc": {
@@ -12,22 +12,22 @@
       "buyingTailSecure": {
         "name": "Buying Tail Secure Lows",
         "description": "If yesterday had a buying tail (aggressive low rejection), does today keep yesterday's low secure?",
-        "attempts": 10576,
-        "successes": 5963,
+        "attempts": 10578,
+        "successes": 5964,
         "probability": 56.4
       },
       "sellingTailSecure": {
         "name": "Selling Tail Secure Highs",
         "description": "If yesterday had a selling tail (aggressive high rejection), does today keep yesterday's high secure?",
-        "attempts": 11965,
-        "successes": 6902,
+        "attempts": 11966,
+        "successes": 6903,
         "probability": 57.7
       },
       "otdTarget1618": {
         "name": "OTD/OD to 1.618x IB Extension",
         "description": "If a morning drive (OTD/OD) is active, does the range reach the 1.618x Fibonacci target?",
         "attempts": 10905,
-        "successes": 2913,
+        "successes": 2914,
         "probability": 26.7
       },
       "otdTarget2618": {
@@ -40,28 +40,28 @@
       "generalIbExtension1618": {
         "name": "Overall Session IB Extension (1.618x)",
         "description": "Probability of any trading session extending past the Initial Balance range to the 1.618x level.",
-        "attempts": 26498,
+        "attempts": 26499,
         "successes": 9241,
         "probability": 34.9
       },
       "generalIbExtension2618": {
         "name": "Overall Session IB Extension (2.618x)",
         "description": "Probability of any trading session extending past the Initial Balance range to the 2.618x level.",
-        "attempts": 26498,
-        "successes": 1671,
+        "attempts": 26499,
+        "successes": 1670,
         "probability": 6.3
       },
       "generalIbExtension3618": {
         "name": "Overall Session IB Extension (3.618x)",
         "description": "Probability of any trading session extending past the Initial Balance range to the 3.618x level.",
-        "attempts": 26498,
+        "attempts": 26499,
         "successes": 420,
         "probability": 1.6
       },
       "generalIbExtension4618": {
         "name": "Overall Session IB Extension (4.618x)",
         "description": "Probability of any trading session extending past the Initial Balance range to the 4.618x level.",
-        "attempts": 26498,
+        "attempts": 26499,
         "successes": 138,
         "probability": 0.5
       },
@@ -111,21 +111,21 @@
       },
       "extremeGreed": {
         "name": "Extreme Greed (PCR <= 0.65)",
-        "attempts": 1619,
+        "attempts": 1618,
         "bullishCloseProb": 3.3,
         "meanReversionProb": 64.6,
         "gapFillProb": 34.2
       },
       "neutral": {
         "name": "Neutral Sentiment (0.65 < PCR < 1.25)",
-        "attempts": 23171,
+        "attempts": 23173,
         "bullishCloseProb": 44.7,
         "meanReversionProb": 62.3,
         "gapFillProb": 33.2
       }
     },
     "tpoBehaviors": {
-      "totalSessions": 26725,
+      "totalSessions": 26726,
       "highEstablishedByPeriod": {
         "A": 44.7,
         "B": 7.2,
@@ -164,7 +164,7 @@
         "G": 52.1,
         "H": 53.7,
         "I": 55.8,
-        "J": 57,
+        "J": 56.9,
         "K": 59.1,
         "L": 63.9,
         "M": 53.1
@@ -173,12 +173,12 @@
         "aboveVah": 16.4,
         "belowVal": 22.5,
         "insideValue": 61.1,
-        "totalSessions": 26725
+        "totalSessions": 26726
       }
     },
     "expiryDynamics": {
       "expiryAttempts": 1628,
-      "nonExpiryAttempts": 25097,
+      "nonExpiryAttempts": 25098,
       "expiryPinningRate": 69.4,
       "nonExpiryPinningRate": 69.8,
       "expiryBreakoutRate": 5.3,
@@ -190,8 +190,8 @@
       "afterAboveVah": {
         "gapUp": 32.8,
         "gapDown": 2.5,
-        "flat": 64.7,
-        "total": 4382
+        "flat": 64.6,
+        "total": 4384
       },
       "afterBelowVal": {
         "gapUp": 3.5,
@@ -203,7 +203,7 @@
         "gapUp": 13,
         "gapDown": 9.5,
         "flat": 77.5,
-        "total": 16336
+        "total": 16335
       }
     }
   },
@@ -848,8 +848,8 @@
         "sellingTailSecure": {
           "name": "Selling Tail Secure Highs",
           "description": "If yesterday had a selling tail (aggressive high rejection), does today keep yesterday's high secure?",
-          "attempts": 12,
-          "successes": 6,
+          "attempts": 14,
+          "successes": 7,
           "probability": 50
         },
         "otdTarget1618": {
@@ -869,30 +869,30 @@
         "generalIbExtension1618": {
           "name": "Overall Session IB Extension (1.618x)",
           "description": "Probability of any trading session extending past the Initial Balance range to the 1.618x level.",
-          "attempts": 39,
+          "attempts": 40,
           "successes": 17,
-          "probability": 43.6
+          "probability": 42.5
         },
         "generalIbExtension2618": {
           "name": "Overall Session IB Extension (2.618x)",
           "description": "Probability of any trading session extending past the Initial Balance range to the 2.618x level.",
-          "attempts": 39,
+          "attempts": 40,
           "successes": 8,
-          "probability": 20.5
+          "probability": 20
         },
         "generalIbExtension3618": {
           "name": "Overall Session IB Extension (3.618x)",
           "description": "Probability of any trading session extending past the Initial Balance range to the 3.618x level.",
-          "attempts": 39,
+          "attempts": 40,
           "successes": 4,
-          "probability": 10.3
+          "probability": 10
         },
         "generalIbExtension4618": {
           "name": "Overall Session IB Extension (4.618x)",
           "description": "Probability of any trading session extending past the Initial Balance range to the 4.618x level.",
-          "attempts": 39,
+          "attempts": 40,
           "successes": 2,
-          "probability": 5.1
+          "probability": 5
         },
         "failureReversal": {
           "name": "Intraday Failure to Opposite IB Extreme Reversal",
@@ -947,23 +947,23 @@
         },
         "neutral": {
           "name": "Neutral Sentiment (0.65 < PCR < 1.25)",
-          "attempts": 33,
-          "bullishCloseProb": 48.5,
-          "meanReversionProb": 72.7,
-          "gapFillProb": 30.3
+          "attempts": 34,
+          "bullishCloseProb": 50,
+          "meanReversionProb": 70.6,
+          "gapFillProb": 29.4
         }
       },
       "tpoBehaviors": {
-        "totalSessions": 39,
+        "totalSessions": 40,
         "highEstablishedByPeriod": {
-          "A": 59,
+          "A": 60,
           "B": 0,
-          "C": 7.7,
+          "C": 7.5,
           "D": 0,
           "E": 0,
           "F": 0,
           "G": 0,
-          "H": 2.6,
+          "H": 2.5,
           "I": 0,
           "J": 0,
           "K": 0,
@@ -971,14 +971,14 @@
           "M": 0
         },
         "lowEstablishedByPeriod": {
-          "A": 48.7,
+          "A": 50,
           "B": 0,
-          "C": 2.6,
-          "D": 7.7,
+          "C": 2.5,
+          "D": 7.5,
           "E": 0,
           "F": 0,
           "G": 0,
-          "H": 2.6,
+          "H": 2.5,
           "I": 0,
           "J": 0,
           "K": 0,
@@ -986,34 +986,34 @@
           "M": 0
         },
         "ibBreakoutByPeriod": {
-          "C": 74.4,
-          "D": 35.9,
-          "E": 33.3,
-          "F": 25.6,
-          "G": 25.6,
-          "H": 35.9,
-          "I": 41,
-          "J": 30.8,
-          "K": 38.5,
-          "L": 35.9,
-          "M": 30.8
+          "C": 72.5,
+          "D": 35,
+          "E": 32.5,
+          "F": 25,
+          "G": 25,
+          "H": 35,
+          "I": 40,
+          "J": 30,
+          "K": 37.5,
+          "L": 35,
+          "M": 30
         },
         "closingDistribution": {
-          "aboveVah": 17.9,
-          "belowVal": 25.6,
-          "insideValue": 56.4,
-          "totalSessions": 39
+          "aboveVah": 20,
+          "belowVal": 25,
+          "insideValue": 55,
+          "totalSessions": 40
         }
       },
       "expiryDynamics": {
         "expiryAttempts": 3,
-        "nonExpiryAttempts": 36,
+        "nonExpiryAttempts": 37,
         "expiryPinningRate": 66.7,
-        "nonExpiryPinningRate": 86.1,
+        "nonExpiryPinningRate": 86.5,
         "expiryBreakoutRate": 0,
-        "nonExpiryBreakoutRate": 22.2,
+        "nonExpiryBreakoutRate": 21.6,
         "avgExpiryRangePct": 2.39,
-        "avgNonExpiryRangePct": 1.87
+        "avgNonExpiryRangePct": 1.85
       },
       "openStats": {
         "afterAboveVah": {
@@ -1029,10 +1029,10 @@
           "total": 10
         },
         "afterInsideValue": {
-          "gapUp": 9.1,
+          "gapUp": 8.7,
           "gapDown": 0,
-          "flat": 90.9,
-          "total": 22
+          "flat": 91.3,
+          "total": 23
         }
       }
     },
@@ -1055,16 +1055,16 @@
         "sellingTailSecure": {
           "name": "Selling Tail Secure Highs",
           "description": "If yesterday had a selling tail (aggressive high rejection), does today keep yesterday's high secure?",
-          "attempts": 12,
+          "attempts": 11,
           "successes": 6,
-          "probability": 50
+          "probability": 54.5
         },
         "otdTarget1618": {
           "name": "OTD/OD to 1.618x IB Extension",
           "description": "If a morning drive (OTD/OD) is active, does the range reach the 1.618x Fibonacci target?",
           "attempts": 5,
-          "successes": 2,
-          "probability": 40
+          "successes": 3,
+          "probability": 60
         },
         "otdTarget2618": {
           "name": "OTD/OD to 2.618x IB Extension",
@@ -1077,8 +1077,8 @@
           "name": "Overall Session IB Extension (1.618x)",
           "description": "Probability of any trading session extending past the Initial Balance range to the 1.618x level.",
           "attempts": 31,
-          "successes": 21,
-          "probability": 67.7
+          "successes": 22,
+          "probability": 71
         },
         "generalIbExtension2618": {
           "name": "Overall Session IB Extension (2.618x)",
@@ -1163,7 +1163,7 @@
       "tpoBehaviors": {
         "totalSessions": 31,
         "highEstablishedByPeriod": {
-          "A": 41.9,
+          "A": 45.2,
           "B": 3.2,
           "C": 6.5,
           "D": 3.2,
@@ -1185,7 +1185,7 @@
           "E": 3.2,
           "F": 0,
           "G": 0,
-          "H": 3.2,
+          "H": 0,
           "I": 0,
           "J": 0,
           "K": 0,
@@ -1206,9 +1206,9 @@
           "M": 41.9
         },
         "closingDistribution": {
-          "aboveVah": 35.5,
+          "aboveVah": 38.7,
           "belowVal": 19.4,
-          "insideValue": 45.2,
+          "insideValue": 41.9,
           "totalSessions": 31
         }
       },
@@ -1220,7 +1220,7 @@
         "expiryBreakoutRate": 100,
         "nonExpiryBreakoutRate": 6.9,
         "avgExpiryRangePct": 4.56,
-        "avgNonExpiryRangePct": 2.93
+        "avgNonExpiryRangePct": 2.95
       },
       "openStats": {
         "afterAboveVah": {

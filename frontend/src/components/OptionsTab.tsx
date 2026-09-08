@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { AlertTriangle, RefreshCw, Edit3, Check, Search } from 'lucide-react';
+import { getApiBase } from '../utils/apiConfig';
 
-const API_BASE = window.location.port === '3000' ? 'http://localhost:3001' : window.location.origin;
+const API_BASE = getApiBase();
 
 // Stock strike intervals from NSE rules
 const STRIKE_INTERVALS: Record<string, number> = {

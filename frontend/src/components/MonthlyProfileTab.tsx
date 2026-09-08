@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, RefreshCw, Calendar, TrendingUp, TrendingDown, Target, ShieldAlert, Award, Layers } from 'lucide-react';
+import { getApiBase } from '../utils/apiConfig';
 
 interface MonthlyProfileData {
   symbol: string;
@@ -53,7 +54,7 @@ interface MonthlyProfileTabProps {
   onSelectSymbol: (sym: string) => void;
 }
 
-const API_BASE = window.location.port === '3000' ? 'http://localhost:3001' : window.location.origin;
+const API_BASE = getApiBase();
 
 export const MonthlyProfileTab: React.FC<MonthlyProfileTabProps> = ({ currentSymbol, onSelectSymbol }) => {
   const [selectedSymbol, setSelectedSymbol] = useState<string>(currentSymbol || 'NSE:NIFTY');

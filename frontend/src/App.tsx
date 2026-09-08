@@ -16,10 +16,10 @@ import { OptionsTab } from './components/OptionsTab';
 import { DailyReports } from './components/DailyReports';
 import { MonthlyProfileTab } from './components/MonthlyProfileTab';
 import { AiAnalyticsTab } from './components/AiAnalyticsTab';
-
+import { getApiBase } from './utils/apiConfig';
 
 // Dynamically resolve backend API base based on origin
-const API_BASE = window.location.port === '3000' ? 'http://localhost:3001' : window.location.origin;
+const API_BASE = getApiBase();
 
 function App() {
   const [symbol, setSymbol] = useState('NSE:NIFTY');

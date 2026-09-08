@@ -1,6 +1,6 @@
-// frontend/src/components/DailyReports.tsx
 import React, { useEffect, useState } from 'react';
 import { FileText, Calendar, RefreshCw } from 'lucide-react';
+import { getApiBase } from '../utils/apiConfig';
 
 export const DailyReports: React.FC = () => {
   const [dates, setDates] = useState<string[]>([]);
@@ -8,7 +8,7 @@ export const DailyReports: React.FC = () => {
   const [content, setContent] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
-  const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:3001' : '';
+  const backendUrl = getApiBase();
 
   useEffect(() => {
     fetchDates();

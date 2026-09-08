@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, RefreshCw, Zap, AlertTriangle, ArrowUpRight, ArrowDownRight, Anchor, Target } from 'lucide-react';
+import { getApiBase } from '../utils/apiConfig';
 
 interface CompressionCandidate {
   symbol: string;
@@ -37,7 +38,7 @@ interface NineAmReportProps {
   onSelectSymbol: (symbol: string) => void;
 }
 
-const API_BASE = window.location.port === '3000' ? 'http://localhost:3001' : window.location.origin;
+const API_BASE = getApiBase();
 
 export const NineAmReport: React.FC<NineAmReportProps> = ({ onSelectSymbol }) => {
   const [data, setData] = useState<NineAmReportData | null>(null);

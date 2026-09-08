@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, ArrowUpRight, ArrowDownRight, RefreshCw, Sparkles, AlertTriangle } from 'lucide-react';
+import { getApiBase } from '../utils/apiConfig';
 
 interface BTSTCandidate {
   symbol: string;
@@ -24,7 +25,7 @@ interface BtstReportProps {
 }
 
 // Dynamically resolve backend API base based on origin
-const API_BASE = window.location.port === '3000' ? 'http://localhost:3001' : window.location.origin;
+const API_BASE = getApiBase();
 
 export const BtstReport: React.FC<BtstReportProps> = ({ onSelectSymbol }) => {
   const [data, setData] = useState<BTSTReportData | null>(null);

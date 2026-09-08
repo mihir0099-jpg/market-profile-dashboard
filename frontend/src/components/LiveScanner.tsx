@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Activity, ArrowUpRight, AlertTriangle, HelpCircle, Loader2 } from 'lucide-react';
+import { getApiBase } from '../utils/apiConfig';
 
 interface ScanResult {
   symbol: string;
@@ -124,7 +125,7 @@ interface LiveScannerProps {
 }
 
 // Dynamically resolve backend API base based on origin
-const API_BASE = window.location.port === '3000' ? 'http://localhost:3001' : window.location.origin;
+const API_BASE = getApiBase();
 
 export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, currentSymbol }) => {
   const [scannerState, setScannerState] = useState<ScannerState>({

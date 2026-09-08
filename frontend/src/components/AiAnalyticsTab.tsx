@@ -1,5 +1,6 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Loader2, RefreshCw, Cpu, Layers, Target, Award, Zap, Activity, Clock } from 'lucide-react';
+import { getApiBase } from '../utils/apiConfig';
 
 interface AnalogueDay {
   date: string;
@@ -52,7 +53,7 @@ interface AiAnalyticsTabProps {
   onSelectSymbol: (sym: string) => void;
 }
 
-const API_BASE = window.location.port === '3000' ? 'http://localhost:3001' : window.location.origin;
+const API_BASE = getApiBase();
 
 export const AiAnalyticsTab: React.FC<AiAnalyticsTabProps> = ({ currentSymbol, onSelectSymbol }) => {
   const [selectedSymbol, setSelectedSymbol] = useState<string>(currentSymbol || 'NSE:NIFTY');

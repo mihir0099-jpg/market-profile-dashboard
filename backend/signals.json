@@ -1765,8 +1765,8 @@
     "winCount": 21,
     "totalPnl": -87.04999999999995,
     "indexDrag": "none",
-    "currentPrice": 489.95,
-    "liveOptionLtp": 9.35,
+    "currentPrice": 489.4,
+    "liveOptionLtp": 9.3,
     "actualOptionEntryPrice": 8.7,
     "actualOptionSl": 0.7,
     "actualOptionTarget": 20.7,
@@ -2097,12 +2097,12 @@
     "winCount": 2,
     "totalPnl": 141.70000000000027,
     "indexDrag": "bearish",
-    "liveOptionLtp": 48.5,
+    "liveOptionLtp": 48,
     "actualOptionEntryPrice": 43.2,
     "actualOptionSl": 32.4,
     "actualOptionTarget": 59.4,
     "actualOptionTarget2": 75.6,
-    "currentPrice": 2399.7
+    "currentPrice": 2393.4
   },
   {
     "id": "sweep-NSE:PGEL-2026-09-07-1788774872659",
@@ -2396,7 +2396,7 @@
     "actualOptionSl": 3.3,
     "actualOptionTarget": 9.3,
     "actualOptionTarget2": 13,
-    "currentPrice": 317.05
+    "currentPrice": 315.2
   },
   {
     "id": "magnet-low-NSE:PREMIERENE-2026-09-07-1788774876583",
@@ -3620,7 +3620,7 @@
     "winCount": 4,
     "totalPnl": 200.8199999999988,
     "indexDrag": "bearish",
-    "currentPrice": 4401.965
+    "currentPrice": 4406.81
   },
   {
     "id": "mreversion-OANDA:XAUUSD-2026-09-1788839941755",
@@ -3637,7 +3637,7 @@
     "winCount": 11,
     "totalPnl": 1909.6299999999987,
     "indexDrag": "bullish",
-    "currentPrice": 4401.965
+    "currentPrice": 4406.81
   },
   {
     "id": "drive-bear-NSE:NIFTY1!-2026-09-08-1788839941889",
@@ -3776,7 +3776,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "mreversion-NSE:ASHOKLEY-2026-09-1788839946142",
@@ -4099,12 +4099,12 @@
     "winCount": 0,
     "totalPnl": 0,
     "indexDrag": "bullish",
-    "liveOptionLtp": 8.3,
+    "liveOptionLtp": 9.2,
     "actualOptionEntryPrice": 10.5,
     "actualOptionSl": 1.7,
     "actualOptionTarget": 23.7,
     "actualOptionTarget2": 36.8,
-    "currentPrice": 425.6
+    "currentPrice": 423.2
   },
   {
     "id": "magnet-low-NSE:BSE-2026-09-08-1788839951159",
@@ -4458,12 +4458,12 @@
     "winCount": 3,
     "totalPnl": 4.649999999999977,
     "indexDrag": "bearish",
-    "liveOptionLtp": 7.6,
+    "liveOptionLtp": 7.4,
     "actualOptionEntryPrice": 5.9,
     "actualOptionSl": 0.6,
     "actualOptionTarget": 13.8,
     "actualOptionTarget2": 21.7,
-    "currentPrice": 322.3
+    "currentPrice": 321.6
   },
   {
     "id": "mreversion-NSE:DELHIVERY-2026-09-1788839957379",
@@ -4626,12 +4626,12 @@
     "winCount": 10,
     "totalPnl": 224.5999999999999,
     "indexDrag": "bullish",
-    "liveOptionLtp": 54.15,
+    "liveOptionLtp": 53.8,
     "actualOptionEntryPrice": 57.05,
     "actualOptionSl": 34.3,
     "actualOptionTarget": 91.2,
     "actualOptionTarget2": 125.4,
-    "currentPrice": 3300.2
+    "currentPrice": 3297.5
   },
   {
     "id": "wgap-NSE:HCLTECH-2026-W37-1788839963694",
@@ -4763,12 +4763,12 @@
     "winCount": 13,
     "totalPnl": 7.430000000000035,
     "indexDrag": "bearish",
-    "liveOptionLtp": 2.62,
+    "liveOptionLtp": 2.57,
     "actualOptionEntryPrice": 2.4,
     "actualOptionSl": 1.8,
     "actualOptionTarget": 3.3,
     "actualOptionTarget2": 4.2,
-    "currentPrice": 134.51
+    "currentPrice": 134.43
   },
   {
     "id": "mreversion-NSE:IOC-2026-09-1788839969516",
@@ -4810,12 +4810,12 @@
     "winCount": 9,
     "totalPnl": -119.70000000000027,
     "indexDrag": "bullish",
-    "liveOptionLtp": 18.7,
+    "liveOptionLtp": 18.35,
     "actualOptionEntryPrice": 21,
     "actualOptionSl": 5.3,
     "actualOptionTarget": 44.6,
     "actualOptionTarget2": 68.3,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "magnet-low-NSE:KOTAKBANK-2026-09-08-1788839974819",
@@ -4947,12 +4947,12 @@
     "winCount": 31,
     "totalPnl": -148.40000000000015,
     "indexDrag": "bullish",
-    "liveOptionLtp": 4.8,
+    "liveOptionLtp": 5,
     "actualOptionEntryPrice": 7,
     "actualOptionSl": 2.6,
     "actualOptionTarget": 13.6,
     "actualOptionTarget2": 20.1,
-    "currentPrice": 340.6
+    "currentPrice": 340
   },
   {
     "id": "mgap-NSE:OFSS-2026-09-1788839988057",
@@ -4994,12 +4994,12 @@
     "winCount": 21,
     "totalPnl": -87.04999999999995,
     "indexDrag": "bullish",
-    "liveOptionLtp": 9.35,
+    "liveOptionLtp": 9.3,
     "actualOptionEntryPrice": 10.3,
     "actualOptionSl": 3.8,
     "actualOptionTarget": 20,
     "actualOptionTarget2": 29.7,
-    "currentPrice": 489.95
+    "currentPrice": 489.4
   },
   {
     "id": "wgap-NSE:PETRONET-2026-W37-1788839988416",
@@ -5041,12 +5041,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 8.25,
+    "liveOptionLtp": 8.15,
     "actualOptionEntryPrice": 5.5,
     "actualOptionSl": 1.9,
     "actualOptionTarget": 11,
     "actualOptionTarget2": 16.4,
-    "currentPrice": 287
+    "currentPrice": 285.95
   },
   {
     "id": "mgap-NSE:PIDILITIND-2026-09-1788839990975",
@@ -5138,7 +5138,7 @@
     "winCount": 1,
     "totalPnl": 379,
     "indexDrag": "bullish",
-    "currentPrice": 78367.5
+    "currentPrice": 78408
   },
   {
     "id": "btst-sell-COINBASE:BTCUSD-2026-09-08-1788840608554",
@@ -5155,7 +5155,7 @@
     "winCount": 1,
     "totalPnl": 508.2399999999907,
     "indexDrag": "bullish",
-    "currentPrice": 78369.86
+    "currentPrice": 78416.51
   },
   {
     "id": "mgap-NSE:AMBER-2026-09-1788840610523",
@@ -5197,7 +5197,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "mgap-NSE:BHEL-2026-09-1788840617783",
@@ -5214,12 +5214,12 @@
     "winCount": 0,
     "totalPnl": 0,
     "indexDrag": "bullish",
-    "liveOptionLtp": 8.3,
+    "liveOptionLtp": 9.2,
     "actualOptionEntryPrice": 10.2,
     "actualOptionSl": 1.8,
     "actualOptionTarget": 22.9,
     "actualOptionTarget2": 35.5,
-    "currentPrice": 425.6
+    "currentPrice": 423.2
   },
   {
     "id": "mgap-NSE:BOSCHLTD-2026-09-1788840620101",
@@ -5281,12 +5281,12 @@
     "winCount": 10,
     "totalPnl": 224.5999999999999,
     "indexDrag": "bullish",
-    "liveOptionLtp": 54.15,
+    "liveOptionLtp": 53.8,
     "actualOptionEntryPrice": 54,
     "actualOptionSl": 34.7,
     "actualOptionTarget": 82.9,
     "actualOptionTarget2": 111.9,
-    "currentPrice": 3300.2
+    "currentPrice": 3297.5
   },
   {
     "id": "wgap-NSE:HCLTECH-2026-W37-1788840631405",
@@ -5378,12 +5378,12 @@
     "winCount": 9,
     "totalPnl": -119.70000000000027,
     "indexDrag": "bullish",
-    "liveOptionLtp": 18.7,
+    "liveOptionLtp": 18.35,
     "actualOptionEntryPrice": 20.15,
     "actualOptionSl": 5.6,
     "actualOptionTarget": 41.9,
     "actualOptionTarget2": 63.7,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "wgap-NSE:MPHASIS-2026-W37-1788840644147",
@@ -5475,12 +5475,12 @@
     "winCount": 31,
     "totalPnl": -148.40000000000015,
     "indexDrag": "bullish",
-    "liveOptionLtp": 4.8,
+    "liveOptionLtp": 5,
     "actualOptionEntryPrice": 6.85,
     "actualOptionSl": 3,
     "actualOptionTarget": 12.7,
     "actualOptionTarget2": 18.5,
-    "currentPrice": 340.6
+    "currentPrice": 340
   },
   {
     "id": "wgap-NSE:PETRONET-2026-W37-1788840651041",
@@ -5522,12 +5522,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 8.25,
+    "liveOptionLtp": 8.15,
     "actualOptionEntryPrice": 5.75,
     "actualOptionSl": 2,
     "actualOptionTarget": 11.3,
     "actualOptionTarget2": 16.9,
-    "currentPrice": 287
+    "currentPrice": 285.95
   },
   {
     "id": "mgap-NSE:PIDILITIND-2026-09-1788840654183",
@@ -5743,7 +5743,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "mgap-NSE:BOSCHLTD-2026-09-1788841281173",
@@ -5805,12 +5805,12 @@
     "winCount": 10,
     "totalPnl": 224.5999999999999,
     "indexDrag": "bullish",
-    "liveOptionLtp": 54.15,
+    "liveOptionLtp": 53.8,
     "actualOptionEntryPrice": 56.6,
     "actualOptionSl": 34.2,
     "actualOptionTarget": 90.2,
     "actualOptionTarget2": 123.8,
-    "currentPrice": 3300.2
+    "currentPrice": 3297.5
   },
   {
     "id": "wgap-NSE:HCLTECH-2026-W37-1788841291367",
@@ -5902,12 +5902,12 @@
     "winCount": 9,
     "totalPnl": -119.70000000000027,
     "indexDrag": "bullish",
-    "liveOptionLtp": 18.7,
+    "liveOptionLtp": 18.35,
     "actualOptionEntryPrice": 20.65,
     "actualOptionSl": 5.4,
     "actualOptionTarget": 43.5,
     "actualOptionTarget2": 66.4,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "wgap-NSE:MPHASIS-2026-W37-1788841305096",
@@ -5974,12 +5974,12 @@
     "winCount": 31,
     "totalPnl": -148.40000000000015,
     "indexDrag": "bullish",
-    "liveOptionLtp": 4.8,
+    "liveOptionLtp": 5,
     "actualOptionEntryPrice": 6.05,
     "actualOptionSl": 3,
     "actualOptionTarget": 10.7,
     "actualOptionTarget2": 15.3,
-    "currentPrice": 340.6
+    "currentPrice": 340
   },
   {
     "id": "wgap-NSE:PETRONET-2026-W37-1788841310828",
@@ -6021,12 +6021,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 8.25,
+    "liveOptionLtp": 8.15,
     "actualOptionEntryPrice": 6.65,
     "actualOptionSl": 2.9,
     "actualOptionTarget": 12.3,
     "actualOptionTarget2": 17.9,
-    "currentPrice": 287
+    "currentPrice": 285.95
   },
   {
     "id": "mgap-NSE:OFSS-2026-09-1788841311714",
@@ -6143,12 +6143,12 @@
     "winCount": 0,
     "totalPnl": 0,
     "indexDrag": "bullish",
-    "liveOptionLtp": 10.5,
+    "liveOptionLtp": 11.75,
     "actualOptionEntryPrice": 12.55,
     "actualOptionSl": 4.3,
     "actualOptionTarget": 25,
     "actualOptionTarget2": 37.4,
-    "currentPrice": 425.6
+    "currentPrice": 423.2
   },
   {
     "id": "mgap-NSE:BOSCHLTD-2026-09-1788841963050",
@@ -6210,12 +6210,12 @@
     "winCount": 10,
     "totalPnl": 224.5999999999999,
     "indexDrag": "bullish",
-    "liveOptionLtp": 54.15,
+    "liveOptionLtp": 53.8,
     "actualOptionEntryPrice": 54,
     "actualOptionSl": 33.2,
     "actualOptionTarget": 85.2,
     "actualOptionTarget2": 116.4,
-    "currentPrice": 3300.2
+    "currentPrice": 3297.5
   },
   {
     "id": "wgap-NSE:HCLTECH-2026-W37-1788841974905",
@@ -6307,12 +6307,12 @@
     "winCount": 9,
     "totalPnl": -119.70000000000027,
     "indexDrag": "bullish",
-    "liveOptionLtp": 18.7,
+    "liveOptionLtp": 18.35,
     "actualOptionEntryPrice": 20.75,
     "actualOptionSl": 5.5,
     "actualOptionTarget": 43.6,
     "actualOptionTarget2": 66.4,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "wgap-NSE:MPHASIS-2026-W37-1788841988529",
@@ -6404,12 +6404,12 @@
     "winCount": 31,
     "totalPnl": -148.40000000000015,
     "indexDrag": "bullish",
-    "liveOptionLtp": 4.8,
+    "liveOptionLtp": 5,
     "actualOptionEntryPrice": 6.1,
     "actualOptionSl": 2.6,
     "actualOptionTarget": 11.3,
     "actualOptionTarget2": 16.5,
-    "currentPrice": 340.6
+    "currentPrice": 340
   },
   {
     "id": "wgap-NSE:PETRONET-2026-W37-1788841994334",
@@ -6451,12 +6451,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 8.25,
+    "liveOptionLtp": 8.15,
     "actualOptionEntryPrice": 7,
     "actualOptionSl": 2.6,
     "actualOptionTarget": 13.7,
     "actualOptionTarget2": 20.3,
-    "currentPrice": 287
+    "currentPrice": 285.95
   },
   {
     "id": "mgap-NSE:PIDILITIND-2026-09-1788841997065",
@@ -6598,7 +6598,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "mgap-NSE:BOSCHLTD-2026-09-1788842628296",
@@ -6735,12 +6735,12 @@
     "winCount": 9,
     "totalPnl": -119.70000000000027,
     "indexDrag": "bullish",
-    "liveOptionLtp": 18.7,
+    "liveOptionLtp": 18.35,
     "actualOptionEntryPrice": 23.5,
     "actualOptionSl": 9.9,
     "actualOptionTarget": 44,
     "actualOptionTarget2": 64.4,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "wgap-NSE:MPHASIS-2026-W37-1788842656958",
@@ -6831,12 +6831,12 @@
     "winCount": 31,
     "totalPnl": -148.40000000000015,
     "indexDrag": "bullish",
-    "liveOptionLtp": 4.8,
+    "liveOptionLtp": 5,
     "actualOptionEntryPrice": 6,
     "actualOptionSl": 2,
     "actualOptionTarget": 12.1,
     "actualOptionTarget2": 18.1,
-    "currentPrice": 340.6
+    "currentPrice": 340
   },
   {
     "id": "wgap-NSE:ONGC-2026-W37-1788842662409",
@@ -6853,12 +6853,12 @@
     "winCount": 48,
     "totalPnl": 69.15000000000012,
     "indexDrag": "bullish",
-    "liveOptionLtp": 3.32,
+    "liveOptionLtp": 3.48,
     "actualOptionEntryPrice": 4.2,
     "actualOptionSl": 1.1,
     "actualOptionTarget": 8.9,
     "actualOptionTarget2": 13.6,
-    "currentPrice": 232.76
+    "currentPrice": 232.41
   },
   {
     "id": "wgap-NSE:PETRONET-2026-W37-1788842663257",
@@ -6900,12 +6900,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 8.25,
+    "liveOptionLtp": 8.15,
     "actualOptionEntryPrice": 5.2,
     "actualOptionSl": 0.9,
     "actualOptionTarget": 11.7,
     "actualOptionTarget2": 18.2,
-    "currentPrice": 287
+    "currentPrice": 285.95
   },
   {
     "id": "mgap-NSE:PIDILITIND-2026-09-1788842665625",
@@ -7047,7 +7047,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "sweep-NSE:BAJAJFINSV-2026-09-08-1788843288728",
@@ -7459,12 +7459,12 @@
     "winCount": 9,
     "totalPnl": -119.70000000000027,
     "indexDrag": "bullish",
-    "liveOptionLtp": 18.7,
+    "liveOptionLtp": 18.35,
     "actualOptionEntryPrice": 19.6,
     "actualOptionSl": 5.6,
     "actualOptionTarget": 40.6,
     "actualOptionTarget2": 61.6,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "sweep-NSE:LICHSGFIN-2026-09-08-1788843316350",
@@ -7631,12 +7631,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 8.25,
+    "liveOptionLtp": 8.15,
     "actualOptionEntryPrice": 6.75,
     "actualOptionSl": 2.5,
     "actualOptionTarget": 13.1,
     "actualOptionTarget2": 19.5,
-    "currentPrice": 287
+    "currentPrice": 285.95
   },
   {
     "id": "sweep-NSE:PAGEIND-2026-09-08-1788843324668",
@@ -7678,12 +7678,12 @@
     "winCount": 31,
     "totalPnl": -148.40000000000015,
     "indexDrag": "bullish",
-    "liveOptionLtp": 4.8,
+    "liveOptionLtp": 5,
     "actualOptionEntryPrice": 6.55,
     "actualOptionSl": 2.8,
     "actualOptionTarget": 12.2,
     "actualOptionTarget2": 17.9,
-    "currentPrice": 340.6
+    "currentPrice": 340
   },
   {
     "id": "mgap-NSE:OFSS-2026-09-1788843325552",
@@ -7995,7 +7995,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "mgap-NSE:AXISBANK-2026-09-1788843960911",
@@ -8422,7 +8422,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "fade-NSE:AXISBANK-2026-09-08-1788844632558",
@@ -9134,12 +9134,12 @@
     "winCount": 10,
     "totalPnl": 224.5999999999999,
     "indexDrag": "bullish",
-    "liveOptionLtp": 54.15,
+    "liveOptionLtp": 53.8,
     "actualOptionEntryPrice": 48.15,
     "actualOptionSl": 33.4,
     "actualOptionTarget": 70.3,
     "actualOptionTarget2": 92.5,
-    "currentPrice": 3300.2
+    "currentPrice": 3297.5
   },
   {
     "id": "fade-NSE:GVT&D-2026-09-08-1788844646084",
@@ -9671,7 +9671,7 @@
     "actualOptionSl": 17.2,
     "actualOptionTarget": 44,
     "actualOptionTarget2": 60.2,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "sweep-NSE:ABB-2026-09-08-1788845289751",
@@ -9823,7 +9823,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "mgap-NSE:AXISBANK-2026-09-1788845957162",
@@ -10385,7 +10385,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "sweep-NSE:BAJAJFINSV-2026-09-08-1788846622752",
@@ -10807,12 +10807,12 @@
     "winCount": 10,
     "totalPnl": 224.5999999999999,
     "indexDrag": "bullish",
-    "liveOptionLtp": 54.15,
+    "liveOptionLtp": 53.8,
     "actualOptionEntryPrice": 49.05,
     "actualOptionSl": 34.1,
     "actualOptionTarget": 71.6,
     "actualOptionTarget2": 94.1,
-    "currentPrice": 3300.2
+    "currentPrice": 3297.5
   },
   {
     "id": "fade-NSE:HINDPETRO-2026-09-08-1788846640275",
@@ -11209,7 +11209,7 @@
     "actualOptionSl": 14.6,
     "actualOptionTarget": 41.1,
     "actualOptionTarget2": 57,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "sweep-NSE:JSWENERGY-2026-09-08-1788846649253",
@@ -11636,12 +11636,12 @@
     "winCount": 48,
     "totalPnl": 69.15000000000012,
     "indexDrag": "bullish",
-    "liveOptionLtp": 3.32,
+    "liveOptionLtp": 3.48,
     "actualOptionEntryPrice": 3.51,
     "actualOptionSl": 0.1,
     "actualOptionTarget": 8.6,
     "actualOptionTarget2": 13.7,
-    "currentPrice": 232.76
+    "currentPrice": 232.41
   },
   {
     "id": "fade-NSE:NYKAA-2026-09-08-1788846662446",
@@ -11683,12 +11683,12 @@
     "winCount": 31,
     "totalPnl": -148.40000000000015,
     "indexDrag": "bullish",
-    "liveOptionLtp": 6.9,
+    "liveOptionLtp": 7.2,
     "actualOptionEntryPrice": 8.5,
     "actualOptionSl": 5.7,
     "actualOptionTarget": 12.7,
     "actualOptionTarget2": 16.8,
-    "currentPrice": 340.6
+    "currentPrice": 340
   },
   {
     "id": "wgap-NSE:OIL-2026-W37-1788846662627",
@@ -11705,12 +11705,12 @@
     "winCount": 21,
     "totalPnl": -87.04999999999995,
     "indexDrag": "bullish",
-    "liveOptionLtp": 9.35,
+    "liveOptionLtp": 9.3,
     "actualOptionEntryPrice": 11.1,
     "actualOptionSl": 3.8,
     "actualOptionTarget": 22,
     "actualOptionTarget2": 32.9,
-    "currentPrice": 489.95
+    "currentPrice": 489.4
   },
   {
     "id": "mgap-NSE:OFSS-2026-09-1788846662833",
@@ -11777,12 +11777,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 5.25,
+    "liveOptionLtp": 5.2,
     "actualOptionEntryPrice": 5.05,
     "actualOptionSl": 3.5,
     "actualOptionTarget": 6.6,
     "actualOptionTarget2": 8.1,
-    "currentPrice": 287
+    "currentPrice": 285.95
   },
   {
     "id": "fade-NSE:PATANJALI-2026-09-08-1788846663202",
@@ -12399,7 +12399,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "mgap-NSE:AXISBANK-2026-09-1788847291210",
@@ -12561,12 +12561,12 @@
     "winCount": 10,
     "totalPnl": 224.5999999999999,
     "indexDrag": "bullish",
-    "liveOptionLtp": 54.15,
+    "liveOptionLtp": 53.8,
     "actualOptionEntryPrice": 49.35,
     "actualOptionSl": 33.8,
     "actualOptionTarget": 72.7,
     "actualOptionTarget2": 96,
-    "currentPrice": 3300.2
+    "currentPrice": 3297.5
   },
   {
     "id": "sweep-NSE:GODFRYPHLP-2026-09-08-1788847307370",
@@ -12713,7 +12713,7 @@
     "actualOptionSl": 14.7,
     "actualOptionTarget": 45.6,
     "actualOptionTarget2": 64.1,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "sweep-NSE:KFINTECH-2026-09-08-1788847320401",
@@ -12925,12 +12925,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 5.25,
+    "liveOptionLtp": 5.2,
     "actualOptionEntryPrice": 4.7,
     "actualOptionSl": 3.3,
     "actualOptionTarget": 6.1,
     "actualOptionTarget2": 7.5,
-    "currentPrice": 287
+    "currentPrice": 285.95
   },
   {
     "id": "mgap-NSE:NYKAA-2026-09-1788847333457",
@@ -12947,12 +12947,12 @@
     "winCount": 31,
     "totalPnl": -148.40000000000015,
     "indexDrag": "bullish",
-    "liveOptionLtp": 6.9,
+    "liveOptionLtp": 7.2,
     "actualOptionEntryPrice": 7.7,
     "actualOptionSl": 5.3,
     "actualOptionTarget": 11.3,
     "actualOptionTarget2": 14.8,
-    "currentPrice": 340.6
+    "currentPrice": 340
   },
   {
     "id": "wgap-NSE:ONGC-2026-W37-1788847333677",
@@ -12969,12 +12969,12 @@
     "winCount": 48,
     "totalPnl": 69.15000000000012,
     "indexDrag": "bullish",
-    "liveOptionLtp": 3.32,
+    "liveOptionLtp": 3.48,
     "actualOptionEntryPrice": 3.47,
     "actualOptionSl": 0.1,
     "actualOptionTarget": 8.5,
     "actualOptionTarget2": 13.5,
-    "currentPrice": 232.76
+    "currentPrice": 232.41
   },
   {
     "id": "mgap-NSE:OFSS-2026-09-1788847334070",
@@ -13311,7 +13311,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "sweep-NSE:BIOCON-2026-09-08-1788847962376",
@@ -13448,12 +13448,12 @@
     "winCount": 10,
     "totalPnl": 224.5999999999999,
     "indexDrag": "bullish",
-    "liveOptionLtp": 54.15,
+    "liveOptionLtp": 53.8,
     "actualOptionEntryPrice": 50.2,
     "actualOptionSl": 33.8,
     "actualOptionTarget": 74.8,
     "actualOptionTarget2": 99.4,
-    "currentPrice": 3300.2
+    "currentPrice": 3297.5
   },
   {
     "id": "wgap-NSE:HCLTECH-2026-W37-1788847977147",
@@ -13575,7 +13575,7 @@
     "actualOptionSl": 15.1,
     "actualOptionTarget": 46.1,
     "actualOptionTarget2": 64.7,
-    "currentPrice": 1309.4
+    "currentPrice": 1308.1
   },
   {
     "id": "sweep-NSE:KPITTECH-2026-09-08-1788847985030",
@@ -13667,12 +13667,12 @@
     "winCount": 48,
     "totalPnl": 69.15000000000012,
     "indexDrag": "bullish",
-    "liveOptionLtp": 3.32,
+    "liveOptionLtp": 3.48,
     "actualOptionEntryPrice": 3.43,
     "actualOptionSl": 0.2,
     "actualOptionTarget": 8.3,
     "actualOptionTarget2": 13.1,
-    "currentPrice": 232.76
+    "currentPrice": 232.41
   },
   {
     "id": "mgap-NSE:OFSS-2026-09-1788847995820",
@@ -13739,12 +13739,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 5.25,
+    "liveOptionLtp": 5.2,
     "actualOptionEntryPrice": 4.7,
     "actualOptionSl": 3.3,
     "actualOptionTarget": 6.1,
     "actualOptionTarget2": 7.5,
-    "currentPrice": 287
+    "currentPrice": 285.95
   },
   {
     "id": "mgap-NSE:PIDILITIND-2026-09-1788847997892",
@@ -13755,7 +13755,7 @@
     "entry": 1573.5,
     "sl": 1675.5,
     "target": 1645,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T05:45:00.000Z",
     "winCount": 30,
@@ -13765,7 +13765,11 @@
     "actualOptionEntryPrice": 27.2,
     "actualOptionSl": 19,
     "actualOptionTarget": 35.4,
-    "actualOptionTarget2": 43.5
+    "actualOptionTarget2": 43.5,
+    "currentPrice": 1570.2,
+    "exitPrice": 1645,
+    "pnlPoints": -71.5,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:SAIL-2026-09-08-1788848000866",
@@ -13776,12 +13780,16 @@
     "entry": 188.92,
     "sl": 188,
     "target": 190.8,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T05:45:00.000Z",
     "winCount": 8,
     "totalPnl": 16.98999999999998,
-    "indexDrag": "bearish"
+    "indexDrag": "bearish",
+    "currentPrice": 188.19,
+    "exitPrice": 190.8,
+    "pnlPoints": -1.8800000000000239,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:RVNL-2026-09-08-1788848002059",
@@ -13792,7 +13800,7 @@
     "entry": 209.36,
     "sl": 209.17,
     "target": 216.45,
-    "status": "ACTIVE",
+    "status": "STOP_LOSS_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T05:45:00.000Z",
     "winCount": 9,
@@ -13802,7 +13810,11 @@
     "actualOptionEntryPrice": 5.39,
     "actualOptionSl": 3.8,
     "actualOptionTarget": 7,
-    "actualOptionTarget2": 8.6
+    "actualOptionTarget2": 8.6,
+    "currentPrice": 208.7,
+    "exitPrice": 209.17,
+    "pnlPoints": 0.19000000000002615,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:SUNPHARMA-2026-09-1788848003550",
@@ -13813,7 +13825,7 @@
     "entry": 1891.3,
     "sl": 1956,
     "target": 1910,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T05:45:00.000Z",
     "winCount": 87,
@@ -13823,7 +13835,11 @@
     "actualOptionEntryPrice": 24.2,
     "actualOptionSl": 16.9,
     "actualOptionTarget": 31.5,
-    "actualOptionTarget2": 38.7
+    "actualOptionTarget2": 38.7,
+    "currentPrice": 1891,
+    "exitPrice": 1910,
+    "pnlPoints": -18.700000000000045,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:SIEMENS-2026-09-08-1788848004481",
@@ -13834,7 +13850,7 @@
     "entry": 3970.5,
     "sl": 3986,
     "target": 3911.1,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T05:45:00.000Z",
     "winCount": 6,
@@ -13844,7 +13860,11 @@
     "actualOptionEntryPrice": 99.2,
     "actualOptionSl": 69.4,
     "actualOptionTarget": 129,
-    "actualOptionTarget2": 158.7
+    "actualOptionTarget2": 158.7,
+    "currentPrice": 3971,
+    "exitPrice": 3911.1,
+    "pnlPoints": 59.40000000000009,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:SUZLON-2026-09-08-1788848007175",
@@ -13855,7 +13875,7 @@
     "entry": 45.51,
     "sl": 45.56,
     "target": 44.85,
-    "status": "ACTIVE",
+    "status": "STOP_LOSS_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T05:45:00.000Z",
     "winCount": 5,
@@ -13865,7 +13885,11 @@
     "actualOptionEntryPrice": 1.38,
     "actualOptionSl": 1,
     "actualOptionTarget": 1.8,
-    "actualOptionTarget2": 2.2
+    "actualOptionTarget2": 2.2,
+    "currentPrice": 45.38,
+    "exitPrice": 45.56,
+    "pnlPoints": -0.05000000000000426,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "wgap-NSE:SUZLON-2026-W37-1788848007180",
@@ -13876,7 +13900,7 @@
     "entry": 45.51,
     "sl": 46.38,
     "target": 46,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T05:45:00.000Z",
     "winCount": 26,
@@ -13886,7 +13910,11 @@
     "actualOptionEntryPrice": 1.38,
     "actualOptionSl": 0.9,
     "actualOptionTarget": 2,
-    "actualOptionTarget2": 2.7
+    "actualOptionTarget2": 2.7,
+    "currentPrice": 45.38,
+    "exitPrice": 46,
+    "pnlPoints": -0.490000000000002,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:UNOMINDA-2026-09-1788848009585",
@@ -13897,7 +13925,7 @@
     "entry": 1235.4,
     "sl": 1307.5,
     "target": 1270,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T05:45:00.000Z",
     "winCount": 34,
@@ -13907,7 +13935,11 @@
     "actualOptionEntryPrice": 28.75,
     "actualOptionSl": 20.1,
     "actualOptionTarget": 37.4,
-    "actualOptionTarget2": 46
+    "actualOptionTarget2": 46,
+    "currentPrice": 1234.9,
+    "exitPrice": 1270,
+    "pnlPoints": -34.59999999999991,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:BANKNIFTY-2026-09-08-1788848615495",
@@ -14173,7 +14205,7 @@
     "winCount": 93,
     "totalPnl": 75623.5,
     "indexDrag": "bullish",
-    "currentPrice": 11763
+    "currentPrice": 11748
   },
   {
     "id": "fade-NSE:APOLLOHOSP-2026-09-08-1788848622298",
@@ -14334,7 +14366,7 @@
     "entry": 48645,
     "sl": 49400,
     "target": 48450,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 31,
@@ -14344,7 +14376,11 @@
     "actualOptionEntryPrice": 1006.9,
     "actualOptionSl": 629.4,
     "actualOptionTarget": 1573.2,
-    "actualOptionTarget2": 2139.4
+    "actualOptionTarget2": 2139.4,
+    "currentPrice": 48715,
+    "exitPrice": 48450,
+    "pnlPoints": 195,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:COCHINSHIP-2026-09-08-1788848630248",
@@ -14355,7 +14391,7 @@
     "entry": 1523.9,
     "sl": 1526.9,
     "target": 1505,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 4,
@@ -14365,7 +14401,11 @@
     "actualOptionEntryPrice": 37.35,
     "actualOptionSl": 26.1,
     "actualOptionTarget": 48.6,
-    "actualOptionTarget2": 59.8
+    "actualOptionTarget2": 59.8,
+    "currentPrice": 1529,
+    "exitPrice": 1505,
+    "pnlPoints": 18.90000000000009,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:DALBHARAT-2026-09-1788848631472",
@@ -14376,12 +14416,16 @@
     "entry": 1693.5,
     "sl": 1885.9,
     "target": 1830,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 37,
     "totalPnl": 2172.2,
-    "indexDrag": "bullish"
+    "indexDrag": "bullish",
+    "currentPrice": 1691.9,
+    "exitPrice": 1830,
+    "pnlPoints": -136.5,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:DIXON-2026-09-08-1788848632682",
@@ -14392,7 +14436,7 @@
     "entry": 14134,
     "sl": 14052,
     "target": 14229,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 5,
@@ -14402,7 +14446,11 @@
     "actualOptionEntryPrice": 320.85,
     "actualOptionSl": 224.6,
     "actualOptionTarget": 417.1,
-    "actualOptionTarget2": 513.4
+    "actualOptionTarget2": 513.4,
+    "currentPrice": 14141,
+    "exitPrice": 14229,
+    "pnlPoints": -95,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:DRREDDY-2026-09-08-1788848633728",
@@ -14413,7 +14461,7 @@
     "entry": 1152.3,
     "sl": 1154,
     "target": 1144,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 5,
@@ -14423,7 +14471,11 @@
     "actualOptionEntryPrice": 19.5,
     "actualOptionSl": 13.7,
     "actualOptionTarget": 25.4,
-    "actualOptionTarget2": 31.2
+    "actualOptionTarget2": 31.2,
+    "currentPrice": 1150.5,
+    "exitPrice": 1144,
+    "pnlPoints": 8.299999999999955,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:DRREDDY-2026-09-08-1788848633731",
@@ -14434,7 +14486,7 @@
     "entry": 1150.1,
     "sl": 1152.3,
     "target": 1144,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 7,
@@ -14444,7 +14496,11 @@
     "actualOptionEntryPrice": 19.5,
     "actualOptionSl": 13.7,
     "actualOptionTarget": 25.4,
-    "actualOptionTarget2": 31.2
+    "actualOptionTarget2": 31.2,
+    "currentPrice": 1150.5,
+    "exitPrice": 1144,
+    "pnlPoints": 6.099999999999909,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:GMRINFRA-2026-09-08-1788848635307",
@@ -14455,12 +14511,16 @@
     "entry": 96.65,
     "sl": 96.89,
     "target": 95.74,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 8,
     "totalPnl": 8.699999999999989,
-    "indexDrag": "bullish"
+    "indexDrag": "bullish",
+    "currentPrice": 96.78,
+    "exitPrice": 95.74,
+    "pnlPoints": 0.9100000000000108,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:FORCEMOT-2026-09-08-1788848635467",
@@ -14471,7 +14531,7 @@
     "entry": 17647,
     "sl": 17614,
     "target": 17865,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 10,
@@ -14481,7 +14541,11 @@
     "actualOptionEntryPrice": 659.85,
     "actualOptionSl": 461.9,
     "actualOptionTarget": 857.8,
-    "actualOptionTarget2": 1055.8
+    "actualOptionTarget2": 1055.8,
+    "currentPrice": 17623,
+    "exitPrice": 17865,
+    "pnlPoints": -218,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:GRASIM-2026-09-1788848635948",
@@ -14498,11 +14562,12 @@
     "winCount": 10,
     "totalPnl": 224.5999999999999,
     "indexDrag": "bullish",
-    "liveOptionLtp": 54.15,
+    "liveOptionLtp": 53.8,
     "actualOptionEntryPrice": 51.5,
     "actualOptionSl": 33.3,
     "actualOptionTarget": 78.8,
-    "actualOptionTarget2": 106.1
+    "actualOptionTarget2": 106.1,
+    "currentPrice": 3297.5
   },
   {
     "id": "fade-NSE:HAL-2026-09-08-1788848638344",
@@ -14513,7 +14578,7 @@
     "entry": 5063.2,
     "sl": 5072,
     "target": 4903.7,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 6,
@@ -14523,7 +14588,11 @@
     "actualOptionEntryPrice": 109.6,
     "actualOptionSl": 76.7,
     "actualOptionTarget": 142.5,
-    "actualOptionTarget2": 175.4
+    "actualOptionTarget2": 175.4,
+    "currentPrice": 5051.7,
+    "exitPrice": 4903.7,
+    "pnlPoints": 159.5,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "wgap-NSE:HCLTECH-2026-W37-1788848638516",
@@ -14534,7 +14603,7 @@
     "entry": 1285.3,
     "sl": 1349.3,
     "target": 1315,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 59,
@@ -14544,7 +14613,11 @@
     "actualOptionEntryPrice": 32.5,
     "actualOptionSl": 0.5,
     "actualOptionTarget": 80.5,
-    "actualOptionTarget2": 128.5
+    "actualOptionTarget2": 128.5,
+    "currentPrice": 1278.8,
+    "exitPrice": 1315,
+    "pnlPoints": -29.700000000000045,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:HINDALCO-2026-09-08-1788848639218",
@@ -14555,7 +14628,7 @@
     "entry": 1017.9,
     "sl": 1022.2,
     "target": 1010.8,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 3,
@@ -14565,7 +14638,11 @@
     "actualOptionEntryPrice": 21,
     "actualOptionSl": 14.7,
     "actualOptionTarget": 27.3,
-    "actualOptionTarget2": 33.6
+    "actualOptionTarget2": 33.6,
+    "currentPrice": 1013.1,
+    "exitPrice": 1010.8,
+    "pnlPoints": 7.100000000000023,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:ICICIBANK-2026-09-1788848640099",
@@ -14576,7 +14653,7 @@
     "entry": 1404,
     "sl": 1452,
     "target": 1420,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 85,
@@ -14586,7 +14663,11 @@
     "actualOptionEntryPrice": 14.8,
     "actualOptionSl": 10.4,
     "actualOptionTarget": 19.2,
-    "actualOptionTarget2": 23.7
+    "actualOptionTarget2": 23.7,
+    "currentPrice": 1404.7,
+    "exitPrice": 1420,
+    "pnlPoints": -16,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:HYUNDAI-2026-09-1788848641502",
@@ -14597,7 +14678,7 @@
     "entry": 2207.3,
     "sl": 2260,
     "target": 2210,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 35,
@@ -14607,7 +14688,11 @@
     "actualOptionEntryPrice": 53.7,
     "actualOptionSl": 27.4,
     "actualOptionTarget": 93.2,
-    "actualOptionTarget2": 132.7
+    "actualOptionTarget2": 132.7,
+    "currentPrice": 2200.5,
+    "exitPrice": 2210,
+    "pnlPoints": -2.699999999999818,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:KALYANKJIL-2026-09-08-1788848645420",
@@ -14618,7 +14703,7 @@
     "entry": 612.5,
     "sl": 616,
     "target": 587.1,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 4,
@@ -14628,7 +14713,11 @@
     "actualOptionEntryPrice": 22.55,
     "actualOptionSl": 15.8,
     "actualOptionTarget": 29.3,
-    "actualOptionTarget2": 36.1
+    "actualOptionTarget2": 36.1,
+    "currentPrice": 611.2,
+    "exitPrice": 587.1,
+    "pnlPoints": 25.399999999999977,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:KPITTECH-2026-09-08-1788848646246",
@@ -14639,7 +14728,7 @@
     "entry": 560.55,
     "sl": 559.9,
     "target": 575.9,
-    "status": "ACTIVE",
+    "status": "STOP_LOSS_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 10,
@@ -14649,7 +14738,11 @@
     "actualOptionEntryPrice": 18,
     "actualOptionSl": 12.6,
     "actualOptionTarget": 23.4,
-    "actualOptionTarget2": 28.8
+    "actualOptionTarget2": 28.8,
+    "currentPrice": 558.85,
+    "exitPrice": 559.9,
+    "pnlPoints": 0.6499999999999773,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:KOTAKBANK-2026-09-08-1788848646401",
@@ -14660,7 +14753,7 @@
     "entry": 422.4,
     "sl": 423.85,
     "target": 420.4,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 3,
@@ -14670,7 +14763,11 @@
     "actualOptionEntryPrice": 4.5,
     "actualOptionSl": 3.8,
     "actualOptionTarget": 5.6,
-    "actualOptionTarget2": 6.7
+    "actualOptionTarget2": 6.7,
+    "currentPrice": 421.4,
+    "exitPrice": 420.4,
+    "pnlPoints": 2,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:JSWSTEEL-2026-09-1788848646576",
@@ -14687,11 +14784,12 @@
     "winCount": 9,
     "totalPnl": -119.70000000000027,
     "indexDrag": "bullish",
-    "liveOptionLtp": 18.7,
+    "liveOptionLtp": 18.35,
     "actualOptionEntryPrice": 17.45,
     "actualOptionSl": 4.7,
     "actualOptionTarget": 36.6,
-    "actualOptionTarget2": 55.8
+    "actualOptionTarget2": 55.8,
+    "currentPrice": 1308.1
   },
   {
     "id": "fade-NSE:KAYNES-2026-09-08-1788848646750",
@@ -14702,7 +14800,7 @@
     "entry": 3677,
     "sl": 3682.9,
     "target": 3617.9,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 7,
@@ -14712,7 +14810,11 @@
     "actualOptionEntryPrice": 213,
     "actualOptionSl": 149.1,
     "actualOptionTarget": 276.9,
-    "actualOptionTarget2": 340.8
+    "actualOptionTarget2": 340.8,
+    "currentPrice": 3680.2,
+    "exitPrice": 3617.9,
+    "pnlPoints": 59.09999999999991,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:JSWENERGY-2026-09-08-1788848646928",
@@ -14723,7 +14825,7 @@
     "entry": 526.7,
     "sl": 524.8,
     "target": 528.85,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 3,
@@ -14733,7 +14835,11 @@
     "actualOptionEntryPrice": 11.05,
     "actualOptionSl": 7.7,
     "actualOptionTarget": 14.4,
-    "actualOptionTarget2": 17.7
+    "actualOptionTarget2": 17.7,
+    "currentPrice": 525.6,
+    "exitPrice": 528.85,
+    "pnlPoints": -2.1499999999999773,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:LTIM-2026-09-08-1788848648469",
@@ -14744,12 +14850,16 @@
     "entry": 4467.8,
     "sl": 4478.5,
     "target": 4405,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 15,
     "totalPnl": 1059.6000000000022,
-    "indexDrag": "bullish"
+    "indexDrag": "bullish",
+    "currentPrice": 4462.2,
+    "exitPrice": 4405,
+    "pnlPoints": 62.80000000000018,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:LTF-2026-09-08-1788848649011",
@@ -14760,7 +14870,7 @@
     "entry": 310.9,
     "sl": 310.2,
     "target": 315.3,
-    "status": "ACTIVE",
+    "status": "STOP_LOSS_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 10,
@@ -14770,7 +14880,11 @@
     "actualOptionEntryPrice": 8.65,
     "actualOptionSl": 6.1,
     "actualOptionTarget": 11.2,
-    "actualOptionTarget2": 13.8
+    "actualOptionTarget2": 13.8,
+    "currentPrice": 310.55,
+    "exitPrice": 310.2,
+    "pnlPoints": 0.6999999999999886,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:MAXHEALTH-2026-09-08-1788848650831",
@@ -14781,7 +14895,7 @@
     "entry": 996.2,
     "sl": 996.9,
     "target": 983,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 6,
@@ -14791,7 +14905,11 @@
     "actualOptionEntryPrice": 23.25,
     "actualOptionSl": 16.3,
     "actualOptionTarget": 30.2,
-    "actualOptionTarget2": 37.2
+    "actualOptionTarget2": 37.2,
+    "currentPrice": 991.3,
+    "exitPrice": 983,
+    "pnlPoints": 13.200000000000045,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:MAXHEALTH-2026-09-08-1788848650834",
@@ -14802,7 +14920,7 @@
     "entry": 993.4,
     "sl": 996.3,
     "target": 974,
-    "status": "ACTIVE",
+    "status": "STOP_LOSS_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 10,
@@ -14812,7 +14930,11 @@
     "actualOptionEntryPrice": 18.15,
     "actualOptionSl": 12.7,
     "actualOptionTarget": 23.6,
-    "actualOptionTarget2": 29
+    "actualOptionTarget2": 29,
+    "currentPrice": 991.3,
+    "exitPrice": 996.3,
+    "pnlPoints": -2.8999999999999773,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:MAZDOCK-2026-09-08-1788848650957",
@@ -14823,7 +14945,7 @@
     "entry": 2474,
     "sl": 2479.5,
     "target": 2435.6,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 9,
@@ -14833,7 +14955,11 @@
     "actualOptionEntryPrice": 58.7,
     "actualOptionSl": 41.1,
     "actualOptionTarget": 76.3,
-    "actualOptionTarget2": 93.9
+    "actualOptionTarget2": 93.9,
+    "currentPrice": 2472.5,
+    "exitPrice": 2435.6,
+    "pnlPoints": 38.40000000000009,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:MARUTI-2026-09-08-1788848651657",
@@ -14844,7 +14970,7 @@
     "entry": 12615,
     "sl": 12600,
     "target": 12748,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 7,
@@ -14854,7 +14980,11 @@
     "actualOptionEntryPrice": 271.2,
     "actualOptionSl": 189.8,
     "actualOptionTarget": 352.6,
-    "actualOptionTarget2": 433.9
+    "actualOptionTarget2": 433.9,
+    "currentPrice": 12671,
+    "exitPrice": 12748,
+    "pnlPoints": -133,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "wgap-NSE:MPHASIS-2026-W37-1788848651817",
@@ -14865,7 +14995,7 @@
     "entry": 2345,
     "sl": 2515,
     "target": 2390,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 15,
@@ -14875,7 +15005,11 @@
     "actualOptionEntryPrice": 62.15,
     "actualOptionSl": 43.5,
     "actualOptionTarget": 80.8,
-    "actualOptionTarget2": 99.4
+    "actualOptionTarget2": 99.4,
+    "currentPrice": 2343,
+    "exitPrice": 2390,
+    "pnlPoints": -45,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "wgap-NSE:NHPC-2026-W37-1788848653323",
@@ -14886,7 +15020,7 @@
     "entry": 74.99,
     "sl": 77.21,
     "target": 75,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 42,
@@ -14896,7 +15030,11 @@
     "actualOptionEntryPrice": 1.3,
     "actualOptionSl": 0.2,
     "actualOptionTarget": 3,
-    "actualOptionTarget2": 4.6
+    "actualOptionTarget2": 4.6,
+    "currentPrice": 75,
+    "exitPrice": 75,
+    "pnlPoints": -0.010000000000005116,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:NMDC-2026-09-1788848654163",
@@ -14907,7 +15045,7 @@
     "entry": 84.53,
     "sl": 87.4,
     "target": 85,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 60,
@@ -14917,7 +15055,11 @@
     "actualOptionEntryPrice": 1.88,
     "actualOptionSl": 0.4,
     "actualOptionTarget": 4,
-    "actualOptionTarget2": 6.2
+    "actualOptionTarget2": 6.2,
+    "currentPrice": 84.48,
+    "exitPrice": 85,
+    "pnlPoints": -0.46999999999999886,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:NBCC-2026-09-08-1788848655204",
@@ -14928,7 +15070,7 @@
     "entry": 85.45,
     "sl": 85.73,
     "target": 84.88,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 11,
@@ -14938,7 +15080,11 @@
     "actualOptionEntryPrice": 1.71,
     "actualOptionSl": 1.2,
     "actualOptionTarget": 2.2,
-    "actualOptionTarget2": 2.7
+    "actualOptionTarget2": 2.7,
+    "currentPrice": 85.3,
+    "exitPrice": 84.88,
+    "pnlPoints": 0.5700000000000074,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:ONGC-2026-09-08-1788848655922",
@@ -14949,7 +15095,7 @@
     "entry": 232.9,
     "sl": 232.4,
     "target": 233.98,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 5,
@@ -14959,7 +15105,11 @@
     "actualOptionEntryPrice": 4.6,
     "actualOptionSl": 3.2,
     "actualOptionTarget": 6,
-    "actualOptionTarget2": 7.4
+    "actualOptionTarget2": 7.4,
+    "currentPrice": 232.41,
+    "exitPrice": 233.98,
+    "pnlPoints": -1.079999999999984,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "wgap-NSE:ONGC-2026-W37-1788848655926",
@@ -14976,11 +15126,12 @@
     "winCount": 48,
     "totalPnl": 69.15000000000012,
     "indexDrag": "bullish",
-    "liveOptionLtp": 3.32,
+    "liveOptionLtp": 3.48,
     "actualOptionEntryPrice": 3.3,
     "actualOptionSl": 0.1,
     "actualOptionTarget": 8.1,
-    "actualOptionTarget2": 13
+    "actualOptionTarget2": 13,
+    "currentPrice": 232.41
   },
   {
     "id": "wgap-NSE:PETRONET-2026-W37-1788848656103",
@@ -14991,7 +15142,7 @@
     "entry": 287,
     "sl": 294,
     "target": 292,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 71,
@@ -15001,7 +15152,11 @@
     "actualOptionEntryPrice": 4.7,
     "actualOptionSl": 1.2,
     "actualOptionTarget": 10,
-    "actualOptionTarget2": 15.2
+    "actualOptionTarget2": 15.2,
+    "currentPrice": 285.95,
+    "exitPrice": 292,
+    "pnlPoints": -5,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:PETRONET-2026-09-1788848656106",
@@ -15018,11 +15173,12 @@
     "winCount": 16,
     "totalPnl": 8.200000000000102,
     "indexDrag": "bullish",
-    "liveOptionLtp": 5.25,
+    "liveOptionLtp": 5.2,
     "actualOptionEntryPrice": 4.7,
     "actualOptionSl": 3.3,
     "actualOptionTarget": 6.1,
-    "actualOptionTarget2": 7.5
+    "actualOptionTarget2": 7.5,
+    "currentPrice": 285.95
   },
   {
     "id": "mgap-NSE:OFSS-2026-09-1788848656635",
@@ -15033,7 +15189,7 @@
     "entry": 11652,
     "sl": 12353,
     "target": 11740,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 1,
@@ -15043,7 +15199,11 @@
     "actualOptionEntryPrice": 371.2,
     "actualOptionSl": 20.7,
     "actualOptionTarget": 897,
-    "actualOptionTarget2": 1422.7
+    "actualOptionTarget2": 1422.7,
+    "currentPrice": 11645,
+    "exitPrice": 11740,
+    "pnlPoints": -88,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "fade-NSE:PERSISTENT-2026-09-08-1788848657000",
@@ -15054,7 +15214,7 @@
     "entry": 5575,
     "sl": 5583.5,
     "target": 5491,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 7,
@@ -15064,7 +15224,11 @@
     "actualOptionEntryPrice": 178.9,
     "actualOptionSl": 125.2,
     "actualOptionTarget": 232.6,
-    "actualOptionTarget2": 286.2
+    "actualOptionTarget2": 286.2,
+    "currentPrice": 5552.5,
+    "exitPrice": 5491,
+    "pnlPoints": 84,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:AMBER-2026-09-1788849281129",
@@ -15075,7 +15239,7 @@
     "entry": 7311.5,
     "sl": 7644.5,
     "target": 7290,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 18,
@@ -15085,7 +15249,11 @@
     "actualOptionEntryPrice": 187.35,
     "actualOptionSl": 20.8,
     "actualOptionTarget": 437.1,
-    "actualOptionTarget2": 686.9
+    "actualOptionTarget2": 686.9,
+    "currentPrice": 7321.5,
+    "exitPrice": 7290,
+    "pnlPoints": 21.5,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "sweep-NSE:AUBANK-2026-09-08-1788849283766",
@@ -15096,7 +15264,7 @@
     "entry": 1066.5,
     "sl": 1069.9,
     "target": 1046.9,
-    "status": "ACTIVE",
+    "status": "STOP_LOSS_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 24,
@@ -15106,7 +15274,11 @@
     "actualOptionEntryPrice": 18.25,
     "actualOptionSl": 12.8,
     "actualOptionTarget": 23.7,
-    "actualOptionTarget2": 29.2
+    "actualOptionTarget2": 29.2,
+    "currentPrice": 1065,
+    "exitPrice": 1069.9,
+    "pnlPoints": -3.400000000000091,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:AXISBANK-2026-09-1788849283970",
@@ -15117,7 +15289,7 @@
     "entry": 1242.7,
     "sl": 1280.7,
     "target": 1245,
-    "status": "ACTIVE",
+    "status": "TARGET_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 0,
@@ -15127,7 +15299,11 @@
     "actualOptionEntryPrice": 15.8,
     "actualOptionSl": 11.1,
     "actualOptionTarget": 20.5,
-    "actualOptionTarget2": 25.3
+    "actualOptionTarget2": 25.3,
+    "currentPrice": 1247,
+    "exitPrice": 1245,
+    "pnlPoints": -2.2999999999999545,
+    "resolvedDate": "2026-09-08"
   },
   {
     "id": "mgap-NSE:BAJAJ_AUTO-2026-09-1788849284810",
@@ -15143,7 +15319,8 @@
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 93,
     "totalPnl": 75623.5,
-    "indexDrag": "bullish"
+    "indexDrag": "bullish",
+    "currentPrice": 11748
   },
   {
     "id": "sweep-NSE:BAJFINANCE-2026-09-08-1788849286395",
@@ -15154,7 +15331,7 @@
     "entry": 1054.4,
     "sl": 1052.8,
     "target": 1070,
-    "status": "ACTIVE",
+    "status": "STOP_LOSS_HIT",
     "createdDate": "2026-09-08",
     "timestamp": "2026-09-08T06:15:00.000Z",
     "winCount": 15,
@@ -15164,6 +15341,536 @@
     "actualOptionEntryPrice": 25.25,
     "actualOptionSl": 17.7,
     "actualOptionTarget": 32.8,
-    "actualOptionTarget2": 40.4
+    "actualOptionTarget2": 40.4,
+    "currentPrice": 1052.7,
+    "exitPrice": 1052.8,
+    "pnlPoints": 1.6000000000001364,
+    "resolvedDate": "2026-09-08"
+  },
+  {
+    "id": "sweep-OANDA:XAUUSD-2026-09-08-1788849947432",
+    "symbol": "OANDA:XAUUSD",
+    "strategy": "Liquidity Sweep Reversal",
+    "type": "INTRADAY",
+    "direction": "LONG",
+    "entry": 4406.81,
+    "sl": 4398.325,
+    "target": 4413.605,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:30:00.000Z",
+    "winCount": 21,
+    "totalPnl": 178.55999999999858,
+    "indexDrag": "bearish"
+  },
+  {
+    "id": "mgap-NSE:AMBER-2026-09-1788849949207",
+    "symbol": "NSE:AMBER",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 7321.5,
+    "sl": 7644.5,
+    "target": 7290,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 18,
+    "totalPnl": 1423,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 179.05,
+    "actualOptionEntryPrice": 179.05,
+    "actualOptionSl": 17.6,
+    "actualOptionTarget": 421.3,
+    "actualOptionTarget2": 663.6
+  },
+  {
+    "id": "mgap-NSE:AXISBANK-2026-09-1788849952746",
+    "symbol": "NSE:AXISBANK",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 1247,
+    "sl": 1280.7,
+    "target": 1245,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 0,
+    "totalPnl": 0,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 14.5,
+    "actualOptionEntryPrice": 14.5,
+    "actualOptionSl": 10.1,
+    "actualOptionTarget": 18.9,
+    "actualOptionTarget2": 23.2
+  },
+  {
+    "id": "mgap-NSE:BAJAJ_AUTO-2026-09-1788849953309",
+    "symbol": "NSE:BAJAJ_AUTO",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 11748,
+    "sl": 12470,
+    "target": 11700,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 93,
+    "totalPnl": 75623.5,
+    "indexDrag": "bullish"
+  },
+  {
+    "id": "mgap-NSE:BOSCHLTD-2026-09-1788849960790",
+    "symbol": "NSE:BOSCHLTD",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 48715,
+    "sl": 49400,
+    "target": 48450,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 31,
+    "totalPnl": 46630,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 974.65,
+    "actualOptionEntryPrice": 974.65,
+    "actualOptionSl": 632.2,
+    "actualOptionTarget": 1488.4,
+    "actualOptionTarget2": 2002.2
+  },
+  {
+    "id": "mgap-NSE:DALBHARAT-2026-09-1788849963656",
+    "symbol": "NSE:DALBHARAT",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 1691.9,
+    "sl": 1885.9,
+    "target": 1830,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 37,
+    "totalPnl": 2172.2,
+    "indexDrag": "bullish"
+  },
+  {
+    "id": "mgap-NSE:GRASIM-2026-09-1788849971120",
+    "symbol": "NSE:GRASIM",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 3297.5,
+    "sl": 3336.6,
+    "target": 3280,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 10,
+    "totalPnl": 224.5999999999999,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 53.8,
+    "actualOptionEntryPrice": 53.8,
+    "actualOptionSl": 34.3,
+    "actualOptionTarget": 83.1,
+    "actualOptionTarget2": 112.4
+  },
+  {
+    "id": "sweep-NSE:HDFCAMC-2026-09-08-1788849974508",
+    "symbol": "NSE:HDFCAMC",
+    "strategy": "Liquidity Sweep Reversal",
+    "type": "INTRADAY",
+    "direction": "SHORT",
+    "entry": 2443.6,
+    "sl": 2454,
+    "target": 2433,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 11,
+    "totalPnl": 321.2000000000012,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 53.9,
+    "actualOptionEntryPrice": 53.9,
+    "actualOptionSl": 37.7,
+    "actualOptionTarget": 70.1,
+    "actualOptionTarget2": 86.2
+  },
+  {
+    "id": "wgap-NSE:HCLTECH-2026-W37-1788849975320",
+    "symbol": "NSE:HCLTECH",
+    "strategy": "Weekly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 1278.8,
+    "sl": 1349.3,
+    "target": 1315,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 59,
+    "totalPnl": 351.59999999999854,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 30.35,
+    "actualOptionEntryPrice": 30.35,
+    "actualOptionSl": 21.2,
+    "actualOptionTarget": 39.5,
+    "actualOptionTarget2": 48.6
+  },
+  {
+    "id": "sweep-NSE:HINDALCO-2026-09-08-1788849976244",
+    "symbol": "NSE:HINDALCO",
+    "strategy": "Liquidity Sweep Reversal",
+    "type": "INTRADAY",
+    "direction": "SHORT",
+    "entry": 1013.1,
+    "sl": 1014.9,
+    "target": 999.8,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 7,
+    "totalPnl": 48.449999999999704,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 23.75,
+    "actualOptionEntryPrice": 23.75,
+    "actualOptionSl": 16.6,
+    "actualOptionTarget": 30.9,
+    "actualOptionTarget2": 38
+  },
+  {
+    "id": "mgap-NSE:ICICIBANK-2026-09-1788849977803",
+    "symbol": "NSE:ICICIBANK",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 1404.7,
+    "sl": 1452,
+    "target": 1420,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 85,
+    "totalPnl": 829.6999999999989,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 14.85,
+    "actualOptionEntryPrice": 14.85,
+    "actualOptionSl": 10.4,
+    "actualOptionTarget": 19.3,
+    "actualOptionTarget2": 23.8
+  },
+  {
+    "id": "mgap-NSE:HYUNDAI-2026-09-1788849979424",
+    "symbol": "NSE:HYUNDAI",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 2200.5,
+    "sl": 2260,
+    "target": 2210,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 35,
+    "totalPnl": 1512.8000000000002,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 56,
+    "actualOptionEntryPrice": 56,
+    "actualOptionSl": 26.3,
+    "actualOptionTarget": 100.6,
+    "actualOptionTarget2": 145.3
+  },
+  {
+    "id": "mgap-NSE:JSWSTEEL-2026-09-1788849985492",
+    "symbol": "NSE:JSWSTEEL",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 1308.1,
+    "sl": 1335,
+    "target": 1270,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 9,
+    "totalPnl": -119.70000000000027,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 18.35,
+    "actualOptionEntryPrice": 18.35,
+    "actualOptionSl": 4.9,
+    "actualOptionTarget": 38.5,
+    "actualOptionTarget2": 58.7
+  },
+  {
+    "id": "wgap-NSE:MPHASIS-2026-W37-1788849991071",
+    "symbol": "NSE:MPHASIS",
+    "strategy": "Weekly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 2343,
+    "sl": 2515,
+    "target": 2390,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 15,
+    "totalPnl": 261.8999999999992,
+    "indexDrag": "bullish"
+  },
+  {
+    "id": "mgap-NSE:NMDC-2026-09-1788849993168",
+    "symbol": "NSE:NMDC",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 84.48,
+    "sl": 87.4,
+    "target": 85,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 60,
+    "totalPnl": 11.600000000000051,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 1.49,
+    "actualOptionEntryPrice": 1.49,
+    "actualOptionSl": 1,
+    "actualOptionTarget": 1.9,
+    "actualOptionTarget2": 2.4
+  },
+  {
+    "id": "mgap-NSE:OFSS-2026-09-1788849996349",
+    "symbol": "NSE:OFSS",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 11645,
+    "sl": 12353,
+    "target": 11740,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 1,
+    "totalPnl": 0,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 321,
+    "actualOptionEntryPrice": 321,
+    "actualOptionSl": 224.7,
+    "actualOptionTarget": 417.3,
+    "actualOptionTarget2": 513.6
+  },
+  {
+    "id": "wgap-NSE:PETRONET-2026-W37-1788849996804",
+    "symbol": "NSE:PETRONET",
+    "strategy": "Weekly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 285.95,
+    "sl": 294,
+    "target": 292,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 71,
+    "totalPnl": 83.5,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 5.2,
+    "actualOptionEntryPrice": 5.2,
+    "actualOptionSl": 1.2,
+    "actualOptionTarget": 11.2,
+    "actualOptionTarget2": 17.3
+  },
+  {
+    "id": "mgap-NSE:PETRONET-2026-09-1788849996806",
+    "symbol": "NSE:PETRONET",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 285.95,
+    "sl": 296.65,
+    "target": 281,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 16,
+    "totalPnl": 8.200000000000102,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 5.2,
+    "actualOptionEntryPrice": 5.2,
+    "actualOptionSl": 3.6,
+    "actualOptionTarget": 6.8,
+    "actualOptionTarget2": 8.3
+  },
+  {
+    "id": "wgap-NSE:ONGC-2026-W37-1788849997548",
+    "symbol": "NSE:ONGC",
+    "strategy": "Weekly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 232.41,
+    "sl": 239.21,
+    "target": 232,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 48,
+    "totalPnl": 69.15000000000012,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 3.48,
+    "actualOptionEntryPrice": 3.48,
+    "actualOptionSl": 0.1,
+    "actualOptionTarget": 8.6,
+    "actualOptionTarget2": 13.7
+  },
+  {
+    "id": "sweep-NSE:PGEL-2026-09-08-1788849999992",
+    "symbol": "NSE:PGEL",
+    "strategy": "Liquidity Sweep Reversal",
+    "type": "INTRADAY",
+    "direction": "LONG",
+    "entry": 555.3,
+    "sl": 554.35,
+    "target": 564.65,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 9,
+    "totalPnl": 105.10000000000014,
+    "indexDrag": "bearish",
+    "liveOptionLtp": 15.6,
+    "actualOptionEntryPrice": 15.6,
+    "actualOptionSl": 10.9,
+    "actualOptionTarget": 20.3,
+    "actualOptionTarget2": 25
+  },
+  {
+    "id": "mgap-NSE:PIDILITIND-2026-09-1788850000188",
+    "symbol": "NSE:PIDILITIND",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 1570.2,
+    "sl": 1675.5,
+    "target": 1645,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 30,
+    "totalPnl": 476.9000000000001,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 27.2,
+    "actualOptionEntryPrice": 27.2,
+    "actualOptionSl": 19,
+    "actualOptionTarget": 35.4,
+    "actualOptionTarget2": 43.5
+  },
+  {
+    "id": "sweep-NSE:SIEMENS-2026-09-08-1788850004458",
+    "symbol": "NSE:SIEMENS",
+    "strategy": "Liquidity Sweep Reversal",
+    "type": "INTRADAY",
+    "direction": "SHORT",
+    "entry": 3971,
+    "sl": 3980.9,
+    "target": 3911.1,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 6,
+    "totalPnl": 315.5,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 97,
+    "actualOptionEntryPrice": 97,
+    "actualOptionSl": 67.9,
+    "actualOptionTarget": 126.1,
+    "actualOptionTarget2": 155.2
+  },
+  {
+    "id": "mgap-NSE:SUNPHARMA-2026-09-1788850004882",
+    "symbol": "NSE:SUNPHARMA",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 1891,
+    "sl": 1956,
+    "target": 1910,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 87,
+    "totalPnl": 683.0000000000009,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 23.8,
+    "actualOptionEntryPrice": 23.8,
+    "actualOptionSl": 16.7,
+    "actualOptionTarget": 30.9,
+    "actualOptionTarget2": 38.1
+  },
+  {
+    "id": "wgap-NSE:SUZLON-2026-W37-1788850007473",
+    "symbol": "NSE:SUZLON",
+    "strategy": "Weekly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 45.38,
+    "sl": 46.38,
+    "target": 46,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 26,
+    "totalPnl": -1.9500000000000384,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 0.92,
+    "actualOptionEntryPrice": 0.92,
+    "actualOptionSl": 0.4,
+    "actualOptionTarget": 1.7,
+    "actualOptionTarget2": 2.4
+  },
+  {
+    "id": "mgap-NSE:UNOMINDA-2026-09-1788850010893",
+    "symbol": "NSE:UNOMINDA",
+    "strategy": "Monthly Gap Fade Trap",
+    "type": "SWING",
+    "direction": "SHORT",
+    "entry": 1234.9,
+    "sl": 1307.5,
+    "target": 1270,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 34,
+    "totalPnl": 831.2,
+    "indexDrag": "bullish",
+    "liveOptionLtp": 28.85,
+    "actualOptionEntryPrice": 28.85,
+    "actualOptionSl": 20.2,
+    "actualOptionTarget": 37.5,
+    "actualOptionTarget2": 46.2
+  },
+  {
+    "id": "sweep-NSE:TVSMOTOR-2026-09-08-1788850011229",
+    "symbol": "NSE:TVSMOTOR",
+    "strategy": "Liquidity Sweep Reversal",
+    "type": "INTRADAY",
+    "direction": "LONG",
+    "entry": 4102.7,
+    "sl": 4100.1,
+    "target": 4159.9,
+    "status": "ACTIVE",
+    "createdDate": "2026-09-08",
+    "timestamp": "2026-09-08T06:45:00.000Z",
+    "winCount": 11,
+    "totalPnl": 489.300000000002,
+    "indexDrag": "bearish",
+    "liveOptionLtp": 102.05,
+    "actualOptionEntryPrice": 102.05,
+    "actualOptionSl": 71.4,
+    "actualOptionTarget": 132.7,
+    "actualOptionTarget2": 163.3
   }
 ]

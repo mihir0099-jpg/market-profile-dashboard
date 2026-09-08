@@ -1,3 +1,5 @@
+import { getWsBase } from './apiConfig';
+
 export interface TVDataMessage {
   symbol: string;
   timeframe: string;
@@ -29,14 +31,7 @@ class TVWebSocketStreamer {
   private status: 'connecting' | 'connected' | 'disconnected' = 'disconnected';
 
   constructor() {
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    
-    let wsHost = window.location.host;
-    if (window.location.port === '5173' || window.location.port === '3000') {
-      wsHost = `${window.location.hostname}:3001`;
-    }
-    
-    this.url = `${protocol}//${wsHost}`;
+    this.url = getWsBase();
   }
 
   public setStatusListener(callback: OnStatusCallback) {

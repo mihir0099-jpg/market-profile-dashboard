@@ -1,4 +1,4 @@
-import { getWsBase } from './apiConfig';
+import { getWsBase, getApiBase } from './apiConfig';
 
 export interface TVDataMessage {
   symbol: string;
@@ -28,6 +28,7 @@ class TVWebSocketStreamer {
   private onStatusCallback: OnStatusCallback | null = null;
   private onViewerCountCallback: OnViewerCountCallback | null = null;
   private reconnectTimeout: number | null = null;
+  private pingInterval: number | null = null;
   private status: 'connecting' | 'connected' | 'disconnected' = 'disconnected';
 
   constructor() {
@@ -50,6 +51,30 @@ class TVWebSocketStreamer {
     }
   }
 
+  public async fetchRestSnapshot(symbol: string, timeframe: string) {
+    try {
+      const apiBase = getApiBase();
+      const res = await fetch(`${apiBase}/api/candles?symbol=${encodeURIComponent(symbol)}&tf=${timeframe}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data.candles && data.candles.length > 0 && this.onDataCallback) {
+          console.log(`[REST Snapshot] Loaded ${data.candles.length} candles for ${symbol}`);
+          this.onDataCallback({
+            symbol,
+            timeframe,
+            isSnapshot: true,
+            candles: data.candles
+          });
+          if (this.status !== 'connected') {
+            this.setStatus('connected');
+          }
+        }
+      }
+    } catch (err) {
+      console.warn('[REST Snapshot] Failed to fetch REST snapshot:', err);
+    }
+  }
+
   public connect() {
     if (this.ws && (this.ws.readyState === WebSocket.OPEN || this.ws.readyState === WebSocket.CONNECTING)) {
       return;
@@ -64,8 +89,8 @@ class TVWebSocketStreamer {
       this.ws.onopen = () => {
         console.log('WebSocket connection established');
         this.setStatus('connected');
+        this.startPing();
         
-        // Resubscribe if we had an active subscription before disconnect
         if (this.currentSubscription) {
           this.sendSubscription(this.currentSubscription.symbol, this.currentSubscription.timeframe);
         }
@@ -96,6 +121,7 @@ class TVWebSocketStreamer {
 
       this.ws.onclose = () => {
         console.log('WebSocket connection closed');
+        this.stopPing();
         this.setStatus('disconnected');
         this.ws = null;
         this.triggerReconnect();
@@ -103,6 +129,7 @@ class TVWebSocketStreamer {
 
       this.ws.onerror = (err) => {
         console.error('WebSocket connection error:', err);
+        this.stopPing();
         this.setStatus('disconnected');
         if (this.onErrorCallback) {
           this.onErrorCallback('WebSocket server connection error');
@@ -112,6 +139,22 @@ class TVWebSocketStreamer {
       console.error('Failed to create WebSocket client:', err);
       this.setStatus('disconnected');
       this.triggerReconnect();
+    }
+  }
+
+  private startPing() {
+    this.stopPing();
+    this.pingInterval = window.setInterval(() => {
+      if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+        this.ws.send(JSON.stringify({ type: 'ping' }));
+      }
+    }, 15000);
+  }
+
+  private stopPing() {
+    if (this.pingInterval) {
+      clearInterval(this.pingInterval);
+      this.pingInterval = null;
     }
   }
 
@@ -149,6 +192,8 @@ class TVWebSocketStreamer {
     this.onDataCallback = onData;
     if (onError) this.onErrorCallback = onError;
 
+    this.fetchRestSnapshot(symbol, timeframe);
+
     this.connect();
     this.sendSubscription(symbol, timeframe);
   }
@@ -157,16 +202,11 @@ class TVWebSocketStreamer {
     this.currentSubscription = null;
     this.onDataCallback = null;
     this.onErrorCallback = null;
-    
-    if (this.ws && this.ws.readyState === WebSocket.OPEN) {
-      // Sending a blank/reset subscription is handled on the backend by replacing it,
-      // or we can close the connection if we want to stop.
-      // We can also send a custom unsubscribe message if we expand the API.
-    }
   }
 
   public disconnect() {
     this.unsubscribe();
+    this.stopPing();
     if (this.ws) {
       this.ws.close();
       this.ws = null;

@@ -65,6 +65,29 @@ app.get('/api/scanner', (req, res) => {
   res.json(getScannerState());
 });
 
+// REST Candles Snapshot endpoint
+app.get('/api/candles', async (req, res) => {
+  const { symbol = 'NSE:NIFTY', tf = '30' } = req.query;
+  try {
+    const candles = await new Promise((resolve, reject) => {
+      const timeout = setTimeout(() => reject(new Error('Timeout fetching candles')), 6000);
+      tvBridge.subscribeSymbol(symbol, tf, (data) => {
+        if (data.isSnapshot) {
+          clearTimeout(timeout);
+          resolve(data.candles);
+        }
+      }, (err) => {
+        clearTimeout(timeout);
+        reject(err);
+      });
+    });
+    res.json({ symbol, timeframe: tf, isSnapshot: true, candles });
+  } catch (err) {
+    res.status(500).json({ error: err.message, candles: [] });
+  }
+});
+
+
 // Serve Daily Reports list
 app.get('/api/daily-reports', (req, res) => {
   const reportsDir = path.join(__dirname, 'daily_reports');

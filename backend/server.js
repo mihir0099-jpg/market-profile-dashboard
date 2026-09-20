@@ -12,7 +12,11 @@ import { logOptionsChainData } from './options_logger.js';
 import { getMonthlyProfileData } from './monthly_profile_analyzer.js';
 import { getFallbackExpiries, getFallbackGexData, getFallbackPcrData } from './gex_fallback_provider.js';
 import { getAiAnalytics } from './ai_engine.js';
+import { AngelOneBridge } from './angelone_bridge.js';
+import { runTabHealthAudit } from './auto_heal_engine.js';
+import { executeDailySelfEvolution } from './autonomous_market_brain.js';
 import { exec, spawn } from 'child_process';
+
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
@@ -52,11 +56,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// Serve static files from React frontend build
-app.use(express.static(path.join(__dirname, '../frontend/dist')));
-
 // Health check endpoint
 app.get('/health', (req, res) => {
+
   res.json({ status: 'OK', timestamp: new Date() });
 });
 
@@ -86,6 +88,60 @@ app.get('/api/candles', async (req, res) => {
     res.status(500).json({ error: err.message, candles: [] });
   }
 });
+
+// Angel One Bridge Instance
+const angelBridge = new AngelOneBridge();
+setTimeout(() => {
+  angelBridge.login().then(res => {
+    console.log('[Angel One Bridge] Auto-login status:', res.success ? `Connected (${res.clientCode})` : 'Pending credentials');
+  }).catch(err => {
+    console.warn('[Angel One Bridge] Login info:', err.message);
+  });
+}, 2000);
+
+
+
+// Angel One Status API
+app.get('/api/angelone/status', (req, res) => {
+  res.json({
+    connected: angelBridge.config.connected,
+    clientCode: angelBridge.config.clientCode,
+    lastLogin: angelBridge.config.lastLogin,
+    userName: angelBridge.session.userName
+  });
+});
+
+// Angel One Login Trigger
+app.post('/api/angelone/login', async (req, res) => {
+  try {
+    const result = await angelBridge.login();
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// Angel One Quote API
+app.get('/api/angelone/quote', async (req, res) => {
+  const { symbol = 'NIFTY' } = req.query;
+  try {
+    const quote = await angelBridge.getLTP(symbol);
+    res.json({ symbol, quote });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Tab Health & Auto-Healing Report API
+app.get('/api/health/tab-report', async (req, res) => {
+  try {
+    const report = await runTabHealthAudit();
+    res.json(report);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 
 // Serve Daily Reports list
@@ -826,10 +882,18 @@ app.get('/api/learning/journal', (req, res) => {
   }
 });
 
+// Serve static files from React frontend build
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
 // Fallback to React index.html for client-side routing
-app.get('*', (req, res) => {
+app.get('*', (req, res, next) => {
+
+  if (req.path.startsWith('/api/')) {
+    return res.status(404).json({ error: 'API route not found' });
+  }
   res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
+
 
 // Clean up duplicate signals from database on startup
 function cleanDuplicateSignals() {

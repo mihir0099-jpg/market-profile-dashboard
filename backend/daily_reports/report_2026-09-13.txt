@@ -1,0 +1,375 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-09-13)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 23398.10
+  - Final PCR: 1.057 (Drift: 0.000)
+  - Key Walls: Call Wall at 23700 | Put Wall at 23300
+  - Gamma Flip Zone: 23400
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 56606.55
+  - Final PCR: 0.914 (Drift: 0.000)
+  - Key Walls: Call Wall at 57000 | Put Wall at 56000
+  - Gamma Flip Zone: 56700
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+MUTHOOTFIN      | Monthly POC Reversion        | SWING  | SHORT | 3009.20  | 2880.00  | 3080.00  | TARGET_HIT    | 129.20  
+MOTHERSON       | Monthly POC Reversion        | SWING  | SHORT | 169.99   | 169.00   | 170.00   | TARGET_HIT    | 0.99    
+MOTILALOFS      | 3:15 PM BTST Close           | BTST   | BUY   | 1030.00  | 1054.72  | 1021.76  | TARGET_HIT    | 24.72   
+JUBLFOOD        | Monthly POC Reversion        | SWING  | LONG  | 491.60   | 508.00   | 490.00   | STOP_LOSS_HIT | -1.60   
+NTPC            | 3:15 PM BTST Close           | BTST   | SHORT | 332.00   | 324.03   | 334.66   | STOP_LOSS_HIT | -2.66   
+NTPC            | Weekly POC Reversion         | SWING  | SHORT | 331.35   | 331.00   | 332.00   | STOP_LOSS_HIT | -0.65   
+NBCC            | Weekly POC Reversion         | SWING  | SHORT | 85.15    | 85.00    | 86.00    | TARGET_HIT    | 0.15    
+NATIONALUM      | Monthly POC Reversion        | SWING  | LONG  | 383.05   | 388.00   | 379.00   | STOP_LOSS_HIT | -4.05   
+LODHA           | Monthly POC Reversion        | SWING  | LONG  | 1225.90  | 1230.00  | 1215.00  | STOP_LOSS_HIT | -10.90  
+LT              | Auction Magnet               | INTRADAY | SHORT | 3919.80  | 3910.00  | 3931.56  | STOP_LOSS_HIT | -11.76  
+NESTLEIND       | Monthly POC Reversion        | SWING  | SHORT | 1483.50  | 1460.00  | 1495.00  | TARGET_HIT    | 23.50   
+NMDC            | Weekly POC Reversion         | SWING  | SHORT | 84.58    | 84.00    | 85.00    | TARGET_HIT    | 0.58    
+NIFTY           | Opening Drive                | INTRADAY | SHORT | 23248.20 | 23160.90 | 23277.30 | STOP_LOSS_HIT | -29.10  
+BANKNIFTY       | Opening Drive                | INTRADAY | SHORT | 55877.55 | 55520.25 | 55996.65 | STOP_LOSS_HIT | -119.10 
+COINBASE:BTCUSD | G-Period Options Breakout    | INTRADAY | LONG  | 77240.79 | 77781.48 | 76700.10 | STOP_LOSS_HIT | 540.69  
+COINBASE:BTCUSD | Weekly POC Reversion         | SWING  | LONG  | 78723.53 | 78770.00 | 78270.00 | STOP_LOSS_HIT | 453.53  
+DELTAIN:BTCUSD.P | G-Period Options Breakout    | INTRADAY | LONG  | 77226.00 | 77766.58 | 76685.42 | STOP_LOSS_HIT | 540.58  
+DELTAIN:BTCUSD.P | Weekly POC Reversion         | SWING  | LONG  | 78705.00 | 78770.00 | 78270.00 | STOP_LOSS_HIT | 435.00  
+ABB             | Weekly POC Reversion         | SWING  | SHORT | 7421.50  | 7410.00  | 7450.00  | TARGET_HIT    | 11.50   
+NIFTY1!         | Opening Drive                | INTRADAY | SHORT | 23311.00 | 23200.30 | 23347.90 | STOP_LOSS_HIT | -36.90  
+ANGELONE        | Opening Drive                | INTRADAY | SHORT | 290.75   | 282.35   | 293.55   | STOP_LOSS_HIT | -2.80   
+ANGELONE        | 3:15 PM BTST Close           | BTST   | BUY   | 306.60   | 313.96   | 304.15   | TARGET_HIT    | 7.36    
+ANGELONE        | Weekly POC Reversion         | SWING  | LONG  | 296.55   | 299.00   | 284.00   | TARGET_HIT    | 2.45    
+ADANIENSOL      | Weekly POC Reversion         | SWING  | SHORT | 1400.20  | 1385.00  | 1405.00  | TARGET_HIT    | 15.20   
+ADANIGREEN      | Weekly POC Reversion         | SWING  | SHORT | 1290.70  | 1290.00  | 1300.00  | TARGET_HIT    | 0.70    
+ADANIPOWER      | Weekly POC Reversion         | SWING  | LONG  | 206.67   | 207.00   | 205.00   | TARGET_HIT    | 0.33    
+ASIANPAINT      | Monthly POC Reversion        | SWING  | LONG  | 2600.50  | 2620.00  | 2560.00  | STOP_LOSS_HIT | -40.50  
+APOLLOHOSP      | G-Period Options Breakout    | INTRADAY | LONG  | 8946.50  | 9009.13  | 8883.87  | STOP_LOSS_HIT | -62.63  
+AUBANK          | Opening Drive                | INTRADAY | SHORT | 1034.10  | 998.10   | 1046.10  | STOP_LOSS_HIT | -12.00  
+ASTRAL          | Weekly POC Reversion         | SWING  | SHORT | 1493.30  | 1490.00  | 1500.00  | TARGET_HIT    | 3.30    
+ASTRAL          | Monthly POC Reversion        | SWING  | SHORT | 1538.00  | 1530.00  | 1565.00  | TARGET_HIT    | 8.00    
+ASHOKLEY        | Monthly POC Reversion        | SWING  | SHORT | 176.02   | 175.00   | 177.00   | TARGET_HIT    | 1.02    
+BHARATFORG      | Monthly POC Reversion        | SWING  | SHORT | 2076.10  | 2060.00  | 2080.00  | TARGET_HIT    | 16.10   
+BRITANNIA       | Opening Drive                | INTRADAY | SHORT | 4952.50  | 4828.00  | 4994.00  | STOP_LOSS_HIT | -41.50  
+BRITANNIA       | Weekly POC Reversion         | SWING  | LONG  | 5053.00  | 5120.00  | 5050.00  | STOP_LOSS_HIT | -3.00   
+CHOLAFIN        | Weekly POC Reversion         | SWING  | LONG  | 1823.40  | 1830.00  | 1810.00  | TARGET_HIT    | 6.60    
+BSE             | 3:15 PM BTST Close           | BTST   | BUY   | 3391.00  | 3472.38  | 3363.87  | TARGET_HIT    | 81.38   
+BSE             | Weekly POC Reversion         | SWING  | LONG  | 3302.00  | 3390.00  | 3240.00  | TARGET_HIT    | 88.00   
+BLUESTARCO      | Weekly POC Reversion         | SWING  | LONG  | 1470.00  | 1490.00  | 1460.00  | TARGET_HIT    | 20.00   
+CIPLA           | Weekly POC Reversion         | SWING  | LONG  | 1379.30  | 1380.00  | 1375.00  | STOP_LOSS_HIT | -4.30   
+CONCOR          | Monthly POC Reversion        | SWING  | SHORT | 515.90   | 514.00   | 522.00   | TARGET_HIT    | 1.90    
+CROMPTON        | Opening Drive                | INTRADAY | SHORT | 227.45   | 224.45   | 228.45   | STOP_LOSS_HIT | -1.00   
+COCHINSHIP      | Monthly POC Reversion        | SWING  | SHORT | 1508.00  | 1490.00  | 1515.00  | TARGET_HIT    | 18.00   
+COLPAL          | Opening Drive                | INTRADAY | SHORT | 1788.20  | 1767.80  | 1795.00  | STOP_LOSS_HIT | -6.80   
+COALINDIA       | 3:15 PM BTST Close           | BTST   | SHORT | 425.40   | 415.19   | 428.80   | STOP_LOSS_HIT | -3.40   
+DELHIVERY       | Monthly POC Reversion        | SWING  | LONG  | 460.75   | 464.00   | 452.00   | STOP_LOSS_HIT | -8.75   
+FEDERALBNK      | Monthly POC Reversion        | SWING  | LONG  | 349.50   | 355.00   | 348.00   | STOP_LOSS_HIT | -1.50   
+DRREDDY         | G-Period Options Breakout    | INTRADAY | LONG  | 1176.40  | 1184.63  | 1168.17  | STOP_LOSS_HIT | -8.23   
+DIXON           | Weekly POC Reversion         | SWING  | LONG  | 14108.00 | 14140.00 | 14100.00 | STOP_LOSS_HIT | -8.00   
+GAIL            | Monthly POC Reversion        | SWING  | SHORT | 172.80   | 172.00   | 174.00   | STOP_LOSS_HIT | -1.20   
+FORTIS          | Weekly POC Reversion         | SWING  | LONG  | 905.70   | 910.00   | 904.00   | STOP_LOSS_HIT | -1.70   
+GODREJPROP      | Monthly POC Reversion        | SWING  | LONG  | 2005.00  | 2030.00  | 1980.00  | STOP_LOSS_HIT | -25.00  
+GODFRYPHLP      | Opening Drive                | INTRADAY | SHORT | 1944.00  | 1893.30  | 1960.90  | TARGET_HIT    | 50.70   
+GODFRYPHLP      | 3:15 PM BTST Close           | BTST   | SHORT | 1928.70  | 1882.41  | 1944.13  | TARGET_HIT    | 46.29   
+FORCEMOT        | Weekly POC Reversion         | SWING  | LONG  | 17545.00 | 17640.00 | 17520.00 | TARGET_HIT    | 95.00   
+HDFCLIFE        | Monthly POC Reversion        | SWING  | SHORT | 542.75   | 538.00   | 548.00   | TARGET_HIT    | 4.75    
+HAVELLS         | Weekly POC Reversion         | SWING  | LONG  | 1139.90  | 1140.00  | 1135.00  | STOP_LOSS_HIT | -4.90   
+HINDPETRO       | 3:15 PM BTST Close           | BTST   | BUY   | 353.75   | 362.24   | 350.92   | TARGET_HIT    | 8.49    
+HINDPETRO       | Weekly Gap Fade Trap         | SWING  | LONG  | 353.75   | 357.00   | 340.10   | TARGET_HIT    | 3.25    
+HDFCAMC         | Monthly POC Reversion        | SWING  | SHORT | 2576.20  | 2530.00  | 2600.00  | TARGET_HIT    | 46.20   
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1382.10  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -69.90  
+IDEA            | Weekly Gap Fade Trap         | SWING  | SHORT | 14.97    | 15.00    | 15.79    | TARGET_HIT    | -0.03   
+HINDZINC        | Weekly POC Reversion         | SWING  | SHORT | 594.40   | 588.00   | 596.00   | TARGET_HIT    | 6.40    
+HYUNDAI         | Monthly POC Reversion        | SWING  | SHORT | 2245.80  | 2210.00  | 2250.00  | TARGET_HIT    | 35.80   
+INFY            | Monthly POC Reversion        | SWING  | SHORT | 1131.00  | 1120.00  | 1160.00  | TARGET_HIT    | 11.00   
+INDUSINDBK      | Weekly POC Reversion         | SWING  | LONG  | 998.00   | 1000.00  | 992.00   | STOP_LOSS_HIT | -6.00   
+INDIGO          | G-Period Options Breakout    | INTRADAY | LONG  | 4907.50  | 4941.85  | 4873.15  | TARGET_HIT    | 34.35   
+JSWSTEEL        | Weekly POC Reversion         | SWING  | SHORT | 1302.00  | 1300.00  | 1310.00  | TARGET_HIT    | 2.00    
+KEI             | Weekly POC Reversion         | SWING  | SHORT | 4718.00  | 4690.00  | 5190.00  | TARGET_HIT    | 28.00   
+KEI             | Monthly POC Reversion        | SWING  | SHORT | 5560.00  | 5530.00  | 5710.00  | TARGET_HIT    | 30.00   
+JIOFIN          | Monthly POC Reversion        | SWING  | LONG  | 240.01   | 243.00   | 236.00   | STOP_LOSS_HIT | -4.01   
+KAYNES          | Weekly POC Reversion         | SWING  | SHORT | 3620.00  | 3580.00  | 3620.00  | TARGET_HIT    | 40.00   
+MAZDOCK         | Weekly POC Reversion         | SWING  | LONG  | 2450.80  | 2470.00  | 2440.00  | STOP_LOSS_HIT | -10.80  
+PAYTM           | Weekly POC Reversion         | SWING  | SHORT | 1680.60  | 1660.00  | 1690.00  | STOP_LOSS_HIT | -9.40   
+POLICYBZR       | Monthly POC Reversion        | SWING  | SHORT | 1846.60  | 1790.00  | 1855.00  | TARGET_HIT    | 56.60   
+PIIND           | Weekly POC Reversion         | SWING  | SHORT | 2395.00  | 2390.00  | 2450.00  | TARGET_HIT    | 5.00    
+PIDILITIND      | Monthly POC Reversion        | SWING  | SHORT | 1675.50  | 1645.00  | 1685.00  | TARGET_HIT    | 30.50   
+POLYCAB         | Opening Drive                | INTRADAY | SHORT | 8143.50  | 7843.50  | 8243.50  | STOP_LOSS_HIT | -100.00 
+POLYCAB         | Monthly POC Reversion        | SWING  | SHORT | 9209.00  | 9030.00  | 9240.00  | TARGET_HIT    | 179.00  
+PRESTIGE        | Weekly POC Reversion         | SWING  | LONG  | 1552.30  | 1555.00  | 1530.00  | STOP_LOSS_HIT | -22.30  
+RADICO          | Weekly POC Reversion         | SWING  | LONG  | 4462.00  | 4470.00  | 4420.00  | STOP_LOSS_HIT | -42.00  
+SBIN            | Monthly POC Reversion        | SWING  | SHORT | 1051.30  | 1045.00  | 1065.00  | TARGET_HIT    | 6.30    
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1840.90  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -115.10 
+SONACOMS        | Monthly POC Reversion        | SWING  | SHORT | 812.00   | 806.00   | 820.00   | TARGET_HIT    | 6.00    
+TATASTEEL       | Weekly POC Reversion         | SWING  | SHORT | 184.10   | 184.00   | 185.00   | TARGET_HIT    | 0.10    
+TIINDIA         | Monthly POC Reversion        | SWING  | LONG  | 2794.80  | 2860.00  | 2740.00  | STOP_LOSS_HIT | -54.80  
+TCS             | Monthly POC Reversion        | SWING  | SHORT | 2348.80  | 2280.00  | 2350.00  | TARGET_HIT    | 68.80   
+SWIGGY          | Liquidity Sweep Reversal     | INTRADAY | LONG  | 278.70   | 284.45   | 277.00   | TARGET_HIT    | 5.75    
+TATACONSUM      | Weekly POC Reversion         | SWING  | LONG  | 1010.90  | 1015.00  | 1010.00  | STOP_LOSS_HIT | -0.90   
+VBL             | Weekly Gap Fade Trap         | SWING  | LONG  | 413.95   | 405.00   | 396.55   | TARGET_HIT    | -8.95   
+ULTRACEMCO      | Monthly POC Reversion        | SWING  | LONG  | 11500.00 | 11550.00 | 11470.00 | STOP_LOSS_HIT | -30.00  
+UNIONBANK       | Monthly POC Reversion        | SWING  | LONG  | 184.90   | 186.00   | 183.00   | STOP_LOSS_HIT | -1.90   
+TORNTPHARM      | G-Period Options Breakout    | INTRADAY | LONG  | 4981.50  | 5016.37  | 4946.63  | STOP_LOSS_HIT | -34.87  
+UNOMINDA        | Weekly POC Reversion         | SWING  | SHORT | 1237.00  | 1235.00  | 1245.00  | TARGET_HIT    | 2.00    
+TMPV            | Opening Drive                | INTRADAY | SHORT | 297.40   | 290.35   | 299.75   | STOP_LOSS_HIT | -2.35   
+TMPV            | Monthly POC Reversion        | SWING  | SHORT | 317.25   | 315.00   | 336.00   | TARGET_HIT    | 2.25    
+VEDL            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 263.40   | 256.50   | 264.40   | TARGET_HIT    | 6.90    
+VEDL            | Weekly POC Reversion         | SWING  | SHORT | 269.60   | 269.00   | 271.00   | TARGET_HIT    | 0.60    
+VMM             | Auction Magnet               | INTRADAY | SHORT | 102.55   | 102.51   | 102.86   | TARGET_HIT    | 0.04    
+VMM             | 3:15 PM BTST Close           | BTST   | SHORT | 101.32   | 98.89    | 102.13   | TARGET_HIT    | 2.43    
+ZYDUSLIFE       | Monthly POC Reversion        | SWING  | SHORT | 1158.00  | 1115.00  | 1165.00  | TARGET_HIT    | 43.00   
+
+Statistics:
+* Total Signals Triggered/Resolved: 101
+* Target Hits: 55
+* Stop Loss Hits: 46
+* Win Rate: 54.5%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] JUBLFOOD -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 491.60 | Stop Loss: 490.00 | Exit: 490.00 | Loss: -1.60
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[2] NTPC -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 332.00 | Stop Loss: 334.66 | Exit: 334.66 | Loss: -2.66
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[3] NTPC -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 331.35 | Stop Loss: 332.00 | Exit: 332.00 | Loss: -0.65
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[4] NATIONALUM -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 383.05 | Stop Loss: 379.00 | Exit: 379.00 | Loss: -4.05
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[5] LODHA -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 1225.90 | Stop Loss: 1215.00 | Exit: 1215.00 | Loss: -10.90
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[6] LT -- Auction Magnet (SHORT)
+* Trigger Details: Entry: 3919.80 | Stop Loss: 3931.56 | Exit: 3931.56 | Loss: -11.76
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[7] NIFTY -- Opening Drive (SHORT)
+* Trigger Details: Entry: 23248.20 | Stop Loss: 23277.30 | Exit: 23277.30 | Loss: -29.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[8] BANKNIFTY -- Opening Drive (SHORT)
+* Trigger Details: Entry: 55877.55 | Stop Loss: 55996.65 | Exit: 55996.65 | Loss: -119.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[9] COINBASE:BTCUSD -- G-Period Options Breakout (LONG)
+* Trigger Details: Entry: 77240.79 | Stop Loss: 76700.10 | Exit: 76700.10 | Loss: 540.69
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[10] COINBASE:BTCUSD -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 78723.53 | Stop Loss: 78270.00 | Exit: 78270.00 | Loss: 453.53
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[11] DELTAIN:BTCUSD.P -- G-Period Options Breakout (LONG)
+* Trigger Details: Entry: 77226.00 | Stop Loss: 76685.42 | Exit: 76685.42 | Loss: 540.58
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[12] DELTAIN:BTCUSD.P -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 78705.00 | Stop Loss: 78270.00 | Exit: 78270.00 | Loss: 435.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[13] NIFTY1! -- Opening Drive (SHORT)
+* Trigger Details: Entry: 23311.00 | Stop Loss: 23347.90 | Exit: 23347.90 | Loss: -36.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[14] ANGELONE -- Opening Drive (SHORT)
+* Trigger Details: Entry: 290.75 | Stop Loss: 293.55 | Exit: 293.55 | Loss: -2.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[15] ASIANPAINT -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 2600.50 | Stop Loss: 2560.00 | Exit: 2560.00 | Loss: -40.50
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[16] APOLLOHOSP -- G-Period Options Breakout (LONG)
+* Trigger Details: Entry: 8946.50 | Stop Loss: 8883.87 | Exit: 8883.87 | Loss: -62.63
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[17] AUBANK -- Opening Drive (SHORT)
+* Trigger Details: Entry: 1034.10 | Stop Loss: 1046.10 | Exit: 1046.10 | Loss: -12.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[18] BRITANNIA -- Opening Drive (SHORT)
+* Trigger Details: Entry: 4952.50 | Stop Loss: 4994.00 | Exit: 4994.00 | Loss: -41.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[19] BRITANNIA -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 5053.00 | Stop Loss: 5050.00 | Exit: 5050.00 | Loss: -3.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[20] CIPLA -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 1379.30 | Stop Loss: 1375.00 | Exit: 1375.00 | Loss: -4.30
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[21] CROMPTON -- Opening Drive (SHORT)
+* Trigger Details: Entry: 227.45 | Stop Loss: 228.45 | Exit: 228.45 | Loss: -1.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[22] COLPAL -- Opening Drive (SHORT)
+* Trigger Details: Entry: 1788.20 | Stop Loss: 1795.00 | Exit: 1795.00 | Loss: -6.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[23] COALINDIA -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 425.40 | Stop Loss: 428.80 | Exit: 428.80 | Loss: -3.40
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[24] DELHIVERY -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 460.75 | Stop Loss: 452.00 | Exit: 452.00 | Loss: -8.75
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[25] FEDERALBNK -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 349.50 | Stop Loss: 348.00 | Exit: 348.00 | Loss: -1.50
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[26] DRREDDY -- G-Period Options Breakout (LONG)
+* Trigger Details: Entry: 1176.40 | Stop Loss: 1168.17 | Exit: 1168.17 | Loss: -8.23
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[27] DIXON -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 14108.00 | Stop Loss: 14100.00 | Exit: 14100.00 | Loss: -8.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[28] GAIL -- Monthly POC Reversion (SHORT)
+* Trigger Details: Entry: 172.80 | Stop Loss: 174.00 | Exit: 174.00 | Loss: -1.20
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[29] FORTIS -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 905.70 | Stop Loss: 904.00 | Exit: 904.00 | Loss: -1.70
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[30] GODREJPROP -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 2005.00 | Stop Loss: 1980.00 | Exit: 1980.00 | Loss: -25.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[31] HAVELLS -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 1139.90 | Stop Loss: 1135.00 | Exit: 1135.00 | Loss: -4.90
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[32] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1382.10 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -69.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[33] INDUSINDBK -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 998.00 | Stop Loss: 992.00 | Exit: 992.00 | Loss: -6.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[34] JIOFIN -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 240.01 | Stop Loss: 236.00 | Exit: 236.00 | Loss: -4.01
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[35] MAZDOCK -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 2450.80 | Stop Loss: 2440.00 | Exit: 2440.00 | Loss: -10.80
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[36] PAYTM -- Weekly POC Reversion (SHORT)
+* Trigger Details: Entry: 1680.60 | Stop Loss: 1690.00 | Exit: 1690.00 | Loss: -9.40
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[37] POLYCAB -- Opening Drive (SHORT)
+* Trigger Details: Entry: 8143.50 | Stop Loss: 8243.50 | Exit: 8243.50 | Loss: -100.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[38] PRESTIGE -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 1552.30 | Stop Loss: 1530.00 | Exit: 1530.00 | Loss: -22.30
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[39] RADICO -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 4462.00 | Stop Loss: 4420.00 | Exit: 4420.00 | Loss: -42.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[40] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1840.90 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -115.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[41] TIINDIA -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 2794.80 | Stop Loss: 2740.00 | Exit: 2740.00 | Loss: -54.80
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[42] TATACONSUM -- Weekly POC Reversion (LONG)
+* Trigger Details: Entry: 1010.90 | Stop Loss: 1010.00 | Exit: 1010.00 | Loss: -0.90
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[43] ULTRACEMCO -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 11500.00 | Stop Loss: 11470.00 | Exit: 11470.00 | Loss: -30.00
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[44] UNIONBANK -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 184.90 | Stop Loss: 183.00 | Exit: 183.00 | Loss: -1.90
+* Mistake Diagnosis: Outside-Value Open Reversion Trap. Weekly/Monthly POC Reversion was triggered, but the contract opened outside the previous cycle's Value Area (equilibrium range).
+* Auto-Learned Parameter / Constraint Adjustment: POC Reversion Constraint: Weekly/Monthly POC reversions are ONLY valid if the contract opens strictly INSIDE the previous cycle's value area.
+
+[45] TORNTPHARM -- G-Period Options Breakout (LONG)
+* Trigger Details: Entry: 4981.50 | Stop Loss: 4946.63 | Exit: 4946.63 | Loss: -34.87
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[46] TMPV -- Opening Drive (SHORT)
+* Trigger Details: Entry: 297.40 | Stop Loss: 299.75 | Exit: 299.75 | Loss: -2.35
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

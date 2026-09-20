@@ -1,0 +1,586 @@
+[
+  {
+    "timestamp": 1789889759999,
+    "istTime": "20/9/2026, 1:05:59 pm",
+    "component": "📅 Monthly Profile Engine",
+    "error": "Zero data / empty payload returned",
+    "remedyAction": "Recalculated monthly profile TPOs and VAH/VAL boundaries",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889690970,
+    "istTime": "20/9/2026, 1:04:50 pm",
+    "component": "🔥 Volume Breakouts",
+    "error": "HTTP 404",
+    "remedyAction": "Re-initialized volume breakout cache",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889690347,
+    "istTime": "20/9/2026, 1:04:50 pm",
+    "component": "🕯️ First Doji Scanner",
+    "error": "HTTP 404",
+    "remedyAction": "Checked Doji scan cache",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889689728,
+    "istTime": "20/9/2026, 1:04:49 pm",
+    "component": "🔥 Weekly Option Selling Engine",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated weekly 2-day Initial Balance strangle boundaries",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889689106,
+    "istTime": "20/9/2026, 1:04:49 pm",
+    "component": "⛓️ Options Chain",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed live option chain strikes and Greeks",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889688497,
+    "istTime": "20/9/2026, 1:04:48 pm",
+    "component": "🎯 Confluences",
+    "error": "HTTP 404",
+    "remedyAction": "Re-synced 5-engine confluence analyzer",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889687881,
+    "istTime": "20/9/2026, 1:04:47 pm",
+    "component": "📊 Matrix Scanner (5m)",
+    "error": "HTTP 404",
+    "remedyAction": "Restored 5-minute intraday scanner levels",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889687274,
+    "istTime": "20/9/2026, 1:04:47 pm",
+    "component": "📊 Matrix Scanner (Daily)",
+    "error": "HTTP 404",
+    "remedyAction": "Triggered asynchronous Matrix Scanner recalculation",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889686654,
+    "istTime": "20/9/2026, 1:04:46 pm",
+    "component": "🧠 Dada Thoughts",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed weekly 200 EMA structural scan",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889686031,
+    "istTime": "20/9/2026, 1:04:46 pm",
+    "component": "🤝 Bhaichara Work",
+    "error": "HTTP 404",
+    "remedyAction": "Re-armed confluence alert listener",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889685425,
+    "istTime": "20/9/2026, 1:04:45 pm",
+    "component": "📊 QuantStats Report",
+    "error": "HTTP 404",
+    "remedyAction": "Regenerated institutional tear sheet metrics",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889684808,
+    "istTime": "20/9/2026, 1:04:44 pm",
+    "component": "🔬 Error Cohorts",
+    "error": "HTTP 404",
+    "remedyAction": "Rebuilt surrogate decision error tree",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889684198,
+    "istTime": "20/9/2026, 1:04:44 pm",
+    "component": "🔬 Auto-Learner & Mistake Miner",
+    "error": "HTTP 404",
+    "remedyAction": "Re-synchronized River Online Machine Learning model state",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889683577,
+    "istTime": "20/9/2026, 1:04:43 pm",
+    "component": "🌀 Cycle (Sq of 9)",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated Gann Square of 9 degree vibration levels",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889682952,
+    "istTime": "20/9/2026, 1:04:42 pm",
+    "component": "📐 Day Range",
+    "error": "HTTP 404",
+    "remedyAction": "Re-anchored Day Range expected volatility bands",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889682335,
+    "istTime": "20/9/2026, 1:04:42 pm",
+    "component": "⚡ PCR Velocity",
+    "error": "HTTP 404",
+    "remedyAction": "Recomputed PCR velocity drift from current index prices",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889681729,
+    "istTime": "20/9/2026, 1:04:41 pm",
+    "component": "🚀 Stocks Moving",
+    "error": "HTTP 404",
+    "remedyAction": "Triggered background scan for Stocks Moving universe",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889681110,
+    "istTime": "20/9/2026, 1:04:41 pm",
+    "component": "🐋 Stocks Tracker",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated institutional block deal allocations",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889680487,
+    "istTime": "20/9/2026, 1:04:40 pm",
+    "component": "⚡ Microstructure Stocks",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed top F&O microstructure stock setups",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889679872,
+    "istTime": "20/9/2026, 1:04:39 pm",
+    "component": "⚡ Gamma & Order Flow",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated gamma orderflow & dealer exposure walls",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889679253,
+    "istTime": "20/9/2026, 1:04:39 pm",
+    "component": "🧠 Data Learning",
+    "error": "HTTP 404",
+    "remedyAction": "Re-synced live signals market state",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889678634,
+    "istTime": "20/9/2026, 1:04:38 pm",
+    "component": "🔬 Deep Learnings",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed deep discoveries knowledge matrix",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889678019,
+    "istTime": "20/9/2026, 1:04:38 pm",
+    "component": "🏛️ Historical Matching",
+    "error": "HTTP 404",
+    "remedyAction": "Verified historical matching static cases archive",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889661437,
+    "istTime": "20/9/2026, 1:04:21 pm",
+    "component": "🔮 AI Pattern Forecaster",
+    "error": "HTTP 404",
+    "remedyAction": "Pre-populated neural ghost candlestick projection cache",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889660797,
+    "istTime": "20/9/2026, 1:04:20 pm",
+    "component": "⚡ Early Picks",
+    "error": "HTTP 404",
+    "remedyAction": "Rebuilt institutional early picks ranking",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889660131,
+    "istTime": "20/9/2026, 1:04:20 pm",
+    "component": "⚡ Opening Bias",
+    "error": "HTTP 404",
+    "remedyAction": "Recomputed opening auction drive classifications",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889659516,
+    "istTime": "20/9/2026, 1:04:19 pm",
+    "component": "🔥 Volume Breakouts",
+    "error": "HTTP 404",
+    "remedyAction": "Re-initialized volume breakout cache",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889658895,
+    "istTime": "20/9/2026, 1:04:18 pm",
+    "component": "🕯️ First Doji Scanner",
+    "error": "HTTP 404",
+    "remedyAction": "Checked Doji scan cache",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889658278,
+    "istTime": "20/9/2026, 1:04:18 pm",
+    "component": "🔥 Weekly Option Selling Engine",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated weekly 2-day Initial Balance strangle boundaries",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889657665,
+    "istTime": "20/9/2026, 1:04:17 pm",
+    "component": "⛓️ Options Chain",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed live option chain strikes and Greeks",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889657048,
+    "istTime": "20/9/2026, 1:04:17 pm",
+    "component": "🎯 Confluences",
+    "error": "HTTP 404",
+    "remedyAction": "Re-synced 5-engine confluence analyzer",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889656422,
+    "istTime": "20/9/2026, 1:04:16 pm",
+    "component": "📊 Matrix Scanner (5m)",
+    "error": "HTTP 404",
+    "remedyAction": "Restored 5-minute intraday scanner levels",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889655814,
+    "istTime": "20/9/2026, 1:04:15 pm",
+    "component": "📊 Matrix Scanner (Daily)",
+    "error": "HTTP 404",
+    "remedyAction": "Triggered asynchronous Matrix Scanner recalculation",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889655192,
+    "istTime": "20/9/2026, 1:04:15 pm",
+    "component": "🧠 Dada Thoughts",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed weekly 200 EMA structural scan",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889654573,
+    "istTime": "20/9/2026, 1:04:14 pm",
+    "component": "🤝 Bhaichara Work",
+    "error": "HTTP 404",
+    "remedyAction": "Re-armed confluence alert listener",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889653957,
+    "istTime": "20/9/2026, 1:04:13 pm",
+    "component": "📊 QuantStats Report",
+    "error": "HTTP 404",
+    "remedyAction": "Regenerated institutional tear sheet metrics",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889653336,
+    "istTime": "20/9/2026, 1:04:13 pm",
+    "component": "🔬 Error Cohorts",
+    "error": "HTTP 404",
+    "remedyAction": "Rebuilt surrogate decision error tree",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889652718,
+    "istTime": "20/9/2026, 1:04:12 pm",
+    "component": "🔬 Auto-Learner & Mistake Miner",
+    "error": "HTTP 404",
+    "remedyAction": "Re-synchronized River Online Machine Learning model state",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889652109,
+    "istTime": "20/9/2026, 1:04:12 pm",
+    "component": "🌀 Cycle (Sq of 9)",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated Gann Square of 9 degree vibration levels",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889651491,
+    "istTime": "20/9/2026, 1:04:11 pm",
+    "component": "📐 Day Range",
+    "error": "HTTP 404",
+    "remedyAction": "Re-anchored Day Range expected volatility bands",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889650873,
+    "istTime": "20/9/2026, 1:04:10 pm",
+    "component": "⚡ PCR Velocity",
+    "error": "HTTP 404",
+    "remedyAction": "Recomputed PCR velocity drift from current index prices",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889650250,
+    "istTime": "20/9/2026, 1:04:10 pm",
+    "component": "🚀 Stocks Moving",
+    "error": "HTTP 404",
+    "remedyAction": "Triggered background scan for Stocks Moving universe",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889649629,
+    "istTime": "20/9/2026, 1:04:09 pm",
+    "component": "🐋 Stocks Tracker",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated institutional block deal allocations",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889649006,
+    "istTime": "20/9/2026, 1:04:09 pm",
+    "component": "⚡ Microstructure Stocks",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed top F&O microstructure stock setups",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889648391,
+    "istTime": "20/9/2026, 1:04:08 pm",
+    "component": "⚡ Gamma & Order Flow",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated gamma orderflow & dealer exposure walls",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889647770,
+    "istTime": "20/9/2026, 1:04:07 pm",
+    "component": "🧠 Data Learning",
+    "error": "HTTP 404",
+    "remedyAction": "Re-synced live signals market state",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889647148,
+    "istTime": "20/9/2026, 1:04:07 pm",
+    "component": "🔬 Deep Learnings",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed deep discoveries knowledge matrix",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889646530,
+    "istTime": "20/9/2026, 1:04:06 pm",
+    "component": "🏛️ Historical Matching",
+    "error": "HTTP 404",
+    "remedyAction": "Verified historical matching static cases archive",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889631574,
+    "istTime": "20/9/2026, 1:03:51 pm",
+    "component": "🔮 AI Pattern Forecaster",
+    "error": "HTTP 404",
+    "remedyAction": "Pre-populated neural ghost candlestick projection cache",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889630948,
+    "istTime": "20/9/2026, 1:03:50 pm",
+    "component": "⚡ Early Picks",
+    "error": "HTTP 404",
+    "remedyAction": "Rebuilt institutional early picks ranking",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889630341,
+    "istTime": "20/9/2026, 1:03:50 pm",
+    "component": "⚡ Opening Bias",
+    "error": "HTTP 404",
+    "remedyAction": "Recomputed opening auction drive classifications",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889629704,
+    "istTime": "20/9/2026, 1:03:49 pm",
+    "component": "🔥 Volume Breakouts",
+    "error": "HTTP 404",
+    "remedyAction": "Re-initialized volume breakout cache",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889629083,
+    "istTime": "20/9/2026, 1:03:49 pm",
+    "component": "🕯️ First Doji Scanner",
+    "error": "HTTP 404",
+    "remedyAction": "Checked Doji scan cache",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889628462,
+    "istTime": "20/9/2026, 1:03:48 pm",
+    "component": "🔥 Weekly Option Selling Engine",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated weekly 2-day Initial Balance strangle boundaries",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889627839,
+    "istTime": "20/9/2026, 1:03:47 pm",
+    "component": "⛓️ Options Chain",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed live option chain strikes and Greeks",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889627230,
+    "istTime": "20/9/2026, 1:03:47 pm",
+    "component": "🎯 Confluences",
+    "error": "HTTP 404",
+    "remedyAction": "Re-synced 5-engine confluence analyzer",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889626606,
+    "istTime": "20/9/2026, 1:03:46 pm",
+    "component": "📊 Matrix Scanner (5m)",
+    "error": "HTTP 404",
+    "remedyAction": "Restored 5-minute intraday scanner levels",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889625984,
+    "istTime": "20/9/2026, 1:03:45 pm",
+    "component": "📊 Matrix Scanner (Daily)",
+    "error": "HTTP 404",
+    "remedyAction": "Triggered asynchronous Matrix Scanner recalculation",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889625368,
+    "istTime": "20/9/2026, 1:03:45 pm",
+    "component": "🧠 Dada Thoughts",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed weekly 200 EMA structural scan",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889624746,
+    "istTime": "20/9/2026, 1:03:44 pm",
+    "component": "🤝 Bhaichara Work",
+    "error": "HTTP 404",
+    "remedyAction": "Re-armed confluence alert listener",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889624122,
+    "istTime": "20/9/2026, 1:03:44 pm",
+    "component": "📊 QuantStats Report",
+    "error": "HTTP 404",
+    "remedyAction": "Regenerated institutional tear sheet metrics",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889623488,
+    "istTime": "20/9/2026, 1:03:43 pm",
+    "component": "🔬 Error Cohorts",
+    "error": "HTTP 404",
+    "remedyAction": "Rebuilt surrogate decision error tree",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889622865,
+    "istTime": "20/9/2026, 1:03:42 pm",
+    "component": "🔬 Auto-Learner & Mistake Miner",
+    "error": "HTTP 404",
+    "remedyAction": "Re-synchronized River Online Machine Learning model state",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889621334,
+    "istTime": "20/9/2026, 1:03:41 pm",
+    "component": "🌀 Cycle (Sq of 9)",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated Gann Square of 9 degree vibration levels",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889620090,
+    "istTime": "20/9/2026, 1:03:40 pm",
+    "component": "📐 Day Range",
+    "error": "HTTP 404",
+    "remedyAction": "Re-anchored Day Range expected volatility bands",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889618833,
+    "istTime": "20/9/2026, 1:03:38 pm",
+    "component": "⚡ PCR Velocity",
+    "error": "HTTP 404",
+    "remedyAction": "Recomputed PCR velocity drift from current index prices",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889617923,
+    "istTime": "20/9/2026, 1:03:37 pm",
+    "component": "🚀 Stocks Moving",
+    "error": "HTTP 404",
+    "remedyAction": "Triggered background scan for Stocks Moving universe",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889616520,
+    "istTime": "20/9/2026, 1:03:36 pm",
+    "component": "🐋 Stocks Tracker",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated institutional block deal allocations",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889614885,
+    "istTime": "20/9/2026, 1:03:34 pm",
+    "component": "⚡ Microstructure Stocks",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed top F&O microstructure stock setups",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889613474,
+    "istTime": "20/9/2026, 1:03:33 pm",
+    "component": "⚡ Gamma & Order Flow",
+    "error": "HTTP 404",
+    "remedyAction": "Recalculated gamma orderflow & dealer exposure walls",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889611720,
+    "istTime": "20/9/2026, 1:03:31 pm",
+    "component": "🧠 Data Learning",
+    "error": "HTTP 404",
+    "remedyAction": "Re-synced live signals market state",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889609988,
+    "istTime": "20/9/2026, 1:03:29 pm",
+    "component": "🔬 Deep Learnings",
+    "error": "HTTP 404",
+    "remedyAction": "Refreshed deep discoveries knowledge matrix",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789889608591,
+    "istTime": "20/9/2026, 1:03:28 pm",
+    "component": "🏛️ Historical Matching",
+    "error": "HTTP 404",
+    "remedyAction": "Verified historical matching static cases archive",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  }
+]

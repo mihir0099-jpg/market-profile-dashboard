@@ -1,4 +1,4 @@
-import { getWsBase, getApiBase } from './apiConfig';
+import { getWsBase, getApiBase, apiFetch } from './apiConfig';
 
 export interface TVDataMessage {
   symbol: string;
@@ -54,9 +54,10 @@ class TVWebSocketStreamer {
   public async fetchRestSnapshot(symbol: string, timeframe: string) {
     try {
       const apiBase = getApiBase();
-      const res = await fetch(`${apiBase}/api/candles?symbol=${encodeURIComponent(symbol)}&tf=${timeframe}`);
+      const res = await apiFetch(`${apiBase}/api/candles?symbol=${encodeURIComponent(symbol)}&tf=${timeframe}`);
       if (res.ok) {
         const data = await res.json();
+
         if (data.candles && data.candles.length > 0 && this.onDataCallback) {
           console.log(`[REST Snapshot] Loaded ${data.candles.length} candles for ${symbol}`);
           this.onDataCallback({

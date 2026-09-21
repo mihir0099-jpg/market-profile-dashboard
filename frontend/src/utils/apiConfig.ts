@@ -47,3 +47,9 @@ export const getWsBase = (): string => {
   return `${protocol}//${window.location.host}`;
 };
 
+export const apiFetch = (url: string, options: RequestInit = {}) => {
+  const headers = new Headers(options.headers || {});
+  headers.set('bypass-tunnel-reminder', 'true');
+  headers.set('Bypass-Tunnel-Remainder', 'true');
+  return fetch(url, { ...options, headers });
+};

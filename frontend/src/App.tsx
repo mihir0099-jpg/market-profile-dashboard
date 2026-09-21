@@ -16,7 +16,7 @@ import { OptionsTab } from './components/OptionsTab';
 import { DailyReports } from './components/DailyReports';
 import { MonthlyProfileTab } from './components/MonthlyProfileTab';
 import { AiAnalyticsTab } from './components/AiAnalyticsTab';
-import { getApiBase } from './utils/apiConfig';
+import { getApiBase, apiFetch } from './utils/apiConfig';
 
 // Dynamically resolve backend API base based on origin
 const API_BASE = getApiBase();
@@ -52,7 +52,7 @@ function App() {
   useEffect(() => {
     const fetchTicks = async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/scanner/ticks`);
+        const res = await apiFetch(`${API_BASE}/api/scanner/ticks`);
         if (res.ok) {
           const ticksMap = await res.json();
           setOptimalTicks(ticksMap);
@@ -63,6 +63,7 @@ function App() {
     };
     fetchTicks();
   }, []);
+
 
   // Subscribe to real-time viewer count updates
   useEffect(() => {

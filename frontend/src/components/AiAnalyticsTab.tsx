@@ -26,6 +26,14 @@ interface TftWeight {
   impact: string;
 }
 
+interface LiveLearnedRule {
+  ruleId: string;
+  category: string;
+  observation: string;
+  actionableRule: string;
+  confidencePct: number;
+}
+
 interface AiAnalyticsData {
   symbol: string;
   cleanSymbol: string;
@@ -33,6 +41,17 @@ interface AiAnalyticsData {
   executionLatencyMs: number;
   indexedProfilesCount: number;
   matchedAnalogueDays: AnalogueDay[];
+  liveLearnedRules?: LiveLearnedRule[];
+  liveProfile?: {
+    date: string;
+    periodsTracked: number;
+    spot: number;
+    ibHigh: number;
+    ibLow: number;
+    ibRange: number;
+    periodCStatus: string;
+    periodGStatus: string;
+  };
   timesFmProjections: {
     fib1618: TimesFmProjection;
     fib2618: TimesFmProjection;
@@ -170,6 +189,60 @@ export const AiAnalyticsTab: React.FC<AiAnalyticsTabProps> = ({ currentSymbol, o
               </div>
             </div>
           </div>
+
+          {/* Live Unfolding Session & Auto-Learned Rules */}
+          {data.liveProfile && (
+            <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '14px', borderLeft: '4px solid #38bdf8' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-color)', paddingBottom: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <Activity size={18} color="#38bdf8" />
+                  <h3 style={{ margin: 0, fontSize: '15px', fontWeight: '700', color: 'white' }}>
+                    Live Market Profile Session State ({data.liveProfile.date})
+                  </h3>
+                </div>
+                <span style={{ fontSize: '11px', color: '#10b981', background: 'rgba(16,185,129,0.12)', padding: '3px 10px', borderRadius: '6px', fontWeight: '700' }}>
+                  {data.liveProfile.periodsTracked} TPO Periods Unfolded
+                </span>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', fontSize: '12px' }}>
+                <div style={{ background: 'rgba(255,255,255,0.02)', padding: '10px 14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ color: 'var(--text-secondary)' }}>Live Spot / LTP</div>
+                  <div style={{ fontSize: '16px', fontWeight: '800', color: 'white', marginTop: '2px' }}>{data.liveProfile.spot?.toFixed(1)}</div>
+                </div>
+                <div style={{ background: 'rgba(255,255,255,0.02)', padding: '10px 14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ color: 'var(--text-secondary)' }}>Initial Balance (IB)</div>
+                  <div style={{ fontSize: '14px', fontWeight: '700', color: '#a78bfa', marginTop: '2px' }}>{data.liveProfile.ibLow} – {data.liveProfile.ibHigh} ({data.liveProfile.ibRange} pts)</div>
+                </div>
+                <div style={{ background: 'rgba(255,255,255,0.02)', padding: '10px 14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ color: 'var(--text-secondary)' }}>Period C State</div>
+                  <div style={{ fontSize: '13px', fontWeight: '700', color: data.liveProfile.periodCStatus.includes('BREAK') ? '#10b981' : '#f59e0b', marginTop: '2px' }}>{data.liveProfile.periodCStatus}</div>
+                </div>
+                <div style={{ background: 'rgba(255,255,255,0.02)', padding: '10px 14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ color: 'var(--text-secondary)' }}>Period G Status</div>
+                  <div style={{ fontSize: '13px', fontWeight: '700', color: '#38bdf8', marginTop: '2px' }}>{data.liveProfile.periodGStatus}</div>
+                </div>
+              </div>
+
+              {/* Real-time Codified Rules */}
+              {data.liveLearnedRules && data.liveLearnedRules.length > 0 && (
+                <div style={{ marginTop: '6px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <div style={{ fontSize: '12px', fontWeight: '700', color: '#f59e0b', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                    ⚡ Real-Time Rules Codified from Today's Live Auction
+                  </div>
+                  {data.liveLearnedRules.map((rule, idx) => (
+                    <div key={idx} style={{ background: 'rgba(245, 158, 11, 0.05)', border: '1px solid rgba(245, 158, 11, 0.25)', borderRadius: '8px', padding: '10px 14px' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+                        <span style={{ fontSize: '12px', fontWeight: '800', color: '#f59e0b' }}>{rule.category}</span>
+                        <span style={{ fontSize: '11px', fontWeight: '700', color: '#10b981', background: 'rgba(16,185,129,0.1)', padding: '2px 6px', borderRadius: '4px' }}>{rule.confidencePct}% Confidence</span>
+                      </div>
+                      <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.85)', lineHeight: '1.4' }}>{rule.actionableRule}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
 
           {/* TS2Vec Top 5 Historical Twin Sessions */}
           <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>

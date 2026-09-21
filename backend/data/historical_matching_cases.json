@@ -1,0 +1,2038 @@
+{
+  "generatedAt": "2026-09-11T07:02:00.744Z",
+  "todaySession": {
+    "date": "11/09/2026",
+    "dayOfWeek": "Friday",
+    "currentVix": 12.31,
+    "vixRegime": "Ultra-Low VIX (12.31)",
+    "spot": 23336.1,
+    "dayLow": 23232.25,
+    "ibHigh": 23299.35,
+    "ibLow": 23232.25,
+    "periodCBreakHigh": 23310.1,
+    "periodGStatus": "Trading above IB High (+36 pts)",
+    "setupMatchScore": "98.5% Match (Low-VIX Friday Breakout)"
+  },
+  "statistics": {
+    "totalMatchingCases": 49,
+    "fridayMatchingCases": 36,
+    "afternoonWinRatePct": 79.6,
+    "avgAfternoonExtensionPts": 95.8,
+    "nextDayGapUpProbabilityPct": 69.4,
+    "avgNextDayGapPts": 41.8,
+    "mondayGapUpProbabilityPct": 66.7,
+    "avgMondayGapPts": 40.3,
+    "nextDayContinuationPct": 65.3
+  },
+  "cases": [
+    {
+      "caseNumber": 1,
+      "caseTitle": "Case 1: Wednesday, 2/9/2026 (India VIX: 11.59)",
+      "date": "2/9/2026",
+      "dayOfWeek": "Wednesday",
+      "vix": 11.59,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 23858,
+        "high": 23910.65,
+        "low": 23786.8,
+        "close": 23883.5,
+        "ibHigh": 23882.95,
+        "ibLow": 23786.8,
+        "ibRange": 96.2
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 23786.8. Period B built strong positive skew support, and Period C broke above Initial Balance High (23883.0) reaching 23896.0.",
+        "periodCBreakHigh": 23896.05,
+        "periodCClose": 23860.65,
+        "ibRange": 96.2
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 23861.0 (Tested IB Boundary). Market produced an afternoon continuation extension of +14.6 points, closing at 23883.5 (top 33% of daily range).",
+        "periodGClose": 23860.95,
+        "heldAboveIB": false,
+        "afternoonExtensionPts": 14.6,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (3/9/2026)",
+        "description": "Next Day gapped UP by +114.5 points. Session closed -10 points LOWER (Retest).",
+        "nextDayDate": "3/9/2026",
+        "gapPoints": 114.5,
+        "intradayMovePoints": -10,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 2,
+      "caseTitle": "Case 2: Monday, 3/8/2026 (India VIX: 11.93)",
+      "date": "3/8/2026",
+      "dayOfWeek": "Monday",
+      "vix": 11.93,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 24572.7,
+        "high": 24609.5,
+        "low": 24515.15,
+        "close": 24573.55,
+        "ibHigh": 24582.25,
+        "ibLow": 24515.15,
+        "ibRange": 67.1
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24515.2. Period B built strong positive skew support, and Period C broke above Initial Balance High (24582.3) reaching 24592.5.",
+        "periodCBreakHigh": 24592.45,
+        "periodCClose": 24583.65,
+        "ibRange": 67.1
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24593.0 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +17 points, closing at 24573.5 (upper range equilibrium).",
+        "periodGClose": 24593,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 17,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (4/8/2026)",
+        "description": "Next Day gapped UP by +130.4 points. Session closed +41.4 points HIGHER (Continuation Win).",
+        "nextDayDate": "4/8/2026",
+        "gapPoints": 130.4,
+        "intradayMovePoints": 41.4,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 3,
+      "caseTitle": "Case 3: Wednesday, 29/7/2026 (India VIX: 12.01)",
+      "date": "29/7/2026",
+      "dayOfWeek": "Wednesday",
+      "vix": 12.01,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 24176.65,
+        "high": 24283.55,
+        "low": 24136.75,
+        "close": 24242,
+        "ibHigh": 24224.25,
+        "ibLow": 24136.75,
+        "ibRange": 87.5
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24136.8. Period B built strong positive skew support, and Period C broke above Initial Balance High (24224.3) reaching 24238.5.",
+        "periodCBreakHigh": 24238.45,
+        "periodCClose": 24233.8,
+        "ibRange": 87.5
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24220.8 (Tested IB Boundary). Market produced an afternoon continuation extension of +45.1 points, closing at 24242.0 (top 33% of daily range).",
+        "periodGClose": 24220.8,
+        "heldAboveIB": false,
+        "afternoonExtensionPts": 45.1,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (30/7/2026)",
+        "description": "Next Day gapped UP by +7.5 points. Session closed +75.2 points HIGHER (Continuation Win).",
+        "nextDayDate": "30/7/2026",
+        "gapPoints": 7.5,
+        "intradayMovePoints": 75.2,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 4,
+      "caseTitle": "Case 4: Friday, 17/7/2026 (India VIX: 13.15)",
+      "date": "17/7/2026",
+      "dayOfWeek": "Friday",
+      "vix": 13.15,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 24127.6,
+        "high": 24367.3,
+        "low": 24099.05,
+        "close": 24343.65,
+        "ibHigh": 24249.2,
+        "ibLow": 24099.05,
+        "ibRange": 150.2
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24099.0. Period B built strong positive skew support, and Period C broke above Initial Balance High (24249.2) reaching 24288.9.",
+        "periodCBreakHigh": 24288.9,
+        "periodCClose": 24259.3,
+        "ibRange": 150.2
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24277.0 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +78.4 points, closing at 24343.7 (top 33% of daily range).",
+        "periodGClose": 24277.05,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 78.4,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (20/7/2026)",
+        "description": "Monday gapped DOWN by -153.6 points. Session closed -105.2 points LOWER (Retest).",
+        "nextDayDate": "20/7/2026",
+        "gapPoints": -153.6,
+        "intradayMovePoints": -105.2,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 5,
+      "caseTitle": "Case 5: Monday, 13/7/2026 (India VIX: 13.28)",
+      "date": "13/7/2026",
+      "dayOfWeek": "Monday",
+      "vix": 13.28,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 24039.4,
+        "high": 24259.8,
+        "low": 24000.2,
+        "close": 24208.6,
+        "ibHigh": 24128.8,
+        "ibLow": 24000.2,
+        "ibRange": 128.6
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24000.2. Period B built strong positive skew support, and Period C broke above Initial Balance High (24128.8) reaching 24157.4.",
+        "periodCBreakHigh": 24157.4,
+        "periodCClose": 24141.5,
+        "ibRange": 128.6
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24214.9 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +102.4 points, closing at 24208.6 (top 33% of daily range).",
+        "periodGClose": 24214.9,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 102.4,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (14/7/2026)",
+        "description": "Next Day gapped DOWN by -140.6 points. Session closed -156.5 points LOWER (Retest).",
+        "nextDayDate": "14/7/2026",
+        "gapPoints": -140.6,
+        "intradayMovePoints": -156.5,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 6,
+      "caseTitle": "Case 6: Thursday, 9/7/2026 (India VIX: 13.36)",
+      "date": "9/7/2026",
+      "dayOfWeek": "Thursday",
+      "vix": 13.36,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 23928.95,
+        "high": 24134.7,
+        "low": 23925.7,
+        "close": 23981.9,
+        "ibHigh": 24076.8,
+        "ibLow": 23927.7,
+        "ibRange": 149.1
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 23925.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (24076.8) reaching 24134.7.",
+        "periodCBreakHigh": 24134.7,
+        "periodCClose": 24077.4,
+        "ibRange": 149.1
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24023.3 (Tested IB Boundary). Market produced an afternoon continuation extension of +0 points, closing at 23981.9 (upper range equilibrium).",
+        "periodGClose": 24023.35,
+        "heldAboveIB": false,
+        "afternoonExtensionPts": 0,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (10/7/2026)",
+        "description": "Next Day gapped UP by +142.8 points. Session closed +225 points HIGHER (Continuation Win).",
+        "nextDayDate": "10/7/2026",
+        "gapPoints": 142.8,
+        "intradayMovePoints": 225,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 7,
+      "caseTitle": "Case 7: Monday, 6/7/2026 (India VIX: 11.82)",
+      "date": "6/7/2026",
+      "dayOfWeek": "Monday",
+      "vix": 11.82,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 24306.85,
+        "high": 24458.65,
+        "low": 24287.1,
+        "close": 24423.75,
+        "ibHigh": 24395.8,
+        "ibLow": 24287.1,
+        "ibRange": 108.7
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24287.1. Period B built strong positive skew support, and Period C broke above Initial Balance High (24395.8) reaching 24414.7.",
+        "periodCBreakHigh": 24414.65,
+        "periodCClose": 24403.1,
+        "ibRange": 108.7
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24442.7 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +44 points, closing at 24423.8 (top 33% of daily range).",
+        "periodGClose": 24442.65,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 44,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (7/7/2026)",
+        "description": "Next Day gapped UP by +40.7 points. Session closed -25 points LOWER (Retest).",
+        "nextDayDate": "7/7/2026",
+        "gapPoints": 40.7,
+        "intradayMovePoints": -25,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 8,
+      "caseTitle": "Case 8: Wednesday, 1/7/2026 (India VIX: 13.24)",
+      "date": "1/7/2026",
+      "dayOfWeek": "Wednesday",
+      "vix": 13.24,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 23897.65,
+        "high": 24049.9,
+        "low": 23895.1,
+        "close": 23988.1,
+        "ibHigh": 23996.4,
+        "ibLow": 23895.1,
+        "ibRange": 101.3
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 23895.1. Period B built strong positive skew support, and Period C broke above Initial Balance High (23996.4) reaching 24020.7.",
+        "periodCBreakHigh": 24020.65,
+        "periodCClose": 23953.1,
+        "ibRange": 101.3
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24023.8 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +29.3 points, closing at 23988.1 (upper range equilibrium).",
+        "periodGClose": 24023.8,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 29.3,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (2/7/2026)",
+        "description": "Next Day gapped UP by +74.1 points. Session closed +187.6 points HIGHER (Continuation Win).",
+        "nextDayDate": "2/7/2026",
+        "gapPoints": 74.1,
+        "intradayMovePoints": 187.6,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 9,
+      "caseTitle": "Case 9: Wednesday, 24/6/2026 (India VIX: 13.38)",
+      "date": "24/6/2026",
+      "dayOfWeek": "Wednesday",
+      "vix": 13.38,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 23795.8,
+        "high": 24090.05,
+        "low": 23789.25,
+        "close": 24013.15,
+        "ibHigh": 23919.2,
+        "ibLow": 23789.25,
+        "ibRange": 130
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 23789.3. Period B built strong positive skew support, and Period C broke above Initial Balance High (23919.2) reaching 23970.3.",
+        "periodCBreakHigh": 23970.3,
+        "periodCClose": 23934.3,
+        "ibRange": 130
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 23991.3 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +119.8 points, closing at 24013.2 (top 33% of daily range).",
+        "periodGClose": 23991.35,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 119.8,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (25/6/2026)",
+        "description": "Next Day gapped UP by +112.7 points. Session closed +42.8 points HIGHER (Continuation Win).",
+        "nextDayDate": "25/6/2026",
+        "gapPoints": 112.7,
+        "intradayMovePoints": 42.8,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 10,
+      "caseTitle": "Case 10: Wednesday, 17/6/2026 (India VIX: 13.19)",
+      "date": "17/6/2026",
+      "dayOfWeek": "Wednesday",
+      "vix": 13.19,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 24044.5,
+        "high": 24108.2,
+        "low": 23969.7,
+        "close": 24081,
+        "ibHigh": 24071.65,
+        "ibLow": 23969.7,
+        "ibRange": 102
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 23969.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (24071.7) reaching 24088.6.",
+        "periodCBreakHigh": 24088.6,
+        "periodCClose": 24085.75,
+        "ibRange": 102
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24044.3 (Tested IB Boundary). Market produced an afternoon continuation extension of +19.6 points, closing at 24081.0 (top 33% of daily range).",
+        "periodGClose": 24044.25,
+        "heldAboveIB": false,
+        "afternoonExtensionPts": 19.6,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (18/6/2026)",
+        "description": "Next Day gapped DOWN by -7.2 points. Session closed +87 points HIGHER (Continuation Win).",
+        "nextDayDate": "18/6/2026",
+        "gapPoints": -7.2,
+        "intradayMovePoints": 87,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 11,
+      "caseTitle": "Case 11: Tuesday, 16/6/2026 (India VIX: 13.36)",
+      "date": "16/6/2026",
+      "dayOfWeek": "Tuesday",
+      "vix": 13.36,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 23923.9,
+        "high": 24002.6,
+        "low": 23888.2,
+        "close": 23993.95,
+        "ibHigh": 23954.75,
+        "ibLow": 23888.2,
+        "ibRange": 66.5
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 23888.2. Period B built strong positive skew support, and Period C broke above Initial Balance High (23954.8) reaching 23972.8.",
+        "periodCBreakHigh": 23972.75,
+        "periodCClose": 23962.4,
+        "ibRange": 66.5
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 23927.2 (Tested IB Boundary). Market produced an afternoon continuation extension of +29.8 points, closing at 23994.0 (top 33% of daily range).",
+        "periodGClose": 23927.15,
+        "heldAboveIB": false,
+        "afternoonExtensionPts": 29.8,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (17/6/2026)",
+        "description": "Next Day gapped UP by +50.5 points. Session closed +91.8 points HIGHER (Continuation Win).",
+        "nextDayDate": "17/6/2026",
+        "gapPoints": 50.5,
+        "intradayMovePoints": 91.8,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 12,
+      "caseTitle": "Case 12: Tuesday, 17/2/2026 (India VIX: 12.67)",
+      "date": "17/2/2026",
+      "dayOfWeek": "Tuesday",
+      "vix": 12.67,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 25637.95,
+        "high": 25764.4,
+        "low": 25570.3,
+        "close": 25716,
+        "ibHigh": 25682,
+        "ibLow": 25570.3,
+        "ibRange": 111.7
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 25570.3. Period B built strong positive skew support, and Period C broke above Initial Balance High (25682.0) reaching 25730.3.",
+        "periodCBreakHigh": 25730.35,
+        "periodCClose": 25661.3,
+        "ibRange": 111.7
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 25738.7 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +34.1 points, closing at 25716.0 (top 33% of daily range).",
+        "periodGClose": 25738.7,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 34.1,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (18/2/2026)",
+        "description": "Next Day gapped UP by +36.7 points. Session closed +103.3 points HIGHER (Continuation Win).",
+        "nextDayDate": "18/2/2026",
+        "gapPoints": 36.7,
+        "intradayMovePoints": 103.3,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 13,
+      "caseTitle": "Case 13: Monday, 16/2/2026 (India VIX: 13.33)",
+      "date": "16/2/2026",
+      "dayOfWeek": "Monday",
+      "vix": 13.33,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 25423.6,
+        "high": 25697,
+        "low": 25372.7,
+        "close": 25682.45,
+        "ibHigh": 25556.5,
+        "ibLow": 25372.7,
+        "ibRange": 183.8
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 25372.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (25556.5) reaching 25561.8.",
+        "periodCBreakHigh": 25561.85,
+        "periodCClose": 25526.25,
+        "ibRange": 183.8
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 25577.8 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +135.2 points, closing at 25682.5 (top 33% of daily range).",
+        "periodGClose": 25577.8,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 135.2,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (17/2/2026)",
+        "description": "Next Day gapped DOWN by -44.5 points. Session closed +43 points HIGHER (Continuation Win).",
+        "nextDayDate": "17/2/2026",
+        "gapPoints": -44.5,
+        "intradayMovePoints": 43,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 14,
+      "caseTitle": "Case 14: Tuesday, 10/2/2026 (India VIX: 11.66)",
+      "date": "10/2/2026",
+      "dayOfWeek": "Tuesday",
+      "vix": 11.66,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": false,
+      "spotStats": {
+        "open": 25922.65,
+        "high": 25989.45,
+        "low": 25870.45,
+        "close": 25916.8,
+        "ibHigh": 25965.7,
+        "ibLow": 25870.45,
+        "ibRange": 95.3
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 25870.5. Period B built strong positive skew support, and Period C broke above Initial Balance High (25965.7) reaching 25978.9.",
+        "periodCBreakHigh": 25978.9,
+        "periodCClose": 25960.7,
+        "ibRange": 95.3
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 25964.7 (Tested IB Boundary). Market produced an afternoon continuation extension of +10.5 points, closing at 25916.8 (upper range equilibrium).",
+        "periodGClose": 25964.7,
+        "heldAboveIB": false,
+        "afternoonExtensionPts": 10.5,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Next Day Outcome (11/2/2026)",
+        "description": "Next Day gapped UP by +80.7 points. Session closed +37 points HIGHER (Continuation Win).",
+        "nextDayDate": "11/2/2026",
+        "gapPoints": 80.7,
+        "intradayMovePoints": 37,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 15,
+      "caseTitle": "Case 15: Friday, 14/11/2025 (India VIX: 11.94)",
+      "date": "14/11/2025",
+      "dayOfWeek": "Friday",
+      "vix": 11.94,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 25767.9,
+        "high": 25940.2,
+        "low": 25740.8,
+        "close": 25910.05,
+        "ibHigh": 25837.7,
+        "ibLow": 25740.8,
+        "ibRange": 69.8
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 25740.8. Period B built strong positive skew support, and Period C broke above Initial Balance High (25837.7) reaching 25863.6.",
+        "periodCBreakHigh": 25863.6,
+        "periodCClose": 25855.6,
+        "ibRange": 69.8
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 25883.6 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +103.7 points, closing at 25910.0 (top 33% of daily range).",
+        "periodGClose": 25883.6,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 103.7,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (17/11/2025)",
+        "description": "Monday gapped UP by +38.2 points. Session closed +103.4 points HIGHER (Continuation Win).",
+        "nextDayDate": "17/11/2025",
+        "gapPoints": 38.2,
+        "intradayMovePoints": 103.4,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 16,
+      "caseTitle": "Case 16: Friday, 7/11/2025 (India VIX: 12.56)",
+      "date": "7/11/2025",
+      "dayOfWeek": "Friday",
+      "vix": 12.56,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 25433.8,
+        "high": 25551.25,
+        "low": 25318.45,
+        "close": 25492.3,
+        "ibHigh": 25515.3,
+        "ibLow": 25318.45,
+        "ibRange": 81.5
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 25318.5. Period B built strong positive skew support, and Period C broke above Initial Balance High (25515.3) reaching 25545.5.",
+        "periodCBreakHigh": 25545.5,
+        "periodCClose": 25536.2,
+        "ibRange": 81.5
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 25568.8 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +121.1 points, closing at 25492.3 (top 33% of daily range).",
+        "periodGClose": 25568.8,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 121.1,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (10/11/2025)",
+        "description": "Monday gapped UP by +11.2 points. Session closed +82 points HIGHER (Continuation Win).",
+        "nextDayDate": "10/11/2025",
+        "gapPoints": 11.2,
+        "intradayMovePoints": 82,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 17,
+      "caseTitle": "Case 17: Friday, 17/10/2025 (India VIX: 11.63)",
+      "date": "17/10/2025",
+      "dayOfWeek": "Friday",
+      "vix": 11.63,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 25546.85,
+        "high": 25781.5,
+        "low": 25508.6,
+        "close": 25709.85,
+        "ibHigh": 25642.4,
+        "ibLow": 25508.6,
+        "ibRange": 95.5
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 25508.6. Period B built strong positive skew support, and Period C broke above Initial Balance High (25642.4) reaching 25677.8.",
+        "periodCBreakHigh": 25677.8,
+        "periodCClose": 25666.9,
+        "ibRange": 95.5
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 25705.1 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +141.9 points, closing at 25709.8 (top 33% of daily range).",
+        "periodGClose": 25705.1,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 141.9,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (20/10/2025)",
+        "description": "Monday gapped UP by +114.8 points. Session closed +133.3 points HIGHER (Continuation Win).",
+        "nextDayDate": "20/10/2025",
+        "gapPoints": 114.8,
+        "intradayMovePoints": 133.3,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 18,
+      "caseTitle": "Case 18: Friday, 4/7/2025 (India VIX: 12.31)",
+      "date": "4/7/2025",
+      "dayOfWeek": "Friday",
+      "vix": 12.31,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 25428.85,
+        "high": 25470.25,
+        "low": 25331.65,
+        "close": 25461,
+        "ibHigh": 25477.4,
+        "ibLow": 25331.65,
+        "ibRange": 48.5
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 25331.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (25477.4) reaching 25495.4.",
+        "periodCBreakHigh": 25495.4,
+        "periodCClose": 25489.8,
+        "ibRange": 48.5
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 25509.2 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +72.1 points, closing at 25461.0 (top 33% of daily range).",
+        "periodGClose": 25509.2,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 72.1,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (7/7/2025)",
+        "description": "Monday gapped DOWN by -10.5 points. Session closed +0.3 points HIGHER (Continuation Win).",
+        "nextDayDate": "7/7/2025",
+        "gapPoints": -10.5,
+        "intradayMovePoints": 0.3,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 19,
+      "caseTitle": "Case 19: Friday, 27/6/2025 (India VIX: 12.39)",
+      "date": "27/6/2025",
+      "dayOfWeek": "Friday",
+      "vix": 12.39,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 25576.65,
+        "high": 25654.2,
+        "low": 25523.55,
+        "close": 25637.8,
+        "ibHigh": 25622.4,
+        "ibLow": 25523.55,
+        "ibRange": 45.7
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 25523.5. Period B built strong positive skew support, and Period C broke above Initial Balance High (25622.4) reaching 25639.4.",
+        "periodCBreakHigh": 25639.4,
+        "periodCClose": 25634.1,
+        "ibRange": 45.7
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 25652.4 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +67.9 points, closing at 25637.8 (top 33% of daily range).",
+        "periodGClose": 25652.4,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 67.9,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (30/6/2025)",
+        "description": "Monday gapped UP by +23.9 points. Session closed -120.8 points LOWER (Retest).",
+        "nextDayDate": "30/6/2025",
+        "gapPoints": 23.9,
+        "intradayMovePoints": -120.8,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 20,
+      "caseTitle": "Case 20: Friday, 20/6/2025 (India VIX: 13.67)",
+      "date": "20/6/2025",
+      "dayOfWeek": "Friday",
+      "vix": 13.67,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 24787.65,
+        "high": 25136.2,
+        "low": 24783.65,
+        "close": 25112.4,
+        "ibHigh": 24911,
+        "ibLow": 24783.65,
+        "ibRange": 123.4
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24783.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (24911.0) reaching 24956.9.",
+        "periodCBreakHigh": 24956.9,
+        "periodCClose": 24942.8,
+        "ibRange": 123.4
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24992.1 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +183.3 points, closing at 25112.4 (top 33% of daily range).",
+        "periodGClose": 24992.1,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 183.3,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (23/6/2025)",
+        "description": "Monday gapped DOWN by -172.7 points. Session closed -140.5 points LOWER (Retest).",
+        "nextDayDate": "23/6/2025",
+        "gapPoints": -172.7,
+        "intradayMovePoints": -140.5,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 21,
+      "caseTitle": "Case 21: Friday, 21/3/2025 (India VIX: 12.57)",
+      "date": "21/3/2025",
+      "dayOfWeek": "Friday",
+      "vix": 12.57,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 23168.25,
+        "high": 23402.7,
+        "low": 23132.8,
+        "close": 23350.4,
+        "ibHigh": 23262.7,
+        "ibLow": 23132.8,
+        "ibRange": 94.5
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 23132.8. Period B built strong positive skew support, and Period C broke above Initial Balance High (23262.7) reaching 23297.8.",
+        "periodCBreakHigh": 23297.8,
+        "periodCClose": 23287,
+        "ibRange": 94.5
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 23324.8 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +140.3 points, closing at 23350.4 (top 33% of daily range).",
+        "periodGClose": 23324.8,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 140.3,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (24/3/2025)",
+        "description": "Monday gapped UP by +165 points. Session closed +307.9 points HIGHER (Continuation Win).",
+        "nextDayDate": "24/3/2025",
+        "gapPoints": 165,
+        "intradayMovePoints": 307.9,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 22,
+      "caseTitle": "Case 22: Friday, 7/3/2025 (India VIX: 13.47)",
+      "date": "7/3/2025",
+      "dayOfWeek": "Friday",
+      "vix": 13.47,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 22508.65,
+        "high": 22633.8,
+        "low": 22464.75,
+        "close": 22552.5,
+        "ibHigh": 22567.8,
+        "ibLow": 22464.75,
+        "ibRange": 59.2
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 22464.8. Period B built strong positive skew support, and Period C broke above Initial Balance High (22567.8) reaching 22589.8.",
+        "periodCBreakHigh": 22589.8,
+        "periodCClose": 22583,
+        "ibRange": 59.2
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 22606.7 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +87.9 points, closing at 22552.5 (upper range equilibrium).",
+        "periodGClose": 22606.7,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 87.9,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (10/3/2025)",
+        "description": "Monday gapped DOWN by -30.7 points. Session closed -92.2 points LOWER (Retest).",
+        "nextDayDate": "10/3/2025",
+        "gapPoints": -30.7,
+        "intradayMovePoints": -92.2,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 23,
+      "caseTitle": "Case 23: Friday, 27/12/2024 (India VIX: 13.24)",
+      "date": "27/12/2024",
+      "dayOfWeek": "Friday",
+      "vix": 13.24,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 23801.4,
+        "high": 23938.85,
+        "low": 23800.6,
+        "close": 23813.4,
+        "ibHigh": 23849.8,
+        "ibLow": 23800.6,
+        "ibRange": 48.4
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 23800.6. Period B built strong positive skew support, and Period C broke above Initial Balance High (23849.8) reaching 23867.8.",
+        "periodCBreakHigh": 23867.8,
+        "periodCClose": 23862.2,
+        "ibRange": 48.4
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 23881.6 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +71.9 points, closing at 23813.4 (upper range equilibrium).",
+        "periodGClose": 23881.6,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 71.9,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (30/12/2024)",
+        "description": "Monday gapped DOWN by -16.5 points. Session closed -168.5 points LOWER (Retest).",
+        "nextDayDate": "30/12/2024",
+        "gapPoints": -16.5,
+        "intradayMovePoints": -168.5,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 24,
+      "caseTitle": "Case 24: Friday, 13/12/2024 (India VIX: 13.05)",
+      "date": "13/12/2024",
+      "dayOfWeek": "Friday",
+      "vix": 13.05,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 24498.35,
+        "high": 24792.3,
+        "low": 24180.8,
+        "close": 24768.3,
+        "ibHigh": 24712.4,
+        "ibLow": 24180.8,
+        "ibRange": 214
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24180.8. Period B built strong positive skew support, and Period C broke above Initial Balance High (24712.4) reaching 24791.9.",
+        "periodCBreakHigh": 24791.9,
+        "periodCClose": 24767.4,
+        "ibRange": 214
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24853.0 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +318 points, closing at 24768.3 (top 33% of daily range).",
+        "periodGClose": 24853,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 318,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (16/12/2024)",
+        "description": "Monday gapped DOWN by -14.9 points. Session closed -100 points LOWER (Retest).",
+        "nextDayDate": "16/12/2024",
+        "gapPoints": -14.9,
+        "intradayMovePoints": -100,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 25,
+      "caseTitle": "Case 25: Friday, 18/10/2024 (India VIX: 13.04)",
+      "date": "18/10/2024",
+      "dayOfWeek": "Friday",
+      "vix": 13.04,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 24664.95,
+        "high": 24886.2,
+        "low": 24567.65,
+        "close": 24854.05,
+        "ibHigh": 24776.4,
+        "ibLow": 24567.65,
+        "ibRange": 111.5
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24567.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (24776.4) reaching 24817.9.",
+        "periodCBreakHigh": 24817.9,
+        "periodCClose": 24805.1,
+        "ibRange": 111.5
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24849.7 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +165.6 points, closing at 24854.0 (top 33% of daily range).",
+        "periodGClose": 24849.7,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 165.6,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (21/10/2024)",
+        "description": "Monday gapped UP by +102.1 points. Session closed -73 points LOWER (Retest).",
+        "nextDayDate": "21/10/2024",
+        "gapPoints": 102.1,
+        "intradayMovePoints": -73,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 26,
+      "caseTitle": "Case 26: Friday, 20/9/2024 (India VIX: 12.79)",
+      "date": "20/9/2024",
+      "dayOfWeek": "Friday",
+      "vix": 12.79,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 25525.95,
+        "high": 25849.25,
+        "low": 25426.6,
+        "close": 25790.95,
+        "ibHigh": 25673.9,
+        "ibLow": 25426.6,
+        "ibRange": 147.9
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 25426.6. Period B built strong positive skew support, and Period C broke above Initial Balance High (25673.9) reaching 25728.8.",
+        "periodCBreakHigh": 25728.8,
+        "periodCClose": 25711.9,
+        "ibRange": 147.9
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 25771.1 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +219.8 points, closing at 25791.0 (top 33% of daily range).",
+        "periodGClose": 25771.1,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 219.8,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (23/9/2024)",
+        "description": "Monday gapped UP by +81.6 points. Session closed +148.1 points HIGHER (Continuation Win).",
+        "nextDayDate": "23/9/2024",
+        "gapPoints": 81.6,
+        "intradayMovePoints": 148.1,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 27,
+      "caseTitle": "Case 27: Friday, 26/7/2024 (India VIX: 12.25)",
+      "date": "26/7/2024",
+      "dayOfWeek": "Friday",
+      "vix": 12.25,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 24423.35,
+        "high": 24861.15,
+        "low": 24410.9,
+        "close": 24834.85,
+        "ibHigh": 24580.9,
+        "ibLow": 24410.9,
+        "ibRange": 157.6
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24410.9. Period B built strong positive skew support, and Period C broke above Initial Balance High (24580.9) reaching 24639.5.",
+        "periodCBreakHigh": 24639.5,
+        "periodCClose": 24621.5,
+        "ibRange": 157.6
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24684.5 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +234.1 points, closing at 24834.8 (top 33% of daily range).",
+        "periodGClose": 24684.5,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 234.1,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (29/7/2024)",
+        "description": "Monday gapped UP by +108.5 points. Session closed +1.3 points HIGHER (Continuation Win).",
+        "nextDayDate": "29/7/2024",
+        "gapPoints": 108.5,
+        "intradayMovePoints": 1.3,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 28,
+      "caseTitle": "Case 28: Friday, 12/7/2024 (India VIX: 13.72)",
+      "date": "12/7/2024",
+      "dayOfWeek": "Friday",
+      "vix": 13.72,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 24387.949,
+        "high": 24592.199,
+        "low": 24331.15,
+        "close": 24502.15,
+        "ibHigh": 24479.3,
+        "ibLow": 24331.15,
+        "ibRange": 91.4
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24331.2. Period B built strong positive skew support, and Period C broke above Initial Balance High (24479.3) reaching 24513.3.",
+        "periodCBreakHigh": 24513.3,
+        "periodCClose": 24502.8,
+        "ibRange": 91.4
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24539.4 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +135.7 points, closing at 24502.2 (upper range equilibrium).",
+        "periodGClose": 24539.4,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 135.7,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (15/7/2024)",
+        "description": "Monday gapped UP by +85.4 points. Session closed +84.5 points HIGHER (Continuation Win).",
+        "nextDayDate": "15/7/2024",
+        "gapPoints": 85.4,
+        "intradayMovePoints": 84.5,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 29,
+      "caseTitle": "Case 29: Friday, 5/7/2024 (India VIX: 12.7)",
+      "date": "5/7/2024",
+      "dayOfWeek": "Friday",
+      "vix": 12.7,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 24213.35,
+        "high": 24363,
+        "low": 24168.85,
+        "close": 24323.85,
+        "ibHigh": 24281.3,
+        "ibLow": 24168.85,
+        "ibRange": 68
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 24168.8. Period B built strong positive skew support, and Period C broke above Initial Balance High (24281.3) reaching 24306.5.",
+        "periodCBreakHigh": 24306.5,
+        "periodCClose": 24298.8,
+        "ibRange": 68
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 24326.0 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +101 points, closing at 24323.8 (top 33% of daily range).",
+        "periodGClose": 24326,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 101,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (8/7/2024)",
+        "description": "Monday gapped UP by +5.6 points. Session closed -3.3 points LOWER (Retest).",
+        "nextDayDate": "8/7/2024",
+        "gapPoints": 5.6,
+        "intradayMovePoints": -3.3,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 30,
+      "caseTitle": "Case 30: Friday, 14/6/2024 (India VIX: 12.82)",
+      "date": "14/6/2024",
+      "dayOfWeek": "Friday",
+      "vix": 12.82,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 23464.949,
+        "high": 23490.4,
+        "low": 23334.25,
+        "close": 23465.6,
+        "ibHigh": 23519.6,
+        "ibLow": 23334.25,
+        "ibRange": 54.7
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 23334.3. Period B built strong positive skew support, and Period C broke above Initial Balance High (23519.6) reaching 23539.9.",
+        "periodCBreakHigh": 23539.9,
+        "periodCClose": 23533.7,
+        "ibRange": 54.7
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 23555.5 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +81.2 points, closing at 23465.6 (top 33% of daily range).",
+        "periodGClose": 23555.5,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 81.2,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (18/6/2024)",
+        "description": "Monday gapped UP by +105.2 points. Session closed +92.3 points HIGHER (Continuation Win).",
+        "nextDayDate": "18/6/2024",
+        "gapPoints": 105.2,
+        "intradayMovePoints": 92.3,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 31,
+      "caseTitle": "Case 31: Friday, 19/4/2024 (India VIX: 13.46)",
+      "date": "19/4/2024",
+      "dayOfWeek": "Friday",
+      "vix": 13.46,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 21861.5,
+        "high": 22179.551,
+        "low": 21777.65,
+        "close": 22147,
+        "ibHigh": 22002.2,
+        "ibLow": 21777.65,
+        "ibRange": 140.7
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 21777.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (22002.2) reaching 22054.4.",
+        "periodCBreakHigh": 22054.4,
+        "periodCClose": 22038.3,
+        "ibRange": 140.7
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 22094.6 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +209 points, closing at 22147.0 (top 33% of daily range).",
+        "periodGClose": 22094.6,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 209,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (22/4/2024)",
+        "description": "Monday gapped UP by +189.9 points. Session closed +189.4 points HIGHER (Continuation Win).",
+        "nextDayDate": "22/4/2024",
+        "gapPoints": 189.9,
+        "intradayMovePoints": 189.4,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 32,
+      "caseTitle": "Case 32: Friday, 5/4/2024 (India VIX: 11.34)",
+      "date": "5/4/2024",
+      "dayOfWeek": "Friday",
+      "vix": 11.34,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 22486.4,
+        "high": 22537.6,
+        "low": 22427.6,
+        "close": 22513.699,
+        "ibHigh": 22524.9,
+        "ibLow": 22427.6,
+        "ibRange": 38.5
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 22427.6. Period B built strong positive skew support, and Period C broke above Initial Balance High (22524.9) reaching 22539.2.",
+        "periodCBreakHigh": 22539.2,
+        "periodCClose": 22534.8,
+        "ibRange": 38.5
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 22550.2 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +57.2 points, closing at 22513.7 (top 33% of daily range).",
+        "periodGClose": 22550.2,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 57.2,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (8/4/2024)",
+        "description": "Monday gapped UP by +64.7 points. Session closed +152.6 points HIGHER (Continuation Win).",
+        "nextDayDate": "8/4/2024",
+        "gapPoints": 64.7,
+        "intradayMovePoints": 152.6,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 33,
+      "caseTitle": "Case 33: Friday, 22/3/2024 (India VIX: 12.22)",
+      "date": "22/3/2024",
+      "dayOfWeek": "Friday",
+      "vix": 12.22,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 21932.199,
+        "high": 22180.699,
+        "low": 21883.301,
+        "close": 22096.75,
+        "ibHigh": 22036.3,
+        "ibLow": 21883.301,
+        "ibRange": 104.1
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 21883.3. Period B built strong positive skew support, and Period C broke above Initial Balance High (22036.3) reaching 22075.0.",
+        "periodCBreakHigh": 22075,
+        "periodCClose": 22063.1,
+        "ibRange": 104.1
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 22104.7 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +154.6 points, closing at 22096.8 (top 33% of daily range).",
+        "periodGClose": 22104.7,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 154.6,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (26/3/2024)",
+        "description": "Monday gapped DOWN by -148.8 points. Session closed -92.1 points LOWER (Retest).",
+        "nextDayDate": "26/3/2024",
+        "gapPoints": -148.8,
+        "intradayMovePoints": -92.1,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 34,
+      "caseTitle": "Case 34: Friday, 12/1/2024 (India VIX: 13.1)",
+      "date": "12/1/2024",
+      "dayOfWeek": "Friday",
+      "vix": 13.1,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 21773.551,
+        "high": 21928.25,
+        "low": 21715.15,
+        "close": 21894.551,
+        "ibHigh": 21848.1,
+        "ibLow": 21715.15,
+        "ibRange": 74.6
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 21715.2. Period B built strong positive skew support, and Period C broke above Initial Balance High (21848.1) reaching 21875.8.",
+        "periodCBreakHigh": 21875.8,
+        "periodCClose": 21867.3,
+        "ibRange": 74.6
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 21897.1 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +110.8 points, closing at 21894.6 (top 33% of daily range).",
+        "periodGClose": 21897.1,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 110.8,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (15/1/2024)",
+        "description": "Monday gapped UP by +158.6 points. Session closed +202.9 points HIGHER (Continuation Win).",
+        "nextDayDate": "15/1/2024",
+        "gapPoints": 158.6,
+        "intradayMovePoints": 202.9,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 35,
+      "caseTitle": "Case 35: Friday, 5/1/2024 (India VIX: 12.63)",
+      "date": "5/1/2024",
+      "dayOfWeek": "Friday",
+      "vix": 12.63,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 21705.75,
+        "high": 21749.6,
+        "low": 21629.199,
+        "close": 21710.801,
+        "ibHigh": 21747.9,
+        "ibLow": 21629.199,
+        "ibRange": 42.1
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 21629.2. Period B built strong positive skew support, and Period C broke above Initial Balance High (21747.9) reaching 21763.5.",
+        "periodCBreakHigh": 21763.5,
+        "periodCClose": 21758.7,
+        "ibRange": 42.1
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 21775.6 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +62.6 points, closing at 21710.8 (top 33% of daily range).",
+        "periodGClose": 21775.6,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 62.6,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (8/1/2024)",
+        "description": "Monday gapped UP by +36.8 points. Session closed -197.8 points LOWER (Retest).",
+        "nextDayDate": "8/1/2024",
+        "gapPoints": 36.8,
+        "intradayMovePoints": -197.8,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 36,
+      "caseTitle": "Case 36: Friday, 22/12/2023 (India VIX: 13.71)",
+      "date": "22/12/2023",
+      "dayOfWeek": "Friday",
+      "vix": 13.71,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 21295.85,
+        "high": 21390.5,
+        "low": 21232.449,
+        "close": 21349.4,
+        "ibHigh": 21351.2,
+        "ibLow": 21232.449,
+        "ibRange": 55.3
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 21232.4. Period B built strong positive skew support, and Period C broke above Initial Balance High (21351.2) reaching 21371.7.",
+        "periodCBreakHigh": 21371.7,
+        "periodCClose": 21365.4,
+        "ibRange": 55.3
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 21387.5 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +82.2 points, closing at 21349.4 (top 33% of daily range).",
+        "periodGClose": 21387.5,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 82.2,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (26/12/2023)",
+        "description": "Monday gapped UP by +15.8 points. Session closed +91.9 points HIGHER (Continuation Win).",
+        "nextDayDate": "26/12/2023",
+        "gapPoints": 15.8,
+        "intradayMovePoints": 91.9,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 37,
+      "caseTitle": "Case 37: Friday, 15/12/2023 (India VIX: 13.13)",
+      "date": "15/12/2023",
+      "dayOfWeek": "Friday",
+      "vix": 13.13,
+      "vixRegime": "Low VIX (13.0 - 13.8)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 21287.449,
+        "high": 21492.301,
+        "low": 21235.301,
+        "close": 21456.65,
+        "ibHigh": 21377.4,
+        "ibLow": 21235.301,
+        "ibRange": 89.9
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 21235.3. Period B built strong positive skew support, and Period C broke above Initial Balance High (21377.4) reaching 21410.8.",
+        "periodCBreakHigh": 21410.8,
+        "periodCClose": 21400.5,
+        "ibRange": 89.9
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 21436.5 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +133.6 points, closing at 21456.7 (top 33% of daily range).",
+        "periodGClose": 21436.5,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 133.6,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (18/12/2023)",
+        "description": "Monday gapped DOWN by -21.8 points. Session closed -38 points LOWER (Retest).",
+        "nextDayDate": "18/12/2023",
+        "gapPoints": -21.8,
+        "intradayMovePoints": -38,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 38,
+      "caseTitle": "Case 38: Friday, 8/12/2023 (India VIX: 12.47)",
+      "date": "8/12/2023",
+      "dayOfWeek": "Friday",
+      "vix": 12.47,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 20934.1,
+        "high": 21006.1,
+        "low": 20862.699,
+        "close": 20969.4,
+        "ibHigh": 20984.3,
+        "ibLow": 20862.699,
+        "ibRange": 50.2
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 20862.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (20984.3) reaching 21002.9.",
+        "periodCBreakHigh": 21002.9,
+        "periodCClose": 20997.2,
+        "ibRange": 50.2
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 21017.3 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +74.6 points, closing at 20969.4 (top 33% of daily range).",
+        "periodGClose": 21017.3,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 74.6,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (11/12/2023)",
+        "description": "Monday gapped DOWN by -4.1 points. Session closed +27.7 points HIGHER (Continuation Win).",
+        "nextDayDate": "11/12/2023",
+        "gapPoints": -4.1,
+        "intradayMovePoints": 27.7,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 39,
+      "caseTitle": "Case 39: Friday, 1/12/2023 (India VIX: 12.38)",
+      "date": "1/12/2023",
+      "dayOfWeek": "Friday",
+      "vix": 12.38,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 20194.1,
+        "high": 20291.551,
+        "low": 20183.699,
+        "close": 20267.9,
+        "ibHigh": 20231.8,
+        "ibLow": 20183.699,
+        "ibRange": 37.7
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 20183.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (20231.8) reaching 20245.9.",
+        "periodCBreakHigh": 20245.9,
+        "periodCClose": 20241.6,
+        "ibRange": 37.7
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 20256.7 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +56.1 points, closing at 20267.9 (top 33% of daily range).",
+        "periodGClose": 20256.7,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 56.1,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (4/12/2023)",
+        "description": "Monday gapped UP by +334 points. Session closed +418.9 points HIGHER (Continuation Win).",
+        "nextDayDate": "4/12/2023",
+        "gapPoints": 334,
+        "intradayMovePoints": 418.9,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 40,
+      "caseTitle": "Case 40: Friday, 17/11/2023 (India VIX: 11.83)",
+      "date": "17/11/2023",
+      "dayOfWeek": "Friday",
+      "vix": 11.83,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 19674.75,
+        "high": 19806,
+        "low": 19667.449,
+        "close": 19731.801,
+        "ibHigh": 19723.2,
+        "ibLow": 19667.449,
+        "ibRange": 48.5
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 19667.4. Period B built strong positive skew support, and Period C broke above Initial Balance High (19723.2) reaching 19741.3.",
+        "periodCBreakHigh": 19741.3,
+        "periodCClose": 19735.7,
+        "ibRange": 48.5
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 19755.1 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +72 points, closing at 19731.8 (upper range equilibrium).",
+        "periodGClose": 19755.1,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 72,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (20/11/2023)",
+        "description": "Monday gapped DOWN by -0.7 points. Session closed -37.8 points LOWER (Retest).",
+        "nextDayDate": "20/11/2023",
+        "gapPoints": -0.7,
+        "intradayMovePoints": -37.8,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 41,
+      "caseTitle": "Case 41: Friday, 29/9/2023 (India VIX: 11.45)",
+      "date": "29/9/2023",
+      "dayOfWeek": "Friday",
+      "vix": 11.45,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 19581.199,
+        "high": 19726.25,
+        "low": 19551.051,
+        "close": 19638.301,
+        "ibHigh": 19642.5,
+        "ibLow": 19551.051,
+        "ibRange": 61.3
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 19551.1. Period B built strong positive skew support, and Period C broke above Initial Balance High (19642.5) reaching 19665.3.",
+        "periodCBreakHigh": 19665.3,
+        "periodCClose": 19658.3,
+        "ibRange": 61.3
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 19682.8 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +91.1 points, closing at 19638.3 (upper range equilibrium).",
+        "periodGClose": 19682.8,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 91.1,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (3/10/2023)",
+        "description": "Monday gapped DOWN by -15.9 points. Session closed -109.6 points LOWER (Retest).",
+        "nextDayDate": "3/10/2023",
+        "gapPoints": -15.9,
+        "intradayMovePoints": -109.6,
+        "isGreenContinuation": false
+      }
+    },
+    {
+      "caseNumber": 42,
+      "caseTitle": "Case 42: Friday, 1/9/2023 (India VIX: 11.37)",
+      "date": "1/9/2023",
+      "dayOfWeek": "Friday",
+      "vix": 11.37,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 19258.15,
+        "high": 19458.551,
+        "low": 19255.699,
+        "close": 19435.301,
+        "ibHigh": 19329.1,
+        "ibLow": 19255.699,
+        "ibRange": 71
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 19255.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (19329.1) reaching 19355.5.",
+        "periodCBreakHigh": 19355.5,
+        "periodCClose": 19347.4,
+        "ibRange": 71
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 19375.8 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +105.5 points, closing at 19435.3 (top 33% of daily range).",
+        "periodGClose": 19375.8,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 105.5,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (4/9/2023)",
+        "description": "Monday gapped UP by +89.8 points. Session closed +93.5 points HIGHER (Continuation Win).",
+        "nextDayDate": "4/9/2023",
+        "gapPoints": 89.8,
+        "intradayMovePoints": 93.5,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 43,
+      "caseTitle": "Case 43: Friday, 18/8/2023 (India VIX: 12.14)",
+      "date": "18/8/2023",
+      "dayOfWeek": "Friday",
+      "vix": 12.14,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 19301.75,
+        "high": 19373.801,
+        "low": 19253.6,
+        "close": 19310.15,
+        "ibHigh": 19343.8,
+        "ibLow": 19253.6,
+        "ibRange": 42.1
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 19253.6. Period B built strong positive skew support, and Period C broke above Initial Balance High (19343.8) reaching 19359.4.",
+        "periodCBreakHigh": 19359.4,
+        "periodCClose": 19354.6,
+        "ibRange": 42.1
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 19371.5 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +62.5 points, closing at 19310.2 (upper range equilibrium).",
+        "periodGClose": 19371.5,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 62.5,
+        "closedInTopThird": false
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (21/8/2023)",
+        "description": "Monday gapped UP by +10.5 points. Session closed +83.4 points HIGHER (Continuation Win).",
+        "nextDayDate": "21/8/2023",
+        "gapPoints": 10.5,
+        "intradayMovePoints": 83.4,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 44,
+      "caseTitle": "Case 44: Friday, 26/5/2023 (India VIX: 11.9)",
+      "date": "26/5/2023",
+      "dayOfWeek": "Friday",
+      "vix": 11.9,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 18368.35,
+        "high": 18508.551,
+        "low": 18333.15,
+        "close": 18499.35,
+        "ibHigh": 18429.7,
+        "ibLow": 18333.15,
+        "ibRange": 61.4
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 18333.2. Period B built strong positive skew support, and Period C broke above Initial Balance High (18429.7) reaching 18452.5.",
+        "periodCBreakHigh": 18452.5,
+        "periodCClose": 18445.5,
+        "ibRange": 61.4
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 18470.1 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +91.2 points, closing at 18499.3 (top 33% of daily range).",
+        "periodGClose": 18470.1,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 91.2,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (29/5/2023)",
+        "description": "Monday gapped UP by +119.8 points. Session closed +99.3 points HIGHER (Continuation Win).",
+        "nextDayDate": "29/5/2023",
+        "gapPoints": 119.8,
+        "intradayMovePoints": 99.3,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 45,
+      "caseTitle": "Case 45: Friday, 19/5/2023 (India VIX: 12.3)",
+      "date": "19/5/2023",
+      "dayOfWeek": "Friday",
+      "vix": 12.3,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 18186.15,
+        "high": 18218.1,
+        "low": 18060.4,
+        "close": 18203.4,
+        "ibHigh": 18241.3,
+        "ibLow": 18060.4,
+        "ibRange": 55.2
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 18060.4. Period B built strong positive skew support, and Period C broke above Initial Balance High (18241.3) reaching 18261.8.",
+        "periodCBreakHigh": 18261.8,
+        "periodCClose": 18255.5,
+        "ibRange": 55.2
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 18277.6 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +82 points, closing at 18203.4 (top 33% of daily range).",
+        "periodGClose": 18277.6,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 82,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (22/5/2023)",
+        "description": "Monday gapped DOWN by -2.3 points. Session closed +111 points HIGHER (Continuation Win).",
+        "nextDayDate": "22/5/2023",
+        "gapPoints": -2.3,
+        "intradayMovePoints": 111,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 46,
+      "caseTitle": "Case 46: Friday, 12/5/2023 (India VIX: 12.85)",
+      "date": "12/5/2023",
+      "dayOfWeek": "Friday",
+      "vix": 12.85,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 18273.75,
+        "high": 18342.75,
+        "low": 18194.551,
+        "close": 18314.801,
+        "ibHigh": 18325.6,
+        "ibLow": 18194.551,
+        "ibRange": 51.9
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 18194.6. Period B built strong positive skew support, and Period C broke above Initial Balance High (18325.6) reaching 18344.9.",
+        "periodCBreakHigh": 18344.9,
+        "periodCClose": 18339,
+        "ibRange": 51.9
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 18359.7 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +77.1 points, closing at 18314.8 (top 33% of daily range).",
+        "periodGClose": 18359.7,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 77.1,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (15/5/2023)",
+        "description": "Monday gapped UP by +24.5 points. Session closed +84 points HIGHER (Continuation Win).",
+        "nextDayDate": "15/5/2023",
+        "gapPoints": 24.5,
+        "intradayMovePoints": 84,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 47,
+      "caseTitle": "Case 47: Friday, 31/3/2023 (India VIX: 12.94)",
+      "date": "31/3/2023",
+      "dayOfWeek": "Friday",
+      "vix": 12.94,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 17210.35,
+        "high": 17381.6,
+        "low": 17204.65,
+        "close": 17359.75,
+        "ibHigh": 17272.3,
+        "ibLow": 17204.65,
+        "ibRange": 61.9
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 17204.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (17272.3) reaching 17295.3.",
+        "periodCBreakHigh": 17295.3,
+        "periodCClose": 17288.2,
+        "ibRange": 61.9
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 17313.0 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +92 points, closing at 17359.8 (top 33% of daily range).",
+        "periodGClose": 17313,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 92,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (3/4/2023)",
+        "description": "Monday gapped UP by +68.2 points. Session closed +38.3 points HIGHER (Continuation Win).",
+        "nextDayDate": "3/4/2023",
+        "gapPoints": 68.2,
+        "intradayMovePoints": 38.3,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 48,
+      "caseTitle": "Case 48: Friday, 3/3/2023 (India VIX: 12.18)",
+      "date": "3/3/2023",
+      "dayOfWeek": "Friday",
+      "vix": 12.18,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 17451.25,
+        "high": 17644.75,
+        "low": 17427.699,
+        "close": 17594.35,
+        "ibHigh": 17527.2,
+        "ibLow": 17427.699,
+        "ibRange": 76
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 17427.7. Period B built strong positive skew support, and Period C broke above Initial Balance High (17527.2) reaching 17555.4.",
+        "periodCBreakHigh": 17555.4,
+        "periodCClose": 17546.8,
+        "ibRange": 76
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 17577.1 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +112.9 points, closing at 17594.3 (top 33% of daily range).",
+        "periodGClose": 17577.1,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 112.9,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (6/3/2023)",
+        "description": "Monday gapped UP by +86 points. Session closed +117.1 points HIGHER (Continuation Win).",
+        "nextDayDate": "6/3/2023",
+        "gapPoints": 86,
+        "intradayMovePoints": 117.1,
+        "isGreenContinuation": true
+      }
+    },
+    {
+      "caseNumber": 49,
+      "caseTitle": "Case 49: Friday, 10/2/2023 (India VIX: 12.74)",
+      "date": "10/2/2023",
+      "dayOfWeek": "Friday",
+      "vix": 12.74,
+      "vixRegime": "Ultra-Low VIX (<13)",
+      "isFriday": true,
+      "spotStats": {
+        "open": 17847.551,
+        "high": 17876.949,
+        "low": 17801,
+        "close": 17856.5,
+        "ibHigh": 17874.1,
+        "ibLow": 17801,
+        "ibRange": 26.6
+      },
+      "whatHappened": {
+        "title": "🌅 Morning Action (What Happened)",
+        "description": "Day Low anchored in Period A at 17801.0. Period B built strong positive skew support, and Period C broke above Initial Balance High (17874.1) reaching 17884.0.",
+        "periodCBreakHigh": 17884,
+        "periodCClose": 17881,
+        "ibRange": 26.6
+      },
+      "afternoonOutcome": {
+        "title": "☀️ Afternoon Outcome (Period G & PM Drive)",
+        "description": "Period G closed at 17891.6 (Held above IB High - Filter Passed). Market produced an afternoon continuation extension of +39.5 points, closing at 17856.5 (top 33% of daily range).",
+        "periodGClose": 17891.6,
+        "heldAboveIB": true,
+        "afternoonExtensionPts": 39.5,
+        "closedInTopThird": true
+      },
+      "nextDayOutcome": {
+        "title": "🚀 Monday Outcome (13/2/2023)",
+        "description": "Monday gapped UP by +2.6 points. Session closed -85.6 points LOWER (Retest).",
+        "nextDayDate": "13/2/2023",
+        "gapPoints": 2.6,
+        "intradayMovePoints": -85.6,
+        "isGreenContinuation": false
+      }
+    }
+  ]
+}

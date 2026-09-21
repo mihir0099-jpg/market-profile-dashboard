@@ -1,0 +1,55 @@
+{
+  "version": "2.0.0-AUTONOMOUS",
+  "lastEvolutionTime": "2026-09-21T03:42:53.216Z",
+  "rulesLearnedCount": 4,
+  "negativeFilters": [
+    {
+      "id": "RULE_INDEX_CONFLUENCE",
+      "condition": "Never buy CE on stock breakouts if Nifty is below Open or PCR drift < -0.03",
+      "addedOn": "2026-07-10",
+      "confidencePct": 98.4
+    },
+    {
+      "id": "RULE_NEUTRAL_DAY_FADE",
+      "condition": "If stock IB width is wide and volume < 0.8x, treat G-period break as trap and fade at VAH/VAL",
+      "addedOn": "2026-07-10",
+      "confidencePct": 92.1
+    },
+    {
+      "id": "RULE_PERIOD_C_REVERSAL",
+      "condition": "If Period C morning break fails to extend in Period D, fade immediately targeting opposite extreme",
+      "addedOn": "2026-08-14",
+      "confidencePct": 94.7
+    },
+    {
+      "id": "AUTO_RULE_1789311893596_2ZV4",
+      "condition": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor.",
+      "addedOn": "2026-09-13",
+      "confidencePct": 91.5
+    },
+    {
+      "id": "AUTO_RULE_1789311893596_Q81M",
+      "condition": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts.",
+      "addedOn": "2026-09-13",
+      "confidencePct": 91.5
+    },
+    {
+      "id": "AUTO_RULE_1789311893596_X7M0",
+      "condition": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline.",
+      "addedOn": "2026-09-13",
+      "confidencePct": 91.5
+    },
+    {
+      "id": "LIVE_RULE_5A_1789967405076",
+      "condition": "Rule 5A Validated: Low established in Period A has 62.6% statistical probability of holding all day. Sell OTM Put spreads below 23295.",
+      "addedOn": "21/9/2026",
+      "confidencePct": 62.6
+    }
+  ],
+  "dynamicThresholds": {
+    "minVolumeMultipleForLateBreakout": 1.25,
+    "maxHandleRetracePct": 33.3,
+    "pcrDriftSignificantThreshold": 0.03,
+    "climaxVolumeFactor": 3.2
+  }
+}

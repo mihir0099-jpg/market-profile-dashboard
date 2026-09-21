@@ -1,0 +1,157 @@
+{
+  "last_updated": "2026-09-18T10:17:14.555Z",
+  "total_sessions_scanned": 33,
+  "active_triggers": 27,
+  "wins": 18,
+  "mistakes_learned": 9,
+  "live_accuracy_pct": "66.7%",
+  "auto_learned_adaptations": [
+    {
+      "rule_id": "ADAPT_01_PERIOD_C_FILTER",
+      "lesson": "Never trade pure option skew in isolation. When Call bloat is present, verify Period C (10:15–10:45 AM) does NOT close above IB High. Squeezes happen on IB breaches.",
+      "confidence": "92.4%"
+    },
+    {
+      "rule_id": "ADAPT_02_TUESDAY_EXPIRY_COLLAPSE",
+      "lesson": "On Tuesday Expiries (e.g. 04-Aug, 18-Aug, 25-Aug), skew signals have 100% win rate due to zero-gamma pin dynamics. Maximize position sizing on Expiry day G-period.",
+      "confidence": "100.0%"
+    },
+    {
+      "rule_id": "ADAPT_03_NEUTRAL_DAY_FLIP",
+      "lesson": "If PCR Velocity drift > 3% fails to extend by Period E (11:15 AM), immediately flip to opposite extreme fade (Rule 5C Neutral Day traversal).",
+      "confidence": "88.9%"
+    }
+  ],
+  "recent_sessions": [
+    {
+      "date": "2026_09_17",
+      "niftyClose": 23270.6,
+      "changePct": 0.23,
+      "ce": 153.3,
+      "pe": 84.95,
+      "skew": 28.7,
+      "signal": "CALL_WRITING_RESISTANCE",
+      "predicted": "BEARISH",
+      "actual": "BULLISH",
+      "outcome": "MISTAKE_CORRECTED",
+      "lesson": "FAILURE MISTAKE: Short-Covering Squeeze. Call writers got trapped as buyers broke past morning resistance with volume. Adaptation rule: Exit short calls immediately if Period C candle closes above IB High."
+    },
+    {
+      "date": "2026_09_16",
+      "niftyClose": 23217.6,
+      "changePct": 0.43,
+      "ce": 178.5,
+      "pe": 132.2,
+      "skew": 14.9,
+      "signal": "CALL_WRITING_RESISTANCE",
+      "predicted": "BEARISH",
+      "actual": "BULLISH",
+      "outcome": "MISTAKE_CORRECTED",
+      "lesson": "FAILURE MISTAKE: Short-Covering Squeeze. Call writers got trapped as buyers broke past morning resistance with volume. Adaptation rule: Exit short calls immediately if Period C candle closes above IB High."
+    },
+    {
+      "date": "2026_09_15",
+      "niftyClose": 23118.6,
+      "changePct": -1.19,
+      "ce": 18.5,
+      "pe": 0.05,
+      "skew": 99.5,
+      "signal": "CALL_WRITING_RESISTANCE",
+      "predicted": "BEARISH",
+      "actual": "BEARISH",
+      "outcome": "WIN",
+      "lesson": "Institutional Call writers successfully capped resistance (Skew 99.5%). Price fell -1.19%. Rule reinforced: CE bloat = sell CE / buy PE."
+    },
+    {
+      "date": "2026_09_11",
+      "niftyClose": 23398.1,
+      "changePct": -0.34,
+      "ce": 133.45,
+      "pe": 72.45,
+      "skew": 29.6,
+      "signal": "CALL_WRITING_RESISTANCE",
+      "predicted": "BEARISH",
+      "actual": "BEARISH",
+      "outcome": "WIN",
+      "lesson": "Institutional Call writers successfully capped resistance (Skew 29.6%). Price fell -0.34%. Rule reinforced: CE bloat = sell CE / buy PE."
+    },
+    {
+      "date": "2026_09_10",
+      "niftyClose": 23477.8,
+      "changePct": 0.2,
+      "ce": 78.3,
+      "pe": 125.1,
+      "skew": -23,
+      "signal": "PUT_WRITING_SUPPORT",
+      "predicted": "BULLISH",
+      "actual": "BULLISH",
+      "outcome": "WIN",
+      "lesson": "Institutional Put writers defended support floor (Skew -23%). Price rallied +0.20%. Rule reinforced: PE bloat = sell PE / buy CE."
+    },
+    {
+      "date": "2026_09_08",
+      "niftyClose": 23635.1,
+      "changePct": -0.61,
+      "ce": 0.05,
+      "pe": 14.85,
+      "skew": -99.3,
+      "signal": "PUT_WRITING_SUPPORT",
+      "predicted": "BULLISH",
+      "actual": "BEARISH",
+      "outcome": "MISTAKE_CORRECTED",
+      "lesson": "FAILURE MISTAKE: Long Liquidation. Put writers failed to defend morning support. Adaptation rule: Invalidate put writing support if spot breaks below IB Low in Period C."
+    },
+    {
+      "date": "2026_09_03",
+      "niftyClose": 23873.45,
+      "changePct": -0.17,
+      "ce": 128.85,
+      "pe": 89.65,
+      "skew": 17.9,
+      "signal": "CALL_WRITING_RESISTANCE",
+      "predicted": "BEARISH",
+      "actual": "BEARISH",
+      "outcome": "WIN",
+      "lesson": "Institutional Call writers successfully capped resistance (Skew 17.9%). Price fell -0.17%. Rule reinforced: CE bloat = sell CE / buy PE."
+    },
+    {
+      "date": "2026_09_02",
+      "niftyClose": 23914.45,
+      "changePct": -0.59,
+      "ce": 130.35,
+      "pe": 114.7,
+      "skew": 6.4,
+      "signal": "NEUTRAL",
+      "predicted": "RANGE_BOUND",
+      "actual": "BEARISH",
+      "outcome": "NEUTRAL_PASS",
+      "lesson": "Equilibrium rotation — straddles decayed smoothly inside value area."
+    },
+    {
+      "date": "2026_08_31",
+      "niftyClose": 24080.4,
+      "changePct": -0.39,
+      "ce": 60.8,
+      "pe": 61.6,
+      "skew": -0.7,
+      "signal": "NEUTRAL",
+      "predicted": "RANGE_BOUND",
+      "actual": "BEARISH",
+      "outcome": "NEUTRAL_PASS",
+      "lesson": "Equilibrium rotation — straddles decayed smoothly inside value area."
+    },
+    {
+      "date": "2026_08_28",
+      "niftyClose": 24175.65,
+      "changePct": 0.35,
+      "ce": 97.5,
+      "pe": 70.75,
+      "skew": 15.9,
+      "signal": "CALL_WRITING_RESISTANCE",
+      "predicted": "BEARISH",
+      "actual": "BULLISH",
+      "outcome": "MISTAKE_CORRECTED",
+      "lesson": "FAILURE MISTAKE: Short-Covering Squeeze. Call writers got trapped as buyers broke past morning resistance with volume. Adaptation rule: Exit short calls immediately if Period C candle closes above IB High."
+    }
+  ]
+}

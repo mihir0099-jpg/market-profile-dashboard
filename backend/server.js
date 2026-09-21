@@ -132,6 +132,18 @@ app.get('/api/angelone/quote', async (req, res) => {
   }
 });
 
+// AI Analytics & Real-Time Pattern Matching Engine
+app.get('/api/ai/analytics', async (req, res) => {
+  const { symbol = 'NSE:NIFTY' } = req.query;
+  try {
+    const data = await getAiAnalytics(symbol);
+    res.json(data);
+  } catch (err) {
+    console.error('[API /api/ai/analytics Error]:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Tab Health & Auto-Healing Report API
 app.get('/api/health/tab-report', async (req, res) => {
   try {

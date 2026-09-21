@@ -1,0 +1,281 @@
+[
+  {
+    "date": "2026-09-21",
+    "timestamp": 1789962173220,
+    "istTime": "2026-09-21 09:12:53 IST",
+    "macroProfile": {
+      "niftySpot": 23327.45,
+      "niftyOpen": 23270.9,
+      "niftyChangePct": "0.24%",
+      "bankniftySpot": 56377.95,
+      "dayType": "ROTATIONAL_BALANCED_AUCTION",
+      "vixRegime": "LOW_VIX_GRIND",
+      "activeFnoOpportunities": 79
+    },
+    "autonomousLearnings": [
+      {
+        "domain": "Institutional Demat Absorption",
+        "observation": "11 F&O assets showed extreme Trade-to-Volume Price Tension (TVPT) drops with Demat delivery >65%. Smart money actively absorbed supply near 20-day value area lows (BAJAJ-AUTO, CROMPTON, CANBK, RECLTD).",
+        "ruleAction": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor."
+      },
+      {
+        "domain": "Index vs Sector Cointegration",
+        "observation": "On rotational auction days (|Nifty Change| < 0.85%), single-stock breakouts without sector backing faced a 72% reversion rate back inside Initial Balance.",
+        "ruleAction": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts."
+      },
+      {
+        "domain": "Late-Day Volume Filter (Period L)",
+        "observation": "Afternoon breakouts between 2:45 PM and 3:15 PM IST required at least 1.25x volume to sustain. Low-volume Period L spikes in KPITTECH, MARUTI, TCS printed exhaustion tails.",
+        "ruleAction": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-20",
+    "timestamp": 1789907191018,
+    "istTime": "2026-09-20 17:56:31 IST",
+    "macroProfile": {
+      "niftySpot": 23346.4,
+      "niftyOpen": 23270.9,
+      "niftyChangePct": "0.32%",
+      "bankniftySpot": 56358.7,
+      "dayType": "ROTATIONAL_BALANCED_AUCTION",
+      "vixRegime": "LOW_VIX_GRIND",
+      "activeFnoOpportunities": 79
+    },
+    "autonomousLearnings": [
+      {
+        "domain": "Institutional Demat Absorption",
+        "observation": "10 F&O assets showed extreme Trade-to-Volume Price Tension (TVPT) drops with Demat delivery >65%. Smart money actively absorbed supply near 20-day value area lows (CROMPTON, CANBK, RECLTD, GRASIM).",
+        "ruleAction": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor."
+      },
+      {
+        "domain": "Index vs Sector Cointegration",
+        "observation": "On rotational auction days (|Nifty Change| < 0.85%), single-stock breakouts without sector backing faced a 72% reversion rate back inside Initial Balance.",
+        "ruleAction": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts."
+      },
+      {
+        "domain": "Late-Day Volume Filter (Period L)",
+        "observation": "Afternoon breakouts between 2:45 PM and 3:15 PM IST required at least 1.25x volume to sustain. Low-volume Period L spikes in KPITTECH, MARUTI, TCS printed exhaustion tails.",
+        "ruleAction": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-19",
+    "timestamp": 1789816831241,
+    "istTime": "2026-09-19 16:50:31 IST",
+    "macroProfile": {
+      "niftySpot": 23346.4,
+      "niftyOpen": 23270.9,
+      "niftyChangePct": "0.32%",
+      "bankniftySpot": 56358.7,
+      "dayType": "ROTATIONAL_BALANCED_AUCTION",
+      "vixRegime": "LOW_VIX_GRIND",
+      "activeFnoOpportunities": 88
+    },
+    "autonomousLearnings": [
+      {
+        "domain": "Institutional Demat Absorption",
+        "observation": "9 F&O assets showed extreme Trade-to-Volume Price Tension (TVPT) drops with Demat delivery >65%. Smart money actively absorbed supply near 20-day value area lows (CROMPTON, CANBK, RECLTD, BRITANNIA).",
+        "ruleAction": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor."
+      },
+      {
+        "domain": "Index vs Sector Cointegration",
+        "observation": "On rotational auction days (|Nifty Change| < 0.85%), single-stock breakouts without sector backing faced a 72% reversion rate back inside Initial Balance.",
+        "ruleAction": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts."
+      },
+      {
+        "domain": "Late-Day Volume Filter (Period L)",
+        "observation": "Afternoon breakouts between 2:45 PM and 3:15 PM IST required at least 1.25x volume to sustain. Low-volume Period L spikes in KPITTECH, MARUTI, TCS printed exhaustion tails.",
+        "ruleAction": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18",
+    "timestamp": 1789730498002,
+    "istTime": "2026-09-18 16:51:37 IST",
+    "macroProfile": {
+      "niftySpot": 23346.4,
+      "niftyOpen": 23270.9,
+      "niftyChangePct": "0.32%",
+      "bankniftySpot": 56358.7,
+      "dayType": "ROTATIONAL_BALANCED_AUCTION",
+      "vixRegime": "LOW_VIX_GRIND",
+      "activeFnoOpportunities": 88
+    },
+    "autonomousLearnings": [
+      {
+        "domain": "Institutional Demat Absorption",
+        "observation": "9 F&O assets showed extreme Trade-to-Volume Price Tension (TVPT) drops with Demat delivery >65%. Smart money actively absorbed supply near 20-day value area lows (CROMPTON, CANBK, RECLTD, BRITANNIA).",
+        "ruleAction": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor."
+      },
+      {
+        "domain": "Index vs Sector Cointegration",
+        "observation": "On rotational auction days (|Nifty Change| < 0.85%), single-stock breakouts without sector backing faced a 72% reversion rate back inside Initial Balance.",
+        "ruleAction": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts."
+      },
+      {
+        "domain": "Late-Day Volume Filter (Period L)",
+        "observation": "Afternoon breakouts between 2:45 PM and 3:15 PM IST required at least 1.25x volume to sustain. Low-volume Period L spikes in KPITTECH, MARUTI, TCS printed exhaustion tails.",
+        "ruleAction": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-17",
+    "timestamp": 1789644263484,
+    "istTime": "2026-09-17 16:54:23 IST",
+    "macroProfile": {
+      "niftySpot": 23270.6,
+      "niftyOpen": 23270.9,
+      "niftyChangePct": "0%",
+      "bankniftySpot": 56055.75,
+      "dayType": "ROTATIONAL_BALANCED_AUCTION",
+      "vixRegime": "LOW_VIX_GRIND",
+      "activeFnoOpportunities": 45
+    },
+    "autonomousLearnings": [
+      {
+        "domain": "Institutional Demat Absorption",
+        "observation": "31 F&O assets showed extreme Trade-to-Volume Price Tension (TVPT) drops with Demat delivery >65%. Smart money actively absorbed supply near 20-day value area lows (HAVELLS, DALBHARAT, NAM-INDIA, ESCORTS).",
+        "ruleAction": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor."
+      },
+      {
+        "domain": "Index vs Sector Cointegration",
+        "observation": "On rotational auction days (|Nifty Change| < 0.85%), single-stock breakouts without sector backing faced a 72% reversion rate back inside Initial Balance.",
+        "ruleAction": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts."
+      },
+      {
+        "domain": "Late-Day Volume Filter (Period L)",
+        "observation": "Afternoon breakouts between 2:45 PM and 3:15 PM IST required at least 1.25x volume to sustain. Low-volume Period L spikes in PNB, BANKINDIA printed exhaustion tails.",
+        "ruleAction": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-16",
+    "timestamp": 1789575483141,
+    "istTime": "2026-09-16 21:48:03 IST",
+    "macroProfile": {
+      "niftySpot": 23217.6,
+      "niftyOpen": 23270.9,
+      "niftyChangePct": "-0.23%",
+      "bankniftySpot": 56292.45,
+      "dayType": "ROTATIONAL_BALANCED_AUCTION",
+      "vixRegime": "LOW_VIX_GRIND",
+      "activeFnoOpportunities": 38
+    },
+    "autonomousLearnings": [
+      {
+        "domain": "Institutional Demat Absorption",
+        "observation": "16 F&O assets showed extreme Trade-to-Volume Price Tension (TVPT) drops with Demat delivery >65%. Smart money actively absorbed supply near 20-day value area lows (DALBHARAT, ICICIBANK, BHARTIARTL, M&MFIN).",
+        "ruleAction": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor."
+      },
+      {
+        "domain": "Index vs Sector Cointegration",
+        "observation": "On rotational auction days (|Nifty Change| < 0.85%), single-stock breakouts without sector backing faced a 72% reversion rate back inside Initial Balance.",
+        "ruleAction": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts."
+      },
+      {
+        "domain": "Late-Day Volume Filter (Period L)",
+        "observation": "Afternoon breakouts between 2:45 PM and 3:15 PM IST required at least 1.25x volume to sustain. Low-volume Period L spikes in UPL, SONACOMS, LT printed exhaustion tails.",
+        "ruleAction": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-15",
+    "timestamp": 1789476191837,
+    "istTime": "2026-09-15 18:13:11 IST",
+    "macroProfile": {
+      "niftySpot": 23118.6,
+      "niftyOpen": 23270.9,
+      "niftyChangePct": "-0.65%",
+      "bankniftySpot": 55794.75,
+      "dayType": "ROTATIONAL_BALANCED_AUCTION",
+      "vixRegime": "LOW_VIX_GRIND",
+      "activeFnoOpportunities": 42
+    },
+    "autonomousLearnings": [
+      {
+        "domain": "Institutional Demat Absorption",
+        "observation": "6 F&O assets showed extreme Trade-to-Volume Price Tension (TVPT) drops with Demat delivery >65%. Smart money actively absorbed supply near 20-day value area lows (BHARTIARTL, ONGC, JUBLFOOD, SONACOMS).",
+        "ruleAction": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor."
+      },
+      {
+        "domain": "Index vs Sector Cointegration",
+        "observation": "On rotational auction days (|Nifty Change| < 0.85%), single-stock breakouts without sector backing faced a 72% reversion rate back inside Initial Balance.",
+        "ruleAction": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts."
+      },
+      {
+        "domain": "Late-Day Volume Filter (Period L)",
+        "observation": "Afternoon breakouts between 2:45 PM and 3:15 PM IST required at least 1.25x volume to sustain. Low-volume Period L spikes in BEL, SHRIRAMFIN, ULTRACEMCO printed exhaustion tails.",
+        "ruleAction": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-14",
+    "timestamp": 1789392563781,
+    "istTime": "2026-09-14 18:59:23 IST",
+    "macroProfile": {
+      "niftySpot": 23398.1,
+      "niftyOpen": 23270.9,
+      "niftyChangePct": "0.55%",
+      "bankniftySpot": 56606.55,
+      "dayType": "ROTATIONAL_BALANCED_AUCTION",
+      "vixRegime": "LOW_VIX_GRIND",
+      "activeFnoOpportunities": 61
+    },
+    "autonomousLearnings": [
+      {
+        "domain": "Institutional Demat Absorption",
+        "observation": "39 F&O assets showed extreme Trade-to-Volume Price Tension (TVPT) drops with Demat delivery >65%. Smart money actively absorbed supply near 20-day value area lows (PAGEIND, HEROMOTOCO, COLPAL, CANBK).",
+        "ruleAction": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor."
+      },
+      {
+        "domain": "Index vs Sector Cointegration",
+        "observation": "On rotational auction days (|Nifty Change| < 0.85%), single-stock breakouts without sector backing faced a 72% reversion rate back inside Initial Balance.",
+        "ruleAction": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts."
+      },
+      {
+        "domain": "Late-Day Volume Filter (Period L)",
+        "observation": "Afternoon breakouts between 2:45 PM and 3:15 PM IST required at least 1.25x volume to sustain. Low-volume Period L spikes in MARUTI, COALINDIA, APOLLOHOSP printed exhaustion tails.",
+        "ruleAction": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-13",
+    "timestamp": 1789312439545,
+    "istTime": "2026-09-13 20:43:59 IST",
+    "macroProfile": {
+      "niftySpot": 23398.1,
+      "niftyOpen": 23270.9,
+      "niftyChangePct": "0.55%",
+      "bankniftySpot": 56606.55,
+      "dayType": "ROTATIONAL_BALANCED_AUCTION",
+      "vixRegime": "LOW_VIX_GRIND",
+      "activeFnoOpportunities": 59
+    },
+    "autonomousLearnings": [
+      {
+        "domain": "Institutional Demat Absorption",
+        "observation": "37 F&O assets showed extreme Trade-to-Volume Price Tension (TVPT) drops with Demat delivery >65%. Smart money actively absorbed supply near 20-day value area lows (PAGEIND, HEROMOTOCO, COLPAL, SBIN).",
+        "ruleAction": "Prioritize Long call accumulation when TVPT drops >50% while spot holds within 1.5% of Demand Floor."
+      },
+      {
+        "domain": "Index vs Sector Cointegration",
+        "observation": "On rotational auction days (|Nifty Change| < 0.85%), single-stock breakouts without sector backing faced a 72% reversion rate back inside Initial Balance.",
+        "ruleAction": "Mandate minimum 2-stock sector confirmation before entering single-stock momentum breakouts."
+      },
+      {
+        "domain": "Late-Day Volume Filter (Period L)",
+        "observation": "Afternoon breakouts between 2:45 PM and 3:15 PM IST required at least 1.25x volume to sustain. Low-volume Period L spikes in MARUTI, COALINDIA, APOLLOHOSP printed exhaustion tails.",
+        "ruleAction": "Auto-invalidate Period L continuation trades if 5-min volume is below 1.25x 20-period baseline."
+      }
+    ]
+  }
+]

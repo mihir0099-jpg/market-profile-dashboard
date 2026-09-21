@@ -294,8 +294,8 @@ export class AngelOneBridge {
       // Throttle queue to strictly obey Angel One max 3 requests/sec rate limit
       const execute = async () => {
         const timeSinceLast = Date.now() - (this._lastCandleReqTime || 0);
-        if (timeSinceLast < 350) {
-          await new Promise(r => setTimeout(r, 350 - timeSinceLast));
+        if (timeSinceLast < 450) {
+          await new Promise(r => setTimeout(r, 450 - timeSinceLast));
         }
         this._lastCandleReqTime = Date.now();
 
@@ -307,9 +307,9 @@ export class AngelOneBridge {
           todate: to
         });
 
-        // If rate limited or 403, retry once after 600ms backoff
+        // If rate limited or 403, retry once after 1500ms backoff
         if (!res?.data && (res?.statusCode === 403 || res?.rawBody?.includes('exceeding') || res?.message?.includes('exceeding'))) {
-          await new Promise(r => setTimeout(r, 600));
+          await new Promise(r => setTimeout(r, 1500));
           this._lastCandleReqTime = Date.now();
           res = await this._authedPost('https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData', {
             exchange,
@@ -396,6 +396,135 @@ export class AngelOneBridge {
   async getOrderBook() {
     const res = await this._authedGet('https://apiconnect.angelone.in/rest/secure/angelbroking/order/v1/getOrderBook');
     return res?.data || [];
+  }
+
+  mapTimeframeToAngel(timeframe) {
+    const tf = String(timeframe).toUpperCase();
+    if (tf === '1' || tf === '1M' || tf === 'ONE_MINUTE') return 'ONE_MINUTE';
+    if (tf === '3' || tf === '3M' || tf === 'THREE_MINUTE') return 'THREE_MINUTE';
+    if (tf === '5' || tf === '5M' || tf === 'FIVE_MINUTE') return 'FIVE_MINUTE';
+    if (tf === '10' || tf === '10M' || tf === 'TEN_MINUTE') return 'TEN_MINUTE';
+    if (tf === '15' || tf === '15M' || tf === 'FIFTEEN_MINUTE') return 'FIFTEEN_MINUTE';
+    if (tf === '30' || tf === '30M' || tf === 'THIRTY_MINUTE') return 'THIRTY_MINUTE';
+    if (tf === '60' || tf === '1H' || tf === '60M' || tf === 'ONE_HOUR') return 'ONE_HOUR';
+    if (tf === 'D' || tf === '1D' || tf === 'DAILY' || tf === 'ONE_DAY') return 'ONE_DAY';
+    return 'THIRTY_MINUTE';
+  }
+
+  async resolveSymbolToken(symbolStr) {
+    if (!symbolStr) return null;
+    let clean = symbolStr.replace('NSE:', '').replace('BSE:', '').replace('TVC:', '').replace('OANDA:', '').replace('COINBASE:', '').trim().toUpperCase();
+    if (clean === 'NIFTY1!' || clean === 'NIFTY_50') clean = 'NIFTY';
+    if (clean === 'NIFTYBANK' || clean === 'CNXBANK') clean = 'BANKNIFTY';
+
+    if (this._tokenMap.has(clean)) {
+      return this._tokenMap.get(clean);
+    }
+
+    try {
+      const results = await this.searchScrip('NSE', clean);
+      if (results && results.length > 0) {
+        const exact = results.find(r => r.tradingsymbol === clean + '-EQ') || results[0];
+        if (exact) {
+          const meta = { exchange: exact.exchange || 'NSE', tradingsymbol: exact.tradingsymbol, symboltoken: exact.symboltoken };
+          this._tokenMap.set(clean, meta);
+          return meta;
+        }
+      }
+    } catch (e) {
+      console.warn(`[AngelOne] resolveSymbolToken search error for ${clean}:`, e.message);
+    }
+    return null;
+  }
+
+  async getFormattedCandles(symbol, timeframe, limit = 300) {
+    const meta = await this.resolveSymbolToken(symbol);
+    if (!meta) {
+      throw new Error(`Unable to resolve Angel One token for symbol: ${symbol}`);
+    }
+
+    const interval = this.mapTimeframeToAngel(timeframe);
+    const now = new Date();
+    let daysBack = 60;
+    if (interval === 'ONE_DAY') daysBack = Math.max(365, Math.ceil(limit * 1.5));
+    else if (interval === 'THIRTY_MINUTE') daysBack = Math.max(60, Math.ceil(limit / 12));
+    else if (interval === 'FIFTEEN_MINUTE') daysBack = Math.max(30, Math.ceil(limit / 25));
+    else if (interval === 'FIVE_MINUTE') daysBack = Math.max(15, Math.ceil(limit / 75));
+    else if (interval === 'ONE_MINUTE') daysBack = Math.max(5, Math.ceil(limit / 375));
+
+    const startDate = new Date(now.getTime() - daysBack * 24 * 3600 * 1000);
+    const formatDate = (d) => {
+      const pad = n => String(n).padStart(2, '0');
+      return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    };
+
+    const fromdate = formatDate(startDate);
+    const todate = formatDate(now);
+
+    const rawCandles = await this.getCandles(meta.exchange, meta.symboltoken, interval, fromdate, todate);
+    if (!Array.isArray(rawCandles) || rawCandles.length === 0) {
+      return [];
+    }
+
+    const formatted = rawCandles.map(c => {
+      const timestampMs = new Date(c[0]).getTime();
+      return {
+        time: Math.floor(timestampMs / 1000),
+        open: Number(c[1]),
+        high: Number(c[2]),
+        low: Number(c[3]),
+        close: Number(c[4]),
+        volume: Number(c[5] || 0)
+      };
+    }).sort((a, b) => a.time - b.time);
+
+    return formatted.slice(-limit);
+  }
+
+  async subscribeSymbol(symbol, timeframe, onData, onError, limit = 300) {
+    let active = true;
+    let pollTimer = null;
+
+    try {
+      const candles = await this.getFormattedCandles(symbol, timeframe, limit);
+      if (!active) return () => {};
+
+      if (candles.length > 0) {
+        onData({
+          symbol,
+          timeframe,
+          isSnapshot: true,
+          candles
+        });
+      } else {
+        throw new Error(`No candle data returned from Angel One for ${symbol}`);
+      }
+
+      pollTimer = setInterval(async () => {
+        if (!active) return;
+        try {
+          const fresh = await this.getFormattedCandles(symbol, timeframe, 5);
+          if (!active || !fresh || fresh.length === 0) return;
+          const latest = fresh[fresh.length - 1];
+          onData({
+            symbol,
+            timeframe,
+            isSnapshot: false,
+            candles: [latest]
+          });
+        } catch (e) {}
+      }, 3000);
+
+    } catch (err) {
+      if (typeof onError === 'function') {
+        onError(err);
+      }
+    }
+
+    return () => {
+      active = false;
+      if (pollTimer) clearInterval(pollTimer);
+    };
   }
 
   getStatus() {

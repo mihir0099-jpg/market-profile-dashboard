@@ -1,6 +1,5 @@
-﻿// monthly_profile_analyzer.js
-import { TradingViewBridge } from './tradingview.js';
-const tvBridge = new TradingViewBridge();
+// monthly_profile_analyzer.js
+import { primaryDataBridge } from './primary_data_bridge.js';
 
 const profileCache = new Map();
 const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes cache for ultra-fast response
@@ -78,7 +77,7 @@ export async function getMonthlyProfileData(symbol = 'NSE:NIFTY') {
 
   const candles = await new Promise((resolve, reject) => {
     const timeout = setTimeout(() => reject(new Error('Timeout fetching symbol data')), 12000);
-    tvBridge.subscribeSymbol(symbol, 'D', (data) => {
+    primaryDataBridge.subscribeSymbol(symbol, 'D', (data) => {
       if (data.isSnapshot) {
         clearTimeout(timeout);
         resolve(data.candles);

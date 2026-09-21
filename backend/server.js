@@ -3,7 +3,7 @@ import express from 'express';
 import { createServer } from 'http';
 import { WebSocketServer } from 'ws';
 import cors from 'cors';
-import { TradingViewBridge } from './tradingview.js';
+import { primaryDataBridge } from './primary_data_bridge.js';
 import { startScanner, getScannerState } from './scanner.js';
 import { runPatternLearner } from './pattern_learner.js';
 import { generateBtstReport } from './generate_btst_report.js';
@@ -73,7 +73,7 @@ app.get('/api/candles', async (req, res) => {
   try {
     const candles = await new Promise((resolve, reject) => {
       const timeout = setTimeout(() => reject(new Error('Timeout fetching candles')), 6000);
-      tvBridge.subscribeSymbol(symbol, tf, (data) => {
+      primaryDataBridge.subscribeSymbol(symbol, tf, (data) => {
         if (data.isSnapshot) {
           clearTimeout(timeout);
           resolve(data.candles);
@@ -202,8 +202,7 @@ function broadcastViewerCount() {
   });
 }
 
-const tvBridge = new TradingViewBridge();
-startScanner(tvBridge);
+startScanner(primaryDataBridge);
 
 
 wss.on('connection', (ws) => {
@@ -239,7 +238,7 @@ wss.on('connection', (ws) => {
         }
 
         // Start subscription (returns a Promise resolving to the cleanup function)
-        unsubscribePromise = tvBridge.subscribeSymbol(
+        unsubscribePromise = primaryDataBridge.subscribeSymbol(
           symbol,
           timeframe,
           (data) => {
@@ -257,7 +256,7 @@ wss.on('connection', (ws) => {
             if (ws.readyState === ws.OPEN) {
               ws.send(JSON.stringify({
                 type: 'error',
-                message: `TradingView connection error: ${err.message || err}`
+                message: `Data feed connection error: ${err.message || err}`
               }));
             }
           }

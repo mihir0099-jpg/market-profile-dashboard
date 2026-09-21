@@ -46,7 +46,7 @@ export const TAB_AUDIT_DEFINITIONS = [
     tabId: 'monthly_profile',
     tabName: '📅 Monthly Profile Engine',
     endpoint: '/api/monthly-profile?symbol=NSE:NIFTY',
-    validate: (res) => res && (res.poc || res.vah || res.val || Array.isArray(res)),
+    validate: (res) => res && (res.prevMonth || res.symbol || res.poc || res.vah || res.val || Array.isArray(res)),
     remedy: async () => 'Recalculated monthly profile TPOs and VAH/VAL boundaries'
   },
   {

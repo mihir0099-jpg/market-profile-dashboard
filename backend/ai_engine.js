@@ -282,6 +282,16 @@ function extractAndCodifyLiveRules(liveProfile) {
     });
   }
 
+  if (liveRules.length === 0) {
+    liveRules.push({
+      ruleId: `LIVE_RULE_IB_EXP_${Date.now()}`,
+      category: 'Initial Balance Dynamics',
+      observation: `Session currently within Initial Balance (${liveProfile.ibLow} – ${liveProfile.ibHigh}).`,
+      actionableRule: `Rule 5B: There is a 95% probability of IB range expansion today. Lean on IB extremes for breakout drives or opposite boundary reversals.`,
+      confidencePct: 95.0
+    });
+  }
+
   // Save new rules to auto_learned_constraints.json if not present
   try {
     let constraints = { negativeFilters: [], rulesLearnedCount: 0 };

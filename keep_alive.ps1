@@ -92,15 +92,25 @@ function Restart-Tunnels {
         }
     }
 
-    # 2. Serveo Tunnel (Instant HTTPS link)
-    $serveoProc = Get-CimInstance Win32_Process -Filter "Name = 'ssh.exe'" | Where-Object { $_.CommandLine -like "*serveo.net*" -and $_.CommandLine -like "*bhaichara-scanner-mihir*" }
-    if ($null -eq $serveoProc) {
-        Log-Message "Spawning Serveo Tunnel (bhaichara-scanner-mihir)..."
+    # 2. Serveo Tunnel (Instant HTTPS link with active health verification)
+    $serveoHealthy = $false
+    try {
+        $check = Invoke-RestMethod -Uri "https://bhaichara-scanner-mihir.serveousercontent.com/health" -Headers @{'bypass-tunnel-reminder'='true'} -TimeoutSec 3 -ErrorAction Stop
+        if ($check.status -eq "OK") {
+            $serveoHealthy = $true
+        }
+    } catch {
+        $serveoHealthy = $false
+    }
+
+    if (-not $serveoHealthy) {
+        Log-Message "Serveo Tunnel unreachable or 502 Bad Gateway. Cycling SSH tunnel..."
+        taskkill /f /im ssh.exe >$null 2>&1
         try {
             if (Test-Path "$baseDir\serveo_temp.log") { Remove-Item "$baseDir\serveo_temp.log" -Force -ErrorAction SilentlyContinue }
             if (Test-Path "$baseDir\serveo_err.log") { Remove-Item "$baseDir\serveo_err.log" -Force -ErrorAction SilentlyContinue }
-            Start-Process -FilePath "ssh" -ArgumentList "-o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -R bhaichara-scanner-mihir:80:127.0.0.1:$port serveo.net" -WorkingDirectory $baseDir -RedirectStandardOutput "$baseDir\serveo_temp.log" -RedirectStandardError "$baseDir\serveo_err.log" -WindowStyle Hidden -ErrorAction Stop
-            Log-Message "Serveo Tunnel active."
+            Start-Process -FilePath "ssh" -ArgumentList "-N -T -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -o ExitOnForwardFailure=yes -R bhaichara-scanner-mihir:80:127.0.0.1:$port serveo.net" -WorkingDirectory $baseDir -RedirectStandardOutput "$baseDir\serveo_temp.log" -RedirectStandardError "$baseDir\serveo_err.log" -WindowStyle Hidden -ErrorAction Stop
+            Log-Message "Serveo Tunnel cleanly reconnected."
         } catch {
             Log-Message "Failed to launch Serveo Tunnel: $_"
         }

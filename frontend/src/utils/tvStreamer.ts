@@ -29,6 +29,7 @@ class TVWebSocketStreamer {
   private onViewerCountCallback: OnViewerCountCallback | null = null;
   private reconnectTimeout: number | null = null;
   private pingInterval: number | null = null;
+  private restFallbackTimer: number | null = null;
   private status: 'connecting' | 'connected' | 'disconnected' = 'disconnected';
 
   constructor() {
@@ -59,7 +60,7 @@ class TVWebSocketStreamer {
         const data = await res.json();
 
         if (data.candles && data.candles.length > 0 && this.onDataCallback) {
-          console.log(`[REST Snapshot] Loaded ${data.candles.length} candles for ${symbol}`);
+          console.log(`[Angel One SmartAPI] Loaded ${data.candles.length} candles for ${symbol}`);
           this.onDataCallback({
             symbol,
             timeframe,
@@ -72,17 +73,18 @@ class TVWebSocketStreamer {
         }
       }
     } catch (err) {
-      console.warn('[REST Snapshot] Failed to fetch REST snapshot:', err);
+      console.warn('[Data Stream Snapshot] Failed to fetch snapshot:', err);
     }
   }
 
   public connect() {
+    this.url = getWsBase();
     if (this.ws && (this.ws.readyState === WebSocket.OPEN || this.ws.readyState === WebSocket.CONNECTING)) {
       return;
     }
 
     this.setStatus('connecting');
-    console.log(`Connecting to backend WebSocket at ${this.url}...`);
+    console.log(`Connecting to Angel One SmartAPI live stream at ${this.url}...`);
 
     try {
       this.ws = new WebSocket(this.url);
@@ -193,13 +195,27 @@ class TVWebSocketStreamer {
     this.onDataCallback = onData;
     if (onError) this.onErrorCallback = onError;
 
+    // 1. Immediately fetch REST snapshot from Angel One backend
     this.fetchRestSnapshot(symbol, timeframe);
 
+    // 2. Periodic background snapshot refresh every 3.5s to ensure charts never stall
+    if (this.restFallbackTimer) clearInterval(this.restFallbackTimer);
+    this.restFallbackTimer = window.setInterval(() => {
+      if (this.currentSubscription && (!this.ws || this.ws.readyState !== WebSocket.OPEN)) {
+        this.fetchRestSnapshot(this.currentSubscription.symbol, this.currentSubscription.timeframe);
+      }
+    }, 3500);
+
+    // 3. Connect real-time stream
     this.connect();
     this.sendSubscription(symbol, timeframe);
   }
 
   public unsubscribe() {
+    if (this.restFallbackTimer) {
+      clearInterval(this.restFallbackTimer);
+      this.restFallbackTimer = null;
+    }
     this.currentSubscription = null;
     this.onDataCallback = null;
     this.onErrorCallback = null;

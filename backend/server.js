@@ -12,7 +12,7 @@ import { logOptionsChainData } from './options_logger.js';
 import { getMonthlyProfileData } from './monthly_profile_analyzer.js';
 import { getFallbackExpiries, getFallbackGexData, getFallbackPcrData } from './gex_fallback_provider.js';
 import { getAiAnalytics } from './ai_engine.js';
-import { AngelOneBridge } from './angelone_bridge.js';
+import { AngelOneBridge, angelOneBridge } from './angelone_bridge.js';
 import { runTabHealthAudit } from './auto_heal_engine.js';
 import { executeDailySelfEvolution } from './autonomous_market_brain.js';
 import { exec, spawn } from 'child_process';
@@ -73,7 +73,7 @@ app.get('/api/candles', async (req, res) => {
   const { symbol = 'NSE:NIFTY', tf = '30' } = req.query;
   try {
     const candles = await new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => reject(new Error('Timeout fetching candles')), 6000);
+      const timeout = setTimeout(() => reject(new Error('Timeout fetching candles')), 15000);
       primaryDataBridge.subscribeSymbol(symbol, tf, (data) => {
         if (data.isSnapshot) {
           clearTimeout(timeout);
@@ -90,15 +90,15 @@ app.get('/api/candles', async (req, res) => {
   }
 });
 
-// Angel One Bridge Instance
-const angelBridge = new AngelOneBridge();
+// Angel One Bridge Instance (Singleton)
+const angelBridge = angelOneBridge;
 setTimeout(() => {
   angelBridge.login().then(res => {
     console.log('[Angel One Bridge] Auto-login status:', res.success ? `Connected (${res.clientCode})` : 'Pending credentials');
   }).catch(err => {
     console.warn('[Angel One Bridge] Login info:', err.message);
   });
-}, 2000);
+}, 1000);
 
 
 

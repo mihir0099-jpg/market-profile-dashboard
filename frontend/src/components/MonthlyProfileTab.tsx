@@ -159,7 +159,7 @@ export const MonthlyProfileTab: React.FC<MonthlyProfileTabProps> = ({ currentSym
       {loading ? (
         <div className="glass-panel" style={{ padding: '60px', borderRadius: '12px', textAlign: 'center' }}>
           <Loader2 size={36} className="spin" color="var(--accent-blue)" style={{ margin: '0 auto 16px auto' }} />
-          <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Fetching live TradingView monthly candles & calculating 5-day IB profile...</p>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Fetching live Angel One SmartAPI monthly candles & calculating 5-day IB profile...</p>
         </div>
       ) : error ? (
         <div className="glass-panel" style={{ padding: '30px', borderRadius: '12px', borderColor: '#ef4444', color: '#ef4444', textAlign: 'center' }}>

@@ -543,7 +543,7 @@ function App() {
           {loading && viewMode === 'profile' ? (
             <div className="glass-panel" style={{ flex: '1', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '12px', minHeight: '400px' }}>
               <Loader2 className="animate-spin" size={32} color="var(--accent-blue)" style={{ animation: 'spin 1.5s linear infinite' }} />
-              <p style={{ color: 'var(--text-secondary)', fontSize: '14px', margin: 0 }}>Connecting to TradingView WebSocket & streaming data...</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '14px', margin: 0 }}>Connecting to Angel One SmartAPI Live Feed & streaming data...</p>
             </div>
           ) : (
             <div className={viewMode === 'profile' ? "chart-section" : ""} style={{ flex: '1' }}>

@@ -19,12 +19,27 @@ export class PrimaryDataBridge {
 
     if (!isGlobalCryptoFx) {
       try {
-        const candles = await this.angelBridge.getFormattedCandles(symbol, timeframe, limit);
-        if (candles && candles.length > 0) {
-          return this.angelBridge.subscribeSymbol(symbol, timeframe, onData, onError, limit);
-        }
+        let snapshotDelivered = false;
+        const cleanup = await this.angelBridge.subscribeSymbol(
+          symbol,
+          timeframe,
+          (data) => {
+            snapshotDelivered = true;
+            onData(data);
+          },
+          (err) => {
+            if (!snapshotDelivered) {
+              console.warn(`[PrimaryDataBridge] Angel One stream error for ${symbol} (${err.message}), falling back to TradingView...`);
+              this.tvBridge.subscribeSymbol(symbol, timeframe, onData, onError, limit);
+            } else if (typeof onError === 'function') {
+              onError(err);
+            }
+          },
+          limit
+        );
+        return cleanup;
       } catch (err) {
-        console.warn(`[PrimaryDataBridge] Angel One unavailable for ${symbol} (${err.message}), falling back to TradingView...`);
+        console.warn(`[PrimaryDataBridge] Angel One initial connect error for ${symbol} (${err.message}), falling back to TradingView...`);
       }
     }
 

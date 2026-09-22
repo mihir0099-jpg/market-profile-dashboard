@@ -35,7 +35,7 @@ const app = express();
 app.use(cors({
   origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
+  allowedHeaders: ['*']
 }));
 app.use(compression());
 
@@ -48,7 +48,8 @@ const GEX_PORT = process.env.GEX_PORT || 5000;
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept');
+  res.header('Access-Control-Allow-Headers', '*');
+  res.header('Access-Control-Expose-Headers', '*');
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200);

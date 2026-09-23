@@ -480,12 +480,29 @@ function calculateDayProfile(dateStr, dayCandles, binCount = 40, symbol) {
   const periodRanges = {};
   
   for (const c of sorted) {
-    // Align TPO periods exactly to IST Exchange Hours (09:15 AM IST Open)
+    // Align TPO periods exactly to IST Exchange Hours (MCX commodities open at 09:00 AM, Equities at 09:15 AM)
+    const isCommodity9Am = symbol && (
+      symbol.toUpperCase().includes('MCX') ||
+      symbol.toUpperCase().includes('CRUDE') ||
+      symbol.toUpperCase().includes('USOIL') ||
+      symbol.toUpperCase().includes('NATURALGAS') ||
+      symbol.toUpperCase().includes('GOLD') ||
+      symbol.toUpperCase().includes('SILVER') ||
+      symbol.toUpperCase().includes('COPPER') ||
+      symbol.toUpperCase().includes('ZINC')
+    );
+    const firstCandleIst = new Date((sorted[0]?.time + 19800) * 1000);
+    const firstHour = firstCandleIst.getUTCHours();
+    const firstMin = firstCandleIst.getUTCMinutes();
+    const is9AmMarket = isCommodity9Am || (firstHour === 9 && firstMin < 15);
+    const openHour = 9;
+    const openMin = is9AmMarket ? 0 : 15;
+
     const istSeconds = c.time + 19800; // 5 hours 30 mins
     const istDate = new Date(istSeconds * 1000);
     const hour = istDate.getUTCHours();
     const min = istDate.getUTCMinutes();
-    const minsFromOpen = (hour * 60 + min) - (9 * 60 + 15);
+    const minsFromOpen = (hour * 60 + min) - (openHour * 60 + openMin);
     let periodIndex = Math.floor(minsFromOpen / 30);
     if (periodIndex < 0) periodIndex = 0;
     

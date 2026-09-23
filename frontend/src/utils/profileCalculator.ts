@@ -198,14 +198,30 @@ export function calculateDayProfile(
       periodIndex = uniqueDays.indexOf(cdStr);
     } else {
       // Align TPO periods to exchange hours:
-      // MCX commodities open at 09:00 AM IST; Indian equities at 09:15 AM IST
+      // MCX commodities (Crude Oil, Natural Gas, Gold, Silver) open at 09:00 AM IST; Indian equities at 09:15 AM IST
       const istSeconds = c.time + 19800; // 5 hours 30 mins
       const istDate = new Date(istSeconds * 1000);
       const hour = istDate.getUTCHours();
       const min = istDate.getUTCMinutes();
-      const isMcx = symbol && (symbol.toUpperCase().includes('MCX') || symbol.toUpperCase().includes('CRUDEOIL'));
-      const openHour = isMcx ? 9 : 9;
-      const openMin = isMcx ? 0 : 15;
+      
+      const isCommodity9Am = symbol && (
+        symbol.toUpperCase().includes('MCX') ||
+        symbol.toUpperCase().includes('CRUDE') ||
+        symbol.toUpperCase().includes('USOIL') ||
+        symbol.toUpperCase().includes('NATURALGAS') ||
+        symbol.toUpperCase().includes('GOLD') ||
+        symbol.toUpperCase().includes('SILVER') ||
+        symbol.toUpperCase().includes('COPPER') ||
+        symbol.toUpperCase().includes('ZINC')
+      );
+      // Auto-detect from first candle time of the day as well
+      const firstCandleIst = new Date((dayCandles[0]?.time + 19800) * 1000);
+      const firstHour = firstCandleIst.getUTCHours();
+      const firstMin = firstCandleIst.getUTCMinutes();
+      const is9AmMarket = isCommodity9Am || (firstHour === 9 && firstMin < 15);
+      
+      const openHour = 9;
+      const openMin = is9AmMarket ? 0 : 15;
       const minsFromOpen = (hour * 60 + min) - (openHour * 60 + openMin);
       periodIndex = Math.floor(minsFromOpen / 30);
       if (periodIndex < 0) periodIndex = 0;
@@ -375,7 +391,7 @@ export function calculateDayProfile(
     const dailyGroups = groupCandlesByDay(sorted);
     const sortedDays = Object.keys(dailyGroups).sort();
     subProfiles = sortedDays.map(dayStr => {
-      return calculateDayProfile(dayStr, dailyGroups[dayStr], binCount, 'daily', prices, tickSize);
+      return calculateDayProfile(dayStr, dailyGroups[dayStr], binCount, 'daily', prices, tickSize, symbol);
     });
   }
 

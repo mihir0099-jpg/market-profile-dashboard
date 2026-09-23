@@ -33,7 +33,13 @@ function Log-Message {
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     $logLine = "[$timestamp] $message"
     Write-Output $logLine
-    Add-Content -Path $logFile -Value $logLine -ErrorAction SilentlyContinue
+    try {
+        if ((Test-Path $logFile) -and ((Get-Item $logFile).Length -gt 500KB)) {
+            $tail = Get-Content $logFile -Tail 200
+            Set-Content -Path $logFile -Value $tail -Force
+        }
+        Add-Content -Path $logFile -Value $logLine -ErrorAction SilentlyContinue
+    } catch {}
 }
 
 Log-Message "=== Keep-Alive 24/7 Watchdog Starting ==="
@@ -68,12 +74,19 @@ function Test-InternetFast {
     return $false
 }
 
+$global:sshStartTime = 0
+$global:serveoFailures = 0
+$global:lastSshAttempt = 0
+$global:lastLtAttempt = 0
+
 function Restart-Tunnels {
     param([bool]$forceKill = $false)
     
     if ($forceKill) {
         Log-Message "Purging all stale tunnel processes and broken sockets..."
         taskkill /f /im ssh.exe >$null 2>&1
+        $global:serveoFailures = 0
+        $global:sshStartTime = 0
         Get-CimInstance Win32_Process -Filter "Name = 'node.exe'" | Where-Object { $_.CommandLine -like "*localtunnel*" } | ForEach-Object {
             Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue
         }
@@ -92,36 +105,66 @@ function Restart-Tunnels {
         }
     }
 
-    # 2. Serveo Tunnel (Instant HTTPS link with active health verification)
-    $serveoHealthy = $false
-    try {
-        $check = Invoke-RestMethod -Uri "https://bhaichara-scanner-mihir.serveousercontent.com/health" -Headers @{'bypass-tunnel-reminder'='true'} -TimeoutSec 3 -ErrorAction Stop
-        if ($check.status -eq "OK") {
-            $serveoHealthy = $true
+    # 2. Serveo Tunnel (Stable SSH Reverse Tunnel with Grace Period and Failure Counter)
+    $sshProc = Get-CimInstance Win32_Process -Filter "Name = 'ssh.exe'" | Where-Object { $_.CommandLine -like "*bhaichara-scanner-mihir*" }
+    $nowTicks = [Environment]::TickCount
+
+    if ($null -eq $sshProc) {
+        $msSinceLastSsh = $nowTicks - $global:lastSshAttempt
+        if ($msSinceLastSsh -ge 60000 -or $global:lastSshAttempt -eq 0) {
+            $global:lastSshAttempt = $nowTicks
+            Log-Message "Starting Serveo SSH tunnel (bhaichara-scanner-mihir:80 -> 127.0.0.1:$port)..."
+            try {
+                if (Test-Path "$baseDir\serveo_temp.log") { Remove-Item "$baseDir\serveo_temp.log" -Force -ErrorAction SilentlyContinue }
+                if (Test-Path "$baseDir\serveo_err.log") { Remove-Item "$baseDir\serveo_err.log" -Force -ErrorAction SilentlyContinue }
+                Start-Process -FilePath "ssh" -ArgumentList "-N -T -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -o ExitOnForwardFailure=yes -R bhaichara-scanner-mihir:80:127.0.0.1:$port serveo.net" -WorkingDirectory $baseDir -RedirectStandardOutput "$baseDir\serveo_temp.log" -RedirectStandardError "$baseDir\serveo_err.log" -WindowStyle Hidden -ErrorAction Stop
+                $global:sshStartTime = $nowTicks
+                $global:serveoFailures = 0
+                Log-Message "Serveo Tunnel started."
+            } catch {
+                Log-Message "Failed to launch Serveo Tunnel: $_"
+            }
         }
-    } catch {
-        $serveoHealthy = $false
+    } else {
+        # Check health only after 20s warm-up grace period
+        $uptimeMs = $nowTicks - $global:sshStartTime
+        if ($uptimeMs -gt 20000 -or $global:sshStartTime -eq 0) {
+            $serveoHealthy = $false
+            try {
+                $check = Invoke-RestMethod -Uri "https://bhaichara-scanner-mihir.serveousercontent.com/health" -Headers @{'bypass-tunnel-reminder'='true'} -TimeoutSec 6 -ErrorAction Stop
+                if ($check.status -eq "OK") {
+                    $serveoHealthy = $true
+                    $global:serveoFailures = 0
+                }
+            } catch {
+                $serveoHealthy = $false
+            }
+
+            if (-not $serveoHealthy) {
+                $global:serveoFailures++
+                if ($global:serveoFailures -ge 5) {
+                    Log-Message "Serveo Tunnel failed 5 consecutive checks ($($global:serveoFailures)). Cycling SSH tunnel..."
+                    taskkill /f /im ssh.exe >$null 2>&1
+                    $global:serveoFailures = 0
+                    Start-Sleep -Milliseconds 1000
+                    Start-Process -FilePath "ssh" -ArgumentList "-N -T -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -o ExitOnForwardFailure=yes -R bhaichara-scanner-mihir:80:127.0.0.1:$port serveo.net" -WorkingDirectory $baseDir -RedirectStandardOutput "$baseDir\serveo_temp.log" -RedirectStandardError "$baseDir\serveo_err.log" -WindowStyle Hidden -ErrorAction SilentlyContinue
+                    $global:sshStartTime = [Environment]::TickCount
+                    Log-Message "Serveo Tunnel reconnected."
+                }
+            }
+        }
     }
 
-    if (-not $serveoHealthy) {
-        Log-Message "Serveo Tunnel unreachable or 502 Bad Gateway. Cycling SSH tunnel..."
-        taskkill /f /im ssh.exe >$null 2>&1
-        try {
-            if (Test-Path "$baseDir\serveo_temp.log") { Remove-Item "$baseDir\serveo_temp.log" -Force -ErrorAction SilentlyContinue }
-            if (Test-Path "$baseDir\serveo_err.log") { Remove-Item "$baseDir\serveo_err.log" -Force -ErrorAction SilentlyContinue }
-            Start-Process -FilePath "ssh" -ArgumentList "-N -T -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -o ExitOnForwardFailure=yes -R bhaichara-scanner-mihir:80:127.0.0.1:$port serveo.net" -WorkingDirectory $baseDir -RedirectStandardOutput "$baseDir\serveo_temp.log" -RedirectStandardError "$baseDir\serveo_err.log" -WindowStyle Hidden -ErrorAction Stop
-            Log-Message "Serveo Tunnel cleanly reconnected."
-        } catch {
-            Log-Message "Failed to launch Serveo Tunnel: $_"
-        }
-    }
-
-    # 3. Localtunnel Backup
+    # 3. Localtunnel Backup (with 60-second backoff)
     $ltProc = Get-CimInstance Win32_Process -Filter "Name = 'node.exe'" | Where-Object { $_.CommandLine -like "*localtunnel*" }
     if ($null -eq $ltProc) {
-        try {
-            Start-Process -FilePath "cmd.exe" -ArgumentList "/c npx localtunnel --port $port --subdomain bhaichara-scanner-mihir" -WorkingDirectory $baseDir -WindowStyle Hidden -ErrorAction SilentlyContinue
-        } catch {}
+        $msSinceLastLt = $nowTicks - $global:lastLtAttempt
+        if ($msSinceLastLt -ge 60000 -or $global:lastLtAttempt -eq 0) {
+            $global:lastLtAttempt = $nowTicks
+            try {
+                Start-Process -FilePath "cmd.exe" -ArgumentList "/c npx --yes localtunnel --port $port --subdomain bhaichara-scanner-mihir" -WorkingDirectory $baseDir -WindowStyle Hidden -ErrorAction SilentlyContinue
+            } catch {}
+        }
     }
 }
 
@@ -186,7 +229,7 @@ for ($i = 0; $i -lt 20; $i++) {
 # --- Main 24/7 Self-Healing Loop ---
 $wasOnline = $true
 $nodeFailures = 0
-$pollInterval = 6
+$pollInterval = 20
 
 while ($true) {
     try {

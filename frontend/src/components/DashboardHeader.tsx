@@ -478,28 +478,26 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
               AI Engine
             </button>
 
-            {(window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && (
-              <button
-                onClick={() => onViewModeChange('reports')}
-                style={{
-                  background: viewMode === 'reports' ? 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))' : 'transparent',
-                  border: 'none',
-                  borderRadius: '6px',
-                  color: 'white',
-                  padding: '6px 12px',
-                  fontSize: '12px',
-                  fontWeight: '600',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  transition: 'all 0.2s'
-                }}
-              >
-                <BarChart2 size={13} color="var(--accent-purple)" />
-                Daily Post-Mortem
-              </button>
-            )}
+            <button
+              onClick={() => onViewModeChange('reports')}
+              style={{
+                background: viewMode === 'reports' ? 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))' : 'transparent',
+                border: 'none',
+                borderRadius: '6px',
+                color: 'white',
+                padding: '6px 12px',
+                fontSize: '12px',
+                fontWeight: '600',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                transition: 'all 0.2s'
+              }}
+            >
+              <BarChart2 size={13} color="var(--accent-purple)" />
+              Reports
+            </button>
           </div>
 
         )}

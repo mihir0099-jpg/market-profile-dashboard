@@ -1,17 +1,17 @@
 {
-  "timestamp": 1789889760026,
-  "istTime": "20/9/2026, 1:06:00 pm",
+  "timestamp": 1789964174834,
+  "istTime": "21/9/2026, 9:46:14 am",
   "totalTabsAudited": 7,
-  "operationalCount": 6,
-  "totalHealsPerformed": 1,
-  "overallStatus": "MOSTLY_HEALTHY",
+  "operationalCount": 7,
+  "totalHealsPerformed": 0,
+  "overallStatus": "ALL_SYSTEMS_GREEN",
   "tabs": [
     {
       "tabId": "backend_health",
       "tabName": "🟢 Backend Root Health",
       "endpoint": "/health",
       "status": "OPERATIONAL",
-      "latencyMs": 13,
+      "latencyMs": 26,
       "healed": false,
       "error": null
     },
@@ -20,7 +20,7 @@
       "tabName": "📊 Live Scanner Engine",
       "endpoint": "/api/scanner",
       "status": "OPERATIONAL",
-      "latencyMs": 2,
+      "latencyMs": 13,
       "healed": false,
       "error": null
     },
@@ -29,7 +29,7 @@
       "tabName": "🕯️ Candles REST Snapshot",
       "endpoint": "/api/candles?symbol=NSE:NIFTY&tf=30",
       "status": "OPERATIONAL",
-      "latencyMs": 227,
+      "latencyMs": 142,
       "healed": false,
       "error": null
     },
@@ -37,18 +37,17 @@
       "tabId": "monthly_profile",
       "tabName": "📅 Monthly Profile Engine",
       "endpoint": "/api/monthly-profile?symbol=NSE:NIFTY",
-      "status": "DEGRADED",
-      "latencyMs": 6,
-      "healed": true,
-      "remedyAction": "Recalculated monthly profile TPOs and VAH/VAL boundaries",
-      "error": "Zero data / empty payload returned"
+      "status": "OPERATIONAL",
+      "latencyMs": 2,
+      "healed": false,
+      "error": null
     },
     {
       "tabId": "ai_analytics",
       "tabName": "🧠 AI Analytics Engine",
       "endpoint": "/api/ai/analytics?symbol=NSE:NIFTY",
       "status": "OPERATIONAL",
-      "latencyMs": 5,
+      "latencyMs": 2,
       "healed": false,
       "error": null
     },
@@ -57,7 +56,7 @@
       "tabName": "⚡ Angel One SmartAPI Bridge",
       "endpoint": "/api/angelone/status",
       "status": "OPERATIONAL",
-      "latencyMs": 2,
+      "latencyMs": 5,
       "healed": false,
       "error": null
     },
@@ -66,7 +65,7 @@
       "tabName": "📑 Daily Market Reports",
       "endpoint": "/api/daily-reports",
       "status": "OPERATIONAL",
-      "latencyMs": 19,
+      "latencyMs": 8,
       "healed": false,
       "error": null
     }

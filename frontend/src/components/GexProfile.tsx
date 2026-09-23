@@ -18,16 +18,16 @@ export const GexProfile: React.FC<GexProfileProps> = ({
   gexData,
   loading
 }) => {
-  const isNseSymbol = symbol.startsWith('NSE:');
+  const isSupportedSymbol = symbol.startsWith('NSE:') || symbol.startsWith('MCX:') || symbol.includes('CRUDE');
 
-  if (!isNseSymbol) {
+  if (!isSupportedSymbol) {
     return (
       <div className="glass-panel animate-fade-in" style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '16px', flex: '1', minHeight: '400px', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
         <AlertTriangle size={32} color="#f59e0b" />
         <div>
           <h3 style={{ fontSize: '16px', fontWeight: '700', color: 'white', margin: '0 0 8px 0' }}>GEX Analysis Unavailable</h3>
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)', maxWidth: '400px', margin: 0 }}>
-            Option Chain Gamma Exposure (GEX) analysis is currently only available for Indian NSE Indices and F&O preset symbols (e.g. NIFTY, BANKNIFTY, RELIANCE).
+            Option Chain Gamma Exposure (GEX) analysis is currently available for Indian NSE Indices, F&O preset symbols, and MCX Crude Oil.
           </p>
         </div>
       </div>

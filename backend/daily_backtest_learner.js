@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { TradingViewBridge } from './tradingview.js';
+import { angelOneBridge } from './angelone_bridge.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -51,6 +52,188 @@ async function fetchJsonSafely(url) {
     console.error(`[Daily Post-Mortem] Failed to fetch JSON from ${url}:`, e.message);
   }
   return null;
+}
+
+async function getMarketProfileSummary(symbolName, exchange, token, tickSize, todayStr, startTime = '09:15') {
+  try {
+    await angelOneBridge.login();
+    const candles = await angelOneBridge.getCandles(exchange, token, 'THIRTY_MINUTE', `${todayStr} ${startTime}`, `${todayStr} 18:30`);
+    if (!candles || candles.length === 0) return null;
+
+    const periods = 'ABCDEFGHIJKLM';
+    const dayOpen = candles[0][1];
+    let dayHigh = -Infinity, dayLow = Infinity;
+    let dayClose = candles[candles.length - 1][4];
+
+    // 1. Initial Balance (Periods A & B = candles 0 and 1)
+    const ibHigh = Math.max(candles[0][2], (candles[1] ? candles[1][2] : candles[0][2]));
+    const ibLow = Math.min(candles[0][3], (candles[1] ? candles[1][3] : candles[0][3]));
+    const ibWidth = ibHigh - ibLow;
+
+    // 2. Day Range & TPO Bins
+    const priceBins = new Map();
+    candles.forEach((c, idx) => {
+      const pLetter = periods[idx] || 'Z';
+      const o = c[1], h = c[2], l = c[3], cl = c[4];
+      if (h > dayHigh) dayHigh = h;
+      if (l < dayLow) dayLow = l;
+
+      const minTick = Math.floor(l / tickSize) * tickSize;
+      const maxTick = Math.ceil(h / tickSize) * tickSize;
+      for (let p = minTick; p <= maxTick; p += tickSize) {
+        const roundedPrice = Math.round(p * 100) / 100;
+        if (!priceBins.has(roundedPrice)) priceBins.set(roundedPrice, new Set());
+        priceBins.get(roundedPrice).add(pLetter);
+      }
+    });
+
+    const totalRange = dayHigh - dayLow;
+    const sortedPrices = Array.from(priceBins.keys()).sort((a,b) => a - b);
+
+    // 3. Find POC
+    let maxTpoCount = 0;
+    let poc = sortedPrices[0];
+    for (const p of sortedPrices) {
+      const count = priceBins.get(p).size;
+      if (count > maxTpoCount) {
+        maxTpoCount = count;
+        poc = p;
+      }
+    }
+
+    // 4. Value Area (70% of total TPOs)
+    let totalTpos = 0;
+    for (const p of sortedPrices) totalTpos += priceBins.get(p).size;
+    const targetTpos = totalTpos * 0.70;
+
+    let vaTpos = priceBins.get(poc).size;
+    let upIdx = sortedPrices.indexOf(poc);
+    let downIdx = upIdx;
+
+    while (vaTpos < targetTpos && (upIdx < sortedPrices.length - 1 || downIdx > 0)) {
+      const nextUp1 = upIdx + 1 < sortedPrices.length ? priceBins.get(sortedPrices[upIdx + 1]).size : 0;
+      const nextUp2 = upIdx + 2 < sortedPrices.length ? priceBins.get(sortedPrices[upIdx + 2]).size : 0;
+      const sumUp = nextUp1 + nextUp2;
+
+      const nextDown1 = downIdx - 1 >= 0 ? priceBins.get(sortedPrices[downIdx - 1]).size : 0;
+      const nextDown2 = downIdx - 2 >= 0 ? priceBins.get(sortedPrices[downIdx - 2]).size : 0;
+      const sumDown = nextDown1 + nextDown2;
+
+      if (sumUp >= sumDown && upIdx < sortedPrices.length - 1) {
+        upIdx = Math.min(sortedPrices.length - 1, upIdx + 2);
+        vaTpos += sumUp;
+      } else if (downIdx > 0) {
+        downIdx = Math.max(0, downIdx - 2);
+        vaTpos += sumDown;
+      } else {
+        break;
+      }
+    }
+
+    const vah = sortedPrices[upIdx];
+    const val = sortedPrices[downIdx];
+
+    // 5. Shape Classification (Steidlmayer / Dalton Standards)
+    const pocRatio = totalRange > 0 ? (poc - dayLow) / totalRange : 0.5;
+    const ibExtension = ibWidth > 0 ? totalRange / ibWidth : 1.0;
+    const ibHighBroken = dayHigh > ibHigh;
+    const ibLowBroken = dayLow < ibLow;
+
+    let shape = 'Normal Day (Inside Balance / No Breakout)';
+    if (ibHighBroken && ibLowBroken) {
+      const closeNearHigh = Math.abs(dayClose - dayHigh) < (totalRange * 0.2);
+      const closeNearLow = Math.abs(dayClose - dayLow) < (totalRange * 0.2);
+      shape = (closeNearHigh || closeNearLow)
+        ? 'Neutral Extreme Day (Double IB Sweep with Trend Close)'
+        : 'Neutral Center Day (Double IB Sweep Reversal into Range)';
+    } else if (ibHighBroken || ibLowBroken) {
+      if (ibExtension >= 2.0) {
+        shape = 'Trend Day (High Directional Conviction / OTF Expansion)';
+      } else if (ibExtension >= 1.2) {
+        shape = 'Normal Variation Day (IB Extension by 0.5x - 1.0x IB Width)';
+      } else {
+        shape = 'Normal Day (Slight IB Extension < 1.2x)';
+      }
+    } else {
+      if (pocRatio >= 0.65) {
+        shape = 'P-Shape (Short-Covering / Upper Balance)';
+      } else if (pocRatio <= 0.35) {
+        shape = 'b-Shape (Long-Liquidation / Lower Balance)';
+      } else {
+        shape = 'Normal Day (Equilibrium / D-Shape Balance)';
+      }
+    }
+
+    // 6. Anomalies
+    const highTpos = priceBins.get(sortedPrices[sortedPrices.length - 1])?.size || 0;
+    const lowTpos = priceBins.get(sortedPrices[0])?.size || 0;
+    const isPoorHigh = highTpos >= 2;
+    const isPoorLow = lowTpos >= 2;
+
+    // 7. Today's Initial Balance Fibonacci Extension Audit (1.618x, 2.618x, 3.618x)
+    const up1618 = Math.round((ibHigh + ibWidth * 0.618) * 100) / 100;
+    const up2618 = Math.round((ibHigh + ibWidth * 1.618) * 100) / 100;
+    const up3618 = Math.round((ibHigh + ibWidth * 2.618) * 100) / 100;
+
+    const dn1618 = Math.round((ibLow - ibWidth * 0.618) * 100) / 100;
+    const dn2618 = Math.round((ibLow - ibWidth * 1.618) * 100) / 100;
+    const dn3618 = Math.round((ibLow - ibWidth * 2.618) * 100) / 100;
+
+    const hitUp1618 = dayHigh >= up1618;
+    const hitUp2618 = dayHigh >= up2618;
+    const hitUp3618 = dayHigh >= up3618;
+
+    const hitDn1618 = dayLow <= dn1618;
+    const hitDn2618 = dayLow <= dn2618;
+    const hitDn3618 = dayLow <= dn3618;
+
+    const isDown = !ibHighBroken && ibLowBroken;
+    const t1618 = isDown ? dn1618 : up1618;
+    const hit1618 = isDown ? hitDn1618 : hitUp1618;
+    const t2618 = isDown ? dn2618 : up2618;
+    const hit2618 = isDown ? hitDn2618 : hitUp2618;
+    const t3618 = isDown ? dn3618 : up3618;
+    const hit3618 = isDown ? hitDn3618 : hitUp3618;
+
+    const fibAudit = {
+      ibHighBroken,
+      ibLowBroken,
+      ibExtension: Math.round(ibExtension * 100) / 100,
+      direction: ibHighBroken ? (ibLowBroken ? 'Double Break (Neutral)' : 'Upside Breakout') : (ibLowBroken ? 'Downside Breakdown' : 'Inside IB (No Break)'),
+      summary1618: `${t1618} (${hit1618 ? '✅ HIT' : '❌ MISSED'})`,
+      summary2618: `${t2618} (${hit2618 ? '✅ HIT' : '❌ MISSED'})`,
+      summary3618: `${t3618} (${hit3618 ? '✅ HIT' : '❌ MISSED'})`,
+      up: {
+        fib1618: up1618, hit1618: hitUp1618,
+        fib2618: up2618, hit2618: hitUp2618,
+        fib3618: up3618, hit3618: hitUp3618
+      },
+      down: {
+        fib1618: dn1618, hit1618: hitDn1618,
+        fib2618: dn2618, hit2618: hitDn2618,
+        fib3618: dn3618, hit3618: hitDn3618
+      }
+    };
+
+    // Expected Range for Tomorrow (1.618x Fibonacci projection from IB & Value Area)
+    const expHigh = Math.round((vah + ibWidth * 0.618) * 100) / 100;
+    const expLow = Math.round((val - ibWidth * 0.618) * 100) / 100;
+
+    return {
+      symbol: symbolName,
+      dayOpen, dayHigh, dayLow, dayClose,
+      ibHigh, ibLow, ibWidth: Math.round(ibWidth * 100) / 100,
+      totalRange: Math.round(totalRange * 100) / 100,
+      poc, vah, val,
+      shape,
+      isPoorHigh, isPoorLow,
+      fibAudit,
+      expHigh, expLow
+    };
+  } catch (err) {
+    console.warn(`[Profile Summary Error for ${symbolName}]:`, err.message);
+    return null;
+  }
 }
 
 export async function runDailyPostMortem(forceRun = false) {
@@ -249,13 +432,69 @@ export async function runDailyPostMortem(forceRun = false) {
     journal = [...journal, ...journalEntries];
     fs.writeFileSync(journalPath, JSON.stringify(journal, null, 2), 'utf8');
 
-    // 4. Compile and Publish Daily Markdown Report
-    let mdReport = `# 📈 Daily Market Profile & Options Post-Mortem Report (${todayStr})
-This report details the conjoint GEX/PCR predictions, complete trade outcomes, and automated machine learning diagnostics compiled immediately following today's market close.
+    // 4. Compute Market Profiles for Nifty, Bank Nifty, and MCX Crude Oil
+    console.log('[Daily Post-Mortem] Building Market Profile daily post-mortem & predictive models...');
+    const niftyProfile = await getMarketProfileSummary('NIFTY', 'NSE', '99926000', 10, todayStr, '09:15');
+    const bnProfile = await getMarketProfileSummary('BANKNIFTY', 'NSE', '99926009', 50, todayStr, '09:15');
+    const crudeProfile = await getMarketProfileSummary('CRUDEOIL', 'MCX', '569900', 10, todayStr, '09:00');
+
+    // 5. Compile and Publish Daily Markdown Report
+    let mdReport = `# 🏛️ Daily Market Profile Post-Mortem & Tomorrow's Forecast (${todayStr})
+This report compiles today's Market Profile auction structure, value area migrations, failed auctions, and tomorrow's predictive trading ranges across NIFTY, BANKNIFTY, and MCX CRUDE OIL.
 
 ---
 
-## 1. Conjoint Index GEX & PCR Market State
+## 1. 🏛️ Market Profile Auction Structure & Key Levels
+| Symbol | Close | Profile Shape | POC (Fair Value) | VAH | VAL | IB Range | Total Day Range | 1.618 Hit | 2.618 Hit | 3.618 Hit |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :---: |
+| **NIFTY** | **${niftyProfile ? niftyProfile.dayClose.toFixed(2) : 'N/A'}** | ${niftyProfile?.shape || 'N/A'} | **${niftyProfile?.poc || 'N/A'}** | **${niftyProfile?.vah || 'N/A'}** | **${niftyProfile?.val || 'N/A'}** | ${niftyProfile ? `${niftyProfile.ibLow} - ${niftyProfile.ibHigh} (${niftyProfile.ibWidth} pts)` : 'N/A'} | ${niftyProfile ? `${niftyProfile.totalRange} pts (${niftyProfile.fibAudit.ibExtension}x IB)` : 'N/A'} | ${niftyProfile?.fibAudit?.summary1618 || 'N/A'} | ${niftyProfile?.fibAudit?.summary2618 || 'N/A'} | ${niftyProfile?.fibAudit?.summary3618 || 'N/A'} |
+| **BANKNIFTY** | **${bnProfile ? bnProfile.dayClose.toFixed(2) : 'N/A'}** | ${bnProfile?.shape || 'N/A'} | **${bnProfile?.poc || 'N/A'}** | **${bnProfile?.vah || 'N/A'}** | **${bnProfile?.val || 'N/A'}** | ${bnProfile ? `${bnProfile.ibLow} - ${bnProfile.ibHigh} (${bnProfile.ibWidth} pts)` : 'N/A'} | ${bnProfile ? `${bnProfile.totalRange} pts (${bnProfile.fibAudit.ibExtension}x IB)` : 'N/A'} | ${bnProfile?.fibAudit?.summary1618 || 'N/A'} | ${bnProfile?.fibAudit?.summary2618 || 'N/A'} | ${bnProfile?.fibAudit?.summary3618 || 'N/A'} |
+| **CRUDEOIL** | **${crudeProfile ? crudeProfile.dayClose.toFixed(2) : 'N/A'}** | ${crudeProfile?.shape || 'N/A'} | **${crudeProfile?.poc || 'N/A'}** | **${crudeProfile?.vah || 'N/A'}** | **${crudeProfile?.val || 'N/A'}** | ${crudeProfile ? `${crudeProfile.ibLow} - ${crudeProfile.ibHigh} (${crudeProfile.ibWidth} pts)` : 'N/A'} | ${crudeProfile ? `${crudeProfile.totalRange} pts (${crudeProfile.fibAudit.ibExtension}x IB)` : 'N/A'} | ${crudeProfile?.fibAudit?.summary1618 || 'N/A'} | ${crudeProfile?.fibAudit?.summary2618 || 'N/A'} | ${crudeProfile?.fibAudit?.summary3618 || 'N/A'} |
+
+---
+
+## 2. 🔮 Tomorrow's Predictive Range & 3-Scenario Playbook
+
+### A. NIFTY 50
+* **Expected Trading Range Tomorrow:** **${niftyProfile?.expLow} — ${niftyProfile?.expHigh}** (Median Pivot: **${niftyProfile?.poc}**)
+* **Structural Diagnosis:** Today closed as **${niftyProfile?.shape}**.
+* **Auction Anomalies:** ${niftyProfile?.isPoorHigh ? '⚠️ **Poor High detected:** Unfinished auction at highs awaiting a sweep.' : (niftyProfile?.isPoorLow ? '⚠️ **Poor Low detected:** Unfinished auction at lows awaiting a sweep.' : 'Clean auction excess printed on session extremes.')}
+* **Tomorrow's Tactical Playbook:**
+  * **Scenario 1 (Open Above VAH ${niftyProfile?.vah}):** Bullish initiative buyers in control. Look for acceptance above ${niftyProfile?.vah} targeting **${niftyProfile?.expHigh}**. If price slips back inside ${niftyProfile?.vah}, immediately fade the fakeout targeting Prior POC **${niftyProfile?.poc}**.
+  * **Scenario 2 (Open Inside Value ${niftyProfile?.val} – ${niftyProfile?.vah}):** Market in equilibrium. Apply the **80% Rule**: if price moves towards an extreme (VAH/VAL) and gets rejected, trade the rotation across the Value Area targeting **Prior POC ${niftyProfile?.poc}** and the opposite boundary.
+  * **Scenario 3 (Open Below VAL ${niftyProfile?.val}):** Bearish initiative sellers in control. Watch for resistance at ${niftyProfile?.val} targeting **${niftyProfile?.expLow}**.
+
+### B. BANK NIFTY
+* **Expected Trading Range Tomorrow:** **${bnProfile?.expLow} — ${bnProfile?.expHigh}** (Median Pivot: **${bnProfile?.poc}**)
+* **Structural Diagnosis:** Today closed as **${bnProfile?.shape}**.
+* **Auction Anomalies:** ${bnProfile?.isPoorHigh ? '⚠️ **Poor High detected:** Unfinished auction at highs awaiting a sweep.' : (bnProfile?.isPoorLow ? '⚠️ **Poor Low detected:** Unfinished auction at lows awaiting a sweep.' : 'Clean auction excess printed on session extremes.')}
+* **Tomorrow's Tactical Playbook:**
+  * **Scenario 1 (Open Above VAH ${bnProfile?.vah}):** Initiative long bias. Target extension to **${bnProfile?.expHigh}**.
+  * **Scenario 2 (Open Inside Value ${bnProfile?.val} – ${bnProfile?.vah}):** Rotational chop between ${bnProfile?.val} and ${bnProfile?.vah}. Fade extremes targeting **POC ${bnProfile?.poc}**.
+  * **Scenario 3 (Open Below VAL ${bnProfile?.val}):** Breakdown expansion targeting **${bnProfile?.expLow}**.
+
+### C. MCX CRUDE OIL
+* **Expected Trading Range Tomorrow:** **₹${crudeProfile?.expLow} — ₹${crudeProfile?.expHigh}** (Median Pivot: **₹${crudeProfile?.poc}**)
+* **Structural Diagnosis:** Today closed as **${crudeProfile?.shape}**.
+* **Tomorrow's Tactical Playbook:**
+  * **Scenario 1 (Open Above VAH ₹${crudeProfile?.vah}):** Watch for continuation targeting **₹${crudeProfile?.expHigh}** and Call Wall **₹9500**.
+  * **Scenario 2 (Open Inside Value ₹${crudeProfile?.val} – ₹${crudeProfile?.vah}):** Trade mean reversion back to **Prior POC ₹${crudeProfile?.poc}**.
+  * **Scenario 3 (Open Below VAL ₹${crudeProfile?.val}):** Downside drive targeting **₹${crudeProfile?.expLow}** and Put Wall **₹8500**.
+
+---
+
+## 3. 🎯 Today's Initial Balance (IB) Fibonacci Extensions Audit
+*Market Profile Rule 12: A standard range breakout expands to 1.618x IB (high-probability ~45%), while 2.618x (<10%) and 3.618x (<3%) are extreme statistical trend outliers.*
+
+| Asset | IB High / Low | IB Width | Extension Multiple | Breakout Direction | 1.618x Target | 2.618x Target | 3.618x Target | Highest Fib Level Reached |
+| :--- | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
+| **NIFTY** | ${niftyProfile ? `${niftyProfile.ibLow} / ${niftyProfile.ibHigh}` : 'N/A'} | ${niftyProfile?.ibWidth || 'N/A'} pts | **${niftyProfile?.fibAudit?.ibExtension || '1.0'}x** | **${niftyProfile?.fibAudit?.direction || 'N/A'}** | ${niftyProfile?.fibAudit?.up?.fib1618} (${niftyProfile?.fibAudit?.up?.hit1618 ? '✅ HIT' : '❌ MISSED'}) | ${niftyProfile?.fibAudit?.up?.fib2618} (${niftyProfile?.fibAudit?.up?.hit2618 ? '✅ HIT' : '❌ MISSED'}) | ${niftyProfile?.fibAudit?.up?.fib3618} (${niftyProfile?.fibAudit?.up?.hit3618 ? '✅ HIT' : '❌ MISSED'}) | **${niftyProfile?.fibAudit?.up?.hit3618 ? '3.618x Outlier' : (niftyProfile?.fibAudit?.up?.hit2618 ? '2.618x Extended' : (niftyProfile?.fibAudit?.up?.hit1618 ? '1.618x Primary Target' : 'Inside IB'))}** |
+| **BANKNIFTY** | ${bnProfile ? `${bnProfile.ibLow} / ${bnProfile.ibHigh}` : 'N/A'} | ${bnProfile?.ibWidth || 'N/A'} pts | **${bnProfile?.fibAudit?.ibExtension || '1.0'}x** | **${bnProfile?.fibAudit?.direction || 'N/A'}** | ${bnProfile?.fibAudit?.up?.fib1618} (${bnProfile?.fibAudit?.up?.hit1618 ? '✅ HIT' : '❌ MISSED'}) | ${bnProfile?.fibAudit?.up?.fib2618} (${bnProfile?.fibAudit?.up?.hit2618 ? '✅ HIT' : '❌ MISSED'}) | ${bnProfile?.fibAudit?.up?.fib3618} (${bnProfile?.fibAudit?.up?.hit3618 ? '✅ HIT' : '❌ MISSED'}) | **${bnProfile?.fibAudit?.up?.hit3618 ? '3.618x Outlier' : (bnProfile?.fibAudit?.up?.hit2618 ? '2.618x Extended' : (bnProfile?.fibAudit?.up?.hit1618 ? '1.618x Primary Target' : 'Inside IB'))}** |
+| **CRUDEOIL** | ${crudeProfile ? `${crudeProfile.ibLow} / ${crudeProfile.ibHigh}` : 'N/A'} | ${crudeProfile?.ibWidth || 'N/A'} pts | **${crudeProfile?.fibAudit?.ibExtension || '1.0'}x** | **${crudeProfile?.fibAudit?.direction || 'N/A'}** | ${crudeProfile?.fibAudit?.up?.fib1618} (${crudeProfile?.fibAudit?.up?.hit1618 ? '✅ HIT' : '❌ MISSED'}) | ${crudeProfile?.fibAudit?.up?.fib2618} (${crudeProfile?.fibAudit?.up?.hit2618 ? '✅ HIT' : '❌ MISSED'}) | ${crudeProfile?.fibAudit?.up?.fib3618} (${crudeProfile?.fibAudit?.up?.hit3618 ? '✅ HIT' : '❌ MISSED'}) | **${crudeProfile?.fibAudit?.up?.hit3618 ? '3.618x Outlier' : (crudeProfile?.fibAudit?.up?.hit2618 ? '2.618x Extended' : (crudeProfile?.fibAudit?.up?.hit1618 ? '1.618x Primary Target' : 'Inside IB'))}** |
+
+---
+
+## 4. Conjoint Index GEX & PCR Market State
 * **NSE:NIFTY**
   * Spot Close: **${niftyPcr.spot.toFixed(2)}**
   * Final PCR: **${niftyPcr.oi_pcr.toFixed(3)}** (Drift: **${niftyDrift.toFixed(3)}**)
@@ -271,7 +510,7 @@ This report details the conjoint GEX/PCR predictions, complete trade outcomes, a
 
 ---
 
-## 2. Daily Options Trades Summary
+## 4. Daily Options Trades Summary
 | Symbol | Strategy | Type | Direction | Entry | Target | SL | Final Status | P&L Points |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 `;

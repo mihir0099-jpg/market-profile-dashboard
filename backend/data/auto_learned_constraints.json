@@ -1,7 +1,7 @@
 {
   "version": "2.0.0-AUTONOMOUS",
   "lastEvolutionTime": "2026-09-21T03:42:53.216Z",
-  "rulesLearnedCount": 4,
+  "rulesLearnedCount": 6,
   "negativeFilters": [
     {
       "id": "RULE_INDEX_CONFLUENCE",
@@ -44,6 +44,18 @@
       "condition": "Rule 5A Validated: Low established in Period A has 62.6% statistical probability of holding all day. Sell OTM Put spreads below 23295.",
       "addedOn": "21/9/2026",
       "confidencePct": 62.6
+    },
+    {
+      "id": "LIVE_RULE_5A_1789967674034",
+      "condition": "Rule 5A Validated: Low established in Period A has 62.6% statistical probability of holding all day. Sell OTM Put spreads below 56250.",
+      "addedOn": "21/9/2026",
+      "confidencePct": 62.6
+    },
+    {
+      "id": "LIVE_RULE_1A_1790044417894",
+      "condition": "Rule 1A Filter Passed: Candle close outside IB confirms institutional acceptance (87.8% win rate). Bullish continuation target +43.9 Nifty points in Period H.",
+      "addedOn": "22/9/2026",
+      "confidencePct": 87.8
     }
   ],
   "dynamicThresholds": {

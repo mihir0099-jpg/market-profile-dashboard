@@ -1339,8 +1339,8 @@ export function startScanner(tvBridge) {
           const mins = ist.getMinutes();
           const minsSinceMidnight = hrs * 60 + mins;
           
-          if (minsSinceMidnight >= 935) {
-            console.log('[Scanner] Post-market hours detected. Running Daily Post-Mortem Analyzer...');
+          if (minsSinceMidnight >= 945) { // 03:45 PM IST (After CAS / Closing Auction Session settlement)
+            console.log('[Scanner] Post-market hours (after 03:45 PM CAS) detected. Running Daily Post-Mortem Analyzer...');
             // Dynamic import to prevent circular dependency
             const { runDailyPostMortem } = await import('./daily_backtest_learner.js');
             await runDailyPostMortem();

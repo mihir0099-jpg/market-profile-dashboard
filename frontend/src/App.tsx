@@ -123,8 +123,8 @@ function App() {
 
   // Fetch GEX expiries on symbol change
   useEffect(() => {
-    const isNseSymbol = symbol.startsWith('NSE:');
-    if (!isNseSymbol) {
+    const isSupportedSymbol = symbol.startsWith('NSE:') || symbol.startsWith('MCX:') || symbol.includes('CRUDE');
+    if (!isSupportedSymbol) {
       setGexExpiries([]);
       setSelectedGexExpiry('');
       setGexData(null);
@@ -156,8 +156,8 @@ function App() {
 
   // Fetch GEX data on symbol or expiry change
   useEffect(() => {
-    const isNseSymbol = symbol.startsWith('NSE:');
-    if (!selectedGexExpiry || !isNseSymbol) {
+    const isSupportedSymbol = symbol.startsWith('NSE:') || symbol.startsWith('MCX:') || symbol.includes('CRUDE');
+    if (!selectedGexExpiry || !isSupportedSymbol) {
       setGexData(null);
       return;
     }
@@ -187,8 +187,8 @@ function App() {
 
   // Fetch PCR data on symbol or expiry change
   useEffect(() => {
-    const isNseSymbol = symbol.startsWith('NSE:');
-    if (!isNseSymbol) {
+    const isSupportedSymbol = symbol.startsWith('NSE:') || symbol.startsWith('MCX:') || symbol.includes('CRUDE');
+    if (!isSupportedSymbol) {
       setPcrData(null);
       return;
     }

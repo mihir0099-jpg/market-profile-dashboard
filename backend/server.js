@@ -11,6 +11,7 @@ import { generateNineAmReport } from './generate_nineam_report.js';
 import { logOptionsChainData } from './options_logger.js';
 import { getMonthlyProfileData } from './monthly_profile_analyzer.js';
 import { getFallbackExpiries, getFallbackGexData, getFallbackPcrData } from './gex_fallback_provider.js';
+import { getCrudeExpiries, getCrudeGexData, getCrudePcrData } from './crudeoil_gex_provider.js';
 import { getAiAnalytics } from './ai_engine.js';
 import { AngelOneBridge, angelOneBridge } from './angelone_bridge.js';
 import { runTabHealthAudit } from './auto_heal_engine.js';
@@ -401,9 +402,19 @@ app.get('/api/gex/instruments', async (req, res) => {
 
 app.get('/api/gex/expiries', async (req, res) => {
   const { symbol } = req.query;
-  let cleanSymbol = (symbol || 'NIFTY').split(':').pop();
+  const sym = symbol || 'NIFTY';
+  let cleanSymbol = sym.split(':').pop();
   if (cleanSymbol === 'NIFTY1!') {
     cleanSymbol = 'NIFTY';
+  }
+  if (cleanSymbol.includes('CRUDE') || sym.startsWith('MCX:')) {
+    try {
+      const data = await getCrudeExpiries();
+      return res.json(data);
+    } catch (e) {
+      console.warn('[Server] Error fetching Crude expiries:', e.message);
+      return res.json({ symbol: 'MCX:CRUDEOIL1!', expiries: ['15OCT26', '17NOV26', '16DEC26'] });
+    }
   }
   try {
     const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/expiries?symbol=${cleanSymbol}`);
@@ -417,9 +428,19 @@ app.get('/api/gex/expiries', async (req, res) => {
 
 app.get('/api/gex/data', async (req, res) => {
   const { symbol, expiry, r } = req.query;
-  let cleanSymbol = (symbol || 'NIFTY').split(':').pop();
+  const sym = symbol || 'NIFTY';
+  let cleanSymbol = sym.split(':').pop();
   if (cleanSymbol === 'NIFTY1!') {
     cleanSymbol = 'NIFTY';
+  }
+  if (cleanSymbol.includes('CRUDE') || sym.startsWith('MCX:')) {
+    try {
+      const data = await getCrudeGexData(expiry);
+      return res.json(data);
+    } catch (e) {
+      console.warn('[Server] Error fetching Crude GEX data:', e.message);
+      return res.status(500).json({ error: 'Failed to compute Crude Oil GEX' });
+    }
   }
   try {
     let url = `http://127.0.0.1:${GEX_PORT}/api/gex?symbol=${cleanSymbol}`;
@@ -437,9 +458,19 @@ app.get('/api/gex/data', async (req, res) => {
 
 app.get('/api/pcr/data', async (req, res) => {
   const { symbol, expiry } = req.query;
-  let cleanSymbol = (symbol || 'NIFTY').split(':').pop();
+  const sym = symbol || 'NIFTY';
+  let cleanSymbol = sym.split(':').pop();
   if (cleanSymbol === 'NIFTY1!') {
     cleanSymbol = 'NIFTY';
+  }
+  if (cleanSymbol.includes('CRUDE') || sym.startsWith('MCX:')) {
+    try {
+      const data = await getCrudePcrData(expiry);
+      return res.json(data);
+    } catch (e) {
+      console.warn('[Server] Error fetching Crude PCR data:', e.message);
+      return res.status(500).json({ error: 'Failed to compute Crude Oil PCR' });
+    }
   }
   try {
     let url = `http://127.0.0.1:${GEX_PORT}/api/pcr?symbol=${cleanSymbol}`;

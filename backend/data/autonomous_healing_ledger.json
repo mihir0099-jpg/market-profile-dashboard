@@ -1,5 +1,37 @@
 [
   {
+    "timestamp": 1789964072699,
+    "istTime": "21/9/2026, 9:44:32 am",
+    "component": "📅 Monthly Profile Engine",
+    "error": "Zero data / empty payload returned",
+    "remedyAction": "Recalculated monthly profile TPOs and VAH/VAL boundaries",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789964069580,
+    "istTime": "21/9/2026, 9:44:29 am",
+    "component": "🕯️ Candles REST Snapshot",
+    "error": "Request timeout (>6000ms)",
+    "remedyAction": "Pre-fetched NIFTY 30m candles snapshot",
+    "status": "AUTO_RESOLVED"
+  },
+  {
+    "timestamp": 1789963647179,
+    "istTime": "21/9/2026, 9:37:27 am",
+    "component": "📅 Monthly Profile Engine",
+    "error": "Request timeout (>6000ms)",
+    "remedyAction": "Recalculated monthly profile TPOs and VAH/VAL boundaries",
+    "status": "HEAL_APPLIED_RETRY_QUEUED"
+  },
+  {
+    "timestamp": 1789963640560,
+    "istTime": "21/9/2026, 9:37:20 am",
+    "component": "🕯️ Candles REST Snapshot",
+    "error": "Request timeout (>6000ms)",
+    "remedyAction": "Pre-fetched NIFTY 30m candles snapshot",
+    "status": "AUTO_RESOLVED"
+  },
+  {
     "timestamp": 1789889759999,
     "istTime": "20/9/2026, 1:05:59 pm",
     "component": "📅 Monthly Profile Engine",

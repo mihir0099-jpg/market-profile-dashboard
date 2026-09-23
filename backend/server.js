@@ -72,10 +72,21 @@ app.get('/api/scanner', (req, res) => {
 app.get('/api/candles', async (req, res) => {
   const { symbol = 'NSE:NIFTY', tf = '30' } = req.query;
   try {
+    // 1. Direct Angel One Fast Path (< 150ms)
+    try {
+      const angelCandles = await angelOneBridge.getFormattedCandles(symbol, tf, 300);
+      if (angelCandles && angelCandles.length > 0) {
+        return res.json({ symbol, timeframe: tf, isSnapshot: true, candles: angelCandles, source: 'AngelOne' });
+      }
+    } catch (angelErr) {
+      console.warn(`[Candles API] Angel One direct fetch: ${angelErr.message}`);
+    }
+
+    // 2. Primary Bridge Fallback
     const candles = await new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => reject(new Error('Timeout fetching candles')), 15000);
+      const timeout = setTimeout(() => reject(new Error('Timeout fetching candles')), 10000);
       primaryDataBridge.subscribeSymbol(symbol, tf, (data) => {
-        if (data.isSnapshot) {
+        if (data && data.candles && data.candles.length > 0) {
           clearTimeout(timeout);
           resolve(data.candles);
         }
@@ -84,8 +95,9 @@ app.get('/api/candles', async (req, res) => {
         reject(err);
       });
     });
-    res.json({ symbol, timeframe: tf, isSnapshot: true, candles });
+    res.json({ symbol, timeframe: tf, isSnapshot: true, candles, source: 'Bridge' });
   } catch (err) {
+    console.error(`[Candles API Error for ${symbol}]:`, err.message);
     res.status(500).json({ error: err.message, candles: [] });
   }
 });

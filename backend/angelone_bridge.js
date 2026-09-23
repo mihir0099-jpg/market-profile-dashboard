@@ -210,7 +210,14 @@ export class AngelOneBridge {
       'X-MACAddress': 'fe80::216e:6507:4b90:3719',
       'X-PrivateKey': this.config.apiKey
     };
-    return this._makeRequest(url, 'GET', headers);
+    let res = await this._makeRequest(url, 'GET', headers);
+    if (res && (res.errorcode === 'AG8001' || res.errorcode === 'AG8002' || res.message?.includes('Invalid Token') || res.message?.includes('Unauthorized'))) {
+      console.warn('[AngelOne] Session expired in GET, auto-renewing login with fresh TOTP...');
+      await this.login(true);
+      headers['Authorization'] = `Bearer ${this.session.jwtToken}`;
+      res = await this._makeRequest(url, 'GET', headers);
+    }
+    return res;
   }
 
   async _authedPost(url, payloadObj) {
@@ -232,10 +239,10 @@ export class AngelOneBridge {
     };
 
     let res = await this._makeRequest(url, 'POST', headers, payload);
-    // If token expired or unauthorized, attempt 1 auto-login and retry
+    // If token expired or unauthorized, attempt 1 auto-login with fresh TOTP and retry
     if (res && (res.errorcode === 'AG8001' || res.errorcode === 'AG8002' || res.message?.includes('Invalid Token') || res.message?.includes('Unauthorized'))) {
-      console.warn('[AngelOne] Session expired, auto-renewing login...');
-      await this.login();
+      console.warn('[AngelOne] Session expired in POST, auto-renewing login with fresh TOTP...');
+      await this.login(true);
       headers['Authorization'] = `Bearer ${this.session.jwtToken}`;
       res = await this._makeRequest(url, 'POST', headers, payload);
     }
@@ -413,26 +420,112 @@ export class AngelOneBridge {
 
   async resolveSymbolToken(symbolStr) {
     if (!symbolStr) return null;
-    let clean = symbolStr.replace('NSE:', '').replace('BSE:', '').replace('TVC:', '').replace('OANDA:', '').replace('COINBASE:', '').trim().toUpperCase();
-    if (clean === 'NIFTY1!' || clean === 'NIFTY_50') clean = 'NIFTY';
-    if (clean === 'NIFTYBANK' || clean === 'CNXBANK') clean = 'BANKNIFTY';
+    let raw = symbolStr.trim().toUpperCase();
+    let exchange = 'NSE';
 
+    if (raw.startsWith('MCX:')) {
+      exchange = 'MCX';
+      raw = raw.replace('MCX:', '');
+    } else if (raw.startsWith('BSE:')) {
+      exchange = 'BSE';
+      raw = raw.replace('BSE:', '');
+    } else if (raw.startsWith('NSE:')) {
+      exchange = 'NSE';
+      raw = raw.replace('NSE:', '');
+    } else if (raw.startsWith('TVC:') || raw.startsWith('OANDA:') || raw.startsWith('COINBASE:')) {
+      raw = raw.replace(/^[A-Z0-9]+:/, '');
+    }
+
+    // Strip trailing continuous futures suffix "1!" or "!"
+    let clean = raw.replace(/1!$/, '').replace(/!$/, '').trim();
+
+    // Map common index & commodity aliases
+    if (clean === 'NIFTY1' || clean === 'NIFTY_50' || clean === 'NIFTY50') clean = 'NIFTY';
+    if (clean === 'NIFTYBANK' || clean === 'CNXBANK' || clean === 'BANKNIFTY1') clean = 'BANKNIFTY';
+    if (clean === 'USOIL' || clean === 'CRUDE' || clean === 'CRUDEOIL') {
+      clean = 'CRUDEOIL';
+      exchange = 'MCX';
+    }
+    if (clean === 'NATGAS' || clean === 'NATURALGAS') {
+      clean = 'NATURALGAS';
+      exchange = 'MCX';
+    }
+    if (['GOLD', 'SILVER', 'COPPER', 'ZINC', 'ALUMINIUM', 'LEAD'].includes(clean)) {
+      exchange = 'MCX';
+    }
+
+    // Check token map cache
+    const cacheKey = `${exchange}:${clean}`;
+    if (this._tokenMap.has(cacheKey)) {
+      return this._tokenMap.get(cacheKey);
+    }
     if (this._tokenMap.has(clean)) {
       return this._tokenMap.get(clean);
     }
 
     try {
-      const results = await this.searchScrip('NSE', clean);
+      const results = await this.searchScrip(exchange, clean);
       if (results && results.length > 0) {
-        const exact = results.find(r => r.tradingsymbol === clean + '-EQ') || results[0];
-        if (exact) {
-          const meta = { exchange: exact.exchange || 'NSE', tradingsymbol: exact.tradingsymbol, symboltoken: exact.symboltoken };
-          this._tokenMap.set(clean, meta);
-          return meta;
+        if (exchange === 'MCX') {
+          // Dynamic commodity futures resolver (selects active front-month contract)
+          const months = { JAN:0, FEB:1, MAR:2, APR:3, MAY:4, JUN:5, JUL:6, AUG:7, SEP:8, OCT:9, NOV:10, DEC:11 };
+          const today = new Date(new Date().setHours(0,0,0,0));
+          const futRegex = new RegExp(`^${clean}(\\d{2})([A-Z]{3})(\\d{2})FUT$`);
+
+          const parsed = [];
+          for (const r of results) {
+            const match = r.tradingsymbol?.match(futRegex);
+            if (match) {
+              const day = parseInt(match[1], 10);
+              const mon = months[match[2]];
+              const yr = 2000 + parseInt(match[3], 10);
+              if (mon !== undefined) {
+                const expDate = new Date(yr, mon, day);
+                if (expDate >= today) {
+                  parsed.push({ ...r, ts: expDate.getTime() });
+                }
+              }
+            }
+          }
+
+          if (parsed.length > 0) {
+            parsed.sort((a, b) => a.ts - b.ts);
+            const activeFut = parsed[0];
+            const meta = { exchange: 'MCX', tradingsymbol: activeFut.tradingsymbol, symboltoken: activeFut.symboltoken };
+            this._tokenMap.set(cacheKey, meta);
+            this._tokenMap.set(clean, meta);
+            this._tokenMap.set(symbolStr.toUpperCase().trim(), meta);
+            console.log(`[AngelOne] Resolved ${symbolStr} -> MCX front-month ${activeFut.tradingsymbol} (Token: ${activeFut.symboltoken})`);
+            return meta;
+          }
+
+          // Fallback to any futures contract or commodity spot (COM)
+          const anyFut = results.find(r => r.tradingsymbol?.endsWith('FUT') && !r.tradingsymbol?.endsWith('CE') && !r.tradingsymbol?.endsWith('PE'))
+                      || results.find(r => r.tradingsymbol === `${clean}COM`)
+                      || results[0];
+          if (anyFut) {
+            const meta = { exchange: 'MCX', tradingsymbol: anyFut.tradingsymbol, symboltoken: anyFut.symboltoken };
+            this._tokenMap.set(cacheKey, meta);
+            this._tokenMap.set(clean, meta);
+            this._tokenMap.set(symbolStr.toUpperCase().trim(), meta);
+            return meta;
+          }
+        } else {
+          // NSE / BSE equities and indices
+          const exact = results.find(r => r.tradingsymbol === clean + '-EQ')
+                     || results.find(r => r.tradingsymbol === clean)
+                     || results[0];
+          if (exact) {
+            const meta = { exchange: exact.exchange || exchange, tradingsymbol: exact.tradingsymbol, symboltoken: exact.symboltoken };
+            this._tokenMap.set(cacheKey, meta);
+            this._tokenMap.set(clean, meta);
+            this._tokenMap.set(symbolStr.toUpperCase().trim(), meta);
+            return meta;
+          }
         }
       }
     } catch (e) {
-      console.warn(`[AngelOne] resolveSymbolToken search error for ${clean}:`, e.message);
+      console.warn(`[AngelOne] resolveSymbolToken error for ${symbolStr}:`, e.message);
     }
     return null;
   }
@@ -445,12 +538,12 @@ export class AngelOneBridge {
 
     const interval = this.mapTimeframeToAngel(timeframe);
     const now = new Date();
-    let daysBack = 60;
+    let daysBack = 25;
     if (interval === 'ONE_DAY') daysBack = Math.max(365, Math.ceil(limit * 1.5));
-    else if (interval === 'THIRTY_MINUTE') daysBack = Math.max(60, Math.ceil(limit / 12));
-    else if (interval === 'FIFTEEN_MINUTE') daysBack = Math.max(30, Math.ceil(limit / 25));
-    else if (interval === 'FIVE_MINUTE') daysBack = Math.max(15, Math.ceil(limit / 75));
-    else if (interval === 'ONE_MINUTE') daysBack = Math.max(5, Math.ceil(limit / 375));
+    else if (interval === 'THIRTY_MINUTE') daysBack = 25;
+    else if (interval === 'FIFTEEN_MINUTE') daysBack = 18;
+    else if (interval === 'FIVE_MINUTE') daysBack = 8;
+    else if (interval === 'ONE_MINUTE') daysBack = 3;
 
     const startDate = new Date(now.getTime() - daysBack * 24 * 3600 * 1000);
     const formatDate = (d) => {

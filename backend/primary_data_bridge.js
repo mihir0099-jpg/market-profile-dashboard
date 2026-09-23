@@ -8,16 +8,15 @@ export class PrimaryDataBridge {
   }
 
   async subscribeSymbol(symbol, timeframe, onData, onError, limit = 300) {
-    const isGlobalCryptoFx = (
+    const isCryptoFx = (
       symbol.includes('BTC') ||
-      symbol.includes('USOIL') ||
-      symbol.includes('XAU') ||
       symbol.startsWith('COINBASE:') ||
       symbol.startsWith('OANDA:') ||
-      symbol.startsWith('TVC:')
+      (symbol.startsWith('TVC:') && !symbol.includes('USOIL') && !symbol.includes('CRUDE'))
     );
 
-    if (!isGlobalCryptoFx) {
+    // Primary: Angel One SmartAPI Feed (NSE, BSE, MCX Commodities & USOIL proxy)
+    if (!isCryptoFx) {
       try {
         let snapshotDelivered = false;
         const cleanup = await this.angelBridge.subscribeSymbol(
@@ -30,7 +29,14 @@ export class PrimaryDataBridge {
           (err) => {
             if (!snapshotDelivered) {
               console.warn(`[PrimaryDataBridge] Angel One stream error for ${symbol} (${err.message}), falling back to TradingView...`);
-              this.tvBridge.subscribeSymbol(symbol, timeframe, onData, onError, limit);
+              this.tvBridge.subscribeSymbol(symbol, timeframe, onData, (tvErr) => {
+                const msg = tvErr?.message || String(tvErr);
+                if (msg.includes('permission denied') && typeof onError === 'function') {
+                  onError(new Error(`Angel One active for ${symbol}. (TradingView public stream restricted for this symbol)`));
+                } else if (typeof onError === 'function') {
+                  onError(tvErr);
+                }
+              }, limit);
             } else if (typeof onError === 'function') {
               onError(err);
             }

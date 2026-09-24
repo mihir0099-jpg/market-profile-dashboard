@@ -1,6 +1,8 @@
 {
   "NSE:NIFTY": 5,
   "NSE:BANKNIFTY": 20,
+  "BSE:SENSEX": 25,
+  "SENSEX": 25,
   "NSE:NIFTY1!": 5,
   "OANDA:XAUUSD": 2,
   "COINBASE:BTCUSD": 50,

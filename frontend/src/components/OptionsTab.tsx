@@ -10,6 +10,8 @@ const STRIKE_INTERVALS: Record<string, number> = {
   'NIFTY1!': 50,
   'BANKNIFTY': 100,
   'BANKNIFTY1!': 100,
+  'SENSEX': 100,
+  'BSE:SENSEX': 100,
   'RELIANCE': 20,
   'HDFCBANK': 10,
   'SBIN': 5,

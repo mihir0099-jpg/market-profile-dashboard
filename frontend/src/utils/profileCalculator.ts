@@ -150,7 +150,7 @@ export function calculateDayProfile(
     } else if (cleanSym === 'FINNIFTY' || cleanSym === 'MIDCPNIFTY') {
       tickSize = sessionPeriod === 'monthly' ? 10 : (sessionPeriod === 'weekly' ? 5 : 2);
     } else if (cleanSym === 'SENSEX') {
-      tickSize = sessionPeriod === 'monthly' ? 20 : (sessionPeriod === 'weekly' ? 10 : 5);
+      tickSize = sessionPeriod === 'monthly' ? 50 : (sessionPeriod === 'weekly' ? 25 : 10);
     } else if (cleanSym.includes('CRUDEOIL')) {
       tickSize = sessionPeriod === 'monthly' ? 5 : (sessionPeriod === 'weekly' ? 2 : 1);
     } else {

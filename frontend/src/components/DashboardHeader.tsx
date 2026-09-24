@@ -503,8 +503,48 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
 
         )}
 
+        {/* Quick Symbol Switcher */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+          {[
+            { sym: 'NSE:NIFTY', label: 'NIFTY' },
+            { sym: 'NSE:BANKNIFTY', label: 'BANKNIFTY' },
+            { sym: 'BSE:SENSEX', label: 'SENSEX' },
+            { sym: 'MCX:CRUDEOIL1!', label: 'CRUDE' },
+          ].map((item) => {
+            const isSelected = currentSymbol === item.sym;
+            return (
+              <button
+                key={item.sym}
+                type="button"
+                onClick={() => {
+                  setSearchInput(item.sym);
+                  onSymbolChange(item.sym);
+                }}
+                style={{
+                  background: isSelected 
+                    ? 'linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(168, 85, 247, 0.5))' 
+                    : 'rgba(255, 255, 255, 0.04)',
+                  border: isSelected ? '1px solid #38bdf8' : '1px solid var(--border-color)',
+                  borderRadius: '6px',
+                  color: isSelected ? '#38bdf8' : 'var(--text-secondary)',
+                  padding: '5px 10px',
+                  fontSize: '11px',
+                  fontWeight: '700',
+                  cursor: 'pointer',
+                  transition: 'all 0.15s',
+                  letterSpacing: '0.4px',
+                  boxShadow: isSelected ? '0 0 10px rgba(56, 189, 248, 0.25)' : 'none'
+                }}
+                title={`Switch to ${item.label}`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </div>
+
         {/* Symbol Search Form */}
-        <div style={{ position: 'relative', flex: '1', minWidth: '200px', maxWidth: '300px' }}>
+        <div style={{ position: 'relative', flex: '1', minWidth: '180px', maxWidth: '280px' }}>
           <form onSubmit={handleSubmit} style={{ display: 'flex', width: '100%' }}>
             <div style={{ position: 'relative', width: '100%', display: 'flex' }}>
               <input

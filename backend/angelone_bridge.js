@@ -67,10 +67,13 @@ export class AngelOneBridge {
     };
     this._tokenMap = new Map([
       ['NIFTY', { exchange: 'NSE', tradingsymbol: 'Nifty 50', symboltoken: '99926000' }],
+      ['NSE:NIFTY', { exchange: 'NSE', tradingsymbol: 'Nifty 50', symboltoken: '99926000' }],
       ['BANKNIFTY', { exchange: 'NSE', tradingsymbol: 'Nifty Bank', symboltoken: '99926009' }],
+      ['NSE:BANKNIFTY', { exchange: 'NSE', tradingsymbol: 'Nifty Bank', symboltoken: '99926009' }],
       ['FINNIFTY', { exchange: 'NSE', tradingsymbol: 'Nifty Fin Services', symboltoken: '99926037' }],
       ['MIDCPNIFTY', { exchange: 'NSE', tradingsymbol: 'NIFTY MID SELECT', symboltoken: '99926074' }],
       ['SENSEX', { exchange: 'BSE', tradingsymbol: 'SENSEX', symboltoken: '99919000' }],
+      ['BSE:SENSEX', { exchange: 'BSE', tradingsymbol: 'SENSEX', symboltoken: '99919000' }],
       ['RELIANCE', { exchange: 'NSE', tradingsymbol: 'RELIANCE-EQ', symboltoken: '2885' }],
       ['HDFCBANK', { exchange: 'NSE', tradingsymbol: 'HDFCBANK-EQ', symboltoken: '1333' }],
       ['ICICIBANK', { exchange: 'NSE', tradingsymbol: 'ICICIBANK-EQ', symboltoken: '4963' }],

@@ -407,7 +407,7 @@ app.get('/api/gex/expiries', async (req, res) => {
   if (cleanSymbol === 'NIFTY1!') {
     cleanSymbol = 'NIFTY';
   }
-  if (cleanSymbol.includes('CRUDE') || sym.startsWith('MCX:')) {
+  if (cleanSymbol.includes('CRUDE') || cleanSymbol.includes('USOIL') || sym.startsWith('MCX:')) {
     try {
       const data = await getCrudeExpiries();
       return res.json(data);
@@ -433,7 +433,7 @@ app.get('/api/gex/data', async (req, res) => {
   if (cleanSymbol === 'NIFTY1!') {
     cleanSymbol = 'NIFTY';
   }
-  if (cleanSymbol.includes('CRUDE') || sym.startsWith('MCX:')) {
+  if (cleanSymbol.includes('CRUDE') || cleanSymbol.includes('USOIL') || sym.startsWith('MCX:')) {
     try {
       const data = await getCrudeGexData(expiry);
       return res.json(data);
@@ -463,7 +463,7 @@ app.get('/api/pcr/data', async (req, res) => {
   if (cleanSymbol === 'NIFTY1!') {
     cleanSymbol = 'NIFTY';
   }
-  if (cleanSymbol.includes('CRUDE') || sym.startsWith('MCX:')) {
+  if (cleanSymbol.includes('CRUDE') || cleanSymbol.includes('USOIL') || sym.startsWith('MCX:')) {
     try {
       const data = await getCrudePcrData(expiry);
       return res.json(data);

@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { makeVerticalGexSvg } from './crudeoil_gex_provider.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -175,10 +176,12 @@ export function getFallbackGexData(cleanSymbol, expiry) {
 
   const pcr = totalCeOi > 0 ? parseFloat((totalPeOi / totalCeOi).toFixed(3)) : 0.85;
   const netGex = totalCeGex + totalPeGex;
+  const gexSvg = makeVerticalGexSvg(optionChain, spot, callWall, putWall, gammaFlip, maxPain, false);
 
   return {
     symbol: cleanSymbol,
     spot_price: spot,
+    gex_svg: gexSvg,
     stats: {
       call_wall: callWall,
       put_wall: putWall,

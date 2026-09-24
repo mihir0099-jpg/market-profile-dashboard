@@ -18,7 +18,7 @@ export const GexProfile: React.FC<GexProfileProps> = ({
   gexData,
   loading
 }) => {
-  const isSupportedSymbol = symbol.startsWith('NSE:') || symbol.startsWith('MCX:') || symbol.includes('CRUDE');
+  const isSupportedSymbol = symbol.startsWith('NSE:') || symbol.startsWith('MCX:') || symbol.startsWith('BSE:') || symbol.includes('CRUDE') || symbol.includes('USOIL');
 
   if (!isSupportedSymbol) {
     return (

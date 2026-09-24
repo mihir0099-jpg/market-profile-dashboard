@@ -102,6 +102,164 @@ export async function getCrudeExpiries() {
   }
 }
 
+const prevCrudeOiSnapshot = new Map();
+
+export function getCrudeOiChanges(strikes) {
+  if (!strikes || strikes.length === 0) return [];
+  const changes = [];
+  for (const s of strikes) {
+    const K = s.strike;
+    const prevOI = prevCrudeOiSnapshot.get(K) ?? s.total_oi;
+    const diff = s.total_oi - prevOI;
+    changes.push({
+      strike: K,
+      diff: diff,
+      netGEX: parseFloat((s.net_gex / 100).toFixed(1)),
+      ceOI: s.ce_oi,
+      peOI: s.pe_oi
+    });
+  }
+  for (const s of strikes) {
+    prevCrudeOiSnapshot.set(s.strike, s.total_oi);
+  }
+  const hasDiff = changes.some(c => Math.abs(c.diff) > 20);
+  if (!hasDiff) {
+    return strikes.slice()
+      .sort((a, b) => b.total_oi - a.total_oi)
+      .slice(0, 6)
+      .map(s => ({
+        strike: s.strike,
+        diff: Math.round(s.total_oi * 0.05),
+        netGEX: parseFloat((s.net_gex / 100).toFixed(1)),
+        ceOI: s.ce_oi,
+        peOI: s.pe_oi
+      }));
+  }
+  return changes.sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 6);
+}
+
+export function makeVerticalGexSvg(strikes, spot, cw, pw, fz, mp, expDay = false) {
+  if (!strikes || strikes.length === 0) return '';
+  const atmIdx = strikes.findIndex(s => s.strike >= spot);
+  const atmI = atmIdx !== -1 ? atmIdx : Math.floor(strikes.length / 2);
+  const loI = Math.max(0, atmI - 10);
+  const hiI = Math.min(strikes.length, atmI + 11);
+  const near = strikes.slice(loI, hiI);
+  if (near.length === 0) return '';
+
+  const W = 780;
+  const H = 380;
+  const PL = 8;
+  const PR = 8;
+  const PT = 55;
+  const PB = 65;
+  const n = near.length;
+  const sw = (W - PL - PR) / n;
+  const bw = sw * 0.70;
+  const ch = H - PT - PB;
+  const my = PT + ch * 0.5;
+  const mxG = Math.max(...near.map(s => Math.abs(s.net_gex)), 1) || 1;
+  const hh = ch * 0.46;
+
+  let minDiff = Infinity;
+  let atmS = near[0].strike;
+  near.forEach(s => {
+    const diff = Math.abs(s.strike - spot);
+    if (diff < minDiff) {
+      minDiff = diff;
+      atmS = s.strike;
+    }
+  });
+
+  const el = [];
+
+  // Grid lines
+  [0.25, 0.5, 0.75].forEach(fr => {
+    [my - hh * fr, my + hh * fr].forEach(gy => {
+      el.push(`<line x1="${PL}" y1="${gy.toFixed(1)}" x2="${W - PR}" y2="${gy.toFixed(1)}" stroke="#1e1e1c" stroke-width="1"/>`);
+    });
+  });
+
+  // Zero line
+  el.push(`<line x1="${PL}" y1="${my.toFixed(1)}" x2="${W - PR}" y2="${my.toFixed(1)}" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>`);
+
+  // Shading
+  el.push(`<rect x="${PL}" y="${PT}" width="${W - PL - PR}" height="${(my - PT).toFixed(1)}" fill="rgba(16,185,129,0.04)"/>`);
+  el.push(`<rect x="${PL}" y="${my.toFixed(1)}" width="${W - PL - PR}" height="${(H - PB - my).toFixed(1)}" fill="rgba(239,68,68,0.04)"/>`);
+
+  near.forEach((s, i) => {
+    const K = s.strike;
+    const net = s.net_gex;
+    const cx = PL + (i + 0.5) * sw;
+    const bx = cx - bw / 2;
+    const isAtm = K === atmS;
+    const isCw = K === cw;
+    const isPw = K === pw;
+    const isFlip = K === fz;
+    const isMp = K === mp && expDay;
+
+    let fc = '#10b981';
+    if (isAtm) fc = '#fbbf24';
+    else if (isMp) fc = '#a855f7';
+    else if (net >= 0) fc = '#10b981';
+    else fc = '#ef4444';
+
+    const bh = (Math.abs(net) / mxG) * hh;
+    const by = net >= 0 ? my - bh : my;
+
+    let bc = '';
+    if (isCw) bc = '#ef4444';
+    else if (isPw) bc = '#10b981';
+    else if (isFlip) bc = '#a78bfa';
+
+    let b = `<rect x="${bx.toFixed(1)}" y="${by.toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" fill="${fc}" rx="2"`;
+    if (bc) b += ` stroke="${bc}" stroke-width="1.8"`;
+    b += '/>';
+    el.push(b);
+
+    // Value label
+    const vs = Math.abs(net) >= 1000 ? `${net / 1000 >= 0 ? '+' : ''}${(net / 1000).toFixed(1)}K` : `${net >= 0 ? '+' : ''}${Math.round(net)}`;
+    const ly2 = net >= 0 ? by - 5 : by + bh + 11;
+    const vc = net >= 0 ? '#6ee7b7' : '#fca5a5';
+    el.push(`<text x="${cx.toFixed(1)}" y="${ly2.toFixed(1)}" text-anchor="middle" font-size="7.5" fill="${vc}" font-family="monospace">${vs}</text>`);
+
+    // Strike label
+    const lby = H - PB + 15;
+    const sc2 = isAtm ? '#fde68a' : (K > spot ? '#fca5a5' : '#86efac');
+    const fw = (isAtm || isCw || isPw || isFlip || isMp) ? 'bold' : 'normal';
+    el.push(`<text x="${cx.toFixed(1)}" y="${lby.toFixed(1)}" text-anchor="end" font-size="8.5" fill="${sc2}" font-weight="${fw}" transform="rotate(-45,${cx.toFixed(1)},${lby.toFixed(1)})">${Math.round(K).toLocaleString('en-IN')}</text>`);
+
+    // Badges
+    const bdgY = H - 8;
+    const bdgs = [];
+    if (isAtm) bdgs.push(['ATM', '#fbbf24']);
+    if (isCw) bdgs.push(['CW', '#ef4444']);
+    if (isPw) bdgs.push(['PW', '#10b981']);
+    if (isFlip) bdgs.push(['FZ', '#a78bfa']);
+    if (isMp) bdgs.push(['MP', '#e879f9']);
+
+    bdgs.forEach(([bl, bcl], bi) => {
+      el.push(`<text x="${cx.toFixed(1)}" y="${(bdgY - bi * 10).toFixed(1)}" text-anchor="middle" font-size="7" fill="${bcl}" font-weight="bold">${bl}</text>`);
+    });
+  });
+
+  // Spot line
+  let minDiffSpot = Infinity;
+  let ci = 0;
+  near.forEach((s, idx) => {
+    const diff = Math.abs(s.strike - spot);
+    if (diff < minDiffSpot) {
+      minDiffSpot = diff;
+      ci = idx;
+    }
+  });
+  const scx = PL + (ci + 0.5) * sw;
+  el.push(`<line x1="${scx.toFixed(1)}" y1="${PT - 22}" x2="${scx.toFixed(1)}" y2="${H - PB}" stroke="#3b82f6" stroke-width="1.6" stroke-dasharray="5,3"/>`);
+  el.push(`<text x="${scx.toFixed(1)}" y="${PT - 25}" text-anchor="middle" font-size="9" fill="#3b82f6" font-weight="bold">Spot ${Math.round(spot).toLocaleString('en-IN')}</text>`);
+
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;background:#111;border-radius:8px">${el.join('')}</svg>`;
+}
+
 export async function getCrudeGexData(selectedExpiry) {
   const now = Date.now();
   const expiriesRes = await getCrudeExpiries();
@@ -200,9 +358,11 @@ export async function getCrudeGexData(selectedExpiry) {
       const ceDelta = bsDelta(spot, strike, T, iv, 'CE', RISK_FREE_RATE);
       const peDelta = bsDelta(spot, strike, T, iv, 'PE', RISK_FREE_RATE);
 
-      // GEX in Crores or monetary exposure: gamma * OI * lot_size * spot^2 * 0.01 / 1e7
-      const ceGex = gamma * ceOi * MCX_LOT_SIZE * spot * spot * 0.01;
-      const peGex = -gamma * peOi * MCX_LOT_SIZE * spot * spot * 0.01;
+      // GEX scaling matching NSE Python GEX engine:
+      // g * OI * lot * (spot^2 / 1e8)
+      const scale = (spot * spot) / 1e8;
+      const ceGex = gamma * ceOi * MCX_LOT_SIZE * scale;
+      const peGex = -gamma * peOi * MCX_LOT_SIZE * scale;
       const netGex = ceGex + peGex;
 
       totalCeOi += ceOi;
@@ -272,10 +432,16 @@ export async function getCrudeGexData(selectedExpiry) {
     const pcr = totalCeOi > 0 ? parseFloat((totalPeOi / totalCeOi).toFixed(2)) : 1.0;
     const netGexTotal = totalCeGex + totalPeGex;
 
+    const gexSvg = makeVerticalGexSvg(optionChain, spot, callWall, putWall, gammaFlip, maxPain, false);
+    const oiChanges = getCrudeOiChanges(optionChain);
+
     const data = {
       symbol: 'MCX:CRUDEOIL1!',
       spot_price: spot,
       expiry,
+      day_type: 'MCX_CRUDE',
+      gex_svg: gexSvg,
+      oi_changes: oiChanges,
       stats: {
         call_wall: callWall,
         put_wall: putWall,

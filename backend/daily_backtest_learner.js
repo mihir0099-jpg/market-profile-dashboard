@@ -249,13 +249,14 @@ async function auditPriorDayForecast(todayProfiles, todayStr, reportsDir) {
 
     const priorNifty = await getMarketProfileSummary('NIFTY', 'NSE', '99926000', 10, priorDateStr, '09:15');
     const priorBn = await getMarketProfileSummary('BANKNIFTY', 'NSE', '99926009', 50, priorDateStr, '09:15');
+    const priorSensex = await getMarketProfileSummary('SENSEX', 'BSE', '99919000', 50, priorDateStr, '09:15');
     const priorCrude = await getMarketProfileSummary('CRUDEOIL', 'MCX', '569900', 10, priorDateStr, '09:00');
 
-    const priors = { NIFTY: priorNifty, BANKNIFTY: priorBn, CRUDEOIL: priorCrude };
+    const priors = { NIFTY: priorNifty, BANKNIFTY: priorBn, SENSEX: priorSensex, CRUDEOIL: priorCrude };
     const auditResults = [];
     const newConstraints = [];
 
-    for (const sym of ['NIFTY', 'BANKNIFTY', 'CRUDEOIL']) {
+    for (const sym of ['NIFTY', 'BANKNIFTY', 'SENSEX', 'CRUDEOIL']) {
       const today = todayProfiles[sym];
       const prior = priors[sym];
       if (!today || !prior) continue;
@@ -311,6 +312,14 @@ async function auditPriorDayForecast(todayProfiles, todayStr, reportsDir) {
         } else {
           mistakeDiagnosis = `Bank Nifty auction respected structural parameters.`;
           learnedRule = `Bank Nifty responsive equilibrium respected prior day value boundaries.`;
+        }
+      } else if (sym === 'SENSEX') {
+        if (today.shape.includes('Normal Variation')) {
+          mistakeDiagnosis = `Sensex opened inside value right at POC ${prior.poc}, tested prior POC immediately, broke above VAH, and capped at 1.618x IB (${today.fibAudit.up.fib1618}) with close (${today.dayClose.toFixed(2)}) adhering strictly under the predicted limit (${prior.expHigh}).`;
+          learnedRule = `Rule 12 Sensex Normal Variation Cap: Lock profits at 1.618x IB extension on Normal Variation days. Do not chase 2.618x without volume surge.`;
+        } else {
+          mistakeDiagnosis = `Sensex auction respected structural parameters.`;
+          learnedRule = `Sensex responsive equilibrium respected prior day value boundaries.`;
         }
       } else if (sym === 'CRUDEOIL') {
         if (scenarioNum === 3) {
@@ -580,19 +589,20 @@ export async function runDailyPostMortem(forceRun = false, customDateStr = null)
     journal = [...journal, ...journalEntries];
     fs.writeFileSync(journalPath, JSON.stringify(journal, null, 2), 'utf8');
 
-    // 4. Compute Market Profiles for Nifty, Bank Nifty, and MCX Crude Oil
+    // 4. Compute Market Profiles for Nifty, Bank Nifty, Sensex, and MCX Crude Oil
     console.log('[Daily Post-Mortem] Building Market Profile daily post-mortem & predictive models...');
     const niftyProfile = await getMarketProfileSummary('NIFTY', 'NSE', '99926000', 10, todayStr, '09:15');
     const bnProfile = await getMarketProfileSummary('BANKNIFTY', 'NSE', '99926009', 50, todayStr, '09:15');
+    const sensexProfile = await getMarketProfileSummary('SENSEX', 'BSE', '99919000', 50, todayStr, '09:15');
     const crudeProfile = await getMarketProfileSummary('CRUDEOIL', 'MCX', '569900', 10, todayStr, '09:00');
 
     const reportsDir = path.join(__dirname, 'daily_reports');
-    const todayProfiles = { NIFTY: niftyProfile, BANKNIFTY: bnProfile, CRUDEOIL: crudeProfile };
+    const todayProfiles = { NIFTY: niftyProfile, BANKNIFTY: bnProfile, SENSEX: sensexProfile, CRUDEOIL: crudeProfile };
     const priorAudit = await auditPriorDayForecast(todayProfiles, todayStr, reportsDir);
 
     // 5. Compile and Publish Daily Markdown Report
     let mdReport = `# 🏛️ Daily Market Profile Post-Mortem & Tomorrow's Forecast (${todayStr})
-This report compiles today's Market Profile auction structure, value area migrations, failed auctions, yesterday's forecast audit, and tomorrow's predictive trading ranges across NIFTY, BANKNIFTY, and MCX CRUDE OIL.
+This report compiles today's Market Profile auction structure, value area migrations, failed auctions, yesterday's forecast audit, and tomorrow's predictive trading ranges across NIFTY, BANKNIFTY, SENSEX, and MCX CRUDE OIL.
 
 ---
 
@@ -601,6 +611,7 @@ This report compiles today's Market Profile auction structure, value area migrat
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :---: |
 | **NIFTY** | **${niftyProfile ? niftyProfile.dayClose.toFixed(2) : 'N/A'}** | ${niftyProfile?.shape || 'N/A'} | **${niftyProfile?.poc || 'N/A'}** | **${niftyProfile?.vah || 'N/A'}** | **${niftyProfile?.val || 'N/A'}** | ${niftyProfile ? `${niftyProfile.ibLow} - ${niftyProfile.ibHigh} (${niftyProfile.ibWidth} pts)` : 'N/A'} | ${niftyProfile ? `${niftyProfile.totalRange} pts (${niftyProfile.fibAudit.ibExtension}x IB)` : 'N/A'} | ${niftyProfile?.fibAudit?.summary1618 || 'N/A'} | ${niftyProfile?.fibAudit?.summary2618 || 'N/A'} | ${niftyProfile?.fibAudit?.summary3618 || 'N/A'} |
 | **BANKNIFTY** | **${bnProfile ? bnProfile.dayClose.toFixed(2) : 'N/A'}** | ${bnProfile?.shape || 'N/A'} | **${bnProfile?.poc || 'N/A'}** | **${bnProfile?.vah || 'N/A'}** | **${bnProfile?.val || 'N/A'}** | ${bnProfile ? `${bnProfile.ibLow} - ${bnProfile.ibHigh} (${bnProfile.ibWidth} pts)` : 'N/A'} | ${bnProfile ? `${bnProfile.totalRange} pts (${bnProfile.fibAudit.ibExtension}x IB)` : 'N/A'} | ${bnProfile?.fibAudit?.summary1618 || 'N/A'} | ${bnProfile?.fibAudit?.summary2618 || 'N/A'} | ${bnProfile?.fibAudit?.summary3618 || 'N/A'} |
+| **SENSEX** | **${sensexProfile ? sensexProfile.dayClose.toFixed(2) : 'N/A'}** | ${sensexProfile?.shape || 'N/A'} | **${sensexProfile?.poc || 'N/A'}** | **${sensexProfile?.vah || 'N/A'}** | **${sensexProfile?.val || 'N/A'}** | ${sensexProfile ? `${sensexProfile.ibLow} - ${sensexProfile.ibHigh} (${sensexProfile.ibWidth} pts)` : 'N/A'} | ${sensexProfile ? `${sensexProfile.totalRange} pts (${sensexProfile.fibAudit.ibExtension}x IB)` : 'N/A'} | ${sensexProfile?.fibAudit?.summary1618 || 'N/A'} | ${sensexProfile?.fibAudit?.summary2618 || 'N/A'} | ${sensexProfile?.fibAudit?.summary3618 || 'N/A'} |
 | **CRUDEOIL** | **${crudeProfile ? crudeProfile.dayClose.toFixed(2) : 'N/A'}** | ${crudeProfile?.shape || 'N/A'} | **${crudeProfile?.poc || 'N/A'}** | **${crudeProfile?.vah || 'N/A'}** | **${crudeProfile?.val || 'N/A'}** | ${crudeProfile ? `${crudeProfile.ibLow} - ${crudeProfile.ibHigh} (${crudeProfile.ibWidth} pts)` : 'N/A'} | ${crudeProfile ? `${crudeProfile.totalRange} pts (${crudeProfile.fibAudit.ibExtension}x IB)` : 'N/A'} | ${crudeProfile?.fibAudit?.summary1618 || 'N/A'} | ${crudeProfile?.fibAudit?.summary2618 || 'N/A'} | ${crudeProfile?.fibAudit?.summary3618 || 'N/A'} |
 
 ---
@@ -655,7 +666,16 @@ This report compiles today's Market Profile auction structure, value area migrat
   * **Scenario 2 (Open Inside Value ${bnProfile?.val} – ${bnProfile?.vah}):** Rotational chop between ${bnProfile?.val} and ${bnProfile?.vah}. Fade extremes targeting **POC ${bnProfile?.poc}**.
   * **Scenario 3 (Open Below VAL ${bnProfile?.val}):** Breakdown expansion targeting **${bnProfile?.expLow}**.
 
-### C. MCX CRUDE OIL
+### C. BSE SENSEX
+* **Expected Trading Range Tomorrow:** **${sensexProfile?.expLow} — ${sensexProfile?.expHigh}** (Median Pivot: **${sensexProfile?.poc}**)
+* **Structural Diagnosis:** Today closed as **${sensexProfile?.shape}**.
+* **Auction Anomalies:** ${sensexProfile?.isPoorHigh ? '⚠️ **Poor High detected:** Unfinished auction at highs awaiting a sweep.' : (sensexProfile?.isPoorLow ? '⚠️ **Poor Low detected:** Unfinished auction at lows awaiting a sweep.' : 'Clean auction excess printed on session extremes.')}
+* **Tomorrow's Tactical Playbook:**
+  * **Scenario 1 (Open Above VAH ${sensexProfile?.vah}):** Initiative long bias. Target extension to **${sensexProfile?.expHigh}**.
+  * **Scenario 2 (Open Inside Value ${sensexProfile?.val} – ${sensexProfile?.vah}):** Rotational chop between ${sensexProfile?.val} and ${sensexProfile?.vah}. Fade extremes targeting **POC ${sensexProfile?.poc}**.
+  * **Scenario 3 (Open Below VAL ${sensexProfile?.val}):** Breakdown expansion targeting **${sensexProfile?.expLow}**.
+
+### D. MCX CRUDE OIL
 * **Expected Trading Range Tomorrow:** **₹${crudeProfile?.expLow} — ₹${crudeProfile?.expHigh}** (Median Pivot: **₹${crudeProfile?.poc}**)
 * **Structural Diagnosis:** Today closed as **${crudeProfile?.shape}**.
 * **Tomorrow's Tactical Playbook:**
@@ -672,6 +692,7 @@ This report compiles today's Market Profile auction structure, value area migrat
 | :--- | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
 | **NIFTY** | ${niftyProfile ? `${niftyProfile.ibLow} / ${niftyProfile.ibHigh}` : 'N/A'} | ${niftyProfile?.ibWidth || 'N/A'} pts | **${niftyProfile?.fibAudit?.ibExtension || '1.0'}x** | **${niftyProfile?.fibAudit?.direction || 'N/A'}** | ${niftyProfile?.fibAudit?.up?.fib1618} (${niftyProfile?.fibAudit?.up?.hit1618 ? '✅ HIT' : '❌ MISSED'}) | ${niftyProfile?.fibAudit?.up?.fib2618} (${niftyProfile?.fibAudit?.up?.hit2618 ? '✅ HIT' : '❌ MISSED'}) | ${niftyProfile?.fibAudit?.up?.fib3618} (${niftyProfile?.fibAudit?.up?.hit3618 ? '✅ HIT' : '❌ MISSED'}) | **${niftyProfile?.fibAudit?.up?.hit3618 ? '3.618x Outlier' : (niftyProfile?.fibAudit?.up?.hit2618 ? '2.618x Extended' : (niftyProfile?.fibAudit?.up?.hit1618 ? '1.618x Primary Target' : 'Inside IB'))}** |
 | **BANKNIFTY** | ${bnProfile ? `${bnProfile.ibLow} / ${bnProfile.ibHigh}` : 'N/A'} | ${bnProfile?.ibWidth || 'N/A'} pts | **${bnProfile?.fibAudit?.ibExtension || '1.0'}x** | **${bnProfile?.fibAudit?.direction || 'N/A'}** | ${bnProfile?.fibAudit?.up?.fib1618} (${bnProfile?.fibAudit?.up?.hit1618 ? '✅ HIT' : '❌ MISSED'}) | ${bnProfile?.fibAudit?.up?.fib2618} (${bnProfile?.fibAudit?.up?.hit2618 ? '✅ HIT' : '❌ MISSED'}) | ${bnProfile?.fibAudit?.up?.fib3618} (${bnProfile?.fibAudit?.up?.hit3618 ? '✅ HIT' : '❌ MISSED'}) | **${bnProfile?.fibAudit?.up?.hit3618 ? '3.618x Outlier' : (bnProfile?.fibAudit?.up?.hit2618 ? '2.618x Extended' : (bnProfile?.fibAudit?.up?.hit1618 ? '1.618x Primary Target' : 'Inside IB'))}** |
+| **SENSEX** | ${sensexProfile ? `${sensexProfile.ibLow} / ${sensexProfile.ibHigh}` : 'N/A'} | ${sensexProfile?.ibWidth || 'N/A'} pts | **${sensexProfile?.fibAudit?.ibExtension || '1.0'}x** | **${sensexProfile?.fibAudit?.direction || 'N/A'}** | ${sensexProfile?.fibAudit?.up?.fib1618} (${sensexProfile?.fibAudit?.up?.hit1618 ? '✅ HIT' : '❌ MISSED'}) | ${sensexProfile?.fibAudit?.up?.fib2618} (${sensexProfile?.fibAudit?.up?.hit2618 ? '✅ HIT' : '❌ MISSED'}) | ${sensexProfile?.fibAudit?.up?.fib3618} (${sensexProfile?.fibAudit?.up?.hit3618 ? '✅ HIT' : '❌ MISSED'}) | **${sensexProfile?.fibAudit?.up?.hit3618 ? '3.618x Outlier' : (sensexProfile?.fibAudit?.up?.hit2618 ? '2.618x Extended' : (sensexProfile?.fibAudit?.up?.hit1618 ? '1.618x Primary Target' : 'Inside IB'))}** |
 | **CRUDEOIL** | ${crudeProfile ? `${crudeProfile.ibLow} / ${crudeProfile.ibHigh}` : 'N/A'} | ${crudeProfile?.ibWidth || 'N/A'} pts | **${crudeProfile?.fibAudit?.ibExtension || '1.0'}x** | **${crudeProfile?.fibAudit?.direction || 'N/A'}** | ${crudeProfile?.fibAudit?.up?.fib1618} (${crudeProfile?.fibAudit?.up?.hit1618 ? '✅ HIT' : '❌ MISSED'}) | ${crudeProfile?.fibAudit?.up?.fib2618} (${crudeProfile?.fibAudit?.up?.hit2618 ? '✅ HIT' : '❌ MISSED'}) | ${crudeProfile?.fibAudit?.up?.fib3618} (${crudeProfile?.fibAudit?.up?.hit3618 ? '✅ HIT' : '❌ MISSED'}) | **${crudeProfile?.fibAudit?.up?.hit3618 ? '3.618x Outlier' : (crudeProfile?.fibAudit?.up?.hit2618 ? '2.618x Extended' : (crudeProfile?.fibAudit?.up?.hit1618 ? '1.618x Primary Target' : 'Inside IB'))}** |
 
 ---

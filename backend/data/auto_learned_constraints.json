@@ -1,7 +1,7 @@
 {
   "version": "2.0.0-AUTONOMOUS",
-  "lastEvolutionTime": "2026-09-24T02:26:21.985Z",
-  "rulesLearnedCount": 12,
+  "lastEvolutionTime": "2026-09-24T02:34:14.283Z",
+  "rulesLearnedCount": 13,
   "negativeFilters": [
     {
       "id": "RULE_INDEX_CONFLUENCE",
@@ -72,6 +72,12 @@
     {
       "id": "PRED_AUDIT_CRUDEOIL_20260923",
       "condition": "Rule 11D Liquidity Sweep Reversal: Gaps below VAL that stall directly at major Put Walls represent liquidity traps. Enter fade longs on rejection candle close targeting the opposite morning extreme.",
+      "addedOn": "2026-09-23",
+      "confidencePct": 92.5
+    },
+    {
+      "id": "PRED_AUDIT_SENSEX_20260923",
+      "condition": "Rule 12 Sensex Normal Variation Cap: Lock profits at 1.618x IB extension on Normal Variation days. Do not chase 2.618x without volume surge.",
       "addedOn": "2026-09-23",
       "confidencePct": 92.5
     }

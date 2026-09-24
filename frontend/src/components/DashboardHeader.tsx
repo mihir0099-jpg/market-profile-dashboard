@@ -22,6 +22,7 @@ interface DashboardHeaderProps {
 const PRESETS = [
   { value: 'NSE:NIFTY', label: 'Nifty 50 Index' },
   { value: 'NSE:BANKNIFTY', label: 'Bank Nifty Index' },
+  { value: 'BSE:SENSEX', label: 'BSE Sensex Index' },
   { value: 'NSE:NIFTY1!', label: 'Nifty Index Futures' },
   // Commodities & Crypto
   { value: 'MCX:CRUDEOIL1!', label: 'Crude Oil Futures (MCX)' },
@@ -533,7 +534,7 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
             const filteredPresets = PRESETS.filter(p => {
               if (isDefault) {
                 return [
-                  'NSE:NIFTY', 'NSE:BANKNIFTY', 'NSE:NIFTY1!', 
+                  'NSE:NIFTY', 'NSE:BANKNIFTY', 'BSE:SENSEX', 'NSE:NIFTY1!', 
                   'MCX:CRUDEOIL1!', 'OANDA:XAUUSD', 'COINBASE:BTCUSD', 'NSE:RELIANCE', 'NSE:HDFCBANK'
                 ].includes(p.value);
               }

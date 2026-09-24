@@ -12,6 +12,7 @@ import { logOptionsChainData } from './options_logger.js';
 import { getMonthlyProfileData } from './monthly_profile_analyzer.js';
 import { getFallbackExpiries, getFallbackGexData, getFallbackPcrData } from './gex_fallback_provider.js';
 import { getCrudeExpiries, getCrudeGexData, getCrudePcrData } from './crudeoil_gex_provider.js';
+import { getSensexExpiries, getSensexGexData, getSensexPcrData } from './sensex_gex_provider.js';
 import { getAiAnalytics } from './ai_engine.js';
 import { AngelOneBridge, angelOneBridge } from './angelone_bridge.js';
 import { runTabHealthAudit } from './auto_heal_engine.js';
@@ -416,6 +417,15 @@ app.get('/api/gex/expiries', async (req, res) => {
       return res.json({ symbol: 'MCX:CRUDEOIL1!', expiries: ['15OCT26', '17NOV26', '16DEC26'] });
     }
   }
+  if (cleanSymbol.includes('SENSEX') || sym.startsWith('BSE:')) {
+    try {
+      const data = await getSensexExpiries();
+      return res.json(data);
+    } catch (e) {
+      console.warn('[Server] Error fetching Sensex expiries:', e.message);
+      return res.json({ symbol: 'BSE:SENSEX', expiries: ['26SEP', '26O01', '26O08', '26O15', '26OCT'] });
+    }
+  }
   try {
     const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/expiries?symbol=${cleanSymbol}`);
     const data = await response.json();
@@ -440,6 +450,15 @@ app.get('/api/gex/data', async (req, res) => {
     } catch (e) {
       console.warn('[Server] Error fetching Crude GEX data:', e.message);
       return res.status(500).json({ error: 'Failed to compute Crude Oil GEX' });
+    }
+  }
+  if (cleanSymbol.includes('SENSEX') || sym.startsWith('BSE:')) {
+    try {
+      const data = await getSensexGexData(expiry);
+      return res.json(data);
+    } catch (e) {
+      console.warn('[Server] Error fetching Sensex GEX data:', e.message);
+      return res.status(500).json({ error: 'Failed to compute Sensex GEX' });
     }
   }
   try {
@@ -470,6 +489,15 @@ app.get('/api/pcr/data', async (req, res) => {
     } catch (e) {
       console.warn('[Server] Error fetching Crude PCR data:', e.message);
       return res.status(500).json({ error: 'Failed to compute Crude Oil PCR' });
+    }
+  }
+  if (cleanSymbol.includes('SENSEX') || sym.startsWith('BSE:')) {
+    try {
+      const data = await getSensexPcrData(expiry);
+      return res.json(data);
+    } catch (e) {
+      console.warn('[Server] Error fetching Sensex PCR data:', e.message);
+      return res.status(500).json({ error: 'Failed to compute Sensex PCR' });
     }
   }
   try {

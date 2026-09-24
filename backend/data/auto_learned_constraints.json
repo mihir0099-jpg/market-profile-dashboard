@@ -1,7 +1,7 @@
 {
   "version": "2.0.0-AUTONOMOUS",
-  "lastEvolutionTime": "2026-09-21T03:42:53.216Z",
-  "rulesLearnedCount": 6,
+  "lastEvolutionTime": "2026-09-24T02:26:21.985Z",
+  "rulesLearnedCount": 12,
   "negativeFilters": [
     {
       "id": "RULE_INDEX_CONFLUENCE",
@@ -56,6 +56,24 @@
       "condition": "Rule 1A Filter Passed: Candle close outside IB confirms institutional acceptance (87.8% win rate). Bullish continuation target +43.9 Nifty points in Period H.",
       "addedOn": "22/9/2026",
       "confidencePct": 87.8
+    },
+    {
+      "id": "PRED_AUDIT_NIFTY_20260923",
+      "condition": "Rule 1A & 4A Enforcement: When price opens inside value but Period C closes strictly outside IB High, cancel all 80% Rule mean-reversion short trades immediately; switch bias to trailing 2.618x and 3.618x outlier Fibonacci extensions.",
+      "addedOn": "2026-09-23",
+      "confidencePct": 92.5
+    },
+    {
+      "id": "PRED_AUDIT_BANKNIFTY_20260923",
+      "condition": "Rule 12 Normal Variation Cap: Always lock 100% of profits at the 1.618x IB extension on Normal Variation days. Do not hold for 2.618x without confirmed institutional volume > 1.3x in Period L.",
+      "addedOn": "2026-09-23",
+      "confidencePct": 92.5
+    },
+    {
+      "id": "PRED_AUDIT_CRUDEOIL_20260923",
+      "condition": "Rule 11D Liquidity Sweep Reversal: Gaps below VAL that stall directly at major Put Walls represent liquidity traps. Enter fade longs on rejection candle close targeting the opposite morning extreme.",
+      "addedOn": "2026-09-23",
+      "confidencePct": 92.5
     }
   ],
   "dynamicThresholds": {

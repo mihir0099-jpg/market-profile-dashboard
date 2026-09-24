@@ -9,7 +9,7 @@ and automated machine learning diagnostics compiled immediately following today'
 --------------------------------------------------------------------------------
 * NSE:NIFTY
   - Spot Close: 23446.80
-  - Final PCR: 1.016 (Drift: -0.110)
+  - Final PCR: 1.016 (Drift: -0.033)
   - Key Walls: Call Wall at 23500 | Put Wall at 23400
   - Gamma Flip Zone: 23450
   - Conjoint State: -GEX (Negative Gamma / High Volatility)

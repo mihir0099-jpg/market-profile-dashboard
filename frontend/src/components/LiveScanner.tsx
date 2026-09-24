@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Activity, ArrowUpRight, AlertTriangle, HelpCircle, Loader2 } from 'lucide-react';
 import { getApiBase } from '../utils/apiConfig';
 
@@ -38,87 +38,6 @@ interface ScannerState {
   results: ScanResult[];
 }
 
-interface PatternStat {
-  name: string;
-  description: string;
-  attempts: number;
-  successes: number;
-  probability: number;
-}
-
-interface OpenStatDetails {
-  gapUp: number;
-  gapDown: number;
-  flat: number;
-  total: number;
-}
-
-interface PatternLearnings {
-  lastUpdated: string;
-  global?: {
-    stats: Record<string, PatternStat>;
-    tpoBehaviors?: {
-      totalSessions: number;
-      highEstablishedByPeriod: Record<string, number>;
-      lowEstablishedByPeriod: Record<string, number>;
-      ibBreakoutByPeriod: Record<string, number>;
-      closingDistribution: {
-        aboveVah: number;
-        belowVal: number;
-        insideValue: number;
-        totalSessions: number;
-      };
-    };
-    openStats?: {
-      afterAboveVah: OpenStatDetails;
-      afterBelowVal: OpenStatDetails;
-      afterInsideValue: OpenStatDetails;
-    };
-    pcrCorrelations?: any;
-  };
-  symbols?: Record<string, {
-    stats: Record<string, PatternStat>;
-    tpoBehaviors?: {
-      totalSessions: number;
-      highEstablishedByPeriod: Record<string, number>;
-      lowEstablishedByPeriod: Record<string, number>;
-      ibBreakoutByPeriod: Record<string, number>;
-      closingDistribution: {
-        aboveVah: number;
-        belowVal: number;
-        insideValue: number;
-        totalSessions: number;
-      };
-    };
-    openStats?: {
-      afterAboveVah: OpenStatDetails;
-      afterBelowVal: OpenStatDetails;
-      afterInsideValue: OpenStatDetails;
-    };
-    pcrCorrelations?: any;
-  }>;
-  // Legacy support fallback
-  stats: Record<string, PatternStat>;
-  tpoBehaviors?: {
-    totalSessions: number;
-    highEstablishedByPeriod: Record<string, number>;
-    lowEstablishedByPeriod: Record<string, number>;
-    ibBreakoutByPeriod: Record<string, number>;
-    closingDistribution: {
-      aboveVah: number;
-      belowVal: number;
-      insideValue: number;
-      totalSessions: number;
-    };
-  };
-  openStats?: {
-    afterAboveVah: OpenStatDetails;
-    afterBelowVal: OpenStatDetails;
-    afterInsideValue: OpenStatDetails;
-  };
-  pcrCorrelations?: any;
-}
-
 interface LiveScannerProps {
   onSelectSymbol: (symbol: string) => void;
   currentSymbol: string;
@@ -136,9 +55,7 @@ export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, curren
   });
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [learnings, setLearnings] = useState<PatternLearnings | null>(null);
   const [activeTab, setActiveTab] = useState<'all' | 'otf-up' | 'otf-down' | 'poor-high' | 'poor-low' | 'narrow-ib' | 'exhaustion' | 'balance' | 'kangaroo' | 'late-drive' | 'high-prob' | 'double-dist' | 'p-shape' | 'b-shape' | 'eighty-percent' | 'ib-small' | 'ib-medium' | 'ib-large' | 'traps' | 'magnets'>('all');
-  const [statsTab, setStatsTab] = useState<'probabilities' | 'tpo-behavior' | 'open-stats' | 'pcr-sentiment'>('probabilities');
   const [accuracyData, setAccuracyData] = useState<any>(null);
 
   const getSetupAccuracy = (symbol: string, setupKey: string): number | null => {
@@ -151,18 +68,6 @@ export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, curren
     }
     return null;
   };
-
-  const activeLearnings = useMemo(() => {
-    if (!learnings) return null;
-    const cleanSym = currentSymbol;
-    if (learnings.symbols && learnings.symbols[cleanSym]) {
-      return learnings.symbols[cleanSym];
-    }
-    if (learnings.global) {
-      return learnings.global;
-    }
-    return learnings; // fallback
-  }, [learnings, currentSymbol]);
 
   const filteredResults = scannerState.results.filter(res => {
     if (activeTab === 'all') return true;
@@ -325,18 +230,6 @@ export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, curren
     }
   };
 
-  const fetchPatternStats = async () => {
-    try {
-      const response = await fetch(`${API_BASE}/api/scanner/stats`);
-      if (response.ok) {
-        const data = await response.json();
-        setLearnings(data);
-      }
-    } catch (err) {
-      console.error('[Scanner UI] Error fetching pattern stats:', err);
-    }
-  };
-
   const fetchAccuracyScorecard = async () => {
     try {
       const response = await fetch(`${API_BASE}/api/scanner/accuracy`);
@@ -352,17 +245,14 @@ export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, curren
   useEffect(() => {
     // Initial fetch
     fetchScannerState();
-    fetchPatternStats();
     fetchAccuracyScorecard();
 
-    // Poll scanner every 5 seconds, stats and accuracy scorecard every 30 seconds
+    // Poll scanner every 5 seconds, accuracy scorecard every 30 seconds
     const interval = setInterval(fetchScannerState, 5000);
-    const statsInterval = setInterval(fetchPatternStats, 30000);
     const accuracyInterval = setInterval(fetchAccuracyScorecard, 30000);
 
     return () => {
       clearInterval(interval);
-      clearInterval(statsInterval);
       clearInterval(accuracyInterval);
     };
   }, []);
@@ -832,322 +722,6 @@ export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, curren
           </div>
         );
       })()}
-
-      {/* AI Auto-Learned Probabilities & TPO Behavior Section */}
-      {learnings && (
-        <div style={{
-          marginTop: '8px',
-          padding: '12px 14px',
-          borderRadius: '12px',
-          backgroundColor: 'rgba(255, 255, 255, 0.01)',
-          border: '1px solid rgba(255, 255, 255, 0.04)',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '10px',
-        }}>
-          {/* Section Header with Tabs */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.8px', color: 'var(--accent-purple)', display: 'flex', alignItems: 'center', gap: '6px' }} title={currentSymbol}>
-              🤖 AI Learning: {learnings.symbols?.[currentSymbol] ? currentSymbol.split(':').pop() : 'Global'}
-            </span>
-            <div style={{ display: 'flex', gap: '4px', backgroundColor: 'rgba(255,255,255,0.03)', padding: '2px', borderRadius: '6px' }}>
-              <button 
-                onClick={() => setStatsTab('probabilities')}
-                style={{
-                  fontSize: '9px',
-                  fontWeight: '700',
-                  padding: '3px 8px',
-                  border: 'none',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  backgroundColor: statsTab === 'probabilities' ? 'rgba(255,255,255,0.08)' : 'transparent',
-                  color: statsTab === 'probabilities' ? 'white' : 'var(--text-muted)',
-                }}
-              >
-                Setups
-              </button>
-              <button 
-                onClick={() => setStatsTab('tpo-behavior')}
-                style={{
-                  fontSize: '9px',
-                  fontWeight: '700',
-                  padding: '3px 8px',
-                  border: 'none',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  backgroundColor: statsTab === 'tpo-behavior' ? 'rgba(255,255,255,0.08)' : 'transparent',
-                  color: statsTab === 'tpo-behavior' ? 'white' : 'var(--text-muted)',
-                }}
-              >
-                TPO Analysis
-              </button>
-              <button 
-                onClick={() => setStatsTab('open-stats')}
-                style={{
-                  fontSize: '9px',
-                  fontWeight: '700',
-                  padding: '3px 8px',
-                  border: 'none',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  backgroundColor: statsTab === 'open-stats' ? 'rgba(255,255,255,0.08)' : 'transparent',
-                  color: statsTab === 'open-stats' ? 'white' : 'var(--text-muted)',
-                }}
-              >
-                Open Stats
-              </button>
-              <button 
-                onClick={() => setStatsTab('pcr-sentiment')}
-                style={{
-                  fontSize: '9px',
-                  fontWeight: '700',
-                  padding: '3px 8px',
-                  border: 'none',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  backgroundColor: statsTab === 'pcr-sentiment' ? 'rgba(255,255,255,0.08)' : 'transparent',
-                  color: statsTab === 'pcr-sentiment' ? 'white' : 'var(--text-muted)',
-                }}
-              >
-                PCR Sentiment
-              </button>
-            </div>
-          </div>
-
-          {statsTab === 'probabilities' && activeLearnings && activeLearnings.stats && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {Object.values(activeLearnings.stats).map((stat: any) => (
-                <div key={stat.name} style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-primary)' }} title={stat.description}>
-                      {stat.name}
-                    </span>
-                    <span style={{ 
-                      fontSize: '13px', 
-                      fontWeight: '800', 
-                      color: stat.probability > 70 ? 'var(--color-bull)' : stat.probability > 45 ? '#f59e0b' : '#ef4444' 
-                    }}>
-                      {stat.probability}%
-                    </span>
-                  </div>
-                  <div style={{ width: '100%', height: '4px', backgroundColor: 'rgba(255, 255, 255, 0.03)', borderRadius: '2px', overflow: 'hidden' }}>
-                    <div style={{
-                      width: `${stat.probability}%`,
-                      height: '100%',
-                      backgroundColor: stat.probability > 70 ? 'var(--color-bull)' : stat.probability > 45 ? '#f59e0b' : '#ef4444',
-                      borderRadius: '2px',
-                      transition: 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1)'
-                    }} />
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {statsTab === 'tpo-behavior' && activeLearnings && activeLearnings.tpoBehaviors && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '12px' }}>
-              
-              {/* Closing Placement Distribution */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)', fontSize: '10px', fontWeight: '700', textTransform: 'uppercase' }}>
-                  <span>Closing Distribution (VAH / VAL)</span>
-                  <span style={{ color: 'white' }}>N={activeLearnings.tpoBehaviors.closingDistribution.totalSessions} sessions</span>
-                </div>
-                <div style={{ width: '100%', height: '14px', display: 'flex', borderRadius: '4px', overflow: 'hidden', fontSize: '10px', fontWeight: '800', color: 'white', textAlign: 'center', lineHeight: '14px' }}>
-                  <div style={{ width: `${activeLearnings.tpoBehaviors.closingDistribution.aboveVah}%`, backgroundColor: 'rgba(16, 185, 129, 0.3)', borderRight: '1px solid rgba(255,255,255,0.1)' }} title="Close Above VAH">
-                    {activeLearnings.tpoBehaviors.closingDistribution.aboveVah > 10 ? `Above VAH ${activeLearnings.tpoBehaviors.closingDistribution.aboveVah}%` : ''}
-                  </div>
-                  <div style={{ width: `${activeLearnings.tpoBehaviors.closingDistribution.insideValue}%`, backgroundColor: 'rgba(255,255,255,0.06)', borderRight: '1px solid rgba(255,255,255,0.1)' }} title="Close Inside Value">
-                    {activeLearnings.tpoBehaviors.closingDistribution.insideValue > 10 ? `Inside Value ${activeLearnings.tpoBehaviors.closingDistribution.insideValue}%` : ''}
-                  </div>
-                  <div style={{ width: `${activeLearnings.tpoBehaviors.closingDistribution.belowVal}%`, backgroundColor: 'rgba(239, 68, 68, 0.3)' }} title="Close Below VAL">
-                    {activeLearnings.tpoBehaviors.closingDistribution.belowVal > 10 ? `Below VAL ${activeLearnings.tpoBehaviors.closingDistribution.belowVal}%` : ''}
-                  </div>
-                </div>
-              </div>
-
-              {/* Day extremes by Period Table */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-                <div style={{ color: 'var(--text-muted)', fontSize: '10px', fontWeight: '700', textTransform: 'uppercase' }}>
-                  Day High/Low Established By Period
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '4px', textAlign: 'center', backgroundColor: 'rgba(255,255,255,0.02)', padding: '6px', borderRadius: '6px' }}>
-                  {['A', 'B', 'C', 'L', 'M'].map(p => {
-                    const hi = activeLearnings.tpoBehaviors?.highEstablishedByPeriod[p] || 0;
-                    const lo = activeLearnings.tpoBehaviors?.lowEstablishedByPeriod[p] || 0;
-                    return (
-                      <div key={p} style={{ display: 'flex', flexDirection: 'column', gap: '2px', backgroundColor: 'rgba(255,255,255,0.02)', padding: '4px', borderRadius: '4px' }}>
-                        <span style={{ fontWeight: '800', color: 'var(--accent-purple)' }}>{p}</span>
-                        <span style={{ fontSize: '10px', color: '#10b981' }}>H:{hi}%</span>
-                        <span style={{ fontSize: '10px', color: '#ef4444' }}>L:{lo}%</span>
-                      </div>
-                    );
-                  })}
-                  
-                  {/* Rest periods grouped */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', backgroundColor: 'rgba(255,255,255,0.02)', padding: '4px', borderRadius: '4px' }}>
-                    <span style={{ fontWeight: '800', color: 'var(--text-muted)' }}>Others</span>
-                    <span style={{ fontSize: '10px', color: '#10b981' }}>H:{Math.round((100 - (['A','B','C','L','M'].reduce((acc, p) => acc + (activeLearnings.tpoBehaviors?.highEstablishedByPeriod[p] || 0), 0))) * 10) / 10}%</span>
-                    <span style={{ fontSize: '10px', color: '#ef4444' }}>L:{Math.round((100 - (['A','B','C','L','M'].reduce((acc, p) => acc + (activeLearnings.tpoBehaviors?.lowEstablishedByPeriod[p] || 0), 0))) * 10) / 10}%</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Initial Balance Breakouts Progress */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)', fontSize: '10px', fontWeight: '700', textTransform: 'uppercase' }}>
-                  <span>IB Breakout Timeline Probability</span>
-                  <span style={{ color: 'var(--color-bull)' }}>Max: {activeLearnings.tpoBehaviors.ibBreakoutByPeriod.L}%</span>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: 'var(--text-secondary)' }}>
-                  <span>Period C: {activeLearnings.tpoBehaviors.ibBreakoutByPeriod.C}%</span>
-                  <span>Period G: {activeLearnings.tpoBehaviors.ibBreakoutByPeriod.G}%</span>
-                  <span>Period K: {activeLearnings.tpoBehaviors.ibBreakoutByPeriod.K}%</span>
-                </div>
-              </div>
-
-            </div>
-          )}
-
-          {statsTab === 'open-stats' && activeLearnings && activeLearnings.openStats && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '11px' }}>
-              
-              {/* Closing Above VAH probabilities */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', borderBottom: '1px solid rgba(255,255,255,0.03)', paddingBottom: '8px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#10b981', fontWeight: '800', textTransform: 'uppercase', fontSize: '9px', letterSpacing: '0.5px' }}>
-                  <span>Prev Day Closed Above VAH</span>
-                  <span style={{ color: 'var(--text-muted)' }}>N={activeLearnings.openStats.afterAboveVah.total}</span>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
-                  <span>🚀 Gap Up: <strong style={{ color: 'white' }}>{activeLearnings.openStats.afterAboveVah.gapUp}%</strong></span>
-                  <span>📉 Gap Down: <strong style={{ color: 'white' }}>{activeLearnings.openStats.afterAboveVah.gapDown}%</strong></span>
-                  <span>↔️ Flat/Range: <strong style={{ color: 'white' }}>{activeLearnings.openStats.afterAboveVah.flat}%</strong></span>
-                </div>
-              </div>
-
-              {/* Closing Below VAL probabilities */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', borderBottom: '1px solid rgba(255,255,255,0.03)', paddingBottom: '8px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#ef4444', fontWeight: '800', textTransform: 'uppercase', fontSize: '9px', letterSpacing: '0.5px' }}>
-                  <span>Prev Day Closed Below VAL</span>
-                  <span style={{ color: 'var(--text-muted)' }}>N={activeLearnings.openStats.afterBelowVal.total}</span>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
-                  <span>📉 Gap Down: <strong style={{ color: 'white' }}>{activeLearnings.openStats.afterBelowVal.gapDown}%</strong></span>
-                  <span>🚀 Gap Up: <strong style={{ color: 'white' }}>{activeLearnings.openStats.afterBelowVal.gapUp}%</strong></span>
-                  <span>↔️ Flat/Range: <strong style={{ color: 'white' }}>{activeLearnings.openStats.afterBelowVal.flat}%</strong></span>
-                </div>
-              </div>
-
-              {/* Closing Inside Value Area probabilities */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--accent-blue)', fontWeight: '800', textTransform: 'uppercase', fontSize: '9px', letterSpacing: '0.5px' }}>
-                  <span>Prev Day Closed Inside Value</span>
-                  <span style={{ color: 'var(--text-muted)' }}>N={activeLearnings.openStats.afterInsideValue.total}</span>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
-                  <span>↔️ Flat/Range: <strong style={{ color: 'white' }}>{activeLearnings.openStats.afterInsideValue.flat}%</strong></span>
-                  <span>🚀 Gap Up: <strong style={{ color: 'white' }}>{activeLearnings.openStats.afterInsideValue.gapUp}%</strong></span>
-                  <span>📉 Gap Down: <strong style={{ color: 'white' }}>{activeLearnings.openStats.afterInsideValue.gapDown}%</strong></span>
-                </div>
-              </div>
-
-            </div>
-          )}
-
-          {statsTab === 'pcr-sentiment' && learnings && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '10px', color: 'var(--text-muted)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                  PCR Sentiment Correlations (Global)
-                </span>
-                <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>
-                  N={
-                    (learnings.global?.pcrCorrelations?.extremeFear?.attempts || 0) + 
-                    (learnings.global?.pcrCorrelations?.extremeGreed?.attempts || 0) + 
-                    (learnings.global?.pcrCorrelations?.neutral?.attempts || 0)
-                  } sessions
-                </span>
-              </div>
-
-              {/* Extreme Fear */}
-              {learnings.global?.pcrCorrelations?.extremeFear && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', backgroundColor: 'rgba(239, 68, 68, 0.04)', border: '1px solid rgba(239, 68, 68, 0.1)', padding: '10px', borderRadius: '8px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '11px', fontWeight: 'bold', color: '#ef4444' }}>😨 Extreme Fear (PCR &ge; 1.25)</span>
-                    <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>{learnings.global.pcrCorrelations.extremeFear.attempts} days</span>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '6px', marginTop: '4px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.01)', padding: '6px', borderRadius: '4px' }}>
-                      <span style={{ fontSize: '8px', color: 'var(--text-muted)' }}>GREEN CLOSE</span>
-                      <strong style={{ fontSize: '11px', color: '#10b981', marginTop: '2px' }}>{learnings.global.pcrCorrelations.extremeFear.bullishCloseProb}%</strong>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.01)', padding: '6px', borderRadius: '4px' }}>
-                      <span style={{ fontSize: '8px', color: 'var(--text-muted)' }}>TOUCH POC</span>
-                      <strong style={{ fontSize: '11px', color: '#3b82f6', marginTop: '2px' }}>{learnings.global.pcrCorrelations.extremeFear.meanReversionProb}%</strong>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.01)', padding: '6px', borderRadius: '4px' }}>
-                      <span style={{ fontSize: '8px', color: 'var(--text-muted)' }}>GAP FILL</span>
-                      <strong style={{ fontSize: '11px', color: '#fbbf24', marginTop: '2px' }}>{learnings.global.pcrCorrelations.extremeFear.gapFillProb}%</strong>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Extreme Greed */}
-              {learnings.global?.pcrCorrelations?.extremeGreed && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', backgroundColor: 'rgba(16, 185, 129, 0.04)', border: '1px solid rgba(16, 185, 129, 0.1)', padding: '10px', borderRadius: '8px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '11px', fontWeight: 'bold', color: '#10b981' }}>🤑 Extreme Greed (PCR &le; 0.65)</span>
-                    <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>{learnings.global.pcrCorrelations.extremeGreed.attempts} days</span>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '6px', marginTop: '4px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.01)', padding: '6px', borderRadius: '4px' }}>
-                      <span style={{ fontSize: '8px', color: 'var(--text-muted)' }}>GREEN CLOSE</span>
-                      <strong style={{ fontSize: '11px', color: '#ef4444', marginTop: '2px' }}>{learnings.global.pcrCorrelations.extremeGreed.bullishCloseProb}%</strong>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.01)', padding: '6px', borderRadius: '4px' }}>
-                      <span style={{ fontSize: '8px', color: 'var(--text-muted)' }}>TOUCH POC</span>
-                      <strong style={{ fontSize: '11px', color: '#3b82f6', marginTop: '2px' }}>{learnings.global.pcrCorrelations.extremeGreed.meanReversionProb}%</strong>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.01)', padding: '6px', borderRadius: '4px' }}>
-                      <span style={{ fontSize: '8px', color: 'var(--text-muted)' }}>GAP FILL</span>
-                      <strong style={{ fontSize: '11px', color: '#fbbf24', marginTop: '2px' }}>{learnings.global.pcrCorrelations.extremeGreed.gapFillProb}%</strong>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Neutral Balance */}
-              {learnings.global?.pcrCorrelations?.neutral && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', padding: '10px', borderRadius: '8px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-secondary)' }}>⚖️ Neutral Balance (0.65 &lt; PCR &lt; 1.25)</span>
-                    <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>{learnings.global.pcrCorrelations.neutral.attempts} days</span>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '6px', marginTop: '4px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.01)', padding: '6px', borderRadius: '4px' }}>
-                      <span style={{ fontSize: '8px', color: 'var(--text-muted)' }}>GREEN CLOSE</span>
-                      <strong style={{ fontSize: '11px', color: 'white', marginTop: '2px' }}>{learnings.global.pcrCorrelations.neutral.bullishCloseProb}%</strong>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.01)', padding: '6px', borderRadius: '4px' }}>
-                      <span style={{ fontSize: '8px', color: 'var(--text-muted)' }}>TOUCH POC</span>
-                      <strong style={{ fontSize: '11px', color: '#3b82f6', marginTop: '2px' }}>{learnings.global.pcrCorrelations.neutral.meanReversionProb}%</strong>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.01)', padding: '6px', borderRadius: '4px' }}>
-                      <span style={{ fontSize: '8px', color: 'var(--text-muted)' }}>GAP FILL</span>
-                      <strong style={{ fontSize: '11px', color: '#fbbf24', marginTop: '2px' }}>{learnings.global.pcrCorrelations.neutral.gapFillProb}%</strong>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
-          <div style={{ fontSize: '10px', color: 'var(--text-muted)', textAlign: 'right' }}>
-            Last Run: {learnings.lastUpdated}
-          </div>
-        </div>
-      )}
 
       {/* Footer Meta */}
       {scannerState.lastScanTime && (

@@ -57,8 +57,53 @@ async function fetchJsonSafely(url) {
 async function getMarketProfileSummary(symbolName, exchange, token, tickSize, todayStr, startTime = '09:15') {
   try {
     await angelOneBridge.login();
-    const candles = await angelOneBridge.getCandles(exchange, token, 'THIRTY_MINUTE', `${todayStr} ${startTime}`, `${todayStr} 18:30`);
-    if (!candles || candles.length === 0) return null;
+    let candles = await angelOneBridge.getCandles(exchange, token, 'THIRTY_MINUTE', `${todayStr} ${startTime}`, `${todayStr} 18:30`);
+
+    // Robust Fallback: If Angel One API returns empty or rate-limited, query TradingView 30m candles
+    if (!candles || candles.length === 0) {
+      console.warn(`[Profile Summary] Angel One candles empty for ${symbolName}, falling back to TradingView...`);
+      try {
+        const tvSymbol = symbolName === 'CRUDEOIL' ? 'MCX:CRUDEOIL1!' : (exchange === 'BSE' ? `BSE:${symbolName}` : `NSE:${symbolName}`);
+        const bridge = new TradingViewBridge();
+        const tvCandles = await new Promise((resolve) => {
+          let done = false;
+          const timeout = setTimeout(() => { if (!done) { done = true; resolve([]); } }, 6000);
+          bridge.subscribeSymbol(tvSymbol, '30', (data) => {
+            if (data.isSnapshot && !done) {
+              done = true;
+              clearTimeout(timeout);
+              resolve(data.candles || []);
+            }
+          }, () => { if (!done) { done = true; resolve([]); } });
+        });
+
+        if (tvCandles && tvCandles.length > 0) {
+          const todayTv = tvCandles.filter(c => {
+            const istDate = new Date((c.time + 19800) * 1000).toISOString().split('T')[0];
+            return istDate === todayStr;
+          });
+
+          if (todayTv.length > 0) {
+            candles = todayTv.map(c => [
+              new Date(c.time * 1000).toISOString(),
+              Number(c.open),
+              Number(c.high),
+              Number(c.low),
+              Number(c.close),
+              Number(c.volume || 0)
+            ]);
+            console.log(`[Profile Summary] Successfully recovered ${candles.length} candles for ${symbolName} via TradingView.`);
+          }
+        }
+      } catch (tvErr) {
+        console.warn(`[Profile Summary] TradingView fallback error for ${symbolName}:`, tvErr.message);
+      }
+    }
+
+    if (!candles || candles.length === 0) {
+      console.warn(`[Profile Summary] No candles available for ${symbolName} for date ${todayStr}.`);
+      return null;
+    }
 
     const periods = 'ABCDEFGHIJKLM';
     const dayOpen = candles[0][1];
@@ -248,8 +293,11 @@ async function auditPriorDayForecast(todayProfiles, todayStr, reportsDir) {
     const priorDateStr = files[0];
 
     const priorNifty = await getMarketProfileSummary('NIFTY', 'NSE', '99926000', 10, priorDateStr, '09:15');
+    await new Promise(r => setTimeout(r, 1200));
     const priorBn = await getMarketProfileSummary('BANKNIFTY', 'NSE', '99926009', 50, priorDateStr, '09:15');
+    await new Promise(r => setTimeout(r, 1200));
     const priorSensex = await getMarketProfileSummary('SENSEX', 'BSE', '99919000', 50, priorDateStr, '09:15');
+    await new Promise(r => setTimeout(r, 1200));
     const priorCrude = await getMarketProfileSummary('CRUDEOIL', 'MCX', '569900', 10, priorDateStr, '09:00');
 
     const priors = { NIFTY: priorNifty, BANKNIFTY: priorBn, SENSEX: priorSensex, CRUDEOIL: priorCrude };
@@ -592,8 +640,11 @@ export async function runDailyPostMortem(forceRun = false, customDateStr = null)
     // 4. Compute Market Profiles for Nifty, Bank Nifty, Sensex, and MCX Crude Oil
     console.log('[Daily Post-Mortem] Building Market Profile daily post-mortem & predictive models...');
     const niftyProfile = await getMarketProfileSummary('NIFTY', 'NSE', '99926000', 10, todayStr, '09:15');
+    await new Promise(r => setTimeout(r, 1200));
     const bnProfile = await getMarketProfileSummary('BANKNIFTY', 'NSE', '99926009', 50, todayStr, '09:15');
+    await new Promise(r => setTimeout(r, 1200));
     const sensexProfile = await getMarketProfileSummary('SENSEX', 'BSE', '99919000', 50, todayStr, '09:15');
+    await new Promise(r => setTimeout(r, 1200));
     const crudeProfile = await getMarketProfileSummary('CRUDEOIL', 'MCX', '569900', 10, todayStr, '09:00');
 
     const reportsDir = path.join(__dirname, 'daily_reports');

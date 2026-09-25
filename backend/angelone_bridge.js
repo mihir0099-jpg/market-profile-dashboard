@@ -301,33 +301,53 @@ export class AngelOneBridge {
         return cached.data;
       }
 
-      // Throttle queue to strictly obey Angel One max 3 requests/sec rate limit
+      // Throttle queue to strictly obey Angel One max 3 requests/sec rate limit with robust backoff
       const execute = async () => {
+        const minGap = 1500; // 1.5s gap between requests to strictly prevent 403 exceeding rate limit
         const timeSinceLast = Date.now() - (this._lastCandleReqTime || 0);
-        if (timeSinceLast < 450) {
-          await new Promise(r => setTimeout(r, 450 - timeSinceLast));
+        if (timeSinceLast < minGap) {
+          await new Promise(r => setTimeout(r, minGap - timeSinceLast));
         }
-        this._lastCandleReqTime = Date.now();
 
-        let res = await this._authedPost('https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData', {
-          exchange,
-          symboltoken,
-          interval,
-          fromdate: from,
-          todate: to
-        });
+        let res = null;
+        let attempts = 0;
+        const maxAttempts = 2;
 
-        // If rate limited or 403, retry once after 1500ms backoff
-        if (!res?.data && (res?.statusCode === 403 || res?.rawBody?.includes('exceeding') || res?.message?.includes('exceeding'))) {
-          await new Promise(r => setTimeout(r, 1500));
-          this._lastCandleReqTime = Date.now();
-          res = await this._authedPost('https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData', {
-            exchange,
-            symboltoken,
-            interval,
-            fromdate: from,
-            todate: to
-          });
+        while (attempts < maxAttempts) {
+          attempts++;
+          try {
+            res = await this._authedPost('https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData', {
+              exchange,
+              symboltoken,
+              interval,
+              fromdate: from,
+              todate: to
+            });
+            this._lastCandleReqTime = Date.now();
+
+            if (res?.data && Array.isArray(res.data) && res.data.length > 0) {
+              this._candleCache.set(cacheKey, { time: Date.now(), data: res.data });
+              return res.data;
+            }
+
+            const isRateLimit = res?.statusCode === 403 || 
+              (typeof res?.rawBody === 'string' && res.rawBody.includes('exceeding')) ||
+              (typeof res?.message === 'string' && res.message.includes('exceeding'));
+
+            if (isRateLimit && attempts < maxAttempts) {
+              console.warn(`[AngelOne getCandles] Rate limited for token ${symboltoken}. Backing off 1000ms...`);
+              await new Promise(r => setTimeout(r, 1000));
+              continue;
+            }
+
+            break;
+          } catch (postErr) {
+            this._lastCandleReqTime = Date.now();
+            if (attempts < maxAttempts) {
+              await new Promise(r => setTimeout(r, 1000));
+              continue;
+            }
+          }
         }
 
         if (res?.data && Array.isArray(res.data) && res.data.length > 0) {
@@ -557,8 +577,21 @@ export class AngelOneBridge {
     const fromdate = formatDate(startDate);
     const todate = formatDate(now);
 
-    const rawCandles = await this.getCandles(meta.exchange, meta.symboltoken, interval, fromdate, todate);
+    let rawCandles = [];
+    try {
+      rawCandles = await this.getCandles(meta.exchange, meta.symboltoken, interval, fromdate, todate);
+    } catch (e) {
+      console.warn(`[AngelOne] getCandles error for ${symbol}: ${e.message}`);
+    }
+
+    // If Angel One historical candles endpoint is rate-limited or empty, fetch base historical candles seamlessly
     if (!Array.isArray(rawCandles) || rawCandles.length === 0) {
+      try {
+        const tvCandles = await this.fetchTvBaseCandles(symbol, timeframe, limit);
+        if (tvCandles && tvCandles.length > 0) {
+          return tvCandles;
+        }
+      } catch (tvErr) {}
       return [];
     }
 
@@ -577,44 +610,107 @@ export class AngelOneBridge {
     return formatted.slice(-limit);
   }
 
+  async fetchTvBaseCandles(symbol, timeframe, limit = 300) {
+    const { TradingViewBridge } = await import('./tradingview.js');
+    const bridge = new TradingViewBridge();
+    return new Promise((resolve) => {
+      let resolved = false;
+      const timeout = setTimeout(() => {
+        if (!resolved) { resolved = true; resolve([]); }
+      }, 5000);
+      bridge.subscribeSymbol(symbol, timeframe, (data) => {
+        if (data && data.candles && data.candles.length > 0 && !resolved) {
+          resolved = true;
+          clearTimeout(timeout);
+          resolve(data.candles);
+        }
+      }, () => {
+        if (!resolved) { resolved = true; resolve([]); }
+      }, limit);
+    });
+  }
+
+  getTimeframeSeconds(timeframe) {
+    const tf = String(timeframe).toUpperCase();
+    if (tf === '1' || tf === '1M' || tf === 'ONE_MINUTE') return 60;
+    if (tf === '3' || tf === '3M' || tf === 'THREE_MINUTE') return 180;
+    if (tf === '5' || tf === '5M' || tf === 'FIVE_MINUTE') return 300;
+    if (tf === '10' || tf === '10M' || tf === 'TEN_MINUTE') return 600;
+    if (tf === '15' || tf === '15M' || tf === 'FIFTEEN_MINUTE') return 900;
+    if (tf === '30' || tf === '30M' || tf === 'THIRTY_MINUTE') return 1800;
+    if (tf === '60' || tf === '1H' || tf === '60M' || tf === 'ONE_HOUR') return 3600;
+    if (tf === 'D' || tf === '1D' || tf === 'DAILY' || tf === 'ONE_DAY') return 86400;
+    return 1800;
+  }
+
+  async getLTP(symbol) {
+    return this.resolveAndGetLtp(symbol);
+  }
+
   async subscribeSymbol(symbol, timeframe, onData, onError, limit = 300) {
     let active = true;
     let pollTimer = null;
 
     try {
+      // 1. Fetch initial historical candle snapshot ONCE
       const candles = await this.getFormattedCandles(symbol, timeframe, limit);
       if (!active) return () => {};
 
-      if (candles.length > 0) {
-        onData({
-          symbol,
-          timeframe,
-          isSnapshot: true,
-          candles
-        });
-      } else {
+      if (!candles || candles.length === 0) {
         throw new Error(`No candle data returned from Angel One for ${symbol}`);
       }
 
+      onData({
+        symbol,
+        timeframe,
+        isSnapshot: true,
+        candles
+      });
+
+      let lastBar = { ...candles[candles.length - 1] };
+      const tfSec = this.getTimeframeSeconds(timeframe);
+
+      // 2. Stream live updates via lightweight LTP quotes (<100ms) without touching historical API!
       pollTimer = setInterval(async () => {
         if (!active) return;
         try {
-          const fresh = await this.getFormattedCandles(symbol, timeframe, 5);
-          if (!active || !fresh || fresh.length === 0) return;
-          const latest = fresh[fresh.length - 1];
+          const ltp = await this.resolveAndGetLtp(symbol);
+          if (!active || !ltp || typeof ltp !== 'number' || isNaN(ltp)) return;
+
+          const nowSec = Math.floor(Date.now() / 1000);
+
+          // Check if bar timeframe has elapsed -> start a new bar
+          if (nowSec >= lastBar.time + tfSec) {
+            const newBarTime = Math.floor(nowSec / tfSec) * tfSec;
+            lastBar = {
+              time: newBarTime,
+              open: ltp,
+              high: ltp,
+              low: ltp,
+              close: ltp,
+              volume: 0
+            };
+          } else {
+            // Update active bar
+            if (ltp > lastBar.high) lastBar.high = ltp;
+            if (ltp < lastBar.low) lastBar.low = ltp;
+            lastBar.close = ltp;
+          }
+
           onData({
             symbol,
             timeframe,
             isSnapshot: false,
-            candles: [latest]
+            candles: [{ ...lastBar }]
           });
         } catch (e) {}
-      }, 3000);
+      }, 1500);
 
     } catch (err) {
       if (typeof onError === 'function') {
         onError(err);
       }
+      throw err;
     }
 
     return () => {

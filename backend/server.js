@@ -4,6 +4,7 @@ import { createServer } from 'http';
 import { WebSocketServer } from 'ws';
 import cors from 'cors';
 import { primaryDataBridge } from './primary_data_bridge.js';
+import { TradingViewBridge } from './tradingview.js';
 import { startScanner, getScannerState } from './scanner.js';
 import { runPatternLearner } from './pattern_learner.js';
 import { generateBtstReport } from './generate_btst_report.js';
@@ -84,10 +85,10 @@ app.get('/api/candles', async (req, res) => {
       console.warn(`[Candles API] Angel One direct fetch: ${angelErr.message}`);
     }
 
-    // 2. Primary Bridge Fallback
+    // 2. Fast Fallback to TradingView Bridge
     const candles = await new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => reject(new Error('Timeout fetching candles')), 10000);
-      primaryDataBridge.subscribeSymbol(symbol, tf, (data) => {
+      const timeout = setTimeout(() => reject(new Error('Timeout fetching candles from fallback bridge')), 8000);
+      primaryDataBridge.tvBridge.subscribeSymbol(symbol, tf, (data) => {
         if (data && data.candles && data.candles.length > 0) {
           clearTimeout(timeout);
           resolve(data.candles);
@@ -97,22 +98,31 @@ app.get('/api/candles', async (req, res) => {
         reject(err);
       });
     });
-    res.json({ symbol, timeframe: tf, isSnapshot: true, candles, source: 'Bridge' });
+    res.json({ symbol, timeframe: tf, isSnapshot: true, candles, source: 'TradingView' });
   } catch (err) {
     console.error(`[Candles API Error for ${symbol}]:`, err.message);
     res.status(500).json({ error: err.message, candles: [] });
   }
 });
 
-// Angel One Bridge Instance (Singleton)
+// Angel One Bridge Instance (Singleton) & Daily Heartbeat Auto-Renew
 const angelBridge = angelOneBridge;
-setTimeout(() => {
-  angelBridge.login().then(res => {
-    console.log('[Angel One Bridge] Auto-login status:', res.success ? `Connected (${res.clientCode})` : 'Pending credentials');
-  }).catch(err => {
-    console.warn('[Angel One Bridge] Login info:', err.message);
-  });
-}, 1000);
+
+async function checkAndRenewAngelSession() {
+  try {
+    const today = new Date().toDateString();
+    const loginDate = angelBridge.session?.loginTime ? new Date(angelBridge.session.loginTime).toDateString() : null;
+    const needsRenewal = loginDate !== today || !angelBridge.session?.jwtToken;
+    const res = await angelBridge.login(needsRenewal);
+    console.log('[Angel One Bridge] Login status:', res.success ? `Connected (${res.clientCode}) [${res.cached ? 'Session Active' : 'Fresh Login'}]` : 'Pending credentials');
+  } catch (err) {
+    console.warn('[Angel One Bridge] Login check:', err.message);
+  }
+}
+
+setTimeout(checkAndRenewAngelSession, 1000);
+// Heartbeat check every 15 minutes (ensures session renews each morning at market open)
+setInterval(checkAndRenewAngelSession, 15 * 60 * 1000);
 
 
 
@@ -229,7 +239,9 @@ function broadcastViewerCount() {
   });
 }
 
-startScanner(primaryDataBridge);
+// Scanner scans 39 symbols in background; uses dedicated TradingView twc WebSocket to keep Angel One quota 100% free for active chart & live quotes
+const scannerBridge = new TradingViewBridge();
+startScanner(scannerBridge);
 
 
 wss.on('connection', (ws) => {

@@ -18,29 +18,11 @@ export class PrimaryDataBridge {
     // Primary: Angel One SmartAPI Feed (NSE, BSE, MCX Commodities & USOIL proxy)
     if (!isCryptoFx) {
       try {
-        let snapshotDelivered = false;
         const cleanup = await this.angelBridge.subscribeSymbol(
           symbol,
           timeframe,
-          (data) => {
-            snapshotDelivered = true;
-            onData(data);
-          },
-          (err) => {
-            if (!snapshotDelivered) {
-              console.warn(`[PrimaryDataBridge] Angel One stream error for ${symbol} (${err.message}), falling back to TradingView...`);
-              this.tvBridge.subscribeSymbol(symbol, timeframe, onData, (tvErr) => {
-                const msg = tvErr?.message || String(tvErr);
-                if (msg.includes('permission denied') && typeof onError === 'function') {
-                  onError(new Error(`Angel One active for ${symbol}. (TradingView public stream restricted for this symbol)`));
-                } else if (typeof onError === 'function') {
-                  onError(tvErr);
-                }
-              }, limit);
-            } else if (typeof onError === 'function') {
-              onError(err);
-            }
-          },
+          onData,
+          null, // Let errors trigger catch block for seamless fallback
           limit
         );
         return cleanup;

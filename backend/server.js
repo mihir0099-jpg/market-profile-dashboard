@@ -18,6 +18,7 @@ import { getAiAnalytics } from './ai_engine.js';
 import { AngelOneBridge, angelOneBridge } from './angelone_bridge.js';
 import { runTabHealthAudit } from './auto_heal_engine.js';
 import { executeDailySelfEvolution } from './autonomous_market_brain.js';
+import { getMihirLearnings, evaluatePredictions } from './prediction_learner.js';
 import { exec, spawn } from 'child_process';
 
 import path from 'path';
@@ -180,6 +181,25 @@ app.get('/api/health/tab-report', async (req, res) => {
 });
 
 
+
+// Mihir View Self-Learnings & Prediction Post-Mortem API
+app.get('/api/mihir-learnings', (req, res) => {
+  try {
+    const data = getMihirLearnings();
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/mihir-learnings/evaluate', (req, res) => {
+  try {
+    const result = evaluatePredictions();
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 // Serve Daily Reports list
 app.get('/api/daily-reports', (req, res) => {
@@ -974,6 +994,36 @@ app.get('/api/learning/journal', (req, res) => {
     }
   } else {
     res.json([]);
+  }
+});
+
+// Mihir Dalton View Auto-Learnings & Audits API
+app.get('/api/mihir-learnings', (req, res) => {
+  try {
+    const learnings = getMihirLearnings();
+    res.json(learnings);
+  } catch (err) {
+    console.error('[API] Error in /api/mihir-learnings:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/mihir-learnings/evaluate', async (req, res) => {
+  try {
+    const scannerState = getScannerState();
+    const symbolMap = {};
+    if (scannerState && scannerState.results) {
+      for (const item of scannerState.results) {
+        if (item.symbol && item.profile) {
+          symbolMap[item.symbol] = item.profile;
+        }
+      }
+    }
+    const evaluated = evaluatePredictions(symbolMap);
+    res.json({ success: true, count: evaluated.length, learnings: getMihirLearnings() });
+  } catch (err) {
+    console.error('[API] Error in /api/mihir-learnings/evaluate:', err);
+    res.status(500).json({ error: err.message });
   }
 });
 

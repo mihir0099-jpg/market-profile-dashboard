@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { processSignalsForSymbol, updateIndexPcrDrift } from './signals_manager.js';
 import { optimizeParameters } from './self_learner.js';
+import { recordPrediction, applyLearnedCorrections } from './prediction_learner.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -1254,6 +1255,23 @@ function scanSymbol(tvBridge, symbol) {
                     processSignalsForSymbol(symbol, data.candles, profiles);
                   } catch (e) {
                     console.error(`[Scanner] Error tracking signals for ${symbol}:`, e.message);
+                  }
+
+                  try {
+                    recordPrediction(symbol, {
+                      openPrice: activeProfile.openPrice,
+                      whereDidItOpen: nuances.openRelationship,
+                      openingType: nuances.openingType,
+                      ibHigh: activeProfile.ibHigh,
+                      ibLow: activeProfile.ibLow,
+                      ibWidth: result.ibWidth,
+                      ibRangeClass,
+                      predictedDayType: dayType,
+                      predictedAdvice: openingPrediction,
+                      eightyPercentRule: nuances.eightyPercentRule
+                    });
+                  } catch (pErr) {
+                    // Ignore prediction recording errors
                   }
                 }
               }

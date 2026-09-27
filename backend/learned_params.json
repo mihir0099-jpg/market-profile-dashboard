@@ -171,9 +171,9 @@
       "totalPnl": 451.39999999999986
     },
     "NSE:AXISBANK|Weekly POC Reversion": {
-      "winCount": 17,
+      "winCount": 18,
       "lossCount": 12,
-      "totalPnl": -20.999999999999773
+      "totalPnl": -18.499999999999773
     },
     "NSE:AXISBANK|Monthly POC Reversion": {
       "winCount": 12,
@@ -226,9 +226,9 @@
       "totalPnl": -4.230000000000018
     },
     "NSE:WIPRO|Monthly POC Reversion": {
-      "winCount": 25,
+      "winCount": 26,
       "lossCount": 0,
-      "totalPnl": 183.4000000000002
+      "totalPnl": 184.4000000000002
     },
     "NSE:BAJAJ_AUTO|Weekly POC Reversion": {
       "winCount": 3,
@@ -286,9 +286,9 @@
       "totalPnl": 78.90000000000003
     },
     "NSE:BEL|Weekly POC Reversion": {
-      "winCount": 16,
+      "winCount": 18,
       "lossCount": 1,
-      "totalPnl": 19.050000000000068
+      "totalPnl": 20.850000000000023
     },
     "NSE:BEL|Monthly POC Reversion": {
       "winCount": 27,
@@ -682,13 +682,13 @@
     },
     "NSE:HDFCBANK|Liquidity Sweep Reversal": {
       "winCount": 15,
-      "lossCount": 5,
-      "totalPnl": 93.45000000000005
+      "lossCount": 8,
+      "totalPnl": 88.55000000000007
     },
     "NSE:HDFCBANK|Weekly POC Reversion": {
       "winCount": 10,
-      "lossCount": 1,
-      "totalPnl": 27.499999999999773
+      "lossCount": 2,
+      "totalPnl": 25.14999999999975
     },
     "NSE:HDFCLIFE|G-Period Options Breakout": {
       "winCount": 0,
@@ -707,8 +707,8 @@
     },
     "NSE:HEROMOTOCO|Weekly POC Reversion": {
       "winCount": 12,
-      "lossCount": 10,
-      "totalPnl": -139.10000000000218
+      "lossCount": 11,
+      "totalPnl": -180.10000000000218
     },
     "NSE:HEROMOTOCO|Monthly POC Reversion": {
       "winCount": 10,
@@ -742,8 +742,8 @@
     },
     "NSE:HINDUNILVR|Weekly POC Reversion": {
       "winCount": 16,
-      "lossCount": 14,
-      "totalPnl": 261.5
+      "lossCount": 15,
+      "totalPnl": 260.5
     },
     "NSE:HINDUNILVR|Monthly POC Reversion": {
       "winCount": 12,
@@ -847,8 +847,8 @@
     },
     "NSE:INFY|Liquidity Sweep Reversal": {
       "winCount": 9,
-      "lossCount": 6,
-      "totalPnl": 124.09999999999945
+      "lossCount": 7,
+      "totalPnl": 118.59999999999945
     },
     "NSE:INFY|Weekly POC Reversion": {
       "winCount": 0,
@@ -937,8 +937,8 @@
     },
     "NSE:JSWSTEEL|Weekly POC Reversion": {
       "winCount": 10,
-      "lossCount": 12,
-      "totalPnl": -70.89999999999895
+      "lossCount": 13,
+      "totalPnl": -78.99999999999886
     },
     "NSE:JUBLFOOD|Weekly POC Reversion": {
       "winCount": 14,
@@ -987,13 +987,13 @@
     },
     "NSE:KOTAKBANK|Weekly POC Reversion": {
       "winCount": 11,
-      "lossCount": 13,
-      "totalPnl": 22.90000000000026
+      "lossCount": 15,
+      "totalPnl": 19.600000000000307
     },
     "NSE:KOTAKBANK|Monthly POC Reversion": {
       "winCount": 12,
-      "lossCount": 4,
-      "totalPnl": 83.60000000000014
+      "lossCount": 6,
+      "totalPnl": 39.100000000000136
     },
     "NSE:KPITTECH|Liquidity Sweep Reversal": {
       "winCount": 14,
@@ -1342,8 +1342,8 @@
     },
     "NSE:POWERGRID|Monthly POC Reversion": {
       "winCount": 29,
-      "lossCount": 11,
-      "totalPnl": 53.2999999999999
+      "lossCount": 13,
+      "totalPnl": 51.2999999999999
     },
     "NSE:POWERINDIA|Weekly POC Reversion": {
       "winCount": 3,
@@ -1387,12 +1387,12 @@
     },
     "NSE:RELIANCE|Weekly POC Reversion": {
       "winCount": 23,
-      "lossCount": 12,
-      "totalPnl": 64.20000000000027
+      "lossCount": 14,
+      "totalPnl": 58.20000000000027
     },
     "NSE:RELIANCE|Monthly POC Reversion": {
       "winCount": 13,
-      "lossCount": 6,
+      "lossCount": 7,
       "totalPnl": 312.5
     },
     "NSE:RVNL|G-Period Options Breakout": {
@@ -1512,8 +1512,8 @@
     },
     "NSE:TATASTEEL|Weekly POC Reversion": {
       "winCount": 17,
-      "lossCount": 10,
-      "totalPnl": -4.4500000000000455
+      "lossCount": 12,
+      "totalPnl": -6.690000000000055
     },
     "NSE:TCS|Balance Breakout Trap": {
       "winCount": 0,
@@ -1552,8 +1552,8 @@
     },
     "NSE:TITAN|Weekly POC Reversion": {
       "winCount": 13,
-      "lossCount": 5,
-      "totalPnl": 34.69999999999982
+      "lossCount": 7,
+      "totalPnl": 11.699999999999818
     },
     "NSE:TORNTPHARM|Weekly POC Reversion": {
       "winCount": 2,
@@ -1581,9 +1581,9 @@
       "totalPnl": -342.3000000000038
     },
     "NSE:ULTRACEMCO|Weekly POC Reversion": {
-      "winCount": 16,
+      "winCount": 17,
       "lossCount": 7,
-      "totalPnl": 30
+      "totalPnl": 71
     },
     "NSE:ULTRACEMCO|Monthly POC Reversion": {
       "winCount": 17,
@@ -1596,9 +1596,9 @@
       "totalPnl": 0.06756000000001094
     },
     "NSE:NIFTY|Liquidity Sweep Reversal": {
-      "winCount": 24,
-      "lossCount": 20,
-      "totalPnl": 1472.400000000005
+      "winCount": 29,
+      "lossCount": 22,
+      "totalPnl": 1729.600000000013
     },
     "NSE:NIFTY|Weekly POC Reversion": {
       "winCount": 4,
@@ -1617,18 +1617,18 @@
     },
     "NSE:BANKNIFTY|Liquidity Sweep Reversal": {
       "winCount": 37,
-      "lossCount": 16,
-      "totalPnl": 8807.200000000026
+      "lossCount": 17,
+      "totalPnl": 8705.050000000025
     },
     "NSE:BANKNIFTY|Weekly POC Reversion": {
       "winCount": 26,
-      "lossCount": 2,
-      "totalPnl": 3919.999999999942
+      "lossCount": 3,
+      "totalPnl": 3765.949999999939
     },
     "NSE:BANKNIFTY|Monthly POC Reversion": {
-      "winCount": 23,
+      "winCount": 25,
       "lossCount": 13,
-      "totalPnl": -16502.050000000003
+      "totalPnl": -16136.650000000009
     },
     "NSE:NIFTY1!|Weekly POC Reversion": {
       "winCount": 9,
@@ -1746,9 +1746,9 @@
       "totalPnl": -1520
     },
     "NSE:KOTAKBANK|Liquidity Sweep Reversal": {
-      "winCount": 10,
+      "winCount": 11,
       "lossCount": 9,
-      "totalPnl": 9.900000000000034
+      "totalPnl": 12.150000000000034
     },
     "NSE:ADANIPORTS|Monthly POC Reversion": {
       "winCount": 6,
@@ -1782,8 +1782,8 @@
     },
     "NSE:HEROMOTOCO|Liquidity Sweep Reversal": {
       "winCount": 14,
-      "lossCount": 16,
-      "totalPnl": 630.5000000000009
+      "lossCount": 17,
+      "totalPnl": 611.5000000000009
     },
     "NSE:UNIONBANK|Balance Breakout Trap": {
       "winCount": 3,
@@ -1841,9 +1841,9 @@
       "totalPnl": 4523
     },
     "NSE:BAJAJ_AUTO|Monthly Gap Fade Trap": {
-      "winCount": 251,
+      "winCount": 330,
       "lossCount": 4,
-      "totalPnl": 113117.5
+      "totalPnl": 147913.5
     },
     "NSE:BAJFINANCE|Liquidity Sweep Reversal": {
       "winCount": 17,
@@ -2146,9 +2146,9 @@
       "totalPnl": 39.64999999999998
     },
     "NSE:INFY|Monthly Gap Fade Trap": {
-      "winCount": 12,
-      "lossCount": 9,
-      "totalPnl": 193.99999999999977
+      "winCount": 32,
+      "lossCount": 11,
+      "totalPnl": 2023.3999999999992
     },
     "NSE:IREDA|Monthly Gap Fade Trap": {
       "winCount": 45,
@@ -2297,8 +2297,8 @@
     },
     "NSE:NTPC|Weekly POC Reversion": {
       "winCount": 11,
-      "lossCount": 15,
-      "totalPnl": 6.400000000000148
+      "lossCount": 16,
+      "totalPnl": 4.700000000000159
     },
     "NSE:NUVAMA|Weekly POC Reversion": {
       "winCount": 12,
@@ -2516,14 +2516,14 @@
       "totalPnl": 108.80000000000018
     },
     "NSE:TCS|Monthly Gap Fade Trap": {
-      "winCount": 64,
-      "lossCount": 31,
-      "totalPnl": -808.0999999999958
+      "winCount": 113,
+      "lossCount": 65,
+      "totalPnl": 178.60000000000173
     },
     "NSE:TECHM|Monthly Gap Fade Trap": {
-      "winCount": 133,
-      "lossCount": 71,
-      "totalPnl": -2121.600000000004
+      "winCount": 181,
+      "lossCount": 114,
+      "totalPnl": -4553.600000000001
     },
     "NSE:TMPV|Liquidity Sweep Reversal": {
       "winCount": 3,
@@ -2596,9 +2596,9 @@
       "totalPnl": 1581.1999999999998
     },
     "NSE:ADANIENT|Weekly Gap Fade Trap": {
-      "winCount": 56,
+      "winCount": 58,
       "lossCount": 46,
-      "totalPnl": -2877.2
+      "totalPnl": -2840.2
     },
     "NSE:ADANIGREEN|Weekly Gap Fade Trap": {
       "winCount": 84,
@@ -2696,9 +2696,9 @@
       "totalPnl": 71.59999999999985
     },
     "NSE:NIFTY1!|Liquidity Sweep Reversal": {
-      "winCount": 32,
-      "lossCount": 21,
-      "totalPnl": 2063.299999999981
+      "winCount": 38,
+      "lossCount": 22,
+      "totalPnl": 2456.9999999999854
     },
     "COINBASE:BTCUSD|Liquidity Sweep Reversal": {
       "winCount": 54,
@@ -2766,9 +2766,9 @@
       "totalPnl": -786
     },
     "NSE:M_M|Liquidity Sweep Reversal": {
-      "winCount": 17,
-      "lossCount": 6,
-      "totalPnl": 534.4000000000001
+      "winCount": 21,
+      "lossCount": 11,
+      "totalPnl": 560.7999999999997
     },
     "NSE:NATIONALUM|Liquidity Sweep Reversal": {
       "winCount": 13,
@@ -3176,9 +3176,9 @@
       "totalPnl": -202.5
     },
     "NSE:LT|Liquidity Sweep Reversal": {
-      "winCount": 19,
-      "lossCount": 13,
-      "totalPnl": 597.6999999999989
+      "winCount": 20,
+      "lossCount": 17,
+      "totalPnl": 622.7999999999988
     },
     "NSE:MARUTI|Liquidity Sweep Reversal": {
       "winCount": 2,
@@ -3202,8 +3202,8 @@
     },
     "NSE:ASIANPAINT|Liquidity Sweep Reversal": {
       "winCount": 28,
-      "lossCount": 22,
-      "totalPnl": 374.59999999999945
+      "lossCount": 23,
+      "totalPnl": 371.99999999999955
     },
     "NSE:ASTRAL|Balance Breakout Trap": {
       "winCount": 3,
@@ -3236,9 +3236,9 @@
       "totalPnl": 207.84999999999877
     },
     "NSE:SBIN|Liquidity Sweep Reversal": {
-      "winCount": 17,
-      "lossCount": 4,
-      "totalPnl": 132.3000000000004
+      "winCount": 21,
+      "lossCount": 9,
+      "totalPnl": 146.00000000000057
     },
     "NSE:SHREECEM|Balance Breakout Trap": {
       "winCount": 0,
@@ -3246,9 +3246,9 @@
       "totalPnl": -3730
     },
     "NSE:TECHM|Liquidity Sweep Reversal": {
-      "winCount": 19,
-      "lossCount": 12,
-      "totalPnl": 273.9000000000001
+      "winCount": 21,
+      "lossCount": 17,
+      "totalPnl": 290.4000000000001
     },
     "NSE:WAAREEENER|Weekly Gap Fade Trap": {
       "winCount": 14,
@@ -3796,9 +3796,9 @@
       "totalPnl": 0.030000000000001137
     },
     "NSE:EICHERMOT|Liquidity Sweep Reversal": {
-      "winCount": 15,
-      "lossCount": 11,
-      "totalPnl": 1126.5
+      "winCount": 19,
+      "lossCount": 15,
+      "totalPnl": 1278
     },
     "NSE:GODFRYPHLP|Liquidity Sweep Reversal": {
       "winCount": 12,
@@ -3812,8 +3812,8 @@
     },
     "NSE:NTPC|Liquidity Sweep Reversal": {
       "winCount": 14,
-      "lossCount": 18,
-      "totalPnl": 17.549999999999955
+      "lossCount": 22,
+      "totalPnl": 12.549999999999955
     },
     "NSE:RECLTD|Balance Breakout Trap": {
       "winCount": 1,
@@ -3931,9 +3931,9 @@
       "totalPnl": 522.8000000000015
     },
     "NSE:TITAN|Morning Reversal Fade": {
-      "winCount": 8,
+      "winCount": 10,
       "lossCount": 1,
-      "totalPnl": 309.8000000000002
+      "totalPnl": 382.8000000000002
     },
     "NSE:TRENT|Morning Reversal Fade": {
       "winCount": 5,
@@ -4016,9 +4016,9 @@
       "totalPnl": 1.5
     },
     "NSE:INFY|Morning Reversal Fade": {
-      "winCount": 10,
+      "winCount": 12,
       "lossCount": 0,
-      "totalPnl": 155.59999999999945
+      "totalPnl": 177.3999999999994
     },
     "NSE:INOXWIND|Morning Reversal Fade": {
       "winCount": 8,
@@ -4117,13 +4117,13 @@
     },
     "NSE:BPCL|Morning Reversal Fade": {
       "winCount": 13,
-      "lossCount": 1,
-      "totalPnl": 58.150000000000034
+      "lossCount": 3,
+      "totalPnl": 55.94999999999999
     },
     "NSE:BPCL|Liquidity Sweep Reversal": {
-      "winCount": 13,
-      "lossCount": 16,
-      "totalPnl": 16.799999999999898
+      "winCount": 16,
+      "lossCount": 17,
+      "totalPnl": 21.199999999999875
     },
     "NSE:JUBLFOOD|Morning Reversal Fade": {
       "winCount": 11,
@@ -4146,9 +4146,9 @@
       "totalPnl": 18.599999999999454
     },
     "NSE:ULTRACEMCO|Morning Reversal Fade": {
-      "winCount": 3,
+      "winCount": 5,
       "lossCount": 0,
-      "totalPnl": 355
+      "totalPnl": 563
     },
     "NSE:UNITDSPR|Morning Reversal Fade": {
       "winCount": 8,
@@ -4207,8 +4207,8 @@
     },
     "NSE:TATASTEEL|Liquidity Sweep Reversal": {
       "winCount": 13,
-      "lossCount": 6,
-      "totalPnl": 31.26000000000002
+      "lossCount": 7,
+      "totalPnl": 29.840000000000003
     },
     "NSE:GRASIM|Morning Reversal Fade": {
       "winCount": 14,
@@ -4216,9 +4216,9 @@
       "totalPnl": 392.29999999999836
     },
     "NSE:HCLTECH|Morning Reversal Fade": {
-      "winCount": 8,
+      "winCount": 9,
       "lossCount": 0,
-      "totalPnl": 180.20000000000027
+      "totalPnl": 204.20000000000027
     },
     "NSE:RADICO|Liquidity Sweep Reversal": {
       "winCount": 18,
@@ -4266,9 +4266,9 @@
       "totalPnl": 633.5999999999995
     },
     "NSE:ULTRACEMCO|Liquidity Sweep Reversal": {
-      "winCount": 13,
-      "lossCount": 9,
-      "totalPnl": 1333
+      "winCount": 18,
+      "lossCount": 12,
+      "totalPnl": 1763
     },
     "NSE:VMM|Morning Reversal Fade": {
       "winCount": 9,
@@ -4301,14 +4301,14 @@
       "totalPnl": 46.599999999999966
     },
     "NSE:BHARTIARTL|Morning Reversal Fade": {
-      "winCount": 13,
+      "winCount": 14,
       "lossCount": 1,
-      "totalPnl": 178.2000000000005
+      "totalPnl": 183.50000000000068
     },
     "NSE:BHARTIARTL|Liquidity Sweep Reversal": {
       "winCount": 15,
-      "lossCount": 12,
-      "totalPnl": 225.10000000000036
+      "lossCount": 17,
+      "totalPnl": 205.50000000000023
     },
     "NSE:CAMS|Morning Reversal Fade": {
       "winCount": 8,
@@ -4407,8 +4407,8 @@
     },
     "NSE:EICHERMOT|G-Period Options Breakout": {
       "winCount": 0,
-      "lossCount": 3,
-      "totalPnl": -158.22800000000007
+      "lossCount": 5,
+      "totalPnl": -261.58999999999924
     },
     "NSE:FORCEMOT|G-Period Options Breakout": {
       "winCount": 2,
@@ -4591,9 +4591,9 @@
       "totalPnl": -23.15099999999802
     },
     "NSE:BAJAJ_AUTO|Morning Reversal Fade": {
-      "winCount": 23,
+      "winCount": 25,
       "lossCount": 0,
-      "totalPnl": 2863
+      "totalPnl": 3037
     },
     "NSE:BEL|Morning Reversal Fade": {
       "winCount": 14,
@@ -4872,8 +4872,8 @@
     },
     "NSE:BAJAJ_AUTO|Liquidity Sweep Reversal": {
       "winCount": 13,
-      "lossCount": 9,
-      "totalPnl": 1048
+      "lossCount": 11,
+      "totalPnl": 1002
     },
     "NSE:BHARTIARTL|Balance Breakout Trap": {
       "winCount": 6,
@@ -4901,9 +4901,9 @@
       "totalPnl": -2294.7999999999965
     },
     "NSE:HINDUNILVR|Liquidity Sweep Reversal": {
-      "winCount": 17,
-      "lossCount": 11,
-      "totalPnl": 199.60000000000014
+      "winCount": 19,
+      "lossCount": 13,
+      "totalPnl": 237.4000000000001
     },
     "NSE:UPL|Liquidity Sweep Reversal": {
       "winCount": 11,
@@ -5037,8 +5037,8 @@
     },
     "NSE:SBIN|Weekly POC Reversion": {
       "winCount": 6,
-      "lossCount": 4,
-      "totalPnl": 22.40000000000009
+      "lossCount": 6,
+      "totalPnl": 8.400000000000091
     },
     "NSE:TATACONSUM|Weekly Gap Fade Trap": {
       "winCount": 29,
@@ -5331,9 +5331,9 @@
       "totalPnl": 141.29999999999995
     },
     "NSE:LTIM|Morning Reversal Fade": {
-      "winCount": 7,
+      "winCount": 9,
       "lossCount": 0,
-      "totalPnl": 544.7000000000012
+      "totalPnl": 671.900000000001
     },
     "NSE:LUPIN|Morning Reversal Fade": {
       "winCount": 9,
@@ -5346,9 +5346,9 @@
       "totalPnl": 31.099999999999966
     },
     "NSE:SBIN|Morning Reversal Fade": {
-      "winCount": 12,
+      "winCount": 13,
       "lossCount": 1,
-      "totalPnl": 101.00000000000011
+      "totalPnl": 105.70000000000016
     },
     "NSE:SRF|Morning Reversal Fade": {
       "winCount": 7,
@@ -5356,9 +5356,9 @@
       "totalPnl": 160.39999999999918
     },
     "NSE:NIFTY|Morning Reversal Fade": {
-      "winCount": 18,
+      "winCount": 22,
       "lossCount": 0,
-      "totalPnl": 1496.8500000000167
+      "totalPnl": 1765.5500000000138
     },
     "NSE:BANKNIFTY|Morning Reversal Fade": {
       "winCount": 20,
@@ -5366,9 +5366,9 @@
       "totalPnl": 5709.199999999997
     },
     "NSE:NIFTY1!|Morning Reversal Fade": {
-      "winCount": 20,
+      "winCount": 24,
       "lossCount": 0,
-      "totalPnl": 1467.0999999999985
+      "totalPnl": 1735.7999999999956
     },
     "NSE:AUROPHARMA|Morning Reversal Fade": {
       "winCount": 13,
@@ -5376,9 +5376,9 @@
       "totalPnl": 255.30000000000018
     },
     "NSE:AXISBANK|Morning Reversal Fade": {
-      "winCount": 18,
+      "winCount": 20,
       "lossCount": 0,
-      "totalPnl": 201.00000000000023
+      "totalPnl": 236.10000000000014
     },
     "NSE:HINDUNILVR|Morning Reversal Fade": {
       "winCount": 14,
@@ -5416,14 +5416,14 @@
       "totalPnl": 97.64999999999998
     },
     "NSE:ASIANPAINT|Morning Reversal Fade": {
-      "winCount": 19,
+      "winCount": 22,
       "lossCount": 0,
-      "totalPnl": 458.4000000000001
+      "totalPnl": 524.1000000000008
     },
     "NSE:AXISBANK|Liquidity Sweep Reversal": {
-      "winCount": 14,
-      "lossCount": 15,
-      "totalPnl": 109.50000000000045
+      "winCount": 15,
+      "lossCount": 16,
+      "totalPnl": 115.00000000000045
     },
     "NSE:BIOCON|Morning Reversal Fade": {
       "winCount": 18,
@@ -5441,9 +5441,9 @@
       "totalPnl": 18.470000000000013
     },
     "NSE:TCS|Liquidity Sweep Reversal": {
-      "winCount": 14,
-      "lossCount": 7,
-      "totalPnl": 492.10000000000036
+      "winCount": 18,
+      "lossCount": 11,
+      "totalPnl": 628.400000000001
     },
     "NSE:UNIONBANK|Morning Reversal Fade": {
       "winCount": 6,
@@ -5451,9 +5451,9 @@
       "totalPnl": 16.200000000000017
     },
     "NSE:NTPC|Morning Reversal Fade": {
-      "winCount": 17,
-      "lossCount": 0,
-      "totalPnl": 42.299999999999955
+      "winCount": 18,
+      "lossCount": 2,
+      "totalPnl": 42.14999999999992
     },
     "NSE:SUZLON|Morning Reversal Fade": {
       "winCount": 6,
@@ -5461,9 +5461,9 @@
       "totalPnl": 5.059999999999995
     },
     "NSE:TCS|Morning Reversal Fade": {
-      "winCount": 7,
+      "winCount": 11,
       "lossCount": 1,
-      "totalPnl": 216.4000000000001
+      "totalPnl": 347.10000000000036
     },
     "NSE:ABB|Morning Reversal Fade": {
       "winCount": 18,
@@ -5602,8 +5602,8 @@
     },
     "NSE:ITC|Liquidity Sweep Reversal": {
       "winCount": 16,
-      "lossCount": 6,
-      "totalPnl": 24.549999999999955
+      "lossCount": 7,
+      "totalPnl": 24.249999999999943
     },
     "NSE:KAYNES|G-Period Options Breakout": {
       "winCount": 0,
@@ -5661,9 +5661,9 @@
       "totalPnl": -166.35000000000014
     },
     "NSE:HDFCBANK|Monthly Gap Fade Trap": {
-      "winCount": 23,
-      "lossCount": 17,
-      "totalPnl": -1562.9499999999994
+      "winCount": 39,
+      "lossCount": 40,
+      "totalPnl": -2654.149999999999
     },
     "NSE:ITC|Auction Magnet": {
       "winCount": 1,
@@ -5801,19 +5801,19 @@
       "totalPnl": 227.10000000000036
     },
     "NSE:ICICIBANK|Morning Reversal Fade": {
-      "winCount": 11,
+      "winCount": 15,
       "lossCount": 0,
-      "totalPnl": 131.6999999999996
+      "totalPnl": 190.39999999999964
     },
     "NSE:POWERGRID|Morning Reversal Fade": {
-      "winCount": 3,
+      "winCount": 5,
       "lossCount": 1,
-      "totalPnl": 14.599999999999966
+      "totalPnl": 21.699999999999875
     },
     "NSE:POWERGRID|Liquidity Sweep Reversal": {
-      "winCount": 8,
-      "lossCount": 10,
-      "totalPnl": 10.049999999999955
+      "winCount": 10,
+      "lossCount": 14,
+      "totalPnl": 13.849999999999909
     },
     "NSE:FORTIS|Balance Breakout Trap": {
       "winCount": 1,
@@ -5986,9 +5986,9 @@
       "totalPnl": -320.20000000000033
     },
     "NSE:LTIM|Liquidity Sweep Reversal": {
-      "winCount": 24,
-      "lossCount": 6,
-      "totalPnl": 1702.1000000000013
+      "winCount": 29,
+      "lossCount": 10,
+      "totalPnl": 1960.0000000000027
     },
     "NSE:SUZLON|G-Period Options Breakout": {
       "winCount": 2,
@@ -6056,9 +6056,9 @@
       "totalPnl": 185.00000000000023
     },
     "NSE:WIPRO|Morning Reversal Fade": {
-      "winCount": 12,
+      "winCount": 14,
       "lossCount": 0,
-      "totalPnl": 20.64999999999995
+      "totalPnl": 23.18999999999997
     },
     "NSE:ADANIENT|Monthly Gap Fade Trap": {
       "winCount": 5,
@@ -6086,9 +6086,9 @@
       "totalPnl": 172.80000000000018
     },
     "NSE:JSWSTEEL|Morning Reversal Fade": {
-      "winCount": 9,
+      "winCount": 11,
       "lossCount": 2,
-      "totalPnl": 106.59999999999968
+      "totalPnl": 139.39999999999986
     },
     "NSE:SHREECEM|Liquidity Sweep Reversal": {
       "winCount": 9,
@@ -6346,9 +6346,9 @@
       "totalPnl": 121.78640000000019
     },
     "NSE:HCLTECH|3:15 PM BTST Close": {
-      "winCount": 0,
+      "winCount": 1,
       "lossCount": 1,
-      "totalPnl": -10.169599999999946
+      "totalPnl": -9.869599999999991
     },
     "NSE:HDFCLIFE|3:15 PM BTST Close": {
       "winCount": 0,
@@ -6466,9 +6466,9 @@
       "totalPnl": -745.5
     },
     "NSE:COALINDIA|Liquidity Sweep Reversal": {
-      "winCount": 11,
-      "lossCount": 10,
-      "totalPnl": 49.25
+      "winCount": 14,
+      "lossCount": 11,
+      "totalPnl": 59.05000000000001
     },
     "NSE:BRITANNIA|Morning Reversal Fade": {
       "winCount": 21,
@@ -6481,9 +6481,9 @@
       "totalPnl": 131.09999999999968
     },
     "NSE:COALINDIA|Morning Reversal Fade": {
-      "winCount": 8,
+      "winCount": 11,
       "lossCount": 1,
-      "totalPnl": 40.84999999999985
+      "totalPnl": 51.7999999999999
     },
     "NSE:CONCOR|Liquidity Sweep Reversal": {
       "winCount": 20,
@@ -6511,9 +6511,9 @@
       "totalPnl": 116.89999999999986
     },
     "NSE:HDFCBANK|Morning Reversal Fade": {
-      "winCount": 12,
+      "winCount": 13,
       "lossCount": 1,
-      "totalPnl": 54.55000000000007
+      "totalPnl": 60
     },
     "NSE:INDIGO|Morning Reversal Fade": {
       "winCount": 5,
@@ -6546,9 +6546,9 @@
       "totalPnl": 136.19999999999982
     },
     "NSE:LT|Morning Reversal Fade": {
-      "winCount": 4,
+      "winCount": 6,
       "lossCount": 1,
-      "totalPnl": 92.79999999999973
+      "totalPnl": 165.5
     },
     "NSE:MARICO|Morning Reversal Fade": {
       "winCount": 10,
@@ -6606,9 +6606,9 @@
       "totalPnl": 378.3000000000002
     },
     "NSE:EICHERMOT|Morning Reversal Fade": {
-      "winCount": 7,
+      "winCount": 10,
       "lossCount": 1,
-      "totalPnl": 511
+      "totalPnl": 691
     },
     "NSE:FEDERALBNK|Morning Reversal Fade": {
       "winCount": 7,
@@ -6641,9 +6641,9 @@
       "totalPnl": 30.349999999999966
     },
     "NSE:RELIANCE|Morning Reversal Fade": {
-      "winCount": 9,
+      "winCount": 11,
       "lossCount": 1,
-      "totalPnl": 90.20000000000005
+      "totalPnl": 106.99999999999977
     },
     "NSE:COFORGE|Morning Reversal Fade": {
       "winCount": 12,
@@ -6662,8 +6662,8 @@
     },
     "NSE:ONGC|3:15 PM BTST Close": {
       "winCount": 0,
-      "lossCount": 2,
-      "totalPnl": -3.7908000000000186
+      "lossCount": 4,
+      "totalPnl": -7.578000000000003
     },
     "NSE:ETERNAL|3:15 PM BTST Close": {
       "winCount": 8,
@@ -6692,8 +6692,8 @@
     },
     "NSE:TITAN|3:15 PM BTST Close": {
       "winCount": 0,
-      "lossCount": 1,
-      "totalPnl": -37.86400000000049
+      "lossCount": 2,
+      "totalPnl": -76.51200000000063
     },
     "NSE:VBL|3:15 PM BTST Close": {
       "winCount": 1,
@@ -6771,9 +6771,9 @@
       "totalPnl": -314.45000000000005
     },
     "NSE:ASIANPAINT|Weekly Gap Fade Trap": {
-      "winCount": 29,
-      "lossCount": 3,
-      "totalPnl": 603.1999999999994
+      "winCount": 67,
+      "lossCount": 27,
+      "totalPnl": 373.2999999999988
     },
     "NSE:BSE|Weekly Gap Fade Trap": {
       "winCount": 58,
@@ -6846,9 +6846,9 @@
       "totalPnl": -195.80000000000018
     },
     "NSE:BAJFINANCE|Weekly Gap Fade Trap": {
-      "winCount": 9,
-      "lossCount": 12,
-      "totalPnl": -112.900000000001
+      "winCount": 35,
+      "lossCount": 38,
+      "totalPnl": -804.800000000001
     },
     "NSE:BANKBARODA|Weekly Gap Fade Trap": {
       "winCount": 6,
@@ -7202,8 +7202,8 @@
     },
     "NSE:AXISBANK|Opening Drive": {
       "winCount": 1,
-      "lossCount": 0,
-      "totalPnl": 4.799999999999727
+      "lossCount": 2,
+      "totalPnl": -50.000000000000455
     },
     "NSE:BDL|Opening Drive": {
       "winCount": 1,
@@ -7282,8 +7282,8 @@
     },
     "NSE:BHARTIARTL|G-Period Options Breakout": {
       "winCount": 0,
-      "lossCount": 3,
-      "totalPnl": -40.15129999999999
+      "lossCount": 5,
+      "totalPnl": -65.52349999999979
     },
     "NSE:SRF|G-Period Options Breakout": {
       "winCount": 1,
@@ -7481,9 +7481,9 @@
       "totalPnl": -1218
     },
     "NSE:SUNPHARMA|Monthly Gap Fade Trap": {
-      "winCount": 170,
-      "lossCount": 76,
-      "totalPnl": -1104.499999999997
+      "winCount": 196,
+      "lossCount": 102,
+      "totalPnl": -2285.2999999999975
     },
     "NSE:SUPREMEIND|Monthly POC Reversion": {
       "winCount": 5,
@@ -7666,9 +7666,9 @@
       "totalPnl": 530.7000000000003
     },
     "NSE:TECHM|Morning Reversal Fade": {
-      "winCount": 5,
+      "winCount": 6,
       "lossCount": 0,
-      "totalPnl": 99
+      "totalPnl": 119.60000000000014
     },
     "NSE:UNOMINDA|Morning Reversal Fade": {
       "winCount": 12,
@@ -7701,9 +7701,9 @@
       "totalPnl": -2.9189999999999827
     },
     "NSE:IDEA|Monthly POC Reversion": {
-      "winCount": 4,
+      "winCount": 6,
       "lossCount": 6,
-      "totalPnl": -5.800000000000004
+      "totalPnl": -4.600000000000005
     },
     "COINBASE:BTCUSD|3:15 PM BTST Close": {
       "winCount": 2,
@@ -8281,9 +8281,9 @@
       "totalPnl": -102.44999999999982
     },
     "NSE:KOTAKBANK|Morning Reversal Fade": {
-      "winCount": 6,
+      "winCount": 7,
       "lossCount": 0,
-      "totalPnl": 21.350000000000023
+      "totalPnl": 23.550000000000068
     },
     "NSE:OFSS|Morning Reversal Fade": {
       "winCount": 17,
@@ -8296,9 +8296,9 @@
       "totalPnl": 65.95000000000005
     },
     "NSE:ICICIBANK|Monthly Gap Fade Trap": {
-      "winCount": 173,
-      "lossCount": 79,
-      "totalPnl": -1762.3000000000047
+      "winCount": 229,
+      "lossCount": 112,
+      "totalPnl": -503.10000000000423
     },
     "NSE:BOSCHLTD|G-Period Options Breakout": {
       "winCount": 0,
@@ -8341,9 +8341,9 @@
       "totalPnl": 68.71000000000006
     },
     "NSE:ASIANPAINT|Monthly Gap Fade Trap": {
-      "winCount": 84,
+      "winCount": 100,
       "lossCount": 11,
-      "totalPnl": 2412.9999999999973
+      "totalPnl": 4690.999999999996
     },
     "NSE:AUROPHARMA|3:15 PM BTST Close": {
       "winCount": 1,
@@ -8372,8 +8372,8 @@
     },
     "NSE:SONACOMS|3:15 PM BTST Close": {
       "winCount": 1,
-      "lossCount": 0,
-      "totalPnl": 19.68960000000004
+      "lossCount": 2,
+      "totalPnl": 6.371199999999931
     },
     "NSE:PHOENIXLTD|3:15 PM BTST Close": {
       "winCount": 1,
@@ -8381,9 +8381,9 @@
       "totalPnl": -13.152000000000044
     },
     "NSE:M_M|3:15 PM BTST Close": {
-      "winCount": 1,
+      "winCount": 2,
       "lossCount": 0,
-      "totalPnl": 7
+      "totalPnl": 14.699999999999818
     },
     "NSE:UNITDSPR|3:15 PM BTST Close": {
       "winCount": 1,
@@ -8577,8 +8577,8 @@
     },
     "NSE:TATAPOWER|Monthly Gap Fade Trap": {
       "winCount": 34,
-      "lossCount": 25,
-      "totalPnl": -188.90000000000003
+      "lossCount": 27,
+      "totalPnl": -232.50000000000006
     },
     "NSE:360ONE|Weekly Gap Fade Trap": {
       "winCount": 2,
@@ -8642,8 +8642,8 @@
     },
     "NSE:VEDL|3:15 PM BTST Close": {
       "winCount": 0,
-      "lossCount": 2,
-      "totalPnl": -3.269999999999982
+      "lossCount": 4,
+      "totalPnl": -7.590799999999945
     },
     "NSE:DIXON|Auction Magnet": {
       "winCount": 2,
@@ -8746,9 +8746,9 @@
       "totalPnl": 192.55000000000013
     },
     "TVC:USOIL|Liquidity Sweep Reversal": {
-      "winCount": 29,
+      "winCount": 33,
       "lossCount": 18,
-      "totalPnl": 4.490000000000066
+      "totalPnl": 45.970000000000056
     },
     "NSE:FORTIS|3:15 PM BTST Close": {
       "winCount": 1,
@@ -8897,8 +8897,8 @@
     },
     "NSE:HINDUNILVR|3:15 PM BTST Close": {
       "winCount": 0,
-      "lossCount": 1,
-      "totalPnl": -1
+      "lossCount": 2,
+      "totalPnl": -16.514400000000023
     },
     "NSE:HINDZINC|3:15 PM BTST Close": {
       "winCount": 1,
@@ -8906,19 +8906,19 @@
       "totalPnl": 9.313599999999951
     },
     "NSE:INOXWIND|3:15 PM BTST Close": {
-      "winCount": 0,
+      "winCount": 2,
       "lossCount": 2,
-      "totalPnl": -0.9581600000000066
+      "totalPnl": 2.6403999999999854
     },
     "NSE:KPITTECH|3:15 PM BTST Close": {
       "winCount": 1,
-      "lossCount": 1,
-      "totalPnl": 8.48479999999995
+      "lossCount": 3,
+      "totalPnl": 0.05600000000004002
     },
     "NSE:SAIL|Monthly Gap Fade Trap": {
       "winCount": 60,
-      "lossCount": 27,
-      "totalPnl": -260.0500000000003
+      "lossCount": 29,
+      "totalPnl": -292.87000000000035
     },
     "NSE:DELHIVERY|Auction Magnet": {
       "winCount": 0,
@@ -8981,9 +8981,9 @@
       "totalPnl": -18.044800000000123
     },
     "NSE:MCX|3:15 PM BTST Close": {
-      "winCount": 2,
+      "winCount": 4,
       "lossCount": 0,
-      "totalPnl": 97.34000000000015
+      "totalPnl": 258.76880000000074
     },
     "NSE:NBCC|3:15 PM BTST Close": {
       "winCount": 0,
@@ -9016,9 +9016,9 @@
       "totalPnl": -12.750000000000057
     },
     "NSE:BEL|Monthly Gap Fade Trap": {
-      "winCount": 2,
+      "winCount": 4,
       "lossCount": 2,
-      "totalPnl": -43.55000000000001
+      "totalPnl": -19.849999999999966
     },
     "NSE:INDUSINDBK|Auction Magnet": {
       "winCount": 2,
@@ -9207,8 +9207,8 @@
     },
     "NSE:ASIANPAINT|3:15 PM BTST Close": {
       "winCount": 0,
-      "lossCount": 1,
-      "totalPnl": -21.151200000000244
+      "lossCount": 2,
+      "totalPnl": -40.68560000000025
     },
     "NSE:ANGELONE|Weekly Gap Fade Trap": {
       "winCount": 41,
@@ -9701,9 +9701,9 @@
       "totalPnl": 2.2199999999999847
     },
     "NSE:TATASTEEL|Monthly POC Reversion": {
-      "winCount": 16,
+      "winCount": 18,
       "lossCount": 0,
-      "totalPnl": 15.840000000000003
+      "totalPnl": 17.840000000000003
     },
     "NSE:TECHM|Monthly POC Reversion": {
       "winCount": 1,
@@ -9712,8 +9712,8 @@
     },
     "NSE:TITAN|Monthly POC Reversion": {
       "winCount": 15,
-      "lossCount": 0,
-      "totalPnl": 722.5
+      "lossCount": 2,
+      "totalPnl": 714.5
     },
     "NSE:DALBHARAT|Monthly Gap Fade Trap": {
       "winCount": 119,
@@ -9761,9 +9761,9 @@
       "totalPnl": 2340.3999999999983
     },
     "NSE:INFY|Monthly POC Reversion": {
-      "winCount": 14,
+      "winCount": 16,
       "lossCount": 3,
-      "totalPnl": 160.4000000000001
+      "totalPnl": 182.4000000000001
     },
     "NSE:HAVELLS|Monthly Gap Fade Trap": {
       "winCount": 2,
@@ -9881,9 +9881,9 @@
       "totalPnl": 2030.8000000000006
     },
     "NSE:ITC|Monthly Gap Fade Trap": {
-      "winCount": 3,
-      "lossCount": 4,
-      "totalPnl": -34.80000000000001
+      "winCount": 15,
+      "lossCount": 28,
+      "totalPnl": -269.0000000000005
     },
     "NSE:COALINDIA|Monthly Gap Fade Trap": {
       "winCount": 10,
@@ -9967,8 +9967,8 @@
     },
     "NSE:M_M|G-Period Options Breakout": {
       "winCount": 0,
-      "lossCount": 1,
-      "totalPnl": -22.190700000000106
+      "lossCount": 2,
+      "totalPnl": -43.28659999999991
     },
     "NSE:IDEA|G-Period Options Breakout": {
       "winCount": 1,
@@ -9976,9 +9976,9 @@
       "totalPnl": 0.007979999999999876
     },
     "NSE:APLAPOLLO|Monthly Gap Fade Trap": {
-      "winCount": 39,
+      "winCount": 49,
       "lossCount": 44,
-      "totalPnl": -3658.3000000000006
+      "totalPnl": -3205.5000000000005
     },
     "NSE:AUROPHARMA|Monthly Gap Fade Trap": {
       "winCount": 14,
@@ -10066,9 +10066,9 @@
       "totalPnl": 14.172000000000025
     },
     "NSE:AXISBANK|Monthly Gap Fade Trap": {
-      "winCount": 70,
-      "lossCount": 2,
-      "totalPnl": 341.599999999999
+      "winCount": 115,
+      "lossCount": 31,
+      "totalPnl": 986.699999999998
     },
     "NSE:NUVAMA|Monthly POC Reversion": {
       "winCount": 11,
@@ -10296,9 +10296,9 @@
       "totalPnl": -72.5
     },
     "TVC:USOIL|Morning Reversal Fade": {
-      "winCount": 1,
+      "winCount": 7,
       "lossCount": 0,
-      "totalPnl": 0.4300000000000068
+      "totalPnl": 306.43
     },
     "NSE:NTPC|3:15 PM BTST Close": {
       "winCount": 0,
@@ -10317,8 +10317,8 @@
     },
     "NSE:BHEL|Monthly Gap Fade Trap": {
       "winCount": 21,
-      "lossCount": 7,
-      "totalPnl": -12.549999999999898
+      "lossCount": 11,
+      "totalPnl": -86.64999999999992
     },
     "NSE:DIVISLAB|Weekly Gap Fade Trap": {
       "winCount": 7,
@@ -10511,9 +10511,9 @@
       "totalPnl": -737.2999999999972
     },
     "NSE:SBIN|Monthly Gap Fade Trap": {
-      "winCount": 1,
-      "lossCount": 0,
-      "totalPnl": 47.700000000000045
+      "winCount": 57,
+      "lossCount": 35,
+      "totalPnl": 931.2000000000016
     },
     "NSE:LICHSGFIN|Monthly POC Reversion": {
       "winCount": 1,
@@ -10567,8 +10567,93 @@
     },
     "NSE:DABUR|Monthly Gap Fade Trap": {
       "winCount": 0,
-      "lossCount": 6,
-      "totalPnl": -144.30000000000007
+      "lossCount": 8,
+      "totalPnl": -188.80000000000007
+    },
+    "NSE:VOLTAS|3:15 PM BTST Close": {
+      "winCount": 0,
+      "lossCount": 2,
+      "totalPnl": -18.083200000000033
+    },
+    "NSE:LTIM|3:15 PM BTST Close": {
+      "winCount": 2,
+      "lossCount": 0,
+      "totalPnl": 102.19999999999982
+    },
+    "BSE:SENSEX|G-Period Options Breakout": {
+      "winCount": 1,
+      "lossCount": 2,
+      "totalPnl": -530.5229999999865
+    },
+    "BSE:SENSEX|Liquidity Sweep Reversal": {
+      "winCount": 4,
+      "lossCount": 0,
+      "totalPnl": 864.3799999999756
+    },
+    "BSE:SENSEX|Weekly POC Reversion": {
+      "winCount": 2,
+      "lossCount": 0,
+      "totalPnl": 431.27999999999884
+    },
+    "NSE:LT|Monthly Gap Fade Trap": {
+      "winCount": 14,
+      "lossCount": 0,
+      "totalPnl": 1706.7999999999993
+    },
+    "NSE:BANKNIFTY|Monthly Gap Fade Trap": {
+      "winCount": 40,
+      "lossCount": 0,
+      "totalPnl": 72245.29999999997
+    },
+    "BSE:SENSEX|Monthly POC Reversion": {
+      "winCount": 2,
+      "lossCount": 0,
+      "totalPnl": 88.22000000000116
+    },
+    "NSE:BAJFINANCE|Monthly Gap Fade Trap": {
+      "winCount": 6,
+      "lossCount": 0,
+      "totalPnl": 409
+    },
+    "NSE:TATAMOTORS|Weekly POC Reversion": {
+      "winCount": 0,
+      "lossCount": 2,
+      "totalPnl": -0.20000000000004547
+    },
+    "NSE:TATAMOTORS|Monthly POC Reversion": {
+      "winCount": 2,
+      "lossCount": 0,
+      "totalPnl": 0.39999999999997726
+    },
+    "BSE:SENSEX|Morning Reversal Fade": {
+      "winCount": 4,
+      "lossCount": 0,
+      "totalPnl": 984.5999999999767
+    },
+    "NSE:BAJAJ_AUTO|3:15 PM BTST Close": {
+      "winCount": 0,
+      "lossCount": 1,
+      "totalPnl": -18
+    },
+    "NSE:MARUTI|Monthly POC Reversion": {
+      "winCount": 0,
+      "lossCount": 1,
+      "totalPnl": -28
+    },
+    "TVC:USOIL|Weekly POC Reversion": {
+      "winCount": 1,
+      "lossCount": 0,
+      "totalPnl": 2.3599999999999994
+    },
+    "BSE:SENSEX|Balance Breakout Trap": {
+      "winCount": 0,
+      "lossCount": 9,
+      "totalPnl": -2488.0599999999686
+    },
+    "NSE:TATAMOTORS|Morning Reversal Fade": {
+      "winCount": 1,
+      "lossCount": 0,
+      "totalPnl": 6.800000000000011
     }
   }
 }

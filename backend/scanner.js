@@ -1239,6 +1239,19 @@ function scanSymbol(tvBridge, symbol) {
                     ibLow: activeProfile.ibLow,
                     ibWidth: Math.round((activeProfile.ibHigh - activeProfile.ibLow) * 100) / 100,
                     ibWidthPct: activeProfile.openPrice > 0 ? Math.round(((activeProfile.ibHigh - activeProfile.ibLow) / activeProfile.openPrice) * 10000) / 100 : 0,
+                    ibBreakoutSide: (activeProfile.dayHigh > activeProfile.ibHigh + 0.05 && activeProfile.dayLow < activeProfile.ibLow - 0.05) ? 'BOTH' : (activeProfile.dayHigh > activeProfile.ibHigh + 0.05) ? 'UP' : (activeProfile.dayLow < activeProfile.ibLow - 0.05) ? 'DOWN' : 'NONE',
+                    fibTargets: {
+                      up: {
+                        fib1618: Math.round((activeProfile.ibHigh + (activeProfile.ibHigh - activeProfile.ibLow) * 0.618) * 100) / 100,
+                        fib2618: Math.round((activeProfile.ibHigh + (activeProfile.ibHigh - activeProfile.ibLow) * 1.618) * 100) / 100,
+                        fib3618: Math.round((activeProfile.ibHigh + (activeProfile.ibHigh - activeProfile.ibLow) * 2.618) * 100) / 100
+                      },
+                      down: {
+                        fib1618: Math.round((activeProfile.ibLow - (activeProfile.ibHigh - activeProfile.ibLow) * 0.618) * 100) / 100,
+                        fib2618: Math.round((activeProfile.ibLow - (activeProfile.ibHigh - activeProfile.ibLow) * 1.618) * 100) / 100,
+                        fib3618: Math.round((activeProfile.ibLow - (activeProfile.ibHigh - activeProfile.ibLow) * 2.618) * 100) / 100
+                      }
+                    },
                     dayHigh: activeProfile.dayHigh,
                     dayLow: activeProfile.dayLow,
                     priorVah: priorProfile ? priorProfile.vahPrice : null,

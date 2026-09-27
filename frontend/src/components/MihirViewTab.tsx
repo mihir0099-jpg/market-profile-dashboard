@@ -2,7 +2,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { 
   BookOpen, Compass, Layers, Activity, Clock, 
   Target, Search, Scale, RefreshCw, Info,
-  Brain, Wrench, Sparkles, CheckCircle2, AlertTriangle, ShieldCheck
+  Brain, Wrench, Sparkles, CheckCircle2, AlertTriangle, ShieldCheck,
+  ArrowUpRight, ArrowDownRight, TrendingUp, TrendingDown, Zap
 } from 'lucide-react';
 import { getApiBase } from '../utils/apiConfig';
 import type { DayProfile, ProfileNuances, Candle } from '../utils/profileCalculator';
@@ -31,6 +32,13 @@ interface ScannerItem {
   ibWidth?: number;
   ibWidthPct?: number;
   ibRangeClass?: 'small' | 'medium' | 'large';
+  ibBreakoutSide?: 'NONE' | 'UP' | 'DOWN' | 'BOTH';
+  fibTargets?: {
+    up: { fib1618: number; fib2618: number; fib3618: number };
+    down: { fib1618: number; fib2618: number; fib3618: number };
+  };
+  dayHigh?: number;
+  dayLow?: number;
   narrowIb?: boolean;
   dayType?: string;
   otf?: 'up' | 'down' | 'none';
@@ -210,13 +218,12 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
     return totalMinutes >= 615;
   }, [currentTime]);
 
-  // IB calculations
+  // IB calculations, Breakout Side & Fibonacci Extensions (1.618, 2.618, 3.618)
   const ibStats = useMemo(() => {
-    if (!active) return { high: 0, low: 0, width: 0, widthPct: 0, sizeClass: 'medium' as const };
-    const high = active.ibHigh || 0;
-    const low = active.ibLow || 0;
+    const high = active?.ibHigh || 0;
+    const low = active?.ibLow || 0;
     const width = high > low ? Math.round((high - low) * 100) / 100 : 0;
-    const basePrice = active.openPrice > 0 ? active.openPrice : (high + low) / 2;
+    const basePrice = active?.openPrice && active.openPrice > 0 ? active.openPrice : (high + low) / 2;
     const widthPct = basePrice > 0 ? Math.round((width / basePrice) * 10000) / 100 : 0;
 
     let sizeClass: 'small' | 'medium' | 'large' = 'medium';
@@ -226,8 +233,90 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
       else sizeClass = 'medium';
     }
 
-    return { high, low, width, widthPct, sizeClass };
-  }, [active]);
+    const dayHigh = active?.dayHigh || (candles && candles.length > 0 ? Math.max(...candles.map(c => c.high)) : high);
+    const dayLow = active?.dayLow || (candles && candles.length > 0 ? Math.min(...candles.map(c => c.low)) : low);
+    const currentPrice = active?.closePrice || (candles && candles.length > 0 ? candles[candles.length - 1].close : basePrice);
+
+    // Fibonacci Extensions of the Initial Balance Range (Rule 12)
+    // Upside: High + 0.618*IB (Target 1: 1.618x range), High + 1.618*IB (Target 2: 2.618x), High + 2.618*IB (Target 3: 3.618x)
+    // Downside: Low - 0.618*IB (Target 1: 1.618x range), Low - 1.618*IB (Target 2: 2.618x), Low - 2.618*IB (Target 3: 3.618x)
+    const fibUpT1 = width > 0 ? Math.round((high + width * 0.618) * 100) / 100 : high;
+    const fibUpT2 = width > 0 ? Math.round((high + width * 1.618) * 100) / 100 : high;
+    const fibUpT3 = width > 0 ? Math.round((high + width * 2.618) * 100) / 100 : high;
+
+    const fibDnT1 = width > 0 ? Math.round((low - width * 0.618) * 100) / 100 : low;
+    const fibDnT2 = width > 0 ? Math.round((low - width * 1.618) * 100) / 100 : low;
+    const fibDnT3 = width > 0 ? Math.round((low - width * 2.618) * 100) / 100 : low;
+
+    // Check which side of IB is broken
+    const isHighBroken = width > 0 && dayHigh > high + 0.05;
+    const isLowBroken = width > 0 && dayLow < low - 0.05;
+    const upDiff = isHighBroken ? Math.round((dayHigh - high) * 100) / 100 : 0;
+    const dnDiff = isLowBroken ? Math.round((low - dayLow) * 100) / 100 : 0;
+
+    let breakoutSide: 'NONE' | 'UP' | 'DOWN' | 'BOTH' = 'NONE';
+    if (isHighBroken && isLowBroken) breakoutSide = 'BOTH';
+    else if (isHighBroken) breakoutSide = 'UP';
+    else if (isLowBroken) breakoutSide = 'DOWN';
+
+    const breakoutStatus = {
+      side: breakoutSide,
+      isHighBroken,
+      isLowBroken,
+      upDiff,
+      dnDiff,
+      title: breakoutSide === 'BOTH' ? '⚡ BOTH SIDES BROKEN (Neutral Day)' :
+             breakoutSide === 'UP' ? '🟢 IB BROKEN UPSIDE' :
+             breakoutSide === 'DOWN' ? '🔴 IB BROKEN DOWNSIDE' :
+             '⏳ RANGE INTACT (Inside IB)',
+      badgeText: breakoutSide === 'BOTH' ? `Double Expansion (+${upDiff.toFixed(1)} / -${dnDiff.toFixed(1)})` :
+                 breakoutSide === 'UP' ? `+${upDiff.toFixed(1)} pts Extended` :
+                 breakoutSide === 'DOWN' ? `-${dnDiff.toFixed(1)} pts Extended` :
+                 'Awaiting Breakout',
+      color: breakoutSide === 'BOTH' ? 'var(--accent-purple)' :
+             breakoutSide === 'UP' ? 'var(--color-bull)' :
+             breakoutSide === 'DOWN' ? 'var(--color-bear)' :
+             '#60a5fa',
+      bg: breakoutSide === 'BOTH' ? 'rgba(168, 85, 247, 0.15)' :
+          breakoutSide === 'UP' ? 'rgba(16, 185, 129, 0.15)' :
+          breakoutSide === 'DOWN' ? 'rgba(239, 68, 68, 0.15)' :
+          'rgba(96, 165, 250, 0.12)',
+      border: breakoutSide === 'BOTH' ? 'rgba(168, 85, 247, 0.35)' :
+              breakoutSide === 'UP' ? 'rgba(16, 185, 129, 0.35)' :
+              breakoutSide === 'DOWN' ? 'rgba(239, 68, 68, 0.35)' :
+              'rgba(96, 165, 250, 0.25)',
+      desc: breakoutSide === 'BOTH' ? 'Both IB High and Low were breached today (Neutral Day pattern). Fade extremes and do not chase momentum.' :
+            breakoutSide === 'UP' ? `IB High (${high.toFixed(2)}) broken by +${upDiff.toFixed(1)} pts. Bullish continuation targets 1, 2, 3 active.` :
+            breakoutSide === 'DOWN' ? `IB Low (${low.toFixed(2)}) broken by -${dnDiff.toFixed(1)} pts. Bearish continuation targets 1, 2, 3 active.` :
+            `Price oscillating inside morning IB (${low.toFixed(2)} - ${high.toFixed(2)}). Dalton Rule: ~95% breakout probability during the day.`
+    };
+
+    const fibUp = {
+      t1: fibUpT1,
+      t2: fibUpT2,
+      t3: fibUpT3,
+      t1Hit: isHighBroken && dayHigh >= fibUpT1,
+      t2Hit: isHighBroken && dayHigh >= fibUpT2,
+      t3Hit: isHighBroken && dayHigh >= fibUpT3,
+    };
+
+    const fibDn = {
+      t1: fibDnT1,
+      t2: fibDnT2,
+      t3: fibDnT3,
+      t1Hit: isLowBroken && dayLow <= fibDnT1,
+      t2Hit: isLowBroken && dayLow <= fibDnT2,
+      t3Hit: isLowBroken && dayLow <= fibDnT3,
+    };
+
+    return { 
+      high, low, width, widthPct, sizeClass,
+      dayHigh, dayLow, currentPrice,
+      breakoutSide,
+      breakoutStatus,
+      fibUp, fibDn
+    };
+  }, [active, candles]);
 
   // Active Auto-Fixes for selected symbol
   const activeSymbolFixes = useMemo(() => {
@@ -353,7 +442,15 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
 
   // IB Size & 10:15 AM Rule (Mind Over Markets)
   const ibAnalysis = useMemo(() => {
-    const { width, widthPct, sizeClass, high, low } = ibStats;
+    const { width, widthPct, sizeClass, high, low, breakoutStatus, fibUp, fibDn } = ibStats;
+
+    const liveStatusText = breakoutStatus.side === 'UP' 
+      ? `🟢 IB High broken (+${breakoutStatus.upDiff.toFixed(1)} pts). Bullish Targets T1 (${fibUp.t1.toFixed(1)}), T2 (${fibUp.t2.toFixed(1)}), T3 (${fibUp.t3.toFixed(1)}) in play.`
+      : breakoutStatus.side === 'DOWN'
+      ? `🔴 IB Low broken (-${breakoutStatus.dnDiff.toFixed(1)} pts). Bearish Targets T1 (${fibDn.t1.toFixed(1)}), T2 (${fibDn.t2.toFixed(1)}), T3 (${fibDn.t3.toFixed(1)}) in play.`
+      : breakoutStatus.side === 'BOTH'
+      ? `⚡ Neutral Day Double Breakout! High broken by +${breakoutStatus.upDiff.toFixed(1)} pts & Low by -${breakoutStatus.dnDiff.toFixed(1)} pts.`
+      : `⏳ Price oscillating inside IB (${low.toFixed(1)} - ${high.toFixed(1)}). Awaiting breakout.`;
 
     if (sizeClass === 'small') {
       return {
@@ -362,8 +459,8 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         badgeBg: 'rgba(236, 72, 153, 0.15)',
         thresholdDesc: `IB Width: ${width.toFixed(2)} pts (${widthPct.toFixed(2)}% of spot, < 0.45%)`,
         resultExplanation: 'Mind Over Markets Volatility Compression Rule: A narrow Initial Balance indicates extreme price compression. Local traders could not establish a wide fair value band.',
-        whatCanHappen: 'There is an 85% to 90% statistical probability that the Initial Balance range will be broken during the session (most often in Period C at 10:15 AM). High probability of a Trend Day or Double Distribution Trend Day.',
-        tacticalRule: 'NEVER sell short straddles or iron condors on a Narrow IB day! Place breakout bracket orders at IB High (' + high.toFixed(2) + ') and IB Low (' + low.toFixed(2) + ') for Period C drive.'
+        whatCanHappen: `There is an 85% to 90% statistical probability that the Initial Balance range will be broken during the session (most often in Period C at 10:15 AM). High probability of a Trend Day or Double Distribution Trend Day. Live status: ${liveStatusText}`,
+        tacticalRule: `NEVER sell short straddles or iron condors on a Narrow IB day! Place breakout orders at IB High (${high.toFixed(2)}) & IB Low (${low.toFixed(2)}). Lock 80-100% profits at Target 1 (1.618x: ${fibUp.t1.toFixed(1)} / ${fibDn.t1.toFixed(1)}).`
       };
     } else if (sizeClass === 'large') {
       return {
@@ -372,8 +469,8 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         badgeBg: 'rgba(16, 185, 129, 0.15)',
         thresholdDesc: `IB Width: ${width.toFixed(2)} pts (${widthPct.toFixed(2)}% of spot, > 1.0%)`,
         resultExplanation: 'Mind Over Markets Range Exhaustion Rule: The first hour absorbed massive volume and price movement, exhausting the typical daily Average True Range (ATR).',
-        whatCanHappen: 'Very low probability (<5%) of a runaway Trend Day. High probability of a Normal Day (neither side of IB broken all day) or a Neutral Day (shallow test of extreme that reverses back into balance).',
-        tacticalRule: 'Fade the IB boundaries! Buy near IB Low (' + low.toFixed(2) + ') with stop below; sell near IB High (' + high.toFixed(2) + ') with stop above. Trade responsively.'
+        whatCanHappen: `Very low probability (<5%) of a runaway Trend Day. High probability of a Normal Day (range holds) or Neutral Day. Live status: ${liveStatusText}`,
+        tacticalRule: `Fade the IB boundaries! Buy near IB Low (${low.toFixed(2)}) with stop below; sell near IB High (${high.toFixed(2)}) with stop above. If broken, Target 1 (1.618x) marks maximum exhaustion.`
       };
     } else {
       return {
@@ -382,8 +479,8 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         badgeBg: 'rgba(59, 130, 246, 0.15)',
         thresholdDesc: `IB Width: ${width.toFixed(2)} pts (${widthPct.toFixed(2)}% of spot, 0.45% - 1.0%)`,
         resultExplanation: 'Mind Over Markets Standard Auction Rule: Represents healthy two-way trade facilitation by locals and short-term traders in the morning.',
-        whatCanHappen: 'Expected day type is a Normal Variation Day (range extended 0.5x to 1.0x IB on one side by Other Timeframe participants in Periods C, D, or E) or Neutral Day.',
-        tacticalRule: 'Watch Period C (10:15 - 10:45 AM). If Period C breaks IB with volume, ride the continuation targeting 1.618x Fibonacci extension. If Period C fails to break, expect range chop until Period G/L.'
+        whatCanHappen: `Expected day type is a Normal Variation Day (range extended 0.5x to 1.0x IB on one side by Other Timeframe participants in Periods C, D, or E) or Neutral Day. Live status: ${liveStatusText}`,
+        tacticalRule: `Watch Period C (10:15 - 10:45 AM). If Period C breaks IB with volume, ride continuation targeting 1.618x Fibonacci extension (Upside: ${fibUp.t1.toFixed(1)} / Downside: ${fibDn.t1.toFixed(1)}).`
       };
     }
   }, [ibStats]);
@@ -850,13 +947,195 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                       </span>
                     </div>
                   </td>
-                  <td style={{ padding: '16px 14px', verticalAlign: 'top' }}>
+                  <td style={{ padding: '16px 14px', verticalAlign: 'top', minWidth: '340px' }}>
                     <div style={{ fontWeight: '700', color: '#fff', fontSize: '14px', marginBottom: '4px' }}>
                       {ibStats.width.toFixed(2)} pts ({ibStats.widthPct.toFixed(2)}%)
                     </div>
-                    <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                    <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '2px', marginBottom: '8px' }}>
                       <span>IB High: <strong style={{ color: 'var(--color-bull)' }}>{ibStats.high.toFixed(2)}</strong></span>
                       <span>IB Low: <strong style={{ color: 'var(--color-bear)' }}>{ibStats.low.toFixed(2)}</strong></span>
+                    </div>
+
+                    {/* RED CIRCLE AREA: BREAKOUT SIDE STATUS & FIBONACCI EXTENSION TARGETS */}
+                    <div style={{ 
+                      marginTop: '6px', 
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      gap: '8px',
+                      background: 'rgba(0, 0, 0, 0.35)', 
+                      padding: '10px 12px', 
+                      borderRadius: '8px',
+                      border: '1px solid var(--border-color)',
+                      boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.3)'
+                    }}>
+                      {/* Live Breakout Side Banner */}
+                      <div style={{ 
+                        display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
+                        padding: '6px 10px', borderRadius: '6px',
+                        background: ibStats.breakoutStatus.bg,
+                        border: `1px solid ${ibStats.breakoutStatus.border}`,
+                        flexWrap: 'wrap', gap: '4px'
+                      }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          {ibStats.breakoutStatus.side === 'UP' && <TrendingUp size={14} color="var(--color-bull)" />}
+                          {ibStats.breakoutStatus.side === 'DOWN' && <TrendingDown size={14} color="var(--color-bear)" />}
+                          {ibStats.breakoutStatus.side === 'BOTH' && <Zap size={14} color="var(--accent-purple)" />}
+                          {ibStats.breakoutStatus.side === 'NONE' && <Clock size={14} color="#60a5fa" />}
+                          <span style={{ fontSize: '11px', fontWeight: '800', color: ibStats.breakoutStatus.color, letterSpacing: '0.02em' }}>
+                            {ibStats.breakoutStatus.title}
+                          </span>
+                        </div>
+                        <span style={{ 
+                          fontSize: '10px', fontWeight: '700', padding: '1px 6px', borderRadius: '4px',
+                          background: 'rgba(0,0,0,0.3)', color: ibStats.breakoutStatus.color 
+                        }}>
+                          {ibStats.breakoutStatus.badgeText}
+                        </span>
+                      </div>
+
+                      {/* Fibonacci Targets 1, 2, 3 Grid (Upside & Downside) */}
+                      <div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                          <span style={{ fontSize: '10.5px', fontWeight: '700', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                            Fibonacci Targets (1.618 · 2.618 · 3.618)
+                          </span>
+                          <span style={{ fontSize: '9.5px', color: 'var(--text-muted)' }}>
+                            Rule 12 Extensions
+                          </span>
+                        </div>
+
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                          {/* UPSIDE TARGETS (BULLISH BREAKOUT) */}
+                          <div style={{ 
+                            padding: '8px 10px', borderRadius: '6px',
+                            background: ibStats.breakoutStatus.side === 'UP' || ibStats.breakoutStatus.side === 'BOTH' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(255,255,255,0.02)',
+                            border: `1px solid ${ibStats.breakoutStatus.side === 'UP' || ibStats.breakoutStatus.side === 'BOTH' ? 'rgba(16, 185, 129, 0.45)' : 'rgba(255,255,255,0.07)'}`,
+                            boxShadow: ibStats.breakoutStatus.side === 'UP' ? '0 0 12px rgba(16, 185, 129, 0.15)' : 'none'
+                          }}>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '4px' }}>
+                              <span style={{ fontSize: '11px', fontWeight: '800', color: 'var(--color-bull)', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                                <ArrowUpRight size={13} />
+                                Upside
+                              </span>
+                              {(ibStats.breakoutStatus.side === 'UP' || ibStats.breakoutStatus.side === 'BOTH') && (
+                                <span style={{ fontSize: '9px', fontWeight: '800', padding: '1px 5px', borderRadius: '3px', background: 'rgba(16, 185, 129, 0.3)', color: '#10b981' }}>
+                                  ACTIVE
+                                </span>
+                              )}
+                            </div>
+                            
+                            {/* T1 */}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
+                              <span style={{ color: 'var(--text-secondary)' }}>T1 (1.618x):</span>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <strong style={{ color: '#fff' }}>{ibStats.fibUp.t1.toFixed(2)}</strong>
+                                <span style={{ 
+                                  fontSize: '9px', fontWeight: '800', padding: '0 4px', borderRadius: '3px',
+                                  background: ibStats.fibUp.t1Hit ? 'rgba(16, 185, 129, 0.35)' : 'rgba(255,255,255,0.05)',
+                                  color: ibStats.fibUp.t1Hit ? '#10b981' : 'var(--text-muted)'
+                                }}>
+                                  {ibStats.fibUp.t1Hit ? '✓ HIT' : '45%'}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* T2 */}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
+                              <span style={{ color: 'var(--text-secondary)' }}>T2 (2.618x):</span>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <strong style={{ color: '#fff' }}>{ibStats.fibUp.t2.toFixed(2)}</strong>
+                                <span style={{ 
+                                  fontSize: '9px', fontWeight: '800', padding: '0 4px', borderRadius: '3px',
+                                  background: ibStats.fibUp.t2Hit ? 'rgba(16, 185, 129, 0.35)' : 'rgba(255,255,255,0.05)',
+                                  color: ibStats.fibUp.t2Hit ? '#10b981' : 'var(--text-muted)'
+                                }}>
+                                  {ibStats.fibUp.t2Hit ? '✓ HIT' : '<10%'}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* T3 */}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
+                              <span style={{ color: 'var(--text-secondary)' }}>T3 (3.618x):</span>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <strong style={{ color: '#fff' }}>{ibStats.fibUp.t3.toFixed(2)}</strong>
+                                <span style={{ 
+                                  fontSize: '9px', fontWeight: '800', padding: '0 4px', borderRadius: '3px',
+                                  background: ibStats.fibUp.t3Hit ? 'rgba(16, 185, 129, 0.35)' : 'rgba(255,255,255,0.05)',
+                                  color: ibStats.fibUp.t3Hit ? '#10b981' : 'var(--text-muted)'
+                                }}>
+                                  {ibStats.fibUp.t3Hit ? '✓ HIT' : '<3%'}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* DOWNSIDE TARGETS (BEARISH BREAKDOWN) */}
+                          <div style={{ 
+                            padding: '8px 10px', borderRadius: '6px',
+                            background: ibStats.breakoutStatus.side === 'DOWN' || ibStats.breakoutStatus.side === 'BOTH' ? 'rgba(239, 68, 68, 0.1)' : 'rgba(255,255,255,0.02)',
+                            border: `1px solid ${ibStats.breakoutStatus.side === 'DOWN' || ibStats.breakoutStatus.side === 'BOTH' ? 'rgba(239, 68, 68, 0.45)' : 'rgba(255,255,255,0.07)'}`,
+                            boxShadow: ibStats.breakoutStatus.side === 'DOWN' ? '0 0 12px rgba(239, 68, 68, 0.15)' : 'none'
+                          }}>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '4px' }}>
+                              <span style={{ fontSize: '11px', fontWeight: '800', color: 'var(--color-bear)', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                                <ArrowDownRight size={13} />
+                                Downside
+                              </span>
+                              {(ibStats.breakoutStatus.side === 'DOWN' || ibStats.breakoutStatus.side === 'BOTH') && (
+                                <span style={{ fontSize: '9px', fontWeight: '800', padding: '1px 5px', borderRadius: '3px', background: 'rgba(239, 68, 68, 0.3)', color: '#ef4444' }}>
+                                  ACTIVE
+                                </span>
+                              )}
+                            </div>
+                            
+                            {/* T1 */}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
+                              <span style={{ color: 'var(--text-secondary)' }}>T1 (1.618x):</span>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <strong style={{ color: '#fff' }}>{ibStats.fibDn.t1.toFixed(2)}</strong>
+                                <span style={{ 
+                                  fontSize: '9px', fontWeight: '800', padding: '0 4px', borderRadius: '3px',
+                                  background: ibStats.fibDn.t1Hit ? 'rgba(239, 68, 68, 0.35)' : 'rgba(255,255,255,0.05)',
+                                  color: ibStats.fibDn.t1Hit ? '#ef4444' : 'var(--text-muted)'
+                                }}>
+                                  {ibStats.fibDn.t1Hit ? '✓ HIT' : '45%'}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* T2 */}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
+                              <span style={{ color: 'var(--text-secondary)' }}>T2 (2.618x):</span>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <strong style={{ color: '#fff' }}>{ibStats.fibDn.t2.toFixed(2)}</strong>
+                                <span style={{ 
+                                  fontSize: '9px', fontWeight: '800', padding: '0 4px', borderRadius: '3px',
+                                  background: ibStats.fibDn.t2Hit ? 'rgba(239, 68, 68, 0.35)' : 'rgba(255,255,255,0.05)',
+                                  color: ibStats.fibDn.t2Hit ? '#ef4444' : 'var(--text-muted)'
+                                }}>
+                                  {ibStats.fibDn.t2Hit ? '✓ HIT' : '<10%'}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* T3 */}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
+                              <span style={{ color: 'var(--text-secondary)' }}>T3 (3.618x):</span>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <strong style={{ color: '#fff' }}>{ibStats.fibDn.t3.toFixed(2)}</strong>
+                                <span style={{ 
+                                  fontSize: '9px', fontWeight: '800', padding: '0 4px', borderRadius: '3px',
+                                  background: ibStats.fibDn.t3Hit ? 'rgba(239, 68, 68, 0.35)' : 'rgba(255,255,255,0.05)',
+                                  color: ibStats.fibDn.t3Hit ? '#ef4444' : 'var(--text-muted)'
+                                }}>
+                                  {ibStats.fibDn.t3Hit ? '✓ HIT' : '<3%'}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </td>
                   <td style={{ padding: '16px 14px', verticalAlign: 'top' }}>
@@ -1105,10 +1384,44 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                         <td style={{ padding: '12px', fontSize: '12px' }}>
                           {item.ibHigh && item.ibLow ? (
                             <div>
-                              <strong style={{ color: '#fff' }}>{item.ibWidth?.toFixed(1) || (item.ibHigh - item.ibLow).toFixed(1)} pts</strong>
-                              <span style={{ fontSize: '11px', color: 'var(--text-muted)', marginLeft: '4px' }}>
-                                ({item.ibWidthPct ? item.ibWidthPct.toFixed(2) : ((item.ibHigh - item.ibLow) / item.price * 100).toFixed(2)}%)
-                              </span>
+                              <div>
+                                <strong style={{ color: '#fff' }}>{item.ibWidth?.toFixed(1) || (item.ibHigh - item.ibLow).toFixed(1)} pts</strong>
+                                <span style={{ fontSize: '11px', color: 'var(--text-muted)', marginLeft: '4px' }}>
+                                  ({item.ibWidthPct ? item.ibWidthPct.toFixed(2) : ((item.ibHigh - item.ibLow) / item.price * 100).toFixed(2)}%)
+                                </span>
+                              </div>
+                              {(() => {
+                                const w = item.ibWidth || (item.ibHigh - item.ibLow);
+                                const isUp = item.dayHigh && item.dayHigh > item.ibHigh + 0.05;
+                                const isDn = item.dayLow && item.dayLow < item.ibLow - 0.05;
+                                const t1Up = item.fibTargets?.up?.fib1618 || Math.round((item.ibHigh + w * 0.618) * 10) / 10;
+                                const t1Dn = item.fibTargets?.down?.fib1618 || Math.round((item.ibLow - w * 0.618) * 10) / 10;
+                                if (isUp && isDn) {
+                                  return (
+                                    <div style={{ marginTop: '3px', fontSize: '10px', color: 'var(--accent-purple)', fontWeight: '700' }}>
+                                      ⚡ Both Broken
+                                    </div>
+                                  );
+                                } else if (isUp) {
+                                  return (
+                                    <div style={{ marginTop: '3px', fontSize: '10px', color: 'var(--color-bull)', fontWeight: '700' }}>
+                                      ▲ Broken UP · T1: {t1Up}
+                                    </div>
+                                  );
+                                } else if (isDn) {
+                                  return (
+                                    <div style={{ marginTop: '3px', fontSize: '10px', color: 'var(--color-bear)', fontWeight: '700' }}>
+                                      ▼ Broken DN · T1: {t1Dn}
+                                    </div>
+                                  );
+                                } else {
+                                  return (
+                                    <div style={{ marginTop: '3px', fontSize: '10px', color: 'var(--text-muted)' }}>
+                                      ↔ Inside IB
+                                    </div>
+                                  );
+                                }
+                              })()}
                             </div>
                           ) : (
                             <span style={{ color: 'var(--text-muted)' }}>Forming...</span>

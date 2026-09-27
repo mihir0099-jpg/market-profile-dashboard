@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Activity, Layers, RefreshCw, BarChart2, Sparkles, Zap, Eye, Calendar, Cpu } from 'lucide-react';
+import { Search, Activity, Layers, RefreshCw, BarChart2, Sparkles, Zap, Eye, Calendar, Cpu, BookOpen } from 'lucide-react';
 
 interface DashboardHeaderProps {
   currentSymbol: string;
@@ -12,8 +12,8 @@ interface DashboardHeaderProps {
   binCount: number;
   onBinCountChange: (count: number) => void;
   onRefresh: () => void;
-  viewMode?: 'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly' | 'ai';
-  onViewModeChange?: (mode: 'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly' | 'ai') => void;
+  viewMode?: 'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly' | 'ai' | 'mihir';
+  onViewModeChange?: (mode: 'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly' | 'ai' | 'mihir') => void;
   sessionPeriod: 'daily' | 'weekly' | 'monthly';
   onSessionPeriodChange: (period: 'daily' | 'weekly' | 'monthly') => void;
   viewerCount?: number;
@@ -328,6 +328,28 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
             >
               <Activity size={13} />
               Market Profile
+            </button>
+
+            <button
+              onClick={() => onViewModeChange('mihir')}
+              style={{
+                background: viewMode === 'mihir' ? 'linear-gradient(135deg, #f59e0b, #ec4899)' : 'transparent',
+                border: 'none',
+                borderRadius: '6px',
+                color: 'white',
+                padding: '6px 12px',
+                fontSize: '12px',
+                fontWeight: '700',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                transition: 'all 0.2s',
+                boxShadow: viewMode === 'mihir' ? '0 2px 10px rgba(245, 158, 11, 0.4)' : 'none'
+              }}
+            >
+              <BookOpen size={13} color={viewMode === 'mihir' ? '#fff' : '#f59e0b'} />
+              Mihir View
             </button>
 
             <button

@@ -1233,6 +1233,20 @@ function scanSymbol(tvBridge, symbol) {
                       poorLows: unrepairedPoorLows
                     },
                     price: todayPrice,
+                    openPrice: activeProfile.openPrice,
+                    ibHigh: activeProfile.ibHigh,
+                    ibLow: activeProfile.ibLow,
+                    ibWidth: Math.round((activeProfile.ibHigh - activeProfile.ibLow) * 100) / 100,
+                    ibWidthPct: activeProfile.openPrice > 0 ? Math.round(((activeProfile.ibHigh - activeProfile.ibLow) / activeProfile.openPrice) * 10000) / 100 : 0,
+                    dayHigh: activeProfile.dayHigh,
+                    dayLow: activeProfile.dayLow,
+                    priorVah: prior ? prior.vahPrice : null,
+                    priorVal: prior ? prior.valPrice : null,
+                    priorPoc: prior ? prior.pocPrice : null,
+                    priorHigh: prior ? prior.dayHigh : null,
+                    priorLow: prior ? prior.dayLow : null,
+                    openRelationship: nuances.openRelationship,
+                    openDesc: nuances.openDesc,
                     timestamp: new Date().toLocaleTimeString()
                   };
 

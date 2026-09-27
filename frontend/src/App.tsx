@@ -16,6 +16,7 @@ import { OptionsTab } from './components/OptionsTab';
 import { DailyReports } from './components/DailyReports';
 import { MonthlyProfileTab } from './components/MonthlyProfileTab';
 import { AiAnalyticsTab } from './components/AiAnalyticsTab';
+import { MihirViewTab } from './components/MihirViewTab';
 import { getApiBase, apiFetch } from './utils/apiConfig';
 
 // Dynamically resolve backend API base based on origin
@@ -38,7 +39,7 @@ function App() {
   const [sessionPeriod, setSessionPeriod] = useState<'daily' | 'weekly' | 'monthly'>('daily');
 
   // GEX & PCR State variables
-  const [viewMode, setViewMode] = useState<'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly' | 'ai'>('profile');
+  const [viewMode, setViewMode] = useState<'profile' | 'gex' | 'btst' | 'pcr' | 'nineam' | 'options' | 'reports' | 'monthly' | 'ai' | 'mihir'>('profile');
 
   const [gexExpiries, setGexExpiries] = useState<string[]>([]);
   const [selectedGexExpiry, setSelectedGexExpiry] = useState<string>('');
@@ -510,10 +511,10 @@ function App() {
       />
 
       {/* Main Dashboard Workspace */}
-      <div className={viewMode === 'options' ? "" : "dashboard-grid"} style={viewMode === 'options' ? { padding: '0 20px 20px 20px' } : {}}>
+      <div className={(viewMode === 'options' || viewMode === 'mihir') ? "" : "dashboard-grid"} style={(viewMode === 'options' || viewMode === 'mihir') ? { padding: '0 20px 20px 20px' } : {}}>
         
         {/* Left Side: Sessions List & Stats */}
-        {viewMode !== 'options' && (
+        {viewMode !== 'options' && viewMode !== 'mihir' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <LiveScanner onSelectSymbol={setSymbol} currentSymbol={symbol} />
             <StatsPanel
@@ -529,7 +530,7 @@ function App() {
         )}
 
         {/* Right Side: Charts Pane */}
-        <div style={viewMode === 'options' ? { display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' } : { display: 'flex', flexDirection: 'column', gap: '20px', minHeight: '550px' }}>
+        <div style={(viewMode === 'options' || viewMode === 'mihir') ? { display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' } : { display: 'flex', flexDirection: 'column', gap: '20px', minHeight: '550px' }}>
           {error && !error.toLowerCase().includes('websocket') && (
             <div className="glass-panel animate-fade-in" style={{ padding: '16px', display: 'flex', alignItems: 'center', gap: '12px', border: '1px solid rgba(239, 68, 68, 0.3)', backgroundColor: 'rgba(239, 68, 68, 0.05)', borderRadius: '12px' }}>
               <AlertCircle color="#ef4444" size={20} />
@@ -621,6 +622,15 @@ function App() {
                 <MonthlyProfileTab currentSymbol={symbol} onSelectSymbol={(sym) => setSymbol(sym)} />
               ) : viewMode === 'ai' ? (
                 <AiAnalyticsTab currentSymbol={symbol} onSelectSymbol={(sym) => setSymbol(sym)} />
+              ) : viewMode === 'mihir' ? (
+                <MihirViewTab
+                  currentSymbol={symbol}
+                  onSelectSymbol={(sym) => setSymbol(sym)}
+                  activeProfile={activeProfile}
+                  priorProfile={priorProfile}
+                  nuances={nuances}
+                  candles={candles}
+                />
               ) : (
                 <OptionsTab symbol={symbol} onSelectSymbol={(sym) => { setSymbol(sym); setViewMode('profile'); }} />
               )}

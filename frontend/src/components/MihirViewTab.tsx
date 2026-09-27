@@ -460,7 +460,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         thresholdDesc: `IB Width: ${width.toFixed(2)} pts (${widthPct.toFixed(2)}% of spot, < 0.45%)`,
         resultExplanation: 'Mind Over Markets Volatility Compression Rule: A narrow Initial Balance indicates extreme price compression. Local traders could not establish a wide fair value band.',
         whatCanHappen: `There is an 85% to 90% statistical probability that the Initial Balance range will be broken during the session (most often in Period C at 10:15 AM). High probability of a Trend Day or Double Distribution Trend Day. Live status: ${liveStatusText}`,
-        tacticalRule: `NEVER sell short straddles or iron condors on a Narrow IB day! Place breakout orders at IB High (${high.toFixed(2)}) & IB Low (${low.toFixed(2)}). Lock 80-100% profits at Target 1 (1.618x: ${fibUp.t1.toFixed(1)} / ${fibDn.t1.toFixed(1)}).`
+        tacticalRule: `NEVER sell short straddles or iron condors on a Narrow IB day! Place breakout orders at IB High (${high.toFixed(2)}) & IB Low (${low.toFixed(2)}). Lock 80-100% profits at Target 1 (T1: ${fibUp.t1.toFixed(1)} / ${fibDn.t1.toFixed(1)}).`
       };
     } else if (sizeClass === 'large') {
       return {
@@ -470,7 +470,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         thresholdDesc: `IB Width: ${width.toFixed(2)} pts (${widthPct.toFixed(2)}% of spot, > 1.0%)`,
         resultExplanation: 'Mind Over Markets Range Exhaustion Rule: The first hour absorbed massive volume and price movement, exhausting the typical daily Average True Range (ATR).',
         whatCanHappen: `Very low probability (<5%) of a runaway Trend Day. High probability of a Normal Day (range holds) or Neutral Day. Live status: ${liveStatusText}`,
-        tacticalRule: `Fade the IB boundaries! Buy near IB Low (${low.toFixed(2)}) with stop below; sell near IB High (${high.toFixed(2)}) with stop above. If broken, Target 1 (1.618x) marks maximum exhaustion.`
+        tacticalRule: `Fade the IB boundaries! Buy near IB Low (${low.toFixed(2)}) with stop below; sell near IB High (${high.toFixed(2)}) with stop above. If broken, Target 1 (T1) marks maximum exhaustion.`
       };
     } else {
       return {
@@ -480,7 +480,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         thresholdDesc: `IB Width: ${width.toFixed(2)} pts (${widthPct.toFixed(2)}% of spot, 0.45% - 1.0%)`,
         resultExplanation: 'Mind Over Markets Standard Auction Rule: Represents healthy two-way trade facilitation by locals and short-term traders in the morning.',
         whatCanHappen: `Expected day type is a Normal Variation Day (range extended 0.5x to 1.0x IB on one side by Other Timeframe participants in Periods C, D, or E) or Neutral Day. Live status: ${liveStatusText}`,
-        tacticalRule: `Watch Period C (10:15 - 10:45 AM). If Period C breaks IB with volume, ride continuation targeting 1.618x Fibonacci extension (Upside: ${fibUp.t1.toFixed(1)} / Downside: ${fibDn.t1.toFixed(1)}).`
+        tacticalRule: `Watch Period C (10:15 - 10:45 AM). If Period C breaks IB with volume, ride continuation targeting Target 1 (Upside: ${fibUp.t1.toFixed(1)} / Downside: ${fibDn.t1.toFixed(1)}).`
       };
     }
   }, [ibStats]);
@@ -993,14 +993,14 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                         </span>
                       </div>
 
-                      {/* Fibonacci Targets 1, 2, 3 Grid (Upside & Downside) */}
+                      {/* Targets 1, 2, 3 Grid (Upside & Downside) */}
                       <div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
                           <span style={{ fontSize: '10.5px', fontWeight: '700', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                            Fibonacci Targets (1.618 · 2.618 · 3.618)
+                            Targets (T1 · T2 · T3)
                           </span>
                           <span style={{ fontSize: '9.5px', color: 'var(--text-muted)' }}>
-                            Rule 12 Extensions
+                            IB Extension Targets
                           </span>
                         </div>
 
@@ -1026,7 +1026,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                             
                             {/* T1 */}
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
-                              <span style={{ color: 'var(--text-secondary)' }}>T1 (1.618x):</span>
+                              <span style={{ color: 'var(--text-secondary)' }}>T1:</span>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                                 <strong style={{ color: '#fff' }}>{ibStats.fibUp.t1.toFixed(2)}</strong>
                                 <span style={{ 
@@ -1041,7 +1041,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
 
                             {/* T2 */}
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
-                              <span style={{ color: 'var(--text-secondary)' }}>T2 (2.618x):</span>
+                              <span style={{ color: 'var(--text-secondary)' }}>T2:</span>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                                 <strong style={{ color: '#fff' }}>{ibStats.fibUp.t2.toFixed(2)}</strong>
                                 <span style={{ 
@@ -1056,7 +1056,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
 
                             {/* T3 */}
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
-                              <span style={{ color: 'var(--text-secondary)' }}>T3 (3.618x):</span>
+                              <span style={{ color: 'var(--text-secondary)' }}>T3:</span>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                                 <strong style={{ color: '#fff' }}>{ibStats.fibUp.t3.toFixed(2)}</strong>
                                 <span style={{ 
@@ -1091,7 +1091,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                             
                             {/* T1 */}
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
-                              <span style={{ color: 'var(--text-secondary)' }}>T1 (1.618x):</span>
+                              <span style={{ color: 'var(--text-secondary)' }}>T1:</span>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                                 <strong style={{ color: '#fff' }}>{ibStats.fibDn.t1.toFixed(2)}</strong>
                                 <span style={{ 
@@ -1106,7 +1106,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
 
                             {/* T2 */}
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
-                              <span style={{ color: 'var(--text-secondary)' }}>T2 (2.618x):</span>
+                              <span style={{ color: 'var(--text-secondary)' }}>T2:</span>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                                 <strong style={{ color: '#fff' }}>{ibStats.fibDn.t2.toFixed(2)}</strong>
                                 <span style={{ 
@@ -1121,7 +1121,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
 
                             {/* T3 */}
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', padding: '2px 0' }}>
-                              <span style={{ color: 'var(--text-secondary)' }}>T3 (3.618x):</span>
+                              <span style={{ color: 'var(--text-secondary)' }}>T3:</span>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                                 <strong style={{ color: '#fff' }}>{ibStats.fibDn.t3.toFixed(2)}</strong>
                                 <span style={{ 
@@ -1208,7 +1208,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                   <td style={{ padding: '16px 14px', verticalAlign: 'top' }}>
                     <div style={{ padding: '8px 12px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-color)', fontSize: '12px', color: '#e2e8f0', lineHeight: '1.4' }}>
                       {expectedDayTypeInfo.forecastedType.includes('Trend')
-                        ? 'Do not take counter-trend trades. Hold runners till Period L (2:45 PM). Target 2.618x Fibonacci extension.'
+                        ? 'Do not take counter-trend trades. Hold runners till Period L (2:45 PM). Target T2.'
                         : expectedDayTypeInfo.forecastedType.includes('Neutral')
                         ? 'Wait for the second IB extreme to be tested and fade it back toward POC / IB Midpoint.'
                         : 'Trade the edges of the initial balance or wait for 10:15 AM Period C extension.'

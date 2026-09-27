@@ -19,6 +19,8 @@ import { AngelOneBridge, angelOneBridge } from './angelone_bridge.js';
 import { runTabHealthAudit } from './auto_heal_engine.js';
 import { executeDailySelfEvolution } from './autonomous_market_brain.js';
 import { getMihirLearnings, evaluatePredictions } from './prediction_learner.js';
+import { getMihirMlState, learnFromMistake } from './mihir_ml_engine.js';
+import { getAllGeneratedRules, mineNewRulesFromData } from './mihir_rule_miner.js';
 import { exec, spawn } from 'child_process';
 
 import path from 'path';
@@ -1023,6 +1025,50 @@ app.post('/api/mihir-learnings/evaluate', async (req, res) => {
     res.json({ success: true, count: evaluated.length, learnings: getMihirLearnings() });
   } catch (err) {
     console.error('[API] Error in /api/mihir-learnings/evaluate:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Mihir ML Brain Model & Weights Inspection API
+app.get('/api/mihir-ml/model', (req, res) => {
+  try {
+    const mlState = getMihirMlState();
+    res.json(mlState);
+  } catch (err) {
+    console.error('[API] Error in /api/mihir-ml/model:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/mihir-ml/train', (req, res) => {
+  try {
+    const result = learnFromMistake(req.body || {});
+    res.json(result);
+  } catch (err) {
+    console.error('[API] Error in /api/mihir-ml/train:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Mihir Autonomous ML Rule Generator Endpoints
+app.get('/api/mihir-ml/rules', (req, res) => {
+  try {
+    const rules = getAllGeneratedRules();
+    res.json({ success: true, count: rules.length, rules });
+  } catch (err) {
+    console.error('[API] Error in /api/mihir-ml/rules:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/mihir-ml/generate-rules', (req, res) => {
+  try {
+    const scannerState = getScannerState();
+    const results = scannerState?.results || [];
+    const miningResult = mineNewRulesFromData(results);
+    res.json({ success: true, ...miningResult });
+  } catch (err) {
+    console.error('[API] Error in /api/mihir-ml/generate-rules:', err);
     res.status(500).json({ error: err.message });
   }
 });

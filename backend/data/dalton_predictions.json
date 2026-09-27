@@ -2,7 +2,7 @@
   {
     "symbol": "NSE:TCS",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:51 pm",
     "openPrice": 2068,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Test Drive (OTD) Bullish",
@@ -25,7 +25,7 @@
   {
     "symbol": "NSE:RELIANCE",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 1215,
     "whereDidItOpen": "Gap Down",
     "openingType": "Open Auction (OA)",
@@ -48,7 +48,7 @@
   {
     "symbol": "BSE:SENSEX",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:51 pm",
     "openPrice": 73512.78,
     "whereDidItOpen": "Gap Down",
     "openingType": "Open Auction (OA)",
@@ -71,7 +71,7 @@
   {
     "symbol": "NSE:BANKNIFTY",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:51 pm",
     "openPrice": 55443.25,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Test Drive (OTD) Bullish",
@@ -94,7 +94,7 @@
   {
     "symbol": "NSE:NIFTY",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:51 pm",
     "openPrice": 23059.7,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Auction (OA)",
@@ -117,7 +117,7 @@
   {
     "symbol": "NSE:ICICIBANK",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 1332,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Auction (OA)",
@@ -138,7 +138,7 @@
   {
     "symbol": "NSE:SBIN",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:51 pm",
     "openPrice": 981,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Test Drive (OTD) Bearish",
@@ -159,7 +159,7 @@
   {
     "symbol": "TVC:USOIL",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:51 pm",
     "openPrice": 92.24,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Auction (OA)",
@@ -180,7 +180,7 @@
   {
     "symbol": "NSE:HDFCBANK",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 727,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Drive (OD) Bullish",
@@ -203,7 +203,7 @@
   {
     "symbol": "NSE:NIFTY1!",
     "date": "2026-09-27",
-    "timestamp": "6:47:54 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 23081,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Auction (OA)",
@@ -226,7 +226,7 @@
   {
     "symbol": "NSE:TATAMOTORS",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 296.2,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Auction (OA)",
@@ -249,7 +249,7 @@
   {
     "symbol": "NSE:KOTAKBANK",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 406.9,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Auction (OA)",
@@ -270,7 +270,7 @@
   {
     "symbol": "NSE:BHARTIARTL",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 1797.1,
     "whereDidItOpen": "Gap Down",
     "openingType": "Open Auction (OA)",
@@ -291,7 +291,7 @@
   {
     "symbol": "NSE:ITC",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 267.65,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Auction (OA)",
@@ -312,7 +312,7 @@
   {
     "symbol": "NSE:BAJFINANCE",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 982.9,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Auction (OA)",
@@ -333,7 +333,7 @@
   {
     "symbol": "NSE:SUNPHARMA",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 1850.4,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Auction (OA)",
@@ -354,7 +354,7 @@
   {
     "symbol": "NSE:AXISBANK",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 1192.9,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Auction (OA)",
@@ -375,7 +375,7 @@
   {
     "symbol": "NSE:INFY",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 1001.4,
     "whereDidItOpen": "Gap Down",
     "openingType": "Open Auction (OA)",
@@ -396,7 +396,7 @@
   {
     "symbol": "NSE:MARUTI",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 12014,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Auction (OA)",
@@ -419,7 +419,7 @@
   {
     "symbol": "NSE:LT",
     "date": "2026-09-27",
-    "timestamp": "6:47:55 pm",
+    "timestamp": "7:46:52 pm",
     "openPrice": 3872,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Test Drive (OTD) Bearish",
@@ -440,7 +440,7 @@
   {
     "symbol": "NSE:TITAN",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 4835.5,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Test Drive (OTD) Bearish",
@@ -463,7 +463,7 @@
   {
     "symbol": "NSE:JSWSTEEL",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 1279.1,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Test Drive (OTD) Bullish",
@@ -486,7 +486,7 @@
   {
     "symbol": "NSE:POWERGRID",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 267.8,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Auction (OA)",
@@ -507,7 +507,7 @@
   {
     "symbol": "NSE:ULTRACEMCO",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 11068,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Test Drive (OTD) Bullish",
@@ -530,7 +530,7 @@
   {
     "symbol": "NSE:ASIANPAINT",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 2398.6,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Auction (OA)",
@@ -553,7 +553,7 @@
   {
     "symbol": "NSE:COALINDIA",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 423.3,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Test Drive (OTD) Bullish",
@@ -576,7 +576,7 @@
   {
     "symbol": "NSE:TATASTEEL",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 188.75,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Test Drive (OTD) Bullish",
@@ -597,7 +597,7 @@
   {
     "symbol": "NSE:ONGC",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 237.23,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Auction (OA)",
@@ -620,7 +620,7 @@
   {
     "symbol": "NSE:HINDUNILVR",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 1933.3,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Test Drive (OTD) Bearish",
@@ -641,7 +641,7 @@
   {
     "symbol": "NSE:NTPC",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:53 pm",
     "openPrice": 326.2,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Auction (OA)",
@@ -662,7 +662,7 @@
   {
     "symbol": "NSE:TECHM",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:54 pm",
     "openPrice": 1540.1,
     "whereDidItOpen": "Gap Down",
     "openingType": "Open Test Drive (OTD) Bullish",
@@ -685,7 +685,7 @@
   {
     "symbol": "NSE:WIPRO",
     "date": "2026-09-27",
-    "timestamp": "6:47:57 pm",
+    "timestamp": "7:46:54 pm",
     "openPrice": 163.16,
     "whereDidItOpen": "Gap Down",
     "openingType": "Open Test Drive (OTD) Bullish",
@@ -708,7 +708,7 @@
   {
     "symbol": "NSE:HCLTECH",
     "date": "2026-09-27",
-    "timestamp": "6:47:57 pm",
+    "timestamp": "7:46:54 pm",
     "openPrice": 1242.7,
     "whereDidItOpen": "Gap Down",
     "openingType": "Open Auction (OA)",
@@ -731,7 +731,7 @@
   {
     "symbol": "NSE:M_M",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:54 pm",
     "openPrice": 2979.4,
     "whereDidItOpen": "Gap Down",
     "openingType": "Open Auction (OA)",
@@ -754,7 +754,7 @@
   {
     "symbol": "NSE:HEROMOTOCO",
     "date": "2026-09-27",
-    "timestamp": "6:47:57 pm",
+    "timestamp": "7:46:54 pm",
     "openPrice": 5317.5,
     "whereDidItOpen": "Inside Value",
     "openingType": "Open Test Drive (OTD) Bearish",
@@ -775,7 +775,7 @@
   {
     "symbol": "NSE:LTIM",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:54 pm",
     "openPrice": 4038,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Test Drive (OTD) Bullish",
@@ -798,7 +798,7 @@
   {
     "symbol": "NSE:BPCL",
     "date": "2026-09-27",
-    "timestamp": "6:47:57 pm",
+    "timestamp": "7:46:54 pm",
     "openPrice": 308.05,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Auction (OA)",
@@ -819,7 +819,7 @@
   {
     "symbol": "NSE:BAJAJ_AUTO",
     "date": "2026-09-27",
-    "timestamp": "6:47:56 pm",
+    "timestamp": "7:46:54 pm",
     "openPrice": 11231,
     "whereDidItOpen": "Outside Value, Inside Range",
     "openingType": "Open Auction (OA)",
@@ -842,7 +842,7 @@
   {
     "symbol": "NSE:EICHERMOT",
     "date": "2026-09-27",
-    "timestamp": "6:47:57 pm",
+    "timestamp": "7:46:54 pm",
     "openPrice": 7331,
     "whereDidItOpen": "Gap Down",
     "openingType": "Open Auction (OA)",

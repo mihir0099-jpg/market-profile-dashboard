@@ -4,6 +4,16 @@ import { fileURLToPath } from 'url';
 import { processSignalsForSymbol, updateIndexPcrDrift } from './signals_manager.js';
 import { optimizeParameters } from './self_learner.js';
 import { recordPrediction, applyLearnedCorrections } from './prediction_learner.js';
+import { 
+  predictTargetProbabilities, 
+  detectBreakoutTrap, 
+  classifyDayType, 
+  evaluate80PercentRuleAbsorption, 
+  getAdaptiveIbThresholds, 
+  scoreInstitutionalConviction, 
+  predictPeriodLDrive 
+} from './mihir_ml_engine.js';
+import { matchRulesForSymbol, mineNewRulesFromData } from './mihir_rule_miner.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -1261,7 +1271,56 @@ function scanSymbol(tvBridge, symbol) {
                     priorLow: priorProfile ? priorProfile.dayLow : null,
                     openRelationship: nuances.openRelationship,
                     openDesc: nuances.openDesc,
-                    timestamp: new Date().toLocaleTimeString()
+                    timestamp: new Date().toLocaleTimeString(),
+                    mlInsights: {
+                      targetProbs: predictTargetProbabilities({
+                        ibWidthPct: activeProfile.openPrice > 0 ? ((activeProfile.ibHigh - activeProfile.ibLow) / activeProfile.openPrice) * 100 : 0.5,
+                        volumeRatio: 1.1,
+                        pcrVelocity: 0.0,
+                        isBreakoutSide: (activeProfile.dayHigh > activeProfile.ibHigh + 0.05 && activeProfile.dayLow < activeProfile.ibLow - 0.05) ? 'BOTH' : (activeProfile.dayHigh > activeProfile.ibHigh + 0.05) ? 'UP' : (activeProfile.dayLow < activeProfile.ibLow - 0.05) ? 'DOWN' : 'NONE',
+                        openType: nuances.openingType || 'OA',
+                        distToPriorPoc: priorProfile ? Math.abs(activeProfile.openPrice - priorProfile.pocPrice) : 0
+                      }),
+                      trapDetection: detectBreakoutTrap({
+                        isBreakoutSide: (activeProfile.dayHigh > activeProfile.ibHigh + 0.05 && activeProfile.dayLow < activeProfile.ibLow - 0.05) ? 'BOTH' : (activeProfile.dayHigh > activeProfile.ibHigh + 0.05) ? 'UP' : (activeProfile.dayLow < activeProfile.ibLow - 0.05) ? 'DOWN' : 'NONE',
+                        volumeRatio: 1.1,
+                        indexDivergence: false,
+                        pcrDivergence: false,
+                        ibRangeClass,
+                        failedExtension: !!(nuances.cFailure || nuances.dFailure)
+                      }),
+                      dayTypeProbabilities: classifyDayType({
+                        ibRangeClass,
+                        openType: nuances.openingType || 'OA',
+                        volumeRatio: 1.1,
+                        pcrVelocity: 0.0,
+                        isDoubleSweep: (activeProfile.dayHigh > activeProfile.ibHigh + 0.05 && activeProfile.dayLow < activeProfile.ibLow - 0.05)
+                      }),
+                      institutionalConviction: scoreInstitutionalConviction({
+                        openType: nuances.openingType || 'OA',
+                        volumeRatio: 1.1,
+                        candleBodyRatio: 0.65
+                      }),
+                      eightyPercentRule: evaluate80PercentRuleAbsorption({
+                        hasEnteredVa: nuances.eightyPercentRule || false,
+                        pocVolumeRatio: 1.25,
+                        vaWidthPct: priorProfile ? ((priorProfile.vahPrice - priorProfile.valPrice) / todayPrice) * 100 : 0.8,
+                        isConfirmedTail: !!(nuances.buyingTail || nuances.sellingTail)
+                      }),
+                      periodL: predictPeriodLDrive({
+                        periodGInsideIb: activeProfile.dayHigh <= activeProfile.ibHigh + 0.05 && activeProfile.dayLow >= activeProfile.ibLow - 0.05,
+                        periodLVolume: 1.15
+                      }),
+                      triggeredRules: matchRulesForSymbol(symbol, {
+                        openType: nuances.openingType || 'OA',
+                        ibRangeClass,
+                        breakoutSide: (activeProfile.dayHigh > activeProfile.ibHigh + 0.05 && activeProfile.dayLow < activeProfile.ibLow - 0.05) ? 'BOTH' : (activeProfile.dayHigh > activeProfile.ibHigh + 0.05) ? 'UP' : (activeProfile.dayLow < activeProfile.ibLow - 0.05) ? 'DOWN' : 'NONE',
+                        volumeRatio: 1.1,
+                        eightyPercentRule: !!nuances.eightyPercentRule,
+                        indexBearish: false,
+                        failedExtension: !!(nuances.cFailure || nuances.dFailure)
+                      })
+                    }
                   };
 
                   try {
@@ -1373,6 +1432,16 @@ export function startScanner(tvBridge) {
           optimizeParameters();
         } catch (e) {
           console.error('[Scanner] Error during auto-learning parameter optimization:', e.message);
+        }
+
+        // Autonomous Machine Learning Rule Mining: synthesize new rules from current market scan data
+        try {
+          const mined = mineNewRulesFromData(results);
+          if (mined.newRulesDiscovered > 0) {
+            console.log(`[Scanner] Autonomous ML Rule Generator formulated ${mined.newRulesDiscovered} NEW market rules!`);
+          }
+        } catch (ruleErr) {
+          console.warn('[Scanner] Error in autonomous ML rule mining:', ruleErr.message);
         }
 
         // Trigger daily post-mortem after market hours (3:35 PM IST onwards)

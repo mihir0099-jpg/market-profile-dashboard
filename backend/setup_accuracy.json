@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "27/9/2026, 6:39:55 pm",
+  "lastUpdated": "27/9/2026, 7:49:00 pm",
   "global": {
     "poorHigh": {
       "triggered": 0,
@@ -483,7 +483,7 @@
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 20,
         "avgExpiryRangePct": 2.64,
-        "avgNonExpiryRangePct": 2.41
+        "avgNonExpiryRangePct": 2.42
       }
     },
     "NSE:AARTIIND": {

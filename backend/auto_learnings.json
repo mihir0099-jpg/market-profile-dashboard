@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "27/9/2026, 6:39:55 pm",
+  "lastUpdated": "27/9/2026, 7:49:00 pm",
   "global": {
     "stats": {
       "gapRejectionToPoc": {
@@ -1175,7 +1175,7 @@
           "J": 16.7,
           "K": 0,
           "L": 0,
-          "M": 16.7
+          "M": 0
         },
         "lowEstablishedByPeriod": {
           "A": 33.3,
@@ -1220,7 +1220,7 @@
         "expiryBreakoutRate": 0,
         "nonExpiryBreakoutRate": 20,
         "avgExpiryRangePct": 2.64,
-        "avgNonExpiryRangePct": 2.41
+        "avgNonExpiryRangePct": 2.42
       },
       "openStats": {
         "afterAboveVah": {

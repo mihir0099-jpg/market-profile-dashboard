@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { learnFromMistake } from './mihir_ml_engine.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -230,6 +231,18 @@ export function evaluatePredictions(symbolProfilesMap = {}) {
         mistake = `Predicted ${p.predictedDayType}, but actual outcome formed a ${actualDayType}.`;
         learning = `Always respect market-generated information over static morning forecasts when price traverses key structural pivots.`;
         autoFix = `Dynamic rebalancing weight applied to ${p.symbol} for future predictions.`;
+      }
+
+      try {
+        learnFromMistake({
+          symbol: p.symbol,
+          predictedType: p.predictedDayType,
+          actualType: actualDayType,
+          failedBreakout: pred.includes('trend') && act.includes('neutral'),
+          lowVolumeTrap: true
+        });
+      } catch (mlErr) {
+        console.warn('[Prediction Learner] ML update warning:', mlErr.message);
       }
 
       if (learning && !constraints.negativeFilters.some(f => f.condition === learning)) {

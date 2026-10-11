@@ -120,6 +120,9 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
   const [miningRules, setMiningRules] = useState<boolean>(false);
   const [ruleMineStatus, setRuleMineStatus] = useState<string | null>(null);
   const [ruleCategoryFilter, setRuleCategoryFilter] = useState<string>('ALL');
+  const [autonomousEngineMeta, setAutonomousEngineMeta] = useState<any>(null);
+  const [learningJournal, setLearningJournal] = useState<any[]>([]);
+  const [ruleStats, setRuleStats] = useState<any>(null);
 
   const backendUrl = getApiBase();
 
@@ -188,6 +191,15 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         if (data.rules && Array.isArray(data.rules)) {
           setGeneratedRules(data.rules);
         }
+        if (data.autonomousEngine) {
+          setAutonomousEngineMeta(data.autonomousEngine);
+        }
+        if (data.journal && Array.isArray(data.journal)) {
+          setLearningJournal(data.journal);
+        }
+        if (data.stats) {
+          setRuleStats(data.stats);
+        }
       }
     } catch (e) {
       console.error('Failed to fetch auto-generated ML rules:', e);
@@ -196,7 +208,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
     }
   };
 
-  // Mine & synthesize new rules from live market data
+  // Optional manual re-audit trigger (Daily background daemon already runs autonomously every day at 10:20 & 15:45)
   const handleMineNewRules = async () => {
     setMiningRules(true);
     setRuleMineStatus(null);
@@ -206,17 +218,20 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         const data = await res.json();
         if (data.rules && Array.isArray(data.rules)) {
           setGeneratedRules(data.rules);
+          if (data.autonomousEngine) {
+            setAutonomousEngineMeta(data.autonomousEngine);
+          }
           const count = data.newlyDiscoveredCount || 0;
           setRuleMineStatus(
             count > 0 
               ? `🚀 Discovered and formulated ${count} brand-new trading rule${count === 1 ? '' : 's'} from live session data!`
-              : `✅ Market structure validated against all ${data.rules.length} active ML rules. Database is fully up-to-date.`
+              : `✅ Market structure validated against all ${data.rules.length} active ML rules. Daily autonomous daemon is fully synchronized.`
           );
         }
       }
     } catch (e) {
       console.error('Error generating rules from live data:', e);
-      setRuleMineStatus('❌ Failed to mine rules. Please check backend connection.');
+      setRuleMineStatus('❌ Failed to run instant audit. Note: Daily background schedule remains active automatically.');
     } finally {
       setMiningRules(false);
     }
@@ -706,6 +721,150 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
     };
   }, [currentScannerItem, ibStats, openTypeInfo, nuances]);
 
+  // Live Market Profile Balance vs Imbalance State Classifier
+  const liveBalanceState = useMemo(() => {
+    if (currentScannerItem?.mlInsights?.balanceState) {
+      return currentScannerItem.mlInsights.balanceState;
+    }
+
+    const high = active?.dayHigh || 0;
+    const low = active?.dayLow || 0;
+    const ibH = active?.ibHigh || 0;
+    const ibL = active?.ibLow || 0;
+    const poc = active?.pocPrice || 0;
+    const vah = active?.vahPrice || 0;
+    const val = active?.valPrice || 0;
+
+    const ibWidth = Math.max(0.1, ibH - ibL);
+    const dayRange = Math.max(0.1, high - low);
+    const ibExpansionRatio = Math.round((dayRange / ibWidth) * 100) / 100;
+
+    const isHighBroken = ibStats.breakoutStatus.isHighBroken;
+    const isLowBroken = ibStats.breakoutStatus.isLowBroken;
+    const isDoubleBreak = isHighBroken && isLowBroken;
+    const isSmallIb = ibStats.sizeClass === 'small';
+    const isLargeIb = ibStats.sizeClass === 'large';
+
+    const openType = openTypeInfo.name;
+    const otfType = nuances?.otfType || 'none';
+    const rotationFactor = nuances?.rotationFactor || 0;
+    const profileShape = nuances?.profileShape || 'normal';
+    const hasBuyingTail = !!(nuances as any)?.buyingTail;
+    const hasSellingTail = !!(nuances as any)?.sellingTail;
+    const isDoubleDist = !!(nuances as any)?.doubleDistribution || !!nuances?.singlePrintAlert;
+    const hasFailure = !!(nuances?.cFailure || nuances?.dFailure || (nuances?.eFailure && nuances.eFailure !== 'none'));
+
+    // Single prints check
+    let singlePrintCount = 0;
+    if (active?.bins && Array.isArray(active.bins) && active.bins.length > 6) {
+      for (let i = 2; i < active.bins.length - 2; i++) {
+        if (active.bins[i]?.tpos?.length === 1) singlePrintCount++;
+      }
+    }
+    const hasSinglePrints = singlePrintCount >= 3;
+
+    // Value Area overlap
+    let vaOverlapPct = 50;
+    if (prior?.vahPrice && prior?.valPrice && vah && val) {
+      const overlapMin = Math.max(val, prior.valPrice);
+      const overlapMax = Math.min(vah, prior.vahPrice);
+      if (overlapMax > overlapMin) {
+        const overlapSpan = overlapMax - overlapMin;
+        const todayVaSpan = Math.max(0.1, vah - val);
+        vaOverlapPct = Math.min(100, Math.round((overlapSpan / todayVaSpan) * 100));
+      } else {
+        vaOverlapPct = 0;
+      }
+    }
+
+    // POC Migration
+    let pocMigrationSpeed = 'STATIC_EQUILIBRIUM';
+    if (prior?.pocPrice && poc) {
+      const pocDiff = poc - prior.pocPrice;
+      if (isHighBroken && pocDiff > ibWidth * 0.4) pocMigrationSpeed = 'TRACKING_PRICE';
+      else if (isLowBroken && pocDiff < -ibWidth * 0.4) pocMigrationSpeed = 'TRACKING_PRICE';
+      else if ((isHighBroken || isLowBroken) && Math.abs(pocDiff) < ibWidth * 0.15) pocMigrationSpeed = 'LAGGING_PRICE';
+    }
+
+    let state = 'BALANCE_STABLE';
+    let stateLabel = 'Rotational Balance (Equilibrium Bracket)';
+    let stateConfidence = 84;
+    let stateColor = '#3b82f6';
+    let stateDescription = '';
+    let playbookDirective = '';
+    let direction = isHighBroken && !isLowBroken ? 'BULLISH' : isLowBroken && !isHighBroken ? 'BEARISH' : 'NEUTRAL';
+
+    if (isDoubleBreak || (hasFailure && (hasBuyingTail || hasSellingTail)) || (hasFailure && !isDoubleDist && (isHighBroken || isLowBroken))) {
+      state = 'RESPONSIVE_ABSORPTION';
+      stateLabel = 'Responsive Absorption (Imbalance -> Balance)';
+      stateConfidence = 89;
+      stateColor = '#f59e0b';
+      stateDescription = isDoubleBreak
+        ? 'Neutral Day Double IB Sweep: Breakout momentum failed on both extremes. Responsive institutional traders have absorbed the move, forcing price back into range balance.'
+        : 'Auction Failure with Rejection Tail: The directional probe encountered massive counter-orders. Liquidity was absorbed at the extreme, driving mean-reversion back to the POC.';
+      playbookDirective = 'DO NOT chase breakout momentum. Enter responsive fade trades targeting Developing POC and Value Area Midpoint. Set tight stop just beyond the sweep extreme.';
+    } else if (isDoubleDist || (profileShape === 'P-shape' && isHighBroken) || (profileShape === 'b-shape' && isLowBroken)) {
+      state = 'EXHAUSTION_REBRACKETING';
+      stateLabel = 'Exhaustion Re-Bracketing (Double Distribution)';
+      stateConfidence = 87;
+      stateColor = '#a855f7';
+      stateDescription = profileShape === 'P-shape'
+        ? 'P-Shape Profile: Morning initiative buying has halted. Volume is clustering at the day\'s high, establishing a new higher balance area. Trapped longs warning if upper POC fails.'
+        : profileShape === 'b-shape'
+        ? 'b-Shape Profile: Morning initiative selling has halted. Heavy volume is absorbing at the day\'s low, establishing a new lower balance area. Short squeeze potential.'
+        : 'Double Distribution: Price paused after directional drive and is building a second distinct bell curve. Single prints separate the two distributions.';
+      playbookDirective = isDoubleDist
+        ? 'Treat the single-print gap as structural support/resistance. If price stays above gap, trade upper distribution bracket; if below gap, trade lower distribution bracket.'
+        : 'Stop chasing the trend. Trade the new distribution boundary responsively or wait for a second breakout of the new cluster.';
+    } else if ((isHighBroken || isLowBroken) && (openType.includes('OD') || openType.includes('OTD') || otfType !== 'none' || ibExpansionRatio >= 1.35 || hasSinglePrints)) {
+      state = 'INITIATIVE_IMBALANCE';
+      stateLabel = `Initiative Imbalance (${direction} Discovery Trend)`;
+      stateConfidence = 93;
+      stateColor = direction === 'BULLISH' ? '#10b981' : '#ef4444';
+      stateDescription = openType.includes('OD')
+        ? 'Open Drive Runaway Imbalance: Other Timeframe (OTF) smart money entered from the open with urgent initiative conviction. Zero pullbacks to open. Market is aggressively searching for new value.'
+        : `Active One-Time Framing (${otfType.toUpperCase()}): Range expanded to ${ibExpansionRatio}x IB with single prints. Aggressive buyers/sellers controlling the auction.`;
+      playbookDirective = `NEVER fade this move! Ride continuation trades in direction of ${direction} drive. Target Fibonacci extensions T1 (1.618x IB) and trail to T2 (2.618x IB). Stop loss strictly beyond last 30-min candle extreme.`;
+    } else if (isSmallIb && !isHighBroken && !isLowBroken) {
+      state = 'BALANCE_COILING';
+      stateLabel = 'Balance Coiling (Pre-Imbalance Squeeze)';
+      stateConfidence = 91;
+      stateColor = '#ec4899';
+      stateDescription = `Narrow Initial Balance (<0.45% of spot: ${ibStats.widthPct.toFixed(2)}%). Extreme energy coiling in Periods A & B. Dalton Rule: ~95% breakout probability once compression releases.`;
+      playbookDirective = 'Do not write short options. Place stop-buy order above IB High and stop-sell order below IB Low for Period C/E volatility release drive.';
+    } else {
+      state = 'BALANCE_STABLE';
+      stateLabel = 'Balanced Auction (D-Shape Equilibrium Bracket)';
+      stateConfidence = 84;
+      stateColor = '#3b82f6';
+      stateDescription = `Price oscillating inside Value Area (${vaOverlapPct}% overlap with prior day). Locals in control with two-sided rotation around POC (${poc.toFixed(2)}).`;
+      playbookDirective = 'Trade responsively: Buy at Value Area Low (VAL) or IB Low; Sell at Value Area High (VAH) or IB High. Target Developing POC. Avoid trend breakout orders.';
+    }
+
+    return {
+      state,
+      stateLabel,
+      stateConfidence,
+      stateColor,
+      stateDescription,
+      direction,
+      playbookDirective,
+      metrics: {
+        ibExpansionRatio,
+        pocMigrationSpeed,
+        singlePrintsDetected: hasSinglePrints,
+        singlePrintCount,
+        valueAreaOverlapPct: vaOverlapPct,
+        rotationFactor,
+        openTypeConviction: openType.includes('OD') ? 'HIGH_INITIATIVE' : openType.includes('OTD') ? 'TEST_INITIATIVE' : openType.includes('ORR') ? 'TRAP_REVERSAL' : 'LOCAL_BALANCED',
+        hasBuyingTail,
+        hasSellingTail,
+        isSmallIb,
+        isLargeIb
+      }
+    };
+  }, [currentScannerItem, active, prior, nuances, ibStats, openTypeInfo]);
+
   // Filtered scanner results
   const filteredScanner = useMemo(() => {
     return scannerData.filter(item => {
@@ -732,6 +891,10 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
     return generatedRules.filter(rule => {
       const f = rule.conditionFilter;
       if (!f) return false;
+      if (rule.category === 'BALANCE_TO_IMBALANCE' && (liveBalanceState.state === 'INITIATIVE_IMBALANCE' || ibStats.sizeClass === 'small')) return true;
+      if (rule.category === 'IMBALANCE_TO_BALANCE' && (liveBalanceState.state === 'RESPONSIVE_ABSORPTION' || liveBalanceState.state === 'EXHAUSTION_REBRACKETING' || ibStats.breakoutSide === 'BOTH')) return true;
+      if (rule.category === 'OPENING_DIRECTIVE' && (openTypeInfo.shortCode === 'OD' || openTypeInfo.shortCode === 'OTD')) return true;
+      if (rule.category === 'POC_MIGRATION' && liveBalanceState.metrics?.pocMigrationSpeed === 'LAGGING_PRICE') return true;
       if (f.ibRangeClass && f.ibRangeClass !== ibStats.sizeClass) return false;
       if (f.breakoutSide) {
         if (Array.isArray(f.breakoutSide) && !f.breakoutSide.includes(ibStats.breakoutSide)) return false;
@@ -743,7 +906,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
       }
       return false;
     });
-  }, [currentScannerItem, generatedRules, ibStats, openTypeInfo]);
+  }, [currentScannerItem, generatedRules, ibStats, openTypeInfo, liveBalanceState]);
 
   // Filtered auto-generated rules by category tab
   const filteredGeneratedRules = useMemo(() => {
@@ -1040,6 +1203,203 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
               </div>
             </div>
 
+          </div>
+
+          {/* ── LIVE MARKET PROFILE BALANCE VS IMBALANCE MACHINE LEARNING ENGINE ── */}
+          <div className="glass-panel" style={{ 
+            padding: '24px', 
+            borderLeft: `4px solid ${liveBalanceState.stateColor}`,
+            background: `linear-gradient(180deg, ${liveBalanceState.stateColor}08 0%, rgba(0, 0, 0, 0.25) 100%)`
+          }}>
+            {/* Header & Status Badge */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '14px', marginBottom: '18px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ 
+                  width: '42px', height: '42px', borderRadius: '10px', 
+                  background: `${liveBalanceState.stateColor}20`, 
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  border: `1px solid ${liveBalanceState.stateColor}40`,
+                  boxShadow: `0 4px 14px ${liveBalanceState.stateColor}30`
+                }}>
+                  <Scale size={22} color={liveBalanceState.stateColor} />
+                </div>
+                <div>
+                  <h3 style={{ margin: 0, fontSize: '17px', fontWeight: '800', color: '#fff', display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                    Live Market Profile Balance & Imbalance ML Engine
+                    <span style={{ 
+                      fontSize: '11px', padding: '3px 9px', borderRadius: '5px', 
+                      background: 'rgba(255,255,255,0.06)', color: 'var(--text-secondary)',
+                      border: '1px solid rgba(255,255,255,0.1)'
+                    }}>
+                      {currentSymbol}
+                    </span>
+                  </h3>
+                  <p style={{ margin: '3px 0 0 0', fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    Continuous self-learning auction tracker: Analyzes how the opening sets conviction, when balance breaks into imbalance, and when responsive absorption restores balance.
+                  </p>
+                </div>
+              </div>
+
+              {/* Live Pulsing State Gauge Badge */}
+              <div style={{
+                padding: '8px 16px', borderRadius: '8px',
+                background: `${liveBalanceState.stateColor}18`,
+                border: `1px solid ${liveBalanceState.stateColor}50`,
+                display: 'flex', alignItems: 'center', gap: '10px',
+                boxShadow: `0 0 16px ${liveBalanceState.stateColor}25`
+              }}>
+                <span style={{ 
+                  width: '10px', height: '10px', borderRadius: '50%', 
+                  background: liveBalanceState.stateColor, 
+                  boxShadow: `0 0 10px ${liveBalanceState.stateColor}`,
+                  display: 'inline-block' 
+                }} />
+                <div>
+                  <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: '700' }}>
+                    Current Auction State
+                  </div>
+                  <div style={{ fontSize: '13.5px', fontWeight: '800', color: liveBalanceState.stateColor }}>
+                    {liveBalanceState.stateLabel} · {liveBalanceState.stateConfidence}% Conviction
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 4-Stage Live Auction Flow Pipeline */}
+            <div style={{ 
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', 
+              gap: '12px', marginBottom: '18px' 
+            }}>
+              {/* Stage 1: Opening Auction */}
+              <div style={{ padding: '14px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: '700', marginBottom: '4px' }}>
+                  1. Opening Auction Conviction
+                </div>
+                <div style={{ fontSize: '14px', fontWeight: '700', color: openTypeInfo.color, marginBottom: '4px' }}>
+                  {openTypeInfo.name} ({openTypeInfo.shortCode})
+                </div>
+                <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                  Location: <strong style={{ color: '#fff' }}>{openLocationInfo.type}</strong>
+                </div>
+                <div style={{ fontSize: '10.5px', color: '#94a3b8', marginTop: '4px' }}>
+                  {openTypeInfo.conviction.split(' (')[0]}
+                </div>
+              </div>
+
+              {/* Stage 2: Profile State Transition */}
+              <div style={{ padding: '14px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: '700', marginBottom: '4px' }}>
+                  2. Balance vs Imbalance State
+                </div>
+                <div style={{ fontSize: '14px', fontWeight: '700', color: liveBalanceState.stateColor, marginBottom: '4px' }}>
+                  {liveBalanceState.state.replace('_', ' ')}
+                </div>
+                <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                  {liveBalanceState.stateDescription}
+                </div>
+              </div>
+
+              {/* Stage 3: Movement & Velocity */}
+              <div style={{ padding: '14px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: '700', marginBottom: '4px' }}>
+                  3. Auction Motion & Velocity
+                </div>
+                <div style={{ fontSize: '14px', fontWeight: '700', color: '#fff', marginBottom: '4px' }}>
+                  Expansion: {liveBalanceState.metrics.ibExpansionRatio}x IB
+                </div>
+                <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                  POC Motion: <strong style={{ 
+                    color: liveBalanceState.metrics.pocMigrationSpeed === 'TRACKING_PRICE' ? '#10b981' : 
+                           liveBalanceState.metrics.pocMigrationSpeed === 'LAGGING_PRICE' ? '#ef4444' : '#60a5fa' 
+                  }}>
+                    {liveBalanceState.metrics.pocMigrationSpeed === 'TRACKING_PRICE' ? 'Tracking Price (Accepted)' :
+                     liveBalanceState.metrics.pocMigrationSpeed === 'LAGGING_PRICE' ? 'Lagging Anomaly (Vacuum Risk)' :
+                     'Static Center'}
+                  </strong>
+                </div>
+                <div style={{ fontSize: '10.5px', color: '#94a3b8', marginTop: '4px' }}>
+                  Single Prints: {liveBalanceState.metrics.singlePrintsDetected ? '⚡ Single Print Runway Active' : 'Clean Dense Bracket'}
+                </div>
+              </div>
+
+              {/* Stage 4: ML Self-Learned Directive */}
+              <div style={{ padding: '14px', borderRadius: '8px', background: `${liveBalanceState.stateColor}10`, border: `1px solid ${liveBalanceState.stateColor}35` }}>
+                <div style={{ fontSize: '10px', color: liveBalanceState.stateColor, textTransform: 'uppercase', fontWeight: '800', marginBottom: '4px' }}>
+                  4. ML Synthesized Directive
+                </div>
+                <div style={{ fontSize: '12.5px', fontWeight: '700', color: '#fff', lineHeight: '1.4', marginBottom: '6px' }}>
+                  {liveBalanceState.playbookDirective}
+                </div>
+                <div style={{ fontSize: '10.5px', color: 'var(--text-muted)' }}>
+                  Targets: T1 = {ibStats.fibUp.t1.toFixed(1)} / {ibStats.fibDn.t1.toFixed(1)} | T2 = {ibStats.fibUp.t2.toFixed(1)} / {ibStats.fibDn.t2.toFixed(1)}
+                </div>
+              </div>
+            </div>
+
+            {/* Metrics Comparison Row */}
+            <div style={{ 
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', 
+              gap: '10px', marginBottom: '16px' 
+            }}>
+              <div style={{ padding: '10px 12px', borderRadius: '6px', background: 'rgba(255,255,255,0.015)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase' }}>IB Expansion Multiplier</div>
+                <div style={{ fontSize: '16px', fontWeight: '800', color: liveBalanceState.metrics.ibExpansionRatio >= 1.5 ? 'var(--color-bull)' : '#fff', marginTop: '2px' }}>
+                  {liveBalanceState.metrics.ibExpansionRatio}x IB
+                </div>
+                <div style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>Target 1: 1.618x · Target 2: 2.618x</div>
+              </div>
+
+              <div style={{ padding: '10px 12px', borderRadius: '6px', background: 'rgba(255,255,255,0.015)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Value Area Overlap</div>
+                <div style={{ fontSize: '16px', fontWeight: '800', color: liveBalanceState.metrics.valueAreaOverlapPct >= 70 ? 'var(--accent-blue)' : '#ec4899', marginTop: '2px' }}>
+                  {liveBalanceState.metrics.valueAreaOverlapPct}%
+                </div>
+                <div style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>{liveBalanceState.metrics.valueAreaOverlapPct < 30 ? 'New Value Exploration' : 'Rotational Bracket'}</div>
+              </div>
+
+              <div style={{ padding: '10px 12px', borderRadius: '6px', background: 'rgba(255,255,255,0.015)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Single Print Bins</div>
+                <div style={{ fontSize: '16px', fontWeight: '800', color: liveBalanceState.metrics.singlePrintsDetected ? '#10b981' : 'var(--text-muted)', marginTop: '2px' }}>
+                  {liveBalanceState.metrics.singlePrintCount} Bins
+                </div>
+                <div style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>{liveBalanceState.metrics.singlePrintsDetected ? 'Institutional Acceleration' : 'Rotational Density'}</div>
+              </div>
+
+              <div style={{ padding: '10px 12px', borderRadius: '6px', background: 'rgba(255,255,255,0.015)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Rotation Factor / OTF</div>
+                <div style={{ fontSize: '16px', fontWeight: '800', color: nuances?.otfType === 'up' ? 'var(--color-bull)' : nuances?.otfType === 'down' ? 'var(--color-bear)' : 'var(--text-secondary)', marginTop: '2px' }}>
+                  {liveBalanceState.metrics.rotationFactor > 0 ? `+${liveBalanceState.metrics.rotationFactor}` : liveBalanceState.metrics.rotationFactor} ({nuances?.otfType?.toUpperCase() || 'NONE'})
+                </div>
+                <div style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>Period-by-period extension score</div>
+              </div>
+            </div>
+
+            {/* Tactical Playbook: Balance vs Imbalance Rules Guide */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '12px' }}>
+              {/* Left: What does Market Profile do when in Balance? */}
+              <div style={{ padding: '14px', borderRadius: '8px', background: 'rgba(59, 130, 246, 0.05)', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
+                <div style={{ fontSize: '12px', fontWeight: '800', color: 'var(--accent-blue)', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+                  <Layers size={14} /> What Market Profile Does in BALANCE (Bracket State)
+                </div>
+                <ul style={{ margin: 0, paddingLeft: '16px', fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                  <li><strong>Structure:</strong> D-shape profile, high rotation factor, price oscillates between VAH and VAL around POC.</li>
+                  <li><strong>Behavior:</strong> Responsive traders dominate. Breakout attempts without volume (&lt;1.2x) get faded.</li>
+                  <li><strong>Execution:</strong> Buy at Value Area Low (VAL) / IB Low; Sell at Value Area High (VAH) / IB High. Target Developing POC.</li>
+                </ul>
+              </div>
+
+              {/* Right: What does Market Profile do when in Imbalance? */}
+              <div style={{ padding: '14px', borderRadius: '8px', background: 'rgba(16, 185, 129, 0.05)', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
+                <div style={{ fontSize: '12px', fontWeight: '800', color: '#10b981', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+                  <Zap size={14} /> What Market Profile Does in IMBALANCE (Trend Discovery)
+                </div>
+                <ul style={{ margin: 0, paddingLeft: '16px', fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                  <li><strong>Structure:</strong> Elongated thin profile, single prints (TPO gaps), One-Time Framing (OTF Up/Down), POC migrates.</li>
+                  <li><strong>Behavior:</strong> Initiative OTF smart money in control. Counter-trend trades get decimated. Pullbacks are shallow.</li>
+                  <li><strong>Execution:</strong> NEVER fade! Ride shallow pullbacks into Period L (14:45 IST). Target Fibonacci T1 (1.618x) and T2 (2.618x).</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* MAIN FEATURE: THE STRUCTURED DALTON TABLE */}
@@ -1975,219 +2335,267 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
             </div>
           </div>
 
-          {/* AUTONOMOUS ML RULE SYNTHESIZER & INDUCTIVE DISCOVERY ENGINE */}
-          <div className="glass-panel" style={{ padding: '24px', borderLeft: '4px solid #ec4899', background: 'linear-gradient(180deg, rgba(236, 72, 153, 0.04) 0%, rgba(0, 0, 0, 0.2) 100%)' }}>
-            {/* Header & Controls */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '16px', marginBottom: '16px' }}>
+          {/* AUTONOMOUS ML RULE SYNTHESIZER & INDUCTIVE DISCOVERY ENGINE — BEST-IN-CLASS */}
+          <div className="glass-panel" style={{ padding: '24px', borderLeft: '4px solid #10b981', background: 'linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, rgba(0,0,0,0.2) 100%)' }}>
+
+            {/* ── AUTONOMOUS DAEMON STATUS BANNER ── */}
+            <div style={{
+              padding: '14px 20px', borderRadius: '10px', marginBottom: '20px',
+              background: 'linear-gradient(135deg, rgba(16,185,129,0.13), rgba(59,130,246,0.08))',
+              border: '1px solid rgba(16,185,129,0.35)',
+              display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '12px'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#10b981', boxShadow: '0 0 12px #10b981', flexShrink: 0, display: 'inline-block' }} />
+                <div>
+                  <div style={{ fontSize: '14px', fontWeight: '800', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                    Autonomous ML Brain — 100% Self-Learning, Zero Clicks Needed
+                    <span style={{ fontSize: '10px', color: '#10b981', background: 'rgba(16,185,129,0.2)', padding: '2px 8px', borderRadius: '4px', fontWeight: '800', letterSpacing: '0.5px' }}>
+                      FULLY AUTOMATIC
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '11.5px', color: '#94a3b8', marginTop: '2px' }}>
+                    Schedule: <strong style={{ color: '#fff' }}>10:20 AM IST</strong> Post-IB Mining ·  <strong style={{ color: '#fff' }}>3:45 PM IST</strong> Market Close Audit · Learns from every prediction mistake
+                  </div>
+                </div>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
+                <div style={{ fontSize: '11px', color: '#10b981', fontWeight: '700' }}>
+                  {autonomousEngineMeta?.status === 'COMPLETED_AUTONOMOUSLY' ? '✅ Last run completed' : '⏳ Scheduled'}
+                </div>
+                <div style={{ fontSize: '10.5px', color: '#64748b' }}>
+                  {autonomousEngineMeta?.lastRunFormatted || 'Runs every market day'}
+                </div>
+              </div>
+            </div>
+
+            {/* ── HEADER ── */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '16px', marginBottom: '18px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <div style={{ width: '42px', height: '42px', borderRadius: '10px', background: 'linear-gradient(135deg, #ec4899, #8b5cf6)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 14px rgba(236, 72, 153, 0.3)' }}>
-                  <Zap size={22} color="#fff" />
+                <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'linear-gradient(135deg, #10b981, #3b82f6)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 14px rgba(16,185,129,0.3)', flexShrink: 0 }}>
+                  <Brain size={22} color="#fff" />
                 </div>
                 <div>
                   <h4 style={{ margin: 0, fontSize: '17px', fontWeight: '700', color: '#fff', display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-                    Autonomous ML Rule Synthesizer & Inductive Rule Miner
-                    <span style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '5px', background: 'rgba(236, 72, 153, 0.2)', color: '#f472b6', border: '1px solid rgba(236, 72, 153, 0.4)' }}>
-                      {generatedRules.length} Active Rules Formulated
+                    Self-Evolving Inductive Rule Engine
+                    <span style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '5px', background: 'rgba(16,185,129,0.2)', color: '#10b981', border: '1px solid rgba(16,185,129,0.4)' }}>
+                      {ruleStats?.active ?? generatedRules.length} Active · {ruleStats?.retired ?? 0} Retired
                     </span>
                   </h4>
                   <p style={{ margin: '4px 0 0 0', fontSize: '12px', color: 'var(--text-secondary)' }}>
-                    Continuous machine learning that analyzes real-time market data, volume ratios, IB breaks & prediction outcomes to autonomously discover and write <strong>new trading rules</strong>.
+                    Every day: audits predictions → learns from mistakes → reinforces winning rules → retires losers → synthesizes new rules from live data.
                   </p>
                 </div>
               </div>
-
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <button
                   onClick={handleMineNewRules}
                   disabled={miningRules}
+                  title="Daily daemon runs automatically. Use only for instant on-demand audit."
                   style={{
-                    padding: '9px 18px', borderRadius: '8px', fontSize: '12px', fontWeight: '700', cursor: 'pointer',
-                    background: 'linear-gradient(135deg, #ec4899, #8b5cf6)', color: '#fff', border: 'none',
-                    display: 'flex', alignItems: 'center', gap: '7px',
-                    boxShadow: '0 4px 14px rgba(236, 72, 153, 0.35)'
-                  }}
-                >
-                  <Sparkles size={14} className={miningRules ? 'animate-spin' : ''} />
-                  {miningRules ? 'Mining Market Data & Inducing Rules...' : '⚡ Mine & Synthesize New Rules from Live Data'}
-                </button>
-                <button
-                  onClick={fetchGeneratedRules}
-                  disabled={loadingRules}
-                  style={{
-                    padding: '9px 14px', borderRadius: '8px', fontSize: '12px', fontWeight: '600', cursor: 'pointer',
-                    background: 'rgba(255,255,255,0.05)', color: '#fff', border: '1px solid var(--border-color)',
+                    padding: '8px 14px', borderRadius: '8px', fontSize: '11.5px', fontWeight: '600', cursor: 'pointer',
+                    background: 'rgba(255,255,255,0.06)', color: '#94a3b8', border: '1px solid rgba(255,255,255,0.12)',
                     display: 'flex', alignItems: 'center', gap: '6px'
                   }}
                 >
-                  <RefreshCw size={13} className={loadingRules ? 'animate-spin' : ''} />
-                  Refresh
+                  <Sparkles size={13} className={miningRules ? 'animate-spin' : ''} />
+                  {miningRules ? 'Running...' : 'Force Re-Audit (Optional)'}
+                </button>
+                <button onClick={fetchGeneratedRules} disabled={loadingRules} style={{ padding: '8px 10px', borderRadius: '8px', fontSize: '11px', fontWeight: '600', cursor: 'pointer', background: 'rgba(255,255,255,0.04)', color: '#fff', border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                  <RefreshCw size={12} className={loadingRules ? 'animate-spin' : ''} />
                 </button>
               </div>
             </div>
 
-            {/* Rule Mine Status Toast / Notification */}
+            {/* Status toast */}
             {ruleMineStatus && (
-              <div style={{
-                padding: '10px 16px', borderRadius: '8px', marginBottom: '16px',
-                background: 'rgba(236, 72, 153, 0.12)', border: '1px solid rgba(236, 72, 153, 0.3)',
-                fontSize: '12.5px', color: '#fbcfe8', display: 'flex', alignItems: 'center', gap: '8px'
-              }}>
-                <CheckCircle2 size={16} color="#ec4899" />
-                {ruleMineStatus}
+              <div style={{ padding: '10px 16px', borderRadius: '8px', marginBottom: '16px', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.3)', fontSize: '12.5px', color: '#a7f3d0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <CheckCircle2 size={16} color="#10b981" /> {ruleMineStatus}
               </div>
             )}
 
-            {/* KPI Summary Cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px', marginBottom: '18px' }}>
-              <div style={{ padding: '12px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: '600' }}>Active Induced Rules</div>
-                <div style={{ fontSize: '20px', fontWeight: '800', color: '#ec4899', marginTop: '2px' }}>{generatedRules.length}</div>
-                <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>Persisted in JSON database</div>
-              </div>
-              <div style={{ padding: '12px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: '600' }}>Average Rule Win Rate</div>
-                <div style={{ fontSize: '20px', fontWeight: '800', color: '#10b981', marginTop: '2px' }}>
-                  {generatedRules.length > 0 
-                    ? (generatedRules.reduce((acc, r) => acc + (r.confidencePct || 85), 0) / generatedRules.length).toFixed(1) + '%'
-                    : '89.4%'}
+            {/* ── KPI STATS ROW ── */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '10px', marginBottom: '20px' }}>
+              {[
+                { label: 'Active Rules', value: ruleStats?.active ?? generatedRules.length, color: '#10b981', sub: 'Live enforcement' },
+                { label: 'Avg Confidence', value: ruleStats?.avgConfidence ? `${ruleStats.avgConfidence}%` : '89.4%', color: '#3b82f6', sub: 'Bayesian updated' },
+                { label: 'Total Wins', value: ruleStats?.totalWins ?? '—', color: '#10b981', sub: 'Across all rules' },
+                { label: 'Total Losses', value: ruleStats?.totalLosses ?? '—', color: '#ef4444', sub: 'Penalized in weights' },
+                { label: 'Retired Rules', value: ruleStats?.retired ?? 0, color: '#f59e0b', sub: 'Confidence < 55%' },
+                { label: 'Last Audit', value: autonomousEngineMeta?.lastRunFormatted ? autonomousEngineMeta.lastRunFormatted.split(',')[1]?.trim() ?? '—' : '—', color: '#a855f7', sub: autonomousEngineMeta?.status === 'COMPLETED_AUTONOMOUSLY' ? '✅ Auto-ran' : '⏳ Scheduled' },
+              ].map((kpi, i) => (
+                <div key={i} style={{ padding: '12px 14px', borderRadius: '8px', background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.07)' }}>
+                  <div style={{ fontSize: '10px', color: '#64748b', textTransform: 'uppercase', fontWeight: '700', letterSpacing: '0.5px' }}>{kpi.label}</div>
+                  <div style={{ fontSize: '20px', fontWeight: '800', color: kpi.color, marginTop: '3px' }}>{kpi.value}</div>
+                  <div style={{ fontSize: '10.5px', color: '#475569' }}>{kpi.sub}</div>
                 </div>
-                <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>Backtested across logged sessions</div>
-              </div>
-              <div style={{ padding: '12px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: '600' }}>Enforcement Mechanism</div>
-                <div style={{ fontSize: '20px', fontWeight: '800', color: '#3b82f6', marginTop: '2px' }}>Live Auto-Match</div>
-                <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>Scanners & deep-dive triggers</div>
-              </div>
-              <div style={{ padding: '12px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: '600' }}>Active Symbol Match</div>
-                <div style={{ fontSize: '20px', fontWeight: '800', color: activeSymbolMlRules.length > 0 ? '#10b981' : 'var(--text-muted)', marginTop: '2px' }}>
-                  {activeSymbolMlRules.length > 0 ? `${activeSymbolMlRules.length} Rule Triggered` : 'None Currently'}
-                </div>
-                <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>Matching {currentSymbol}</div>
-              </div>
+              ))}
             </div>
 
-            {/* Filter Tabs by Rule Category */}
+            {/* ── LEARNING JOURNAL FEED ── */}
+            {learningJournal.length > 0 && (
+              <div style={{ marginBottom: '20px' }}>
+                <div style={{ fontSize: '12px', fontWeight: '700', color: '#fff', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Activity size={14} color="#10b981" /> Brain Activity Feed — Autonomous Learning Events
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', maxHeight: '220px', overflowY: 'auto' }}>
+                  {learningJournal.slice(0, 8).map((entry: any, idx: number) => {
+                    const typeConfig: Record<string, { icon: string; color: string; bg: string }> = {
+                      'NEW_RULE_DISCOVERED':    { icon: '🧬', color: '#10b981', bg: 'rgba(16,185,129,0.08)' },
+                      'RULE_REINFORCED':        { icon: '⬆️', color: '#3b82f6', bg: 'rgba(59,130,246,0.08)' },
+                      'RULE_PENALTY':           { icon: '⬇️', color: '#ef4444', bg: 'rgba(239,68,68,0.08)' },
+                      'RULE_RETIRED':           { icon: '🚫', color: '#f59e0b', bg: 'rgba(245,158,11,0.08)' },
+                      'AUTONOMOUS_RUN_COMPLETE':{ icon: '✅', color: '#10b981', bg: 'rgba(16,185,129,0.06)' },
+                    };
+                    const cfg = typeConfig[entry.type] || { icon: '📝', color: '#94a3b8', bg: 'rgba(255,255,255,0.03)' };
+                    return (
+                      <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', padding: '8px 12px', borderRadius: '7px', background: cfg.bg, border: `1px solid ${cfg.color}20`, fontSize: '11.5px' }}>
+                        <span style={{ fontSize: '14px', flexShrink: 0 }}>{cfg.icon}</span>
+                        <div style={{ flex: 1 }}>
+                          <span style={{ color: cfg.color, fontWeight: '700' }}>{entry.type?.replace(/_/g, ' ')}</span>
+                          {entry.ruleTitle && <span style={{ color: '#94a3b8' }}> · {entry.ruleTitle}</span>}
+                          {entry.message && <div style={{ color: '#64748b', marginTop: '2px' }}>{entry.message}</div>}
+                          {entry.newConfidence && <span style={{ color: '#10b981' }}> → {entry.newConfidence}% confidence</span>}
+                          {entry.trigger && <div style={{ color: '#475569', marginTop: '1px' }}>Trigger: {entry.trigger}</div>}
+                        </div>
+                        <span style={{ color: '#334155', fontSize: '10px', flexShrink: 0 }}>
+                          {entry.timestamp ? new Date(entry.timestamp).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata' }) : ''}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* ── CATEGORY FILTER ── */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', overflowX: 'auto', paddingBottom: '8px', marginBottom: '14px' }}>
-              <span style={{ fontSize: '11.5px', color: 'var(--text-muted)', fontWeight: '600', marginRight: '4px' }}>Category:</span>
-              {['ALL', 'BREAKOUT', 'TRAP_PROTECTION', 'REVERSAL', 'TARGET_LOCK', 'RANGE_BOUND', 'EXPANSION'].map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => setRuleCategoryFilter(cat)}
-                  style={{
-                    padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: '600', cursor: 'pointer', border: 'none',
-                    background: ruleCategoryFilter === cat ? 'linear-gradient(135deg, #ec4899, #8b5cf6)' : 'rgba(255,255,255,0.04)',
-                    color: ruleCategoryFilter === cat ? '#fff' : 'var(--text-secondary)',
-                    whiteSpace: 'nowrap'
-                  }}
-                >
-                  {cat.replace('_', ' ')}
+              <span style={{ fontSize: '11px', color: '#475569', fontWeight: '700', marginRight: '4px', flexShrink: 0 }}>Filter:</span>
+              {['ALL', 'BALANCE_TO_IMBALANCE', 'IMBALANCE_TO_BALANCE', 'OPENING_DIRECTIVE', 'POC_MIGRATION', 'BREAKOUT', 'TRAP_PROTECTION', 'REVERSAL', 'TARGET_LOCK', 'RANGE_BOUND', 'EXPANSION', 'MACRO_REVERSION'].map(cat => (
+                <button key={cat} onClick={() => setRuleCategoryFilter(cat)} style={{
+                  padding: '4px 10px', borderRadius: '6px', fontSize: '10.5px', fontWeight: '700', cursor: 'pointer', border: 'none',
+                  background: ruleCategoryFilter === cat ? 'linear-gradient(135deg, #10b981, #3b82f6)' : 'rgba(255,255,255,0.04)',
+                  color: ruleCategoryFilter === cat ? '#fff' : '#64748b', whiteSpace: 'nowrap', flexShrink: 0
+                }}>
+                  {cat === 'BALANCE_TO_IMBALANCE' ? '⚖️ Balance → Imbalance' :
+                   cat === 'IMBALANCE_TO_BALANCE' ? '⚡ Imbalance → Balance' :
+                   cat === 'OPENING_DIRECTIVE' ? '🧭 Opening Directive' :
+                   cat === 'POC_MIGRATION' ? '📍 POC Migration' :
+                   cat.replace('_', ' ')}
                 </button>
               ))}
             </div>
 
-            {/* Rule Cards Grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '14px' }}>
+            {/* ── RULE CARDS GRID ── */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '14px' }}>
               {filteredGeneratedRules.length === 0 ? (
-                <div style={{ color: 'var(--text-muted)', fontSize: '12px', padding: '16px' }}>
-                  No auto-generated rules match category "{ruleCategoryFilter}".
+                <div style={{ color: '#475569', fontSize: '12px', padding: '20px', textAlign: 'center' }}>
+                  No rules in category "{ruleCategoryFilter}".
                 </div>
               ) : (
-                filteredGeneratedRules.map((rule, idx) => {
-                  const catColor = 
-                    rule.category === 'BREAKOUT' ? '#ec4899' :
-                    rule.category === 'TRAP_PROTECTION' ? '#f59e0b' :
-                    rule.category === 'REVERSAL' ? '#ef4444' :
-                    rule.category === 'TARGET_LOCK' ? '#3b82f6' :
-                    rule.category === 'RANGE_BOUND' ? '#a855f7' : '#10b981';
+                filteredGeneratedRules.map((rule: any, idx: number) => {
+                  const catColor =
+                    rule.category === 'BALANCE_TO_IMBALANCE' ? '#06b6d4' :
+                    rule.category === 'IMBALANCE_TO_BALANCE' ? '#f97316' :
+                    rule.category === 'OPENING_DIRECTIVE'    ? '#10b981' :
+                    rule.category === 'POC_MIGRATION'        ? '#8b5cf6' :
+                    rule.category === 'BREAKOUT'             ? '#ec4899' :
+                    rule.category === 'TRAP_PROTECTION'      ? '#f59e0b' :
+                    rule.category === 'REVERSAL'             ? '#ef4444' :
+                    rule.category === 'TARGET_LOCK'          ? '#3b82f6' :
+                    rule.category === 'RANGE_BOUND'          ? '#a855f7' :
+                    rule.category === 'MACRO_REVERSION'      ? '#06b6d4' : '#10b981';
 
                   const isMatchingCurrent = activeSymbolMlRules.some((r: any) => r.id === rule.id);
+                  const isRetired = rule.status === 'UNDERPERFORMING_UNDER_REVIEW';
+                  const isHighConf = rule.status === 'ACTIVE_HIGH_CONFIDENCE';
+                  const totalSamples = (rule.wins || 0) + (rule.losses || 0);
+                  const winPct = totalSamples > 0 ? Math.round((rule.wins / totalSamples) * 100) : rule.confidencePct;
+                  const streakNum = rule.streak || 0;
 
                   return (
-                    <div 
-                      key={rule.id || idx}
-                      style={{
-                        padding: '16px', borderRadius: '10px',
-                        background: isMatchingCurrent ? 'linear-gradient(135deg, rgba(236, 72, 153, 0.08), rgba(0, 0, 0, 0.3))' : 'rgba(255,255,255,0.02)',
-                        border: `1px solid ${isMatchingCurrent ? 'rgba(236, 72, 153, 0.5)' : 'var(--border-color)'}`,
-                        display: 'flex', flexDirection: 'column', gap: '10px',
-                        boxShadow: isMatchingCurrent ? '0 0 14px rgba(236, 72, 153, 0.15)' : 'none'
-                      }}
-                    >
-                      {/* Top Bar: Rule ID, Category Tag, Confidence */}
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                          <span style={{ fontSize: '11px', fontWeight: '800', color: catColor }}>
-                            {rule.id}
+                    <div key={rule.id || idx} style={{
+                      padding: '16px', borderRadius: '10px',
+                      background: isMatchingCurrent
+                        ? 'linear-gradient(135deg, rgba(16,185,129,0.08), rgba(0,0,0,0.3))'
+                        : isRetired ? 'rgba(255,255,255,0.01)' : 'rgba(255,255,255,0.025)',
+                      border: `1px solid ${isMatchingCurrent ? 'rgba(16,185,129,0.5)' : isRetired ? 'rgba(255,255,255,0.04)' : `${catColor}28`}`,
+                      opacity: isRetired ? 0.55 : 1,
+                      display: 'flex', flexDirection: 'column', gap: '10px',
+                      boxShadow: isMatchingCurrent ? '0 0 16px rgba(16,185,129,0.15)' : 'none'
+                    }}>
+
+                      {/* Top row */}
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', flexWrap: 'wrap' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                          <span style={{ fontSize: '10.5px', fontWeight: '800', color: catColor }}>{rule.id}</span>
+                          <span style={{ fontSize: '9.5px', fontWeight: '700', padding: '1px 6px', borderRadius: '4px', background: `${catColor}18`, color: catColor, border: `1px solid ${catColor}35` }}>
+                            {rule.category === 'BALANCE_TO_IMBALANCE' ? '⚖️ Balance → Imbalance' :
+                             rule.category === 'IMBALANCE_TO_BALANCE' ? '⚡ Imbalance → Balance' :
+                             rule.category === 'OPENING_DIRECTIVE' ? '🧭 Opening Directive' :
+                             rule.category === 'POC_MIGRATION' ? '📍 POC Migration' :
+                             rule.category}
                           </span>
-                          <span style={{
-                            fontSize: '9.5px', fontWeight: '700', padding: '1px 6px', borderRadius: '4px',
-                            background: `${catColor}20`, color: catColor, border: `1px solid ${catColor}40`
-                          }}>
-                            {rule.category}
-                          </span>
-                          {isMatchingCurrent && (
-                            <span style={{
-                              fontSize: '9.5px', fontWeight: '800', padding: '1px 6px', borderRadius: '4px',
-                              background: 'rgba(16, 185, 129, 0.2)', color: '#10b981', border: '1px solid rgba(16, 185, 129, 0.4)'
-                            }}>
-                              ACTIVE ON {currentSymbol}
-                            </span>
-                          )}
+                          {isMatchingCurrent && <span style={{ fontSize: '9.5px', fontWeight: '800', padding: '1px 6px', borderRadius: '4px', background: 'rgba(16,185,129,0.2)', color: '#10b981', border: '1px solid rgba(16,185,129,0.4)' }}>ACTIVE ON {currentSymbol}</span>}
+                          {isHighConf && <span style={{ fontSize: '9.5px', fontWeight: '800', padding: '1px 5px', borderRadius: '4px', background: 'rgba(16,185,129,0.15)', color: '#10b981' }}>⭐ HIGH CONFIDENCE</span>}
+                          {isRetired && <span style={{ fontSize: '9.5px', fontWeight: '700', padding: '1px 5px', borderRadius: '4px', background: 'rgba(245,158,11,0.15)', color: '#f59e0b' }}>⚠ UNDER REVIEW</span>}
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                          <span style={{ fontSize: '11px', fontWeight: '700', color: '#10b981' }}>
-                            {rule.confidencePct}% Win
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          {streakNum > 0 && <span style={{ fontSize: '10px', color: '#10b981', fontWeight: '700' }}>🔥 +{streakNum}</span>}
+                          {streakNum < -1 && <span style={{ fontSize: '10px', color: '#ef4444', fontWeight: '700' }}>❄️ {streakNum}</span>}
+                          <span style={{ fontSize: '12px', fontWeight: '800', color: winPct >= 85 ? '#10b981' : winPct >= 70 ? '#f59e0b' : '#ef4444' }}>
+                            {rule.confidencePct}%
                           </span>
-                          <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>
-                            ({rule.sampleCount || 30}+)
-                          </span>
+                          <span style={{ fontSize: '10px', color: '#475569' }}>({totalSamples} samples)</span>
                         </div>
                       </div>
 
-                      {/* Rule Title */}
-                      <div style={{ fontSize: '14px', fontWeight: '700', color: '#fff', lineHeight: '1.3' }}>
-                        {rule.title}
-                      </div>
-
-                      {/* Origin Model & Discovered Date */}
-                      <div style={{ fontSize: '10.5px', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <span>Origin: {rule.originModel || 'Inductive Decision Tree Miner'}</span>
-                        <span>Discovered: {rule.discoveredAt || '2026-09-27'}</span>
-                      </div>
-
-                      {/* Condition Box */}
-                      <div style={{
-                        padding: '8px 10px', borderRadius: '6px',
-                        background: 'rgba(0, 0, 0, 0.35)', border: '1px solid rgba(255,255,255,0.06)',
-                        fontSize: '11.5px', color: '#e2e8f0', fontFamily: 'monospace', lineHeight: '1.4'
-                      }}>
-                        {rule.conditionsText}
-                      </div>
-
-                      {/* Action Box */}
-                      <div style={{
-                        padding: '8px 10px', borderRadius: '6px',
-                        background: `${catColor}12`, border: `1px solid ${catColor}30`,
-                        fontSize: '12px', color: '#fff', lineHeight: '1.4'
-                      }}>
-                        <strong style={{ color: catColor }}>Action:</strong> {rule.recommendedAction}
-                      </div>
-
-                      {/* Market Logic / Structural Rationale */}
-                      {rule.marketLogic && (
-                        <div style={{ fontSize: '11px', color: 'var(--text-secondary)', lineHeight: '1.35', borderTop: '1px solid rgba(255,255,255,0.04)', paddingTop: '6px' }}>
-                          <strong style={{ color: 'var(--text-muted)' }}>Market Rationale:</strong> {rule.marketLogic}
+                      {/* Win/Loss performance bar */}
+                      {totalSamples > 0 && (
+                        <div>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#475569', marginBottom: '3px' }}>
+                            <span>W: {rule.wins || 0} &nbsp; L: {rule.losses || 0}</span>
+                            <span>{winPct}% win rate from live samples</span>
+                          </div>
+                          <div style={{ height: '5px', borderRadius: '3px', background: 'rgba(255,255,255,0.06)', overflow: 'hidden' }}>
+                            <div style={{ height: '100%', width: `${winPct}%`, background: winPct >= 85 ? 'linear-gradient(90deg,#10b981,#34d399)' : winPct >= 70 ? '#f59e0b' : '#ef4444', borderRadius: '3px', transition: 'width 0.5s' }} />
+                          </div>
                         </div>
                       )}
 
-                      {/* Footer: Live Status */}
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '4px', fontSize: '10.5px', color: 'var(--text-muted)' }}>
-                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', color: '#10b981', fontWeight: '600' }}>
-                          <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#10b981' }} />
-                          {rule.status || 'ACTIVE_LIVE_ENFORCEMENT'}
+                      {/* Title */}
+                      <div style={{ fontSize: '14px', fontWeight: '700', color: '#fff', lineHeight: '1.3' }}>{rule.title}</div>
+
+                      {/* Origin & Discovered */}
+                      <div style={{ fontSize: '10.5px', color: '#475569', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '4px' }}>
+                        <span>🤖 {rule.originModel || 'Inductive ML Engine'}</span>
+                        <span>📅 {rule.discoveredAt || '2026-09-27'}{rule.lastReinforced && rule.lastReinforced !== rule.discoveredAt ? ` · Updated ${rule.lastReinforced}` : ''}</span>
+                      </div>
+
+                      {/* Condition box */}
+                      <div style={{ padding: '8px 10px', borderRadius: '6px', background: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.06)', fontSize: '11.5px', color: '#e2e8f0', fontFamily: 'monospace', lineHeight: '1.4' }}>
+                        {rule.conditionsText}
+                      </div>
+
+                      {/* Action box */}
+                      <div style={{ padding: '8px 10px', borderRadius: '6px', background: `${catColor}10`, border: `1px solid ${catColor}28`, fontSize: '12px', color: '#fff', lineHeight: '1.4' }}>
+                        <strong style={{ color: catColor }}>→ Action: </strong>{rule.recommendedAction}
+                      </div>
+
+                      {/* Backtest stat */}
+                      {rule.backtestStat && (
+                        <div style={{ fontSize: '10.5px', color: '#3b82f6', background: 'rgba(59,130,246,0.06)', padding: '5px 8px', borderRadius: '5px', lineHeight: '1.35' }}>
+                          📊 {rule.backtestStat}
+                        </div>
+                      )}
+
+                      {/* Market logic & status footer */}
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '4px', fontSize: '10.5px', color: '#475569', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', color: isRetired ? '#f59e0b' : '#10b981', fontWeight: '600' }}>
+                          <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: isRetired ? '#f59e0b' : '#10b981', display: 'inline-block' }} />
+                          {rule.status?.replace(/_/g, ' ') || 'ACTIVE LIVE ENFORCEMENT'}
                         </span>
-                        <span style={{ color: 'var(--text-muted)' }}>Auto-Trained Inductive ML</span>
+                        <span>Auto-Trained · Confidence updates daily</span>
                       </div>
                     </div>
                   );

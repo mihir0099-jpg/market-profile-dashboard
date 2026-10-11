@@ -13,7 +13,7 @@ import {
   scoreInstitutionalConviction, 
   predictPeriodLDrive 
 } from './mihir_ml_engine.js';
-import { matchRulesForSymbol, mineNewRulesFromData } from './mihir_rule_miner.js';
+import { matchRulesForSymbol, mineNewRulesFromData, classifyProfileBalanceImbalance } from './mihir_rule_miner.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -1311,6 +1311,7 @@ function scanSymbol(tvBridge, symbol) {
                         periodGInsideIb: activeProfile.dayHigh <= activeProfile.ibHigh + 0.05 && activeProfile.dayLow >= activeProfile.ibLow - 0.05,
                         periodLVolume: 1.15
                       }),
+                      balanceState: classifyProfileBalanceImbalance(activeProfile, priorProfile, nuances),
                       triggeredRules: matchRulesForSymbol(symbol, {
                         openType: nuances.openingType || 'OA',
                         ibRangeClass,
@@ -1318,7 +1319,10 @@ function scanSymbol(tvBridge, symbol) {
                         volumeRatio: 1.1,
                         eightyPercentRule: !!nuances.eightyPercentRule,
                         indexBearish: false,
-                        failedExtension: !!(nuances.cFailure || nuances.dFailure)
+                        failedExtension: !!(nuances.cFailure || nuances.dFailure),
+                        auctionState: classifyProfileBalanceImbalance(activeProfile, priorProfile, nuances).state,
+                        pocMigrationSpeed: classifyProfileBalanceImbalance(activeProfile, priorProfile, nuances).metrics?.pocMigrationSpeed,
+                        doubleDistribution: !!nuances.doubleDistribution
                       })
                     }
                   };

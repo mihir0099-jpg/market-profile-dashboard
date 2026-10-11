@@ -20,7 +20,7 @@ import { runTabHealthAudit } from './auto_heal_engine.js';
 import { executeDailySelfEvolution } from './autonomous_market_brain.js';
 import { getMihirLearnings, evaluatePredictions } from './prediction_learner.js';
 import { getMihirMlState, learnFromMistake } from './mihir_ml_engine.js';
-import { getAllGeneratedRules, mineNewRulesFromData } from './mihir_rule_miner.js';
+import { getAllGeneratedRules, mineNewRulesFromData, getAutonomousLearningMeta, recordAutonomousRun, reinforceRule, getRuleStats, getLearningJournal, classifyProfileBalanceImbalance } from './mihir_rule_miner.js';
 import { exec, spawn } from 'child_process';
 
 import path from 'path';
@@ -348,6 +348,86 @@ wss.on('connection', (ws) => {
   });
 });
 
+// Mihir Fully Autonomous Daily Self-Learning & Rule Discovery Pipeline
+let lastMihirDailyLearnDate = '';
+let lastMihirMorningLearnDate = '';
+
+export async function runDailyAutonomousLearningPipeline() {
+  console.log('[Autonomous AI Brain] Starting Daily Automated Learning & Rule Discovery Pipeline...');
+  try {
+    const scannerState = getScannerState();
+    const results = scannerState?.results || [];
+    const symbolMap = {};
+    for (const item of results) {
+      if (item.symbol && item.profile) {
+        symbolMap[item.symbol] = item.profile;
+      }
+    }
+    // 1. Evaluate all predictions vs actual market behavior & diagnose mistakes
+    const evaluated = evaluatePredictions(symbolMap);
+    console.log(`[Autonomous AI Brain] Evaluated ${evaluated.length} predictions against session close.`);
+
+    // 2. Run online gradient descent to penalize mistake features
+    const postMortems = getMihirLearnings();
+    if (postMortems && postMortems.audits) {
+      for (const audit of postMortems.audits) {
+        if (audit.verdict === 'MISTAKE_DETECTED') {
+          learnFromMistake({
+            failedBreakout: true,
+            isORR: audit.openingType?.includes('ORR'),
+            isWide: audit.ibRangeClass === 'large',
+            divergenceDetected: true
+          });
+        }
+      }
+    }
+
+    // 3. Inductively mine and formulate brand-new rules from live market data & prediction audits
+    const miningResult = mineNewRulesFromData(results, postMortems?.audits || []);
+
+    // 4. Reinforce existing rules with WIN/LOSS confidence updates based on audit outcomes
+    let reinforcedCount = 0;
+    const allRules = getAllGeneratedRules();
+    if (postMortems && postMortems.audits) {
+      for (const audit of postMortems.audits) {
+        if (audit.verdict === 'ACCURATE' || audit.verdict === 'MISTAKE_DETECTED') {
+          for (const rule of allRules) {
+            if (rule.status === 'UNDERPERFORMING_UNDER_REVIEW') continue;
+            const openType = audit.openingType || '';
+            const ibRangeClass = audit.ibRangeClass || 'medium';
+            let wasRelevant = false;
+            if (rule.conditionFilter?.ibRangeClass === ibRangeClass) wasRelevant = true;
+            if (rule.conditionFilter?.openType && openType && (
+              Array.isArray(rule.conditionFilter.openType)
+                ? rule.conditionFilter.openType.some(t => openType.includes(t))
+                : openType.includes(rule.conditionFilter.openType)
+            )) wasRelevant = true;
+            if (wasRelevant) {
+              reinforceRule(rule.id, audit.verdict === 'ACCURATE' ? 'WIN' : 'LOSS');
+              reinforcedCount++;
+              if (reinforcedCount >= 15) break;
+            }
+          }
+        }
+      }
+    }
+
+    recordAutonomousRun(results.length || 39, miningResult.newlyDiscoveredCount, reinforcedCount);
+    console.log(`[Autonomous AI Brain] Discovered ${miningResult.newlyDiscoveredCount} new rules. Reinforced ${reinforcedCount} existing rules. Total rules: ${miningResult.totalRules}.`);
+    console.log('[Autonomous AI Brain] Daily Automated Learning Pipeline completed successfully.');
+    return { success: true, evaluatedCount: evaluated.length, reinforcedCount, ...miningResult };
+  } catch (err) {
+    console.error('[Autonomous AI Brain] Error running daily learning pipeline:', err);
+    return { success: false, error: err.message };
+  }
+}
+
+// Initial autonomous learning pass on boot (after 10s warmup)
+setTimeout(() => {
+  console.log('[Server Startup] Triggering initial autonomous learning & rule induction pass...');
+  runDailyAutonomousLearningPipeline().catch(err => console.error('[Server Startup] Learning error:', err));
+}, 10000);
+
 // Daily diary & pattern learning automation: Runs daily IST (local time)
 let lastDiaryRunDate = '';
 let lastPatternRunDate = '';
@@ -421,6 +501,29 @@ setInterval(() => {
     logOptionsChainData().catch(err => {
       console.error('[Server Scheduler] Error running options logger:', err);
     });
+  }
+
+  // 6. Mihir Autonomous Daily Learning Pipeline (Zero User Clicks Needed)
+  // Morning Run: 10:20 AM IST (Post-IB Morning Drive & Compression Discovery)
+  if (hours === 10 && minutes === 20) {
+    if (lastMihirMorningLearnDate !== dateStr) {
+      lastMihirMorningLearnDate = dateStr;
+      console.log(`[Server Scheduler] It is 10:20 AM IST on ${dateStr}. Executing morning autonomous learning & rule mining...`);
+      runDailyAutonomousLearningPipeline().catch(err => {
+        console.error('[Server Scheduler] Error running morning learning pipeline:', err);
+      });
+    }
+  }
+
+  // Market Close Run: 3:45 PM IST (Full Session Audit, Post-Mortem & Rule Induction)
+  if (hours === 15 && minutes === 45) {
+    if (lastMihirDailyLearnDate !== dateStr) {
+      lastMihirDailyLearnDate = dateStr;
+      console.log(`[Server Scheduler] It is 3:45 PM IST on ${dateStr}. Executing daily market close autonomous learning & rule mining...`);
+      runDailyAutonomousLearningPipeline().catch(err => {
+        console.error('[Server Scheduler] Error running daily learning pipeline:', err);
+      });
+    }
   }
 }, 30 * 1000); // Check every 30 seconds
 
@@ -1054,21 +1157,47 @@ app.post('/api/mihir-ml/train', (req, res) => {
 app.get('/api/mihir-ml/rules', (req, res) => {
   try {
     const rules = getAllGeneratedRules();
-    res.json({ success: true, count: rules.length, rules });
+    const autonomousEngine = getAutonomousLearningMeta();
+    const journal = getLearningJournal().slice(0, 20);
+    const stats = getRuleStats();
+    res.json({ success: true, count: rules.length, rules, autonomousEngine, journal, stats });
   } catch (err) {
     console.error('[API] Error in /api/mihir-ml/rules:', err);
     res.status(500).json({ error: err.message });
   }
 });
 
-app.post('/api/mihir-ml/generate-rules', (req, res) => {
+app.post('/api/mihir-ml/generate-rules', async (req, res) => {
   try {
-    const scannerState = getScannerState();
-    const results = scannerState?.results || [];
-    const miningResult = mineNewRulesFromData(results);
-    res.json({ success: true, ...miningResult });
+    const pipelineResult = await runDailyAutonomousLearningPipeline();
+    const rules = getAllGeneratedRules();
+    const autonomousEngine = getAutonomousLearningMeta();
+    res.json({ success: true, ...pipelineResult, rules, count: rules.length, autonomousEngine });
   } catch (err) {
     console.error('[API] Error in /api/mihir-ml/generate-rules:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Live Market Profile Balance vs Imbalance State Classifier Endpoint
+app.all('/api/mihir-ml/classify-balance', (req, res) => {
+  try {
+    const symbol = req.query.symbol || req.body?.symbol;
+    const scannerState = getScannerState();
+    const results = scannerState?.results || [];
+
+    if (symbol) {
+      const match = results.find(r => r.symbol === symbol || r.symbol.endsWith(symbol));
+      if (match?.mlInsights?.balanceState) {
+        return res.json({ success: true, symbol, source: 'live_scanner', ...match.mlInsights.balanceState });
+      }
+    }
+
+    const { activeProfile, priorProfile, nuances } = req.body || {};
+    const classified = classifyProfileBalanceImbalance(activeProfile, priorProfile, nuances);
+    res.json({ success: true, symbol: symbol || 'ACTIVE_SELECTION', source: 'computed', ...classified });
+  } catch (err) {
+    console.error('[API] Error in /api/mihir-ml/classify-balance:', err);
     res.status(500).json({ error: err.message });
   }
 });

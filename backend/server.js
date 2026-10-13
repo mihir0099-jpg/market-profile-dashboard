@@ -886,26 +886,30 @@ async function updateActiveOptionsCache() {
         if (cleanSymbol === 'NIFTY1!') cleanSymbol = 'NIFTY';
         if (cleanSymbol === 'BANKNIFTY1!') cleanSymbol = 'BANKNIFTY';
         
-        const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/gex?symbol=${cleanSymbol}`);
-        if (response.ok) {
-          const result = await response.json();
+        let result = null;
+        try {
+          const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/gex?symbol=${cleanSymbol}`, { signal: AbortSignal.timeout(800) });
+          if (response.ok) {
+            result = await response.json();
+          }
+        } catch (fetchErr) {}
+
+        if (!result || !result.stats) {
+          let liveSpot = null;
+          try { liveSpot = await angelOneBridge.getLTP(cleanSymbol); } catch (e) {}
+          result = getFallbackGexData(cleanSymbol, null, liveSpot);
+        }
+
+        if (result && result.stats) {
           gexCacheStore[symbol] = {
             data: result,
             timestamp: Date.now()
           };
-        } else {
-          // If response not ok, cache a null placeholder to prevent hammering if invalid
-          if (!gexCacheStore[symbol]) {
-            gexCacheStore[symbol] = { data: null, timestamp: Date.now() };
-          }
         }
-        // Throttling: 200ms delay to prevent rate limits
-        await new Promise(r => setTimeout(r, 200));
+        // Throttling: 50ms delay
+        await new Promise(r => setTimeout(r, 50));
       } catch (e) {
-        console.warn(`[Background GEX] Failed to fetch data for ${symbol}:`, e.message);
-        if (!gexCacheStore[symbol]) {
-          gexCacheStore[symbol] = { data: null, timestamp: Date.now() };
-        }
+        console.warn(`[Background GEX] Error servicing GEX data for ${symbol}:`, e.message);
       }
     }
 

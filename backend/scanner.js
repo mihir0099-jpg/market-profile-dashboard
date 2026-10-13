@@ -1441,8 +1441,9 @@ export function startScanner(tvBridge) {
         // Autonomous Machine Learning Rule Mining: synthesize new rules from current market scan data
         try {
           const mined = mineNewRulesFromData(results);
-          if (mined.newRulesDiscovered > 0) {
-            console.log(`[Scanner] Autonomous ML Rule Generator formulated ${mined.newRulesDiscovered} NEW market rules!`);
+          const newCount = mined.newlyDiscoveredCount || mined.newRules?.length || 0;
+          if (newCount > 0) {
+            console.log(`[Scanner] Autonomous ML Rule Generator formulated ${newCount} NEW market rules! Total rules: ${mined.totalRules}`);
           }
         } catch (ruleErr) {
           console.warn('[Scanner] Error in autonomous ML rule mining:', ruleErr.message);

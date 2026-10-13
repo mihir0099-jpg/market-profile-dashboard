@@ -1,0 +1,876 @@
+[
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-13T02:42:03.937Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-13T02:36:45.587Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BEAR-2856",
+    "ruleTitle": "Strong OTF Bearish Consensus — Sector Distribution Day",
+    "category": "BREAKOUT",
+    "trigger": "23 assets showing bearish OTF — sector-wide distribution",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-13T01:28:42.859Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-DYNAMIC-6743",
+    "ruleTitle": "Dynamic Confluence: INSIDE VALUE + OPEN DRIVE (BEARISH)",
+    "category": "BALANCE_TO_IMBALANCE",
+    "trigger": "Unsupervised cluster: 12 assets (NIFTY, BANKNIFTY, SENSEX, NIFTY1!) sharing [INSIDE_VALUE + OPEN_DRIVE + NORMAL_VOL]",
+    "confidencePct": 95,
+    "timestamp": "2026-10-13T01:28:36.745Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OA-LATE-6738",
+    "ruleTitle": "Open Auction In Range (OAIR) — 85% Late-Day Breakout Rule",
+    "category": "RANGE_BOUND",
+    "trigger": "18 assets opening as Open Auction In Range (OAIR)",
+    "confidencePct": 85.2,
+    "timestamp": "2026-10-13T01:28:36.741Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-DD-GAP-6733",
+    "ruleTitle": "Double Distribution Single Print Structural Defense",
+    "category": "IMBALANCE_TO_BALANCE",
+    "trigger": "4 assets printing Double Distribution profile curves",
+    "confidencePct": 88.2,
+    "timestamp": "2026-10-13T01:28:36.737Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-POC-LAG-6730",
+    "ruleTitle": "Lagging POC Anomaly & Value Vacuum Snap-Back",
+    "category": "POC_MIGRATION",
+    "trigger": "12 assets exhibiting lagging POC volume elongation",
+    "confidencePct": 87.5,
+    "timestamp": "2026-10-13T01:28:36.732Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OD-HWY-6727",
+    "ruleTitle": "Opening Drive Initiative Imbalance Highway",
+    "category": "OPENING_DIRECTIVE",
+    "trigger": "20 assets showing confirmed Open Drive / Open Test Drive",
+    "confidencePct": 94.6,
+    "timestamp": "2026-10-13T01:28:36.729Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-ABSORP-6723",
+    "ruleTitle": "Responsive Absorption & Auction Failure Re-Bracketing",
+    "category": "IMBALANCE_TO_BALANCE",
+    "trigger": "34 assets showing responsive absorption & rejection tails",
+    "confidencePct": 90.4,
+    "timestamp": "2026-10-13T01:28:36.726Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-IMB-EXP-6717",
+    "ruleTitle": "Multi-Asset Initiative Imbalance Directional Highway",
+    "category": "BALANCE_TO_IMBALANCE",
+    "trigger": "30 assets showing concurrent initiative imbalance with OTF trend",
+    "confidencePct": 92.8,
+    "timestamp": "2026-10-13T01:28:36.721Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BULL-6713",
+    "ruleTitle": "Strong OTF Bullish Consensus — Sector Rotation Day",
+    "category": "BREAKOUT",
+    "trigger": "9 assets showing bullish OTF — sector-wide accumulation",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-13T01:28:36.715Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-BSHAPE-6708",
+    "ruleTitle": "b-Shape Profile Short Squeeze — Bullish Reversal",
+    "category": "REVERSAL",
+    "trigger": "26 assets showing b-shaped volume profile (trapped shorts)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-13T01:28:36.711Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-PSHAPE-6704",
+    "ruleTitle": "P-Shape Profile Long Liquidation — Bearish Reversal",
+    "category": "REVERSAL",
+    "trigger": "3 assets showing P-shaped volume profile (trapped longs)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-13T01:28:36.707Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OD-6699",
+    "ruleTitle": "Market-Wide Open Drive — Institutional Trend Day",
+    "category": "BREAKOUT",
+    "trigger": "5 assets showing simultaneous Open Drive — maximum conviction trend day",
+    "confidencePct": 94.1,
+    "timestamp": "2026-10-13T01:28:36.702Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-80PCT-6695",
+    "ruleTitle": "Multi-Asset Dalton 80% Rule — POC Lock Zone",
+    "category": "TARGET_LOCK",
+    "trigger": "17 assets concurrently in 80% Rule zone",
+    "confidencePct": 83.5,
+    "timestamp": "2026-10-13T01:28:36.697Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-WIDE-6691",
+    "ruleTitle": "Market-Wide ATR Exhaustion — Option Selling Day",
+    "category": "RANGE_BOUND",
+    "trigger": "22 assets showing wide IB + low volume combination",
+    "confidencePct": 88.5,
+    "timestamp": "2026-10-13T01:28:36.693Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-ORR-6683",
+    "ruleTitle": "ORR Institutional Trap Immediate Fade",
+    "category": "TRAP_PROTECTION",
+    "trigger": "1 asset(s) showing Open Rejection Reverse opening type",
+    "confidencePct": 87.8,
+    "timestamp": "2026-10-13T01:28:36.689Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-12T10:15:12.136Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-12T10:15:10.944Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-DD-GAP-5716",
+    "ruleTitle": "Double Distribution Single Print Structural Defense",
+    "category": "IMBALANCE_TO_BALANCE",
+    "trigger": "4 assets printing Double Distribution profile curves",
+    "confidencePct": 88.2,
+    "timestamp": "2026-10-12T06:08:05.723Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-ORR-5010",
+    "ruleTitle": "ORR Institutional Trap Immediate Fade",
+    "category": "TRAP_PROTECTION",
+    "trigger": "1 asset(s) showing Open Rejection Reverse opening type",
+    "confidencePct": 87.8,
+    "timestamp": "2026-10-12T05:06:45.016Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-12T04:50:04.874Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-12T04:50:01.584Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BEAR-8961",
+    "ruleTitle": "Strong OTF Bearish Consensus — Sector Distribution Day",
+    "category": "BREAKOUT",
+    "trigger": "4 assets showing bearish OTF — sector-wide distribution",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-12T02:13:48.966Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-DYNAMIC-5994",
+    "ruleTitle": "Dynamic Confluence: INSIDE VALUE + OPEN DRIVE (BULLISH)",
+    "category": "BALANCE_TO_IMBALANCE",
+    "trigger": "Unsupervised cluster: 7 assets (NIFTY, BANKNIFTY, SENSEX, NIFTY1!) sharing [INSIDE_VALUE + OPEN_DRIVE + NORMAL_VOL]",
+    "confidencePct": 95,
+    "timestamp": "2026-10-12T02:13:45.996Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OA-LATE-5991",
+    "ruleTitle": "Open Auction In Range (OAIR) — 85% Late-Day Breakout Rule",
+    "category": "RANGE_BOUND",
+    "trigger": "17 assets opening as Open Auction In Range (OAIR)",
+    "confidencePct": 85.2,
+    "timestamp": "2026-10-12T02:13:45.992Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-POC-LAG-5987",
+    "ruleTitle": "Lagging POC Anomaly & Value Vacuum Snap-Back",
+    "category": "POC_MIGRATION",
+    "trigger": "11 assets exhibiting lagging POC volume elongation",
+    "confidencePct": 87.5,
+    "timestamp": "2026-10-12T02:13:45.989Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OD-HWY-5984",
+    "ruleTitle": "Opening Drive Initiative Imbalance Highway",
+    "category": "OPENING_DIRECTIVE",
+    "trigger": "22 assets showing confirmed Open Drive / Open Test Drive",
+    "confidencePct": 94.6,
+    "timestamp": "2026-10-12T02:13:45.986Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-ABSORP-5982",
+    "ruleTitle": "Responsive Absorption & Auction Failure Re-Bracketing",
+    "category": "IMBALANCE_TO_BALANCE",
+    "trigger": "35 assets showing responsive absorption & rejection tails",
+    "confidencePct": 90.4,
+    "timestamp": "2026-10-12T02:13:45.983Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-IMB-EXP-5980",
+    "ruleTitle": "Multi-Asset Initiative Imbalance Directional Highway",
+    "category": "BALANCE_TO_IMBALANCE",
+    "trigger": "33 assets showing concurrent initiative imbalance with OTF trend",
+    "confidencePct": 92.8,
+    "timestamp": "2026-10-12T02:13:45.981Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BULL-5978",
+    "ruleTitle": "Strong OTF Bullish Consensus — Sector Rotation Day",
+    "category": "BREAKOUT",
+    "trigger": "31 assets showing bullish OTF — sector-wide accumulation",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-12T02:13:45.979Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-BSHAPE-5975",
+    "ruleTitle": "b-Shape Profile Short Squeeze — Bullish Reversal",
+    "category": "REVERSAL",
+    "trigger": "3 assets showing b-shaped volume profile (trapped shorts)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-12T02:13:45.976Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-PSHAPE-5970",
+    "ruleTitle": "P-Shape Profile Long Liquidation — Bearish Reversal",
+    "category": "REVERSAL",
+    "trigger": "25 assets showing P-shaped volume profile (trapped longs)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-12T02:13:45.972Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OD-5967",
+    "ruleTitle": "Market-Wide Open Drive — Institutional Trend Day",
+    "category": "BREAKOUT",
+    "trigger": "8 assets showing simultaneous Open Drive — maximum conviction trend day",
+    "confidencePct": 94.1,
+    "timestamp": "2026-10-12T02:13:45.969Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-80PCT-5964",
+    "ruleTitle": "Multi-Asset Dalton 80% Rule — POC Lock Zone",
+    "category": "TARGET_LOCK",
+    "trigger": "12 assets concurrently in 80% Rule zone",
+    "confidencePct": 83.5,
+    "timestamp": "2026-10-12T02:13:45.966Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-WIDE-5958",
+    "ruleTitle": "Market-Wide ATR Exhaustion — Option Selling Day",
+    "category": "RANGE_BOUND",
+    "trigger": "28 assets showing wide IB + low volume combination",
+    "confidencePct": 88.5,
+    "timestamp": "2026-10-12T02:13:45.961Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T13:41:51.988Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-DYNAMIC-5495",
+    "ruleTitle": "Dynamic Confluence: INSIDE VALUE + OPEN DRIVE (BULLISH)",
+    "category": "BALANCE_TO_IMBALANCE",
+    "trigger": "Unsupervised cluster: 7 assets (NIFTY, BANKNIFTY, SENSEX, NIFTY1!) sharing [INSIDE_VALUE + OPEN_DRIVE + NORMAL_VOL]",
+    "confidencePct": 95,
+    "timestamp": "2026-10-11T13:21:45.496Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T13:21:43.440Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T13:16:12.267Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OA-LATE-8495",
+    "ruleTitle": "Open Auction In Range (OAIR) — 85% Late-Day Breakout Rule",
+    "category": "RANGE_BOUND",
+    "trigger": "17 assets opening as Open Auction In Range (OAIR)",
+    "confidencePct": 85.2,
+    "timestamp": "2026-10-11T13:16:08.498Z"
+  },
+  {
+    "type": "RULE_FAILURE_POSTMORTEM",
+    "ruleId": "ML-RULE-01",
+    "ruleTitle": "High-Volume Open Drive Runaway Trend",
+    "outcome": "LOSS",
+    "newConfidence": 64.7,
+    "totalSamples": 1,
+    "streak": -1,
+    "rootCause": "INDEX_DRAG_DIVERGENCE",
+    "whyItFailed": "Rule triggered a bullish continuation or CE trade on RELIANCE, but benchmark indices (Nifty/BankNifty) were trading below morning open with negative PCR drift. The stock could not sustain initiative buying against systemic macro index drag.",
+    "marketProfileUnderstanding": "Index Confluence Law: Individual equity market profiles cannot sustain initiative auction extension in isolation when the benchmark index is liquidating. When Nifty/BankNifty trades below Open with negative PCR velocity (< -0.03), over 82% of stock CE breakouts fail as bull traps. Smart money unloads stock inventory into retail breakout buyers during index pullbacks.",
+    "autoCorrectionApplied": "Enforced Exception Filter: Rule condition automatically updated to strictly require NIFTY and BANKNIFTY above Open AND First-Hour PCR drift >= -0.03 before triggering CE / Long entries.",
+    "timestamp": "2026-10-11T12:47:52.856Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T12:47:45.882Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T12:30:08.065Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T12:14:46.493Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T12:14:46.042Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T12:12:59.497Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T12:12:03.253Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-POC-LAG-7910",
+    "ruleTitle": "Lagging POC Anomaly & Value Vacuum Snap-Back",
+    "category": "POC_MIGRATION",
+    "trigger": "11 assets exhibiting lagging POC volume elongation",
+    "confidencePct": 87.5,
+    "timestamp": "2026-10-11T12:11:57.912Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OD-HWY-7907",
+    "ruleTitle": "Opening Drive Initiative Imbalance Highway",
+    "category": "OPENING_DIRECTIVE",
+    "trigger": "22 assets showing confirmed Open Drive / Open Test Drive",
+    "confidencePct": 94.6,
+    "timestamp": "2026-10-11T12:11:57.909Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-IMB-EXP-7904",
+    "ruleTitle": "Multi-Asset Initiative Imbalance Directional Highway",
+    "category": "BALANCE_TO_IMBALANCE",
+    "trigger": "33 assets showing concurrent initiative imbalance with OTF trend",
+    "confidencePct": 92.8,
+    "timestamp": "2026-10-11T12:11:57.906Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-11T10:15:12.319Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BEAR-6737",
+    "ruleTitle": "Strong OTF Bearish Consensus — Sector Distribution Day",
+    "category": "BREAKOUT",
+    "trigger": "4 assets showing bearish OTF — sector-wide distribution",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-11T08:33:46.781Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BULL-8418",
+    "ruleTitle": "Strong OTF Bullish Consensus — Sector Rotation Day",
+    "category": "BREAKOUT",
+    "trigger": "31 assets showing bullish OTF — sector-wide accumulation",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-11T03:00:48.420Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-BSHAPE-8416",
+    "ruleTitle": "b-Shape Profile Short Squeeze — Bullish Reversal",
+    "category": "REVERSAL",
+    "trigger": "3 assets showing b-shaped volume profile (trapped shorts)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-11T03:00:48.417Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-PSHAPE-8415",
+    "ruleTitle": "P-Shape Profile Long Liquidation — Bearish Reversal",
+    "category": "REVERSAL",
+    "trigger": "25 assets showing P-shaped volume profile (trapped longs)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-11T03:00:48.416Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OD-8413",
+    "ruleTitle": "Market-Wide Open Drive — Institutional Trend Day",
+    "category": "BREAKOUT",
+    "trigger": "8 assets showing simultaneous Open Drive — maximum conviction trend day",
+    "confidencePct": 94.1,
+    "timestamp": "2026-10-11T03:00:48.414Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-80PCT-8411",
+    "ruleTitle": "Multi-Asset Dalton 80% Rule — POC Lock Zone",
+    "category": "TARGET_LOCK",
+    "trigger": "12 assets concurrently in 80% Rule zone",
+    "confidencePct": 83.5,
+    "timestamp": "2026-10-11T03:00:48.412Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-WIDE-8406",
+    "ruleTitle": "Market-Wide ATR Exhaustion — Option Selling Day",
+    "category": "RANGE_BOUND",
+    "trigger": "28 assets showing wide IB + low volume combination",
+    "confidencePct": 88.5,
+    "timestamp": "2026-10-11T03:00:48.410Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T13:31:12.188Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T13:28:56.949Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T13:10:22.128Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T13:09:40.329Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T13:05:39.882Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T13:02:42.989Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T10:15:12.200Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T08:37:48.111Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T08:36:24.593Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-10T07:54:05.746Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BEAR-0511",
+    "ruleTitle": "Strong OTF Bearish Consensus — Sector Distribution Day",
+    "category": "BREAKOUT",
+    "trigger": "4 assets showing bearish OTF — sector-wide distribution",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-10T07:31:40.514Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BULL-2345",
+    "ruleTitle": "Strong OTF Bullish Consensus — Sector Rotation Day",
+    "category": "BREAKOUT",
+    "trigger": "31 assets showing bullish OTF — sector-wide accumulation",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-10T03:01:02.347Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-BSHAPE-2340",
+    "ruleTitle": "b-Shape Profile Short Squeeze — Bullish Reversal",
+    "category": "REVERSAL",
+    "trigger": "2 assets showing b-shaped volume profile (trapped shorts)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-10T03:01:02.343Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-PSHAPE-2335",
+    "ruleTitle": "P-Shape Profile Long Liquidation — Bearish Reversal",
+    "category": "REVERSAL",
+    "trigger": "25 assets showing P-shaped volume profile (trapped longs)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-10T03:01:02.338Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OD-2322",
+    "ruleTitle": "Market-Wide Open Drive — Institutional Trend Day",
+    "category": "BREAKOUT",
+    "trigger": "8 assets showing simultaneous Open Drive — maximum conviction trend day",
+    "confidencePct": 94.1,
+    "timestamp": "2026-10-10T03:01:02.324Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-80PCT-2317",
+    "ruleTitle": "Multi-Asset Dalton 80% Rule — POC Lock Zone",
+    "category": "TARGET_LOCK",
+    "trigger": "11 assets concurrently in 80% Rule zone",
+    "confidencePct": 83.5,
+    "timestamp": "2026-10-10T03:01:02.320Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-WIDE-2311",
+    "ruleTitle": "Market-Wide ATR Exhaustion — Option Selling Day",
+    "category": "RANGE_BOUND",
+    "trigger": "28 assets showing wide IB + low volume combination",
+    "confidencePct": 88.5,
+    "timestamp": "2026-10-10T03:01:02.314Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-ND-2302",
+    "ruleTitle": "Double Expansion Neutral Day Fade",
+    "category": "REVERSAL",
+    "trigger": "2 assets showing double IB expansion (Neutral Day)",
+    "confidencePct": 91.2,
+    "timestamp": "2026-10-10T03:01:02.308Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-09T10:15:12.976Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-09T04:50:25.479Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BEAR-4100",
+    "ruleTitle": "Strong OTF Bearish Consensus — Sector Distribution Day",
+    "category": "BREAKOUT",
+    "trigger": "23 assets showing bearish OTF — sector-wide distribution",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-09T02:22:14.137Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BULL-0084",
+    "ruleTitle": "Strong OTF Bullish Consensus — Sector Rotation Day",
+    "category": "BREAKOUT",
+    "trigger": "9 assets showing bullish OTF — sector-wide accumulation",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-09T02:12:10.085Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-BSHAPE-0080",
+    "ruleTitle": "b-Shape Profile Short Squeeze — Bullish Reversal",
+    "category": "REVERSAL",
+    "trigger": "14 assets showing b-shaped volume profile (trapped shorts)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-09T02:12:10.082Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-PSHAPE-0076",
+    "ruleTitle": "P-Shape Profile Long Liquidation — Bearish Reversal",
+    "category": "REVERSAL",
+    "trigger": "2 assets showing P-shaped volume profile (trapped longs)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-09T02:12:10.078Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OD-0072",
+    "ruleTitle": "Market-Wide Open Drive — Institutional Trend Day",
+    "category": "BREAKOUT",
+    "trigger": "11 assets showing simultaneous Open Drive — maximum conviction trend day",
+    "confidencePct": 94.1,
+    "timestamp": "2026-10-09T02:12:10.074Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-80PCT-0069",
+    "ruleTitle": "Multi-Asset Dalton 80% Rule — POC Lock Zone",
+    "category": "TARGET_LOCK",
+    "trigger": "9 assets concurrently in 80% Rule zone",
+    "confidencePct": 83.5,
+    "timestamp": "2026-10-09T02:12:10.070Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-WIDE-0064",
+    "ruleTitle": "Market-Wide ATR Exhaustion — Option Selling Day",
+    "category": "RANGE_BOUND",
+    "trigger": "21 assets showing wide IB + low volume combination",
+    "confidencePct": 88.5,
+    "timestamp": "2026-10-09T02:12:10.067Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-ORR-0061",
+    "ruleTitle": "ORR Institutional Trap Immediate Fade",
+    "category": "TRAP_PROTECTION",
+    "trigger": "1 asset(s) showing Open Rejection Reverse opening type",
+    "confidencePct": 87.8,
+    "timestamp": "2026-10-09T02:12:10.063Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-ND-0054",
+    "ruleTitle": "Double Expansion Neutral Day Fade",
+    "category": "REVERSAL",
+    "trigger": "3 assets showing double IB expansion (Neutral Day)",
+    "confidencePct": 91.2,
+    "timestamp": "2026-10-09T02:12:10.059Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-08T10:15:29.647Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 0,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 0 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-08T04:50:13.192Z"
+  },
+  {
+    "type": "AUTONOMOUS_RUN_COMPLETE",
+    "auditedCount": 39,
+    "newlyDiscoveredCount": 1,
+    "rulesReinforced": 0,
+    "message": "Autonomous daily learning pipeline completed. Audited 39 assets. Discovered 1 new rules. Reinforced 0 existing rules.",
+    "timestamp": "2026-10-08T02:13:09.641Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BEAR-9579",
+    "ruleTitle": "Strong OTF Bearish Consensus — Sector Distribution Day",
+    "category": "BREAKOUT",
+    "trigger": "6 assets showing bearish OTF — sector-wide distribution",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-08T02:13:09.625Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OTF-BULL-3555",
+    "ruleTitle": "Strong OTF Bullish Consensus — Sector Rotation Day",
+    "category": "BREAKOUT",
+    "trigger": "11 assets showing bullish OTF — sector-wide accumulation",
+    "confidencePct": 88.9,
+    "timestamp": "2026-10-08T02:13:03.559Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-BSHAPE-3549",
+    "ruleTitle": "b-Shape Profile Short Squeeze — Bullish Reversal",
+    "category": "REVERSAL",
+    "trigger": "14 assets showing b-shaped volume profile (trapped shorts)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-08T02:13:03.553Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-PSHAPE-3545",
+    "ruleTitle": "P-Shape Profile Long Liquidation — Bearish Reversal",
+    "category": "REVERSAL",
+    "trigger": "3 assets showing P-shaped volume profile (trapped longs)",
+    "confidencePct": 84.3,
+    "timestamp": "2026-10-08T02:13:03.548Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-OD-3540",
+    "ruleTitle": "Market-Wide Open Drive — Institutional Trend Day",
+    "category": "BREAKOUT",
+    "trigger": "4 assets showing simultaneous Open Drive — maximum conviction trend day",
+    "confidencePct": 94.1,
+    "timestamp": "2026-10-08T02:13:03.544Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-80PCT-3535",
+    "ruleTitle": "Multi-Asset Dalton 80% Rule — POC Lock Zone",
+    "category": "TARGET_LOCK",
+    "trigger": "9 assets concurrently in 80% Rule zone",
+    "confidencePct": 83.5,
+    "timestamp": "2026-10-08T02:13:03.537Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-WIDE-3499",
+    "ruleTitle": "Market-Wide ATR Exhaustion — Option Selling Day",
+    "category": "RANGE_BOUND",
+    "trigger": "14 assets showing wide IB + low volume combination",
+    "confidencePct": 88.5,
+    "timestamp": "2026-10-08T02:13:03.532Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-ORR-3492",
+    "ruleTitle": "ORR Institutional Trap Immediate Fade",
+    "category": "TRAP_PROTECTION",
+    "trigger": "3 asset(s) showing Open Rejection Reverse opening type",
+    "confidencePct": 87.8,
+    "timestamp": "2026-10-08T02:13:03.497Z"
+  },
+  {
+    "type": "NEW_RULE_DISCOVERED",
+    "ruleId": "ML-RULE-AUTO-ND-3445",
+    "ruleTitle": "Double Expansion Neutral Day Fade",
+    "category": "REVERSAL",
+    "trigger": "13 assets showing double IB expansion (Neutral Day)",
+    "confidencePct": 91.2,
+    "timestamp": "2026-10-08T02:13:03.488Z"
+  }
+]

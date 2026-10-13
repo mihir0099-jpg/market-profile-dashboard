@@ -1,0 +1,568 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-10-09)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 22520.45
+  - Final PCR: 1.270 (Drift: 0.647)
+  - Key Walls: Call Wall at 22900 | Put Wall at 22500
+  - Gamma Flip Zone: 22550
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 55256.65
+  - Final PCR: 0.982 (Drift: 0.126)
+  - Key Walls: Call Wall at 56000 | Put Wall at 55000
+  - Gamma Flip Zone: 55300
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+RELIANCE        | Monthly Gap Fade Trap        | SWING  | LONG  | 1215.30  | 1245.00  | 1160.80  | STOP_LOSS_HIT | 54.50   
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1861.00  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -24.50  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1861.40  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -24.10  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1860.70  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -24.80  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1863.70  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -21.80  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1864.40  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -21.10  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1862.70  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -22.80  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1861.30  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -24.20  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1860.40  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -25.10  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1849.80  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -35.70  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1847.30  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -38.20  
+TATAMOTORS      | 3:15 PM BTST Close           | BTST   | SHORT | 274.35   | 267.77   | 276.54   | STOP_LOSS_HIT | -1.25   
+BHARTIARTL      | 3:15 PM BTST Close           | BTST   | SHORT | 1799.60  | 1756.41  | 1814.00  | STOP_LOSS_HIT | -14.40  
+LT              | 3:15 PM BTST Close           | BTST   | SHORT | 3617.40  | 3530.58  | 3646.34  | STOP_LOSS_HIT | -28.94  
+EICHERMOT       | 3:15 PM BTST Close           | BTST   | SHORT | 6825.00  | 6661.20  | 6879.60  | STOP_LOSS_HIT | -54.60  
+HEROMOTOCO      | 3:15 PM BTST Close           | BTST   | SHORT | 4859.50  | 4742.87  | 4898.38  | STOP_LOSS_HIT | -38.88  
+BSE:SENSEX      | 3:15 PM BTST Close           | BTST   | SHORT | 71467.94 | 69752.71 | 72039.68 | STOP_LOSS_HIT | -384.85 
+NIFTY1!         | 3:15 PM BTST Close           | BTST   | SHORT | 22278.10 | 21743.43 | 22456.32 | STOP_LOSS_HIT | -78.00  
+TATASTEEL       | 3:15 PM BTST Close           | BTST   | SHORT | 171.75   | 167.63   | 173.12   | TARGET_HIT    | 0.84    
+HINDUNILVR      | 3:15 PM BTST Close           | BTST   | SHORT | 1839.30  | 1795.16  | 1854.01  | STOP_LOSS_HIT | -14.71  
+M_M             | 3:15 PM BTST Close           | BTST   | SHORT | 2744.80  | 2678.92  | 2766.76  | STOP_LOSS_HIT | -22.20  
+NIFTY           | 3:15 PM BTST Close           | BTST   | SHORT | 22181.85 | 21649.49 | 22359.30 | STOP_LOSS_HIT | -177.45 
+HDFCBANK        | 3:15 PM BTST Close           | BTST   | SHORT | 691.20   | 674.61   | 696.73   | STOP_LOSS_HIT | -5.53   
+POWERGRID       | 3:15 PM BTST Close           | BTST   | SHORT | 246.15   | 240.24   | 248.12   | STOP_LOSS_HIT | -1.97   
+SBIN            | 3:15 PM BTST Close           | BTST   | SHORT | 938.15   | 915.63   | 945.66   | STOP_LOSS_HIT | -7.51   
+TCS             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 2077.00  | 2105.00  | 2061.00  | TARGET_HIT    | 28.00   
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1177.40  | 1190.00  | 1220.80  | TARGET_HIT    | -12.60  
+KOTAKBANK       | 3:15 PM BTST Close           | BTST   | SHORT | 433.20   | 422.80   | 436.67   | STOP_LOSS_HIT | -3.47   
+SUNPHARMA       | 3:15 PM BTST Close           | BTST   | SHORT | 1748.10  | 1706.15  | 1762.08  | STOP_LOSS_HIT | -13.98  
+RELIANCE        | Auction Magnet               | INTRADAY | SHORT | 1178.60  | 1173.00  | 1182.14  | TARGET_HIT    | 5.60    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1164.00  | 1190.00  | 1220.80  | TARGET_HIT    | -26.00  
+ICICIBANK       | Auction Magnet               | INTRADAY | BUY   | 1356.00  | 1360.80  | 1351.93  | STOP_LOSS_HIT | -4.07   
+KOTAKBANK       | Auction Magnet               | INTRADAY | BUY   | 438.05   | 439.90   | 436.74   | TARGET_HIT    | 1.85    
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1859.40  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1170.60  | 1190.00  | 1220.80  | TARGET_HIT    | -19.40  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1855.90  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1203.70  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1170.40  | 1190.00  | 1220.80  | TARGET_HIT    | -19.60  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1171.30  | 1190.00  | 1220.80  | TARGET_HIT    | -18.70  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1861.10  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -24.40  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1171.90  | 1190.00  | 1220.80  | TARGET_HIT    | -18.10  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1858.80  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1171.40  | 1190.00  | 1220.80  | TARGET_HIT    | -18.60  
+SBIN            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 953.55   | 938.10   | 955.55   | TARGET_HIT    | 15.45   
+NIFTY1!         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 22564.10 | 22351.00 | 22592.70 | TARGET_HIT    | 213.10  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1866.00  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -19.50  
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1212.10  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+NIFTY           | Liquidity Sweep Reversal     | INTRADAY | SHORT | 22478.90 | 22294.75 | 22515.95 | STOP_LOSS_HIT | -37.05  
+BSE:SENSEX      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 72355.42 | 71739.49 | 72447.61 | TARGET_HIT    | 615.93  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1171.60  | 1190.00  | 1220.80  | TARGET_HIT    | -18.40  
+ASIANPAINT      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2350.00  | 2322.20  | 2361.10  | TARGET_HIT    | 27.80   
+HINDUNILVR      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1858.10  | 1839.10  | 1868.90  | STOP_LOSS_HIT | -10.80  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1858.10  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+POWERGRID       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 249.40   | 246.55   | 249.95   | TARGET_HIT    | 2.85    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1214.20  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+TECHM           | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1527.50  | 1496.20  | 1536.60  | TARGET_HIT    | 31.30   
+TCS             | Morning Reversal Fade        | INTRADAY | SHORT | 2194.20  | 2095.00  | 2202.90  | TARGET_HIT    | 99.20   
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1175.30  | 1190.00  | 1220.80  | TARGET_HIT    | -14.70  
+SBIN            | Morning Reversal Fade        | INTRADAY | SHORT | 954.00   | 938.10   | 955.55   | TARGET_HIT    | 15.90   
+NIFTY           | Morning Reversal Fade        | INTRADAY | SHORT | 22498.90 | 22294.75 | 22515.95 | TARGET_HIT    | 204.15  
+NIFTY1!         | Morning Reversal Fade        | INTRADAY | SHORT | 22576.50 | 22351.00 | 22592.70 | TARGET_HIT    | 225.50  
+BSE:SENSEX      | Morning Reversal Fade        | INTRADAY | SHORT | 72411.18 | 71739.49 | 72447.61 | TARGET_HIT    | 671.69  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1173.80  | 1190.00  | 1220.80  | TARGET_HIT    | -16.20  
+ITC             | Morning Reversal Fade        | INTRADAY | SHORT | 261.25   | 255.10   | 261.75   | STOP_LOSS_HIT | -0.50   
+INFY            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1028.70  | 1009.00  | 1030.90  | TARGET_HIT    | 19.70   
+BAJFINANCE      | Morning Reversal Fade        | INTRADAY | SHORT | 965.65   | 950.70   | 967.35   | TARGET_HIT    | 14.95   
+SUNPHARMA       | Morning Reversal Fade        | INTRADAY | SHORT | 1770.90  | 1751.00  | 1776.40  | TARGET_HIT    | 19.90   
+ASIANPAINT      | Morning Reversal Fade        | INTRADAY | SHORT | 2353.00  | 2322.20  | 2361.10  | TARGET_HIT    | 30.80   
+POWERGRID       | Morning Reversal Fade        | INTRADAY | SHORT | 249.50   | 246.55   | 249.95   | TARGET_HIT    | 2.95    
+ONGC            | Morning Reversal Fade        | INTRADAY | SHORT | 220.45   | 218.91   | 220.76   | TARGET_HIT    | 1.54    
+HINDUNILVR      | Morning Reversal Fade        | INTRADAY | SHORT | 1859.40  | 1839.10  | 1868.90  | STOP_LOSS_HIT | -9.50   
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1862.80  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -22.70  
+WIPRO           | Morning Reversal Fade        | INTRADAY | SHORT | 164.23   | 158.67   | 164.30   | TARGET_HIT    | 5.56    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1216.90  | 1235.00  | 1172.80  | TARGET_HIT    | 18.10   
+LTIM            | Morning Reversal Fade        | INTRADAY | SHORT | 4056.70  | 3980.00  | 4070.00  | TARGET_HIT    | 76.70   
+TECHM           | Morning Reversal Fade        | INTRADAY | SHORT | 1528.10  | 1496.20  | 1536.60  | TARGET_HIT    | 31.90   
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1173.20  | 1190.00  | 1220.80  | TARGET_HIT    | -16.80  
+BSE:SENSEX      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 72358.35 | 71739.49 | 72439.80 | TARGET_HIT    | 618.86  
+NIFTY1!         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 22560.00 | 22351.00 | 22585.00 | STOP_LOSS_HIT | -25.00  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1861.70  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -23.80  
+POWERGRID       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 249.40   | 246.55   | 249.80   | TARGET_HIT    | 2.85    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1212.50  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1174.50  | 1190.00  | 1220.80  | TARGET_HIT    | -15.50  
+INFY            | Morning Reversal Fade        | INTRADAY | SHORT | 1024.15  | 1009.00  | 1030.90  | TARGET_HIT    | 15.15   
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1863.70  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+BPCL            | Morning Reversal Fade        | INTRADAY | LONG  | 285.20   | 289.40   | 284.60   | TARGET_HIT    | -4.20   
+WIPRO           | Morning Reversal Fade        | INTRADAY | SHORT | 163.84   | 158.67   | 164.29   | TARGET_HIT    | 5.17    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1211.30  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+TECHM           | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1523.00  | 1490.00  | 1526.00  | STOP_LOSS_HIT | -3.00   
+EICHERMOT       | Morning Reversal Fade        | INTRADAY | SHORT | 7027.00  | 6801.00  | 7049.00  | TARGET_HIT    | 226.00  
+HDFCBANK        | Liquidity Sweep Reversal     | INTRADAY | SHORT | 704.45   | 690.50   | 706.40   | STOP_LOSS_HIT | -1.95   
+SBIN            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 953.50   | 938.10   | 956.25   | TARGET_HIT    | 15.40   
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1172.70  | 1190.00  | 1220.80  | TARGET_HIT    | -17.30  
+NIFTY1!         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 22584.00 | 22268.90 | 22620.00 | STOP_LOSS_HIT | -36.00  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1865.00  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -20.50  
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1208.10  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+BSE:SENSEX      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 72348.81 | 71739.49 | 72502.92 | TARGET_HIT    | 609.32  
+NIFTY           | Liquidity Sweep Reversal     | INTRADAY | SHORT | 22485.05 | 22294.75 | 22534.40 | STOP_LOSS_HIT | -49.35  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1172.70  | 1190.00  | 1220.80  | TARGET_HIT    | -17.30  
+BAJFINANCE      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 960.00   | 946.30   | 968.00   | STOP_LOSS_HIT | -8.00   
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1858.60  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+POWERGRID       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 249.70   | 246.55   | 250.35   | TARGET_HIT    | 3.15    
+AXISBANK        | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1255.90  | 1232.60  | 1257.80  | STOP_LOSS_HIT | -1.90   
+POWERGRID       | Morning Reversal Fade        | INTRADAY | SHORT | 249.80   | 246.55   | 250.35   | TARGET_HIT    | 3.25    
+ULTRACEMCO      | Morning Reversal Fade        | INTRADAY | SHORT | 10615.00 | 10479.00 | 10636.00 | TARGET_HIT    | 136.00  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1857.00  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+LTIM            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 3993.20  | 3915.50  | 4009.80  | STOP_LOSS_HIT | -16.60  
+HCLTECH         | Morning Reversal Fade        | INTRADAY | SHORT | 1208.20  | 1175.00  | 1214.90  | TARGET_HIT    | 33.20   
+M_M             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2804.60  | 2744.30  | 2810.00  | STOP_LOSS_HIT | -5.40   
+SBIN            | Morning Reversal Fade        | INTRADAY | SHORT | 953.40   | 938.10   | 956.25   | TARGET_HIT    | 15.30   
+SBIN            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 951.60   | 937.50   | 953.45   | STOP_LOSS_HIT | -1.85   
+HDFCBANK        | Morning Reversal Fade        | INTRADAY | SHORT | 703.90   | 695.30   | 706.40   | TARGET_HIT    | 8.60    
+BSE:SENSEX      | Morning Reversal Fade        | INTRADAY | SHORT | 72347.12 | 71739.49 | 72502.92 | TARGET_HIT    | 607.63  
+NIFTY           | Morning Reversal Fade        | INTRADAY | SHORT | 22486.40 | 22294.75 | 22534.40 | TARGET_HIT    | 191.65  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1171.60  | 1190.00  | 1220.80  | TARGET_HIT    | -18.40  
+NIFTY1!         | Morning Reversal Fade        | INTRADAY | SHORT | 22565.00 | 22351.00 | 22620.00 | STOP_LOSS_HIT | -55.00  
+TATAMOTORS      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 278.45   | 274.60   | 279.25   | TARGET_HIT    | 3.85    
+ULTRACEMCO      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 10595.00 | 10479.00 | 10616.00 | TARGET_HIT    | 116.00  
+POWERGRID       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 249.75   | 246.55   | 250.25   | TARGET_HIT    | 3.20    
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1857.10  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+BAJAJ_AUTO      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 9866.00  | 9650.00  | 9950.00  | TARGET_HIT    | 216.00  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1173.20  | 1190.00  | 1220.80  | TARGET_HIT    | -16.80  
+ASIANPAINT      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2348.40  | 2322.20  | 2359.60  | TARGET_HIT    | 26.20   
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1858.10  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+COALINDIA       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 411.05   | 404.50   | 411.80   | TARGET_HIT    | 6.55    
+SBIN            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 954.35   | 938.10   | 954.65   | TARGET_HIT    | 16.25   
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1173.50  | 1190.00  | 1220.80  | TARGET_HIT    | -16.50  
+TATAMOTORS      | G-Period Options Breakout    | INTRADAY | LONG  | 278.70   | 280.65   | 276.75   | STOP_LOSS_HIT | 1.95    
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1855.70  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+ULTRACEMCO      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 10597.00 | 10479.00 | 10611.00 | TARGET_HIT    | 118.00  
+M_M             | G-Period Options Breakout    | INTRADAY | LONG  | 2802.00  | 2821.61  | 2782.39  | STOP_LOSS_HIT | 19.61   
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1172.50  | 1190.00  | 1220.80  | TARGET_HIT    | -17.50  
+TATAMOTORS      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 278.65   | 274.60   | 278.80   | TARGET_HIT    | 4.05    
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1858.20  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1172.90  | 1190.00  | 1220.80  | TARGET_HIT    | -17.10  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1861.90  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -23.60  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1173.60  | 1190.00  | 1220.80  | TARGET_HIT    | -16.40  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1865.50  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1201.00  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1172.70  | 1190.00  | 1220.80  | TARGET_HIT    | -17.30  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1172.80  | 1190.00  | 1220.80  | TARGET_HIT    | -17.20  
+HINDUNILVR      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1863.10  | 1839.10  | 1866.40  | STOP_LOSS_HIT | -3.30   
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1863.10  | 1835.00  | 1885.50  | STOP_LOSS_HIT | -22.40  
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1205.20  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+M_M             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2796.40  | 2744.30  | 2807.60  | STOP_LOSS_HIT | -11.20  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1173.00  | 1190.00  | 1220.80  | TARGET_HIT    | -17.00  
+COALINDIA       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 411.35   | 404.50   | 411.60   | TARGET_HIT    | 6.85    
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1862.00  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1204.80  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+BANKNIFTY       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 55215.55 | 54617.20 | 55249.90 | TARGET_HIT    | 598.35  
+HDFCBANK        | Liquidity Sweep Reversal     | INTRADAY | SHORT | 705.80   | 690.50   | 706.25   | STOP_LOSS_HIT | -0.45   
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1173.00  | 1190.00  | 1220.80  | TARGET_HIT    | -17.00  
+NIFTY1!         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 22579.90 | 22351.00 | 22589.80 | TARGET_HIT    | 228.90  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1859.80  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1203.80  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1169.80  | 1190.00  | 1220.80  | TARGET_HIT    | -20.20  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1170.20  | 1190.00  | 1220.80  | TARGET_HIT    | -19.80  
+NIFTY1!         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 22593.00 | 22268.90 | 22620.00 | STOP_LOSS_HIT | -27.00  
+BAJFINANCE      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 960.55   | 946.30   | 963.60   | STOP_LOSS_HIT | -3.05   
+KOTAKBANK       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 444.10   | 437.85   | 444.50   | TARGET_HIT    | 6.25    
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1861.50  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+TECHM           | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1521.70  | 1490.00  | 1525.80  | STOP_LOSS_HIT | -4.10   
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1205.50  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1170.90  | 1190.00  | 1220.80  | TARGET_HIT    | -19.10  
+HINDUNILVR      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1861.10  | 1839.10  | 1867.20  | STOP_LOSS_HIT | -6.10   
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1861.10  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1207.60  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1171.50  | 1190.00  | 1220.80  | TARGET_HIT    | -18.50  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1861.10  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1215.00  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+BANKNIFTY       | Weekly IB Breakout           | SWING  | LONG  | 55340.70 | 55932.47 | 54974.92 | STOP_LOSS_HIT | 365.78  
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1172.50  | 1190.00  | 1220.80  | TARGET_HIT    | -17.50  
+LT              | Liquidity Sweep Reversal     | INTRADAY | SHORT | 3690.00  | 3607.00  | 3704.00  | STOP_LOSS_HIT | -14.00  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1862.40  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1216.40  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1170.60  | 1190.00  | 1220.80  | TARGET_HIT    | -19.40  
+BAJFINANCE      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 957.45   | 946.30   | 963.90   | STOP_LOSS_HIT | -6.45   
+ULTRACEMCO      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 10659.00 | 10443.00 | 10684.00 | STOP_LOSS_HIT | -25.00  
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1860.40  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+TATASTEEL       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 173.93   | 170.23   | 174.44   | TARGET_HIT    | 3.70    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1218.50  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1171.30  | 1190.00  | 1220.80  | TARGET_HIT    | -18.70  
+BANKNIFTY       | Weekly IB Breakout           | SWING  | LONG  | 55340.70 | 55932.47 | 54974.92 | STOP_LOSS_HIT | 365.78  
+HDFCBANK        | 3:15 PM BTST Close           | BTST   | BUY   | 708.65   | 725.66   | 702.98   | ACTIVE        | 0.00    
+AXISBANK        | 3:15 PM BTST Close           | BTST   | BUY   | 1265.10  | 1295.46  | 1254.98  | ACTIVE        | 0.00    
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1859.70  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+POWERGRID       | 3:15 PM BTST Close           | BTST   | BUY   | 250.90   | 256.92   | 248.89   | ACTIVE        | 0.00    
+HCLTECH         | 3:15 PM BTST Close           | BTST   | BUY   | 1219.40  | 1248.67  | 1209.64  | ACTIVE        | 0.00    
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1219.40  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1171.20  | 1190.00  | 1220.80  | TARGET_HIT    | -18.80  
+KOTAKBANK       | 3:15 PM BTST Close           | BTST   | BUY   | 445.05   | 455.73   | 441.49   | ACTIVE        | 0.00    
+LT              | 3:15 PM BTST Close           | BTST   | BUY   | 3706.00  | 3794.94  | 3676.35  | ACTIVE        | 0.00    
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1810.90  | 1835.00  | 1726.30  | ACTIVE        | 0.00    
+AXISBANK        | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1262.80  | 1240.10  | 1266.00  | TARGET_HIT    | 22.70   
+TATASTEEL       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 174.05   | 170.23   | 174.20   | TARGET_HIT    | 3.82    
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1858.30  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+ASIANPAINT      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2352.30  | 2322.20  | 2355.70  | TARGET_HIT    | 30.10   
+COALINDIA       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 411.20   | 404.50   | 411.80   | TARGET_HIT    | 6.70    
+RELIANCE        | Weekly Gap Fade Trap         | SWING  | SHORT | 1170.30  | 1190.00  | 1220.80  | TARGET_HIT    | -19.70  
+NIFTY1!         | Liquidity Sweep Reversal     | INTRADAY | SHORT | 22612.10 | 22268.90 | 22652.70 | STOP_LOSS_HIT | -40.60  
+KOTAKBANK       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 443.10   | 437.85   | 445.25   | TARGET_HIT    | 5.25    
+HINDUNILVR      | Weekly Gap Fade Trap         | SWING  | SHORT | 1858.10  | 1835.00  | 1885.50  | ACTIVE        | 0.00    
+BPCL            | Liquidity Sweep Reversal     | INTRADAY | LONG  | 286.50   | 289.40   | 285.95   | TARGET_HIT    | -2.90   
+HCLTECH         | Weekly Gap Fade Trap         | SWING  | LONG  | 1217.80  | 1235.00  | 1172.80  | ACTIVE        | 0.00    
+
+Statistics:
+* Total Signals Triggered/Resolved: 204
+* Target Hits: 94
+* Stop Loss Hits: 64
+* Win Rate: 59.5%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] RELIANCE -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1215.30 | Stop Loss: 1160.80 | Exit: 1160.80 | Loss: 54.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[2] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1861.00 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -24.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[3] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1861.40 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -24.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[4] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1860.70 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -24.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[5] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1863.70 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -21.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[6] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1864.40 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -21.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[7] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1862.70 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -22.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[8] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1861.30 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -24.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[9] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1860.40 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -25.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[10] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1849.80 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -35.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[11] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1847.30 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -38.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[12] TATAMOTORS -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 274.35 | Stop Loss: 276.54 | Exit: 275.60 | Loss: -1.25
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[13] BHARTIARTL -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 1799.60 | Stop Loss: 1814.00 | Exit: 1814.00 | Loss: -14.40
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[14] LT -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 3617.40 | Stop Loss: 3646.34 | Exit: 3646.34 | Loss: -28.94
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[15] EICHERMOT -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 6825.00 | Stop Loss: 6879.60 | Exit: 6879.60 | Loss: -54.60
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[16] HEROMOTOCO -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 4859.50 | Stop Loss: 4898.38 | Exit: 4898.38 | Loss: -38.88
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[17] BSE:SENSEX -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 71467.94 | Stop Loss: 72039.68 | Exit: 71852.79 | Loss: -384.85
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[18] NIFTY1! -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 22278.10 | Stop Loss: 22456.32 | Exit: 22356.10 | Loss: -78.00
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[19] HINDUNILVR -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 1839.30 | Stop Loss: 1854.01 | Exit: 1854.01 | Loss: -14.71
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[20] M_M -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 2744.80 | Stop Loss: 2766.76 | Exit: 2767.00 | Loss: -22.20
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[21] NIFTY -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 22181.85 | Stop Loss: 22359.30 | Exit: 22359.30 | Loss: -177.45
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[22] HDFCBANK -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 691.20 | Stop Loss: 696.73 | Exit: 696.73 | Loss: -5.53
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[23] POWERGRID -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 246.15 | Stop Loss: 248.12 | Exit: 248.12 | Loss: -1.97
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[24] SBIN -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 938.15 | Stop Loss: 945.66 | Exit: 945.66 | Loss: -7.51
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[25] KOTAKBANK -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 433.20 | Stop Loss: 436.67 | Exit: 436.67 | Loss: -3.47
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[26] SUNPHARMA -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 1748.10 | Stop Loss: 1762.08 | Exit: 1762.08 | Loss: -13.98
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[27] ICICIBANK -- Auction Magnet (BUY)
+* Trigger Details: Entry: 1356.00 | Stop Loss: 1351.93 | Exit: 1351.93 | Loss: -4.07
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[28] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1861.10 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -24.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[29] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1866.00 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -19.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[30] NIFTY -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 22478.90 | Stop Loss: 22515.95 | Exit: 22515.95 | Loss: -37.05
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[31] HINDUNILVR -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1858.10 | Stop Loss: 1868.90 | Exit: 1868.90 | Loss: -10.80
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[32] ITC -- Morning Reversal Fade (SHORT)
+* Trigger Details: Entry: 261.25 | Stop Loss: 261.75 | Exit: 261.75 | Loss: -0.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[33] HINDUNILVR -- Morning Reversal Fade (SHORT)
+* Trigger Details: Entry: 1859.40 | Stop Loss: 1868.90 | Exit: 1868.90 | Loss: -9.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[34] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1862.80 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -22.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[35] NIFTY1! -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 22560.00 | Stop Loss: 22585.00 | Exit: 22585.00 | Loss: -25.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[36] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1861.70 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -23.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[37] TECHM -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1523.00 | Stop Loss: 1526.00 | Exit: 1526.00 | Loss: -3.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[38] HDFCBANK -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 704.45 | Stop Loss: 706.40 | Exit: 706.40 | Loss: -1.95
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[39] NIFTY1! -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 22584.00 | Stop Loss: 22620.00 | Exit: 22620.00 | Loss: -36.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[40] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1865.00 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -20.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[41] NIFTY -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 22485.05 | Stop Loss: 22534.40 | Exit: 22534.40 | Loss: -49.35
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[42] BAJFINANCE -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 960.00 | Stop Loss: 968.00 | Exit: 968.00 | Loss: -8.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[43] AXISBANK -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1255.90 | Stop Loss: 1257.80 | Exit: 1257.80 | Loss: -1.90
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[44] LTIM -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 3993.20 | Stop Loss: 4009.80 | Exit: 4009.80 | Loss: -16.60
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[45] M_M -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 2804.60 | Stop Loss: 2810.00 | Exit: 2810.00 | Loss: -5.40
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[46] SBIN -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 951.60 | Stop Loss: 953.45 | Exit: 953.45 | Loss: -1.85
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[47] NIFTY1! -- Morning Reversal Fade (SHORT)
+* Trigger Details: Entry: 22565.00 | Stop Loss: 22620.00 | Exit: 22620.00 | Loss: -55.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[48] TATAMOTORS -- G-Period Options Breakout (LONG)
+* Trigger Details: Entry: 278.70 | Stop Loss: 276.75 | Exit: 276.75 | Loss: 1.95
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[49] M_M -- G-Period Options Breakout (LONG)
+* Trigger Details: Entry: 2802.00 | Stop Loss: 2782.39 | Exit: 2782.39 | Loss: 19.61
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[50] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1861.90 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -23.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[51] HINDUNILVR -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1863.10 | Stop Loss: 1866.40 | Exit: 1866.40 | Loss: -3.30
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[52] HINDUNILVR -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1863.10 | Stop Loss: 1885.50 | Exit: 1885.50 | Loss: -22.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[53] M_M -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 2796.40 | Stop Loss: 2807.60 | Exit: 2807.60 | Loss: -11.20
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[54] HDFCBANK -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 705.80 | Stop Loss: 706.25 | Exit: 706.25 | Loss: -0.45
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[55] NIFTY1! -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 22593.00 | Stop Loss: 22620.00 | Exit: 22620.00 | Loss: -27.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[56] BAJFINANCE -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 960.55 | Stop Loss: 963.60 | Exit: 963.60 | Loss: -3.05
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[57] TECHM -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1521.70 | Stop Loss: 1525.80 | Exit: 1525.80 | Loss: -4.10
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[58] HINDUNILVR -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1861.10 | Stop Loss: 1867.20 | Exit: 1867.20 | Loss: -6.10
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[59] BANKNIFTY -- Weekly IB Breakout (LONG)
+* Trigger Details: Entry: 55340.70 | Stop Loss: 54974.92 | Exit: 54974.92 | Loss: 365.78
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[60] LT -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 3690.00 | Stop Loss: 3704.00 | Exit: 3704.00 | Loss: -14.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[61] BAJFINANCE -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 957.45 | Stop Loss: 963.90 | Exit: 963.90 | Loss: -6.45
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[62] ULTRACEMCO -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 10659.00 | Stop Loss: 10684.00 | Exit: 10684.00 | Loss: -25.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[63] BANKNIFTY -- Weekly IB Breakout (LONG)
+* Trigger Details: Entry: 55340.70 | Stop Loss: 54974.92 | Exit: 54974.92 | Loss: 365.78
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[64] NIFTY1! -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 22612.10 | Stop Loss: 22652.70 | Exit: 22652.70 | Loss: -40.60
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

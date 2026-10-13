@@ -74,12 +74,16 @@ export const GexProfile: React.FC<GexProfileProps> = ({
             <select
               className="custom-input custom-select"
               style={{ width: '135px', padding: '4px 28px 4px 10px', fontSize: '12px' }}
-              value={selectedExpiry}
+              value={selectedExpiry || (expiries.length > 0 ? expiries[0] : '')}
               onChange={(e) => onExpiryChange(e.target.value)}
             >
-              {expiries.map(exp => (
-                <option key={exp} value={exp}>{exp}</option>
-              ))}
+              {expiries.length > 0 ? (
+                expiries.map(exp => (
+                  <option key={exp} value={exp}>{exp}</option>
+                ))
+              ) : (
+                <option value="">Default Expiry</option>
+              )}
             </select>
           )}
         </div>
@@ -245,14 +249,14 @@ export const GexProfile: React.FC<GexProfileProps> = ({
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px' }}>
                   <span style={{ color: 'var(--text-secondary)' }}>Call Wall Resistance:</span>
                   <span style={{ color: '#ef4444', fontWeight: 'bold' }}>
-                    {stats?.call_wall?.toLocaleString('en-IN')} <span style={{ color: 'var(--text-muted)', fontWeight: 'normal' }}>(+{stats?.call_wall ? Math.max(0, stats.call_wall - gexData.spot_price).toFixed(0) : 0}pts)</span>
+                    {stats?.call_wall?.toLocaleString('en-IN')} <span style={{ color: 'var(--text-muted)', fontWeight: 'normal' }}>(+{stats?.call_wall ? Math.max(0, stats.call_wall - (gexData.spot_price || 0)).toFixed(0) : 0}pts)</span>
                   </span>
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px' }}>
                   <span style={{ color: 'var(--text-secondary)' }}>Put Wall Support:</span>
                   <span style={{ color: '#10b981', fontWeight: 'bold' }}>
-                    {stats?.put_wall?.toLocaleString('en-IN')} <span style={{ color: 'var(--text-muted)', fontWeight: 'normal' }}>(+{stats?.put_wall ? Math.max(0, gexData.spot_price - stats.put_wall).toFixed(0) : 0}pts)</span>
+                    {stats?.put_wall?.toLocaleString('en-IN')} <span style={{ color: 'var(--text-muted)', fontWeight: 'normal' }}>(+{stats?.put_wall ? Math.max(0, (gexData.spot_price || 0) - stats.put_wall).toFixed(0) : 0}pts)</span>
                   </span>
                 </div>
 
@@ -341,10 +345,10 @@ export const GexProfile: React.FC<GexProfileProps> = ({
                         </div>
                         <div style={{ textAlign: 'right' }}>
                           <div style={{ fontSize: '12px', fontWeight: 'bold', color: col }}>
-                            {adding ? '+' : ''}{(ch.diff / 100000).toFixed(1)}L OI
+                            {adding ? '+' : ''}{Math.abs(ch.diff) >= 100000 ? `${(ch.diff / 100000).toFixed(1)}L` : `${ch.diff?.toLocaleString()}`} OI
                           </div>
                           <div style={{ fontSize: '10px', color: 'var(--text-muted)' }}>
-                            {ch.netGEX > 0 ? '+' : ''}{ch.netGEX.toFixed(1)}Cr GEX
+                            {typeof ch.netGEX === 'number' ? `${ch.netGEX > 0 ? '+' : ''}${ch.netGEX.toFixed(1)}Cr GEX` : '0.0Cr GEX'}
                           </div>
                         </div>
                       </div>

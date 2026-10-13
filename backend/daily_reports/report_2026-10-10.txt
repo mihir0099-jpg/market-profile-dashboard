@@ -1,0 +1,104 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-10-10)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 22520.45
+  - Final PCR: 1.278 (Drift: 0.000)
+  - Key Walls: Call Wall at 22900 | Put Wall at 22500
+  - Gamma Flip Zone: 22550
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 55256.65
+  - Final PCR: 0.983 (Drift: 0.000)
+  - Key Walls: Call Wall at 56000 | Put Wall at 55000
+  - Gamma Flip Zone: 55300
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1819.70  | 1835.00  | 1726.30  | STOP_LOSS_HIT | -93.40  
+TVC:USOIL       | Auction Magnet               | INTRADAY | BUY   | 91.92    | 92.17    | 91.64    | STOP_LOSS_HIT | -0.28   
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1819.70  | 1835.00  | 1726.30  | STOP_LOSS_HIT | -93.40  
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1819.70  | 1835.00  | 1726.30  | STOP_LOSS_HIT | -93.40  
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1819.70  | 1835.00  | 1726.30  | STOP_LOSS_HIT | -93.40  
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1819.70  | 1835.00  | 1726.30  | STOP_LOSS_HIT | -93.40  
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1819.70  | 1835.00  | 1726.30  | STOP_LOSS_HIT | -93.40  
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1819.70  | 1835.00  | 1726.30  | STOP_LOSS_HIT | -93.40  
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1819.70  | 1835.00  | 1726.30  | STOP_LOSS_HIT | -93.40  
+BHARTIARTL      | Monthly Gap Fade Trap        | SWING  | LONG  | 1819.70  | 1835.00  | 1726.30  | STOP_LOSS_HIT | -93.40  
+
+Statistics:
+* Total Signals Triggered/Resolved: 10
+* Target Hits: 0
+* Stop Loss Hits: 10
+* Win Rate: 0.0%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] BHARTIARTL -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1819.70 | Stop Loss: 1726.30 | Exit: 1726.30 | Loss: -93.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[2] TVC:USOIL -- Auction Magnet (BUY)
+* Trigger Details: Entry: 91.92 | Stop Loss: 91.64 | Exit: 91.64 | Loss: -0.28
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[3] BHARTIARTL -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1819.70 | Stop Loss: 1726.30 | Exit: 1726.30 | Loss: -93.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[4] BHARTIARTL -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1819.70 | Stop Loss: 1726.30 | Exit: 1726.30 | Loss: -93.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[5] BHARTIARTL -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1819.70 | Stop Loss: 1726.30 | Exit: 1726.30 | Loss: -93.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[6] BHARTIARTL -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1819.70 | Stop Loss: 1726.30 | Exit: 1726.30 | Loss: -93.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[7] BHARTIARTL -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1819.70 | Stop Loss: 1726.30 | Exit: 1726.30 | Loss: -93.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[8] BHARTIARTL -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1819.70 | Stop Loss: 1726.30 | Exit: 1726.30 | Loss: -93.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[9] BHARTIARTL -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1819.70 | Stop Loss: 1726.30 | Exit: 1726.30 | Loss: -93.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[10] BHARTIARTL -- Monthly Gap Fade Trap (LONG)
+* Trigger Details: Entry: 1819.70 | Stop Loss: 1726.30 | Exit: 1726.30 | Loss: -93.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

@@ -1,7 +1,7 @@
 {
   "version": "2.0.0-AUTONOMOUS",
   "lastEvolutionTime": "2026-09-24T15:34:41.445Z",
-  "rulesLearnedCount": 18,
+  "rulesLearnedCount": 22,
   "negativeFilters": [
     {
       "id": "RULE_INDEX_CONFLUENCE",
@@ -110,6 +110,30 @@
       "condition": "Rule 3 Late-Day Rule: Lunchtime lull inside IB triggers an 85% probability of afternoon range expansion during Periods K-L-M (14:15 - 15:30 IST). Set breakout alerts at IB extremes.",
       "addedOn": "25/9/2026",
       "confidencePct": 85
+    },
+    {
+      "id": "LIVE_RULE_5A_1790832104044",
+      "condition": "Rule 5A Validated: Low established in Period A has 62.6% statistical probability of holding all day. Sell OTM Put spreads below 54535.",
+      "addedOn": "1/10/2026",
+      "confidencePct": 62.6
+    },
+    {
+      "id": "LIVE_RULE_4A_1790832104044",
+      "condition": "Rule 4A Active: Period C bullish breakout carries an 86.1% continuation win rate. Target: +69.6 pts extension to 55055.3.",
+      "addedOn": "1/10/2026",
+      "confidencePct": 86.1
+    },
+    {
+      "id": "LIVE_RULE_5A_1791719216724",
+      "condition": "Rule 5A Validated: Low established in Period A has 62.6% statistical probability of holding all day. Sell OTM Put spreads below 6781.",
+      "addedOn": "11/10/2026",
+      "confidencePct": 62.6
+    },
+    {
+      "id": "LIVE_RULE_4A_1791719216724",
+      "condition": "Rule 4A Active: Period C bullish breakout carries an 86.1% continuation win rate. Target: +69.6 pts extension to 7079.5.",
+      "addedOn": "11/10/2026",
+      "confidencePct": 86.1
     }
   ],
   "dynamicThresholds": {

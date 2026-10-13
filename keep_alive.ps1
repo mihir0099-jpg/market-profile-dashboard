@@ -261,7 +261,7 @@ while ($true) {
             $restartNode = $true
         } else {
             try {
-                $nodeHealth = Invoke-RestMethod -Uri "http://127.0.0.1:$port/health" -TimeoutSec 3 -ErrorAction Stop
+                $nodeHealth = Invoke-RestMethod -Uri "http://127.0.0.1:$port/health" -TimeoutSec 8 -ErrorAction Stop
                 if ($nodeHealth.status -eq "OK") {
                     $nodeFailures = 0
                 } else {
@@ -269,11 +269,11 @@ while ($true) {
                 }
             } catch {
                 $nodeFailures++
-                Log-Message "Node health check failed ($nodeFailures/3): $_"
+                Log-Message "Node health check failed ($nodeFailures/5): $_"
             }
 
-            if ($nodeFailures -ge 3) {
-                Log-Message "Node backend failed 3 consecutive checks. Force restarting..."
+            if ($nodeFailures -ge 5) {
+                Log-Message "Node backend failed 5 consecutive checks. Force restarting..."
                 $restartNode = $true
                 $nodeProc | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
                 $nodeFailures = 0

@@ -1,0 +1,1423 @@
+================================================================================
+📈 DAILY MARKET PROFILE & OPTIONS POST-MORTEM REPORT (2026-09-28)
+================================================================================
+This report details the conjoint GEX/PCR predictions, complete trade outcomes, 
+and automated machine learning diagnostics compiled immediately following today's close.
+
+--------------------------------------------------------------------------------
+1. CONJOINT INDEX GEX & PCR MARKET STATE
+--------------------------------------------------------------------------------
+* NSE:NIFTY
+  - Spot Close: 22780.25
+  - Final PCR: 0.620 (Drift: -0.032)
+  - Key Walls: Call Wall at 23000 | Put Wall at 22500
+  - Gamma Flip Zone: 22800
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+* NSE:BANKNIFTY
+  - Spot Close: 54471.65
+  - Final PCR: 0.693 (Drift: -0.097)
+  - Key Walls: Call Wall at 55000 | Put Wall at 54000
+  - Gamma Flip Zone: 54500
+  - Conjoint State: -GEX (Negative Gamma / High Volatility)
+
+--------------------------------------------------------------------------------
+2. DAILY OPTIONS TRADES SUMMARY
+--------------------------------------------------------------------------------
+Symbol          | Strategy                     | Type   | Dir   | Entry   | Target  | SL      | Status        | P&L Pts
+------------------------------------------------------------------------------------------------------------------------
+TVC:USOIL       | Weekly Gap Fade Trap         | SWING  | LONG  | 92.45    | 93.00    | 88.67    | TARGET_HIT    | -0.55   
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1327.70  | 1415.00  | 1452.00  | STOP_LOSS_HIT | -124.30 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 981.80   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -69.50  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2081.00  | 2290.00  | 2372.00  | STOP_LOSS_HIT | -291.00 
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1851.80  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -104.20 
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1221.30  | 1255.00  | 1280.70  | STOP_LOSS_HIT | -59.40  
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2447.40  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -24.50  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1550.50  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -98.50  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 981.80   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -69.50  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2081.00  | 2290.00  | 2372.00  | STOP_LOSS_HIT | -291.00 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1327.70  | 1415.00  | 1452.00  | TARGET_HIT    | -87.30  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 997.00   | 1010.00  | 1041.00  | TARGET_HIT    | -13.00  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1221.30  | 1255.00  | 1280.70  | STOP_LOSS_HIT | -59.40  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1851.80  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -104.20 
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2447.40  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -24.50  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11295.00 | 11780.00 | 12470.00 | TARGET_HIT    | -485.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1550.50  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -98.50  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2088.90  | 2290.00  | 2372.00  | TARGET_HIT    | -201.10 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1314.70  | 1415.00  | 1452.00  | TARGET_HIT    | -100.30 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 973.90   | 1045.00  | 1051.30  | TARGET_HIT    | -71.10  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1849.00  | 1910.00  | 1956.00  | TARGET_HIT    | -61.00  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.70   | 1010.00  | 1041.00  | TARGET_HIT    | -29.30  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1211.90  | 1255.00  | 1280.70  | TARGET_HIT    | -43.10  
+NTPC            | Auction Magnet               | INTRADAY | BUY   | 326.35   | 326.90   | 325.37   | STOP_LOSS_HIT | -0.98   
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 233.25   | 234.00   | 237.68   | TARGET_HIT    | -0.75   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2422.80  | 2440.00  | 2471.90  | TARGET_HIT    | -17.20  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11189.00 | 11780.00 | 12470.00 | TARGET_HIT    | -591.00 
+EICHERMOT       | Auction Magnet               | INTRADAY | SHORT | 7309.50  | 7305.00  | 7331.43  | TARGET_HIT    | 4.50    
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1547.60  | 1585.00  | 1649.00  | TARGET_HIT    | -37.40  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 970.40   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -80.90  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2086.60  | 2290.00  | 2372.00  | TARGET_HIT    | -203.40 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1309.40  | 1415.00  | 1452.00  | STOP_LOSS_HIT | -142.60 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.70   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -60.30  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.10  | 1255.00  | 1280.70  | STOP_LOSS_HIT | -70.60  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1847.30  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -108.70 
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 234.13   | 234.00   | 237.68   | STOP_LOSS_HIT | -3.55   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2421.30  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -50.60  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11169.00 | 11780.00 | 12470.00 | TARGET_HIT    | -611.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1544.50  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -104.50 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2063.00  | 2290.00  | 2372.00  | STOP_LOSS_HIT | -309.00 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 967.00   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -84.30  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1308.80  | 1415.00  | 1452.00  | STOP_LOSS_HIT | -143.20 
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1846.40  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -109.60 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 979.50   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -61.50  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.80  | 1255.00  | 1280.70  | STOP_LOSS_HIT | -69.90  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 233.85   | 234.00   | 237.68   | STOP_LOSS_HIT | -3.83   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2420.30  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -51.60  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1537.00  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -112.00 
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11159.00 | 11780.00 | 12470.00 | TARGET_HIT    | -621.00 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2062.10  | 2290.00  | 2372.00  | TARGET_HIT    | -227.90 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1308.10  | 1420.00  | 1452.00  | TARGET_HIT    | -111.90 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 967.80   | 1045.00  | 1051.30  | TARGET_HIT    | -77.20  
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 978.10   | 1010.00  | 1041.00  | TARGET_HIT    | -31.90  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1848.00  | 1910.00  | 1956.00  | TARGET_HIT    | -62.00  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.50  | 1260.00  | 1280.70  | TARGET_HIT    | -49.50  
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2422.00  | 2440.00  | 2471.90  | TARGET_HIT    | -18.00  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 233.82   | 234.00   | 237.68   | TARGET_HIT    | -0.18   
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11162.00 | 11780.00 | 12470.00 | TARGET_HIT    | -618.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1538.50  | 1585.00  | 1649.00  | TARGET_HIT    | -46.50  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1302.00  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -150.00 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2062.60  | 2290.00  | 2372.00  | STOP_LOSS_HIT | -309.40 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 966.90   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -84.40  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 981.40   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -59.60  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1213.20  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -67.50  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1845.90  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -110.10 
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 234.00   | 234.00   | 237.68   | STOP_LOSS_HIT | -3.68   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2426.30  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -45.60  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11131.00 | 11780.00 | 12470.00 | TARGET_HIT    | -649.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1537.00  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -112.00 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 965.80   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -85.50  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2063.90  | 2290.00  | 2372.00  | STOP_LOSS_HIT | -308.10 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1303.20  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -148.80 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.70   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -60.30  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1211.80  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -68.90  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1843.50  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -112.50 
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2426.80  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -45.10  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 234.05   | 234.00   | 237.68   | STOP_LOSS_HIT | -3.63   
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1304.90  | 1420.00  | 1452.00  | TARGET_HIT    | -115.10 
+BANKNIFTY       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 54640.15 | 55390.10 | 54592.50 | TARGET_HIT    | -749.95 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 964.90   | 1045.00  | 1051.30  | TARGET_HIT    | -80.10  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2061.20  | 2270.00  | 2372.00  | TARGET_HIT    | -208.80 
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.00  | 1260.00  | 1280.70  | TARGET_HIT    | -50.00  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 979.40   | 1010.00  | 1041.00  | TARGET_HIT    | -30.60  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1843.00  | 1910.00  | 1956.00  | TARGET_HIT    | -67.00  
+NTPC            | Monthly POC Reversion        | SWING  | LONG  | 327.80   | 330.00   | 323.00   | STOP_LOSS_HIT | -4.80   
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 233.49   | 234.00   | 237.68   | TARGET_HIT    | -0.51   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2424.40  | 2440.00  | 2471.90  | TARGET_HIT    | -15.60  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11115.00 | 11780.00 | 12470.00 | TARGET_HIT    | -665.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1531.40  | 1585.00  | 1649.00  | TARGET_HIT    | -53.60  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 965.60   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -85.70  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1305.70  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -146.30 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2059.20  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -312.80 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.00   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -61.00  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1842.10  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -113.90 
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.50  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -70.20  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 233.09   | 234.00   | 237.68   | STOP_LOSS_HIT | -4.59   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2424.40  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -47.50  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11125.00 | 11780.00 | 12470.00 | TARGET_HIT    | -655.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1528.20  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -120.80 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1303.80  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -148.20 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 965.00   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -86.30  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2054.20  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -317.80 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 976.20   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -64.80  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1844.50  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -111.50 
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1208.70  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -72.00  
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2425.60  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -46.30  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.80   | 234.00   | 237.68   | STOP_LOSS_HIT | -4.88   
+EICHERMOT       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 7260.50  | 7316.50  | 7241.00  | STOP_LOSS_HIT | -19.50  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11118.00 | 11780.00 | 12470.00 | TARGET_HIT    | -662.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1527.70  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -121.30 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 965.70   | 1045.00  | 1051.30  | TARGET_HIT    | -79.30  
+ICICIBANK       | Morning Reversal Fade        | INTRADAY | LONG  | 1303.90  | 1323.80  | 1300.60  | TARGET_HIT    | -19.90  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1303.90  | 1420.00  | 1452.00  | TARGET_HIT    | -116.10 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+TCS             | Morning Reversal Fade        | INTRADAY | LONG  | 2055.20  | 2098.90  | 2051.00  | TARGET_HIT    | -43.70  
+TCS             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 2059.20  | 2098.90  | 2054.50  | TARGET_HIT    | -39.70  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2059.20  | 2270.00  | 2372.00  | TARGET_HIT    | -210.80 
+RELIANCE        | Morning Reversal Fade        | INTRADAY | LONG  | 1207.50  | 1219.70  | 1206.50  | TARGET_HIT    | -12.20  
+NIFTY1!         | Morning Reversal Fade        | INTRADAY | LONG  | 22868.40 | 23124.10 | 22855.90 | TARGET_HIT    | -255.70 
+SUNPHARMA       | Morning Reversal Fade        | INTRADAY | LONG  | 1844.90  | 1855.00  | 1839.10  | TARGET_HIT    | -10.10  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1843.80  | 1910.00  | 1956.00  | TARGET_HIT    | -66.20  
+BAJFINANCE      | Morning Reversal Fade        | INTRADAY | LONG  | 976.50   | 992.30   | 974.00   | TARGET_HIT    | -15.80  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 977.40   | 1010.00  | 1041.00  | TARGET_HIT    | -32.60  
+LT              | Morning Reversal Fade        | INTRADAY | LONG  | 3821.70  | 3858.20  | 3815.00  | TARGET_HIT    | -36.50  
+ITC             | Morning Reversal Fade        | INTRADAY | LONG  | 265.75   | 269.30   | 265.25   | TARGET_HIT    | -3.55   
+INFY            | Morning Reversal Fade        | INTRADAY | LONG  | 988.30   | 1004.20  | 986.60   | TARGET_HIT    | -15.90  
+INFY            | Liquidity Sweep Reversal     | INTRADAY | LONG  | 990.40   | 1004.20  | 988.00   | TARGET_HIT    | -13.80  
+AXISBANK        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1209.20  | 1217.80  | 1206.60  | TARGET_HIT    | -8.60   
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1209.20  | 1260.00  | 1280.70  | TARGET_HIT    | -50.80  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2058.50  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -313.50 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 966.20   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -85.10  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1303.60  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -148.40 
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1843.20  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -112.80 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 976.40   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -64.60  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.60  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -70.10  
+ULTRACEMCO      | Morning Reversal Fade        | INTRADAY | LONG  | 11005.00 | 11155.00 | 10986.00 | STOP_LOSS_HIT | -19.00  
+NTPC            | Morning Reversal Fade        | INTRADAY | LONG  | 322.25   | 326.40   | 321.55   | STOP_LOSS_HIT | -0.70   
+POWERGRID       | Morning Reversal Fade        | INTRADAY | LONG  | 265.30   | 269.25   | 264.70   | STOP_LOSS_HIT | -0.60   
+COALINDIA       | Morning Reversal Fade        | INTRADAY | SHORT | 428.45   | 424.80   | 429.30   | STOP_LOSS_HIT | -0.85   
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.75   | 234.00   | 237.68   | STOP_LOSS_HIT | -4.93   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2417.60  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -54.30  
+TECHM           | Morning Reversal Fade        | INTRADAY | LONG  | 1527.10  | 1557.00  | 1526.80  | TARGET_HIT    | -29.90  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1532.40  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -116.60 
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11091.00 | 11780.00 | 12470.00 | TARGET_HIT    | -689.00 
+EICHERMOT       | Morning Reversal Fade        | INTRADAY | LONG  | 7261.50  | 7316.50  | 7241.00  | STOP_LOSS_HIT | -20.50  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2057.50  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -314.50 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 965.50   | 1045.00  | 1051.30  | STOP_LOSS_HIT | -85.80  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1303.70  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -148.30 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 978.00   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -63.00  
+ITC             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 266.25   | 269.30   | 265.55   | STOP_LOSS_HIT | -0.70   
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.00  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -70.70  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1843.60  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -112.40 
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.50   | 234.00   | 237.68   | STOP_LOSS_HIT | -5.18   
+ASIANPAINT      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 2423.40  | 2441.60  | 2414.30  | STOP_LOSS_HIT | -9.10   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2423.40  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -48.50  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1531.30  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -117.70 
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11071.00 | 11780.00 | 12470.00 | TARGET_HIT    | -709.00 
+TCS             | Morning Reversal Fade        | INTRADAY | LONG  | 2057.80  | 2098.90  | 2054.50  | TARGET_HIT    | -41.10  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2056.00  | 2270.00  | 2372.00  | TARGET_HIT    | -214.00 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 965.50   | 1040.00  | 1051.30  | TARGET_HIT    | -74.50  
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1303.70  | 1420.00  | 1452.00  | TARGET_HIT    | -116.30 
+HDFCBANK        | Morning Reversal Fade        | INTRADAY | LONG  | 720.20   | 733.00   | 720.00   | TARGET_HIT    | -12.80  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 284.00   | 315.00   | 320.15   | TARGET_HIT    | -31.00  
+AXISBANK        | Morning Reversal Fade        | INTRADAY | LONG  | 1210.20  | 1217.80  | 1206.60  | TARGET_HIT    | -7.60   
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.10  | 1260.00  | 1280.70  | TARGET_HIT    | -49.90  
+BAJFINANCE      | Morning Reversal Fade        | INTRADAY | LONG  | 978.10   | 992.30   | 975.20   | TARGET_HIT    | -14.20  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 977.60   | 1010.00  | 1041.00  | TARGET_HIT    | -32.40  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1843.10  | 1910.00  | 1956.00  | TARGET_HIT    | -66.90  
+NTPC            | Morning Reversal Fade        | INTRADAY | LONG  | 322.70   | 326.40   | 322.05   | TARGET_HIT    | -3.70   
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.03   | 234.00   | 237.68   | TARGET_HIT    | -1.97   
+COALINDIA       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 425.70   | 421.35   | 426.80   | STOP_LOSS_HIT | -1.10   
+ASIANPAINT      | Morning Reversal Fade        | INTRADAY | LONG  | 2424.10  | 2441.60  | 2414.30  | TARGET_HIT    | -17.50  
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2420.80  | 2440.00  | 2471.90  | TARGET_HIT    | -19.20  
+LTIM            | Morning Reversal Fade        | INTRADAY | SHORT | 4092.60  | 4018.20  | 4098.00  | TARGET_HIT    | 74.40   
+LTIM            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 4077.00  | 3996.00  | 4094.70  | STOP_LOSS_HIT | -17.70  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11050.00 | 11780.00 | 12470.00 | TARGET_HIT    | -730.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1530.60  | 1585.00  | 1649.00  | TARGET_HIT    | -54.40  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1305.60  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -146.40 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2060.80  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -311.20 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 965.00   | 1040.00  | 1051.30  | STOP_LOSS_HIT | -86.30  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1211.00  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -69.70  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1845.00  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -111.00 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 978.40   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -62.60  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.90   | 315.00   | 320.15   | TARGET_HIT    | -31.10  
+ITC             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 266.75   | 269.00   | 266.05   | STOP_LOSS_HIT | -0.70   
+POWERGRID       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 266.00   | 269.25   | 265.30   | STOP_LOSS_HIT | -0.70   
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.05   | 234.00   | 237.68   | STOP_LOSS_HIT | -5.63   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2426.10  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -45.80  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11048.00 | 11780.00 | 12470.00 | TARGET_HIT    | -732.00 
+TECHM           | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1535.70  | 1557.00  | 1529.70  | STOP_LOSS_HIT | -6.00   
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1535.70  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -113.30 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2064.00  | 2270.00  | 2372.00  | TARGET_HIT    | -206.00 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1307.60  | 1420.00  | 1452.00  | TARGET_HIT    | -112.40 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 966.00   | 1040.00  | 1051.30  | TARGET_HIT    | -74.00  
+BHARTIARTL      | Morning Reversal Fade        | INTRADAY | SHORT | 1777.60  | 1763.70  | 1779.30  | TARGET_HIT    | 13.90   
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1211.30  | 1260.00  | 1280.70  | TARGET_HIT    | -48.70  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.10   | 1010.00  | 1041.00  | TARGET_HIT    | -29.90  
+SUNPHARMA       | Morning Reversal Fade        | INTRADAY | LONG  | 1843.20  | 1855.00  | 1842.10  | TARGET_HIT    | -11.80  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1843.20  | 1910.00  | 1956.00  | TARGET_HIT    | -66.80  
+TATAMOTORS      | Morning Reversal Fade        | INTRADAY | LONG  | 283.90   | 291.20   | 283.50   | TARGET_HIT    | -7.30   
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.90   | 315.00   | 320.15   | TARGET_HIT    | -31.10  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1307.50  | 1420.00  | 1452.00  | TARGET_HIT    | -112.50 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 964.80   | 1040.00  | 1051.30  | TARGET_HIT    | -75.20  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2066.20  | 2270.00  | 2372.00  | TARGET_HIT    | -203.80 
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1209.40  | 1260.00  | 1280.70  | TARGET_HIT    | -50.60  
+BHARTIARTL      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1777.60  | 1763.70  | 1778.90  | TARGET_HIT    | 13.90   
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.60   | 1010.00  | 1041.00  | TARGET_HIT    | -29.40  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.60   | 315.00   | 320.15   | TARGET_HIT    | -31.40  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1842.60  | 1910.00  | 1956.00  | TARGET_HIT    | -67.40  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.04   | 234.00   | 237.68   | TARGET_HIT    | -1.96   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2427.50  | 2440.00  | 2471.90  | TARGET_HIT    | -12.50  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1539.70  | 1585.00  | 1649.00  | TARGET_HIT    | -45.30  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11055.00 | 11780.00 | 12470.00 | TARGET_HIT    | -725.00 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1306.70  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -145.30 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 965.00   | 1040.00  | 1051.30  | STOP_LOSS_HIT | -86.30  
+TVC:USOIL       | Liquidity Sweep Reversal     | INTRADAY | SHORT | 93.73    | 93.05    | 94.19    | TARGET_HIT    | 0.68    
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2070.60  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -301.40 
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1842.70  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -113.30 
+KOTAKBANK       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 399.75   | 407.95   | 397.85   | STOP_LOSS_HIT | -1.90   
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.10   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -60.90  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1207.90  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -72.80  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.60   | 315.00   | 320.15   | TARGET_HIT    | -31.40  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.01   | 234.00   | 237.68   | TARGET_HIT    | -1.99   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2426.90  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -45.00  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11050.00 | 11780.00 | 12470.00 | TARGET_HIT    | -730.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1542.50  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -106.50 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+BSE:SENSEX      | G-Period Options Breakout    | INTRADAY | SHORT | 72910.10 | 72399.73 | 73420.47 | STOP_LOSS_HIT | -510.37 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1302.70  | 1420.00  | 1452.00  | TARGET_HIT    | -117.30 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2074.00  | 2270.00  | 2372.00  | TARGET_HIT    | -196.00 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 964.80   | 1040.00  | 1051.30  | TARGET_HIT    | -75.20  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.65   | 315.00   | 320.15   | TARGET_HIT    | -31.35  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.40   | 1010.00  | 1041.00  | TARGET_HIT    | -29.60  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1841.20  | 1910.00  | 1956.00  | TARGET_HIT    | -68.80  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1207.00  | 1260.00  | 1280.70  | TARGET_HIT    | -53.00  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 231.78   | 234.00   | 237.68   | TARGET_HIT    | -2.22   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2429.00  | 2440.00  | 2471.90  | TARGET_HIT    | -11.00  
+M_M             | G-Period Options Breakout    | INTRADAY | SHORT | 2981.50  | 2960.63  | 3002.37  | STOP_LOSS_HIT | -20.87  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1545.10  | 1585.00  | 1649.00  | TARGET_HIT    | -39.90  
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.55   | 180.00   | 182.10   | TARGET_HIT    | -17.45  
+HCLTECH         | G-Period Options Breakout    | INTRADAY | SHORT | 1247.80  | 1239.07  | 1256.53  | STOP_LOSS_HIT | -8.73   
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11057.00 | 11780.00 | 12470.00 | TARGET_HIT    | -723.00 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1302.70  | 1420.00  | 1452.00  | TARGET_HIT    | -117.30 
+BSE:SENSEX      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 72969.39 | 73740.85 | 72898.23 | TARGET_HIT    | -771.46 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2075.80  | 2270.00  | 2372.00  | TARGET_HIT    | -194.20 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 964.90   | 1040.00  | 1051.30  | TARGET_HIT    | -75.10  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 284.10   | 315.00   | 320.15   | TARGET_HIT    | -30.90  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 981.30   | 1010.00  | 1041.00  | TARGET_HIT    | -28.70  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1209.00  | 1260.00  | 1280.70  | TARGET_HIT    | -51.00  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1842.80  | 1910.00  | 1956.00  | TARGET_HIT    | -67.20  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 231.70   | 234.00   | 237.68   | TARGET_HIT    | -2.30   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2429.30  | 2440.00  | 2471.90  | TARGET_HIT    | -10.70  
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.63   | 180.00   | 182.10   | TARGET_HIT    | -17.37  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1547.70  | 1585.00  | 1649.00  | TARGET_HIT    | -37.30  
+M_M             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 2988.60  | 3019.90  | 2980.70  | TARGET_HIT    | -31.30  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11051.00 | 11780.00 | 12470.00 | TARGET_HIT    | -729.00 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2076.00  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -296.00 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1304.00  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -148.00 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 964.90   | 1040.00  | 1051.30  | STOP_LOSS_HIT | -86.40  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1208.70  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -72.00  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.90   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -60.10  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.95   | 315.00   | 320.15   | TARGET_HIT    | -31.05  
+BHARTIARTL      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1775.10  | 1763.70  | 1779.50  | STOP_LOSS_HIT | -4.40   
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1842.20  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -113.80 
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2425.00  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -46.90  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 231.21   | 234.00   | 237.68   | STOP_LOSS_HIT | -6.47   
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.62   | 180.00   | 182.10   | STOP_LOSS_HIT | -19.48  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11053.00 | 11780.00 | 12470.00 | TARGET_HIT    | -727.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1545.00  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -104.00 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 964.60   | 1040.00  | 1051.30  | TARGET_HIT    | -75.40  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2077.10  | 2270.00  | 2372.00  | TARGET_HIT    | -192.90 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1304.50  | 1420.00  | 1452.00  | TARGET_HIT    | -115.50 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.50   | 1010.00  | 1041.00  | TARGET_HIT    | -29.50  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1841.90  | 1910.00  | 1956.00  | TARGET_HIT    | -68.10  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1208.80  | 1260.00  | 1280.70  | TARGET_HIT    | -51.20  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 284.05   | 315.00   | 320.15   | TARGET_HIT    | -30.95  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 231.71   | 234.00   | 237.68   | TARGET_HIT    | -2.29   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2428.10  | 2440.00  | 2471.90  | TARGET_HIT    | -11.90  
+HEROMOTOCO      | Monthly POC Reversion        | SWING  | LONG  | 5544.00  | 5610.00  | 5540.00  | STOP_LOSS_HIT | -4.00   
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1546.70  | 1585.00  | 1649.00  | TARGET_HIT    | -38.30  
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.60   | 180.00   | 182.10   | TARGET_HIT    | -17.40  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11055.00 | 11780.00 | 12470.00 | TARGET_HIT    | -725.00 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1306.40  | 1420.00  | 1452.00  | TARGET_HIT    | -113.60 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2078.60  | 2270.00  | 2372.00  | TARGET_HIT    | -191.40 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 963.40   | 1040.00  | 1051.30  | TARGET_HIT    | -76.60  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.65   | 315.00   | 320.15   | TARGET_HIT    | -31.35  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.20   | 1010.00  | 1041.00  | TARGET_HIT    | -29.80  
+BHARTIARTL      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1777.10  | 1763.70  | 1778.00  | TARGET_HIT    | 13.40   
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1209.10  | 1260.00  | 1280.70  | TARGET_HIT    | -50.90  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1841.90  | 1910.00  | 1956.00  | TARGET_HIT    | -68.10  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 231.78   | 234.00   | 237.68   | TARGET_HIT    | -2.22   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2428.50  | 2440.00  | 2471.90  | TARGET_HIT    | -11.50  
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.66   | 180.00   | 182.10   | TARGET_HIT    | -17.34  
+LTIM            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 4075.80  | 3996.00  | 4104.00  | STOP_LOSS_HIT | -28.20  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11043.00 | 11780.00 | 12470.00 | TARGET_HIT    | -737.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1546.30  | 1585.00  | 1649.00  | TARGET_HIT    | -38.70  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 962.60   | 1040.00  | 1051.30  | STOP_LOSS_HIT | -88.70  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1304.10  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -147.90 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2081.20  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -290.80 
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1841.60  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -114.40 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.00   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -61.00  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.15   | 315.00   | 320.15   | TARGET_HIT    | -31.85  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1209.70  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -71.00  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.18   | 234.00   | 237.68   | STOP_LOSS_HIT | -5.50   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2426.00  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -45.90  
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.65   | 180.00   | 182.10   | STOP_LOSS_HIT | -19.45  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11040.00 | 11780.00 | 12470.00 | TARGET_HIT    | -740.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1547.10  | 1585.00  | 1649.00  | STOP_LOSS_HIT | -101.90 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1304.40  | 1420.00  | 1452.00  | TARGET_HIT    | -115.60 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 962.70   | 1040.00  | 1051.30  | TARGET_HIT    | -77.30  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2082.60  | 2270.00  | 2372.00  | TARGET_HIT    | -187.40 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.35   | 315.00   | 320.15   | TARGET_HIT    | -31.65  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1845.70  | 1910.00  | 1956.00  | TARGET_HIT    | -64.30  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1208.50  | 1260.00  | 1280.70  | TARGET_HIT    | -51.50  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.10   | 1010.00  | 1041.00  | TARGET_HIT    | -29.90  
+POWERGRID       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 265.60   | 269.25   | 265.45   | TARGET_HIT    | -3.65   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2427.80  | 2440.00  | 2471.90  | TARGET_HIT    | -12.20  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.15   | 234.00   | 237.68   | TARGET_HIT    | -1.85   
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1305.60  | 1420.00  | 1452.00  | TARGET_HIT    | -114.40 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2090.30  | 2270.00  | 2372.00  | TARGET_HIT    | -179.70 
+BSE:SENSEX      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 72960.67 | 73740.85 | 72878.28 | TARGET_HIT    | -780.18 
+SBIN            | Liquidity Sweep Reversal     | INTRADAY | LONG  | 963.40   | 982.50   | 962.40   | TARGET_HIT    | -19.10  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 963.40   | 1040.00  | 1051.30  | TARGET_HIT    | -76.60  
+BANKNIFTY       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 54611.15 | 55390.10 | 54559.65 | TARGET_HIT    | -778.95 
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.90   | 315.00   | 320.15   | TARGET_HIT    | -31.10  
+BAJFINANCE      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 981.60   | 997.20   | 979.50   | STOP_LOSS_HIT | 2.10    
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 981.60   | 1010.00  | 1041.00  | TARGET_HIT    | -28.40  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1846.80  | 1910.00  | 1956.00  | TARGET_HIT    | -63.20  
+AXISBANK        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1210.00  | 1217.80  | 1208.00  | TARGET_HIT    | -7.80   
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.00  | 1260.00  | 1280.70  | TARGET_HIT    | -50.00  
+ITC             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 266.55   | 269.00   | 266.05   | TARGET_HIT    | -2.45   
+TATASTEEL       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 186.60   | 188.58   | 185.64   | TARGET_HIT    | -1.98   
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.03   | 234.00   | 237.68   | TARGET_HIT    | -1.97   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2429.10  | 2440.00  | 2471.90  | TARGET_HIT    | -10.90  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11059.00 | 11780.00 | 12470.00 | TARGET_HIT    | -721.00 
+EICHERMOT       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 7261.00  | 7316.50  | 7238.50  | TARGET_HIT    | -55.50  
+M_M             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 2990.50  | 3019.90  | 2982.90  | TARGET_HIT    | -29.40  
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 163.44   | 180.00   | 182.10   | TARGET_HIT    | -16.56  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1548.90  | 1585.00  | 1649.00  | TARGET_HIT    | -36.10  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 961.60   | 1040.00  | 1051.30  | STOP_LOSS_HIT | -89.70  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1305.10  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -146.90 
+TCS             | Liquidity Sweep Reversal     | INTRADAY | SHORT | 2080.00  | 2038.10  | 2091.80  | STOP_LOSS_HIT | -11.80  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2080.00  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -292.00 
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 284.25   | 315.00   | 320.15   | TARGET_HIT    | -30.75  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1209.80  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -70.90  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1844.00  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -112.00 
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 979.90   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -61.10  
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2427.50  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -44.40  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2083.30  | 2270.00  | 2372.00  | TARGET_HIT    | -186.70 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1304.30  | 1420.00  | 1452.00  | TARGET_HIT    | -115.70 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 961.60   | 1040.00  | 1051.30  | TARGET_HIT    | -78.40  
+NIFTY1!         | Liquidity Sweep Reversal     | INTRADAY | LONG  | 22892.00 | 23124.10 | 22882.60 | TARGET_HIT    | -232.10 
+BHARTIARTL      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1777.80  | 1763.70  | 1779.40  | TARGET_HIT    | 14.10   
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.10   | 1010.00  | 1041.00  | TARGET_HIT    | -29.90  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1211.50  | 1260.00  | 1280.70  | TARGET_HIT    | -48.50  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1847.30  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -108.70 
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 284.35   | 315.00   | 320.15   | TARGET_HIT    | -30.65  
+ULTRACEMCO      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 11033.00 | 11184.00 | 11025.00 | STOP_LOSS_HIT | 8.00    
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.05   | 234.00   | 237.68   | TARGET_HIT    | -1.95   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2427.20  | 2440.00  | 2471.90  | TARGET_HIT    | -12.80  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11045.00 | 11780.00 | 12470.00 | TARGET_HIT    | -735.00 
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 163.16   | 180.00   | 182.10   | TARGET_HIT    | -16.84  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1551.40  | 1590.00  | 1649.00  | TARGET_HIT    | -38.60  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1306.50  | 1420.00  | 1452.00  | TARGET_HIT    | -113.50 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 960.10   | 1040.00  | 1051.30  | TARGET_HIT    | -79.90  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2083.00  | 2270.00  | 2372.00  | TARGET_HIT    | -187.00 
+HDFCBANK        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 721.75   | 733.00   | 719.45   | TARGET_HIT    | -11.25  
+TATAMOTORS      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 284.70   | 291.20   | 284.20   | TARGET_HIT    | -6.50   
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 284.70   | 315.00   | 320.15   | TARGET_HIT    | -30.30  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 981.00   | 1010.00  | 1041.00  | TARGET_HIT    | -29.00  
+ITC             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 266.40   | 269.00   | 266.20   | STOP_LOSS_HIT | -0.20   
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1847.40  | 1910.00  | 1956.00  | TARGET_HIT    | -62.60  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1210.50  | 1260.00  | 1280.70  | TARGET_HIT    | -49.50  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 232.05   | 234.00   | 237.68   | TARGET_HIT    | -1.95   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2430.10  | 2440.00  | 2471.90  | TARGET_HIT    | -9.90   
+EICHERMOT       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 7260.00  | 7316.50  | 7244.00  | TARGET_HIT    | -56.50  
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 163.03   | 180.00   | 182.10   | TARGET_HIT    | -16.97  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11054.00 | 11780.00 | 12470.00 | TARGET_HIT    | -726.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1549.80  | 1590.00  | 1649.00  | TARGET_HIT    | -40.20  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 959.20   | 1040.00  | 1051.30  | STOP_LOSS_HIT | -92.10  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2081.20  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -290.80 
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1306.60  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -145.40 
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1209.70  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -71.00  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 284.30   | 315.00   | 320.15   | TARGET_HIT    | -30.70  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.70   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -60.30  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1846.90  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -109.10 
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 231.82   | 234.00   | 237.68   | TARGET_HIT    | -2.18   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2417.30  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -54.60  
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.80   | 180.00   | 182.10   | STOP_LOSS_HIT | -19.30  
+HEROMOTOCO      | Liquidity Sweep Reversal     | INTRADAY | SHORT | 5369.00  | 5322.50  | 5378.00  | STOP_LOSS_HIT | -9.00   
+M_M             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 2987.50  | 3019.90  | 2985.80  | TARGET_HIT    | -32.40  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11041.00 | 11780.00 | 12470.00 | TARGET_HIT    | -739.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1547.20  | 1590.00  | 1649.00  | STOP_LOSS_HIT | -101.80 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 958.70   | 1040.00  | 1051.30  | STOP_LOSS_HIT | -92.60  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1306.10  | 1420.00  | 1452.00  | TARGET_HIT    | -113.90 
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2079.70  | 2270.00  | 2372.00  | TARGET_HIT    | -190.30 
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 284.05   | 315.00   | 320.15   | TARGET_HIT    | -30.95  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 981.50   | 1010.00  | 1041.00  | TARGET_HIT    | -28.50  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1208.40  | 1260.00  | 1280.70  | TARGET_HIT    | -51.60  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1851.10  | 1910.00  | 1956.00  | TARGET_HIT    | -58.90  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 231.61   | 234.00   | 237.68   | TARGET_HIT    | -2.39   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2416.60  | 2440.00  | 2471.90  | TARGET_HIT    | -23.40  
+EICHERMOT       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 7261.50  | 7316.50  | 7259.50  | TARGET_HIT    | -55.00  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1549.00  | 1590.00  | 1649.00  | TARGET_HIT    | -41.00  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 11035.00 | 11780.00 | 12470.00 | TARGET_HIT    | -745.00 
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.70   | 180.00   | 182.10   | TARGET_HIT    | -17.30  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1303.00  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -149.00 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2073.70  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -298.30 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 957.20   | 1040.00  | 1051.30  | STOP_LOSS_HIT | -94.10  
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1847.10  | 1910.00  | 1956.00  | STOP_LOSS_HIT | -108.90 
+INFY            | Liquidity Sweep Reversal     | INTRADAY | SHORT | 1002.40  | 991.60   | 1007.00  | STOP_LOSS_HIT | -4.60   
+BAJFINANCE      | Liquidity Sweep Reversal     | INTRADAY | LONG  | 980.80   | 997.20   | 980.00   | STOP_LOSS_HIT | -0.80   
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 980.80   | 1010.00  | 1041.00  | STOP_LOSS_HIT | -60.20  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.25   | 315.00   | 320.15   | TARGET_HIT    | -31.75  
+AXISBANK        | Liquidity Sweep Reversal     | INTRADAY | LONG  | 1208.30  | 1217.80  | 1205.00  | STOP_LOSS_HIT | -3.30   
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1208.30  | 1260.00  | 1280.70  | STOP_LOSS_HIT | -72.40  
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2417.30  | 2440.00  | 2471.90  | STOP_LOSS_HIT | -54.60  
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 230.42   | 234.00   | 237.68   | TARGET_HIT    | -3.58   
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.24   | 180.00   | 182.10   | STOP_LOSS_HIT | -19.86  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 10995.00 | 11780.00 | 12470.00 | TARGET_HIT    | -785.00 
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1544.40  | 1590.00  | 1649.00  | STOP_LOSS_HIT | -104.60 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 960.40   | 1040.00  | 1051.30  | TARGET_HIT    | -79.60  
+BANKNIFTY       | Weekly IB Breakout           | SWING  | SHORT | 55341.20 | 54548.55 | 55831.15 | TARGET_HIT    | 792.65  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1301.40  | 1420.00  | 1452.00  | TARGET_HIT    | -118.60 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2074.00  | 2270.00  | 2372.00  | TARGET_HIT    | -196.00 
+RELIANCE        | 3:15 PM BTST Close           | BTST   | SHORT | 1198.80  | 1170.03  | 1208.39  | ACTIVE        | 0.00    
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1847.00  | 1910.00  | 1956.00  | TARGET_HIT    | -63.00  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 981.40   | 1010.00  | 1041.00  | TARGET_HIT    | -28.60  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1207.90  | 1260.00  | 1280.70  | TARGET_HIT    | -52.10  
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 282.90   | 315.00   | 320.15   | TARGET_HIT    | -32.10  
+TITAN           | 3:15 PM BTST Close           | BTST   | SHORT | 4813.00  | 4697.49  | 4851.50  | ACTIVE        | 0.00    
+COALINDIA       | 3:15 PM BTST Close           | BTST   | SHORT | 422.70   | 412.56   | 426.08   | ACTIVE        | 0.00    
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2417.40  | 2440.00  | 2471.90  | TARGET_HIT    | -22.60  
+ONGC            | 3:15 PM BTST Close           | BTST   | SHORT | 230.24   | 224.71   | 232.08   | ACTIVE        | 0.00    
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 230.24   | 234.00   | 237.68   | TARGET_HIT    | -3.76   
+POWERGRID       | 3:15 PM BTST Close           | BTST   | SHORT | 263.10   | 256.79   | 265.20   | ACTIVE        | 0.00    
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 10970.00 | 11780.00 | 12470.00 | TARGET_HIT    | -810.00 
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.16   | 180.00   | 182.10   | TARGET_HIT    | -17.84  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1545.40  | 1590.00  | 1649.00  | TARGET_HIT    | -44.60  
+M_M             | Liquidity Sweep Reversal     | INTRADAY | LONG  | 2988.60  | 3019.90  | 2985.10  | TARGET_HIT    | -31.30  
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 961.60   | 1040.00  | 1051.30  | TARGET_HIT    | -78.40  
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1301.40  | 1420.00  | 1452.00  | TARGET_HIT    | -118.60 
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2076.90  | 2270.00  | 2372.00  | TARGET_HIT    | -193.10 
+SUNPHARMA       | Monthly Gap Fade Trap        | SWING  | SHORT | 1847.50  | 1910.00  | 1956.00  | TARGET_HIT    | -62.50  
+LT              | 3:15 PM BTST Close           | BTST   | SHORT | 3782.10  | 3691.33  | 3812.36  | ACTIVE        | 0.00    
+TATAMOTORS      | Monthly Gap Fade Trap        | SWING  | SHORT | 283.05   | 315.00   | 320.15   | TARGET_HIT    | -31.95  
+BAJFINANCE      | Weekly Gap Fade Trap         | SWING  | SHORT | 984.00   | 1010.00  | 1041.00  | TARGET_HIT    | -26.00  
+AXISBANK        | Monthly Gap Fade Trap        | SWING  | SHORT | 1207.20  | 1260.00  | 1280.70  | TARGET_HIT    | -52.80  
+TATASTEEL       | Liquidity Sweep Reversal     | INTRADAY | LONG  | 186.14   | 188.58   | 185.67   | TARGET_HIT    | -2.44   
+ONGC            | Weekly Gap Fade Trap         | SWING  | SHORT | 230.33   | 234.00   | 237.68   | TARGET_HIT    | -3.67   
+ASIANPAINT      | Weekly Gap Fade Trap         | SWING  | SHORT | 2418.50  | 2440.00  | 2471.90  | TARGET_HIT    | -21.50  
+BAJAJ_AUTO      | Monthly Gap Fade Trap        | SWING  | SHORT | 10984.00 | 11780.00 | 12470.00 | TARGET_HIT    | -796.00 
+WIPRO           | Monthly Gap Fade Trap        | SWING  | SHORT | 162.22   | 180.00   | 182.10   | TARGET_HIT    | -17.78  
+TECHM           | Monthly Gap Fade Trap        | SWING  | SHORT | 1545.70  | 1590.00  | 1649.00  | TARGET_HIT    | -44.30  
+EICHERMOT       | 3:15 PM BTST Close           | BTST   | SHORT | 7211.00  | 7037.94  | 7268.69  | ACTIVE        | 0.00    
+ICICIBANK       | Monthly Gap Fade Trap        | SWING  | SHORT | 1301.40  | 1420.00  | 1452.00  | STOP_LOSS_HIT | -150.60 
+SBIN            | Monthly Gap Fade Trap        | SWING  | SHORT | 961.50   | 1040.00  | 1051.30  | STOP_LOSS_HIT | -89.80  
+TCS             | Monthly Gap Fade Trap        | SWING  | SHORT | 2073.60  | 2270.00  | 2372.00  | STOP_LOSS_HIT | -298.40 
+BANKNIFTY       | 3:15 PM BTST Close           | BTST   | SHORT | 54475.40 | 53167.99 | 54911.20 | STOP_LOSS_HIT | -435.80 
+HDFCBANK        | 3:15 PM BTST Close           | BTST   | SHORT | 718.85   | 701.60   | 724.60   | STOP_LOSS_HIT | -5.75   
+
+Statistics:
+* Total Signals Triggered/Resolved: 469
+* Target Hits: 280
+* Stop Loss Hits: 182
+* Win Rate: 60.6%
+
+--------------------------------------------------------------------------------
+3. FAILED TRADES DIAGNOSTICS & MISTAKE LOG
+--------------------------------------------------------------------------------
+
+[1] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1327.70 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -124.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[2] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 981.80 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -69.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[3] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2081.00 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -291.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[4] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1851.80 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -104.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[5] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1221.30 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -59.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[6] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2447.40 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -24.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[7] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1550.50 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -98.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[8] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 981.80 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -69.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[9] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2081.00 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -291.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[10] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1221.30 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -59.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[11] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1851.80 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -104.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[12] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2447.40 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -24.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[13] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1550.50 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -98.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[14] NTPC -- Auction Magnet (BUY)
+* Trigger Details: Entry: 326.35 | Stop Loss: 325.37 | Exit: 325.37 | Loss: -0.98
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[15] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 970.40 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -80.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[16] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1309.40 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -142.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[17] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 980.70 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -60.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[18] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1210.10 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -70.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[19] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1847.30 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -108.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[20] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 234.13 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -3.55
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[21] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2421.30 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -50.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[22] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1544.50 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -104.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[23] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2063.00 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -309.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[24] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 967.00 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -84.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[25] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1308.80 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -143.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[26] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1846.40 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -109.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[27] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 979.50 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -61.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[28] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1210.80 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -69.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[29] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 233.85 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -3.83
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[30] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2420.30 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -51.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[31] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1537.00 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -112.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[32] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1302.00 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -150.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[33] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2062.60 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -309.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[34] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 966.90 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -84.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[35] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 981.40 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -59.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[36] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1213.20 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -67.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[37] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1845.90 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -110.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[38] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 234.00 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -3.68
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[39] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2426.30 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -45.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[40] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1537.00 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -112.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[41] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 965.80 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -85.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[42] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2063.90 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -308.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[43] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1303.20 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -148.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[44] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 980.70 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -60.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[45] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1211.80 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -68.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[46] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1843.50 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -112.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[47] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2426.80 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -45.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[48] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 234.05 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -3.63
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[49] NTPC -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 327.80 | Stop Loss: 323.00 | Exit: 323.00 | Loss: -4.80
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[50] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 965.60 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -85.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[51] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1305.70 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -146.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[52] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2059.20 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -312.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[53] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 980.00 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -61.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[54] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1842.10 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -113.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[55] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1210.50 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -70.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[56] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 233.09 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -4.59
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[57] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2424.40 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -47.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[58] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1528.20 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -120.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[59] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1303.80 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -148.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[60] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 965.00 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -86.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[61] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2054.20 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -317.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[62] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 976.20 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -64.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[63] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1844.50 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -111.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[64] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1208.70 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -72.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[65] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2425.60 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -46.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[66] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 232.80 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -4.88
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[67] EICHERMOT -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 7260.50 | Stop Loss: 7241.00 | Exit: 7241.00 | Loss: -19.50
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[68] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1527.70 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -121.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[69] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2058.50 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -313.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[70] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 966.20 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -85.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[71] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1303.60 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -148.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[72] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1843.20 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -112.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[73] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 976.40 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -64.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[74] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1210.60 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -70.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[75] ULTRACEMCO -- Morning Reversal Fade (LONG)
+* Trigger Details: Entry: 11005.00 | Stop Loss: 10986.00 | Exit: 10986.00 | Loss: -19.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[76] NTPC -- Morning Reversal Fade (LONG)
+* Trigger Details: Entry: 322.25 | Stop Loss: 321.55 | Exit: 321.55 | Loss: -0.70
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[77] POWERGRID -- Morning Reversal Fade (LONG)
+* Trigger Details: Entry: 265.30 | Stop Loss: 264.70 | Exit: 264.70 | Loss: -0.60
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[78] COALINDIA -- Morning Reversal Fade (SHORT)
+* Trigger Details: Entry: 428.45 | Stop Loss: 429.30 | Exit: 429.30 | Loss: -0.85
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[79] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 232.75 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -4.93
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[80] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2417.60 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -54.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[81] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1532.40 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -116.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[82] EICHERMOT -- Morning Reversal Fade (LONG)
+* Trigger Details: Entry: 7261.50 | Stop Loss: 7241.00 | Exit: 7241.00 | Loss: -20.50
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[83] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2057.50 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -314.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[84] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 965.50 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -85.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[85] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1303.70 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -148.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[86] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 978.00 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -63.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[87] ITC -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 266.25 | Stop Loss: 265.55 | Exit: 265.55 | Loss: -0.70
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[88] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1210.00 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -70.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[89] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1843.60 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -112.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[90] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 232.50 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -5.18
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[91] ASIANPAINT -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 2423.40 | Stop Loss: 2414.30 | Exit: 2414.30 | Loss: -9.10
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[92] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2423.40 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -48.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[93] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1531.30 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -117.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[94] COALINDIA -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 425.70 | Stop Loss: 426.80 | Exit: 426.80 | Loss: -1.10
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[95] LTIM -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 4077.00 | Stop Loss: 4094.70 | Exit: 4094.70 | Loss: -17.70
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[96] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1305.60 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -146.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[97] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2060.80 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -311.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[98] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 965.00 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -86.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[99] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1211.00 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -69.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[100] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1845.00 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -111.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[101] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 978.40 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -62.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[102] ITC -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 266.75 | Stop Loss: 266.05 | Exit: 266.05 | Loss: -0.70
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[103] POWERGRID -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 266.00 | Stop Loss: 265.30 | Exit: 265.30 | Loss: -0.70
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[104] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 232.05 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -5.63
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[105] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2426.10 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -45.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[106] TECHM -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 1535.70 | Stop Loss: 1529.70 | Exit: 1529.70 | Loss: -6.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[107] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1535.70 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -113.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[108] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1306.70 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -145.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[109] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 965.00 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -86.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[110] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2070.60 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -301.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[111] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1842.70 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -113.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[112] KOTAKBANK -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 399.75 | Stop Loss: 397.85 | Exit: 397.85 | Loss: -1.90
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[113] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 980.10 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -60.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[114] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1207.90 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -72.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[115] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2426.90 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -45.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[116] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1542.50 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -106.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[117] BSE:SENSEX -- G-Period Options Breakout (SHORT)
+* Trigger Details: Entry: 72910.10 | Stop Loss: 73420.47 | Exit: 73420.47 | Loss: -510.37
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[118] M_M -- G-Period Options Breakout (SHORT)
+* Trigger Details: Entry: 2981.50 | Stop Loss: 3002.37 | Exit: 3002.37 | Loss: -20.87
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[119] HCLTECH -- G-Period Options Breakout (SHORT)
+* Trigger Details: Entry: 1247.80 | Stop Loss: 1256.53 | Exit: 1256.53 | Loss: -8.73
+* Mistake Diagnosis: Low-Volume Breakout Fakeout. Breakout occurred in Period G but did not satisfy the 1.2x relative volume filter.
+* Auto-Learned Parameter / Constraint Adjustment: G-Period Volume filter: G-Period stock breakouts require breakout candle volume >= 1.2x of the 20-candle average.
+
+[120] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2076.00 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -296.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[121] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1304.00 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -148.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[122] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 964.90 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -86.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[123] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1208.70 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -72.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[124] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 980.90 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -60.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[125] BHARTIARTL -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1775.10 | Stop Loss: 1779.50 | Exit: 1779.50 | Loss: -4.40
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[126] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1842.20 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -113.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[127] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2425.00 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -46.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[128] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 231.21 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -6.47
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[129] WIPRO -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 162.62 | Stop Loss: 182.10 | Exit: 182.10 | Loss: -19.48
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[130] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1545.00 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -104.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[131] HEROMOTOCO -- Monthly POC Reversion (LONG)
+* Trigger Details: Entry: 5544.00 | Stop Loss: 5540.00 | Exit: 5540.00 | Loss: -4.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[132] LTIM -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 4075.80 | Stop Loss: 4104.00 | Exit: 4104.00 | Loss: -28.20
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[133] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 962.60 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -88.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[134] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1304.10 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -147.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[135] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2081.20 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -290.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[136] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1841.60 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -114.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[137] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 980.00 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -61.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[138] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1209.70 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -71.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[139] ONGC -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 232.18 | Stop Loss: 237.68 | Exit: 237.68 | Loss: -5.50
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[140] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2426.00 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -45.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[141] WIPRO -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 162.65 | Stop Loss: 182.10 | Exit: 182.10 | Loss: -19.45
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[142] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1547.10 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -101.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[143] BAJFINANCE -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 981.60 | Stop Loss: 979.50 | Exit: 979.50 | Loss: 2.10
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[144] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 961.60 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -89.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[145] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1305.10 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -146.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[146] TCS -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 2080.00 | Stop Loss: 2091.80 | Exit: 2091.80 | Loss: -11.80
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[147] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2080.00 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -292.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[148] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1209.80 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -70.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[149] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1844.00 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -112.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[150] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 979.90 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -61.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[151] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2427.50 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -44.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[152] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1847.30 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -108.70
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[153] ULTRACEMCO -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 11033.00 | Stop Loss: 11025.00 | Exit: 11025.00 | Loss: 8.00
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[154] ITC -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 266.40 | Stop Loss: 266.20 | Exit: 266.20 | Loss: -0.20
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[155] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 959.20 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -92.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[156] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2081.20 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -290.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[157] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1306.60 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -145.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[158] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1209.70 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -71.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[159] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 980.70 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -60.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[160] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1846.90 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -109.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[161] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2417.30 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -54.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[162] WIPRO -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 162.80 | Stop Loss: 182.10 | Exit: 182.10 | Loss: -19.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[163] HEROMOTOCO -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 5369.00 | Stop Loss: 5378.00 | Exit: 5378.00 | Loss: -9.00
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[164] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1547.20 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -101.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[165] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 958.70 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -92.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[166] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1303.00 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -149.00
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[167] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2073.70 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -298.30
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[168] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 957.20 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -94.10
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[169] SUNPHARMA -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1847.10 | Stop Loss: 1956.00 | Exit: 1956.00 | Loss: -108.90
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[170] INFY -- Liquidity Sweep Reversal (SHORT)
+* Trigger Details: Entry: 1002.40 | Stop Loss: 1007.00 | Exit: 1007.00 | Loss: -4.60
+* Mistake Diagnosis: Weak Exhaustion Sweep. Rejection shadow size did not satisfy standard exhaustion parameters, trapping entries.
+* Auto-Learned Parameter / Constraint Adjustment: Sweep Safety Filter: Sweep candle shadow must exceed 2.0x of the candle body instead of 1.5x.
+
+[171] BAJFINANCE -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 980.80 | Stop Loss: 980.00 | Exit: 980.00 | Loss: -0.80
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[172] BAJFINANCE -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 980.80 | Stop Loss: 1041.00 | Exit: 1041.00 | Loss: -60.20
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[173] AXISBANK -- Liquidity Sweep Reversal (LONG)
+* Trigger Details: Entry: 1208.30 | Stop Loss: 1205.00 | Exit: 1205.00 | Loss: -3.30
+* Mistake Diagnosis: Broader Index Drag. Trade direction was LONG, but Nifty index closed bearish, dragging this stock down.
+* Auto-Learned Parameter / Constraint Adjustment: Index Trend Confluence: Never buy stock CE options when Nifty is trading below its open or has a negative PCR drift (< -0.03).
+
+[174] AXISBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1208.30 | Stop Loss: 1280.70 | Exit: 1280.70 | Loss: -72.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[175] ASIANPAINT -- Weekly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2417.30 | Stop Loss: 2471.90 | Exit: 2471.90 | Loss: -54.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[176] WIPRO -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 162.24 | Stop Loss: 182.10 | Exit: 182.10 | Loss: -19.86
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[177] TECHM -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1544.40 | Stop Loss: 1649.00 | Exit: 1649.00 | Loss: -104.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[178] ICICIBANK -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 1301.40 | Stop Loss: 1452.00 | Exit: 1452.00 | Loss: -150.60
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[179] SBIN -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 961.50 | Stop Loss: 1051.30 | Exit: 1051.30 | Loss: -89.80
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[180] TCS -- Monthly Gap Fade Trap (SHORT)
+* Trigger Details: Entry: 2073.60 | Stop Loss: 2372.00 | Exit: 2372.00 | Loss: -298.40
+* Mistake Diagnosis: Market noise / volatility sweep.
+* Auto-Learned Parameter / Constraint Adjustment: None
+
+[181] BANKNIFTY -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 54475.40 | Stop Loss: 54911.20 | Exit: 54911.20 | Loss: -435.80
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+[182] HDFCBANK -- 3:15 PM BTST Close (SHORT)
+* Trigger Details: Entry: 718.85 | Stop Loss: 724.60 | Exit: 724.60 | Loss: -5.75
+* Mistake Diagnosis: Retracement close trap. Stock closed near highs but saw late-day profit booking in the final 15 minutes.
+* Auto-Learned Parameter / Constraint Adjustment: BTST Close Filter: Ensure stock closing strength remains strictly above 90% in the final 5 minutes of trade.
+
+================================================================================
+Investments in the securities market are subject to market risks. Read all the 
+related documents carefully before investing. All calls and ideas shared are 
+for educational purposes only.
+================================================================================

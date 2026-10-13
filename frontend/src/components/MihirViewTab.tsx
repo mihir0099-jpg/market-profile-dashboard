@@ -3,7 +3,8 @@ import {
   BookOpen, Compass, Layers, Activity, Clock, 
   Target, Search, Scale, RefreshCw, Info,
   Brain, Wrench, Sparkles, CheckCircle2, AlertTriangle, ShieldCheck,
-  ArrowUpRight, ArrowDownRight, TrendingUp, TrendingDown, Zap
+  ArrowUpRight, ArrowDownRight, TrendingUp, TrendingDown, Zap,
+  Waves, Flame, Gauge, BarChart2
 } from 'lucide-react';
 import { getApiBase } from '../utils/apiConfig';
 import type { DayProfile, ProfileNuances, Candle } from '../utils/profileCalculator';
@@ -97,12 +98,20 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
   nuances: propNuances,
   candles,
 }) => {
-  const [activeSubTab, setActiveSubTab] = useState<'deepdive' | 'scanner' | 'playbook' | 'learner'>('deepdive');
+  const [activeSubTab, setActiveSubTab] = useState<'deepdive' | 'scanner' | 'orderflow' | 'greeks' | 'playbook' | 'learner'>('deepdive');
   const [scannerData, setScannerData] = useState<ScannerItem[]>([]);
   const [loadingScanner, setLoadingScanner] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filterClass, setFilterClass] = useState<'all' | 'small' | 'medium' | 'large'>('all');
   const [currentTime, setCurrentTime] = useState<Date>(new Date());
+
+  // Option B: Order Flow Microstructure & Cumulative Volume Delta (CVD)
+  const [orderFlowData, setOrderFlowData] = useState<any>(null);
+  const [loadingOrderFlow, setLoadingOrderFlow] = useState<boolean>(false);
+
+  // Option C: Live Options Greeks & Expiry Gamma Scalp Radar
+  const [greeksData, setGreeksData] = useState<any>(null);
+  const [loadingGreeks, setLoadingGreeks] = useState<boolean>(false);
 
   // Self-learner state
   const [learningsData, setLearningsData] = useState<LearningsData | null>(null);
@@ -123,8 +132,42 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
   const [autonomousEngineMeta, setAutonomousEngineMeta] = useState<any>(null);
   const [learningJournal, setLearningJournal] = useState<any[]>([]);
   const [ruleStats, setRuleStats] = useState<any>(null);
+  const [failureInsights, setFailureInsights] = useState<any[]>([]);
+  const [failureFilter, setFailureFilter] = useState<string>('ALL');
 
   const backendUrl = getApiBase();
+
+  // Fetch Option B: Order Flow Microstructure & CVD data
+  const fetchOrderFlowData = async (sym = currentSymbol) => {
+    setLoadingOrderFlow(true);
+    try {
+      const res = await fetch(`${backendUrl}/api/orderflow/cvd?symbol=${encodeURIComponent(sym)}&tf=5`);
+      if (res.ok) {
+        const data = await res.json();
+        setOrderFlowData(data);
+      }
+    } catch (e) {
+      console.error('Failed to fetch order flow data:', e);
+    } finally {
+      setLoadingOrderFlow(false);
+    }
+  };
+
+  // Fetch Option C: Options Greeks & Gamma Scalping data
+  const fetchGreeksData = async (sym = currentSymbol) => {
+    setLoadingGreeks(true);
+    try {
+      const res = await fetch(`${backendUrl}/api/options/greeks?symbol=${encodeURIComponent(sym)}`);
+      if (res.ok) {
+        const data = await res.json();
+        setGreeksData(data);
+      }
+    } catch (e) {
+      console.error('Failed to fetch options greeks data:', e);
+    } finally {
+      setLoadingGreeks(false);
+    }
+  };
 
   // Clock ticker for market period detection
   useEffect(() => {
@@ -200,11 +243,29 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         if (data.stats) {
           setRuleStats(data.stats);
         }
+        if (data.failureInsights && Array.isArray(data.failureInsights)) {
+          setFailureInsights(data.failureInsights);
+        }
       }
     } catch (e) {
       console.error('Failed to fetch auto-generated ML rules:', e);
     } finally {
       setLoadingRules(false);
+    }
+  };
+
+  // Fetch failure post-mortems and Market Profile understandings
+  const fetchFailureInsights = async () => {
+    try {
+      const res = await fetch(`${backendUrl}/api/mihir-ml/failure-insights`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data.insights && Array.isArray(data.insights)) {
+          setFailureInsights(data.insights);
+        }
+      }
+    } catch (e) {
+      console.warn('Failed to fetch failure insights:', e);
     }
   };
 
@@ -220,6 +281,9 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
           setGeneratedRules(data.rules);
           if (data.autonomousEngine) {
             setAutonomousEngineMeta(data.autonomousEngine);
+          }
+          if (data.failureInsights && Array.isArray(data.failureInsights)) {
+            setFailureInsights(data.failureInsights);
           }
           const count = data.newlyDiscoveredCount || 0;
           setRuleMineStatus(
@@ -264,6 +328,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
         await fetchLearningsData();
         await fetchMlModel();
         await fetchGeneratedRules();
+        await fetchFailureInsights();
       }
     } catch (e) {
       console.error('Error triggering prediction evaluation:', e);
@@ -277,14 +342,20 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
     fetchLearningsData();
     fetchMlModel();
     fetchGeneratedRules();
+    fetchFailureInsights();
+    fetchOrderFlowData(currentSymbol);
+    fetchGreeksData(currentSymbol);
     const interval = setInterval(() => {
       fetchScannerData();
       fetchLearningsData();
       fetchMlModel();
       fetchGeneratedRules();
+      fetchFailureInsights();
+      fetchOrderFlowData(currentSymbol);
+      fetchGreeksData(currentSymbol);
     }, 30000);
     return () => clearInterval(interval);
-  }, [backendUrl]);
+  }, [backendUrl, currentSymbol]);
 
   // Compute profile nuances if not provided by parent
   const { computedActive, computedPrior, computedNuances } = useMemo(() => {
@@ -914,6 +985,13 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
     return generatedRules.filter(r => r.category === ruleCategoryFilter);
   }, [generatedRules, ruleCategoryFilter]);
 
+  // Filtered failure post-mortems by root cause archetype
+  const filteredFailureInsights = useMemo(() => {
+    if (!failureInsights || failureInsights.length === 0) return [];
+    if (failureFilter === 'ALL') return failureInsights;
+    return failureInsights.filter((item: any) => item.rootCause === failureFilter);
+  }, [failureInsights, failureFilter]);
+
   // Quick preset symbols
   const quickSymbols = ['NSE:NIFTY', 'NSE:BANKNIFTY', 'BSE:SENSEX', 'MCX:CRUDEOIL1!', 'NSE:RELIANCE', 'NSE:HDFCBANK', 'NSE:TCS', 'NSE:ICICIBANK'];
 
@@ -979,7 +1057,7 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
           </div>
 
           {/* Sub-tab buttons */}
-          <div style={{ display: 'flex', background: 'rgba(255,255,255,0.04)', padding: '4px', borderRadius: '8px', border: '1px solid var(--border-color)', gap: '4px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', background: 'rgba(255,255,255,0.04)', padding: '4px', borderRadius: '8px', border: '1px solid var(--border-color)', gap: '4px' }}>
             <button
               onClick={() => setActiveSubTab('deepdive')}
               style={{
@@ -999,6 +1077,30 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
               }}
             >
               Multi-Asset Table ({scannerData.length})
+            </button>
+            <button
+              onClick={() => setActiveSubTab('orderflow')}
+              style={{
+                padding: '6px 12px', borderRadius: '6px', fontSize: '12px', fontWeight: '700', cursor: 'pointer', border: 'none',
+                background: activeSubTab === 'orderflow' ? 'linear-gradient(135deg, #06b6d4, #3b82f6)' : 'transparent',
+                color: activeSubTab === 'orderflow' ? '#fff' : '#38bdf8',
+                display: 'flex', alignItems: 'center', gap: '6px'
+              }}
+            >
+              <Waves size={13} />
+              🌊 CVD & Order Flow
+            </button>
+            <button
+              onClick={() => setActiveSubTab('greeks')}
+              style={{
+                padding: '6px 12px', borderRadius: '6px', fontSize: '12px', fontWeight: '700', cursor: 'pointer', border: 'none',
+                background: activeSubTab === 'greeks' ? 'linear-gradient(135deg, #f59e0b, #ef4444)' : 'transparent',
+                color: activeSubTab === 'greeks' ? '#fff' : '#fbbf24',
+                display: 'flex', alignItems: 'center', gap: '6px'
+              }}
+            >
+              <Zap size={13} />
+              ⚡ Greeks & Gamma Scalp
             </button>
             <button
               onClick={() => setActiveSubTab('learner')}
@@ -1109,6 +1211,11 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                   <div style={{ fontSize: '12px', color: '#cbd5e1', marginTop: '4px', lineHeight: '1.4' }}>
                     <strong>Action:</strong> {activeSymbolMlRules[0].recommendedAction}
                   </div>
+                  {activeSymbolMlRules[0].activeSafeguards && activeSymbolMlRules[0].activeSafeguards.length > 0 && (
+                    <div style={{ fontSize: '11px', color: '#34d399', marginTop: '5px', background: 'rgba(16, 185, 129, 0.12)', padding: '4px 9px', borderRadius: '5px', border: '1px solid rgba(16, 185, 129, 0.3)', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                      🛡️ <strong>Auto-Learned Safeguard:</strong> {activeSymbolMlRules[0].activeSafeguards[0]}
+                    </div>
+                  )}
                 </div>
               </div>
               <button
@@ -2589,6 +2696,13 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                         </div>
                       )}
 
+                      {/* Enforced Safeguard / Negative Filter badge */}
+                      {rule.activeSafeguards && rule.activeSafeguards.length > 0 && (
+                        <div style={{ fontSize: '11px', color: '#34d399', background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)', padding: '5px 8px', borderRadius: '5px', lineHeight: '1.35' }}>
+                          🛡️ <strong>Auto-Learned Safeguard:</strong> {rule.activeSafeguards[0]}
+                        </div>
+                      )}
+
                       {/* Market logic & status footer */}
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '4px', fontSize: '10.5px', color: '#475569', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
                         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', color: isRetired ? '#f59e0b' : '#10b981', fontWeight: '600' }}>
@@ -2596,6 +2710,164 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                           {rule.status?.replace(/_/g, ' ') || 'ACTIVE LIVE ENFORCEMENT'}
                         </span>
                         <span>Auto-Trained · Confidence updates daily</span>
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </div>
+
+          {/* ── RULE FAILURE FORENSIC POST-MORTEM & NEW MARKET PROFILE UNDERSTANDINGS ── */}
+          <div className="glass-panel" style={{ padding: '24px', borderLeft: '4px solid #ef4444', background: 'linear-gradient(180deg, rgba(239, 68, 68, 0.04) 0%, rgba(0,0,0,0.2) 100%)' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '16px', marginBottom: '18px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'linear-gradient(135deg, #ef4444, #f97316)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 14px rgba(239,68,68,0.3)', flexShrink: 0 }}>
+                  <AlertTriangle size={22} color="#fff" />
+                </div>
+                <div>
+                  <h4 style={{ margin: 0, fontSize: '17px', fontWeight: '700', color: '#fff', display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                    Rule Failure Forensic Post-Mortem & New Market Profile Understandings
+                    <span style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '5px', background: 'rgba(239,68,68,0.2)', color: '#f87171', border: '1px solid rgba(239,68,68,0.4)', fontWeight: '800' }}>
+                      {failureInsights.length} Failures Diagnosed & Safeguarded
+                    </span>
+                  </h4>
+                  <p style={{ margin: '4px 0 0 0', fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    Whenever a rule or trade signal fails, the AI conducts immediate root-cause forensics, extracts new structural Market Profile understandings, and automatically injects negative filters/safeguards so the mistake is never repeated.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <span style={{ fontSize: '11px', color: '#10b981', background: 'rgba(16,185,129,0.1)', padding: '4px 10px', borderRadius: '6px', border: '1px solid rgba(16,185,129,0.3)', fontWeight: '700' }}>
+                  🛡️ Negative Filters Auto-Active
+                </span>
+                <button
+                  onClick={fetchFailureInsights}
+                  title="Refresh Failure Insights"
+                  style={{ padding: '6px 10px', borderRadius: '6px', fontSize: '11px', background: 'rgba(255,255,255,0.05)', color: '#fff', border: '1px solid var(--border-color)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}
+                >
+                  <RefreshCw size={11} /> Refresh
+                </button>
+              </div>
+            </div>
+
+            {/* Filter buttons */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', overflowX: 'auto', paddingBottom: '8px', marginBottom: '16px' }}>
+              <span style={{ fontSize: '11px', color: '#64748b', fontWeight: '700', marginRight: '4px', flexShrink: 0 }}>Root Cause:</span>
+              {[
+                { id: 'ALL', label: 'All Post-Mortems' },
+                { id: 'INDEX_DRAG_DIVERGENCE', label: '🔴 Index Drag Divergence' },
+                { id: 'FAILED_AUCTION_EXTENSION', label: '🟠 Period D/E Freeze' },
+                { id: 'VOLUME_EXHAUSTION_OR_ABSENCE', label: '🟡 Volume Climax / Low-Vol' },
+                { id: 'LAGGING_POC_PULL', label: '🟣 Lagging POC Vacuum' },
+                { id: 'ORR_DOUBLE_EXPANSION_TRAP', label: '🔵 ORR / Neutral Day Sweep' },
+                { id: 'LUNCHTIME_THETA_DECAY_FLUSH', label: '🟤 G-Period Candle Close' }
+              ].map(flt => (
+                <button
+                  key={flt.id}
+                  onClick={() => setFailureFilter(flt.id)}
+                  style={{
+                    padding: '4px 10px', borderRadius: '6px', fontSize: '10.5px', fontWeight: '700', cursor: 'pointer', border: 'none',
+                    background: failureFilter === flt.id ? 'linear-gradient(135deg, #ef4444, #f97316)' : 'rgba(255,255,255,0.04)',
+                    color: failureFilter === flt.id ? '#fff' : '#64748b', whiteSpace: 'nowrap', flexShrink: 0
+                  }}
+                >
+                  {flt.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Failure Post-Mortem Cards Grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '16px' }}>
+              {filteredFailureInsights.length === 0 ? (
+                <div style={{ color: '#64748b', fontSize: '12px', padding: '20px', textAlign: 'center' }}>
+                  No failure records found for selected filter.
+                </div>
+              ) : (
+                filteredFailureInsights.map((item: any, idx: number) => {
+                  const archetypeColor =
+                    item.rootCause === 'INDEX_DRAG_DIVERGENCE' ? '#ef4444' :
+                    item.rootCause === 'FAILED_AUCTION_EXTENSION' ? '#f97316' :
+                    item.rootCause === 'VOLUME_EXHAUSTION_OR_ABSENCE' ? '#eab308' :
+                    item.rootCause === 'LAGGING_POC_PULL' ? '#a855f7' :
+                    item.rootCause === 'ORR_DOUBLE_EXPANSION_TRAP' ? '#3b82f6' :
+                    item.rootCause === 'LUNCHTIME_THETA_DECAY_FLUSH' ? '#d97706' : '#ef4444';
+
+                  return (
+                    <div
+                      key={item.id || idx}
+                      style={{
+                        padding: '16px', borderRadius: '10px',
+                        background: 'rgba(0,0,0,0.4)',
+                        border: `1px solid ${archetypeColor}35`,
+                        display: 'flex', flexDirection: 'column', gap: '12px',
+                        position: 'relative'
+                      }}
+                    >
+                      {/* Top Bar */}
+                      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '10px' }}>
+                        <div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                            <span style={{ fontSize: '11px', fontWeight: '800', padding: '2px 7px', borderRadius: '4px', background: `${archetypeColor}25`, color: archetypeColor, border: `1px solid ${archetypeColor}50` }}>
+                              {item.ruleId}
+                            </span>
+                            <span style={{ fontSize: '11px', fontWeight: '700', padding: '2px 7px', borderRadius: '4px', background: 'rgba(255,255,255,0.06)', color: '#fff' }}>
+                              {item.symbol}
+                            </span>
+                            {item.previousConfidence && item.adjustedConfidence && (
+                              <span style={{ fontSize: '10px', color: '#f87171', background: 'rgba(239,68,68,0.15)', padding: '2px 6px', borderRadius: '4px', fontWeight: '700' }}>
+                                📉 {item.previousConfidence}% → {item.adjustedConfidence}%
+                              </span>
+                            )}
+                          </div>
+                          <div style={{ fontSize: '13px', fontWeight: '700', color: '#fff', marginTop: '6px' }}>
+                            {item.ruleTitle}
+                          </div>
+                        </div>
+                        <span style={{ fontSize: '10px', color: '#64748b', whiteSpace: 'nowrap' }}>
+                          {item.timestamp ? new Date(item.timestamp).toLocaleDateString('en-IN') : 'Recent'}
+                        </span>
+                      </div>
+
+                      {/* Root Cause Tag */}
+                      <div style={{ fontSize: '11px', fontWeight: '700', color: archetypeColor, background: `${archetypeColor}15`, padding: '5px 9px', borderRadius: '5px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <span>⚠️ Root Cause:</span> {item.rootCauseLabel || item.rootCause}
+                      </div>
+
+                      {/* Block 1: Why It Failed */}
+                      <div style={{ padding: '10px 12px', borderRadius: '7px', background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.2)' }}>
+                        <div style={{ fontSize: '11px', fontWeight: '800', color: '#f87171', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+                          <span>🔴</span> Why Did It Fail? (Forensic Analysis)
+                        </div>
+                        <div style={{ fontSize: '12px', color: '#cbd5e1', lineHeight: '1.45' }}>
+                          {item.whyItFailed}
+                        </div>
+                      </div>
+
+                      {/* Block 2: What We Understood From Market Profile */}
+                      <div style={{ padding: '10px 12px', borderRadius: '7px', background: 'rgba(168,85,247,0.06)', border: '1px solid rgba(168,85,247,0.2)' }}>
+                        <div style={{ fontSize: '11px', fontWeight: '800', color: '#c084fc', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+                          <span>💡</span> What We Understood From Market Profile (New Truth)
+                        </div>
+                        <div style={{ fontSize: '12px', color: '#e2e8f0', lineHeight: '1.45' }}>
+                          {item.marketProfileUnderstanding}
+                        </div>
+                      </div>
+
+                      {/* Block 3: Auto-Correction & Safeguard Enforced */}
+                      <div style={{ padding: '10px 12px', borderRadius: '7px', background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)' }}>
+                        <div style={{ fontSize: '11px', fontWeight: '800', color: '#34d399', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+                          <span>🛡️</span> Auto-Correction & Active Safeguard Enforced
+                        </div>
+                        <div style={{ fontSize: '12px', color: '#a7f3d0', lineHeight: '1.45' }}>
+                          {item.autoCorrectionApplied}
+                        </div>
+                        {item.ruleExceptionInjected && (
+                          <div style={{ marginTop: '5px', fontSize: '10.5px', color: '#10b981', fontFamily: 'monospace', background: 'rgba(0,0,0,0.3)', padding: '3px 6px', borderRadius: '4px', display: 'inline-block' }}>
+                            Filter Code: {item.ruleExceptionInjected}
+                          </div>
+                        )}
                       </div>
                     </div>
                   );
@@ -2933,6 +3205,588 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
                       );
                     })
                   )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      )}
+
+      {/* SUB-TAB: OPTION B - ORDER FLOW MICROSTRUCTURE & CVD DELTA ENGINE */}
+      {activeSubTab === 'orderflow' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          
+          {/* Header & Regime Status */}
+          <div className="glass-panel" style={{ padding: '20px 24px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '16px', borderLeft: '4px solid #06b6d4', background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(59, 130, 246, 0.05))' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(6, 182, 212, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(6, 182, 212, 0.3)' }}>
+                <Waves size={26} color="#06b6d4" />
+              </div>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <h3 style={{ margin: 0, fontSize: '19px', fontWeight: '800', color: '#fff' }}>
+                    🌊 Order Flow Microstructure & CVD Delta Engine
+                  </h3>
+                  <span style={{ fontSize: '11px', fontWeight: '800', padding: '3px 8px', borderRadius: '5px', background: 'rgba(6, 182, 212, 0.2)', color: '#38bdf8', border: '1px solid rgba(6, 182, 212, 0.4)' }}>
+                    {currentSymbol} (5-Min Delta)
+                  </span>
+                </div>
+                <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', marginTop: '4px' }}>
+                  Real-time aggressive Ask/Bid volume delta, Cumulative Volume Delta (CVD) trend, institutional iceberg absorption, and divergence forensics.
+                </div>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <button
+                onClick={() => fetchOrderFlowData(currentSymbol)}
+                disabled={loadingOrderFlow}
+                style={{
+                  padding: '7px 14px', borderRadius: '8px', fontSize: '12px', fontWeight: '700',
+                  background: 'rgba(255,255,255,0.06)', color: '#e2e8f0', border: '1px solid var(--border-color)',
+                  cursor: loadingOrderFlow ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', gap: '6px'
+                }}
+              >
+                <RefreshCw size={13} className={loadingOrderFlow ? 'spin' : ''} />
+                {loadingOrderFlow ? 'Refreshing Delta...' : 'Refresh Flow'}
+              </button>
+            </div>
+          </div>
+
+          {/* Metric KPI Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px' }}>
+            
+            {/* KPI 1: Order Flow Regime */}
+            <div className="glass-panel" style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase' }}>
+                Flow Regime
+              </span>
+              <div style={{ fontSize: '16px', fontWeight: '800', color: orderFlowData?.regimeColor || '#60a5fa' }}>
+                {orderFlowData?.flowRegime?.replace(/_/g, ' ') || 'BALANCED AUCTION'}
+              </div>
+              <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                {orderFlowData?.regimeDesc || 'Two-sided rotational balance.'}
+              </div>
+            </div>
+
+            {/* KPI 2: Cumulative Volume Delta (CVD) */}
+            <div className="glass-panel" style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase' }}>
+                Net Cumulative Delta (CVD)
+              </span>
+              <div style={{ fontSize: '20px', fontWeight: '900', color: (orderFlowData?.cumulativeDelta || 0) >= 0 ? 'var(--color-bull)' : 'var(--color-bear)' }}>
+                {(orderFlowData?.cumulativeDelta || 0) > 0 ? '+' : ''}{orderFlowData?.cumulativeDelta?.toLocaleString() || 0}
+              </div>
+              <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
+                Delta Ratio: <strong style={{ color: '#fff' }}>{((orderFlowData?.deltaRatio || 0) * 100).toFixed(1)}%</strong> of total volume
+              </div>
+            </div>
+
+            {/* KPI 3: Recent 5-Bar Delta Pressure */}
+            <div className="glass-panel" style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase' }}>
+                Recent 5-Bar Pressure
+              </span>
+              <div style={{ fontSize: '20px', fontWeight: '900', color: (orderFlowData?.recentDelta || 0) >= 0 ? 'var(--color-bull)' : 'var(--color-bear)' }}>
+                {(orderFlowData?.recentDelta || 0) > 0 ? '+' : ''}{orderFlowData?.recentDelta?.toLocaleString() || 0}
+              </div>
+              <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
+                Last Bar RVOL: <strong style={{ color: '#fff' }}>{orderFlowData?.lastBarRvol || 1.0}x</strong> average
+              </div>
+            </div>
+
+            {/* KPI 4: Total Buy vs Sell Aggression */}
+            <div className="glass-panel" style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase' }}>
+                Buy / Sell Volume Split
+              </span>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', fontWeight: '700' }}>
+                <span style={{ color: 'var(--color-bull)' }}>Ask: {orderFlowData?.totalBuyVolume?.toLocaleString() || 0}</span>
+                <span style={{ color: 'var(--color-bear)' }}>Bid: {orderFlowData?.totalSellVolume?.toLocaleString() || 0}</span>
+              </div>
+              <div style={{ height: '8px', width: '100%', background: 'rgba(239, 68, 68, 0.4)', borderRadius: '4px', overflow: 'hidden', marginTop: '4px' }}>
+                <div style={{
+                  height: '100%',
+                  background: 'var(--color-bull)',
+                  width: `${Math.round(((orderFlowData?.totalBuyVolume || 1) / Math.max(1, (orderFlowData?.totalBuyVolume || 1) + (orderFlowData?.totalSellVolume || 1))) * 100)}%`
+                }} />
+              </div>
+            </div>
+
+          </div>
+
+          {/* CVD Line & Bar Delta Histogram Visualizer */}
+          <div className="glass-panel" style={{ padding: '24px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+              <div>
+                <h4 style={{ margin: 0, fontSize: '16px', fontWeight: '700', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <BarChart2 size={18} color="#06b6d4" />
+                  Cumulative Volume Delta (CVD) & Bar Delta Histogram
+                </h4>
+                <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                  Cyan curve tracks running cumulative delta. Green/Red histogram bars display individual 5-min net aggression.
+                </div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: '#38bdf8' }}>
+                  <span style={{ width: '10px', height: '3px', background: '#06b6d4', borderRadius: '2px' }}></span> CVD Line
+                </span>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--color-bull)' }}>
+                  <span style={{ width: '8px', height: '8px', background: 'var(--color-bull)', borderRadius: '2px' }}></span> +Delta
+                </span>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--color-bear)' }}>
+                  <span style={{ width: '8px', height: '8px', background: 'var(--color-bear)', borderRadius: '2px' }}></span> -Delta
+                </span>
+              </div>
+            </div>
+
+            {/* SVG Visual Chart */}
+            {orderFlowData?.bars && orderFlowData.bars.length > 0 ? (() => {
+              const bars = orderFlowData.bars;
+              const n = bars.length;
+              const width = 850;
+              const height = 220;
+              const padLeft = 40;
+              const padRight = 20;
+              const padTop = 20;
+              const padBottom = 30;
+              const chartW = width - padLeft - padRight;
+              const chartH = height - padTop - padBottom;
+
+              const cvdValues = bars.map((b: any) => b.cvd);
+              const minCvd = Math.min(0, ...cvdValues);
+              const maxCvd = Math.max(0, ...cvdValues);
+              const span = Math.max(1, maxCvd - minCvd);
+
+              const zeroY = padTop + chartH * (maxCvd / span);
+
+              const points = bars.map((b: any, i: number) => {
+                const x = padLeft + (i / Math.max(1, n - 1)) * chartW;
+                const y = padTop + chartH * ((maxCvd - b.cvd) / span);
+                return `${x.toFixed(1)},${y.toFixed(1)}`;
+              });
+
+              const pathD = `M ${points.join(' L ')}`;
+              const areaD = `M ${padLeft},${zeroY} L ${points.join(' L ')} L ${padLeft + chartW},${zeroY} Z`;
+
+              return (
+                <div style={{ width: '100%', overflowX: 'auto' }}>
+                  <svg viewBox={`0 0 ${width} ${height}`} style={{ width: '100%', minWidth: '600px', height: '220px' }}>
+                    <defs>
+                      <linearGradient id="cvdGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.4" />
+                        <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.0" />
+                      </linearGradient>
+                    </defs>
+
+                    {/* Zero baseline */}
+                    <line x1={padLeft} y1={zeroY} x2={padLeft + chartW} y2={zeroY} stroke="rgba(255,255,255,0.2)" strokeDasharray="4 4" strokeWidth="1" />
+                    <text x={padLeft - 8} y={zeroY + 4} fill="rgba(255,255,255,0.4)" fontSize="10" textAnchor="end">0</text>
+                    <text x={padLeft - 8} y={padTop + 10} fill="rgba(255,255,255,0.4)" fontSize="10" textAnchor="end">+{maxCvd}</text>
+                    <text x={padLeft - 8} y={padTop + chartH} fill="rgba(255,255,255,0.4)" fontSize="10" textAnchor="end">{minCvd}</text>
+
+                    {/* Bar Delta histogram (in bottom half or scaled around zero) */}
+                    {bars.map((b: any, i: number) => {
+                      const x = padLeft + (i / Math.max(1, n - 1)) * chartW - 2.5;
+                      const maxDelta = Math.max(1, ...bars.map((bar: any) => Math.abs(bar.delta)));
+                      const barH = Math.min(30, (Math.abs(b.delta) / maxDelta) * 30);
+                      const isPos = b.delta >= 0;
+                      const y = isPos ? zeroY - barH : zeroY;
+
+                      return (
+                        <rect
+                          key={i}
+                          x={x}
+                          y={y}
+                          width={5}
+                          height={Math.max(1, barH)}
+                          fill={isPos ? 'rgba(16, 185, 129, 0.65)' : 'rgba(239, 68, 68, 0.65)'}
+                          rx={1}
+                        />
+                      );
+                    })}
+
+                    {/* CVD Area Fill */}
+                    <path d={areaD} fill="url(#cvdGradient)" />
+
+                    {/* CVD Curve */}
+                    <path d={pathD} fill="none" stroke="#06b6d4" strokeWidth="2.5" />
+
+                    {/* Last point dot */}
+                    {points.length > 0 && (() => {
+                      const lastPt = points[points.length - 1].split(',');
+                      return (
+                        <circle cx={lastPt[0]} cy={lastPt[1]} r="4.5" fill="#38bdf8" stroke="#fff" strokeWidth="1.5" />
+                      );
+                    })()}
+                  </svg>
+                </div>
+              );
+            })() : (
+              <div style={{ padding: '30px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '13px' }}>
+                Fetching live order flow candles...
+              </div>
+            )}
+          </div>
+
+          {/* CVD Divergence & Iceberg Absorption Alert Panels */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '16px' }}>
+            
+            {/* Panel 1: CVD Divergences (Passive Smart Money Absorption) */}
+            <div className="glass-panel" style={{ padding: '20px 24px', borderLeft: '4px solid #a855f7' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                <h4 style={{ margin: 0, fontSize: '15px', fontWeight: '700', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Sparkles size={17} color="#a855f7" />
+                  CVD Divergence Alerts ({orderFlowData?.divergences?.length || 0})
+                </h4>
+                <span style={{ fontSize: '11px', color: '#c084fc', fontWeight: '600' }}>Smart Money Divergence</span>
+              </div>
+
+              {orderFlowData?.divergences && orderFlowData.divergences.length > 0 ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {orderFlowData.divergences.map((div: any, idx: number) => (
+                    <div key={idx} style={{
+                      padding: '12px 14px', borderRadius: '8px',
+                      background: div.direction === 'BULLISH' ? 'rgba(16, 185, 129, 0.08)' : 'rgba(239, 68, 68, 0.08)',
+                      border: `1px solid ${div.direction === 'BULLISH' ? 'rgba(16, 185, 129, 0.25)' : 'rgba(239, 68, 68, 0.25)'}`
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
+                        <span style={{ fontSize: '12px', fontWeight: '800', color: div.direction === 'BULLISH' ? 'var(--color-bull)' : 'var(--color-bear)' }}>
+                          {div.title}
+                        </span>
+                        {div.nearReference && (
+                          <span style={{ fontSize: '10.5px', fontWeight: '700', padding: '2px 6px', borderRadius: '4px', background: 'rgba(168, 85, 247, 0.2)', color: '#c084fc' }}>
+                            At {div.nearReference.name}
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ fontSize: '12px', color: '#e2e8f0', lineHeight: '1.4' }}>
+                        {div.detail}
+                      </div>
+                      <div style={{ fontSize: '11.5px', color: '#38bdf8', marginTop: '6px', fontWeight: '600' }}>
+                        💡 <strong>Action:</strong> {div.action}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div style={{ padding: '20px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '12.5px', background: 'rgba(255,255,255,0.02)', borderRadius: '8px' }}>
+                  ✅ No active delta divergence detected. Price and aggressive volume delta are currently auctioning in sync.
+                </div>
+              )}
+            </div>
+
+            {/* Panel 2: Institutional Iceberg Absorptions */}
+            <div className="glass-panel" style={{ padding: '20px 24px', borderLeft: '4px solid #f59e0b' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                <h4 style={{ margin: 0, fontSize: '15px', fontWeight: '700', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <ShieldCheck size={17} color="#f59e0b" />
+                  Institutional Iceberg & Absorption Monitor ({orderFlowData?.absorptions?.length || 0})
+                </h4>
+                <span style={{ fontSize: '11px', color: '#fbbf24', fontWeight: '600' }}>Passive Limits</span>
+              </div>
+
+              {orderFlowData?.absorptions && orderFlowData.absorptions.length > 0 ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {orderFlowData.absorptions.map((abs: any, idx: number) => (
+                    <div key={idx} style={{
+                      padding: '12px 14px', borderRadius: '8px',
+                      background: abs.bias === 'BULLISH' ? 'rgba(16, 185, 129, 0.08)' : 'rgba(239, 68, 68, 0.08)',
+                      border: `1px solid ${abs.bias === 'BULLISH' ? 'rgba(16, 185, 129, 0.25)' : 'rgba(239, 68, 68, 0.25)'}`
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
+                        <span style={{ fontSize: '12px', fontWeight: '800', color: abs.bias === 'BULLISH' ? 'var(--color-bull)' : 'var(--color-bear)' }}>
+                          {abs.title}
+                        </span>
+                        <span style={{ fontSize: '10.5px', fontWeight: '700', padding: '2px 6px', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.2)', color: '#fbbf24' }}>
+                          RVOL {abs.rvol}x
+                        </span>
+                      </div>
+                      <div style={{ fontSize: '12px', color: '#e2e8f0', lineHeight: '1.4' }}>
+                        {abs.detail}
+                      </div>
+                      {abs.nearReference && (
+                        <div style={{ fontSize: '11.5px', color: '#fbbf24', marginTop: '6px', fontWeight: '600' }}>
+                          🎯 Defending Market Profile level: <strong>{abs.nearReference.name} ({abs.nearReference.price.toFixed(2)})</strong>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div style={{ padding: '20px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '12.5px', background: 'rgba(255,255,255,0.02)', borderRadius: '8px' }}>
+                  🛡️ No heavy iceberg block absorption detected in the last 20 bars. Liquidity resting normally.
+                </div>
+              )}
+            </div>
+
+          </div>
+
+          {/* Dalton & Order Flow Integration Rules Card */}
+          <div className="glass-panel" style={{ padding: '20px 24px', borderLeft: '4px solid #3b82f6' }}>
+            <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', fontWeight: '700', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <BookOpen size={17} color="#3b82f6" />
+              Market Profile & Order Flow CVD Execution Principles
+            </h4>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
+              <div style={{ padding: '12px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '12.5px', fontWeight: '700', color: '#38bdf8', marginBottom: '4px' }}>1. Initial Balance Extreme Absorption</div>
+                <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                  If price sweeps IB High or Low on heavy volume (&gt;1.5x RVOL) but CVD diverges or prints opposing delta, institutional limit orders have absorbed the move. Fade the trap and target the opposite morning extreme!
+                </div>
+              </div>
+              <div style={{ padding: '12px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '12.5px', fontWeight: '700', color: '#10b981', marginBottom: '4px' }}>2. Dalton 80% Rule Order Flow Confirmation</div>
+                <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                  When price opens outside value and prints two consecutive 30-min brackets inside the Value Area, check CVD: positive net delta confirms responsive traverse toward Prior POC and opposite Value Area boundary.
+                </div>
+              </div>
+              <div style={{ padding: '12px', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '12.5px', fontWeight: '700', color: '#f59e0b', marginBottom: '4px' }}>3. Volume Climax Exhaustion</div>
+                <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                  An extreme volume spike (3x - 5x average) printing at the end of a multi-TPO trend accompanied by delta stalling indicates exhaustion. Prepare for immediate mean-reversion reversal.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      )}
+
+      {/* SUB-TAB: OPTION C - LIVE OPTIONS GREEKS & EXPIRY GAMMA SCALP RADAR */}
+      {activeSubTab === 'greeks' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          
+          {/* Header Banner */}
+          <div className="glass-panel" style={{ padding: '20px 24px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '16px', borderLeft: '4px solid #f59e0b', background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(239, 68, 68, 0.05))' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(245, 158, 11, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(245, 158, 11, 0.3)' }}>
+                <Zap size={26} color="#f59e0b" />
+              </div>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <h3 style={{ margin: 0, fontSize: '19px', fontWeight: '800', color: '#fff' }}>
+                    ⚡ Live Options Greeks & Expiry Gamma Scalp Radar
+                  </h3>
+                  <span style={{ fontSize: '11px', fontWeight: '800', padding: '3px 8px', borderRadius: '5px', background: 'rgba(245, 158, 11, 0.2)', color: '#fbbf24', border: '1px solid rgba(245, 158, 11, 0.4)' }}>
+                    Spot: {greeksData?.spotPrice?.toFixed(2) || '-'}
+                  </span>
+                </div>
+                <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', marginTop: '4px' }}>
+                  Black-Scholes Greeks (Δ Delta, Γ Gamma, Θ Theta decay, ν Vega, IV), Period G Lunchtime Theta Risk, and Expiry afternoon explosive convexity setups.
+                </div>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <button
+                onClick={() => fetchGreeksData(currentSymbol)}
+                disabled={loadingGreeks}
+                style={{
+                  padding: '7px 14px', borderRadius: '8px', fontSize: '12px', fontWeight: '700',
+                  background: 'rgba(255,255,255,0.06)', color: '#e2e8f0', border: '1px solid var(--border-color)',
+                  cursor: loadingGreeks ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', gap: '6px'
+                }}
+              >
+                <RefreshCw size={13} className={loadingGreeks ? 'spin' : ''} />
+                {loadingGreeks ? 'Calculating Greeks...' : 'Refresh Greeks'}
+              </button>
+            </div>
+          </div>
+
+          {/* Metric Status Bar: DTE, VIX, Lunchtime Theta, PCR Velocity */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px' }}>
+            
+            {/* Metric 1: Gamma Squeeze Window Status */}
+            <div className="glass-panel" style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase' }}>
+                Gamma Window Status
+              </span>
+              <div style={{ fontSize: '14px', fontWeight: '800', color: greeksData?.gammaScalpEngine?.isAfternoonWindow ? '#f43f5e' : (greeksData?.gammaScalpEngine?.isPeriodG ? '#f59e0b' : '#38bdf8') }}>
+                {greeksData?.gammaScalpEngine?.windowStatus || 'Monitoring Strike Convexity'}
+              </div>
+              <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
+                DTE: <strong style={{ color: '#fff' }}>{greeksData?.dteDays?.toFixed(1) || 0} days</strong> | VIX: <strong style={{ color: '#fff' }}>{greeksData?.vix || 13.2}%</strong>
+              </div>
+            </div>
+
+            {/* Metric 2: Lunchtime Theta Burn Risk Gauge */}
+            <div className="glass-panel" style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase' }}>
+                Period G Theta Risk (12:15 - 12:45)
+              </span>
+              <div style={{ fontSize: '15px', fontWeight: '800', color: greeksData?.lunchtimeTheta?.riskColor || '#f59e0b' }}>
+                {greeksData?.lunchtimeTheta?.riskLevel?.replace(/_/g, ' ') || 'MODERATE'}
+              </div>
+              <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                Straddle Burn: <strong style={{ color: '#fff' }}>{greeksData?.lunchtimeTheta?.expectedStraddleBurnPct || '2.0%'}</strong>. {greeksData?.lunchtimeTheta?.advice || 'Monitor theta decay.'}
+              </div>
+            </div>
+
+            {/* Metric 3: First-Hour PCR Velocity & Drift */}
+            <div className="glass-panel" style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase' }}>
+                First-Hour PCR Velocity
+              </span>
+              <div style={{ fontSize: '15px', fontWeight: '800', color: greeksData?.pcrVelocity?.color || '#60a5fa' }}>
+                {greeksData?.pcrVelocity?.signal?.replace(/_/g, ' ') || 'NEUTRAL AUCTION'}
+              </div>
+              <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
+                Drift: <strong style={{ color: (greeksData?.pcrVelocity?.drift || 0) >= 0 ? 'var(--color-bull)' : 'var(--color-bear)' }}>{(greeksData?.pcrVelocity?.drift || 0) > 0 ? '+' : ''}{greeksData?.pcrVelocity?.drift || 0}</strong> ({greeksData?.pcrVelocity?.driftPct || 0}%)
+              </div>
+            </div>
+
+            {/* Metric 4: ATM Strike Reference */}
+            <div className="glass-panel" style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase' }}>
+                ATM Strike Anchor
+              </span>
+              <div style={{ fontSize: '20px', fontWeight: '900', color: '#fbbf24' }}>
+                {greeksData?.greeksMatrix?.atmStrike || '-'}
+              </div>
+              <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
+                Step interval: <strong style={{ color: '#fff' }}>50 pts</strong> | ATM Delta: <strong style={{ color: '#fff' }}>~0.50</strong>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Top Gamma Scalp Convexity Leaderboard */}
+          <div className="glass-panel" style={{ padding: '24px', borderLeft: '4px solid #ec4899', background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(245, 158, 11, 0.05))' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+              <div>
+                <h4 style={{ margin: 0, fontSize: '16px', fontWeight: '700', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Flame size={18} color="#ec4899" />
+                  Top Explosive Gamma Scalp Convexity Leaderboard (Hero-or-Zero Radar)
+                </h4>
+                <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                  Filtered strikes in the ₹4 – ₹45 sweet-spot with high non-linear Gamma (Γ) acceleration for explosive 2x – 5x option runs.
+                </div>
+              </div>
+              <span style={{ fontSize: '11px', fontWeight: '700', padding: '3px 8px', borderRadius: '5px', background: 'rgba(236, 72, 153, 0.2)', color: '#f472b6' }}>
+                Convexity Formula: (Γ · Spot²) / Premium
+              </span>
+            </div>
+
+            {greeksData?.gammaScalpEngine?.topCandidates && greeksData.gammaScalpEngine.topCandidates.length > 0 ? (
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '14px' }}>
+                {greeksData.gammaScalpEngine.topCandidates.map((cand: any, idx: number) => (
+                  <div key={idx} style={{
+                    padding: '14px 16px', borderRadius: '10px',
+                    background: 'rgba(255,255,255,0.02)',
+                    border: cand.type === 'CE' ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid rgba(239, 68, 68, 0.3)',
+                    display: 'flex', flexDirection: 'column', gap: '8px'
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                      <span style={{
+                        fontSize: '13px', fontWeight: '800', padding: '3px 8px', borderRadius: '5px',
+                        background: cand.type === 'CE' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)',
+                        color: cand.type === 'CE' ? 'var(--color-bull)' : 'var(--color-bear)'
+                      }}>
+                        {cand.strike} {cand.type} @ ₹{cand.premium}
+                      </span>
+                      <span style={{ fontSize: '11px', fontWeight: '700', color: '#fbbf24' }}>
+                        Convexity: {cand.convexityScore}
+                      </span>
+                    </div>
+
+                    <div style={{ fontSize: '12px', color: '#e2e8f0', lineHeight: '1.4' }}>
+                      {cand.rationale}
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11.5px', color: 'var(--text-secondary)', background: 'rgba(0,0,0,0.2)', padding: '6px 10px', borderRadius: '6px' }}>
+                      <span>Δ: <strong style={{ color: '#fff' }}>{cand.delta}</strong></span>
+                      <span>Γ: <strong style={{ color: '#fff' }}>{cand.gamma}</strong></span>
+                      <span>Θ: <strong style={{ color: '#f87171' }}>{cand.theta} ₹/d</strong></span>
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '11px', paddingTop: '4px', borderTop: '1px solid var(--border-color)' }}>
+                      <span style={{ color: '#f87171' }}>Stop Loss: <strong>₹{cand.recommendedStopLoss}</strong></span>
+                      <span style={{ color: '#34d399' }}>Target 1: <strong>₹{cand.target1}</strong> (1.8x)</span>
+                      <span style={{ color: '#38bdf8' }}>Target 2: <strong>₹{cand.target2}</strong> (3.0x)</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div style={{ padding: '24px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '12.5px' }}>
+                Evaluating strike chain for high-convexity candidates...
+              </div>
+            )}
+          </div>
+
+          {/* Full Black-Scholes Greeks Chain Table */}
+          <div className="glass-panel" style={{ padding: '24px' }}>
+            <h4 style={{ margin: '0 0 14px 0', fontSize: '16px', fontWeight: '700', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Gauge size={18} color="var(--accent-blue)" />
+              Full Strike Greeks Chain Matrix (Spot: {greeksData?.spotPrice?.toFixed(2) || '-'})
+            </h4>
+
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px', textAlign: 'center' }}>
+                <thead>
+                  <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-muted)' }}>
+                    <th style={{ padding: '10px 8px', color: 'var(--color-bull)' }} colSpan={5}>CALL OPTIONS (CE)</th>
+                    <th style={{ padding: '10px 8px', color: '#fbbf24', background: 'rgba(251, 191, 36, 0.08)' }}>STRIKE</th>
+                    <th style={{ padding: '10px 8px', color: 'var(--color-bear)' }} colSpan={5}>PUT OPTIONS (PE)</th>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-secondary)', fontSize: '11px' }}>
+                    <th style={{ padding: '8px' }}>IV %</th>
+                    <th style={{ padding: '8px' }}>Θ (Decay)</th>
+                    <th style={{ padding: '8px' }}>Γ (Gamma)</th>
+                    <th style={{ padding: '8px' }}>Δ (Delta)</th>
+                    <th style={{ padding: '8px' }}>Price (₹)</th>
+                    <th style={{ padding: '8px', background: 'rgba(251, 191, 36, 0.08)' }}>Strike Price</th>
+                    <th style={{ padding: '8px' }}>Price (₹)</th>
+                    <th style={{ padding: '8px' }}>Δ (Delta)</th>
+                    <th style={{ padding: '8px' }}>Γ (Gamma)</th>
+                    <th style={{ padding: '8px' }}>Θ (Decay)</th>
+                    <th style={{ padding: '8px' }}>IV %</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {greeksData?.greeksMatrix?.strikes && greeksData.greeksMatrix.strikes.map((s: any, idx: number) => (
+                    <tr
+                      key={idx}
+                      style={{
+                        borderBottom: '1px solid rgba(255,255,255,0.03)',
+                        background: s.isAtm ? 'rgba(251, 191, 36, 0.08)' : (idx % 2 === 0 ? 'rgba(255,255,255,0.01)' : 'transparent'),
+                        fontWeight: s.isAtm ? '700' : 'normal'
+                      }}
+                    >
+                      {/* CE IV */}
+                      <td style={{ padding: '8px', color: 'var(--text-muted)' }}>{s.ce.ivPct}%</td>
+                      {/* CE Theta */}
+                      <td style={{ padding: '8px', color: '#f87171' }}>{s.ce.theta}</td>
+                      {/* CE Gamma */}
+                      <td style={{ padding: '8px', color: '#60a5fa' }}>{s.ce.gamma}</td>
+                      {/* CE Delta */}
+                      <td style={{ padding: '8px', color: 'var(--color-bull)' }}>{s.ce.delta}</td>
+                      {/* CE Price */}
+                      <td style={{ padding: '8px', fontWeight: '700', color: '#fff' }}>₹{s.ce.price}</td>
+
+                      {/* STRIKE */}
+                      <td style={{
+                        padding: '8px', fontWeight: '800',
+                        color: s.isAtm ? '#fbbf24' : '#fff',
+                        background: s.isAtm ? 'rgba(251, 191, 36, 0.15)' : 'rgba(255,255,255,0.03)'
+                      }}>
+                        {s.strike} {s.isAtm && <span style={{ fontSize: '9px', padding: '1px 4px', borderRadius: '3px', background: '#fbbf24', color: '#000', marginLeft: '3px' }}>ATM</span>}
+                      </td>
+
+                      {/* PE Price */}
+                      <td style={{ padding: '8px', fontWeight: '700', color: '#fff' }}>₹{s.pe.price}</td>
+                      {/* PE Delta */}
+                      <td style={{ padding: '8px', color: 'var(--color-bear)' }}>{s.pe.delta}</td>
+                      {/* PE Gamma */}
+                      <td style={{ padding: '8px', color: '#60a5fa' }}>{s.pe.gamma}</td>
+                      {/* PE Theta */}
+                      <td style={{ padding: '8px', color: '#f87171' }}>{s.pe.theta}</td>
+                      {/* PE IV */}
+                      <td style={{ padding: '8px', color: 'var(--text-muted)' }}>{s.pe.ivPct}%</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>

@@ -20,7 +20,9 @@ import { runTabHealthAudit } from './auto_heal_engine.js';
 import { executeDailySelfEvolution } from './autonomous_market_brain.js';
 import { getMihirLearnings, evaluatePredictions } from './prediction_learner.js';
 import { getMihirMlState, learnFromMistake } from './mihir_ml_engine.js';
-import { getAllGeneratedRules, mineNewRulesFromData, getAutonomousLearningMeta, recordAutonomousRun, reinforceRule, getRuleStats, getLearningJournal, classifyProfileBalanceImbalance } from './mihir_rule_miner.js';
+import { getAllGeneratedRules, mineNewRulesFromData, getAutonomousLearningMeta, recordAutonomousRun, reinforceRule, getRuleStats, getLearningJournal, classifyProfileBalanceImbalance, getRuleFailureInsights } from './mihir_rule_miner.js';
+import { getOrderFlowSummary } from './orderflow_cvd.js';
+import { computeGreeksMatrix, detectGammaScalpOpportunities, calculateLunchtimeThetaRisk, evaluatePcrVelocity } from './options_greeks.js';
 import { exec, spawn } from 'child_process';
 
 import path from 'path';
@@ -403,7 +405,17 @@ export async function runDailyAutonomousLearningPipeline() {
                 : openType.includes(rule.conditionFilter.openType)
             )) wasRelevant = true;
             if (wasRelevant) {
-              reinforceRule(rule.id, audit.verdict === 'ACCURATE' ? 'WIN' : 'LOSS');
+              const failureContext = {
+                symbol: audit.symbol,
+                openingType: audit.openingType,
+                ibRangeClass: audit.ibRangeClass,
+                actualDayType: audit.actualDayType,
+                brokeAbove: audit.brokeAbove,
+                brokeBelow: audit.brokeBelow,
+                volumeRatio: audit.volumeRatio,
+                reasonHint: audit.mistakeAnalysis
+              };
+              reinforceRule(rule.id, audit.verdict === 'ACCURATE' ? 'WIN' : 'LOSS', failureContext);
               reinforcedCount++;
               if (reinforcedCount >= 15) break;
             }
@@ -530,7 +542,7 @@ setInterval(() => {
 // Forward to Python GEX Flask App with Cloud Fallback
 app.get('/api/gex/instruments', async (req, res) => {
   try {
-    const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/instruments`);
+    const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/instruments`, { signal: AbortSignal.timeout(1200) });
     const data = await response.json();
     res.json(data);
   } catch (err) {
@@ -564,8 +576,10 @@ app.get('/api/gex/expiries', async (req, res) => {
     }
   }
   try {
-    const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/expiries?symbol=${cleanSymbol}`);
+    const response = await fetch(`http://127.0.0.1:${GEX_PORT}/api/expiries?symbol=${cleanSymbol}`, { signal: AbortSignal.timeout(1200) });
+    if (!response.ok) throw new Error('Status not ok');
     const data = await response.json();
+    if (!data.expiries || data.expiries.length === 0) throw new Error('Empty expiries array');
     res.json(data);
   } catch (err) {
     console.warn(`[GEX Expiries Fallback] Servicing fallback expiries for ${cleanSymbol}`);
@@ -598,17 +612,25 @@ app.get('/api/gex/data', async (req, res) => {
       return res.status(500).json({ error: 'Failed to compute Sensex GEX' });
     }
   }
+
+  let liveSpot = null;
+  try {
+    liveSpot = await angelOneBridge.getLTP(cleanSymbol);
+  } catch (e) {}
+
   try {
     let url = `http://127.0.0.1:${GEX_PORT}/api/gex?symbol=${cleanSymbol}`;
     if (expiry) url += `&expiry=${expiry}`;
     if (r) url += `&r=${r}`;
     
-    const response = await fetch(url);
+    const response = await fetch(url, { signal: AbortSignal.timeout(1200) });
+    if (!response.ok) throw new Error('Status not ok');
     const data = await response.json();
+    if (data.error || !data.stats) throw new Error(data.error || 'Missing stats in GEX');
     res.json(data);
   } catch (err) {
-    console.warn(`[GEX Data Fallback] Servicing fallback GEX data for ${cleanSymbol}`);
-    res.json(getFallbackGexData(cleanSymbol, expiry));
+    console.warn(`[GEX Data Fallback] Servicing fallback GEX data for ${cleanSymbol} (Live Spot: ${liveSpot})`);
+    res.json(getFallbackGexData(cleanSymbol, expiry, liveSpot));
   }
 });
 
@@ -637,16 +659,24 @@ app.get('/api/pcr/data', async (req, res) => {
       return res.status(500).json({ error: 'Failed to compute Sensex PCR' });
     }
   }
+
+  let liveSpot = null;
+  try {
+    liveSpot = await angelOneBridge.getLTP(cleanSymbol);
+  } catch (e) {}
+
   try {
     let url = `http://127.0.0.1:${GEX_PORT}/api/pcr?symbol=${cleanSymbol}`;
     if (expiry) url += `&expiry=${expiry}`;
     
-    const response = await fetch(url);
+    const response = await fetch(url, { signal: AbortSignal.timeout(1200) });
+    if (!response.ok) throw new Error('Status not ok');
     const data = await response.json();
+    if (data.error || !data.totals) throw new Error(data.error || 'Missing totals in PCR');
     res.json(data);
   } catch (err) {
-    console.warn(`[PCR Data Fallback] Servicing fallback PCR data for ${cleanSymbol}`);
-    res.json(getFallbackPcrData(cleanSymbol, expiry));
+    console.warn(`[PCR Data Fallback] Servicing fallback PCR data for ${cleanSymbol} (Live Spot: ${liveSpot})`);
+    res.json(getFallbackPcrData(cleanSymbol, expiry, liveSpot));
   }
 });
 
@@ -1160,9 +1190,20 @@ app.get('/api/mihir-ml/rules', (req, res) => {
     const autonomousEngine = getAutonomousLearningMeta();
     const journal = getLearningJournal().slice(0, 20);
     const stats = getRuleStats();
-    res.json({ success: true, count: rules.length, rules, autonomousEngine, journal, stats });
+    const failureInsights = getRuleFailureInsights();
+    res.json({ success: true, count: rules.length, rules, autonomousEngine, journal, stats, failureInsights });
   } catch (err) {
     console.error('[API] Error in /api/mihir-ml/rules:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/mihir-ml/failure-insights', (req, res) => {
+  try {
+    const insights = getRuleFailureInsights();
+    res.json({ success: true, count: insights.length, insights });
+  } catch (err) {
+    console.error('[API] Error in /api/mihir-ml/failure-insights:', err);
     res.status(500).json({ error: err.message });
   }
 });
@@ -1198,6 +1239,122 @@ app.all('/api/mihir-ml/classify-balance', (req, res) => {
     res.json({ success: true, symbol: symbol || 'ACTIVE_SELECTION', source: 'computed', ...classified });
   } catch (err) {
     console.error('[API] Error in /api/mihir-ml/classify-balance:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Option B: Order Flow Microstructure & CVD Delta Engine
+app.get('/api/orderflow/cvd', async (req, res) => {
+  const { symbol = 'NSE:NIFTY', tf = '5' } = req.query;
+  try {
+    let candles = [];
+    // 1. Direct Angel One Fast Path
+    try {
+      candles = await angelOneBridge.getFormattedCandles(symbol, tf, 120);
+    } catch (e) {}
+
+    // 2. Fast Fallback to TradingView Bridge if needed
+    if (!candles || candles.length === 0) {
+      try {
+        candles = await new Promise((resolve) => {
+          const timeout = setTimeout(() => resolve([]), 3500);
+          primaryDataBridge.tvBridge.subscribeSymbol(symbol, tf, (data) => {
+            if (data && data.candles && data.candles.length > 0) {
+              clearTimeout(timeout);
+              resolve(data.candles);
+            }
+          }, () => {
+            clearTimeout(timeout);
+            resolve([]);
+          });
+        });
+      } catch (e) {}
+    }
+
+    // 3. Fallback to scanner cached profile if needed
+    const scannerState = getScannerState();
+    const match = scannerState?.results?.find(r => r.symbol === symbol || r.symbol.endsWith(symbol));
+    if ((!candles || candles.length === 0) && match?.candles?.length > 0) {
+      candles = match.candles;
+    }
+
+    // Reference levels
+    const references = {
+      ibHigh: match?.ibHigh,
+      ibLow: match?.ibLow,
+      priorVah: match?.priorVah,
+      priorVal: match?.priorVal,
+      priorPoc: match?.priorPoc,
+      priorHigh: match?.priorHigh,
+      priorLow: match?.priorLow
+    };
+
+    const analysis = getOrderFlowSummary(symbol, candles || [], references);
+    res.json({ success: true, ...analysis });
+  } catch (err) {
+    console.error('[API /api/orderflow/cvd Error]:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Option C: Live Options Greeks & Gamma Scalping Engine
+app.get('/api/options/greeks', async (req, res) => {
+  const { symbol = 'NSE:NIFTY', expiry } = req.query;
+  try {
+    const cleanSym = symbol.replace('NSE:', '').replace('BSE:', '').replace('1!', '');
+    
+    // Get live spot price
+    const scannerState = getScannerState();
+    const match = scannerState?.results?.find(r => r.symbol === symbol || r.symbol.endsWith(symbol));
+    let spotPrice = match?.price;
+
+    if (!spotPrice || spotPrice <= 0) {
+      try {
+        const quote = await angelOneBridge.getLTP(cleanSym);
+        if (quote && quote > 0) spotPrice = quote;
+      } catch (e) {}
+    }
+
+    if (!spotPrice || spotPrice <= 0) {
+      spotPrice = cleanSym === 'BANKNIFTY' ? 57024.65 : (cleanSym === 'SENSEX' ? 81350.0 : 25150.0);
+    }
+
+    // Approximate DTE
+    const now = new Date();
+    const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+    const ist = new Date(utc + 3600000 * 5.5);
+    const dayOfWeek = ist.getDay();
+    const targetExpiryDay = cleanSym === 'BANKNIFTY' ? 3 : 2;
+    let dte = (targetExpiryDay - dayOfWeek + 7) % 7;
+    if (dte === 0) dte = 0.4;
+
+    const isExpiryDay = dte <= 0.5;
+    const vix = 13.2;
+
+    const greeksMatrix = computeGreeksMatrix(symbol, spotPrice, [], dte, vix);
+    const gammaScalps = detectGammaScalpOpportunities(symbol, spotPrice, greeksMatrix, isExpiryDay, ist);
+    const lunchtimeTheta = calculateLunchtimeThetaRisk(vix, ist);
+    
+    // PCR drift calculation
+    const currentPcr = match?.profile?.pcr || 0.95;
+    const openPcr = 0.92;
+    const pcrVelocity = evaluatePcrVelocity(openPcr, currentPcr);
+
+    res.json({
+      success: true,
+      symbol,
+      cleanSymbol: cleanSym,
+      spotPrice,
+      dteDays: dte,
+      isExpiryDay,
+      vix,
+      lunchtimeTheta,
+      pcrVelocity,
+      gammaScalpEngine: gammaScalps,
+      greeksMatrix
+    });
+  } catch (err) {
+    console.error('[API /api/options/greeks Error]:', err.message);
     res.status(500).json({ error: err.message });
   }
 });

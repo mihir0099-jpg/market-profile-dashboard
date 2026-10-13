@@ -124,7 +124,7 @@ function App() {
 
   // Fetch GEX expiries on symbol change
   useEffect(() => {
-    const isSupportedSymbol = symbol.startsWith('NSE:') || symbol.startsWith('MCX:') || symbol.startsWith('BSE:') || symbol.includes('CRUDE') || symbol.includes('USOIL');
+    const isSupportedSymbol = !symbol.includes('BTC') && !symbol.includes('ETH') && !symbol.includes('GOLD') && !symbol.includes('XAU');
     if (!isSupportedSymbol) {
       setGexExpiries([]);
       setSelectedGexExpiry('');
@@ -134,7 +134,7 @@ function App() {
 
     const fetchGexExpiries = async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/gex/expiries?symbol=${symbol}`);
+        const res = await apiFetch(`${API_BASE}/api/gex/expiries?symbol=${encodeURIComponent(symbol)}`);
         const data = await res.json();
         if (data.expiries && data.expiries.length > 0) {
           setGexExpiries(data.expiries);
@@ -157,8 +157,8 @@ function App() {
 
   // Fetch GEX data on symbol or expiry change
   useEffect(() => {
-    const isSupportedSymbol = symbol.startsWith('NSE:') || symbol.startsWith('MCX:') || symbol.startsWith('BSE:') || symbol.includes('CRUDE') || symbol.includes('USOIL');
-    if (!selectedGexExpiry || !isSupportedSymbol) {
+    const isSupportedSymbol = !symbol.includes('BTC') && !symbol.includes('ETH') && !symbol.includes('GOLD') && !symbol.includes('XAU');
+    if (!isSupportedSymbol) {
       setGexData(null);
       return;
     }
@@ -166,9 +166,10 @@ function App() {
     const fetchGexData = async () => {
       setGexLoading(true);
       try {
-        const res = await fetch(`${API_BASE}/api/gex/data?symbol=${symbol}&expiry=${selectedGexExpiry}`);
+        const expQuery = selectedGexExpiry ? `&expiry=${encodeURIComponent(selectedGexExpiry)}` : '';
+        const res = await apiFetch(`${API_BASE}/api/gex/data?symbol=${encodeURIComponent(symbol)}${expQuery}`);
         const data = await res.json();
-        if (!data.error) {
+        if (data && !data.error && data.stats) {
           setGexData(data);
         } else {
           setGexData(null);
@@ -182,13 +183,13 @@ function App() {
     };
 
     fetchGexData();
-    const interval = setInterval(fetchGexData, 120 * 1000);
+    const interval = setInterval(fetchGexData, 60 * 1000);
     return () => clearInterval(interval);
   }, [symbol, selectedGexExpiry]);
 
   // Fetch PCR data on symbol or expiry change
   useEffect(() => {
-    const isSupportedSymbol = symbol.startsWith('NSE:') || symbol.startsWith('MCX:') || symbol.startsWith('BSE:') || symbol.includes('CRUDE') || symbol.includes('USOIL');
+    const isSupportedSymbol = !symbol.includes('BTC') && !symbol.includes('ETH') && !symbol.includes('GOLD') && !symbol.includes('XAU');
     if (!isSupportedSymbol) {
       setPcrData(null);
       return;
@@ -197,9 +198,10 @@ function App() {
     const fetchPcrData = async () => {
       setPcrLoading(true);
       try {
-        const res = await fetch(`${API_BASE}/api/pcr/data?symbol=${symbol}&expiry=${selectedGexExpiry}`);
+        const expQuery = selectedGexExpiry ? `&expiry=${encodeURIComponent(selectedGexExpiry)}` : '';
+        const res = await apiFetch(`${API_BASE}/api/pcr/data?symbol=${encodeURIComponent(symbol)}${expQuery}`);
         const data = await res.json();
-        if (!data.error) {
+        if (data && !data.error && (data.oi_pcr !== undefined || data.totals)) {
           setPcrData(data);
         } else {
           setPcrData(null);
@@ -213,7 +215,7 @@ function App() {
     };
 
     fetchPcrData();
-    const interval = setInterval(fetchPcrData, 120 * 1000);
+    const interval = setInterval(fetchPcrData, 60 * 1000);
     return () => clearInterval(interval);
   }, [symbol, selectedGexExpiry]);
 

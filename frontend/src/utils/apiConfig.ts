@@ -1,4 +1,7 @@
-let dynamicBackendUrl: string | null = null;
+export const DEFAULT_PUBLIC_TUNNEL = 'https://contemporary-points-approx-assignment.trycloudflare.com';
+export const FALLBACK_SERVEO_TUNNEL = 'https://bhaichara-mp-live.serveousercontent.com';
+
+let dynamicBackendUrl: string | null = DEFAULT_PUBLIC_TUNNEL;
 const urlListeners: Array<(url: string) => void> = [];
 
 export function onBackendChange(listener: (url: string) => void): () => void {
@@ -71,7 +74,7 @@ export async function refreshBackendUrl(): Promise<string | null> {
     }
   } catch (e) {}
 
-  return dynamicBackendUrl;
+  return dynamicBackendUrl || DEFAULT_PUBLIC_TUNNEL;
 }
 
 if (typeof window !== 'undefined') {
@@ -85,14 +88,18 @@ if (typeof window !== 'undefined') {
     }
   } catch (e) {}
 
-  // 2. Pre-load cached from localStorage if valid
-  if (!dynamicBackendUrl) {
+  // 2. Pre-load cached from localStorage if valid, otherwise use DEFAULT_PUBLIC_TUNNEL
+  if (!dynamicBackendUrl || dynamicBackendUrl === DEFAULT_PUBLIC_TUNNEL) {
     try {
       const cached = localStorage.getItem('market_profile_backend_url');
       if (cached && isValidTunnelUrl(cached)) {
         dynamicBackendUrl = cached.trim().replace(/\/$/, '');
+      } else {
+        dynamicBackendUrl = DEFAULT_PUBLIC_TUNNEL;
       }
-    } catch (e) {}
+    } catch (e) {
+      dynamicBackendUrl = DEFAULT_PUBLIC_TUNNEL;
+    }
   }
 
   // 3. Immediately trigger non-blocking refresh
@@ -152,7 +159,7 @@ export const getApiBase = (): string => {
     }
   } catch (e) {}
 
-  return window.location.origin;
+  return DEFAULT_PUBLIC_TUNNEL;
 };
 
 export const getWsBase = (): string => {

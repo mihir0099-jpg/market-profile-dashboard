@@ -1,4 +1,4 @@
-import { getWsBase, getApiBase, apiFetch } from './apiConfig';
+import { getWsBase, getApiBase, apiFetch, onBackendChange } from './apiConfig';
 
 export interface TVDataMessage {
   symbol: string;
@@ -34,6 +34,21 @@ class TVWebSocketStreamer {
 
   constructor() {
     this.url = getWsBase();
+    onBackendChange((newUrl) => {
+      const newWs = newUrl.replace(/^http:/, 'ws:').replace(/^https:/, 'wss:');
+      if (this.url !== newWs) {
+        console.log(`[tvStreamer] Active backend resolved: ${newWs}. Reconnecting...`);
+        this.url = newWs;
+        if (this.ws) {
+          try { this.ws.close(); } catch (e) {}
+          this.ws = null;
+        }
+        if (this.currentSubscription) {
+          this.fetchRestSnapshot(this.currentSubscription.symbol, this.currentSubscription.timeframe);
+          this.connect();
+        }
+      }
+    });
   }
 
   public setStatusListener(callback: OnStatusCallback) {

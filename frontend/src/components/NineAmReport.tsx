@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, RefreshCw, Zap, AlertTriangle, ArrowUpRight, ArrowDownRight, Anchor, Target } from 'lucide-react';
-import { getApiBase } from '../utils/apiConfig';
+import { getApiBase, onBackendChange } from '../utils/apiConfig';
 
 interface CompressionCandidate {
   symbol: string;
@@ -38,8 +38,6 @@ interface NineAmReportProps {
   onSelectSymbol: (symbol: string) => void;
 }
 
-const API_BASE = getApiBase();
-
 export const NineAmReport: React.FC<NineAmReportProps> = ({ onSelectSymbol }) => {
   const [data, setData] = useState<NineAmReportData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -49,7 +47,8 @@ export const NineAmReport: React.FC<NineAmReportProps> = ({ onSelectSymbol }) =>
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${API_BASE}/api/scanner/nineam-report`);
+      const apiBase = getApiBase();
+      const response = await fetch(`${apiBase}/api/scanner/nineam-report`);
       if (!response.ok) {
         throw new Error('9 AM pre-market report is still compiling or not available yet.');
       }
@@ -63,7 +62,11 @@ export const NineAmReport: React.FC<NineAmReportProps> = ({ onSelectSymbol }) =>
   };
 
   useEffect(() => {
+    const unsub = onBackendChange(() => {
+      fetchReport();
+    });
     fetchReport();
+    return () => unsub();
   }, []);
 
   if (loading) {

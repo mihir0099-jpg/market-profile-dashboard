@@ -548,14 +548,34 @@ function calculateDayProfile(dateStr, dayCandles, binCount = 40, symbol) {
   let totalTPOs = 0;
   for (const b of bins) totalTPOs += b.tpos.length;
 
+  // 1. Find Max TPOs
   let maxTPOs = 0;
-  let pocIdx = bins.length - 1;
+  for (const b of bins) {
+    if (b.tpos.length > maxTPOs) {
+      maxTPOs = b.tpos.length;
+    }
+  }
 
-  for (let i = bins.length - 1; i >= 0; i--) {
-    const val = bins[i].tpos.length;
-    if (val > maxTPOs) {
-      maxTPOs = val;
-      pocIdx = i;
+  // 2. CBOT Market Profile Standard Tie-Breaker:
+  // When multiple prices share the maximum TPO count, choose the level closest
+  // to the physical center of the profile's range ((dayHigh + dayLow) / 2).
+  const centerPrice = (dayHigh + dayLow) / 2;
+  const tiedIndices = [];
+  for (let i = 0; i < bins.length; i++) {
+    if (bins[i].tpos.length === maxTPOs) {
+      tiedIndices.push(i);
+    }
+  }
+
+  let pocIdx = tiedIndices.length > 0 ? tiedIndices[0] : Math.floor(bins.length / 2);
+  let minDistance = Math.abs(bins[pocIdx].price - centerPrice);
+
+  for (let k = 1; k < tiedIndices.length; k++) {
+    const idx = tiedIndices[k];
+    const dist = Math.abs(bins[idx].price - centerPrice);
+    if (dist < minDistance) {
+      minDistance = dist;
+      pocIdx = idx;
     }
   }
 
@@ -563,59 +583,46 @@ function calculateDayProfile(dateStr, dayCandles, binCount = 40, symbol) {
   let vahPrice = pocPrice;
   let valPrice = pocPrice;
 
+  // 3. CBOT 2-Row Value Area Expansion (70% Target)
   if (totalTPOs > 0 && maxTPOs > 0) {
     const targetTPOs = Math.round(totalTPOs * 0.70);
     let currentTPOs = maxTPOs;
+    let topIdx = pocIdx; // expands upwards towards bins.length - 1 (higher prices)
+    let bottomIdx = pocIdx; // expands downwards towards 0 (lower prices)
+    const n = bins.length;
 
-    // Define helper structure to track value area inclusion
-    const isIncluded = new Array(bins.length).fill(false);
-    isIncluded[pocIdx] = true;
+    while (currentTPOs < targetTPOs && (topIdx < n - 1 || bottomIdx > 0)) {
+      // 2 rows above
+      let sumAbove = 0;
+      let countAbove = 0;
+      if (topIdx + 1 < n) { sumAbove += bins[topIdx + 1].tpos.length; countAbove++; }
+      if (topIdx + 2 < n) { sumAbove += bins[topIdx + 2].tpos.length; countAbove++; }
 
-    let L = 1; // step below POC
-    let N = 1; // step above POC
-    const j = bins.length;
+      // 2 rows below
+      let sumBelow = 0;
+      let countBelow = 0;
+      if (bottomIdx - 1 >= 0) { sumBelow += bins[bottomIdx - 1].tpos.length; countBelow++; }
+      if (bottomIdx - 2 >= 0) { sumBelow += bins[bottomIdx - 2].tpos.length; countBelow++; }
 
-    while (currentTPOs < targetTPOs) {
-      const aboveIdx = pocIdx - N;
-      const hasAbove = aboveIdx >= 0;
-      const H = hasAbove ? bins[aboveIdx].tpos.length : 0;
+      if (countAbove === 0 && countBelow === 0) break;
 
-      const belowIdx = pocIdx + L;
-      const hasBelow = belowIdx < j;
-      const V = hasBelow ? bins[belowIdx].tpos.length : 0;
-
-      if (V <= H) {
-        currentTPOs += H;
-        if (hasAbove) {
-          isIncluded[aboveIdx] = true;
-          N++;
-        }
+      if (sumAbove > sumBelow || countBelow === 0) {
+        currentTPOs += sumAbove;
+        topIdx = Math.min(n - 1, topIdx + countAbove);
+      } else if (sumBelow > sumAbove || countAbove === 0) {
+        currentTPOs += sumBelow;
+        bottomIdx = Math.max(0, bottomIdx - countBelow);
       } else {
-        currentTPOs += V;
-        if (hasBelow) {
-          isIncluded[belowIdx] = true;
-          L++;
-        }
-      }
-
-      if (V === 0) L++;
-      if (H === 0) N++;
-      if (L > j && N > j) break;
-    }
-
-    let firstAreaIdx = -1;
-    let lastAreaIdx = -1;
-    for (let i = 0; i < j; i++) {
-      if (isIncluded[i]) {
-        if (firstAreaIdx === -1) firstAreaIdx = i;
-        lastAreaIdx = i;
+        currentTPOs += sumAbove + sumBelow;
+        topIdx = Math.min(n - 1, topIdx + countAbove);
+        bottomIdx = Math.max(0, bottomIdx - countBelow);
       }
     }
 
-    if (firstAreaIdx !== -1) {
-      vahPrice = bins[firstAreaIdx].price;
-      valPrice = bins[lastAreaIdx].price;
-    }
+    const pTop = bins[topIdx].price;
+    const pBottom = bins[bottomIdx].price;
+    vahPrice = Math.max(pTop, pBottom);
+    valPrice = Math.min(pTop, pBottom);
   }
 
   let ibHigh = 0;

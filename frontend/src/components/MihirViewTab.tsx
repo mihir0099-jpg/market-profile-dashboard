@@ -6,7 +6,7 @@ import {
   ArrowUpRight, ArrowDownRight, TrendingUp, TrendingDown, Zap,
   Waves, Flame, Gauge, BarChart2
 } from 'lucide-react';
-import { getApiBase } from '../utils/apiConfig';
+import { getApiBase, onBackendChange } from '../utils/apiConfig';
 import type { DayProfile, ProfileNuances, Candle } from '../utils/profileCalculator';
 import { calculateDayProfile, analyzeProfileNuances, groupCandlesByDay } from '../utils/profileCalculator';
 
@@ -338,6 +338,15 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
   };
 
   useEffect(() => {
+    const unsub = onBackendChange(() => {
+      fetchScannerData();
+      fetchLearningsData();
+      fetchMlModel();
+      fetchGeneratedRules();
+      fetchFailureInsights();
+      fetchOrderFlowData(currentSymbol);
+      fetchGreeksData(currentSymbol);
+    });
     fetchScannerData();
     fetchLearningsData();
     fetchMlModel();
@@ -354,8 +363,11 @@ export const MihirViewTab: React.FC<MihirViewTabProps> = ({
       fetchOrderFlowData(currentSymbol);
       fetchGreeksData(currentSymbol);
     }, 30000);
-    return () => clearInterval(interval);
-  }, [backendUrl, currentSymbol]);
+    return () => {
+      unsub();
+      clearInterval(interval);
+    };
+  }, [currentSymbol]);
 
   // Compute profile nuances if not provided by parent
   const { computedActive, computedPrior, computedNuances } = useMemo(() => {

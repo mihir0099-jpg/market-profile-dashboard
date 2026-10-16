@@ -17,10 +17,7 @@ import { DailyReports } from './components/DailyReports';
 import { MonthlyProfileTab } from './components/MonthlyProfileTab';
 import { AiAnalyticsTab } from './components/AiAnalyticsTab';
 import { MihirViewTab } from './components/MihirViewTab';
-import { getApiBase, apiFetch } from './utils/apiConfig';
-
-// Dynamically resolve backend API base based on origin
-const API_BASE = getApiBase();
+import { getApiBase, apiFetch, onBackendChange } from './utils/apiConfig';
 
 function App() {
   const [symbol, setSymbol] = useState('NSE:NIFTY');
@@ -49,11 +46,20 @@ function App() {
   const [pcrLoading, setPcrLoading] = useState(false);
   const [optimalTicks, setOptimalTicks] = useState<Record<string, number>>({});
 
-  // Fetch optimal dynamic ticks once on startup
+  // Listen for backend URL changes / auto-discovery to trigger immediate reconnect without page refresh
+  useEffect(() => {
+    const unsub = onBackendChange(() => {
+      setRefreshKey(k => k + 1);
+    });
+    return unsub;
+  }, []);
+
+  // Fetch optimal dynamic ticks once on startup or when backend updates
   useEffect(() => {
     const fetchTicks = async () => {
       try {
-        const res = await apiFetch(`${API_BASE}/api/scanner/ticks`);
+        const apiBase = getApiBase();
+        const res = await apiFetch(`${apiBase}/api/scanner/ticks`);
         if (res.ok) {
           const ticksMap = await res.json();
           setOptimalTicks(ticksMap);
@@ -63,7 +69,7 @@ function App() {
       }
     };
     fetchTicks();
-  }, []);
+  }, [refreshKey]);
 
 
   // Subscribe to real-time viewer count updates
@@ -134,7 +140,8 @@ function App() {
 
     const fetchGexExpiries = async () => {
       try {
-        const res = await apiFetch(`${API_BASE}/api/gex/expiries?symbol=${encodeURIComponent(symbol)}`);
+        const apiBase = getApiBase();
+        const res = await apiFetch(`${apiBase}/api/gex/expiries?symbol=${encodeURIComponent(symbol)}`);
         const data = await res.json();
         if (data.expiries && data.expiries.length > 0) {
           setGexExpiries(data.expiries);
@@ -153,7 +160,7 @@ function App() {
     };
 
     fetchGexExpiries();
-  }, [symbol]);
+  }, [symbol, refreshKey]);
 
   // Fetch GEX data on symbol or expiry change
   useEffect(() => {
@@ -166,8 +173,9 @@ function App() {
     const fetchGexData = async () => {
       setGexLoading(true);
       try {
+        const apiBase = getApiBase();
         const expQuery = selectedGexExpiry ? `&expiry=${encodeURIComponent(selectedGexExpiry)}` : '';
-        const res = await apiFetch(`${API_BASE}/api/gex/data?symbol=${encodeURIComponent(symbol)}${expQuery}`);
+        const res = await apiFetch(`${apiBase}/api/gex/data?symbol=${encodeURIComponent(symbol)}${expQuery}`);
         const data = await res.json();
         if (data && !data.error && data.stats) {
           setGexData(data);
@@ -185,7 +193,7 @@ function App() {
     fetchGexData();
     const interval = setInterval(fetchGexData, 60 * 1000);
     return () => clearInterval(interval);
-  }, [symbol, selectedGexExpiry]);
+  }, [symbol, selectedGexExpiry, refreshKey]);
 
   // Fetch PCR data on symbol or expiry change
   useEffect(() => {
@@ -198,8 +206,9 @@ function App() {
     const fetchPcrData = async () => {
       setPcrLoading(true);
       try {
+        const apiBase = getApiBase();
         const expQuery = selectedGexExpiry ? `&expiry=${encodeURIComponent(selectedGexExpiry)}` : '';
-        const res = await apiFetch(`${API_BASE}/api/pcr/data?symbol=${encodeURIComponent(symbol)}${expQuery}`);
+        const res = await apiFetch(`${apiBase}/api/pcr/data?symbol=${encodeURIComponent(symbol)}${expQuery}`);
         const data = await res.json();
         if (data && !data.error && (data.oi_pcr !== undefined || data.totals)) {
           setPcrData(data);
@@ -217,7 +226,7 @@ function App() {
     fetchPcrData();
     const interval = setInterval(fetchPcrData, 60 * 1000);
     return () => clearInterval(interval);
-  }, [symbol, selectedGexExpiry]);
+  }, [symbol, selectedGexExpiry, refreshKey]);
 
   // Compute session profiles (daily, weekly, monthly) from candles
   const dayProfiles = useMemo(() => {

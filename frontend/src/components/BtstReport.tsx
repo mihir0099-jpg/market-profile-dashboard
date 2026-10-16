@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, ArrowUpRight, ArrowDownRight, RefreshCw, Sparkles, AlertTriangle } from 'lucide-react';
-import { getApiBase } from '../utils/apiConfig';
+import { getApiBase, onBackendChange } from '../utils/apiConfig';
 
 interface BTSTCandidate {
   symbol: string;
@@ -24,9 +24,6 @@ interface BtstReportProps {
   onSelectSymbol: (symbol: string) => void;
 }
 
-// Dynamically resolve backend API base based on origin
-const API_BASE = getApiBase();
-
 export const BtstReport: React.FC<BtstReportProps> = ({ onSelectSymbol }) => {
   const [data, setData] = useState<BTSTReportData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -36,7 +33,8 @@ export const BtstReport: React.FC<BtstReportProps> = ({ onSelectSymbol }) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${API_BASE}/api/scanner/btst-report`);
+      const apiBase = getApiBase();
+      const response = await fetch(`${apiBase}/api/scanner/btst-report`);
       if (!response.ok) {
         throw new Error('BTST report is still generating or not available yet. Runs at 3:15 PM.');
       }
@@ -50,7 +48,11 @@ export const BtstReport: React.FC<BtstReportProps> = ({ onSelectSymbol }) => {
   };
 
   useEffect(() => {
+    const unsub = onBackendChange(() => {
+      fetchReport();
+    });
     fetchReport();
+    return () => unsub();
   }, []);
 
   if (loading) {

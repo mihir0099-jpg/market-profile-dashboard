@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, RefreshCw, Cpu, Layers, Target, Award, Zap, Activity, Clock } from 'lucide-react';
-import { getApiBase } from '../utils/apiConfig';
+import { getApiBase, onBackendChange } from '../utils/apiConfig';
 
 interface AnalogueDay {
   date: string;
@@ -72,8 +72,6 @@ interface AiAnalyticsTabProps {
   onSelectSymbol: (sym: string) => void;
 }
 
-const API_BASE = getApiBase();
-
 export const AiAnalyticsTab: React.FC<AiAnalyticsTabProps> = ({ currentSymbol, onSelectSymbol }) => {
   const [selectedSymbol, setSelectedSymbol] = useState<string>(currentSymbol || 'NSE:NIFTY');
   const [data, setData] = useState<AiAnalyticsData | null>(null);
@@ -84,7 +82,8 @@ export const AiAnalyticsTab: React.FC<AiAnalyticsTabProps> = ({ currentSymbol, o
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API_BASE}/api/ai/analytics?symbol=${encodeURIComponent(sym)}`);
+      const apiBase = getApiBase();
+      const res = await fetch(`${apiBase}/api/ai/analytics?symbol=${encodeURIComponent(sym)}`);
       if (!res.ok) throw new Error('Failed to load AI analytics data');
       const json = await res.json();
       setData(json);
@@ -96,11 +95,17 @@ export const AiAnalyticsTab: React.FC<AiAnalyticsTabProps> = ({ currentSymbol, o
   };
 
   useEffect(() => {
+    const unsub = onBackendChange(() => {
+      fetchAiData(selectedSymbol);
+    });
     fetchAiData(selectedSymbol);
     const interval = setInterval(() => {
       fetchAiData(selectedSymbol);
     }, 30000);
-    return () => clearInterval(interval);
+    return () => {
+      unsub();
+      clearInterval(interval);
+    };
   }, [selectedSymbol]);
 
   const handleSymbolChange = (sym: string) => {

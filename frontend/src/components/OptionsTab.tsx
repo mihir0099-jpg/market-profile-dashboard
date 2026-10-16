@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { AlertTriangle, RefreshCw, Edit3, Check, Search } from 'lucide-react';
-import { getApiBase } from '../utils/apiConfig';
-
-const API_BASE = getApiBase();
+import { getApiBase, onBackendChange } from '../utils/apiConfig';
 
 // Stock strike intervals from NSE rules
 const STRIKE_INTERVALS: Record<string, number> = {
@@ -104,7 +102,8 @@ export const OptionsTab: React.FC<OptionsTabProps> = ({ symbol, onSelectSymbol }
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API_BASE}/api/signals`);
+      const apiBase = getApiBase();
+      const res = await fetch(`${apiBase}/api/signals`);
       if (res.ok) {
         const data = await res.json();
         setSignals(data);
@@ -119,9 +118,15 @@ export const OptionsTab: React.FC<OptionsTabProps> = ({ symbol, onSelectSymbol }
   };
 
   useEffect(() => {
+    const unsub = onBackendChange(() => {
+      fetchSignals();
+    });
     fetchSignals();
     const interval = setInterval(fetchSignals, 10000); // Poll every 10s
-    return () => clearInterval(interval);
+    return () => {
+      unsub();
+      clearInterval(interval);
+    };
   }, []);
 
   // Fetch stock macro stats for the leaderboard
@@ -129,7 +134,8 @@ export const OptionsTab: React.FC<OptionsTabProps> = ({ symbol, onSelectSymbol }
   useEffect(() => {
     const fetchMacroStats = async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/scanner/macro-stats`);
+        const apiBase = getApiBase();
+        const res = await fetch(`${apiBase}/api/scanner/macro-stats`);
         if (res.ok) {
           const data = await res.json();
           setMacroStats(data);
@@ -138,7 +144,11 @@ export const OptionsTab: React.FC<OptionsTabProps> = ({ symbol, onSelectSymbol }
         console.error('Failed to fetch macro stats:', e);
       }
     };
+    const unsub = onBackendChange(() => {
+      fetchMacroStats();
+    });
     fetchMacroStats();
+    return () => unsub();
   }, []);
 
   const leaders = useMemo(() => {
@@ -488,7 +498,8 @@ export const OptionsTab: React.FC<OptionsTabProps> = ({ symbol, onSelectSymbol }
       const newSpotT1 = editingSignal.direction === 'BUY' ? (newSpotEntry + spotRisk * 1.5) : (newSpotEntry - spotRisk * 1.5);
       const newSpotT2 = editingSignal.direction === 'BUY' ? (newSpotEntry + spotRisk * 3.0) : (newSpotEntry - spotRisk * 3.0);
 
-      const res = await fetch(`${API_BASE}/api/signals/update`, {
+      const apiBase = getApiBase();
+      const res = await fetch(`${apiBase}/api/signals/update`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

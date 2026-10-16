@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FileText, Calendar, RefreshCw } from 'lucide-react';
-import { getApiBase } from '../utils/apiConfig';
+import { getApiBase, onBackendChange } from '../utils/apiConfig';
 
 export const DailyReports: React.FC = () => {
   const [dates, setDates] = useState<string[]>([]);
@@ -8,15 +8,10 @@ export const DailyReports: React.FC = () => {
   const [content, setContent] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
-  const backendUrl = getApiBase();
-
-  useEffect(() => {
-    fetchDates();
-  }, []);
-
   const fetchDates = async () => {
     try {
-      const res = await fetch(`${backendUrl}/api/daily-reports`);
+      const apiBase = getApiBase();
+      const res = await fetch(`${apiBase}/api/daily-reports`);
       if (res.ok) {
         const data = await res.json();
         setDates(data);
@@ -30,11 +25,20 @@ export const DailyReports: React.FC = () => {
   };
 
   useEffect(() => {
+    const unsub = onBackendChange(() => {
+      fetchDates();
+    });
+    fetchDates();
+    return () => unsub();
+  }, []);
+
+  useEffect(() => {
     if (!selectedDate) return;
     const fetchReportContent = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`${backendUrl}/api/daily-reports/${selectedDate}`);
+        const apiBase = getApiBase();
+        const res = await fetch(`${apiBase}/api/daily-reports/${selectedDate}`);
         if (res.ok) {
           const text = await res.text();
           setContent(text);

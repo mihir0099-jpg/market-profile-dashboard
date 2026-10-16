@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, ArrowUpRight, AlertTriangle, HelpCircle, Loader2 } from 'lucide-react';
-import { getApiBase } from '../utils/apiConfig';
+import { getApiBase, onBackendChange } from '../utils/apiConfig';
 
 interface ScanResult {
   symbol: string;
@@ -42,9 +42,6 @@ interface LiveScannerProps {
   onSelectSymbol: (symbol: string) => void;
   currentSymbol: string;
 }
-
-// Dynamically resolve backend API base based on origin
-const API_BASE = getApiBase();
 
 export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, currentSymbol }) => {
   const [scannerState, setScannerState] = useState<ScannerState>({
@@ -206,7 +203,8 @@ export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, curren
 
   const fetchScannerState = async () => {
     try {
-      const response = await fetch(`${API_BASE}/api/scanner`);
+      const apiBase = getApiBase();
+      const response = await fetch(`${apiBase}/api/scanner`);
       if (response.ok) {
         const data = await response.json();
         setScannerState(data);
@@ -232,7 +230,8 @@ export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, curren
 
   const fetchAccuracyScorecard = async () => {
     try {
-      const response = await fetch(`${API_BASE}/api/scanner/accuracy`);
+      const apiBase = getApiBase();
+      const response = await fetch(`${apiBase}/api/scanner/accuracy`);
       if (response.ok) {
         const data = await response.json();
         setAccuracyData(data);
@@ -243,6 +242,12 @@ export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, curren
   };
 
   useEffect(() => {
+    // Immediate reactive fetch when backend URL is discovered
+    const unsub = onBackendChange(() => {
+      fetchScannerState();
+      fetchAccuracyScorecard();
+    });
+
     // Initial fetch
     fetchScannerState();
     fetchAccuracyScorecard();
@@ -252,6 +257,7 @@ export const LiveScanner: React.FC<LiveScannerProps> = ({ onSelectSymbol, curren
     const accuracyInterval = setInterval(fetchAccuracyScorecard, 30000);
 
     return () => {
+      unsub();
       clearInterval(interval);
       clearInterval(accuracyInterval);
     };

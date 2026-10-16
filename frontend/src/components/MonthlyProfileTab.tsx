@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, RefreshCw, Calendar, TrendingUp, TrendingDown, Target, ShieldAlert, Award, Layers } from 'lucide-react';
-import { getApiBase } from '../utils/apiConfig';
+import { getApiBase, onBackendChange } from '../utils/apiConfig';
 
 interface MonthlyProfileData {
   symbol: string;
@@ -54,8 +54,6 @@ interface MonthlyProfileTabProps {
   onSelectSymbol: (sym: string) => void;
 }
 
-const API_BASE = getApiBase();
-
 export const MonthlyProfileTab: React.FC<MonthlyProfileTabProps> = ({ currentSymbol, onSelectSymbol }) => {
   const [selectedSymbol, setSelectedSymbol] = useState<string>(currentSymbol || 'NSE:NIFTY');
   const [data, setData] = useState<MonthlyProfileData | null>(null);
@@ -66,7 +64,8 @@ export const MonthlyProfileTab: React.FC<MonthlyProfileTabProps> = ({ currentSym
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API_BASE}/api/monthly-profile?symbol=${encodeURIComponent(sym)}`);
+      const apiBase = getApiBase();
+      const res = await fetch(`${apiBase}/api/monthly-profile?symbol=${encodeURIComponent(sym)}`);
       if (!res.ok) throw new Error('Failed to load monthly profile data');
       const json = await res.json();
       setData(json);
@@ -78,11 +77,17 @@ export const MonthlyProfileTab: React.FC<MonthlyProfileTabProps> = ({ currentSym
   };
 
   useEffect(() => {
+    const unsub = onBackendChange(() => {
+      fetchMonthlyData(selectedSymbol);
+    });
     fetchMonthlyData(selectedSymbol);
     const interval = setInterval(() => {
       fetchMonthlyData(selectedSymbol);
     }, 30000);
-    return () => clearInterval(interval);
+    return () => {
+      unsub();
+      clearInterval(interval);
+    };
   }, [selectedSymbol]);
 
   const handleSymbolChange = (sym: string) => {
